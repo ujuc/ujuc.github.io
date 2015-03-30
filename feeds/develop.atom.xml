@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-03-31T00:13:00+09:00</updated><entry><title>gitworkflows(7)에대한 이야기</title><link href="http://ujuc.github.io/2015/02/02/gitworkflows7/" rel="alternate"></link><updated>2015-03-31T00:13:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</id><summary type="html">&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-03-31T00:13:00+09:00</updated><entry><title>gitworkflows(7)에대한 이야기</title><link href="http://ujuc.github.io/2015/02/02/gitworkflows7/" rel="alternate"></link><updated>2015-03-31T00:13:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</id><summary type="html">&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
 이야기하면서 슬라이드 &lt;a class="footnote-reference" href="#id3" id="id1"&gt;[1]&lt;/a&gt; 를 하나&amp;nbsp;올려주셨다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The gitworkflows(7)&amp;nbsp;illustrated&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;정말 슬라이드를 이렇게까지 만들어주는건 정말 좋은듯. 특히 발표 당시에 그것을
@@ -22,6 +22,4 @@
 필요.&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</summary><category term="git"></category><category term="workflow"></category></entry><entry><title>단장 완료</title><link href="http://ujuc.github.io/2015/01/31/%EB%8B%A8%EC%9E%A5-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-03-30T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-01-31:2015/01/31/단장-완료/</id><summary type="html">&lt;p&gt;간단하게 작업을 진행해서 뭐 넣은 것 없는 그런페이지가&amp;nbsp;만들어진듯&amp;#8230;&lt;/p&gt;
-&lt;p&gt;여기다 아무리 무겁게 글을 써도 불러오는 속도가 빠르니 뭐 간다낳게 작성하기는&amp;nbsp;좋을듯.&lt;/p&gt;
-</summary><category term="시작"></category></entry></feed>
+</summary><category term="git"></category><category term="workflow"></category></entry></feed>

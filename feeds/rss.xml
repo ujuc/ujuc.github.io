@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 29 Mar 2015 23:34:40 -0000</lastBuildDate></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 31 Mar 2015 00:13:00 +0900</lastBuildDate><item><title>gitworkflows(7)에대한 이야기</title><link>http://ujuc.github.io/2015/02/02/gitworkflows7/</link><description>&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
+이야기하면서 슬라이드 &lt;a class="footnote-reference" href="#id3" id="id1"&gt;[1]&lt;/a&gt; 를 하나&amp;nbsp;올려주셨다.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The gitworkflows(7)&amp;nbsp;illustrated&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;정말 슬라이드를 이렇게까지 만들어주는건 정말 좋은듯. 특히 발표 당시에 그것을
+못들었다고 해도 이 슬라이드만 보고도 알 수 있어서 더 좋음. 물론 발표용이라면
+이것보다는 간단히 구성하는게&amp;nbsp;맞겠지만&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그렇다고 이걸 쓰고 싶지는 않다. 뭔가 복잡하다. 이게 어디서 좋은거지 라는&amp;nbsp;생각이든다.&lt;/p&gt;
+&lt;p&gt;브런치 전략은 &lt;a class="reference external" href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&lt;/a&gt; 가 가장 쉽게 접근 할 수&amp;nbsp;잇는듯&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://git-scm.com/docs/gitworkflows/1.8.2.1"&gt;gitworkflows(7) Manual Page&lt;/a&gt; &lt;a class="footnote-reference" href="#id4" id="id2"&gt;[2]&lt;/a&gt; 를&amp;nbsp;확인하도록하자.&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="id3" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;원문이 일어로 보인다. &lt;a class="reference external" href="(http://www.slideshare.net/ktateish/gitworkflows7)"&gt;図解gitworkflows(7)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;문서가 1.8.2.1 이전과 이후로 많은 부분이 변경된 것으로 보인다. 그만큼
+길어졌고 추가된 기능들이 많은것을 볼수 있으니, 관련해서 한번 찾아보는 것이
+필요.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 00:13:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</guid><category>git</category><category>workflow</category></item><item><title>단장 완료</title><link>http://ujuc.github.io/2015/01/31/%EB%8B%A8%EC%9E%A5-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;간단하게 작업을 진행해서 뭐 넣은 것 없는 그런페이지가&amp;nbsp;만들어진듯&amp;#8230;&lt;/p&gt;
+&lt;p&gt;여기다 아무리 무겁게 글을 써도 불러오는 속도가 빠르니 뭐 간다낳게 작성하기는&amp;nbsp;좋을듯.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 30 Mar 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-01-31:2015/01/31/단장-완료/</guid><category>시작</category></item></channel></rss>
