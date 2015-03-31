@@ -12,8 +12,8 @@ TEMPLATE = """
 
 :date: {year}-{month}-{day} {hour}:{minute:02d}
 :modified:
-:tags: 
 :category:
+:tags: 
 :slug: {slug}
 :summary:
 :status: draft
