@@ -1,5 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-03-31T00:13:00+09:00</updated><entry><title>gitworkflows(7)에대한 이야기</title><link href="http://ujuc.github.io/2015/02/02/gitworkflows7/" rel="alternate"></link><updated>2015-03-31T00:13:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</id><summary type="html">&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-03-31T22:29:00+09:00</updated><entry><title>OpenStack Commit</title><link href="http://ujuc.github.io/2015/02/13/openstack-commit/" rel="alternate"></link><updated>2015-03-31T22:29:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</id><summary type="html">&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
+그런데&amp;#8230;. 왜이리&amp;nbsp;어려운거지&amp;#8230;.&lt;/p&gt;
+&lt;img alt="" src="http://docs.openstack.org/infra/manual/_images/code_review.png" /&gt;
+&lt;p&gt;신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런&amp;#8230; 어렵지 않을
+것같아&amp;nbsp;시작&amp;#8230;&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;준비 해야될&amp;nbsp;것&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://launchpad.net/+login"&gt;Launchpad&lt;/a&gt; 계정&lt;ul&gt;
+&lt;li&gt;버그리포팅을 위해서는 Launchpad 계정이&amp;nbsp;있어야한다.&lt;/li&gt;
+&lt;li&gt;그리고 왠만한 OpenID를 이걸로 다 할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://review.openstack.org"&gt;OpenStack Review&lt;/a&gt; 가입&lt;ul&gt;
+&lt;li&gt;리뷰를 무조건&amp;nbsp;타야된다&amp;#8230;&lt;/li&gt;
+&lt;li&gt;그러니&amp;nbsp;만들어야&amp;#8230;.&lt;/li&gt;
+&lt;li&gt;그리고 ssh key등록을&amp;nbsp;해두는게&amp;#8230;&lt;/li&gt;
+&lt;li&gt;그리고 메일링은 꺼두는게&amp;#8230; 너무&amp;nbsp;많이와&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="individual-contributor-license-agreement"&gt;
+&lt;h2&gt;Individual Contributor License Agreement&amp;nbsp;결재&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://review.openstack.org/#/settings/agreements"&gt;Individual Contributor License Agreement&lt;/a&gt; 간단하게&amp;nbsp;작성하고..&lt;/li&gt;
+&lt;li&gt;회사 대신 기여하거나 단체로 한다면 &lt;a class="reference external" href="https://secure.echosign.com/public/hostedForm?formid=56JUVGT95E78X5"&gt;Corporate Contributor License Agreement&lt;/a&gt;
+도 한장&amp;#8230; 작성하고 보니 난 이걸&amp;nbsp;왜했지&amp;#8230;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="git-review"&gt;
+&lt;h2&gt;&lt;cite&gt;git-review&lt;/cite&gt; 설치&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;맥은 그냥 &lt;cite&gt;brew&lt;/cite&gt; 로 통일시켜서 설치하는게&amp;nbsp;편한듯&amp;#8230;&lt;/li&gt;
+&lt;li&gt;문서상으로는 &lt;cite&gt;pip&lt;/cite&gt; 로 설치하라고&amp;nbsp;했지만&amp;#8230;&lt;/li&gt;
+&lt;li&gt;설치하고 제대로 됐는지 확인을 하기위해서는&lt;ul&gt;
+&lt;li&gt;하나를&amp;nbsp;클론하고&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;git review -s&lt;/cite&gt; 를 해서 &lt;cite&gt;review.openstack.org&lt;/cite&gt; 에 제대로 접속했는지를 체크를&amp;nbsp;해준다.&lt;/li&gt;
+&lt;li&gt;이때 &lt;cite&gt;gitreview.username&lt;/cite&gt; 을 &lt;cite&gt;.gitconfig&lt;/cite&gt; 파일에 작성해두지 않았다면
+설정하라고&amp;nbsp;뜸.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;작업&amp;nbsp;플로워&lt;/h2&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h3&gt;버그일&amp;nbsp;경우&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;우선 &lt;cite&gt;bugs.launchpad.net/&amp;lt;projectname&amp;gt;&lt;/cite&gt; 으로 접속하여 버그 리포팅.&lt;ul&gt;
+&lt;li&gt;이때 4가지로 테스크가 나뉘는데,&lt;ol class="arabic"&gt;
+&lt;li&gt;새로운 버그 확인: &amp;quot;New&amp;quot;로 표기된 버그를 &amp;quot;Confirmed&amp;quot;로 변경 가능한 상태.
+거의 초기를 말한다고&amp;nbsp;보면됨.&lt;/li&gt;
+&lt;li&gt;버그 수정 : 버그를 할당하고, &amp;quot;In Progress&amp;quot;로&amp;nbsp;등록.&lt;/li&gt;
+&lt;li&gt;리뷰중 : &amp;quot;Incomplete&amp;quot;로 표기되고 리뷰가 진행되는 상태를 말함. 최대
+4주까지 걸린다고&amp;nbsp;함.&lt;/li&gt;
+&lt;li&gt;버그가 또다시 발견된 경우 : 그렇다고함&amp;#8230; (뭐라말하기가&amp;#8230; 그냥 나같은
+경우엔 리오픈으로 적고 프로세스&amp;nbsp;해버림&amp;#8230;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;커밋할때 버그 진행상태를 남겨둘 수 있음. 자세한건 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/GitCommitMessages#Including_external_references"&gt;Including external
+references&lt;/a&gt; 를&amp;nbsp;보면됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;청사진으로 새로운 기능을 붙일&amp;nbsp;경우&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;이건 그냥 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Blueprints"&gt;Blueprints - wiki&lt;/a&gt; 를&amp;nbsp;보자.&lt;/li&gt;
+&lt;li&gt;관심 없고, 내가 딱히 추가할 내용도 별로 없어서&amp;#8230; 우선은..&amp;nbsp;빈칸&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h3&gt;변경을&amp;nbsp;시작해볼까~~~&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;첫 클론을 떠온거라면 상관없지만&amp;#8230; 뜬지 꽤됐으면 업스트림이랑 코드를 맞춰줘야
+된다.&lt;ul&gt;
+&lt;li&gt;안하면 일 두번하는 생긴다&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;내가 이글을 쓰고 있는 이유기도&amp;nbsp;하다&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git remote update
+&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout master
+&lt;span class="nv"&gt;$ &lt;/span&gt;git pull --ff-only origin master
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;그리고 브런치를 따는데, Blueprint는 &lt;cite&gt;bp/&amp;lt;blueprint_name&amp;gt;&lt;/cite&gt;, Bug는
+&lt;cite&gt;bug/&amp;lt;bug-number&amp;gt;&lt;/cite&gt; 로&amp;nbsp;따주면된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+git checkout -b TOPIC-BRANCH
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h3&gt;변경 사항&amp;nbsp;커밋&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;제목은 50자 이내로 작성하고, 한줄 띄우고 내용을&amp;nbsp;작성해줘야된다.&lt;/li&gt;
+&lt;li&gt;자세한 내용은 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/GitCommitMessages"&gt;Git commit messages&lt;/a&gt;&amp;nbsp;참고.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code text literal-block"&gt;
+summary
+
+brrrrrrbrrrrrra
+
+&amp;lt;if blueprint&amp;gt;
+Implements: blueprint &amp;lt;blueprint_name&amp;gt;
+&amp;lt;if bug&amp;gt;
+Closes-Bug: #&amp;lt;bug_number&amp;gt;
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;Change-id&lt;/cite&gt; 는 &lt;cite&gt;git review&lt;/cite&gt; 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는&amp;nbsp;없다.&lt;/li&gt;
+&lt;li&gt;리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 &lt;cite&gt;git commit &amp;#8212;amend&lt;/cite&gt;
+오셤으로 해주면된다. 짧게 쓰면 &lt;cite&gt;git commit -a&lt;/cite&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id8"&gt;
+&lt;h3&gt;리뷰&amp;nbsp;등록&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;git reivew&lt;/cite&gt; 로 하면 &lt;cite&gt;review.openstack.org&lt;/cite&gt; 에 올라가 있는 것을 확인할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id9"&gt;
+&lt;h3&gt;변경사항이&amp;nbsp;있을때&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;커밋 메시지에 &lt;cite&gt;Change-Id&lt;/cite&gt; 가없을때는 붙여넣기 해준 다음 &lt;cite&gt;&amp;#8212;amend&lt;/cite&gt; 로&amp;nbsp;커밋.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;나머지 자세한 것들은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 확인하도록하자. 이것도 뭐&amp;#8230; 내가
+까먹으니까 작성한&amp;nbsp;것이기도하지만&amp;#8230;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="OpenStack"></category><category term="commit"></category></entry><entry><title>gitworkflows(7)에대한 이야기</title><link href="http://ujuc.github.io/2015/02/02/gitworkflows7/" rel="alternate"></link><updated>2015-03-31T00:13:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</id><summary type="html">&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
 이야기하면서 슬라이드 &lt;a class="footnote-reference" href="#id3" id="id1"&gt;[1]&lt;/a&gt; 를 하나&amp;nbsp;올려주셨다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The gitworkflows(7)&amp;nbsp;illustrated&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;정말 슬라이드를 이렇게까지 만들어주는건 정말 좋은듯. 특히 발표 당시에 그것을
