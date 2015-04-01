@@ -1,5 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-03-31T22:29:00+09:00</updated><entry><title>OpenStack Commit</title><link href="http://ujuc.github.io/2015/02/13/openstack-commit/" rel="alternate"></link><updated>2015-03-31T22:29:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</id><summary type="html">&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-04-01T23:52:00+09:00</updated><entry><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link href="http://ujuc.github.io/2015/03/03/vim-to-ide/" rel="alternate"></link><updated>2015-04-01T23:52:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</id><summary type="html">&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
+vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/jez/vim-as-an-ide"&gt;jez/vim-as-an-ide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;뭐 특별한 것은 없어 보이지만, Vim을 설정하는 것들에대해 커밋을 통해서 작성해
+뒀다. 그래서 더 좋다. 이렇게하면 나중에 누군가에게 vim을 설정하는 방법에 대해서
+알려주는 방법에서도 좋을&amp;nbsp;듯함.&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;아쉬운것&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/gmarik/Vundle.vim"&gt;Vundle&lt;/a&gt; 을 사용해서 플러그인을&amp;nbsp;설치한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;그냥 아쉽다. 다른 것들도 많다. &lt;a class="reference external" href="https://github.com/Shougo/neobundle.vim"&gt;NeoVundle&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/junegunn/vim-plug"&gt;Plug&lt;/a&gt;. 이정도가 내가 아는 플러그인
+설치를 도와주는&amp;nbsp;것들이다.&lt;/p&gt;
+&lt;p&gt;뭐 Vundle을 사용하는 방법을 안다면 쉽게 작업을 진행할 수 있으니 필요한 것들을
+확인해서 설치하는게&amp;nbsp;필요할듯.&lt;/p&gt;
+&lt;p&gt;다른 것들은 나도 보면서 배워야할 것들이다. 플러그인들이 많이 설치되는 것들을
+설치해서 사용은 하고 있지만&amp;#8230; 그렇게 많은 기능들을 다 사용하지 않는 이상&amp;#8230;
+조금씩 덜어내는 것도 필요할&amp;nbsp;듯.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="vim"></category><category term="vimrc"></category><category term="ide"></category></entry><entry><title>timesheet.js??</title><link href="http://ujuc.github.io/2015/03/02/timesheet-js/" rel="alternate"></link><updated>2015-04-01T22:21:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-02:2015/03/02/timesheet-js/</id><summary type="html">&lt;p&gt;놀다 보니 이것저것 보는 것들도 많다. 그런것들이라도 간단히&amp;nbsp;적어둬야지&amp;#8230;&lt;/p&gt;
+&lt;p&gt;노트에다가 작성을 해놓고 넣어두는 것도 한 방법이지만, 봤을때 좋은거라 생각한다면
+그것으로 작업이 가능하지 않을까&amp;nbsp;하여&amp;#8230;&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;timesheet.js&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;홈페이지: &lt;a class="reference external" href="https://github.com/sbstjn/timesheet.js"&gt;sbstjn/timesheet.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;손을 좀 대서 자세하게 보이거나 이것저것 손을 볼 수 있을&amp;nbsp;것같은데&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img alt="" src="https://raw.githubusercontent.com/sbstjn/timesheet.js/master/screen.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;예제&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; 태그를 쓸수 없다는게 rst의&amp;nbsp;단점&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그래서 &lt;a class="reference external" href="http://jsfiddle.net/fujstt3s/1/"&gt;예제&lt;/a&gt; 는 링크로&amp;#8230;. &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;특이점&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;소스파일로 되어있는기.. &lt;a class="reference external" href="http://haml.info/"&gt;haml&lt;/a&gt; 로 되어있고, &lt;a class="reference external" href="http://sass-lang.com/"&gt;sass&lt;/a&gt; 는 첨가.&lt;ul&gt;
+&lt;li&gt;sass는 CSS를 더 변수, 함수, 확장 / 상속 등의 기능을 추가해서 쉽게 만들고,
+쉽게 유지보수 할 수 있도록 되어있다고 한다. 여러 종류가 있다고&amp;#8230; &lt;a class="footnote-reference" href="#id6" id="id5"&gt;[1]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;haml은 &lt;span class="caps"&gt;HTML&lt;/span&gt; abstraction markup language라고 하는걸 줄였다고, 작성을 해놨네.
+&lt;span class="caps"&gt;HTML&lt;/span&gt; 태그를 작성하기 더 쉽게 되어있긴한데&amp;#8230; 태그를 변수로 주는게&amp;nbsp;특이하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;조금이나 더 짧게 쓰고 조금이나마 더 버전 관리가 쉽게 하도록 하는걸 보면, 점점
+더 바닥을 아는 사람들이 없어져가고, 그것들을 알 수 있는 방법들도
+없어져가는건 안좋은 점 중&amp;nbsp;하나다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id5"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://windtale.net/blog/why-i-choose-sass/"&gt;http://windtale.net/blog/why-i-choose-sass/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</summary><category term="javascript"></category><category term="JS"></category></entry><entry><title>Clojure 개발 환경 구축</title><link href="http://ujuc.github.io/2015/03/01/clojure-development-env/" rel="alternate"></link><updated>2015-04-01T21:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-01:2015/03/01/clojure-development-env/</id><summary type="html">&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;1.&amp;nbsp;개요&lt;/h2&gt;
+&lt;p&gt;Clojure를 공부하려하는데&amp;#8230; 이것 저것 작업을 하려하니 짧은 기억력으로는 계속
+봐야되는지라. 이렇게 작성을 해놔야 나중에 볼 듯하고, 또 어딘가에 넣어둔다고해도
+찾을때는 잘 못찾는&amp;nbsp;지라&amp;#8230;&lt;/p&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h3&gt;1.&amp;nbsp;전재&lt;/h3&gt;
+&lt;p&gt;OSX를 기반으로 한다. &lt;cite&gt;brew&lt;/cite&gt; 를 패키지로 모두 작성된다. 만약 Linux에서
+작업하게되면 관련해서 문서는 추가로 작성할 예정임. 문제는 언제될지&amp;nbsp;모르겠다.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;2. 설치할&amp;nbsp;것들&lt;/h2&gt;
+&lt;div class="section" id="jdk"&gt;
+&lt;h3&gt;1. &lt;span class="caps"&gt;JDK&lt;/span&gt;&amp;nbsp;설치&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;검색해서 JDK를 다운받으면&amp;nbsp;된다.&lt;/li&gt;
+&lt;li&gt;Apple에서 기본적으로 주는걸 써도 될&amp;nbsp;듯.&lt;/li&gt;
+&lt;li&gt;8으로 설치했는데 작업하는데는 아무런&amp;nbsp;이상없다.&lt;/li&gt;
+&lt;li&gt;그래서 그냥&amp;nbsp;쓴다.&lt;/li&gt;
+&lt;li&gt;그리고`brew-cask` 에 JDK가&amp;nbsp;있다는&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="leiningen"&gt;
+&lt;h2&gt;2. Leiningen&amp;nbsp;설치&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;brew install leiningen&lt;/cite&gt; 으로&amp;nbsp;설치.&lt;/li&gt;
+&lt;li&gt;딱히 설정할 것&amp;nbsp;없음.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lein"&gt;
+&lt;h2&gt;3. lein&amp;nbsp;사용&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;이거 쓸려고 넘많이&amp;nbsp;적었다&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+$ lein
+    Leiningen is a tool for working with Clojure projects.
+
+    Several tasks are available:
+    change              Rewrite project.clj by applying a function.
+    check               Check syntax and warn on reflection.
+    classpath           Print the classpath of the current project.
+    clean               Remove all files from project's target-path.
+    compile             Compile Clojure source into .class files.
+    deploy              Build and deploy jar to remote repository.
+    deps                Download all dependencies.
+    do                  Higher-order task to perform other tasks in succession.
+    help                Display a list of tasks or help for a given task.
+    install             Install the current project to the local repository.
+    jar                 Package up all the project's files into a jar file.
+    javac               Compile Java source files.
+    new                 Generate project scaffolding based on a template.
+    plugin              DEPRECATED. Please use the :user profile instead.
+    pom                 Write a pom.xml file to disk for Maven interoperability.
+    release             Perform :release-tasks.
+    repl                Start a repl session either with the current project or standalone.
+    retest              Run only the test namespaces which failed last time around.
+    run                 Run a -main function with optional command-line arguments.
+    search              Search remote maven repositories for matching jars.
+    show-profiles       List all available profiles or display one if given an argument.
+    test                Run the project's tests.
+    trampoline          Run a task without nesting the project's JVM inside Leiningen's.
+    uberjar             Package up the project files and dependencies into a jar file.
+    update-in           Perform arbitrary transformations on your project map.
+    upgrade             Upgrade Leiningen to specified version or latest stable.
+    vcs                 Interact with the version control system.
+    version             Print version for Leiningen and the current JVM.
+    with-profile        Apply the given task with the profile(s) specified.
+
+    Run `lein help $TASK` for details.
+
+    Global Options:
+      -o             Run a task offline.
+      -U             Run a task after forcing update of snapshots.
+      -h, --help     Print this help or help for a specific task.
+      -v, --version  Print Leiningen's version.
+
+    See also: readme, faq, tutorial, news, sample, profiles, deploying, gpg,
+    mixed-source, templates, and copying.
+&lt;/pre&gt;
+&lt;div class="section" id="project"&gt;
+&lt;h3&gt;1. project&amp;nbsp;생성&lt;/h3&gt;
+&lt;pre class="code bash literal-block"&gt;
+lein new myproject
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;project.clj&lt;/cite&gt; 에 프로젝트에 관련된 내용들을 작성한다.&lt;ul&gt;
+&lt;li&gt;필요한 것들이 있다면 여기다가 차곡차곡&amp;nbsp;넣어준다.&lt;/li&gt;
+&lt;li&gt;그리고 이곳에 &lt;cite&gt;main&lt;/cite&gt; 으로 사용할 코드의 위치를 작성해 줘야된다.&lt;ul&gt;
+&lt;li&gt;키워드는 &lt;cite&gt;:main&lt;/cite&gt; 이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;2. 의존하는 라이브러리&amp;nbsp;다운로드&lt;/h3&gt;
+&lt;pre class="code bash literal-block"&gt;
+lein deps
+&lt;/pre&gt;
+&lt;p&gt;위에서 작성해준 패키지들을 받아와서 실행해준다. 그러니 왠만해서는 설치하고&amp;nbsp;하자.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h3&gt;3. 코드&amp;nbsp;작성&lt;/h3&gt;
+&lt;p&gt;&lt;cite&gt;src/myproject/core.clj&lt;/cite&gt; 가 있다. 이곳에다가 코드를 작성해주면&amp;nbsp;된다.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h3&gt;4.&amp;nbsp;실행&lt;/h3&gt;
+&lt;pre class="code bash literal-block"&gt;
+lein run
+&lt;/pre&gt;
+&lt;p&gt;쉽게 실행해서 나오는 것을 볼 수 있다. 뭐&amp;nbsp;간단하네&amp;#8230;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id8"&gt;
+&lt;h3&gt;5.&amp;nbsp;패키징&lt;/h3&gt;
+&lt;p&gt;역시 Java라고 해야될까&amp;#8230; jar 로 만들어두면 멀티 플랫폼에서도 작동이 가능하다는
+것이지. 그리고 그것을 묶어서 보여준다. 나중에가서 설정을 좀 해줘야되는 부분이
+발생하겠지만, 지금은 그렇게까지는 나올 필요가&amp;nbsp;없으니&amp;#8230;&lt;/p&gt;
+&lt;pre class="code bash literal-block"&gt;
+lein uberjar
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id9"&gt;
+&lt;h3&gt;6. 라이브러리&amp;nbsp;검색&lt;/h3&gt;
+&lt;p&gt;필요한 라이브러리들을 검색 하는건데&amp;#8230; 검색하는게 더 빠를듯&amp;#8230; 너무 많이
+나온다. 그리고 가끔 인덱스를 업데이트를 해주긴 해야되는데&amp;#8230; 오래걸려&amp;#8230;
+너무&amp;nbsp;오래&amp;#8230;&lt;/p&gt;
+&lt;pre class="code bash literal-block"&gt;
+lein search ring
+&lt;/pre&gt;
+&lt;p&gt;불편하게&amp;#8230; 페이지별로 나오니. 이름은 정확히 입력하자. 그리고 동일한 페키지
+이름으로 버전들이 쭉~~ 나오니 그것도하나 염두해둘 것&amp;#8230; 버전 정보는 명령어를
+하나더 쳐서 확인하게 해야지&amp;#8230; 저렇게 다 보여줄 필요가&amp;nbsp;있나&amp;#8230;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id10"&gt;
+&lt;h3&gt;7. 패치&amp;nbsp;설정&lt;/h3&gt;
+&lt;p&gt;자동으로 잡아준다. 그래도 추가해야된다면 &lt;cite&gt;proejct.clj&lt;/cite&gt; 에 키워드
+&lt;cite&gt;:extra-classpath-dirs&lt;/cite&gt; 를 사용하여 리스트 형식으로 추가해주면&amp;nbsp;된다.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id11"&gt;
+&lt;h3&gt;8. 인터프리터&amp;nbsp;실행&lt;/h3&gt;
+&lt;p&gt;인터프리터를 실행해서 작성한 내요이 맞는지 확인이&amp;nbsp;가능하다.&lt;/p&gt;
+&lt;pre class="code bash literal-block"&gt;
+lein repl
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id12"&gt;
+&lt;h2&gt;참고&amp;nbsp;사이트!&lt;/h2&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;&lt;a class="reference external" href="http://english4u.kr/clojure-memo/index.html"&gt;Clojure 강좌 -&amp;nbsp;김영태&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;emacs로 되어있는 부부만&amp;nbsp;제외했&amp;#8230;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+</summary><category term="clojure"></category><category term="개발 환경"></category><category term="lein"></category></entry><entry><title>oh-my-vim 설치후 오류 (OSX)</title><link href="http://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/" rel="alternate"></link><updated>2015-04-01T21:14:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-26:2015/02/26/oh-my-vim-error-osx/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim"&gt;oh-my-vim&lt;/a&gt; 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
+변경하고 있긴하다만&amp;#8230;). 달라진게 없다. 좀 더 화려해지고 플러그인들로 인해서
+IDE급으로 에디터가 변경됐을 뿐이다. 단지 80라인 와랩이&amp;nbsp;필요했을뿐인데&amp;#8230;&lt;/p&gt;
+&lt;p&gt;암튼 그렇게 쓰다보니 실행할때마다 에러가&amp;nbsp;뜬다.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+neocomplete does work this version of Vim.
+It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
+&lt;/pre&gt;
+&lt;p&gt;혹시나 해서 검색을 해봤다. 매번 실행할 때마다 엔터 3번은 너무&amp;nbsp;오래걸려서&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/Shougo/neocomplete.vim/issues/237"&gt;neocomplete.vim - Vim version and lua&lt;/a&gt; 에서는 실행후 &lt;cite&gt;:version&lt;/cite&gt; 으로 &lt;cite&gt;lua&lt;/cite&gt; 가
+&lt;cite&gt;-&lt;/cite&gt; 인지 &lt;cite&gt;+&lt;/cite&gt; 인지 확인을 하라고 말을&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;여기서는 &lt;cite&gt;-lua&lt;/cite&gt; 면 &lt;cite&gt;lua&lt;/cite&gt; 사용 옵션이 빠져있는 것이 되기에 vim 설치시 그에 대한
+옵션을 설정해줘야된다는&amp;nbsp;말을&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;OSX&lt;/span&gt; 사용자들에게만 나온는 것같은데&amp;#8230; Linux에 대한 오류가 없는&amp;nbsp;걸보면&amp;#8230;&lt;/p&gt;
+&lt;p&gt;암튼 그것을 수정하는 방법은 &lt;cite&gt;brew&lt;/cite&gt; 로 설치할때 옵션을 걸어주고 설치하면 된다.
+물론 설치했다면, 다시 설치하면된다. 난 삭제하고 다시 설치&amp;#8230; (적다보니&amp;#8230; 자동화
+스크립트에 작성해둔거 변경을&amp;nbsp;해줘야겠다&amp;#8230;)&lt;/p&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install vim --with-cscope --with-lua --override-system-vim
+&lt;/pre&gt;
+&lt;p&gt;설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이&amp;nbsp;줄었다.!!!&lt;/p&gt;
+</summary><category term="vim"></category><category term="setting"></category></entry><entry><title>Pycharm에서 iPython notebook 사용</title><link href="http://ujuc.github.io/2015/02/23/using-ipython-notebook-on-pycharm/" rel="alternate"></link><updated>2015-04-01T21:07:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-23:2015/02/23/using-ipython-notebook-on-pycharm/</id><summary type="html">&lt;p&gt;Pycharm iPython notebook 지원은 4.0에서부터 지원하기 시작했다. 아직 버전업이
+안됐으니&amp;nbsp;작년인듯&amp;#8230;&lt;/p&gt;
+&lt;p&gt;iPython을 설치하고 Pycharm에서 설치하려고 봤더니 제대로 돌아가질 않는다.
+그렇다고 오류가 보이지도 않아서 직접 터미널에서&amp;nbsp;쳤더니&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;패키지가 없어서 안된다!!!&lt;/strong&gt; 라는 비명을 볼 수&amp;nbsp;있었다.&lt;/p&gt;
+&lt;p&gt;설치해줘야되는 패키지는 &lt;cite&gt;pyzmq&lt;/cite&gt;, &lt;cite&gt;tornado&lt;/cite&gt;, (&lt;cite&gt;certifi&lt;/cite&gt; 는 &lt;cite&gt;torando&lt;/cite&gt; 설치시 같이
+설치가되니 넘어간다.). 편한 방법으로 설치해주고 작동시키면 돌아가는 것을 확인할
+수&amp;nbsp;있다만&amp;#8230;&lt;/p&gt;
+&lt;p&gt;Pycharm의 iPython notebook 입력기 UI가 너무 안좋다. 그냥 서버를 띄우고 Web에서
+작동하는 것이 입력하기도 쉽고 값들을 확인하면서 작성하기가 더 쉽게 되어있으니
+사용자가 알아서&amp;#8230; 나는&amp;nbsp;안쓸꺼임&amp;#8230;&lt;/p&gt;
+&lt;p&gt;아마 업데이트 하면&amp;#8230; 괜찮아질꺼야&amp;#8230;&amp;nbsp;그럴꺼야&amp;#8230;&lt;/p&gt;
+</summary><category term="Pycharm"></category><category term="iPython"></category><category term="notebook"></category></entry><entry><title>OpenStack Commit</title><link href="http://ujuc.github.io/2015/02/13/openstack-commit/" rel="alternate"></link><updated>2015-03-31T22:29:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</id><summary type="html">&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
 그런데&amp;#8230;. 왜이리&amp;nbsp;어려운거지&amp;#8230;.&lt;/p&gt;
 &lt;img alt="" src="http://docs.openstack.org/infra/manual/_images/code_review.png" /&gt;
 &lt;p&gt;신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런&amp;#8230; 어렵지 않을

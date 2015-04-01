@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="잘 밤에 쓸데없는 생각하기...">
+    <meta name="author" content="ujuc">
+
+        <title>oh-my-vim 설치후 오류 (<span class="caps">OSX</span>) · 잘 밤에 쓸데없는 생각하기...</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css" type="text/css">
+
+    <link rel="stylesheet" href="http://ujuc.github.io/theme/css/main.css">
+
+    <link rel="stylesheet" href="http://ujuc.github.io/theme/css/solarized-light.css">
+
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container" id="wrap">
+      <nav id="navbar" class="navbar navbar-default" role="navigation">
+    <div class="container">
+
+      <!--navbar-header-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://ujuc.github.io">잘 밤에 쓸데없는 생각하기...</a>
+      </div> <!--navbar-header-->
+
+      <!-- Search Box -->
+
+      <!--Menuitems, collapable-->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right" id="menuitem-list">
+                <li >
+                  <a href="http://ujuc.github.io/">blog</a>
+                </li>
+
+              <li class="btn-group">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archives<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li >
+                    <a href="http://ujuc.github.io/tags.html">Tags</a>
+                  </li>
+                  <li >
+                    <a href="http://ujuc.github.io/categories.html">Categories</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="btn-group">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li >
+                    <a href="mailto:ujuc@ujuc.kr">Email</a>
+                  </li>
+                  <li >
+                    <a href="https://github.com/ujuc">Github</a>
+                  </li>
+                </ul>
+              </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div> <!--container-->
+  </nav>
+
+
+    <div class="container">
+      <div class="col-md-2">
+      </div>
+
+      <div class="col-md-8">
+        <div class="row">
+              <div class="page-header">
+        <h1><a href="http://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/">oh-my-vim 설치후 오류 (<span class="caps">OSX</span>)</a></h1>
+    </div>
+
+        </div>
+
+        <div class="row">
+
+    <span id="article_info">
+    <a class="label label-primary" 
+      href="http://ujuc.github.io/category/Develop.html">Develop</a>
+      <b> · </b>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/vim.html">vim</a>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/setting.html">setting</a>
+    <!--<span class="glyphicon glyphicon-calendar"></span>-->
+      <b> · </b>
+      <a href="http://ujuc.github.io/archives.html#Year2015">2015</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month02">02</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month02">26</a>
+
+    <!--<span class="glyphicon glyphicon-user"></span>-->
+      <b> · </b>
+    <a href="http://ujuc.github.io/author/ujuc.html">ujuc</a>
+  </span>
+
+  <hr/>
+
+  <div id="article_content">
+    <p><a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim">oh-my-vim</a> 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
+변경하고 있긴하다만&#8230;). 달라진게 없다. 좀 더 화려해지고 플러그인들로 인해서
+IDE급으로 에디터가 변경됐을 뿐이다. 단지 80라인 와랩이&nbsp;필요했을뿐인데&#8230;</p>
+<p>암튼 그렇게 쓰다보니 실행할때마다 에러가&nbsp;뜬다.</p>
+<pre class="literal-block">
+neocomplete does work this version of Vim.
+It requires &quot;if_lua&quot; enabled Vim(7.3.885 or above).
+</pre>
+<p>혹시나 해서 검색을 해봤다. 매번 실행할 때마다 엔터 3번은 너무&nbsp;오래걸려서&#8230;</p>
+<p><a class="reference external" href="https://github.com/Shougo/neocomplete.vim/issues/237">neocomplete.vim - Vim version and lua</a> 에서는 실행후 <cite>:version</cite> 으로 <cite>lua</cite> 가
+<cite>-</cite> 인지 <cite>+</cite> 인지 확인을 하라고 말을&nbsp;한다.</p>
+<p>여기서는 <cite>-lua</cite> 면 <cite>lua</cite> 사용 옵션이 빠져있는 것이 되기에 vim 설치시 그에 대한
+옵션을 설정해줘야된다는&nbsp;말을&#8230;</p>
+<p><span class="caps">OSX</span> 사용자들에게만 나온는 것같은데&#8230; Linux에 대한 오류가 없는&nbsp;걸보면&#8230;</p>
+<p>암튼 그것을 수정하는 방법은 <cite>brew</cite> 로 설치할때 옵션을 걸어주고 설치하면 된다.
+물론 설치했다면, 다시 설치하면된다. 난 삭제하고 다시 설치&#8230; (적다보니&#8230; 자동화
+스크립트에 작성해둔거 변경을&nbsp;해줘야겠다&#8230;)</p>
+<pre class="code bash literal-block">
+<span class="nv">$ </span>brew install vim --with-cscope --with-lua --override-system-vim
+</pre>
+<p>설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이&nbsp;줄었다.!!!</p>
+
+  </div>
+
+  <hr/>
+
+      <ul class="pager">
+        <li class="previous">
+          <a href="http://ujuc.github.io/2015/03/01/clojure-development-env/">
+          &laquo; Newer</a>
+        </li>
+        <li class="next">
+          <a href="http://ujuc.github.io/2015/02/23/using-ipython-notebook-on-pycharm/">
+          Older &raquo;</a>
+        </li>
+      </ul>
+
+    <hr/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'ujucgithub'; // required: replace example with your forum shortname
+  var disqus_identifier = 'oh-my-vim-error-osx';
+  var disqus_url = 'http://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/';
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+        <div class="row">
+        </div>
+
+      </div>
+
+      <div class="col-md-2">
+      </div>
+    </div>
+
+
+  </div>
+
+    <nav id="footer" class="navbar navbar-default">
+    <div class="container">
+        <p id="footer-text" class="navbar-text text-center">
+          <span id="engine">
+            Compiled using
+            <a href="http://docs.getpelican.com">Pelican</a>
+          </span>
+          <span id="theme">
+            with theme
+            <a href="http://github.com/yuex/pelican-chameleon">Chameleon</a>
+          </span>
+          <span id="bootstrap">
+            on top of
+            <a href="http://getbootstrap.com/">Bootstrap</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+
+</body>
+</html>
