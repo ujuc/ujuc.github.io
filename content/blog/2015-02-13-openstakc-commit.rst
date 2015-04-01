@@ -13,7 +13,7 @@ OpenStack Commit
 
 .. _Developer's Guide: http://docs.openstack.org/infra/manual/developers.html
 
-.. image:: http://docs.openstack.org/infra/manual/_images/code_review.png
+.. |code review| image:: http://docs.openstack.org/infra/manual/_images/code_review.png
 
 신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런... 어렵지 않을
 것같아 시작...
