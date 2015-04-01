@@ -27,7 +27,6 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;li&gt;홈페이지: &lt;a class="reference external" href="https://github.com/sbstjn/timesheet.js"&gt;sbstjn/timesheet.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;손을 좀 대서 자세하게 보이거나 이것저것 손을 볼 수 있을&amp;nbsp;것같은데&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img alt="" src="https://raw.githubusercontent.com/sbstjn/timesheet.js/master/screen.png" /&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;예제&lt;/h2&gt;
@@ -247,7 +246,6 @@ It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 &lt;p&gt;아마 업데이트 하면&amp;#8230; 괜찮아질꺼야&amp;#8230;&amp;nbsp;그럴꺼야&amp;#8230;&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:07:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-23:2015/02/23/using-ipython-notebook-on-pycharm/</guid><category>Pycharm</category><category>iPython</category><category>notebook</category></item><item><title>OpenStack Commit</title><link>http://ujuc.github.io/2015/02/13/openstack-commit/</link><description>&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
 그런데&amp;#8230;. 왜이리&amp;nbsp;어려운거지&amp;#8230;.&lt;/p&gt;
-&lt;img alt="" src="http://docs.openstack.org/infra/manual/_images/code_review.png" /&gt;
 &lt;p&gt;신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런&amp;#8230; 어렵지 않을
 것같아&amp;nbsp;시작&amp;#8230;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
