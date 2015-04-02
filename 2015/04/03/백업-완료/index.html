@@ -6,7 +6,7 @@
     <meta name="description" content="잘 밤에 쓸데없는 생각하기...">
     <meta name="author" content="ujuc">
 
-        <title>TI에서 베터리를 가장 적게 먹는 칩&nbsp;출시 · 잘 밤에 쓸데없는 생각하기...</title>
+        <title>백업&nbsp;완료 · 잘 밤에 쓸데없는 생각하기...</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -91,7 +91,7 @@
       <div class="col-md-8">
         <div class="row">
               <div class="page-header">
-        <h1><a href="http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/">TI에서 베터리를 가장 적게 먹는 칩&nbsp;출시</a></h1>
+        <h1><a href="http://ujuc.github.io/2015/04/03/백업-완료/">백업&nbsp;완료</a></h1>
     </div>
 
         </div>
@@ -100,25 +100,13 @@
 
     <span id="article_info">
     <a class="label label-primary" 
-      href="http://ujuc.github.io/category/Hardware.html">Hardware</a>
+      href="http://ujuc.github.io/category/Chat.html">Chat</a>
       <b> · </b>
         <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/TI.html">TI</a>
-        <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/chip.html">chip</a>
-        <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/IoT.html">IoT</a>
-        <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/M3.html">M3</a>
-        <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/ARM.html">ARM</a>
-        <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/BLE.html">BLE</a>
-        <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/Low energy.html">Low energy</a>
+          href="http://ujuc.github.io/tag/백업완료.html">백업완료</a>
     <!--<span class="glyphicon glyphicon-calendar"></span>-->
       <b> · </b>
-      <a href="http://ujuc.github.io/archives.html#Year2015">2015</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month03">03</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month03">16</a>
+      <a href="http://ujuc.github.io/archives.html#Year2015">2015</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month04">04</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month04">03</a>
 
     <!--<span class="glyphicon glyphicon-user"></span>-->
       <b> · </b>
@@ -128,45 +116,34 @@
   <hr/>
 
   <div id="article_content">
-    <p><a class="reference external" href="http://www.kidd.co.kr/news/178946">산업일보</a> 에 &quot;<span class="caps">TI</span>, 베터리 없는 IoT 커넥티비티 구현&quot; 이라는 뉴스가 올라왔다.
-뭔일인가 해서 봤더니만&#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&nbsp;소리였다.</p>
-<p>기본 코어는 <span class="caps">ARM</span>® Cortext®-M3 MCU를 사용했고, 플래시 / <span class="caps">RAM</span>, <span class="caps">ADC</span>, 이것 저것들을
-같이 묶은 것에 통신은 <a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy">Bluetooth Low Energy(<span class="caps">BLE</span>)</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee">ZigBee®</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN">6LoWPAN</a>,
-sub-1GHz, <a class="reference external" href="https://docs.zigbee.org/zigbee-docs/dcn/09/docs-09-5231-03-rmwg-understanding-zigbee-rf4ce.pdf">ZigBee <span class="caps">RF4CE</span>™</a>, 최대 5Mbps 고유모드로 지원한다고&nbsp;한다.</p>
-<p>제목에서는 베터리가 없다고 말을 했지만.. 침 설계된 내용들을&nbsp;확인해보면&#8230;</p>
-<ul class="simple">
-<li>Active-mode <span class="caps">RX</span>: 5.9&nbsp;mA</li>
-<li>Active-mode <span class="caps">TX</span> at 0 dBm: 6.1&nbsp;mA</li>
-<li>Active-mode Tx at +5 dBm: 9.1&nbsp;mA</li>
-<li>Active-mode <span class="caps">MCU</span>: 61&nbsp;µA/MHz</li>
-<li>Active-mode <span class="caps">MCU</span>: 48.5&nbsp;CoreMark/mA</li>
-<li>Active-mode Sensor Controller: 8.2&nbsp;µA/MHz</li>
-<li>Standby: 1 µA (<span class="caps">RTC</span> Running and <span class="caps">RAM</span>/<span class="caps">CPU</span>&nbsp;Retention)</li>
-<li>shutdown: 100 nA (Wakeup on External&nbsp;Events)</li>
-</ul>
-<p>&#8230;</p>
-<p>적게 먹기는 한다. 전력은 조금 먹지만, 전압이 1.8에서 3.8V라고 적혀있는 걸보면&#8230;
-건전지 2개는&nbsp;들어가야되는&#8230;</p>
-<p>이 아이드은 셈플로 몇개 받을 수 있는지 한번 알아볼까&#8230; 최대 GPIO도 31개면&nbsp;괜찮은데&#8230;</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.ti.com/product/cc2630"><span class="caps">CC2630</span></a> : ZigBee,&nbsp;6LoWPAN</li>
-<li><a class="reference external" href="http://www.ti.com/product/cc2640"><span class="caps">CC2640</span></a> : Bluetooth&nbsp;Smart</li>
-<li><a class="reference external" href="http://www.ti.com/product/cc2650"><span class="caps">CC2650</span></a> : Bluetooth Smart, ZigBee, 6LoWPAN, ZigBee <span class="caps">RF4CE</span></li>
-<li><a class="reference external" href="http://www.ti.com/product/cc1310"><span class="caps">CC1310</span></a> :&nbsp;Sub-1GHz</li>
-<li><a class="reference external" href="http://www.ti.com/product/cc2620"><span class="caps">CC2620</span></a> : ZigBee <span class="caps">RF4CE</span></li>
-</ul>
+    <p>github에 블로그를 만든 이유는 한가지&#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+그래서 첫 툴로 많이 사용하는 <a class="reference external" href="http://jekyllrb.com/">Jekyll</a> 을 이용해서 구축&#8230; 그러나 얼마 가지 못해
+Jekyll이 제대로 돌아가지 못하는 상황에&#8230; <span class="caps">OTL</span></p>
+<p>그래서 결국 <a class="reference external" href="http://octopress.org/">Octopress</a> 가 쉽다고 하여 갔으나&#8230; 뭔놈의 테마가 마음에 드는넘이
+없는지&#8230; 바꾸는데만 일주일&#8230; 아&#8230;&nbsp;안해&#8230;</p>
+<p>그래서 이번엔 OpenStack 문서화팀에서 문서들을 <a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a> 형식으로 작성하여
+Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&#8230; 배워봐야지 하면서 Python으로
+정적 페이지를 만들어주는 <a class="reference external" href="https://github.com/getpelican/pelican">Pelican</a> 으로 스타표시는 오래됐는데 인자사
+사용해볼꺼라고&nbsp;작업을&#8230;</p>
+<p>그런데 글쓰기 편하고 설정하기가 쉽다. Python을 좀 했다고 그런건지&#8230; 기본
+설정들을 Make 파일로 명령을 내릴 수 있도록 구성을 해놔서 그런지&#8230; 직접 명령어를
+칠필요도 없어서&#8230; 그렇다고 내가 작성할 필요도 없는거고 (가장&nbsp;크다.).</p>
+<p><a class="reference external" href="https://github.com/getpelican/pelican">Pelican</a> 설정법에 대해서는 주말에 작성해야겠다. 이것저것 설정이나 추가하거나
+손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&nbsp;넣어놓는건지.;;;</p>
+<p>그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&nbsp;만들었&#8230;</p>
+<p>이제 산적해있는 것들이나 빨리&nbsp;써야겠다.</p>
 
   </div>
 
   <hr/>
 
       <ul class="pager">
-        <li class="previous">
-          <a href="http://ujuc.github.io/2015/04/03/백업-완료/">
+        <li class="previous disabled">
+          <a >
           &laquo; Newer</a>
         </li>
         <li class="next">
-          <a href="http://ujuc.github.io/2015/03/16/xonsh/">
+          <a href="http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/">
           Older &raquo;</a>
         </li>
       </ul>
@@ -176,8 +153,8 @@ sub-1GHz, <a class="reference external" href="https://docs.zigbee.org/zigbee-doc
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
   var disqus_shortname = 'ujucgithub'; // required: replace example with your forum shortname
-  var disqus_identifier = 'ti-lowpwoer-soc-release';
-  var disqus_url = 'http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/';
+  var disqus_identifier = '백업-완료';
+  var disqus_url = 'http://ujuc.github.io/2015/04/03/백업-완료/';
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {

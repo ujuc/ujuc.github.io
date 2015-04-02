@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 03 Apr 2015 00:23:00 +0900</lastBuildDate><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;quot;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;quot; 이라는 뉴스가 올라왔다.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 03 Apr 2015 00:23:00 +0900</lastBuildDate><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
+Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
+없는지&amp;#8230; 바꾸는데만 일주일&amp;#8230; 아&amp;#8230;&amp;nbsp;안해&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그래서 이번엔 OpenStack 문서화팀에서 문서들을 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText"&gt;reStructuredText&lt;/a&gt; 형식으로 작성하여
+Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워봐야지 하면서 Python으로
+정적 페이지를 만들어주는 &lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt; 으로 스타표시는 오래됐는데 인자사
+사용해볼꺼라고&amp;nbsp;작업을&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그런데 글쓰기 편하고 설정하기가 쉽다. Python을 좀 했다고 그런건지&amp;#8230; 기본
+설정들을 Make 파일로 명령을 내릴 수 있도록 구성을 해놔서 그런지&amp;#8230; 직접 명령어를
+칠필요도 없어서&amp;#8230; 그렇다고 내가 작성할 필요도 없는거고 (가장&amp;nbsp;크다.).&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt; 설정법에 대해서는 주말에 작성해야겠다. 이것저것 설정이나 추가하거나
+손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
+&lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
+&lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;quot;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;quot; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
