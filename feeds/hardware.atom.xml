@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/hardware.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-03-31T21:47:00+09:00</updated><entry><title>RAM 리뷰에서 본 버전별 특성</title><link href="http://ujuc.github.io/2015/02/09/RAM-reive/" rel="alternate"></link><updated>2015-03-31T21:47:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-09:2015/02/09/RAM-reive/</id><summary type="html">&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;&lt;span class="caps"&gt;DDR4&lt;/span&gt; Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/hardware.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-04-02T23:05:00+09:00</updated><entry><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link href="http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/" rel="alternate"></link><updated>2015-04-02T23:05:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:2015/03/16/ti-lowpwoer-soc-release/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;quot;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;quot; 이라는 뉴스가 올라왔다.
+뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
+&lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
+같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
+sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-docs/dcn/09/docs-09-5231-03-rmwg-understanding-zigbee-rf4ce.pdf"&gt;ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;™&lt;/a&gt;, 최대 5Mbps 고유모드로 지원한다고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;제목에서는 베터리가 없다고 말을 했지만.. 침 설계된 내용들을&amp;nbsp;확인해보면&amp;#8230;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Active-mode &lt;span class="caps"&gt;RX&lt;/span&gt;: 5.9&amp;nbsp;mA&lt;/li&gt;
+&lt;li&gt;Active-mode &lt;span class="caps"&gt;TX&lt;/span&gt; at 0 dBm: 6.1&amp;nbsp;mA&lt;/li&gt;
+&lt;li&gt;Active-mode Tx at +5 dBm: 9.1&amp;nbsp;mA&lt;/li&gt;
+&lt;li&gt;Active-mode &lt;span class="caps"&gt;MCU&lt;/span&gt;: 61&amp;nbsp;µA/MHz&lt;/li&gt;
+&lt;li&gt;Active-mode &lt;span class="caps"&gt;MCU&lt;/span&gt;: 48.5&amp;nbsp;CoreMark/mA&lt;/li&gt;
+&lt;li&gt;Active-mode Sensor Controller: 8.2&amp;nbsp;µA/MHz&lt;/li&gt;
+&lt;li&gt;Standby: 1 µA (&lt;span class="caps"&gt;RTC&lt;/span&gt; Running and &lt;span class="caps"&gt;RAM&lt;/span&gt;/&lt;span class="caps"&gt;CPU&lt;/span&gt;&amp;nbsp;Retention)&lt;/li&gt;
+&lt;li&gt;shutdown: 100 nA (Wakeup on External&amp;nbsp;Events)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;적게 먹기는 한다. 전력은 조금 먹지만, 전압이 1.8에서 3.8V라고 적혀있는 걸보면&amp;#8230;
+건전지 2개는&amp;nbsp;들어가야되는&amp;#8230;&lt;/p&gt;
+&lt;p&gt;이 아이드은 셈플로 몇개 받을 수 있는지 한번 알아볼까&amp;#8230; 최대 GPIO도 31개면&amp;nbsp;괜찮은데&amp;#8230;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2630"&gt;&lt;span class="caps"&gt;CC2630&lt;/span&gt;&lt;/a&gt; : ZigBee,&amp;nbsp;6LoWPAN&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2640"&gt;&lt;span class="caps"&gt;CC2640&lt;/span&gt;&lt;/a&gt; : Bluetooth&amp;nbsp;Smart&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2650"&gt;&lt;span class="caps"&gt;CC2650&lt;/span&gt;&lt;/a&gt; : Bluetooth Smart, ZigBee, 6LoWPAN, ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc1310"&gt;&lt;span class="caps"&gt;CC1310&lt;/span&gt;&lt;/a&gt; :&amp;nbsp;Sub-1GHz&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2620"&gt;&lt;span class="caps"&gt;CC2620&lt;/span&gt;&lt;/a&gt; : ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="TI"></category><category term="chip"></category><category term="IoT"></category><category term="M3"></category><category term="ARM"></category><category term="BLE"></category><category term="Low energy"></category></entry><entry><title>RAM 리뷰에서 본 버전별 특성</title><link href="http://ujuc.github.io/2015/02/09/RAM-reive/" rel="alternate"></link><updated>2015-03-31T21:47:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-09:2015/02/09/RAM-reive/</id><summary type="html">&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;&lt;span class="caps"&gt;DDR4&lt;/span&gt; Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
 &lt;span class="caps"&gt;ADATA&lt;/span&gt; and Crucial 에서 글이올라왔길레&amp;nbsp;봤는데&amp;#8230;&lt;/p&gt;
 &lt;p&gt;어떤분께서 그렇게 말씀하시던 RAM이 버전업되면서 달라지 내용과 다른 점이 보여서
 머릿속 내용을 업데이트하는 겸해서 작성해두는&amp;nbsp;내용이다.&lt;/p&gt;

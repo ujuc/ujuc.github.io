@@ -1,5 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-04-01T23:52:00+09:00</updated><entry><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link href="http://ujuc.github.io/2015/03/03/vim-to-ide/" rel="alternate"></link><updated>2015-04-01T23:52:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</id><summary type="html">&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-04-03T00:23:00+09:00</updated><entry><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link href="http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/" rel="alternate"></link><updated>2015-04-02T23:05:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:2015/03/16/ti-lowpwoer-soc-release/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;quot;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;quot; 이라는 뉴스가 올라왔다.
+뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
+&lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
+같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
+sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-docs/dcn/09/docs-09-5231-03-rmwg-understanding-zigbee-rf4ce.pdf"&gt;ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;™&lt;/a&gt;, 최대 5Mbps 고유모드로 지원한다고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;제목에서는 베터리가 없다고 말을 했지만.. 침 설계된 내용들을&amp;nbsp;확인해보면&amp;#8230;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Active-mode &lt;span class="caps"&gt;RX&lt;/span&gt;: 5.9&amp;nbsp;mA&lt;/li&gt;
+&lt;li&gt;Active-mode &lt;span class="caps"&gt;TX&lt;/span&gt; at 0 dBm: 6.1&amp;nbsp;mA&lt;/li&gt;
+&lt;li&gt;Active-mode Tx at +5 dBm: 9.1&amp;nbsp;mA&lt;/li&gt;
+&lt;li&gt;Active-mode &lt;span class="caps"&gt;MCU&lt;/span&gt;: 61&amp;nbsp;µA/MHz&lt;/li&gt;
+&lt;li&gt;Active-mode &lt;span class="caps"&gt;MCU&lt;/span&gt;: 48.5&amp;nbsp;CoreMark/mA&lt;/li&gt;
+&lt;li&gt;Active-mode Sensor Controller: 8.2&amp;nbsp;µA/MHz&lt;/li&gt;
+&lt;li&gt;Standby: 1 µA (&lt;span class="caps"&gt;RTC&lt;/span&gt; Running and &lt;span class="caps"&gt;RAM&lt;/span&gt;/&lt;span class="caps"&gt;CPU&lt;/span&gt;&amp;nbsp;Retention)&lt;/li&gt;
+&lt;li&gt;shutdown: 100 nA (Wakeup on External&amp;nbsp;Events)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;적게 먹기는 한다. 전력은 조금 먹지만, 전압이 1.8에서 3.8V라고 적혀있는 걸보면&amp;#8230;
+건전지 2개는&amp;nbsp;들어가야되는&amp;#8230;&lt;/p&gt;
+&lt;p&gt;이 아이드은 셈플로 몇개 받을 수 있는지 한번 알아볼까&amp;#8230; 최대 GPIO도 31개면&amp;nbsp;괜찮은데&amp;#8230;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2630"&gt;&lt;span class="caps"&gt;CC2630&lt;/span&gt;&lt;/a&gt; : ZigBee,&amp;nbsp;6LoWPAN&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2640"&gt;&lt;span class="caps"&gt;CC2640&lt;/span&gt;&lt;/a&gt; : Bluetooth&amp;nbsp;Smart&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2650"&gt;&lt;span class="caps"&gt;CC2650&lt;/span&gt;&lt;/a&gt; : Bluetooth Smart, ZigBee, 6LoWPAN, ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc1310"&gt;&lt;span class="caps"&gt;CC1310&lt;/span&gt;&lt;/a&gt; :&amp;nbsp;Sub-1GHz&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2620"&gt;&lt;span class="caps"&gt;CC2620&lt;/span&gt;&lt;/a&gt; : ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="TI"></category><category term="chip"></category><category term="IoT"></category><category term="M3"></category><category term="ARM"></category><category term="BLE"></category><category term="Low energy"></category></entry><entry><title>xonsh?</title><link href="http://ujuc.github.io/2015/03/16/xonsh/" rel="alternate"></link><updated>2015-04-03T00:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python-ish, BASHwards-compatible shell language and command&amp;nbsp;prompt.라고&amp;#8230;&lt;/p&gt;
+&lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이&amp;#8230;
+그리고 기본이 3.4라&amp;#8230; 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
+기본으로 장착한 배포판의 경우엔&amp;nbsp;다르겠지만.&lt;/p&gt;
+</summary><category term="python"></category><category term="shell"></category></entry><entry><title>sys.json</title><link href="http://ujuc.github.io/2015/03/10/sys-json/" rel="alternate"></link><updated>2015-03-10T13:52:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-10:2015/03/10/sys-json/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/EricR/sys.json"&gt;EricR/sys.json&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;좀 독특하다고&amp;nbsp;해야되나?&lt;/p&gt;
+&lt;p&gt;Golang을 이용해서 웹을 간단히 띄우고, &lt;cite&gt;proc&lt;/cite&gt; 를 이용해서 ㄴ용들을 불러와 &lt;span class="caps"&gt;JSON&lt;/span&gt;
+형태로 뽑아주도록&amp;nbsp;되어있다.&lt;/p&gt;
+&lt;p&gt;몇몇 부분을 수정하거나 작업을 해야되긴 하겠지만 이 정도로 작은 아이를 띄워
+무리없이 가져올 수 있다면 그것도 좋은 방법이&amp;nbsp;아닐까&amp;#8230;&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;내가 생각하는 비슷한&amp;nbsp;패키지&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/nicolargo/glances"&gt;nicolargo/glances&lt;/a&gt; - Python으로 구성되어있으며, 서버 형식으로 API들을 뽑아 올
+수 있다. 물론 간단한 웹으로도&amp;nbsp;가능하다.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="go"></category><category term="json"></category><category term="api"></category></entry><entry><title>git-ftp로 ftp 클라이언트를!</title><link href="http://ujuc.github.io/2015/03/04/git-ftp/" rel="alternate"></link><updated>2015-04-02T00:48:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</id><summary type="html">&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
+이용해서 &lt;span class="caps"&gt;FTP&lt;/span&gt; 클라잉너트를&amp;nbsp;만들었다.&lt;/p&gt;
+&lt;p&gt;뭔짓이지&amp;#8230;&lt;/p&gt;
+&lt;p&gt;암튼&amp;#8230; 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;&amp;#8230; 역시 다른
+구멍을 파는 사람들이&amp;nbsp;있구나&amp;#8230;&lt;/p&gt;
+&lt;p&gt;변화점까지 확인할 수 있다는건 git의 장점을&amp;nbsp;가져왔구나.&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md"&gt;설치&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;기본&amp;nbsp;설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git clone https://github.com/git-ftp/git-ftp.git
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;git-ftp
+&lt;span class="nv"&gt;$ &lt;/span&gt;git tag
+&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout &amp;lt;tag&amp;gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo make install
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;업그레이드의&amp;nbsp;경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git pull
+&lt;span class="nv"&gt;$ &lt;/span&gt;git tag
+&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout &amp;lt;tag&amp;gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo make install
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Mac &lt;span class="caps"&gt;OS&lt;/span&gt;&amp;nbsp;X&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install git
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install curl --with-ssl --with-libssh2
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install git-ftp
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;curl&lt;/cite&gt; 을 기본으로 설치했는데 &lt;cite&gt;ssl&lt;/cite&gt;, &lt;cite&gt;libssh2&lt;/cite&gt; 를 사용할 수 있도록 설정이
+필요한&amp;nbsp;갑다.&lt;/li&gt;
+&lt;li&gt;git이 &lt;cite&gt;ssl&lt;/cite&gt; 을 사용하긴&amp;nbsp;한다만&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;사용법&lt;/h2&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="c"&gt;# Pushing for the fist time
+&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ftp init -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
+
+&lt;span class="c"&gt;# using
+&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ftp push -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;더 자세한 내용은 &lt;a class="reference external" href="https://gitub.com/git-ftp/git-ftp/blob/develop/man/git-ftp.1.md"&gt;man page&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h2&gt;제한&amp;nbsp;사항&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;윈도우와 &lt;span class="caps"&gt;OS&lt;/span&gt; X에서는 테스트를 많이 안했으니 관련된 버그가 있으면 말해 줄&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;배포 도구로 만들어지지 않아서&amp;#8230; 커밋이나 체크 아웃 같은건 알아서&amp;#8230;&amp;nbsp;조심히&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/README.md#about"&gt;https://github.com/git-ftp/git-ftp/blob/develop/&lt;span class="caps"&gt;README&lt;/span&gt;.md#about&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</summary><category term="git"></category><category term="ftp"></category><category term="shell"></category><category term="cli"></category><category term="bash"></category></entry><entry><title>OpenStack rootwrap</title><link href="http://ujuc.github.io/2015/03/04/openstack-rootwrap/" rel="alternate"></link><updated>2015-04-02T21:18:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-04:2015/03/04/openstack-rootwrap/</id><summary type="html">&lt;p&gt;OpenStack 프로젝트들에서 사용되는 것들 중&amp;#8230; &lt;strong&gt;root&lt;/strong&gt; 와 관련된 작업을
+진행해야하는 경우가 있다. 그럴때 사용하려고 만들어둔 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap"&gt;rootwrap&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wiki에서는 이 &lt;a class="reference external" href="https://fnords.wordpress.com/2011/11/23/improving-nova-privilege-escalation-model-part-1/"&gt;블로그&lt;/a&gt; 에 작성된 문제를 해결하기 위해서 만들어졌다고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;짧은 내기억으로는 간단한 팡리로만 존재했던 것같은데. (아닐 가능성 100%라논
+소리&amp;#8230;), 지금은 oslo 패키지로 관리되고 있다. &lt;a class="reference external" href="https://github.com/openstack/oslo.rootwrap"&gt;github&amp;nbsp;repo&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;사용자용&lt;/h2&gt;
+&lt;p&gt;&lt;cite&gt;nova.conf&lt;/cite&gt; 에 다음 문구&amp;nbsp;추가하도록&amp;#8230;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+rootwrap_config=/etc/nova/rootwrap.conf
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;배포용 패키지를 만드는&amp;nbsp;사람용&lt;/h2&gt;
+&lt;div class="section" id="suduers"&gt;
+&lt;h3&gt;Suduers&amp;nbsp;설정&lt;/h3&gt;
+&lt;p&gt;&lt;cite&gt;sudoers&lt;/cite&gt; 에 다음 문구를&amp;nbsp;추가하도록&amp;#8230;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h3&gt;필터 위치&amp;nbsp;설정&lt;/h3&gt;
+&lt;p&gt;&lt;cite&gt;rootwrap&lt;/cite&gt; 으로 &lt;cite&gt;Nova-provided&lt;/cite&gt; 필터 파일을 로드하고, &lt;cite&gt;rootwrap.d&lt;/cite&gt; 로 확장
+사용자의 필터 파일을 로드하도록 설정해&amp;nbsp;줄것.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[DEFAULT]
+filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;필터&amp;nbsp;정의&lt;/h3&gt;
+&lt;p&gt;각 노드마다 설치를&amp;#8230;&amp;nbsp;해줘야된다고.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h2&gt;플러그인&amp;nbsp;작성자용&lt;/h2&gt;
+&lt;div class="section" id="run-as-root"&gt;
+&lt;h3&gt;새로운 &lt;cite&gt;run-as-root&lt;/cite&gt; 명령을&amp;nbsp;추가&lt;/h3&gt;
+&lt;p&gt;root로 동작시킬 것이 있을&amp;nbsp;경우.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;nova.utils.execute(run_as_root=True)&lt;/cite&gt; 를 사용할&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;관련 필터 내용은 &lt;cite&gt;/etc/nova/rootwrap.d/foobar.filters&lt;/cite&gt; 에 추가해둘&amp;nbsp;것.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h2&gt;프로젝트&amp;nbsp;개발자용&lt;/h2&gt;
+&lt;div class="section" id="id8"&gt;
+&lt;h3&gt;새로운 &lt;cite&gt;run-as-root&lt;/cite&gt; 명령을&amp;nbsp;추가&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;nova.utils.execute(run_as_root=True)&lt;/cite&gt; 를 사용할&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;Nova 코드에서 &lt;cite&gt;/etc/nova/rootwrap.d/{filter_name}.ilters&lt;/cite&gt; 파일에 관련된 내용을
+추가해줄 것.&lt;ul&gt;
+&lt;li&gt;예로 Compute 노드에서 작동하는 소스라면
+&lt;cite&gt;/etc/nova/rootwrap.d/compute.filters&lt;/cite&gt; 에다가&amp;nbsp;추가하도록.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id9"&gt;
+&lt;h2&gt;상위 필터 타입&amp;nbsp;추가&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;기본 필터 타입은 &lt;cite&gt;CommandFilter&lt;/cite&gt; 임.&lt;/li&gt;
+&lt;li&gt;새로운 타입을 만들거나 지금 존재하는 타입을 확인하고 싶다면 &lt;a class="reference external" href="https://github.com/openstack/oslo.rootwrap/blob/master/oslo_rootwrap/filters.py"&gt;filters.py&lt;/a&gt; 를
+보면 된다. - &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes"&gt;Available Filter Classes&lt;/a&gt; 가 아닌걸로도 볼 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="openstack"></category><category term="oslo"></category><category term="오픈스택"></category></entry><entry><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link href="http://ujuc.github.io/2015/03/03/vim-to-ide/" rel="alternate"></link><updated>2015-04-01T23:52:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</id><summary type="html">&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
 vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/jez/vim-as-an-ide"&gt;jez/vim-as-an-ide&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;뭐 특별한 것은 없어 보이지만, Vim을 설정하는 것들에대해 커밋을 통해서 작성해

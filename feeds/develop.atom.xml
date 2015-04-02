@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-04-01T23:52:00+09:00</updated><entry><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link href="http://ujuc.github.io/2015/03/03/vim-to-ide/" rel="alternate"></link><updated>2015-04-01T23:52:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</id><summary type="html">&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-04-02T21:18:00+09:00</updated><entry><title>sys.json</title><link href="http://ujuc.github.io/2015/03/10/sys-json/" rel="alternate"></link><updated>2015-03-10T13:52:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-10:2015/03/10/sys-json/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/EricR/sys.json"&gt;EricR/sys.json&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;좀 독특하다고&amp;nbsp;해야되나?&lt;/p&gt;
+&lt;p&gt;Golang을 이용해서 웹을 간단히 띄우고, &lt;cite&gt;proc&lt;/cite&gt; 를 이용해서 ㄴ용들을 불러와 &lt;span class="caps"&gt;JSON&lt;/span&gt;
+형태로 뽑아주도록&amp;nbsp;되어있다.&lt;/p&gt;
+&lt;p&gt;몇몇 부분을 수정하거나 작업을 해야되긴 하겠지만 이 정도로 작은 아이를 띄워
+무리없이 가져올 수 있다면 그것도 좋은 방법이&amp;nbsp;아닐까&amp;#8230;&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;내가 생각하는 비슷한&amp;nbsp;패키지&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/nicolargo/glances"&gt;nicolargo/glances&lt;/a&gt; - Python으로 구성되어있으며, 서버 형식으로 API들을 뽑아 올
+수 있다. 물론 간단한 웹으로도&amp;nbsp;가능하다.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="go"></category><category term="json"></category><category term="api"></category></entry><entry><title>OpenStack rootwrap</title><link href="http://ujuc.github.io/2015/03/04/openstack-rootwrap/" rel="alternate"></link><updated>2015-04-02T21:18:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-04:2015/03/04/openstack-rootwrap/</id><summary type="html">&lt;p&gt;OpenStack 프로젝트들에서 사용되는 것들 중&amp;#8230; &lt;strong&gt;root&lt;/strong&gt; 와 관련된 작업을
+진행해야하는 경우가 있다. 그럴때 사용하려고 만들어둔 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap"&gt;rootwrap&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Wiki에서는 이 &lt;a class="reference external" href="https://fnords.wordpress.com/2011/11/23/improving-nova-privilege-escalation-model-part-1/"&gt;블로그&lt;/a&gt; 에 작성된 문제를 해결하기 위해서 만들어졌다고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;짧은 내기억으로는 간단한 팡리로만 존재했던 것같은데. (아닐 가능성 100%라논
+소리&amp;#8230;), 지금은 oslo 패키지로 관리되고 있다. &lt;a class="reference external" href="https://github.com/openstack/oslo.rootwrap"&gt;github&amp;nbsp;repo&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;사용자용&lt;/h2&gt;
+&lt;p&gt;&lt;cite&gt;nova.conf&lt;/cite&gt; 에 다음 문구&amp;nbsp;추가하도록&amp;#8230;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+rootwrap_config=/etc/nova/rootwrap.conf
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;배포용 패키지를 만드는&amp;nbsp;사람용&lt;/h2&gt;
+&lt;div class="section" id="suduers"&gt;
+&lt;h3&gt;Suduers&amp;nbsp;설정&lt;/h3&gt;
+&lt;p&gt;&lt;cite&gt;sudoers&lt;/cite&gt; 에 다음 문구를&amp;nbsp;추가하도록&amp;#8230;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h3&gt;필터 위치&amp;nbsp;설정&lt;/h3&gt;
+&lt;p&gt;&lt;cite&gt;rootwrap&lt;/cite&gt; 으로 &lt;cite&gt;Nova-provided&lt;/cite&gt; 필터 파일을 로드하고, &lt;cite&gt;rootwrap.d&lt;/cite&gt; 로 확장
+사용자의 필터 파일을 로드하도록 설정해&amp;nbsp;줄것.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[DEFAULT]
+filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;필터&amp;nbsp;정의&lt;/h3&gt;
+&lt;p&gt;각 노드마다 설치를&amp;#8230;&amp;nbsp;해줘야된다고.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h2&gt;플러그인&amp;nbsp;작성자용&lt;/h2&gt;
+&lt;div class="section" id="run-as-root"&gt;
+&lt;h3&gt;새로운 &lt;cite&gt;run-as-root&lt;/cite&gt; 명령을&amp;nbsp;추가&lt;/h3&gt;
+&lt;p&gt;root로 동작시킬 것이 있을&amp;nbsp;경우.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;nova.utils.execute(run_as_root=True)&lt;/cite&gt; 를 사용할&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;관련 필터 내용은 &lt;cite&gt;/etc/nova/rootwrap.d/foobar.filters&lt;/cite&gt; 에 추가해둘&amp;nbsp;것.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h2&gt;프로젝트&amp;nbsp;개발자용&lt;/h2&gt;
+&lt;div class="section" id="id8"&gt;
+&lt;h3&gt;새로운 &lt;cite&gt;run-as-root&lt;/cite&gt; 명령을&amp;nbsp;추가&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;nova.utils.execute(run_as_root=True)&lt;/cite&gt; 를 사용할&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;Nova 코드에서 &lt;cite&gt;/etc/nova/rootwrap.d/{filter_name}.ilters&lt;/cite&gt; 파일에 관련된 내용을
+추가해줄 것.&lt;ul&gt;
+&lt;li&gt;예로 Compute 노드에서 작동하는 소스라면
+&lt;cite&gt;/etc/nova/rootwrap.d/compute.filters&lt;/cite&gt; 에다가&amp;nbsp;추가하도록.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id9"&gt;
+&lt;h2&gt;상위 필터 타입&amp;nbsp;추가&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;기본 필터 타입은 &lt;cite&gt;CommandFilter&lt;/cite&gt; 임.&lt;/li&gt;
+&lt;li&gt;새로운 타입을 만들거나 지금 존재하는 타입을 확인하고 싶다면 &lt;a class="reference external" href="https://github.com/openstack/oslo.rootwrap/blob/master/oslo_rootwrap/filters.py"&gt;filters.py&lt;/a&gt; 를
+보면 된다. - &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes"&gt;Available Filter Classes&lt;/a&gt; 가 아닌걸로도 볼 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="openstack"></category><category term="oslo"></category><category term="오픈스택"></category></entry><entry><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link href="http://ujuc.github.io/2015/03/03/vim-to-ide/" rel="alternate"></link><updated>2015-04-01T23:52:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</id><summary type="html">&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
 vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/jez/vim-as-an-ide"&gt;jez/vim-as-an-ide&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;뭐 특별한 것은 없어 보이지만, Vim을 설정하는 것들에대해 커밋을 통해서 작성해
