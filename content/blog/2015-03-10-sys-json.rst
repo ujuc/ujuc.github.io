@@ -1,0 +1,33 @@
+sys.json
+=========
+
+:date: 2015-03-10 13:52
+:modefied: 2015-04-02 22:30
+:category: Develop
+:tags: go, json, api
+:slug: sys-json
+:summary: system에 관련된 내용들을 json 형태로 웹으로 뿌려줄 수 있다.
+          Linux의 `proc` 쪽에서 관련 내용을 가져온다.
+
+`EricR/sys.json`_
+
+.. _EricR/sys.json: https://github.com/EricR/sys.json
+
+
+좀 독특하다고 해야되나?
+
+Golang을 이용해서 웹을 간단히 띄우고, `proc` 를 이용해서 ㄴ용들을 불러와 JSON
+형태로 뽑아주도록 되어있다.
+
+몇몇 부분을 수정하거나 작업을 해야되긴 하겠지만 이 정도로 작은 아이를 띄워
+무리없이 가져올 수 있다면 그것도 좋은 방법이 아닐까...
+
+
+내가 생각하는 비슷한 패키지
+---------------------------
+
+`nicolargo/glances`_ - Python으로 구성되어있으며, 서버 형식으로 API들을 뽑아 올
+수 있다. 물론 간단한 웹으로도 가능하다.
+
+.. _nicolargo/glances: https://github.com/nicolargo/glances
+

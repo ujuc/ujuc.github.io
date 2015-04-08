@@ -10,10 +10,10 @@ TEMPLATE = """
 {title}
 {hashes}
 
-:date: {year}-{month}-{day} {hour}:{minute:02d}
+:date: {year}-{month:02d}-{day:02d} {hour:02d}:{minute:02d}
 :modified:
 :category:
-:tags: 
+:tags:
 :slug: {slug}
 :summary:
 :status: draft
@@ -21,10 +21,12 @@ TEMPLATE = """
 
 """
 
+file_path = "content/blog"
+
 def make_entry(title):
 	today = datetime.today()
 	slug = title.lower().strip().replace(' ', '-')
-	file_create = "content/{0}_{1:0>2}_{2:0>2}_{3}.rst".format(
+	file_create = "{0}/{1}-{2:0>2}-{3:0>2}-{4}.rst".format( file_path,
 		today.year, today.month, today.day, slug)
 	t = TEMPLATE.strip().format(
 		title=title,

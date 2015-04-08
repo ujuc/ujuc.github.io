@@ -1,0 +1,39 @@
+백업 완료
+#########
+
+:date: 2015-04-03 00:57
+:modified:
+:category: Chat
+:tags: 백업완료
+:slug: 백업-완료
+:summary: 이제 다시 시작. Jekyll > Octopress > Pelican 정착기.
+
+
+github에 블로그를 만든 이유는 한가지... 놀면서 개발에대한 이야기를 써보자 였다.
+그래서 첫 툴로 많이 사용하는 Jekyll_ 을 이용해서 구축... 그러나 얼마 가지 못해
+Jekyll이 제대로 돌아가지 못하는 상황에... OTL
+
+그래서 결국 Octopress_ 가 쉽다고 하여 갔으나... 뭔놈의 테마가 마음에 드는넘이
+없는지... 바꾸는데만 일주일... 아... 안해...
+
+그래서 이번엔 OpenStack 문서화팀에서 문서들을 reStructuredText_ 형식으로 작성하여
+Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서... 배워봐야지 하면서 Python으로
+정적 페이지를 만들어주는 Pelican_ 으로 스타표시는 오래됐는데 인자사
+사용해볼꺼라고 작업을...
+
+그런데 글쓰기 편하고 설정하기가 쉽다. Python을 좀 했다고 그런건지... 기본
+설정들을 Make 파일로 명령을 내릴 수 있도록 구성을 해놔서 그런지... 직접 명령어를
+칠필요도 없어서... 그렇다고 내가 작성할 필요도 없는거고 (가장 크다.).
+
+Pelican_ 설정법에 대해서는 주말에 작성해야겠다. 이것저것 설정이나 추가하거나
+손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이
+넣어놓는건지.;;;
+
+그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시 만들었...
+
+이제 산적해있는 것들이나 빨리 써야겠다.
+
+.. _Jekyll: http://jekyllrb.com/
+.. _Octopress: http://octopress.org/
+.. _reStructuredText: http://en.wikipedia.org/wiki/ReStructuredText
+.. _Pelican: https://github.com/getpelican/pelican
