@@ -32,6 +32,7 @@ MENUITEMS = [
 	('Archives', [
 		('Tags', '/tags.html'),
 		('Categories', '/categories.html'),
+        ('Feed', '/feeds/rss.xml'),
 		]),
 	('Social', [
 		('Email', 'mailto:ujuc@ujuc.kr'),
