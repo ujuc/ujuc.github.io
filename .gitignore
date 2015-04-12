@@ -6,3 +6,5 @@ output/
 
 __pycache__/
 .ropeproject/
+
+.idea/
