@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/software.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-04-03T00:23:00+09:00</updated><entry><title>xonsh?</title><link href="http://ujuc.github.io/2015/03/16/xonsh/" rel="alternate"></link><updated>2015-04-03T00:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/software.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-04-12T14:12:00+09:00</updated><entry><title>xonsh?</title><link href="http://ujuc.github.io/2015/03/16/xonsh/" rel="alternate"></link><updated>2015-04-03T00:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python-ish, BASHwards-compatible shell language and command&amp;nbsp;prompt.라고&amp;#8230;&lt;/p&gt;
 &lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이&amp;#8230;
 그리고 기본이 3.4라&amp;#8230; 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
@@ -71,4 +71,28 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary><category term="git"></category><category term="ftp"></category><category term="shell"></category><category term="cli"></category><category term="bash"></category></entry></feed>
+</summary><category term="git"></category><category term="ftp"></category><category term="shell"></category><category term="cli"></category><category term="bash"></category></entry><entry><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link href="http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/" rel="alternate"></link><updated>2015-04-12T14:12:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-09:2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</id><summary type="html">&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;cite&gt;ibus&lt;/cite&gt; 가 조금 불편할뻔하다가&amp;#8230;
+쓰던거 쓰자해서 &lt;cite&gt;nabi&lt;/cite&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&amp;nbsp;않는다.&lt;/p&gt;
+&lt;p&gt;그래서 조금 검색을 했더니&amp;#8230;
+&lt;cite&gt;gsettings get com.canonical.Unity.Panel systray-whitelist&lt;/cite&gt; 라는 걸로 추가를
+해줘야한다고 하는데&amp;#8230; 이넘은 14.10에는 없다. 조금더 찾아보니, 13.04부터는 아예&amp;nbsp;빠져있었다.&lt;/p&gt;
+&lt;p&gt;다시 검색어를 &lt;cite&gt;systray-whitelist&lt;/cite&gt; 로 검색중 &lt;strong&gt;Web &lt;span class="caps"&gt;UPD8&lt;/span&gt;&lt;/strong&gt; 에 올라온 글을&amp;nbsp;확인.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html"&gt;How to whitelist systray apps in ubuntu 14.04 or&amp;nbsp;14.10(W/unity)&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;나같은 겨웅에는  14.10을&amp;nbsp;설치했으니.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+sudo apt-add-repository ppa:guran/systray-utopic
+sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get upgrade
+&lt;/pre&gt;
+&lt;p&gt;그리고 &lt;cite&gt;Alt + F2&lt;/cite&gt; 를 눌러 &lt;cite&gt;unity&lt;/cite&gt; 를 찾아 클릭해주면 알아서 unity가 재시작되면서
+nabi가 트레이에 들어가게&amp;nbsp;된다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;덧. 아래에보면 관련 ppa를 삭제하는 방법이 나오는데 따로 패키지를 설치할
+필요없이 아래의 명령어로 삭제가&amp;nbsp;가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+sudo apt-add-repository -r ppa:guran/systray-utopic
+sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get autoremove
+&lt;/pre&gt;
+</summary><category term="linux"></category><category term="ubuntu"></category><category term="nabi"></category><category term="setting"></category></entry></feed>
