@@ -16,7 +16,6 @@ TEMPLATE = """
 :tags:
 :slug: {slug}
 :summary:
-:status: draft
 
 
 """
