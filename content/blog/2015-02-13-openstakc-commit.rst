@@ -143,7 +143,7 @@ Individual Contributor License Agreement 결재
 * `Change-id` 는 `git review` 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는
   없다.
 * 리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 `git commit --amend`
-  오셤으로 해주면된다. 짧게 쓰면 `git commit -a`.
+  오셤으로 해주면된다.
 
 리뷰 등록 
 ~~~~~~~~~
