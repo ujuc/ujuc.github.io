@@ -438,7 +438,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;cite&gt;Change-id&lt;/cite&gt; 는 &lt;cite&gt;git review&lt;/cite&gt; 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는&amp;nbsp;없다.&lt;/li&gt;
 &lt;li&gt;리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 &lt;cite&gt;git commit &amp;#8212;amend&lt;/cite&gt;
-오셤으로 해주면된다. 짧게 쓰면 &lt;cite&gt;git commit -a&lt;/cite&gt;.&lt;/li&gt;
+오셤으로&amp;nbsp;해주면된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id8"&gt;
