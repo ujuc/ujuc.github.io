@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 13 May 2015 22:46:00 +0900</lastBuildDate><item><title>Edison 초기 설정</title><link>http://ujuc.github.io/2015/05/13/edison-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95/</link><description>&lt;div class="section" id="yocta-project-update"&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 14 May 2015 01:39:00 +0900</lastBuildDate><item><title>Edison pip install error</title><link>http://ujuc.github.io/2015/05/14/edison-pip-install-error/</link><description>&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="c"&gt;# pip install flask
+&lt;/span&gt;Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call las&lt;span class="o"&gt;)&lt;/span&gt;:
+File &lt;span class="s2"&gt;&amp;quot;/usr/bin/pip&amp;quot;&lt;/span&gt;, line 5, in &amp;lt;module&amp;gt;
+from pkg_resources import load_entry_point
+ImportError:No module named pkg_resources
+&lt;/pre&gt;
+&lt;p&gt;발생하는건 &lt;cite&gt;setuptools&lt;/cite&gt; 패키지가 설치되지 않아서&amp;nbsp;문제가&amp;#8230;&lt;/p&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="c"&gt;# wget --no-check-certificate \
+&lt;/span&gt;  https://pypi.python.org/packages/source/s/setuptools/setuptools-15.2.tar.gz#md5&lt;span class="o"&gt;=&lt;/span&gt;a9028a9794fc7ae02320d32e2d7e12ee
+&lt;span class="c"&gt;# tar zxf setuptools-15.2.tar.gz
+# python setuptools-15.2/ez_setup.py&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;&lt;cite&gt;pip install &amp;#8212;upgrade pip&lt;/cite&gt; 로 제대로 설치된건지&amp;nbsp;확인하자.&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;기본 설치되는 pip 버전이 낮으니.. 업글해줘야되기도&amp;nbsp;해서..&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 14 May 2015 01:39:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-05-14:2015/05/14/edison-pip-install-error/</guid><category>Edison</category><category>Pypi</category><category>pip</category><category>Python</category><category>error</category></item><item><title>Edison 초기 설정</title><link>http://ujuc.github.io/2015/05/13/edison-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95/</link><description>&lt;div class="section" id="yocta-project-update"&gt;
 &lt;h2&gt;Yocta Project&amp;nbsp;Update&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;무엇이든 처음 설정할때는 기본 OS먼저 업데이트를 해줘야된다. 최신 Yocta Project
@@ -148,7 +173,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 13 May 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>OpenStack</category><category>Cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 14 May 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>OpenStack</category><category>Cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
@@ -164,7 +189,7 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워
 손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 13 May 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;quot;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;quot; 이라는 뉴스가 올라왔다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 14 May 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;quot;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;quot; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
