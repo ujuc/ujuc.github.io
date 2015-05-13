@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="잘 밤에 쓸데없는 생각하기...">
+    <meta name="author" content="ujuc">
+
+        <title>Edison 초기&nbsp;설정 · 잘 밤에 쓸데없는 생각하기...</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css" type="text/css">
+
+    <link rel="stylesheet" href="http://ujuc.github.io/theme/css/main.css">
+
+    <link rel="stylesheet" href="http://ujuc.github.io/theme/css/solarized-light.css">
+
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container" id="wrap">
+      <nav id="navbar" class="navbar navbar-default" role="navigation">
+    <div class="container">
+
+      <!--navbar-header-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://ujuc.github.io">잘 밤에 쓸데없는 생각하기...</a>
+      </div> <!--navbar-header-->
+
+      <!-- Search Box -->
+
+      <!--Menuitems, collapable-->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right" id="menuitem-list">
+                <li >
+                  <a href="http://ujuc.github.io/">blog</a>
+                </li>
+
+              <li class="btn-group">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archives<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li >
+                    <a href="http://ujuc.github.io/tags.html">Tags</a>
+                  </li>
+                  <li >
+                    <a href="http://ujuc.github.io/categories.html">Categories</a>
+                  </li>
+                  <li >
+                    <a href="http://ujuc.github.io/feeds/rss.xml">Feed</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="btn-group">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li >
+                    <a href="mailto:ujuc@ujuc.kr">Email</a>
+                  </li>
+                  <li >
+                    <a href="https://github.com/ujuc">Github</a>
+                  </li>
+                </ul>
+              </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div> <!--container-->
+  </nav>
+
+
+    <div class="container">
+      <div class="col-md-2">
+      </div>
+
+      <div class="col-md-8">
+        <div class="row">
+              <div class="page-header">
+        <h1><a href="http://ujuc.github.io/2015/05/13/edison-초기-설정/">Edison 초기&nbsp;설정</a></h1>
+    </div>
+
+        </div>
+
+        <div class="row">
+
+    <span id="article_info">
+    <a class="label label-primary" 
+      href="http://ujuc.github.io/category/Devleop.html">Devleop</a>
+      <b> · </b>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/Edison.html">Edison</a>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/개발.html">개발</a>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/Embedded.html">Embedded</a>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/임베디드.html">임베디드</a>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/Intel.html">Intel</a>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/IoT.html">IoT</a>
+    <!--<span class="glyphicon glyphicon-calendar"></span>-->
+      <b> · </b>
+      <a href="http://ujuc.github.io/archives.html#Year2015">2015</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month05">05</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month05">13</a>
+
+    <!--<span class="glyphicon glyphicon-user"></span>-->
+      <b> · </b>
+    <a href="http://ujuc.github.io/author/ujuc.html">ujuc</a>
+  </span>
+
+  <hr/>
+
+  <div id="article_content">
+    <div class="section" id="yocta-project-update">
+<h2>Yocta Project&nbsp;Update</h2>
+<ul class="simple">
+<li>무엇이든 처음 설정할때는 기본 OS먼저 업데이트를 해줘야된다. 최신 Yocta Project
+파일을 받아서&nbsp;설치해준다.</li>
+<li>최신이 아니라면 몇몇 기능이 제대로 되지 않아 다시 설치해줘야될 수 도 있으니 꼭&nbsp;하도록하자.</li>
+<li>컴파일을 진행해도 된다만, 시간이 많거나, 꼭 필요한 패키지가 없거나, 기본적으로
+설정을 변경해주어야 할때빼고는&nbsp;하지말자.</li>
+<li><a class="reference external" href="http://www.intel.com/support/edison/sb/CS-035180.htm">Yocta 컴파일 이미지&nbsp;다운로드</a></li>
+</ul>
+<div class="section" id="id1">
+<h3><a class="reference external" href="https://software.intel.com/en-us/articles/intel-edison-flashing-firmware-on-os-x-wired">플래싱&nbsp;순서</a></h3>
+<ol class="arabic simple">
+<li>위의 사진대로 USB를 연결해주고 (2번에&nbsp;연결)</li>
+<li>Edison 외장디스크가 깨끗한지 확인한다.
+* 만약 이전의 이미지 내용이 있다면, <cite>rm -rf Edison/.*</cite> 를 이용하여 모든 내용을 삭제한 다음 받은 이미지를 올리면 된다.
+* Edison 파티션의 정보를 확인하여 포멧이 FAT16이라면 디스크 유틸에서 포맷하여 FAT32로&nbsp;변경해주도록.</li>
+<li>다운 받은걸&nbsp;복사하자.</li>
+<li>시리얼 통신으로 Edison에 접근한다.
+* <cite>screen /dev/cu.usbserial-A**** 115200 -L</cite>
+* <cite>subserial</cite> 로 접근을 하면되는데 A뒤의 이름은 변경될 수 있어 작성하지&nbsp;않았다.</li>
+<li>아무런 내용이 안나온다면 들어간 것이니, 엔터&nbsp;두번.</li>
+<li>로그인후 <cite>reboot ota</cite> 명령어로 재시작.
+* <cite>ota</cite> 로 할 경우, 부팅때 Edison 외장하드에 넣어둔 부팅 이미지들로 새롭게 씌우고 관련 내용들을 업데이트하여 사용할 수 있도록&nbsp;되어있다.</li>
+<li>자세한 내용은 제목에 연결된 링크로 가서 확인하고 작업을&nbsp;진행한다.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Edison&nbsp;구성</h2>
+<ul class="simple">
+<li>기본 구성을 하는데 필요한 명령어는 <cite>configure_edison</cite> 으로 작업을 구성하도록&nbsp;한다.</li>
+<li>전체 설정을 다 변경하고 싶으면 <cite>configure_edison &#8212;setup</cite> 이다.</li>
+</ul>
+<div class="section" id="hostname">
+<h3>Hostname</h3>
+<pre class="code bash literal-block">
+<span class="c"># configure_edison --name</span>
+</pre>
+<ul class="simple">
+<li>다음에 나오는 것들에따라서 입력해주면&nbsp;된다.</li>
+</ul>
+</div>
+<div class="section" id="wifi">
+<h3>Wifi</h3>
+<pre class="code bash literal-block">
+<span class="c"># configure_edison --wifi</span>
+</pre>
+<ul class="simple">
+<li>근처에 있는 Wifi들이 다 잡힐 것이나 만약 아무것도 안보인다면 firmware를 업그레
+이드 한 뒤에 다시 명령어를 입력하여&nbsp;확인하도록하자.</li>
+<li>버전업이 안되어있는 경우, 잡지&nbsp;못하더라.</li>
+<li>설정이 완료되고 나면 URL을 보여주니 그것을 이용하여 접근하면&nbsp;된다.</li>
+</ul>
+</div>
+<div class="section" id="ssh">
+<h3><span class="caps">SSH</span>&nbsp;설정</h3>
+<ul class="simple">
+<li>Screen으로 시리얼 접근하는 것은 사용하기가&nbsp;불편하다.</li>
+<li>비밀번호를 설정해주게되면 SSH로 접근이 가능하게 되니 그부분을 추가하여 작업을
+진행하도록&nbsp;한다.</li>
+</ul>
+<pre class="code bash literal-block">
+<span class="c"># configure_edison --password</span>
+</pre>
+</div>
+</div>
+<div class="section" id="package">
+<h2>Package&nbsp;관리자</h2>
+<ul class="simple">
+<li>Edison은 opkg(OpenPackaGe Managemet)라는 비교적 가벼운 패키지 관리자를 사용한
+다고 한다. 몇몇 설정이 그렇게 되어있었다. (Yocta Projectdp서 사용하는데,
+OpenWRT에서 사용하고&nbsp;있다.)</li>
+</ul>
+<div class="section" id="id4">
+<h3>패키지 관리자 설치 및&nbsp;설정</h3>
+<ul class="simple">
+<li><a class="reference external" href="https://software.intel.com/en-us/articles/managing-devkit-libraries-intel-edison-or-intel-galileo-board">Intel&nbsp;page</a></li>
+</ul>
+<pre class="code bash literal-block">
+<span class="c"># echo &quot;src intel-iotdk http://iotdk.intel.com/repos/1.1/intelgalactic&quot; &gt; \
+</span>    /etc/opkg/intel-iotdk.conf# opkg update<span class="p">;</span> opkg upgrade
+<span class="c"># opkg update; opkg upgrade</span>
+</pre>
+<ul class="simple">
+<li>이렇게하면 기본적인 것들은 추가가 된다만 패키지가 많지는&nbsp;않다.</li>
+<li>더 많은 패키지를 사용하려면 레포지토리를 추가해줘야&nbsp;된다.</li>
+</ul>
+<pre class="code bash literal-block">
+<span class="c"># vi /etc/opkg/base-feeds.conf
+</span>
+src/gz all http://repo.opkg.net/edison/repo/all
+src/gz edison http://repo.opkg.net/edison/repo/edison
+src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
+
+<span class="c"># opkg update</span>
+</pre>
+</div>
+</div>
+
+  </div>
+
+  <hr/>
+
+      <ul class="pager">
+        <li class="previous disabled">
+          <a >
+          &laquo; Newer</a>
+        </li>
+        <li class="next">
+          <a href="http://ujuc.github.io/2015/04/23/status-bar-&-title-bar-숨기기/">
+          Older &raquo;</a>
+        </li>
+      </ul>
+
+    <hr/>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'ujucgithub'; // required: replace example with your forum shortname
+  var disqus_identifier = 'edison-초기-설정';
+  var disqus_url = 'http://ujuc.github.io/2015/05/13/edison-초기-설정/';
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+        <div class="row">
+        </div>
+
+      </div>
+
+      <div class="col-md-2">
+      </div>
+    </div>
+
+
+  </div>
+
+    <nav id="footer" class="navbar navbar-default">
+    <div class="container">
+        <p id="footer-text" class="navbar-text text-center">
+          <span id="engine">
+            Compiled using
+            <a href="http://docs.getpelican.com">Pelican</a>
+          </span>
+          <span id="theme">
+            with theme
+            <a href="http://github.com/yuex/pelican-chameleon">Chameleon</a>
+          </span>
+          <span id="bootstrap">
+            on top of
+            <a href="http://getbootstrap.com/">Bootstrap</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+
+</body>
+</html>
