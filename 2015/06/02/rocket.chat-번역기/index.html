@@ -6,7 +6,7 @@
     <meta name="description" content="잘 밤에 쓸데없는 생각하기...">
     <meta name="author" content="ujuc">
 
-        <title>Edison pip install&nbsp;error · 잘 밤에 쓸데없는 생각하기...</title>
+        <title>Rocket.Chat&nbsp;번역기 · 잘 밤에 쓸데없는 생각하기...</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -94,7 +94,7 @@
       <div class="col-md-8">
         <div class="row">
               <div class="page-header">
-        <h1><a href="http://ujuc.github.io/2015/05/14/edison-pip-install-error/">Edison pip install&nbsp;error</a></h1>
+        <h1><a href="http://ujuc.github.io/2015/06/02/rocket.chat-번역기/">Rocket.Chat&nbsp;번역기</a></h1>
     </div>
 
         </div>
@@ -106,18 +106,20 @@
       href="http://ujuc.github.io/category/Develop.html">Develop</a>
       <b> · </b>
         <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/Edison.html">Edison</a>
+          href="http://ujuc.github.io/tag/자랑질.html">자랑질</a>
         <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/Pypi.html">Pypi</a>
+          href="http://ujuc.github.io/tag/chat.html">chat</a>
         <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/pip.html">pip</a>
+          href="http://ujuc.github.io/tag/RocketChat.html">RocketChat</a>
         <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/Python.html">Python</a>
+          href="http://ujuc.github.io/tag/번역.html">번역</a>
         <a class="label label-primary" 
-          href="http://ujuc.github.io/tag/error.html">error</a>
+          href="http://ujuc.github.io/tag/javascrtip.html">javascrtip</a>
+        <a class="label label-primary" 
+          href="http://ujuc.github.io/tag/meteo.html">meteo</a>
     <!--<span class="glyphicon glyphicon-calendar"></span>-->
       <b> · </b>
-      <a href="http://ujuc.github.io/archives.html#Year2015">2015</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month05">05</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month05">14</a>
+      <a href="http://ujuc.github.io/archives.html#Year2015">2015</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month06">06</a>-<a href="http://ujuc.github.io/archives.html#Year2015Month06">02</a>
 
     <!--<span class="glyphicon glyphicon-user"></span>-->
       <b> · </b>
@@ -127,43 +129,31 @@
   <hr/>
 
   <div id="article_content">
-    <p>pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&nbsp;발생한다.</p>
-<pre class="code bash literal-block">
-<span class="c"># pip install flask
-</span>Traceback <span class="o">(</span>most recent call las<span class="o">)</span>:
-File <span class="s2">&quot;/usr/bin/pip&quot;</span>, line 5, in &lt;module&gt;
-from pkg_resources import load_entry_point
-ImportError:No module named pkg_resources
-</pre>
-<p>발생하는건 <cite>setuptools</cite> 패키지가 설치되지 않아서&nbsp;문제가&#8230;</p>
-<pre class="code bash literal-block">
-<span class="c"># wget --no-check-certificate \
-</span>  https://pypi.python.org/packages/source/s/setuptools/setuptools-15.2.tar.gz#md5<span class="o">=</span>a9028a9794fc7ae02320d32e2d7e12ee
-<span class="c"># tar zxf setuptools-15.2.tar.gz
-# python setuptools-15.2/ez_setup.py</span>
-</pre>
-<ul>
-<li><dl class="first docutils">
-<dt><cite>pip install &#8212;upgrade pip</cite> 로 제대로 설치된건지&nbsp;확인하자.</dt>
-<dd><ul class="first last simple">
-<li>기본 설치되는 pip 버전이 낮으니.. 업글해줘야되기도&nbsp;해서..</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
+    <p>어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
+일링에 추가된 <a class="reference external" href="https://github.com/RocketChat/Rocket.Chat">Rocket.Chat</a>.</p>
+<p>심심해서 코드 보던 중 발견한 <cite>i18n</cite>. 클클클 번역이나 해야지 짧을 꺼야&#8230; 그런 심보
+로 시작. 10분 만에 <a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89">issue</a>&nbsp;등록.</p>
+<p>이유는 영어와 한국어의 어순이 반대다 보니&#8230; &#8216;%s by %s&#8217;의 경우, 한국어로 &#8216;%s에서
+%s로&#8217;로 번역이 되어야 되는데. 어떤 놈이 앞의 &#8216;%s&#8217;인지 한국어에서는 알 수 없는 문제
+가 발생. 그래서 짧은 영어로 적었더니. 친절하게 제목도 바꿔주고, 테스트할 수 있게
+PR해줄 수 있느냐기에 신속하게 <a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"><span class="caps">PR</span></a>.</p>
+<p>그렇게 <a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89">issue</a> 는 해결되었고, 번역은&nbsp;반영되었다.</p>
+<p>소스 중에 번역 페이지가 있으면 항상 보지는 않았는데&#8230; 이번에는 우연히 번역
+을 보았고, PR을 뒤져보니 PR을 보내면 웬만해서는 받아주는 듯하여 <a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89">issue</a> 부터 날리
+고 어떻게 할지 기다린 게 잘 된듯하다.
+뭐 이렇게 녹색 상자 한 칸 더 체우 는기지&#8230;&nbsp;ㅋㅋㅋㅋㅋ</p>
 
   </div>
 
   <hr/>
 
       <ul class="pager">
-        <li class="previous">
-          <a href="http://ujuc.github.io/2015/06/02/rocket.chat-번역기/">
+        <li class="previous disabled">
+          <a >
           &laquo; Newer</a>
         </li>
         <li class="next">
-          <a href="http://ujuc.github.io/2015/05/13/edison-초기-설정/">
+          <a href="http://ujuc.github.io/2015/05/14/edison-pip-install-error/">
           Older &raquo;</a>
         </li>
       </ul>
@@ -173,8 +163,8 @@ ImportError:No module named pkg_resources
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
   var disqus_shortname = 'ujucgithub'; // required: replace example with your forum shortname
-  var disqus_identifier = 'edison-pip-install-error';
-  var disqus_url = 'http://ujuc.github.io/2015/05/14/edison-pip-install-error/';
+  var disqus_identifier = 'rocket.chat-번역기';
+  var disqus_url = 'http://ujuc.github.io/2015/06/02/rocket.chat-번역기/';
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {
