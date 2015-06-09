@@ -33,7 +33,6 @@ MENUITEMS = [
 	('blog', '/'),
 	('Tags', '/tags.html'),
 	('Categories', '/categories.html'),
-	('Feed', '/feeds/rss.xml'),
 	('Email', 'mailto:ujuc@ujuc.kr'),
 	('Github', 'https://github.com/ujuc'),
 ]
@@ -61,9 +60,6 @@ EMAIL_ADDRESS = 'ujuc@ujuc.kr'
 GITHUB_ADDRESS = 'https://github.com/ujuc'
 SO_ADDRESS = 'http://stackoverflow.com/users/978762/sungjin-gang'
 TWITTER_ADDRESS = 'https://twitter.com/ujuc'
-
-# Feed
-FEED_RSS = 'feeds/rss.xml'
 
 # Theme seeting
 BS3_URL = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'
