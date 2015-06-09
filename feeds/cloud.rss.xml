@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/cloud.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 10 Jun 2015 00:00:00 +0900</lastBuildDate><item><title>Odin is?</title><link>http://ujuc.github.io/2015/04/10/odin-is/</link><description>&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
+&lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
+자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
+컨테이너를 이용하는 서비스 개발에 집중을 하겠다는&amp;nbsp;소식&amp;#8230;&lt;/p&gt;
+&lt;p&gt;뭐 서비스 측이랑 이야기가 조금 다른 부분이 있긴하다만&amp;#8230; Parallels가 OpenStack
+기업 멤버로 등록 Odin으로 등록되어있다. 골드맴버로 들어올려는걸 파운데이션에서&amp;nbsp;거절했다고&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
+목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
+&lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 10 Jun 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>OpenStack</category><category>Cloud</category><category>parallels</category></item></channel></rss>

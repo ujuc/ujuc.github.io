@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/software.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 12 Apr 2015 14:12:00 +0900</lastBuildDate><item><title>xonsh?</title><link>http://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python-ish, BASHwards-compatible shell language and command&amp;nbsp;prompt.라고&amp;#8230;&lt;/p&gt;
+&lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이&amp;#8230;
+그리고 기본이 3.4라&amp;#8230; 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
+기본으로 장착한 배포판의 경우엔&amp;nbsp;다르겠지만.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:23:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</guid><category>python</category><category>shell</category></item><item><title>git-ftp로 ftp 클라이언트를!</title><link>http://ujuc.github.io/2015/03/04/git-ftp/</link><description>&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
+이용해서 &lt;span class="caps"&gt;FTP&lt;/span&gt; 클라잉너트를&amp;nbsp;만들었다.&lt;/p&gt;
+&lt;p&gt;뭔짓이지&amp;#8230;&lt;/p&gt;
+&lt;p&gt;암튼&amp;#8230; 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;&amp;#8230; 역시 다른
+구멍을 파는 사람들이&amp;nbsp;있구나&amp;#8230;&lt;/p&gt;
+&lt;p&gt;변화점까지 확인할 수 있다는건 git의 장점을&amp;nbsp;가져왔구나.&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md"&gt;설치&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;기본&amp;nbsp;설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git clone https://github.com/git-ftp/git-ftp.git
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;git-ftp
+&lt;span class="nv"&gt;$ &lt;/span&gt;git tag
+&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout &amp;lt;tag&amp;gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo make install
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;업그레이드의&amp;nbsp;경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git pull
+&lt;span class="nv"&gt;$ &lt;/span&gt;git tag
+&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout &amp;lt;tag&amp;gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo make install
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Mac &lt;span class="caps"&gt;OS&lt;/span&gt;&amp;nbsp;X&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install git
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install curl --with-ssl --with-libssh2
+&lt;span class="nv"&gt;$ &lt;/span&gt;brew install git-ftp
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;curl&lt;/cite&gt; 을 기본으로 설치했는데 &lt;cite&gt;ssl&lt;/cite&gt;, &lt;cite&gt;libssh2&lt;/cite&gt; 를 사용할 수 있도록 설정이
+필요한&amp;nbsp;갑다.&lt;/li&gt;
+&lt;li&gt;git이 &lt;cite&gt;ssl&lt;/cite&gt; 을 사용하긴&amp;nbsp;한다만&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;사용법&lt;/h2&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="c"&gt;# Pushing for the fist time
+&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ftp init -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
+
+&lt;span class="c"&gt;# using
+&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ftp push -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;더 자세한 내용은 &lt;a class="reference external" href="https://gitub.com/git-ftp/git-ftp/blob/develop/man/git-ftp.1.md"&gt;man page&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h2&gt;제한&amp;nbsp;사항&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;윈도우와 &lt;span class="caps"&gt;OS&lt;/span&gt; X에서는 테스트를 많이 안했으니 관련된 버그가 있으면 말해 줄&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;배포 도구로 만들어지지 않아서&amp;#8230; 커밋이나 체크 아웃 같은건 알아서&amp;#8230;&amp;nbsp;조심히&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/README.md#about"&gt;https://github.com/git-ftp/git-ftp/blob/develop/&lt;span class="caps"&gt;README&lt;/span&gt;.md#about&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;cite&gt;ibus&lt;/cite&gt; 가 조금 불편할뻔하다가&amp;#8230;
+쓰던거 쓰자해서 &lt;cite&gt;nabi&lt;/cite&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&amp;nbsp;않는다.&lt;/p&gt;
+&lt;p&gt;그래서 조금 검색을 했더니&amp;#8230;
+&lt;cite&gt;gsettings get com.canonical.Unity.Panel systray-whitelist&lt;/cite&gt; 라는 걸로 추가를
+해줘야한다고 하는데&amp;#8230; 이넘은 14.10에는 없다. 조금더 찾아보니, 13.04부터는 아예&amp;nbsp;빠져있었다.&lt;/p&gt;
+&lt;p&gt;다시 검색어를 &lt;cite&gt;systray-whitelist&lt;/cite&gt; 로 검색중 &lt;strong&gt;Web &lt;span class="caps"&gt;UPD8&lt;/span&gt;&lt;/strong&gt; 에 올라온 글을&amp;nbsp;확인.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html"&gt;How to whitelist systray apps in ubuntu 14.04 or&amp;nbsp;14.10(W/unity)&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;나같은 겨웅에는  14.10을&amp;nbsp;설치했으니.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+sudo apt-add-repository ppa:guran/systray-utopic
+sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get upgrade
+&lt;/pre&gt;
+&lt;p&gt;그리고 &lt;cite&gt;Alt + F2&lt;/cite&gt; 를 눌러 &lt;cite&gt;unity&lt;/cite&gt; 를 찾아 클릭해주면 알아서 unity가 재시작되면서
+nabi가 트레이에 들어가게&amp;nbsp;된다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;덧. 아래에보면 관련 ppa를 삭제하는 방법이 나오는데 따로 패키지를 설치할
+필요없이 아래의 명령어로 삭제가&amp;nbsp;가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+sudo apt-add-repository -r ppa:guran/systray-utopic
+sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get autoremove
+&lt;/pre&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 12 Apr 2015 14:12:00 +0900</pubDate><guid>tag:ujuc.github.io,2014-11-09:2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</guid><category>linux</category><category>ubuntu</category><category>nabi</category><category>setting</category></item></channel></rss>
