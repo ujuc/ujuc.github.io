@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-06-10T00:00:00+09:00</updated><entry><title>Rocket.Chat 번역기</title><link href="http://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/" rel="alternate"></link><updated>2015-06-02T22:45:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</id><summary type="html">&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-06-14T22:30:00+09:00</updated><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="http://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><updated>2015-06-14T22:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
+&lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;cite&gt;journal&lt;/cite&gt; 로 보여지는 것 말고도 &lt;cite&gt;/var/log/zabbix&lt;/cite&gt; 가 보여서&amp;nbsp;확인했더니..&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;
+using configuration file: /etc/zabbix/zabbix_server.conf
+current database version (mandatory/optional): 02040000/02040000
+required mandatory version: 02040000
+listener failed: zbx_tcp_listen() fatal error: unable to serve on any address [[-]:10051]
+Got signal [signal:11(SIGSEGV),reason:1,refaddr:0x18]. Crashing ...
+&lt;/pre&gt;
+&lt;p&gt;음? 서버를 못찾는다고..?? 뭔 말이지. 그래서 그냥 통짜로 복사 붙여넣기. 구글에서 말하는 것들이 많은데 그 중에서 일본사람이 작성한 글. &lt;a class="reference external" href="http://qiita.com/_BSmile_/items/61932e45de5330190027"&gt;CentOS7.1 で zabbix-serverの起動が失敗する話とその解決方法&lt;/a&gt; 에서는 &lt;span class="caps"&gt;CV&lt;/span&gt;#-2014-0092는&amp;#8230; gnutls에 패치가되었는데.. &lt;span class="caps"&gt;CVE&lt;/span&gt;-2014-8564는 적용이 안되서 그부분에 대한 내용을 추가하던지 수정을 해야된다고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;자세한건 구글 번역기로 사이트를 돌려서 보도록하자. 그렇다보니 여기서 추천하는 방법은 &lt;cite&gt;trousers&lt;/cite&gt; 를 업데이트 하는 방법을 추천하고&amp;nbsp;있다.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;
+$ sudo rpm -Uvh https://kojipkgs.fedoraproject.org/packages/trousers/0.3.11.2/3.fc20/x86_64/trousers-0.3.11.2-3.fc20.x86_64.rpm
+Retrieving https://kojipkgs.fedoraproject.org/packages/trousers/0.3.11.2/3.fc20/x86_64/trousers-0.3.11.2-3.fc20.x86_64.rpm
+Preparing...                          ################################# [100%]
+Updating / installing...
+1:trousers-0.3.11.2-3.fc20         ################################# [ 50%]
+Cleaning up / removing...
+2:trousers-0.3.11.2-3.el7          ################################# [100%
+
+$ sodu systemctl start zabbix-server
+&lt;/pre&gt;
+&lt;p&gt;작동되는 것을 확인할 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;이 글은 &lt;strong&gt;CentOS 7.1.1503&lt;/strong&gt; 버전, &lt;strong&gt;Zabbix 2.4.5&lt;/strong&gt; 버전에서 확인되었고 테스트되었다. 이후 버전에서는 관련 버그가&amp;nbsp;잡히길.&lt;/p&gt;
+</summary><category term="zabbix"></category><category term="centos"></category></entry><entry><title>Rocket.Chat 번역기</title><link href="http://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/" rel="alternate"></link><updated>2015-06-02T22:45:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</id><summary type="html">&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
 일링에 추가된 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat"&gt;Rocket.Chat&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;심심해서 코드 보던 중 발견한 &lt;cite&gt;i18n&lt;/cite&gt;. 클클클 번역이나 해야지 짧을 꺼야&amp;#8230; 그런 심보
 로 시작. 10분 만에 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt;&amp;nbsp;등록.&lt;/p&gt;
@@ -176,7 +200,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2015-06-10T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2015-06-14T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -186,7 +210,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-06-10T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-06-14T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
