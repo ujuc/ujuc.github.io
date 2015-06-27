@@ -68,3 +68,6 @@ BS3_THEME = 'https://bootswatch.com/sandstone/bootstrap.min.css'
 
 AUTHORS = {
 }
+
+# Code
+PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
