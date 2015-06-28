@@ -24,18 +24,18 @@ IDE급으로 에디터가 변경됐을 뿐이다. 단지 80라인 와랩이 필�
 
 혹시나 해서 검색을 해봤다. 매번 실행할 때마다 엔터 3번은 너무 오래걸려서...
 
-`neocomplete.vim - Vim version and lua`_ 에서는 실행후 `:version` 으로 `lua` 가
-`-` 인지 `+` 인지 확인을 하라고 말을 한다.
+`neocomplete.vim - Vim version and lua`_ 에서는 실행후 ``:version`` 으로 ``lua`` 가
+``-`` 인지 ``+`` 인지 확인을 하라고 말을 한다.
 
 .. _neocomplete.vim - Vim version and lua:
    https://github.com/Shougo/neocomplete.vim/issues/237
 
-여기서는 `-lua` 면 `lua` 사용 옵션이 빠져있는 것이 되기에 vim 설치시 그에 대한
+여기서는 ``-lua`` 면 ``lua`` 사용 옵션이 빠져있는 것이 되기에 vim 설치시 그에 대한
 옵션을 설정해줘야된다는 말을...
 
 OSX 사용자들에게만 나온는 것같은데... Linux에 대한 오류가 없는 걸보면...
 
-암튼 그것을 수정하는 방법은 `brew` 로 설치할때 옵션을 걸어주고 설치하면 된다.
+암튼 그것을 수정하는 방법은 ``brew`` 로 설치할때 옵션을 걸어주고 설치하면 된다.
 물론 설치했다면, 다시 설치하면된다. 난 삭제하고 다시 설치... (적다보니... 자동화
 스크립트에 작성해둔거 변경을 해줘야겠다...)
 

@@ -31,12 +31,12 @@ Yocta Project Update
 
 #. 위의 사진대로 USB를 연결해주고 (2번에 연결)
 #. Edison 외장디스크가 깨끗한지 확인한다.
-   * 만약 이전의 이미지 내용이 있다면, `rm -rf Edison/\.*` 를 이용하여 모든 내용을 삭제한 다음 받은 이미지를 올리면 된다.
+   * 만약 이전의 이미지 내용이 있다면, ``rm -rf Edison/\.*`` 를 이용하여 모든 내용을 삭제한 다음 받은 이미지를 올리면 된다.
    * Edison 파티션의 정보를 확인하여 포멧이 FAT16이라면 디스크 유틸에서 포맷하여 FAT32로 변경해주도록.
 #. 다운 받은걸 복사하자.
 #. 시리얼 통신으로 Edison에 접근한다.
-   * `screen /dev/cu.usbserial-A**** 115200 -L`
-   * `subserial` 로 접근을 하면되는데 A뒤의 이름은 변경될 수 있어 작성하지 않았다.
+   * ``screen /dev/cu.usbserial-A**** 115200 -L``
+   * ``subserial`` 로 접근을 하면되는데 A뒤의 이름은 변경될 수 있어 작성하지 않았다.
 #. 아무런 내용이 안나온다면 들어간 것이니, 엔터 두번.
 #. 로그인후 `reboot ota` 명령어로 재시작.
    * `ota` 로 할 경우, 부팅때 Edison 외장하드에 넣어둔 부팅 이미지들로 새롭게 씌우고 관련 내용들을 업데이트하여 사용할 수 있도록 되어있다.
@@ -49,9 +49,9 @@ Yocta Project Update
 Edison 구성
 ============
 
-* 기본 구성을 하는데 필요한 명령어는 `configure_edison` 으로 작업을 구성하도록
+* 기본 구성을 하는데 필요한 명령어는 ``configure_edison`` 으로 작업을 구성하도록
   한다.
-* 전체 설정을 다 변경하고 싶으면 `configure_edison --setup` 이다.
+* 전체 설정을 다 변경하고 싶으면 ``configure_edison --setup`` 이다.
 
 
 Hostname

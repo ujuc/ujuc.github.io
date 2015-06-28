@@ -30,7 +30,7 @@ Wiki에서는 이 블로그_ 에 작성된 문제를 해결하기 위해서 만�
 사용자용
 ~~~~~~~~
 
-`nova.conf` 에 다음 문구 추가하도록...
+``nova.conf`` 에 다음 문구 추가하도록...
 
 ::
 
@@ -43,7 +43,7 @@ Wiki에서는 이 블로그_ 에 작성된 문제를 해결하기 위해서 만�
 Suduers 설정
 ````````````
 
-`sudoers` 에 다음 문구를 추가하도록...
+``sudoers`` 에 다음 문구를 추가하도록...
 
 ::
 
@@ -53,7 +53,7 @@ Suduers 설정
 필터 위치 설정 
 ```````````````
 
-`rootwrap` 으로 `Nova-provided` 필터 파일을 로드하고, `rootwrap.d` 로 확장
+``rootwrap`` 으로 ``Nova-provided`` 필터 파일을 로드하고, ``rootwrap.d`` 로 확장
 사용자의 필터 파일을 로드하도록 설정해 줄것.
 
 ::
@@ -71,33 +71,33 @@ Suduers 설정
 플러그인 작성자용
 ~~~~~~~~~~~~~~~~~~
 
-새로운 `run-as-root` 명령을 추가  
-`````````````````````````````````
+새로운 ``run-as-root`` 명령을 추가
+`````````````````````````````````````````
 
 root로 동작시킬 것이 있을 경우.
 
-* `nova.utils.execute(run_as_root=True)` 를 사용할 것.
-* 관련 필터 내용은 `/etc/nova/rootwrap.d/foobar.filters` 에 추가해둘 것.
+* ``nova.utils.execute(run_as_root=True)`` 를 사용할 것.
+* 관련 필터 내용은 ``/etc/nova/rootwrap.d/foobar.filters`` 에 추가해둘 것.
 
 
 프로젝트 개발자용 
 ~~~~~~~~~~~~~~~~~~
 
-새로운 `run-as-root` 명령을 추가 
-````````````````````````````````
+새로운 ``run-as-root`` 명령을 추가
+`````````````````````````````````````````
 
-* `nova.utils.execute(run_as_root=True)` 를 사용할 것.
-* Nova 코드에서 `/etc/nova/rootwrap.d/{filter_name}.ilters` 파일에 관련된 내용을
+* ``nova.utils.execute(run_as_root=True)`` 를 사용할 것.
+* Nova 코드에서 ``/etc/nova/rootwrap.d/{filter_name}.ilters`` 파일에 관련된 내용을
   추가해줄 것.
   
   - 예로 Compute 노드에서 작동하는 소스라면
-    `/etc/nova/rootwrap.d/compute.filters` 에다가 추가하도록.
+    ``/etc/nova/rootwrap.d/compute.filters`` 에다가 추가하도록.
 
 
 상위 필터 타입 추가
 ~~~~~~~~~~~~~~~~~~~~
 
-* 기본 필터 타입은 `CommandFilter` 임.
+* 기본 필터 타입은 ``CommandFilter`` 임.
 * 새로운 타입을 만들거나 지금 존재하는 타입을 확인하고 싶다면 filters.py_ 를
   보면 된다. - `Available Filter Classes`_ 가 아닌걸로도 볼 수 있다.
 

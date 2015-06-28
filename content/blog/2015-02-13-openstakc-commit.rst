@@ -50,17 +50,17 @@ Individual Contributor License Agreement 결재
 .. _Corporate Contributor License Agreement:  https://secure.echosign.com/public/hostedForm?formid=56JUVGT95E78X5
 
 
-`git-review` 설치
--------------------
+``git-review`` 설치
+---------------------
 
-* 맥은 그냥 `brew` 로 통일시켜서 설치하는게 편한듯...
-* 문서상으로는 `pip` 로 설치하라고 했지만...
+* 맥은 그냥 ``brew`` 로 통일시켜서 설치하는게 편한듯...
+* 문서상으로는 ``pip`` 로 설치하라고 했지만...
 * 설치하고 제대로 됐는지 확인을 하기위해서는
 
   - 하나를 클론하고
-  - `git review -s` 를 해서 `review.openstack.org` 에 제대로 접속했는지를 체크를
+  - ``git review -s`` 를 해서 ``review.openstack.org`` 에 제대로 접속했는지를 체크를
     해준다.
-  - 이때 `gitreview.username` 을 `.gitconfig` 파일에 작성해두지 않았다면
+  - 이때 ``gitreview.username`` 을 ``.gitconfig`` 파일에 작성해두지 않았다면
     설정하라고 뜸.
 
 
@@ -70,7 +70,7 @@ Individual Contributor License Agreement 결재
 버그일 경우
 ~~~~~~~~~~~
 
-* 우선 `bugs.launchpad.net/<projectname>` 으로 접속하여 버그 리포팅.
+* 우선 ``bugs.launchpad.net/<projectname>`` 으로 접속하여 버그 리포팅.
 
   - 이때 4가지로 테스크가 나뉘는데,
 
@@ -113,8 +113,8 @@ Individual Contributor License Agreement 결재
    $ git checkout master
    $ git pull --ff-only origin master
 
-* 그리고 브런치를 따는데, Blueprint는 `bp/<blueprint_name>`, Bug는
-  `bug/<bug-number>` 로 따주면된다.
+* 그리고 브런치를 따는데, Blueprint는 ``bp/<blueprint_name>``, Bug는
+  ``bug/<bug-number>`` 로 따주면된다.
 
 .. code:: bash
 
@@ -140,22 +140,22 @@ Individual Contributor License Agreement 결재
    <if bug>
    Closes-Bug: #<bug_number>
 
-* `Change-id` 는 `git review` 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는
+* ``Change-id`` 는 ``git review`` 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는
   없다.
-* 리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 `git commit --amend`
+* 리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 ``git commit --amend``
   오셤으로 해주면된다.
 
 리뷰 등록 
 ~~~~~~~~~
 
-* `git reivew` 로 하면 `review.openstack.org` 에 올라가 있는 것을 확인할 수
+* ``git reivew`` 로 하면 ``review.openstack.org`` 에 올라가 있는 것을 확인할 수
   있다.
 
 
 변경사항이 있을때 
 ~~~~~~~~~~~~~~~~~
 
-* 커밋 메시지에 `Change-Id` 가없을때는 붙여넣기 해준 다음 `--amend` 로 커밋.
+* 커밋 메시지에 ``Change-Id`` 가없을때는 붙여넣기 해준 다음 ``--amend`` 로 커밋.
 
 
 나머지 자세한 것들은 `Developer's Guide`_ 를 확인하도록하자. 이것도 뭐... 내가
