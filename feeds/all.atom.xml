@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-06-28T00:00:00+09:00</updated><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="http://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><updated>2015-06-14T22:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-06-29T00:00:00+09:00</updated><entry><title>OpenStack 새로운 버전 매기기 변경</title><link href="http://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/" rel="alternate"></link><updated>2015-06-28T22:24:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</id><summary type="html">&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
+톤 이메일 &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[1]&lt;/a&gt; 에서 보면 알 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;그리고 이것에 대한 자세한 내용은 &lt;a class="reference external" href="http://ttx.re/new-versioning.html"&gt;New OpenStack Component Versioning&lt;/a&gt; 에서 확인&amp;nbsp;하면된다.&lt;/p&gt;
+&lt;p&gt;언제부터인가 OpenStack 버전은 &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;YEAR&lt;/span&gt;.N&lt;/tt&gt; 으로 버전을 진행하고 있었고,  Kilo의 경우도
+2015.1로 넘어가고 있었다. 스위프트의 경우에는 다르게 &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;X.Y.&lt;/span&gt;Z&lt;/tt&gt; 버전으로 계속 발
+표를 해오기도했다. (이건 Swift를 주도적으로 개발하고 있는 &lt;a class="reference external" href="https://swiftstack.com"&gt;SwiftStack&lt;/a&gt; 이라는 회사
+에서 관리하고 있는&amp;nbsp;부분이기도하다.)&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;YEAR&lt;/span&gt;.N&lt;/tt&gt; 형식으로 진행하면서 문제가 좀 있었나보다. 글을 읽어보면 백포트 하기도
+쉽지 않고, 모든 프로젝트들이 정식 릴리즈 일시와 맞지 않으면 중간에 버전을 따로
+해서 내놓고 전체 출시할때는 같은 방법으로 내고 해서 햇갈리는 부분도 있고&amp;nbsp;했던듯.&lt;/p&gt;
+&lt;p&gt;라이브러리가 릴리즈되면서 어떤게 어떤건지도 모르겠다는&amp;#8230;&amp;nbsp;말도나온건가&amp;#8230;&lt;/p&gt;
+&lt;p&gt;저번 벤쿠퍼 디자인 서밋에서 기본 이야기를 나누고 메일링까지 와서 이야기를 나눈후
+이전에 발표된 버전을 통합하여 계산하는 것으로 했다고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;Nova의 경우, 첫 Austin 부터 진행해왔으니 12.0.0. Bexar에서 추가된 Glance는
+11.0.0. Diablo에서 추가된 Keystone, Horizon은 8.0.0.
+(이해가 안되는건 왜 Cinder가&amp;#8230; 8.0.0&amp;nbsp;인건지&amp;#8230;;)&lt;/p&gt;
+&lt;p&gt;이렇게 바뀌면 혼란스런 부분이 있겠지만 장기적으로 본다면, 수정하거나 백포트하여
+구성할때는 괜찮기도 하겠다는&amp;#8230; 생각이 들기도한다. 그리고 년도 표기를 하지 않음
+으로써 실제 서비스시 관련된 내용들을 모두 보여주지 않아도된다는 느낌도 없지 않아&amp;nbsp;있고&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그런데 이것보다 중요한건&amp;#8230; 버전업을 6개월마다 하는 것보다는 조금 더 안정적인 버
+전이나 &lt;span class="caps"&gt;LTS&lt;/span&gt; 버전같은게 나와줘야되지 않을까하는데&amp;#8230; 뭐 이건 관련 내용을 찾으면 다
+시 말을 해야겠다. 너부 빨리 바뀌는 부분들이 많아서 조직에 개발자가 없다면, 특히
+나 우리나라 SI의 경우에는 대응하기가 쉽지&amp;nbsp;않아보인다.&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html"&gt;http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</summary><category term="OpenStack"></category><category term="versioning"></category></entry><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="http://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><updated>2015-06-14T22:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
 &lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;tt class="docutils literal"&gt;journal&lt;/tt&gt; 로 보여지는 것 말고도
 &lt;tt class="docutils literal"&gt;/var/log/zabbix&lt;/tt&gt; 가 보여서&amp;nbsp;확인했더니..&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;
@@ -203,7 +232,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2015-06-28T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2015-06-29T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -213,7 +242,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-06-28T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-06-29T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
