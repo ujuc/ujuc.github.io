@@ -41,7 +41,7 @@
   <aside>
     <div id="user_meta">
       <a href="http://ujuc.github.io">
-        <img src="img/logo.jpg" alt="logo">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
       </a>
       <h2><a href="http://ujuc.github.io">ujuc</a></h2>
       <p></p>
@@ -76,7 +76,7 @@
 찾을때는 잘 못찾는&nbsp;지라&#8230;</p>
 <div class="section" id="id3">
 <h3>1.&nbsp;전재</h3>
-<p>OSX를 기반으로 한다. <cite>brew</cite> 를 패키지로 모두 작성된다. 만약 Linux에서
+<p>OSX를 기반으로 한다. <tt class="docutils literal">brew</tt> 를 패키지로 모두 작성된다. 만약 Linux에서
 작업하게되면 관련해서 문서는 추가로 작성할 예정임. 문제는 언제될지&nbsp;모르겠다.</p>
 </div>
 </div>
@@ -89,14 +89,14 @@
 <li>Apple에서 기본적으로 주는걸 써도 될&nbsp;듯.</li>
 <li>8으로 설치했는데 작업하는데는 아무런&nbsp;이상없다.</li>
 <li>그래서 그냥&nbsp;쓴다.</li>
-<li>그리고`brew-cask` 에 JDK가&nbsp;있다는&#8230;</li>
+<li>그리고 <tt class="docutils literal"><span class="pre">brew-cask</span></tt> 에 JDK가&nbsp;있다는&#8230;</li>
 </ul>
 </div>
 </div>
 <div class="section" id="leiningen">
 <h2>2. Leiningen&nbsp;설치</h2>
 <ul class="simple">
-<li><cite>brew install leiningen</cite> 으로&nbsp;설치.</li>
+<li><tt class="docutils literal">brew install leiningen</tt> 으로&nbsp;설치.</li>
 <li>딱히 설정할 것&nbsp;없음.</li>
 </ul>
 </div>
@@ -105,34 +105,34 @@
 <ul class="simple">
 <li>이거 쓸려고 넘많이&nbsp;적었다&#8230;</li>
 </ul>
-<pre class="literal-block">
-$ lein
-    Leiningen is a tool for working with Clojure projects.
+<pre class="code bash literal-block">
+<span class="nv">$ </span>lein
+    Leiningen is a tool <span class="k">for</span> working with Clojure projects.
 
     Several tasks are available:
-    change              Rewrite project.clj by applying a function.
+    change              Rewrite project.clj by applying a <span class="k">function</span>.
     check               Check syntax and warn on reflection.
     classpath           Print the classpath of the current project.
-    clean               Remove all files from project's target-path.
+    clean               Remove all files from project<span class="s1">'s target-path.
     compile             Compile Clojure source into .class files.
     deploy              Build and deploy jar to remote repository.
     deps                Download all dependencies.
     do                  Higher-order task to perform other tasks in succession.
     help                Display a list of tasks or help for a given task.
     install             Install the current project to the local repository.
-    jar                 Package up all the project's files into a jar file.
-    javac               Compile Java source files.
+    jar                 Package up all the project'</span>s files into a jar file.
+    javac               Compile Java <span class="nb">source </span>files.
     new                 Generate project scaffolding based on a template.
     plugin              DEPRECATED. Please use the :user profile instead.
-    pom                 Write a pom.xml file to disk for Maven interoperability.
+    pom                 Write a pom.xml file to disk <span class="k">for</span> Maven interoperability.
     release             Perform :release-tasks.
     repl                Start a repl session either with the current project or standalone.
-    retest              Run only the test namespaces which failed last time around.
-    run                 Run a -main function with optional command-line arguments.
-    search              Search remote maven repositories for matching jars.
-    show-profiles       List all available profiles or display one if given an argument.
-    test                Run the project's tests.
-    trampoline          Run a task without nesting the project's JVM inside Leiningen's.
+    retest              Run only the <span class="nb">test </span>namespaces which failed last <span class="nb">time </span>around.
+    run                 Run a -main <span class="k">function</span> with optional <span class="nb">command</span>-line arguments.
+    search              Search remote maven repositories <span class="k">for</span> matching jars.
+    show-profiles       List all available profiles or display one <span class="k">if</span> given an argument.
+    <span class="nb">test                </span>Run the project<span class="s1">'s tests.
+    trampoline          Run a task without nesting the project'</span>s JVM inside Leiningen<span class="s1">'s.
     uberjar             Package up the project files and dependencies into a jar file.
     update-in           Perform arbitrary transformations on your project map.
     upgrade             Upgrade Leiningen to specified version or latest stable.
@@ -146,7 +146,7 @@ $ lein
       -o             Run a task offline.
       -U             Run a task after forcing update of snapshots.
       -h, --help     Print this help or help for a specific task.
-      -v, --version  Print Leiningen's version.
+      -v, --version  Print Leiningen'</span>s version.
 
     See also: readme, faq, tutorial, news, sample, profiles, deploying, gpg,
     mixed-source, templates, and copying.
@@ -157,10 +157,10 @@ $ lein
 lein new myproject
 </pre>
 <ul class="simple">
-<li><cite>project.clj</cite> 에 프로젝트에 관련된 내용들을 작성한다.<ul>
+<li><tt class="docutils literal">project.clj</tt> 에 프로젝트에 관련된 내용들을 작성한다.<ul>
 <li>필요한 것들이 있다면 여기다가 차곡차곡&nbsp;넣어준다.</li>
-<li>그리고 이곳에 <cite>main</cite> 으로 사용할 코드의 위치를 작성해 줘야된다.<ul>
-<li>키워드는 <cite>:main</cite> 이다.</li>
+<li>그리고 이곳에 <tt class="docutils literal">main</tt> 으로 사용할 코드의 위치를 작성해 줘야된다.<ul>
+<li>키워드는 <tt class="docutils literal">:main</tt> 이다.</li>
 </ul>
 </li>
 </ul>
@@ -176,7 +176,7 @@ lein deps
 </div>
 <div class="section" id="id6">
 <h3>3. 코드&nbsp;작성</h3>
-<p><cite>src/myproject/core.clj</cite> 가 있다. 이곳에다가 코드를 작성해주면&nbsp;된다.</p>
+<p><tt class="docutils literal">src/myproject/core.clj</tt> 가 있다. 이곳에다가 코드를 작성해주면&nbsp;된다.</p>
 </div>
 <div class="section" id="id7">
 <h3>4.&nbsp;실행</h3>
@@ -208,8 +208,8 @@ lein search ring
 </div>
 <div class="section" id="id10">
 <h3>7. 패치&nbsp;설정</h3>
-<p>자동으로 잡아준다. 그래도 추가해야된다면 <cite>proejct.clj</cite> 에 키워드
-<cite>:extra-classpath-dirs</cite> 를 사용하여 리스트 형식으로 추가해주면&nbsp;된다.</p>
+<p>자동으로 잡아준다. 그래도 추가해야된다면 <tt class="docutils literal">proejct.clj</tt> 에 키워드
+<tt class="docutils literal"><span class="pre">:extra-classpath-dirs</span></tt> 를 사용하여 리스트 형식으로 추가해주면&nbsp;된다.</p>
 </div>
 <div class="section" id="id11">
 <h3>8. 인터프리터&nbsp;실행</h3>
@@ -231,7 +231,7 @@ lein repl
   <div class="article_meta">
     <p>Posted on: 2015. 03. 01. Sun</p>
     <p>Category: <a href="http://ujuc.github.io/category/develop.html">Develop</a>
- &ndash; Tags:
+ / Tags:
       <a href="http://ujuc.github.io/tag/clojure.html">clojure</a>,      <a href="http://ujuc.github.io/tag/gaebal-hwangyeong.html">개발 환경</a>,      <a href="http://ujuc.github.io/tag/lein.html">lein</a>    </p>
   </div>
 
@@ -251,7 +251,7 @@ lein repl
 
 
     <div id="ending_message">
-      <p>&copy; ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
     </div>
   </main>
 </body>

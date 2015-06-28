@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-06-14T22:30:00+09:00</updated><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="http://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><updated>2015-06-14T22:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
-&lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;cite&gt;journal&lt;/cite&gt; 로 보여지는 것 말고도 &lt;cite&gt;/var/log/zabbix&lt;/cite&gt; 가 보여서&amp;nbsp;확인했더니..&lt;/p&gt;
+&lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;tt class="docutils literal"&gt;journal&lt;/tt&gt; 로 보여지는 것 말고도
+&lt;tt class="docutils literal"&gt;/var/log/zabbix&lt;/tt&gt; 가 보여서&amp;nbsp;확인했더니..&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;
 using configuration file: /etc/zabbix/zabbix_server.conf
 current database version (mandatory/optional): 02040000/02040000
@@ -8,8 +9,10 @@ required mandatory version: 02040000
 listener failed: zbx_tcp_listen() fatal error: unable to serve on any address [[-]:10051]
 Got signal [signal:11(SIGSEGV),reason:1,refaddr:0x18]. Crashing ...
 &lt;/pre&gt;
-&lt;p&gt;음? 서버를 못찾는다고..?? 뭔 말이지. 그래서 그냥 통짜로 복사 붙여넣기. 구글에서 말하는 것들이 많은데 그 중에서 일본사람이 작성한 글. &lt;a class="reference external" href="http://qiita.com/_BSmile_/items/61932e45de5330190027"&gt;CentOS7.1 で zabbix-serverの起動が失敗する話とその解決方法&lt;/a&gt; 에서는 &lt;span class="caps"&gt;CV&lt;/span&gt;#-2014-0092는&amp;#8230; gnutls에 패치가되었는데.. &lt;span class="caps"&gt;CVE&lt;/span&gt;-2014-8564는 적용이 안되서 그부분에 대한 내용을 추가하던지 수정을 해야된다고&amp;nbsp;한다.&lt;/p&gt;
-&lt;p&gt;자세한건 구글 번역기로 사이트를 돌려서 보도록하자. 그렇다보니 여기서 추천하는 방법은 &lt;cite&gt;trousers&lt;/cite&gt; 를 업데이트 하는 방법을 추천하고&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;음? 서버를 못찾는다고..?? 뭔 말이지. 그래서 그냥 통짜로 복사&amp;nbsp;붙여넣기.&lt;/p&gt;
+&lt;p&gt;구글에서 말하는 것들이 많은데 그 중에서 일본사람이 작성한 글. &lt;a class="reference external" href="http://qiita.com/_BSmile_/items/61932e45de5330190027"&gt;CentOS7.1 で zabbix-serverの起動が失敗する話とその解決方法&lt;/a&gt; 에서는 &lt;span class="caps"&gt;CV&lt;/span&gt;#-2014-0092는&amp;#8230; gnutls에 패치가되었는데..
+&lt;span class="caps"&gt;CVE&lt;/span&gt;-2014-8564는 적용이 안되서 그부분에 대한 내용을 추가하던지 수정을 해야된다고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;자세한건 구글 번역기로 사이트를 돌려서 보도록하자. 그렇다보니 여기서 추천하는 방법은 &lt;tt class="docutils literal"&gt;trousers&lt;/tt&gt; 를 업데이트 하는 방법을 추천하고&amp;nbsp;있다.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;
 $ sudo rpm -Uvh https://kojipkgs.fedoraproject.org/packages/trousers/0.3.11.2/3.fc20/x86_64/trousers-0.3.11.2-3.fc20.x86_64.rpm
 Retrieving https://kojipkgs.fedoraproject.org/packages/trousers/0.3.11.2/3.fc20/x86_64/trousers-0.3.11.2-3.fc20.x86_64.rpm
@@ -19,16 +22,16 @@ Updating / installing...
 Cleaning up / removing...
 2:trousers-0.3.11.2-3.el7          ################################# [100%
 
-$ sodu systemctl start zabbix-server
+$ sudo systemctl start zabbix-server
 &lt;/pre&gt;
 &lt;p&gt;작동되는 것을 확인할 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;이 글은 &lt;strong&gt;CentOS 7.1.1503&lt;/strong&gt; 버전, &lt;strong&gt;Zabbix 2.4.5&lt;/strong&gt; 버전에서 확인되었고 테스트되었다. 이후 버전에서는 관련 버그가&amp;nbsp;잡히길.&lt;/p&gt;
 </summary><category term="zabbix"></category><category term="centos"></category></entry><entry><title>Rocket.Chat 번역기</title><link href="http://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/" rel="alternate"></link><updated>2015-06-02T22:45:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</id><summary type="html">&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
 일링에 추가된 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat"&gt;Rocket.Chat&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;심심해서 코드 보던 중 발견한 &lt;cite&gt;i18n&lt;/cite&gt;. 클클클 번역이나 해야지 짧을 꺼야&amp;#8230; 그런 심보
+&lt;p&gt;심심해서 코드 보던 중 발견한 &lt;tt class="docutils literal"&gt;i18n&lt;/tt&gt;. 클클클 번역이나 해야지 짧을 꺼야&amp;#8230; 그런 심보
 로 시작. 10분 만에 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt;&amp;nbsp;등록.&lt;/p&gt;
-&lt;p&gt;이유는 영어와 한국어의 어순이 반대다 보니&amp;#8230; &amp;#8216;%s by %s&amp;#8217;의 경우, 한국어로 &amp;#8216;%s에서
-%s로&amp;#8217;로 번역이 되어야 되는데. 어떤 놈이 앞의 &amp;#8216;%s&amp;#8217;인지 한국어에서는 알 수 없는 문제
+&lt;p&gt;이유는 영어와 한국어의 어순이 반대다 보니&amp;#8230; &lt;tt class="docutils literal"&gt;%s by %s&lt;/tt&gt; 의 경우, 한국어로 &lt;tt class="docutils literal"&gt;%s에서
+%s로&lt;/tt&gt; 로 번역이 되어야 되는데. 어떤 놈이 앞의 &lt;tt class="docutils literal"&gt;%s&lt;/tt&gt; 인지 한국어에서는 알 수 없는 문제
 가 발생. 그래서 짧은 영어로 적었더니. 친절하게 제목도 바꿔주고, 테스트할 수 있게
 PR해줄 수 있느냐기에 신속하게 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;&lt;span class="caps"&gt;PR&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;그렇게 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 는 해결되었고, 번역은&amp;nbsp;반영되었다.&lt;/p&gt;
@@ -44,7 +47,7 @@ File &lt;span class="s2"&gt;&amp;quot;/usr/bin/pip&amp;quot;&lt;/span&gt;, line 
 from pkg_resources import load_entry_point
 ImportError:No module named pkg_resources
 &lt;/pre&gt;
-&lt;p&gt;발생하는건 &lt;cite&gt;setuptools&lt;/cite&gt; 패키지가 설치되지 않아서&amp;nbsp;문제가&amp;#8230;&lt;/p&gt;
+&lt;p&gt;발생하는건 &lt;tt class="docutils literal"&gt;setuptools&lt;/tt&gt; 패키지가 설치되지 않아서&amp;nbsp;문제가&amp;#8230;&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
 &lt;span class="c"&gt;# wget --no-check-certificate \
 &lt;/span&gt;  https://pypi.python.org/packages/source/s/setuptools/setuptools-15.2.tar.gz#md5&lt;span class="o"&gt;=&lt;/span&gt;a9028a9794fc7ae02320d32e2d7e12ee
@@ -53,7 +56,7 @@ ImportError:No module named pkg_resources
 &lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;dl class="first docutils"&gt;
-&lt;dt&gt;&lt;cite&gt;pip install &amp;#8212;upgrade pip&lt;/cite&gt; 로 제대로 설치된건지&amp;nbsp;확인하자.&lt;/dt&gt;
+&lt;dt&gt;&lt;tt class="docutils literal"&gt;pip install &lt;span class="pre"&gt;--upgrade&lt;/span&gt; pip&lt;/tt&gt; 로 제대로 설치된건지&amp;nbsp;확인하자.&lt;/dt&gt;
 &lt;dd&gt;&lt;ul class="first last simple"&gt;
 &lt;li&gt;기본 설치되는 pip 버전이 낮으니.. 업글해줘야되기도&amp;nbsp;해서..&lt;/li&gt;
 &lt;/ul&gt;
@@ -103,7 +106,7 @@ ture)]&lt;/span&gt;
 &lt;/div&gt;
 </summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>sys.json</title><link href="http://ujuc.github.io/2015/03/10/sys-json/" rel="alternate"></link><updated>2015-03-10T13:52:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-10:2015/03/10/sys-json/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/EricR/sys.json"&gt;EricR/sys.json&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;좀 독특하다고&amp;nbsp;해야되나?&lt;/p&gt;
-&lt;p&gt;Golang을 이용해서 웹을 간단히 띄우고, &lt;cite&gt;proc&lt;/cite&gt; 를 이용해서 ㄴ용들을 불러와 &lt;span class="caps"&gt;JSON&lt;/span&gt;
+&lt;p&gt;Golang을 이용해서 웹을 간단히 띄우고, &lt;tt class="docutils literal"&gt;proc&lt;/tt&gt; 를 이용해서 내용들을 불러와 &lt;span class="caps"&gt;JSON&lt;/span&gt;
 형태로 뽑아주도록&amp;nbsp;되어있다.&lt;/p&gt;
 &lt;p&gt;몇몇 부분을 수정하거나 작업을 해야되긴 하겠지만 이 정도로 작은 아이를 띄워
 무리없이 가져올 수 있다면 그것도 좋은 방법이&amp;nbsp;아닐까&amp;#8230;&lt;/p&gt;
@@ -119,7 +122,7 @@ ture)]&lt;/span&gt;
 소리&amp;#8230;), 지금은 oslo 패키지로 관리되고 있다. &lt;a class="reference external" href="https://github.com/openstack/oslo.rootwrap"&gt;github&amp;nbsp;repo&lt;/a&gt;&lt;/p&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;사용자용&lt;/h2&gt;
-&lt;p&gt;&lt;cite&gt;nova.conf&lt;/cite&gt; 에 다음 문구&amp;nbsp;추가하도록&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;nova.conf&lt;/tt&gt; 에 다음 문구&amp;nbsp;추가하도록&amp;#8230;&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 rootwrap_config=/etc/nova/rootwrap.conf
 &lt;/pre&gt;
@@ -128,14 +131,14 @@ rootwrap_config=/etc/nova/rootwrap.conf
 &lt;h2&gt;배포용 패키지를 만드는&amp;nbsp;사람용&lt;/h2&gt;
 &lt;div class="section" id="suduers"&gt;
 &lt;h3&gt;Suduers&amp;nbsp;설정&lt;/h3&gt;
-&lt;p&gt;&lt;cite&gt;sudoers&lt;/cite&gt; 에 다음 문구를&amp;nbsp;추가하도록&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;sudoers&lt;/tt&gt; 에 다음 문구를&amp;nbsp;추가하도록&amp;#8230;&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id4"&gt;
 &lt;h3&gt;필터 위치&amp;nbsp;설정&lt;/h3&gt;
-&lt;p&gt;&lt;cite&gt;rootwrap&lt;/cite&gt; 으로 &lt;cite&gt;Nova-provided&lt;/cite&gt; 필터 파일을 로드하고, &lt;cite&gt;rootwrap.d&lt;/cite&gt; 로 확장
+&lt;p&gt;&lt;tt class="docutils literal"&gt;rootwrap&lt;/tt&gt; 으로 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Nova-provided&lt;/span&gt;&lt;/tt&gt; 필터 파일을 로드하고, &lt;tt class="docutils literal"&gt;rootwrap.d&lt;/tt&gt; 로 확장
 사용자의 필터 파일을 로드하도록 설정해&amp;nbsp;줄것.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 [DEFAULT]
@@ -150,24 +153,24 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 &lt;div class="section" id="id6"&gt;
 &lt;h2&gt;플러그인&amp;nbsp;작성자용&lt;/h2&gt;
 &lt;div class="section" id="run-as-root"&gt;
-&lt;h3&gt;새로운 &lt;cite&gt;run-as-root&lt;/cite&gt; 명령을&amp;nbsp;추가&lt;/h3&gt;
+&lt;h3&gt;새로운 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;run-as-root&lt;/span&gt;&lt;/tt&gt; 명령을&amp;nbsp;추가&lt;/h3&gt;
 &lt;p&gt;root로 동작시킬 것이 있을&amp;nbsp;경우.&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;nova.utils.execute(run_as_root=True)&lt;/cite&gt; 를 사용할&amp;nbsp;것.&lt;/li&gt;
-&lt;li&gt;관련 필터 내용은 &lt;cite&gt;/etc/nova/rootwrap.d/foobar.filters&lt;/cite&gt; 에 추가해둘&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;nova.utils.execute(run_as_root=True)&lt;/tt&gt; 를 사용할&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;관련 필터 내용은 &lt;tt class="docutils literal"&gt;/etc/nova/rootwrap.d/foobar.filters&lt;/tt&gt; 에 추가해둘&amp;nbsp;것.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id7"&gt;
 &lt;h2&gt;프로젝트&amp;nbsp;개발자용&lt;/h2&gt;
 &lt;div class="section" id="id8"&gt;
-&lt;h3&gt;새로운 &lt;cite&gt;run-as-root&lt;/cite&gt; 명령을&amp;nbsp;추가&lt;/h3&gt;
+&lt;h3&gt;새로운 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;run-as-root&lt;/span&gt;&lt;/tt&gt; 명령을&amp;nbsp;추가&lt;/h3&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;nova.utils.execute(run_as_root=True)&lt;/cite&gt; 를 사용할&amp;nbsp;것.&lt;/li&gt;
-&lt;li&gt;Nova 코드에서 &lt;cite&gt;/etc/nova/rootwrap.d/{filter_name}.ilters&lt;/cite&gt; 파일에 관련된 내용을
+&lt;li&gt;&lt;tt class="docutils literal"&gt;nova.utils.execute(run_as_root=True)&lt;/tt&gt; 를 사용할&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;Nova 코드에서 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/etc/nova/rootwrap.d/{filter_name}.ilters&lt;/span&gt;&lt;/tt&gt; 파일에 관련된 내용을
 추가해줄 것.&lt;ul&gt;
 &lt;li&gt;예로 Compute 노드에서 작동하는 소스라면
-&lt;cite&gt;/etc/nova/rootwrap.d/compute.filters&lt;/cite&gt; 에다가&amp;nbsp;추가하도록.&lt;/li&gt;
+&lt;tt class="docutils literal"&gt;/etc/nova/rootwrap.d/compute.filters&lt;/tt&gt; 에다가&amp;nbsp;추가하도록.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -176,7 +179,7 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 &lt;div class="section" id="id9"&gt;
 &lt;h2&gt;상위 필터 타입&amp;nbsp;추가&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;기본 필터 타입은 &lt;cite&gt;CommandFilter&lt;/cite&gt; 임.&lt;/li&gt;
+&lt;li&gt;기본 필터 타입은 &lt;tt class="docutils literal"&gt;CommandFilter&lt;/tt&gt; 임.&lt;/li&gt;
 &lt;li&gt;새로운 타입을 만들거나 지금 존재하는 타입을 확인하고 싶다면 &lt;a class="reference external" href="https://github.com/openstack/oslo.rootwrap/blob/master/oslo_rootwrap/filters.py"&gt;filters.py&lt;/a&gt; 를
 보면 된다. - &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes"&gt;Available Filter Classes&lt;/a&gt; 가 아닌걸로도 볼 수&amp;nbsp;있다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -243,7 +246,7 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 찾을때는 잘 못찾는&amp;nbsp;지라&amp;#8230;&lt;/p&gt;
 &lt;div class="section" id="id3"&gt;
 &lt;h3&gt;1.&amp;nbsp;전재&lt;/h3&gt;
-&lt;p&gt;OSX를 기반으로 한다. &lt;cite&gt;brew&lt;/cite&gt; 를 패키지로 모두 작성된다. 만약 Linux에서
+&lt;p&gt;OSX를 기반으로 한다. &lt;tt class="docutils literal"&gt;brew&lt;/tt&gt; 를 패키지로 모두 작성된다. 만약 Linux에서
 작업하게되면 관련해서 문서는 추가로 작성할 예정임. 문제는 언제될지&amp;nbsp;모르겠다.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -256,14 +259,14 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;li&gt;Apple에서 기본적으로 주는걸 써도 될&amp;nbsp;듯.&lt;/li&gt;
 &lt;li&gt;8으로 설치했는데 작업하는데는 아무런&amp;nbsp;이상없다.&lt;/li&gt;
 &lt;li&gt;그래서 그냥&amp;nbsp;쓴다.&lt;/li&gt;
-&lt;li&gt;그리고`brew-cask` 에 JDK가&amp;nbsp;있다는&amp;#8230;&lt;/li&gt;
+&lt;li&gt;그리고 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;brew-cask&lt;/span&gt;&lt;/tt&gt; 에 JDK가&amp;nbsp;있다는&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="leiningen"&gt;
 &lt;h2&gt;2. Leiningen&amp;nbsp;설치&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;brew install leiningen&lt;/cite&gt; 으로&amp;nbsp;설치.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;brew install leiningen&lt;/tt&gt; 으로&amp;nbsp;설치.&lt;/li&gt;
 &lt;li&gt;딱히 설정할 것&amp;nbsp;없음.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -272,34 +275,34 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;이거 쓸려고 넘많이&amp;nbsp;적었다&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="literal-block"&gt;
-$ lein
-    Leiningen is a tool for working with Clojure projects.
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;lein
+    Leiningen is a tool &lt;span class="k"&gt;for&lt;/span&gt; working with Clojure projects.
 
     Several tasks are available:
-    change              Rewrite project.clj by applying a function.
+    change              Rewrite project.clj by applying a &lt;span class="k"&gt;function&lt;/span&gt;.
     check               Check syntax and warn on reflection.
     classpath           Print the classpath of the current project.
-    clean               Remove all files from project's target-path.
+    clean               Remove all files from project&lt;span class="s1"&gt;'s target-path.
     compile             Compile Clojure source into .class files.
     deploy              Build and deploy jar to remote repository.
     deps                Download all dependencies.
     do                  Higher-order task to perform other tasks in succession.
     help                Display a list of tasks or help for a given task.
     install             Install the current project to the local repository.
-    jar                 Package up all the project's files into a jar file.
-    javac               Compile Java source files.
+    jar                 Package up all the project'&lt;/span&gt;s files into a jar file.
+    javac               Compile Java &lt;span class="nb"&gt;source &lt;/span&gt;files.
     new                 Generate project scaffolding based on a template.
     plugin              DEPRECATED. Please use the :user profile instead.
-    pom                 Write a pom.xml file to disk for Maven interoperability.
+    pom                 Write a pom.xml file to disk &lt;span class="k"&gt;for&lt;/span&gt; Maven interoperability.
     release             Perform :release-tasks.
     repl                Start a repl session either with the current project or standalone.
-    retest              Run only the test namespaces which failed last time around.
-    run                 Run a -main function with optional command-line arguments.
-    search              Search remote maven repositories for matching jars.
-    show-profiles       List all available profiles or display one if given an argument.
-    test                Run the project's tests.
-    trampoline          Run a task without nesting the project's JVM inside Leiningen's.
+    retest              Run only the &lt;span class="nb"&gt;test &lt;/span&gt;namespaces which failed last &lt;span class="nb"&gt;time &lt;/span&gt;around.
+    run                 Run a -main &lt;span class="k"&gt;function&lt;/span&gt; with optional &lt;span class="nb"&gt;command&lt;/span&gt;-line arguments.
+    search              Search remote maven repositories &lt;span class="k"&gt;for&lt;/span&gt; matching jars.
+    show-profiles       List all available profiles or display one &lt;span class="k"&gt;if&lt;/span&gt; given an argument.
+    &lt;span class="nb"&gt;test                &lt;/span&gt;Run the project&lt;span class="s1"&gt;'s tests.
+    trampoline          Run a task without nesting the project'&lt;/span&gt;s JVM inside Leiningen&lt;span class="s1"&gt;'s.
     uberjar             Package up the project files and dependencies into a jar file.
     update-in           Perform arbitrary transformations on your project map.
     upgrade             Upgrade Leiningen to specified version or latest stable.
@@ -313,7 +316,7 @@ $ lein
       -o             Run a task offline.
       -U             Run a task after forcing update of snapshots.
       -h, --help     Print this help or help for a specific task.
-      -v, --version  Print Leiningen's version.
+      -v, --version  Print Leiningen'&lt;/span&gt;s version.
 
     See also: readme, faq, tutorial, news, sample, profiles, deploying, gpg,
     mixed-source, templates, and copying.
@@ -324,10 +327,10 @@ $ lein
 lein new myproject
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;project.clj&lt;/cite&gt; 에 프로젝트에 관련된 내용들을 작성한다.&lt;ul&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;project.clj&lt;/tt&gt; 에 프로젝트에 관련된 내용들을 작성한다.&lt;ul&gt;
 &lt;li&gt;필요한 것들이 있다면 여기다가 차곡차곡&amp;nbsp;넣어준다.&lt;/li&gt;
-&lt;li&gt;그리고 이곳에 &lt;cite&gt;main&lt;/cite&gt; 으로 사용할 코드의 위치를 작성해 줘야된다.&lt;ul&gt;
-&lt;li&gt;키워드는 &lt;cite&gt;:main&lt;/cite&gt; 이다.&lt;/li&gt;
+&lt;li&gt;그리고 이곳에 &lt;tt class="docutils literal"&gt;main&lt;/tt&gt; 으로 사용할 코드의 위치를 작성해 줘야된다.&lt;ul&gt;
+&lt;li&gt;키워드는 &lt;tt class="docutils literal"&gt;:main&lt;/tt&gt; 이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -343,7 +346,7 @@ lein deps
 &lt;/div&gt;
 &lt;div class="section" id="id6"&gt;
 &lt;h3&gt;3. 코드&amp;nbsp;작성&lt;/h3&gt;
-&lt;p&gt;&lt;cite&gt;src/myproject/core.clj&lt;/cite&gt; 가 있다. 이곳에다가 코드를 작성해주면&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;src/myproject/core.clj&lt;/tt&gt; 가 있다. 이곳에다가 코드를 작성해주면&amp;nbsp;된다.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id7"&gt;
 &lt;h3&gt;4.&amp;nbsp;실행&lt;/h3&gt;
@@ -375,8 +378,8 @@ lein search ring
 &lt;/div&gt;
 &lt;div class="section" id="id10"&gt;
 &lt;h3&gt;7. 패치&amp;nbsp;설정&lt;/h3&gt;
-&lt;p&gt;자동으로 잡아준다. 그래도 추가해야된다면 &lt;cite&gt;proejct.clj&lt;/cite&gt; 에 키워드
-&lt;cite&gt;:extra-classpath-dirs&lt;/cite&gt; 를 사용하여 리스트 형식으로 추가해주면&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;자동으로 잡아준다. 그래도 추가해야된다면 &lt;tt class="docutils literal"&gt;proejct.clj&lt;/tt&gt; 에 키워드
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;:extra-classpath-dirs&lt;/span&gt;&lt;/tt&gt; 를 사용하여 리스트 형식으로 추가해주면&amp;nbsp;된다.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id11"&gt;
 &lt;h3&gt;8. 인터프리터&amp;nbsp;실행&lt;/h3&gt;
@@ -402,12 +405,12 @@ neocomplete does work this version of Vim.
 It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 &lt;/pre&gt;
 &lt;p&gt;혹시나 해서 검색을 해봤다. 매번 실행할 때마다 엔터 3번은 너무&amp;nbsp;오래걸려서&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/Shougo/neocomplete.vim/issues/237"&gt;neocomplete.vim - Vim version and lua&lt;/a&gt; 에서는 실행후 &lt;cite&gt;:version&lt;/cite&gt; 으로 &lt;cite&gt;lua&lt;/cite&gt; 가
-&lt;cite&gt;-&lt;/cite&gt; 인지 &lt;cite&gt;+&lt;/cite&gt; 인지 확인을 하라고 말을&amp;nbsp;한다.&lt;/p&gt;
-&lt;p&gt;여기서는 &lt;cite&gt;-lua&lt;/cite&gt; 면 &lt;cite&gt;lua&lt;/cite&gt; 사용 옵션이 빠져있는 것이 되기에 vim 설치시 그에 대한
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/Shougo/neocomplete.vim/issues/237"&gt;neocomplete.vim - Vim version and lua&lt;/a&gt; 에서는 실행후 &lt;tt class="docutils literal"&gt;:version&lt;/tt&gt; 으로 &lt;tt class="docutils literal"&gt;lua&lt;/tt&gt; 가
+&lt;tt class="docutils literal"&gt;-&lt;/tt&gt; 인지 &lt;tt class="docutils literal"&gt;+&lt;/tt&gt; 인지 확인을 하라고 말을&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;여기서는 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-lua&lt;/span&gt;&lt;/tt&gt; 면 &lt;tt class="docutils literal"&gt;lua&lt;/tt&gt; 사용 옵션이 빠져있는 것이 되기에 vim 설치시 그에 대한
 옵션을 설정해줘야된다는&amp;nbsp;말을&amp;#8230;&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;OSX&lt;/span&gt; 사용자들에게만 나온는 것같은데&amp;#8230; Linux에 대한 오류가 없는&amp;nbsp;걸보면&amp;#8230;&lt;/p&gt;
-&lt;p&gt;암튼 그것을 수정하는 방법은 &lt;cite&gt;brew&lt;/cite&gt; 로 설치할때 옵션을 걸어주고 설치하면 된다.
+&lt;p&gt;암튼 그것을 수정하는 방법은 &lt;tt class="docutils literal"&gt;brew&lt;/tt&gt; 로 설치할때 옵션을 걸어주고 설치하면 된다.
 물론 설치했다면, 다시 설치하면된다. 난 삭제하고 다시 설치&amp;#8230; (적다보니&amp;#8230; 자동화
 스크립트에 작성해둔거 변경을&amp;nbsp;해줘야겠다&amp;#8230;)&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
@@ -419,7 +422,7 @@ It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 &lt;p&gt;iPython을 설치하고 Pycharm에서 설치하려고 봤더니 제대로 돌아가질 않는다.
 그렇다고 오류가 보이지도 않아서 직접 터미널에서&amp;nbsp;쳤더니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;패키지가 없어서 안된다!!!&lt;/strong&gt; 라는 비명을 볼 수&amp;nbsp;있었다.&lt;/p&gt;
-&lt;p&gt;설치해줘야되는 패키지는 &lt;cite&gt;pyzmq&lt;/cite&gt;, &lt;cite&gt;tornado&lt;/cite&gt;, (&lt;cite&gt;certifi&lt;/cite&gt; 는 &lt;cite&gt;torando&lt;/cite&gt; 설치시 같이
+&lt;p&gt;설치해줘야되는 패키지는 &lt;tt class="docutils literal"&gt;pyzmq&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;tornado&lt;/tt&gt;, (&lt;tt class="docutils literal"&gt;certifi&lt;/tt&gt; 는 &lt;tt class="docutils literal"&gt;torando&lt;/tt&gt; 설치시 같이
 설치가되니 넘어간다.). 편한 방법으로 설치해주고 작동시키면 돌아가는 것을 확인할
 수&amp;nbsp;있다만&amp;#8230;&lt;/p&gt;
 &lt;p&gt;Pycharm의 iPython notebook 입력기 UI가 너무 안좋다. 그냥 서버를 띄우고 Web에서
@@ -456,14 +459,14 @@ It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;div class="section" id="git-review"&gt;
-&lt;h2&gt;&lt;cite&gt;git-review&lt;/cite&gt; 설치&lt;/h2&gt;
+&lt;h2&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;git-review&lt;/span&gt;&lt;/tt&gt; 설치&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;맥은 그냥 &lt;cite&gt;brew&lt;/cite&gt; 로 통일시켜서 설치하는게&amp;nbsp;편한듯&amp;#8230;&lt;/li&gt;
-&lt;li&gt;문서상으로는 &lt;cite&gt;pip&lt;/cite&gt; 로 설치하라고&amp;nbsp;했지만&amp;#8230;&lt;/li&gt;
+&lt;li&gt;맥은 그냥 &lt;tt class="docutils literal"&gt;brew&lt;/tt&gt; 로 통일시켜서 설치하는게&amp;nbsp;편한듯&amp;#8230;&lt;/li&gt;
+&lt;li&gt;문서상으로는 &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; 로 설치하라고&amp;nbsp;했지만&amp;#8230;&lt;/li&gt;
 &lt;li&gt;설치하고 제대로 됐는지 확인을 하기위해서는&lt;ul&gt;
 &lt;li&gt;하나를&amp;nbsp;클론하고&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;git review -s&lt;/cite&gt; 를 해서 &lt;cite&gt;review.openstack.org&lt;/cite&gt; 에 제대로 접속했는지를 체크를&amp;nbsp;해준다.&lt;/li&gt;
-&lt;li&gt;이때 &lt;cite&gt;gitreview.username&lt;/cite&gt; 을 &lt;cite&gt;.gitconfig&lt;/cite&gt; 파일에 작성해두지 않았다면
+&lt;li&gt;&lt;tt class="docutils literal"&gt;git review &lt;span class="pre"&gt;-s&lt;/span&gt;&lt;/tt&gt; 를 해서 &lt;tt class="docutils literal"&gt;review.openstack.org&lt;/tt&gt; 에 제대로 접속했는지를 체크를&amp;nbsp;해준다.&lt;/li&gt;
+&lt;li&gt;이때 &lt;tt class="docutils literal"&gt;gitreview.username&lt;/tt&gt; 을 &lt;tt class="docutils literal"&gt;.gitconfig&lt;/tt&gt; 파일에 작성해두지 않았다면
 설정하라고&amp;nbsp;뜸.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -474,12 +477,12 @@ It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 &lt;div class="section" id="id4"&gt;
 &lt;h3&gt;버그일&amp;nbsp;경우&lt;/h3&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;우선 &lt;cite&gt;bugs.launchpad.net/&amp;lt;projectname&amp;gt;&lt;/cite&gt; 으로 접속하여 버그 리포팅.&lt;ul&gt;
+&lt;li&gt;우선 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bugs.launchpad.net/&amp;lt;projectname&amp;gt;&lt;/span&gt;&lt;/tt&gt; 으로 접속하여 버그 리포팅.&lt;ul&gt;
 &lt;li&gt;이때 4가지로 테스크가 나뉘는데,&lt;ol class="arabic"&gt;
-&lt;li&gt;새로운 버그 확인: &amp;quot;New&amp;quot;로 표기된 버그를 &amp;quot;Confirmed&amp;quot;로 변경 가능한 상태.
+&lt;li&gt;새로운 버그 확인: &amp;#8220;New&amp;#8221;로 표기된 버그를 &amp;#8220;Confirmed&amp;#8221;로 변경 가능한 상태.
 거의 초기를 말한다고&amp;nbsp;보면됨.&lt;/li&gt;
-&lt;li&gt;버그 수정 : 버그를 할당하고, &amp;quot;In Progress&amp;quot;로&amp;nbsp;등록.&lt;/li&gt;
-&lt;li&gt;리뷰중 : &amp;quot;Incomplete&amp;quot;로 표기되고 리뷰가 진행되는 상태를 말함. 최대
+&lt;li&gt;버그 수정 : 버그를 할당하고, &amp;#8220;In Progress&amp;#8221;로&amp;nbsp;등록.&lt;/li&gt;
+&lt;li&gt;리뷰중 : &amp;#8220;Incomplete&amp;#8221;로 표기되고 리뷰가 진행되는 상태를 말함. 최대
 4주까지 걸린다고&amp;nbsp;함.&lt;/li&gt;
 &lt;li&gt;버그가 또다시 발견된 경우 : 그렇다고함&amp;#8230; (뭐라말하기가&amp;#8230; 그냥 나같은
 경우엔 리오픈으로 적고 프로세스&amp;nbsp;해버림&amp;#8230;)&lt;/li&gt;
@@ -514,8 +517,8 @@ references&lt;/a&gt; 를&amp;nbsp;보면됨.&lt;/li&gt;
 &lt;span class="nv"&gt;$ &lt;/span&gt;git pull --ff-only origin master
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;그리고 브런치를 따는데, Blueprint는 &lt;cite&gt;bp/&amp;lt;blueprint_name&amp;gt;&lt;/cite&gt;, Bug는
-&lt;cite&gt;bug/&amp;lt;bug-number&amp;gt;&lt;/cite&gt; 로&amp;nbsp;따주면된다.&lt;/li&gt;
+&lt;li&gt;그리고 브런치를 따는데, Blueprint는 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bp/&amp;lt;blueprint_name&amp;gt;&lt;/span&gt;&lt;/tt&gt;, Bug는
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bug/&amp;lt;bug-number&amp;gt;&lt;/span&gt;&lt;/tt&gt; 로&amp;nbsp;따주면된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
 git checkout -b TOPIC-BRANCH
@@ -538,21 +541,21 @@ Implements: blueprint &amp;lt;blueprint_name&amp;gt;
 Closes-Bug: #&amp;lt;bug_number&amp;gt;
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;Change-id&lt;/cite&gt; 는 &lt;cite&gt;git review&lt;/cite&gt; 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는&amp;nbsp;없다.&lt;/li&gt;
-&lt;li&gt;리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 &lt;cite&gt;git commit &amp;#8212;amend&lt;/cite&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Change-id&lt;/span&gt;&lt;/tt&gt; 는 &lt;tt class="docutils literal"&gt;git review&lt;/tt&gt; 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는&amp;nbsp;없다.&lt;/li&gt;
+&lt;li&gt;리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 &lt;tt class="docutils literal"&gt;git commit &lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt;
 오셤으로&amp;nbsp;해주면된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id8"&gt;
 &lt;h3&gt;리뷰&amp;nbsp;등록&lt;/h3&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;git reivew&lt;/cite&gt; 로 하면 &lt;cite&gt;review.openstack.org&lt;/cite&gt; 에 올라가 있는 것을 확인할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;git reivew&lt;/tt&gt; 로 하면 &lt;tt class="docutils literal"&gt;review.openstack.org&lt;/tt&gt; 에 올라가 있는 것을 확인할 수&amp;nbsp;있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id9"&gt;
 &lt;h3&gt;변경사항이&amp;nbsp;있을때&lt;/h3&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;커밋 메시지에 &lt;cite&gt;Change-Id&lt;/cite&gt; 가없을때는 붙여넣기 해준 다음 &lt;cite&gt;&amp;#8212;amend&lt;/cite&gt; 로&amp;nbsp;커밋.&lt;/li&gt;
+&lt;li&gt;커밋 메시지에 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Change-Id&lt;/span&gt;&lt;/tt&gt; 가없을때는 붙여넣기 해준 다음 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt; 로&amp;nbsp;커밋.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;나머지 자세한 것들은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 확인하도록하자. 이것도 뭐&amp;#8230; 내가
 까먹으니까 작성한&amp;nbsp;것이기도하지만&amp;#8230;&lt;/p&gt;

@@ -41,7 +41,7 @@
   <aside>
     <div id="user_meta">
       <a href="http://ujuc.github.io">
-        <img src="img/logo.jpg" alt="logo">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
       </a>
       <h2><a href="http://ujuc.github.io">ujuc</a></h2>
       <p></p>
@@ -84,12 +84,12 @@
 <ol class="arabic simple">
 <li>위의 사진대로 USB를 연결해주고 (2번에&nbsp;연결)</li>
 <li>Edison 외장디스크가 깨끗한지 확인한다.
-* 만약 이전의 이미지 내용이 있다면, <cite>rm -rf Edison/.*</cite> 를 이용하여 모든 내용을 삭제한 다음 받은 이미지를 올리면 된다.
+* 만약 이전의 이미지 내용이 있다면, <tt class="docutils literal">rm <span class="pre">-rf</span> <span class="pre">Edison/\.*</span></tt> 를 이용하여 모든 내용을 삭제한 다음 받은 이미지를 올리면 된다.
 * Edison 파티션의 정보를 확인하여 포멧이 FAT16이라면 디스크 유틸에서 포맷하여 FAT32로&nbsp;변경해주도록.</li>
 <li>다운 받은걸&nbsp;복사하자.</li>
 <li>시리얼 통신으로 Edison에 접근한다.
-* <cite>screen /dev/cu.usbserial-A**** 115200 -L</cite>
-* <cite>subserial</cite> 로 접근을 하면되는데 A뒤의 이름은 변경될 수 있어 작성하지&nbsp;않았다.</li>
+* <tt class="docutils literal">screen <span class="pre">/dev/cu.usbserial-A****</span> 115200 <span class="pre">-L</span></tt>
+* <tt class="docutils literal">subserial</tt> 로 접근을 하면되는데 A뒤의 이름은 변경될 수 있어 작성하지&nbsp;않았다.</li>
 <li>아무런 내용이 안나온다면 들어간 것이니, 엔터&nbsp;두번.</li>
 <li>로그인후 <cite>reboot ota</cite> 명령어로 재시작.
 * <cite>ota</cite> 로 할 경우, 부팅때 Edison 외장하드에 넣어둔 부팅 이미지들로 새롭게 씌우고 관련 내용들을 업데이트하여 사용할 수 있도록&nbsp;되어있다.</li>
@@ -100,8 +100,8 @@
 <div class="section" id="id3">
 <h2>Edison&nbsp;구성</h2>
 <ul class="simple">
-<li>기본 구성을 하는데 필요한 명령어는 <cite>configure_edison</cite> 으로 작업을 구성하도록&nbsp;한다.</li>
-<li>전체 설정을 다 변경하고 싶으면 <cite>configure_edison &#8212;setup</cite> 이다.</li>
+<li>기본 구성을 하는데 필요한 명령어는 <tt class="docutils literal">configure_edison</tt> 으로 작업을 구성하도록&nbsp;한다.</li>
+<li>전체 설정을 다 변경하고 싶으면 <tt class="docutils literal">configure_edison <span class="pre">--setup</span></tt> 이다.</li>
 </ul>
 <div class="section" id="hostname">
 <h3>Hostname</h3>
@@ -173,7 +173,7 @@ src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
   <div class="article_meta">
     <p>Posted on: 2015. 05. 13. Wed</p>
     <p>Category: <a href="http://ujuc.github.io/category/devleop.html">Devleop</a>
- &ndash; Tags:
+ / Tags:
       <a href="http://ujuc.github.io/tag/edison.html">Edison</a>,      <a href="http://ujuc.github.io/tag/gaebal.html">개발</a>,      <a href="http://ujuc.github.io/tag/embedded.html">Embedded</a>,      <a href="http://ujuc.github.io/tag/imbedideu.html">임베디드</a>,      <a href="http://ujuc.github.io/tag/intel.html">Intel</a>,      <a href="http://ujuc.github.io/tag/iot.html">IoT</a>    </p>
   </div>
 
@@ -193,7 +193,7 @@ src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
 
 
     <div id="ending_message">
-      <p>&copy; ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
     </div>
   </main>
 </body>

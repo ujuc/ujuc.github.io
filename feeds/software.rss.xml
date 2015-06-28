@@ -10,7 +10,7 @@
 &lt;p&gt;암튼&amp;#8230; 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;&amp;#8230; 역시 다른
 구멍을 파는 사람들이&amp;nbsp;있구나&amp;#8230;&lt;/p&gt;
 &lt;p&gt;변화점까지 확인할 수 있다는건 git의 장점을&amp;nbsp;가져왔구나.&lt;/p&gt;
-&lt;div class="section" id="id2"&gt;
+&lt;div class="section" id="id3"&gt;
 &lt;h2&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md"&gt;설치&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;기본&amp;nbsp;설치&lt;/li&gt;
@@ -40,9 +40,9 @@
 &lt;span class="nv"&gt;$ &lt;/span&gt;brew install git-ftp
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;curl&lt;/cite&gt; 을 기본으로 설치했는데 &lt;cite&gt;ssl&lt;/cite&gt;, &lt;cite&gt;libssh2&lt;/cite&gt; 를 사용할 수 있도록 설정이
+&lt;li&gt;&lt;tt class="docutils literal"&gt;curl&lt;/tt&gt; 을 기본으로 설치했는데 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;libssh2&lt;/tt&gt; 를 사용할 수 있도록 설정이
 필요한&amp;nbsp;갑다.&lt;/li&gt;
-&lt;li&gt;git이 &lt;cite&gt;ssl&lt;/cite&gt; 을 사용하긴&amp;nbsp;한다만&amp;#8230;&lt;/li&gt;
+&lt;li&gt;git이 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt; 을 사용하긴&amp;nbsp;한다만&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id4"&gt;
@@ -71,21 +71,21 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;cite&gt;ibus&lt;/cite&gt; 가 조금 불편할뻔하다가&amp;#8230;
-쓰던거 쓰자해서 &lt;cite&gt;nabi&lt;/cite&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&amp;nbsp;않는다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가&amp;#8230;
+쓰던거 쓰자해서 &lt;tt class="docutils literal"&gt;nabi&lt;/tt&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&amp;nbsp;않는다.&lt;/p&gt;
 &lt;p&gt;그래서 조금 검색을 했더니&amp;#8230;
-&lt;cite&gt;gsettings get com.canonical.Unity.Panel systray-whitelist&lt;/cite&gt; 라는 걸로 추가를
+&lt;tt class="docutils literal"&gt;gsettings get com.canonical.Unity.Panel &lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 라는 걸로 추가를
 해줘야한다고 하는데&amp;#8230; 이넘은 14.10에는 없다. 조금더 찾아보니, 13.04부터는 아예&amp;nbsp;빠져있었다.&lt;/p&gt;
-&lt;p&gt;다시 검색어를 &lt;cite&gt;systray-whitelist&lt;/cite&gt; 로 검색중 &lt;strong&gt;Web &lt;span class="caps"&gt;UPD8&lt;/span&gt;&lt;/strong&gt; 에 올라온 글을&amp;nbsp;확인.&lt;/p&gt;
+&lt;p&gt;다시 검색어를 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 로 검색중 &lt;strong&gt;Web &lt;span class="caps"&gt;UPD8&lt;/span&gt;&lt;/strong&gt; 에 올라온 글을&amp;nbsp;확인.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html"&gt;How to whitelist systray apps in ubuntu 14.04 or&amp;nbsp;14.10(W/unity)&lt;/a&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;나같은 겨웅에는  14.10을&amp;nbsp;설치했으니.&lt;/li&gt;
+&lt;li&gt;나같은 경우에는  14.10을&amp;nbsp;설치했으니.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
 sudo apt-add-repository ppa:guran/systray-utopic
 sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get upgrade
 &lt;/pre&gt;
-&lt;p&gt;그리고 &lt;cite&gt;Alt + F2&lt;/cite&gt; 를 눌러 &lt;cite&gt;unity&lt;/cite&gt; 를 찾아 클릭해주면 알아서 unity가 재시작되면서
+&lt;p&gt;그리고 &lt;tt class="docutils literal"&gt;Alt + F2&lt;/tt&gt; 를 눌러 &lt;tt class="docutils literal"&gt;unity&lt;/tt&gt; 를 찾아 클릭해주면 알아서 unity가 재시작되면서
 nabi가 트레이에 들어가게&amp;nbsp;된다.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;덧. 아래에보면 관련 ppa를 삭제하는 방법이 나오는데 따로 패키지를 설치할

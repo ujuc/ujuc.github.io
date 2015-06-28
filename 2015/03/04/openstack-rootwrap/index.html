@@ -41,7 +41,7 @@
   <aside>
     <div id="user_meta">
       <a href="http://ujuc.github.io">
-        <img src="img/logo.jpg" alt="logo">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
       </a>
       <h2><a href="http://ujuc.github.io">ujuc</a></h2>
       <p></p>
@@ -76,7 +76,7 @@
 소리&#8230;), 지금은 oslo 패키지로 관리되고 있다. <a class="reference external" href="https://github.com/openstack/oslo.rootwrap">github&nbsp;repo</a></p>
 <div class="section" id="id2">
 <h2>사용자용</h2>
-<p><cite>nova.conf</cite> 에 다음 문구&nbsp;추가하도록&#8230;</p>
+<p><tt class="docutils literal">nova.conf</tt> 에 다음 문구&nbsp;추가하도록&#8230;</p>
 <pre class="literal-block">
 rootwrap_config=/etc/nova/rootwrap.conf
 </pre>
@@ -85,14 +85,14 @@ rootwrap_config=/etc/nova/rootwrap.conf
 <h2>배포용 패키지를 만드는&nbsp;사람용</h2>
 <div class="section" id="suduers">
 <h3>Suduers&nbsp;설정</h3>
-<p><cite>sudoers</cite> 에 다음 문구를&nbsp;추가하도록&#8230;</p>
+<p><tt class="docutils literal">sudoers</tt> 에 다음 문구를&nbsp;추가하도록&#8230;</p>
 <pre class="literal-block">
 nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
 </pre>
 </div>
 <div class="section" id="id4">
 <h3>필터 위치&nbsp;설정</h3>
-<p><cite>rootwrap</cite> 으로 <cite>Nova-provided</cite> 필터 파일을 로드하고, <cite>rootwrap.d</cite> 로 확장
+<p><tt class="docutils literal">rootwrap</tt> 으로 <tt class="docutils literal"><span class="pre">Nova-provided</span></tt> 필터 파일을 로드하고, <tt class="docutils literal">rootwrap.d</tt> 로 확장
 사용자의 필터 파일을 로드하도록 설정해&nbsp;줄것.</p>
 <pre class="literal-block">
 [DEFAULT]
@@ -107,24 +107,24 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 <div class="section" id="id6">
 <h2>플러그인&nbsp;작성자용</h2>
 <div class="section" id="run-as-root">
-<h3>새로운 <cite>run-as-root</cite> 명령을&nbsp;추가</h3>
+<h3>새로운 <tt class="docutils literal"><span class="pre">run-as-root</span></tt> 명령을&nbsp;추가</h3>
 <p>root로 동작시킬 것이 있을&nbsp;경우.</p>
 <ul class="simple">
-<li><cite>nova.utils.execute(run_as_root=True)</cite> 를 사용할&nbsp;것.</li>
-<li>관련 필터 내용은 <cite>/etc/nova/rootwrap.d/foobar.filters</cite> 에 추가해둘&nbsp;것.</li>
+<li><tt class="docutils literal">nova.utils.execute(run_as_root=True)</tt> 를 사용할&nbsp;것.</li>
+<li>관련 필터 내용은 <tt class="docutils literal">/etc/nova/rootwrap.d/foobar.filters</tt> 에 추가해둘&nbsp;것.</li>
 </ul>
 </div>
 </div>
 <div class="section" id="id7">
 <h2>프로젝트&nbsp;개발자용</h2>
 <div class="section" id="id8">
-<h3>새로운 <cite>run-as-root</cite> 명령을&nbsp;추가</h3>
+<h3>새로운 <tt class="docutils literal"><span class="pre">run-as-root</span></tt> 명령을&nbsp;추가</h3>
 <ul class="simple">
-<li><cite>nova.utils.execute(run_as_root=True)</cite> 를 사용할&nbsp;것.</li>
-<li>Nova 코드에서 <cite>/etc/nova/rootwrap.d/{filter_name}.ilters</cite> 파일에 관련된 내용을
+<li><tt class="docutils literal">nova.utils.execute(run_as_root=True)</tt> 를 사용할&nbsp;것.</li>
+<li>Nova 코드에서 <tt class="docutils literal"><span class="pre">/etc/nova/rootwrap.d/{filter_name}.ilters</span></tt> 파일에 관련된 내용을
 추가해줄 것.<ul>
 <li>예로 Compute 노드에서 작동하는 소스라면
-<cite>/etc/nova/rootwrap.d/compute.filters</cite> 에다가&nbsp;추가하도록.</li>
+<tt class="docutils literal">/etc/nova/rootwrap.d/compute.filters</tt> 에다가&nbsp;추가하도록.</li>
 </ul>
 </li>
 </ul>
@@ -133,7 +133,7 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 <div class="section" id="id9">
 <h2>상위 필터 타입&nbsp;추가</h2>
 <ul class="simple">
-<li>기본 필터 타입은 <cite>CommandFilter</cite> 임.</li>
+<li>기본 필터 타입은 <tt class="docutils literal">CommandFilter</tt> 임.</li>
 <li>새로운 타입을 만들거나 지금 존재하는 타입을 확인하고 싶다면 <a class="reference external" href="https://github.com/openstack/oslo.rootwrap/blob/master/oslo_rootwrap/filters.py">filters.py</a> 를
 보면 된다. - <a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes">Available Filter Classes</a> 가 아닌걸로도 볼 수&nbsp;있다.</li>
 </ul>
@@ -143,7 +143,7 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
   <div class="article_meta">
     <p>Posted on: 2015. 03. 04. Wed</p>
     <p>Category: <a href="http://ujuc.github.io/category/develop.html">Develop</a>
- &ndash; Tags:
+ / Tags:
       <a href="http://ujuc.github.io/tag/openstack.html">openstack</a>,      <a href="http://ujuc.github.io/tag/oslo.html">oslo</a>,      <a href="http://ujuc.github.io/tag/opeunseutaeg.html">오픈스택</a>    </p>
   </div>
 
@@ -163,7 +163,7 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 
 
     <div id="ending_message">
-      <p>&copy; ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
     </div>
   </main>
 </body>

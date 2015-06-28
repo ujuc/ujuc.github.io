@@ -41,7 +41,7 @@
   <aside>
     <div id="user_meta">
       <a href="http://ujuc.github.io">
-        <img src="img/logo.jpg" alt="logo">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
       </a>
       <h2><a href="http://ujuc.github.io">ujuc</a></h2>
       <p></p>
@@ -99,14 +99,14 @@
 </ol>
 </div>
 <div class="section" id="git-review">
-<h2><cite>git-review</cite> 설치</h2>
+<h2><tt class="docutils literal"><span class="pre">git-review</span></tt> 설치</h2>
 <ul class="simple">
-<li>맥은 그냥 <cite>brew</cite> 로 통일시켜서 설치하는게&nbsp;편한듯&#8230;</li>
-<li>문서상으로는 <cite>pip</cite> 로 설치하라고&nbsp;했지만&#8230;</li>
+<li>맥은 그냥 <tt class="docutils literal">brew</tt> 로 통일시켜서 설치하는게&nbsp;편한듯&#8230;</li>
+<li>문서상으로는 <tt class="docutils literal">pip</tt> 로 설치하라고&nbsp;했지만&#8230;</li>
 <li>설치하고 제대로 됐는지 확인을 하기위해서는<ul>
 <li>하나를&nbsp;클론하고</li>
-<li><cite>git review -s</cite> 를 해서 <cite>review.openstack.org</cite> 에 제대로 접속했는지를 체크를&nbsp;해준다.</li>
-<li>이때 <cite>gitreview.username</cite> 을 <cite>.gitconfig</cite> 파일에 작성해두지 않았다면
+<li><tt class="docutils literal">git review <span class="pre">-s</span></tt> 를 해서 <tt class="docutils literal">review.openstack.org</tt> 에 제대로 접속했는지를 체크를&nbsp;해준다.</li>
+<li>이때 <tt class="docutils literal">gitreview.username</tt> 을 <tt class="docutils literal">.gitconfig</tt> 파일에 작성해두지 않았다면
 설정하라고&nbsp;뜸.</li>
 </ul>
 </li>
@@ -117,12 +117,12 @@
 <div class="section" id="id4">
 <h3>버그일&nbsp;경우</h3>
 <ul class="simple">
-<li>우선 <cite>bugs.launchpad.net/&lt;projectname&gt;</cite> 으로 접속하여 버그 리포팅.<ul>
+<li>우선 <tt class="docutils literal"><span class="pre">bugs.launchpad.net/&lt;projectname&gt;</span></tt> 으로 접속하여 버그 리포팅.<ul>
 <li>이때 4가지로 테스크가 나뉘는데,<ol class="arabic">
-<li>새로운 버그 확인: &quot;New&quot;로 표기된 버그를 &quot;Confirmed&quot;로 변경 가능한 상태.
+<li>새로운 버그 확인: &#8220;New&#8221;로 표기된 버그를 &#8220;Confirmed&#8221;로 변경 가능한 상태.
 거의 초기를 말한다고&nbsp;보면됨.</li>
-<li>버그 수정 : 버그를 할당하고, &quot;In Progress&quot;로&nbsp;등록.</li>
-<li>리뷰중 : &quot;Incomplete&quot;로 표기되고 리뷰가 진행되는 상태를 말함. 최대
+<li>버그 수정 : 버그를 할당하고, &#8220;In Progress&#8221;로&nbsp;등록.</li>
+<li>리뷰중 : &#8220;Incomplete&#8221;로 표기되고 리뷰가 진행되는 상태를 말함. 최대
 4주까지 걸린다고&nbsp;함.</li>
 <li>버그가 또다시 발견된 경우 : 그렇다고함&#8230; (뭐라말하기가&#8230; 그냥 나같은
 경우엔 리오픈으로 적고 프로세스&nbsp;해버림&#8230;)</li>
@@ -157,8 +157,8 @@ references</a> 를&nbsp;보면됨.</li>
 <span class="nv">$ </span>git pull --ff-only origin master
 </pre>
 <ul class="simple">
-<li>그리고 브런치를 따는데, Blueprint는 <cite>bp/&lt;blueprint_name&gt;</cite>, Bug는
-<cite>bug/&lt;bug-number&gt;</cite> 로&nbsp;따주면된다.</li>
+<li>그리고 브런치를 따는데, Blueprint는 <tt class="docutils literal"><span class="pre">bp/&lt;blueprint_name&gt;</span></tt>, Bug는
+<tt class="docutils literal"><span class="pre">bug/&lt;bug-number&gt;</span></tt> 로&nbsp;따주면된다.</li>
 </ul>
 <pre class="code bash literal-block">
 git checkout -b TOPIC-BRANCH
@@ -181,21 +181,21 @@ Implements: blueprint &lt;blueprint_name&gt;
 Closes-Bug: #&lt;bug_number&gt;
 </pre>
 <ul class="simple">
-<li><cite>Change-id</cite> 는 <cite>git review</cite> 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는&nbsp;없다.</li>
-<li>리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 <cite>git commit &#8212;amend</cite>
+<li><tt class="docutils literal"><span class="pre">Change-id</span></tt> 는 <tt class="docutils literal">git review</tt> 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는&nbsp;없다.</li>
+<li>리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 <tt class="docutils literal">git commit <span class="pre">--amend</span></tt>
 오셤으로&nbsp;해주면된다.</li>
 </ul>
 </div>
 <div class="section" id="id8">
 <h3>리뷰&nbsp;등록</h3>
 <ul class="simple">
-<li><cite>git reivew</cite> 로 하면 <cite>review.openstack.org</cite> 에 올라가 있는 것을 확인할 수&nbsp;있다.</li>
+<li><tt class="docutils literal">git reivew</tt> 로 하면 <tt class="docutils literal">review.openstack.org</tt> 에 올라가 있는 것을 확인할 수&nbsp;있다.</li>
 </ul>
 </div>
 <div class="section" id="id9">
 <h3>변경사항이&nbsp;있을때</h3>
 <ul class="simple">
-<li>커밋 메시지에 <cite>Change-Id</cite> 가없을때는 붙여넣기 해준 다음 <cite>&#8212;amend</cite> 로&nbsp;커밋.</li>
+<li>커밋 메시지에 <tt class="docutils literal"><span class="pre">Change-Id</span></tt> 가없을때는 붙여넣기 해준 다음 <tt class="docutils literal"><span class="pre">--amend</span></tt> 로&nbsp;커밋.</li>
 </ul>
 <p>나머지 자세한 것들은 <a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html">Developer&#8217;s Guide</a> 를 확인하도록하자. 이것도 뭐&#8230; 내가
 까먹으니까 작성한&nbsp;것이기도하지만&#8230;</p>
@@ -206,7 +206,7 @@ Closes-Bug: #&lt;bug_number&gt;
   <div class="article_meta">
     <p>Posted on: 2015. 02. 13. Fri</p>
     <p>Category: <a href="http://ujuc.github.io/category/develop.html">Develop</a>
- &ndash; Tags:
+ / Tags:
       <a href="http://ujuc.github.io/tag/openstack.html">OpenStack</a>,      <a href="http://ujuc.github.io/tag/commit.html">commit</a>    </p>
   </div>
 
@@ -226,7 +226,7 @@ Closes-Bug: #&lt;bug_number&gt;
 
 
     <div id="ending_message">
-      <p>&copy; ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
     </div>
   </main>
 </body>

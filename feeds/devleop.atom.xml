@@ -14,12 +14,12 @@
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;위의 사진대로 USB를 연결해주고 (2번에&amp;nbsp;연결)&lt;/li&gt;
 &lt;li&gt;Edison 외장디스크가 깨끗한지 확인한다.
-* 만약 이전의 이미지 내용이 있다면, &lt;cite&gt;rm -rf Edison/.*&lt;/cite&gt; 를 이용하여 모든 내용을 삭제한 다음 받은 이미지를 올리면 된다.
+* 만약 이전의 이미지 내용이 있다면, &lt;tt class="docutils literal"&gt;rm &lt;span class="pre"&gt;-rf&lt;/span&gt; &lt;span class="pre"&gt;Edison/\.*&lt;/span&gt;&lt;/tt&gt; 를 이용하여 모든 내용을 삭제한 다음 받은 이미지를 올리면 된다.
 * Edison 파티션의 정보를 확인하여 포멧이 FAT16이라면 디스크 유틸에서 포맷하여 FAT32로&amp;nbsp;변경해주도록.&lt;/li&gt;
 &lt;li&gt;다운 받은걸&amp;nbsp;복사하자.&lt;/li&gt;
 &lt;li&gt;시리얼 통신으로 Edison에 접근한다.
-* &lt;cite&gt;screen /dev/cu.usbserial-A**** 115200 -L&lt;/cite&gt;
-* &lt;cite&gt;subserial&lt;/cite&gt; 로 접근을 하면되는데 A뒤의 이름은 변경될 수 있어 작성하지&amp;nbsp;않았다.&lt;/li&gt;
+* &lt;tt class="docutils literal"&gt;screen &lt;span class="pre"&gt;/dev/cu.usbserial-A****&lt;/span&gt; 115200 &lt;span class="pre"&gt;-L&lt;/span&gt;&lt;/tt&gt;
+* &lt;tt class="docutils literal"&gt;subserial&lt;/tt&gt; 로 접근을 하면되는데 A뒤의 이름은 변경될 수 있어 작성하지&amp;nbsp;않았다.&lt;/li&gt;
 &lt;li&gt;아무런 내용이 안나온다면 들어간 것이니, 엔터&amp;nbsp;두번.&lt;/li&gt;
 &lt;li&gt;로그인후 &lt;cite&gt;reboot ota&lt;/cite&gt; 명령어로 재시작.
 * &lt;cite&gt;ota&lt;/cite&gt; 로 할 경우, 부팅때 Edison 외장하드에 넣어둔 부팅 이미지들로 새롭게 씌우고 관련 내용들을 업데이트하여 사용할 수 있도록&amp;nbsp;되어있다.&lt;/li&gt;
@@ -30,8 +30,8 @@
 &lt;div class="section" id="id3"&gt;
 &lt;h2&gt;Edison&amp;nbsp;구성&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;기본 구성을 하는데 필요한 명령어는 &lt;cite&gt;configure_edison&lt;/cite&gt; 으로 작업을 구성하도록&amp;nbsp;한다.&lt;/li&gt;
-&lt;li&gt;전체 설정을 다 변경하고 싶으면 &lt;cite&gt;configure_edison &amp;#8212;setup&lt;/cite&gt; 이다.&lt;/li&gt;
+&lt;li&gt;기본 구성을 하는데 필요한 명령어는 &lt;tt class="docutils literal"&gt;configure_edison&lt;/tt&gt; 으로 작업을 구성하도록&amp;nbsp;한다.&lt;/li&gt;
+&lt;li&gt;전체 설정을 다 변경하고 싶으면 &lt;tt class="docutils literal"&gt;configure_edison &lt;span class="pre"&gt;--setup&lt;/span&gt;&lt;/tt&gt; 이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="section" id="hostname"&gt;
 &lt;h3&gt;Hostname&lt;/h3&gt;

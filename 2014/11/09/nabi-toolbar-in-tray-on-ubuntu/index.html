@@ -41,7 +41,7 @@
   <aside>
     <div id="user_meta">
       <a href="http://ujuc.github.io">
-        <img src="img/logo.jpg" alt="logo">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
       </a>
       <h2><a href="http://ujuc.github.io">ujuc</a></h2>
       <p></p>
@@ -69,21 +69,21 @@
     <h3><a href="http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/">Uubntu에서 Nabi 툴바를 tray에&nbsp;넣기</a></h3>
   </div>
   <div class="article_text">
-    <p>오랜만에 Ubuntu를 설치하고 <cite>ibus</cite> 가 조금 불편할뻔하다가&#8230;
-쓰던거 쓰자해서 <cite>nabi</cite> 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&nbsp;않는다.</p>
+    <p>오랜만에 Ubuntu를 설치하고 <tt class="docutils literal">ibus</tt> 가 조금 불편할뻔하다가&#8230;
+쓰던거 쓰자해서 <tt class="docutils literal">nabi</tt> 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&nbsp;않는다.</p>
 <p>그래서 조금 검색을 했더니&#8230;
-<cite>gsettings get com.canonical.Unity.Panel systray-whitelist</cite> 라는 걸로 추가를
+<tt class="docutils literal">gsettings get com.canonical.Unity.Panel <span class="pre">systray-whitelist</span></tt> 라는 걸로 추가를
 해줘야한다고 하는데&#8230; 이넘은 14.10에는 없다. 조금더 찾아보니, 13.04부터는 아예&nbsp;빠져있었다.</p>
-<p>다시 검색어를 <cite>systray-whitelist</cite> 로 검색중 <strong>Web <span class="caps">UPD8</span></strong> 에 올라온 글을&nbsp;확인.</p>
+<p>다시 검색어를 <tt class="docutils literal"><span class="pre">systray-whitelist</span></tt> 로 검색중 <strong>Web <span class="caps">UPD8</span></strong> 에 올라온 글을&nbsp;확인.</p>
 <p><a class="reference external" href="http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html">How to whitelist systray apps in ubuntu 14.04 or&nbsp;14.10(W/unity)</a></p>
 <ul class="simple">
-<li>나같은 겨웅에는  14.10을&nbsp;설치했으니.</li>
+<li>나같은 경우에는  14.10을&nbsp;설치했으니.</li>
 </ul>
 <pre class="code bash literal-block">
 sudo apt-add-repository ppa:guran/systray-utopic
 sudo apt-get update<span class="p">;</span> sudo apt-get upgrade
 </pre>
-<p>그리고 <cite>Alt + F2</cite> 를 눌러 <cite>unity</cite> 를 찾아 클릭해주면 알아서 unity가 재시작되면서
+<p>그리고 <tt class="docutils literal">Alt + F2</tt> 를 눌러 <tt class="docutils literal">unity</tt> 를 찾아 클릭해주면 알아서 unity가 재시작되면서
 nabi가 트레이에 들어가게&nbsp;된다.</p>
 <ul class="simple">
 <li>덧. 아래에보면 관련 ppa를 삭제하는 방법이 나오는데 따로 패키지를 설치할
@@ -98,7 +98,7 @@ sudo apt-get update<span class="p">;</span> sudo apt-get autoremove
   <div class="article_meta">
     <p>Posted on: 2014. 11. 09. Sun</p>
     <p>Category: <a href="http://ujuc.github.io/category/software.html">software</a>
- &ndash; Tags:
+ / Tags:
       <a href="http://ujuc.github.io/tag/linux.html">linux</a>,      <a href="http://ujuc.github.io/tag/ubuntu.html">ubuntu</a>,      <a href="http://ujuc.github.io/tag/nabi.html">nabi</a>,      <a href="http://ujuc.github.io/tag/setting.html">setting</a>    </p>
   </div>
 
@@ -118,7 +118,7 @@ sudo apt-get update<span class="p">;</span> sudo apt-get autoremove
 
 
     <div id="ending_message">
-      <p>&copy; ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
     </div>
   </main>
 </body>

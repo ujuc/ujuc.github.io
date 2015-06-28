@@ -41,7 +41,7 @@
   <aside>
     <div id="user_meta">
       <a href="http://ujuc.github.io">
-        <img src="img/logo.jpg" alt="logo">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
       </a>
       <h2><a href="http://ujuc.github.io">ujuc</a></h2>
       <p></p>
@@ -70,7 +70,8 @@
   </div>
   <div class="article_text">
     <p>2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&nbsp;있는데.</p>
-<p>CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 <cite>journal</cite> 로 보여지는 것 말고도 <cite>/var/log/zabbix</cite> 가 보여서&nbsp;확인했더니..</p>
+<p>CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 <tt class="docutils literal">journal</tt> 로 보여지는 것 말고도
+<tt class="docutils literal">/var/log/zabbix</tt> 가 보여서&nbsp;확인했더니..</p>
 <pre class="code literal-block">
 using configuration file: /etc/zabbix/zabbix_server.conf
 current database version (mandatory/optional): 02040000/02040000
@@ -78,8 +79,10 @@ required mandatory version: 02040000
 listener failed: zbx_tcp_listen() fatal error: unable to serve on any address [[-]:10051]
 Got signal [signal:11(SIGSEGV),reason:1,refaddr:0x18]. Crashing ...
 </pre>
-<p>음? 서버를 못찾는다고..?? 뭔 말이지. 그래서 그냥 통짜로 복사 붙여넣기. 구글에서 말하는 것들이 많은데 그 중에서 일본사람이 작성한 글. <a class="reference external" href="http://qiita.com/_BSmile_/items/61932e45de5330190027">CentOS7.1 で zabbix-serverの起動が失敗する話とその解決方法</a> 에서는 <span class="caps">CV</span>#-2014-0092는&#8230; gnutls에 패치가되었는데.. <span class="caps">CVE</span>-2014-8564는 적용이 안되서 그부분에 대한 내용을 추가하던지 수정을 해야된다고&nbsp;한다.</p>
-<p>자세한건 구글 번역기로 사이트를 돌려서 보도록하자. 그렇다보니 여기서 추천하는 방법은 <cite>trousers</cite> 를 업데이트 하는 방법을 추천하고&nbsp;있다.</p>
+<p>음? 서버를 못찾는다고..?? 뭔 말이지. 그래서 그냥 통짜로 복사&nbsp;붙여넣기.</p>
+<p>구글에서 말하는 것들이 많은데 그 중에서 일본사람이 작성한 글. <a class="reference external" href="http://qiita.com/_BSmile_/items/61932e45de5330190027">CentOS7.1 で zabbix-serverの起動が失敗する話とその解決方法</a> 에서는 <span class="caps">CV</span>#-2014-0092는&#8230; gnutls에 패치가되었는데..
+<span class="caps">CVE</span>-2014-8564는 적용이 안되서 그부분에 대한 내용을 추가하던지 수정을 해야된다고&nbsp;한다.</p>
+<p>자세한건 구글 번역기로 사이트를 돌려서 보도록하자. 그렇다보니 여기서 추천하는 방법은 <tt class="docutils literal">trousers</tt> 를 업데이트 하는 방법을 추천하고&nbsp;있다.</p>
 <pre class="code literal-block">
 $ sudo rpm -Uvh https://kojipkgs.fedoraproject.org/packages/trousers/0.3.11.2/3.fc20/x86_64/trousers-0.3.11.2-3.fc20.x86_64.rpm
 Retrieving https://kojipkgs.fedoraproject.org/packages/trousers/0.3.11.2/3.fc20/x86_64/trousers-0.3.11.2-3.fc20.x86_64.rpm
@@ -89,7 +92,7 @@ Updating / installing...
 Cleaning up / removing...
 2:trousers-0.3.11.2-3.el7          ################################# [100%
 
-$ sodu systemctl start zabbix-server
+$ sudo systemctl start zabbix-server
 </pre>
 <p>작동되는 것을 확인할 수&nbsp;있다.</p>
 <p>이 글은 <strong>CentOS 7.1.1503</strong> 버전, <strong>Zabbix 2.4.5</strong> 버전에서 확인되었고 테스트되었다. 이후 버전에서는 관련 버그가&nbsp;잡히길.</p>
@@ -98,7 +101,7 @@ $ sodu systemctl start zabbix-server
   <div class="article_meta">
     <p>Posted on: 2015. 06. 14. Sun</p>
     <p>Category: <a href="http://ujuc.github.io/category/develop.html">Develop</a>
- &ndash; Tags:
+ / Tags:
       <a href="http://ujuc.github.io/tag/zabbix.html">zabbix</a>,      <a href="http://ujuc.github.io/tag/centos.html">centos</a>    </p>
   </div>
 
@@ -118,7 +121,7 @@ $ sodu systemctl start zabbix-server
 
 
     <div id="ending_message">
-      <p>&copy; ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
     </div>
   </main>
 </body>

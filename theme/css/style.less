@@ -4,6 +4,7 @@
 @light-grey:  #eeeeee;
 @med-grey:  #999999;
 @dark-grey:  #4d4d4d;
+@grey20: #333333;
 @blue:  #0e94ec;
 @accent:  @blue;
 @sans: 'PT Sans', sans-serif;
@@ -104,21 +105,21 @@ main {
 
       code {
         margin: 2px;
-        padding: 0;
-        color: @black;
+        padding: 2px;
+        color: @white;
         font-size: 14px;
         font-family: @mono;
-        background: @light-grey;
+        background: @grey20;
       }
 
       pre {
         margin: 22px 2px 22px 2px;
         padding: 2px;
-        color: @black;
+        color: @white;
         border-left: 3px solid @accent;
         font-size: 14px;
         font-family: @mono;
-        background: @light-grey;
+        background: @grey20;
         line-height: 1.125em;
         overflow-x: auto;
       }
@@ -127,6 +128,16 @@ main {
         margin: 22px 2px 22px 2px;
         padding-left: 40px;
         color: @med-grey;
+        font-style: italic;
+      }
+
+      .literal {
+        font-size: 0.9em;
+        padding: 3px;
+        border: 1px solid @med-grey;
+        border-radius: 5px;
+        color: #CA1B1B;
+        background: @light-grey;
         font-style: italic;
       }
     }
