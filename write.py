@@ -5,7 +5,7 @@
 '''write
 
 Usage:
-    write new <title>
+    write new [-p | --page] <title>
     write edit <title>
     write backup <title> <date>
 
@@ -32,13 +32,14 @@ TEMPLATE = """
 
 """
 
-file_path = "content/blog"
+post_path = "content/blog"
+page_path = "content/pages"
 
-
-def make_entry(title):
+def make_entry(title, path):
     today = datetime.today()
+    # GTODO : 한국어를 영어로 변환하는 것이 필요
     slug = title.lower().strip().replace(' ', '-')
-    file_create = "{0}/{1}-{2:0>2}-{3:0>2}-{4}.rst".format(file_path,
+    file_create = "{0}/{1}-{2:0>2}-{3:0>2}-{4}.rst".format(path,
                                                            today.year,
                                                            today.month,
                                                            today.day, slug)
@@ -71,8 +72,12 @@ if __name__ == '__main__':
     print(opt)
 
     if opt['new']:
-        print("{0}, {1}".format(opt["new"], opt["<title>"]))
-        make_entry(opt["<title>"])
+        print("{0}, {1}, {2}, {3}".
+              format(opt["new"], opt["-p"], opt["--page"], opt["<title>"]))
+        if opt["-p"] or opt["--page"]:
+            make_entry(opt["<title>"], page_path)
+            print("page")
+        make_entry(opt["<title>"], post_path)
     elif opt['edit']:
         print("edit")
     elif opt["backup"]:
