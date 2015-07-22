@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-06-29T00:00:00+09:00</updated><entry><title>OpenStack 새로운 버전 매기기 변경</title><link href="http://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/" rel="alternate"></link><updated>2015-06-28T22:24:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</id><summary type="html">&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-07-22T22:36:00+09:00</updated><entry><title>Cloud Native Computing Foundation</title><link href="http://ujuc.github.io/2015/07/22/cncf-org/" rel="alternate"></link><updated>2015-07-22T22:36:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-07-22:2015/07/22/cncf-org/</id><summary type="html">&lt;p&gt;얼마 전 아시는 분께서 공유를 해주신 사이트&amp;#8230;
+구글에서 &lt;a class="reference external" href="http://kubernetes.io/"&gt;Kubernetes&lt;/a&gt; v1.0을 공개하면서 &lt;a class="reference external" href="https://cncf.io/"&gt;Cloud Native Computing Foundation&lt;/a&gt; 와 함께 Container의 생태계를 만들어나갈 거라 전함. &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;여기의 목표(?) 미션은 현대 분산 시스템 환경에 특화된 새로운 컴퓨팅 패러다임을 생성하고 진행하는 데 있다고 한다. &lt;a class="footnote-reference" href="#id6" id="id2"&gt;[2]&lt;/a&gt; (무의식적으로 번역하고&amp;nbsp;있었다.;;)&lt;/p&gt;
+&lt;p&gt;또 번역하다가&amp;nbsp;때리치웠&amp;#8230;&lt;/p&gt;
+&lt;p&gt;이번껀 구글에서는 Container를 직접 구현하는 것보다는 그것은 _OpenContainers 로 넘기고 자기들은 오케스트레이션에 더 많은 작업을 하겠다는 의도가 보이는 건 나만의&amp;nbsp;느낌&amp;#8230;&lt;/p&gt;
+&lt;p&gt;참가 업체들을 보면 항상 보던 업체들이 많이 보여서&amp;#8230; 뭐 딱히 뭐라 말하기&amp;nbsp;뭐하다는&amp;#8230;&lt;/p&gt;
+&lt;p&gt;잘 진행될까 고민되고, 언제쯤 저들이 사용한 것들에 대한 내용을 말해줄 것인지에 대한 내용을 확인 할 수 있을는지 두고두고 봐야 될 프로젝트가&amp;nbsp;늘었다.&lt;/p&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;관련&amp;nbsp;소식기사&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://techcrunch.com/2015/07/21/as-kubernetes-hits-1-0-google-donates-technology-to-newly-formed-cloud-native-computing-foundation-with-ibm-intel-twitter-and-others/?ncid=pushup"&gt;As Kubernetes Hits 1.0, Google Donates Technology To Newly Formed Cloud Native Computing&amp;nbsp;Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.linuxfoundation.org/news-media/announcements/2015/07/new-cloud-native-computing-foundation-drive-alignment-among"&gt;New Cloud Native Computing Foundation to Drive Alignment Among Container&amp;nbsp;Technologies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="docutils footnote" frame="void" id="id5" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://googlecloudplatform.blogspot.kr/2015/07/Kubernetes-V1-Released.html"&gt;http://googlecloudplatform.blogspot.kr/2015/07/Kubernetes-V1-Released.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://cncf.io/about/our-mission"&gt;https://cncf.io/about/our-mission&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</summary><category term="Google"></category><category term="Kubernetes"></category><category term="Cloud"></category><category term="Container"></category></entry><entry><title>OpenStack 새로운 버전 매기기 변경</title><link href="http://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/" rel="alternate"></link><updated>2015-06-28T22:24:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</id><summary type="html">&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
 톤 이메일 &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[1]&lt;/a&gt; 에서 보면 알 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;그리고 이것에 대한 자세한 내용은 &lt;a class="reference external" href="http://ttx.re/new-versioning.html"&gt;New OpenStack Component Versioning&lt;/a&gt; 에서 확인&amp;nbsp;하면된다.&lt;/p&gt;
 &lt;p&gt;언제부터인가 OpenStack 버전은 &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;YEAR&lt;/span&gt;.N&lt;/tt&gt; 으로 버전을 진행하고 있었고,  Kilo의 경우도
@@ -232,7 +258,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2015-06-29T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2015-07-22T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -242,7 +268,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-06-29T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-07-22T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
