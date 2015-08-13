@@ -113,18 +113,29 @@ mouseshape_
     `r <http://neovim.io/doc/user/change.html#r>`_
       `Replace <http://neovim.io/doc/user/insert.html#Replace>`_ 모드
   나머지:
-    `c <>`_
+    `c <http://neovim.io/doc/user/change.html#c>`_
       커멘드 라인에서 추가
     ci
-      커멘드 라인에서 삽입(`inserting <>`_)
+      커멘드 라인에서 삽입(`inserting <http://neovim.io/doc/user/insert.html#inserting>`_)
     cr
-      커멘드 라인에서 변경(`replacing <>`_)
-    `m <>`_
+      커멘드 라인에서 변경(`replacing <http://neovim.io/doc/user/change.html#replacing>`_)
+    `m <http://neovim.io/doc/user/motion.html#m>`_
       'HIT ENTER'나 'More' 프롬프트에서
     ml
       idem, 마지막 줄에 커서일 경우
-    `e <>`_
-      어떤 모드든, 포인터에 마지막 `window <>`_
+    `e <http://neovim.io/doc/user/motion.html#e>`_
+      어떤 모드든, 포인터에 마지막 `window <http://neovim.io/doc/user/windows.html#window>`_
+    `s <>`_
+      어떤 모드든, 상태 라인 위에 포인터
+    sd
+      어떤 모드든, 상태 라인으로 드래그
+    vs
+      어떤 모드든, 수직 분할 라인에 포인터
+    vd
+      어떤 모드든, 수직 분할 라인으로 드래그
+    a
+      어디든...
+
 
 mousetime_
 ~~~~~~~~~~~~
