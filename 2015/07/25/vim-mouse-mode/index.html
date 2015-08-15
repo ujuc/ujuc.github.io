@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="http://ujuc.github.io/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+
+  <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... Atom" />
+  <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+<meta name="keywords" content="vim, vi, vimrc, mouse, 기본 설정">
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+&ndash; Vim mouse&nbsp;mode  </title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-58634276-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="http://ujuc.github.io">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
+      </a>
+      <h2><a href="http://ujuc.github.io">ujuc</a></h2>
+      <p></p>
+      <ul>
+        <li><a href="/">blog</a></li>
+        <li><a href="/tags.html">Tags</a></li>
+        <li><a href="/categories.html">Categories</a></li>
+        <li><a href="mailto:ujuc@ujuc.kr">Email</a></li>
+        <li><a href="https://github.com/ujuc">Github</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="http://ujuc.github.io">Index</a> &brvbar; <a href="http://ujuc.github.io/archives.html">Archives</a>
+      &brvbar; <a href="http://ujuc.github.io/feeds/all.atom.xml">Atom</a>
+      &brvbar; <a href="http://ujuc.github.io/feeds/rss.xml">RSS</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://ujuc.github.io/2015/07/25/vim-mouse-mode/">Vim mouse&nbsp;mode</a></h3>
+  </div>
+  <div class="article_text">
+    <p>나도 <a class="reference external" href="http://github.com/ujuc/dotrc">vimrc</a> 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&nbsp;않았다.</p>
+<p>그런데 얼마전부터 <a class="reference external" href="http://neovim.io">NeoVim</a> 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지&#8230; 안그러면 또 안찾아볼 가능성이&nbsp;높으니&#8230;</p>
+<p>마우스와 관련된 옵션은 <tt class="docutils literal">mouse_</tt>, <tt class="docutils literal">mousefocus_</tt>, <tt class="docutils literal">moushide_</tt>, <tt class="docutils literal">mousemodel_</tt>, <tt class="docutils literal">mouseshape_</tt>, <tt class="docutils literal">mousetime_</tt></p>
+<div class="section" id="id1">
+<h2>옵션 설명(이라쓰고&nbsp;번역&#8230;)</h2>
+<div class="section" id="mouse">
+<h3><a class="reference external" href="http://neovim.io/doc/user/options.html#'mouse'">mouse</a></h3>
+<p>string (기본값&nbsp;&#8220;a&#8221;)</p>
+<p>마우스를 사용할 수 있도록 설정한다. 터미널에서는 100%. GUI에서 작동하는 것에 대해서 알고 싶으면, | <a class="reference external" href="http://neovim.io/doc/user/gui.html#gui-mouse">gui-mouse</a> | 를&nbsp;확인하도록.</p>
+<p>모드에서 사용하려면 다음 옵션을&nbsp;달아준다:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://neovim.io/doc/user/pattern.html#n">n</a>: <a class="reference external" href="http://neovim.io/doc/user/intro.html#Normal">Normal</a>&nbsp;모드</li>
+<li><a class="reference external" href="http://neovim.io/doc/user/visual.html#v">v</a>: <a class="reference external" href="http://neovim.io/doc/user/visual.html#Visual">Visual</a>&nbsp;모드</li>
+<li><a class="reference external" href="http://neovim.io/doc/user/insert.html#i">i</a>: <a class="reference external" href="http://neovim.io/doc/user/insert.html#Insert">Insert</a>&nbsp;모등</li>
+<li><a class="reference external" href="http://neovim.io/doc/user/change.html#c">c</a>: <a class="reference external" href="http://neovim.io/doc/user/cmdline.html#Command-line">Command-line</a>&nbsp;모드</li>
+<li><a class="reference external" href="http://neovim.io/doc/user/motion.html#h">h</a>: 도움말 파일에서 수정할때, 모든&nbsp;모드</li>
+<li>a: 모든&nbsp;모드</li>
+<li>r: | <a class="reference external" href="http://neovim.io/doc/user/message.html#hit-enter">hint-enter</a> | 와 | <a class="reference external" href="http://neovim.io/doc/user/message.html#more-prompt">more-prompt</a> |&nbsp;프롬프트에서</li>
+</ul>
+<p>일반적으로 모든 모드에서 사용하길 원한다면 <tt class="docutils literal">:set mouse=a</tt> 로 구성해두면 된다.
+마우스 모드가 제대로 작동하지 않을땐, <a class="reference external" href="http://neovim.io/doc/user/gui.html#GUI"><span class="caps">GUI</span></a> modeless 섹션에서 마우스를 사용하고 있어서 빠진게 아닌지 확인을&#8230; 아마 텍스트 커서도&nbsp;안움직인다고&#8230;</p>
+<p><a class="reference external" href="http://neovim.io/doc/user/term.html#mouse-using">mouse-using</a> , <a class="reference external" href="http://neovim.io/doc/user/options.html#'clipboard'">clipboard</a> 를&nbsp;보세요.</p>
+<p>노트 : X-server로 접근한 터미널에서 마우스를 사용할 땐, 복사, 붙여넣기를 사용할땐 &#8220;* <a class="reference external" href="http://neovim.io/doc/user/sponsor.html#register">register</a> 를 사용하게 됩니다. 마우스 버튼을 <tt class="docutils literal">xterm</tt>  에서 사용하려면, <a class="reference external" href="http://neovim.io/doc/user/intro.html#shift">shift</a> 를 누르고 사용하면 됩니다. 자세한건 <a class="reference external" href="http://neovim.io/doc/user/options.html#'clipboard'">clipboard</a> 옵션에서&nbsp;확인하세요.</p>
+</div>
+<div class="section" id="mousefocus">
+<h3><a class="reference external" href="http://neovim.io/doc/user/options.html#'mousefocus'">mousefocus</a></h3>
+<p><span class="quo">&#8216;</span>mousef&#8217;  boolean (기본은 off) - {<span class="caps">GUI</span> 에서만&nbsp;작동}</p>
+<p><a class="reference external" href="http://neovim.io/doc/user/windows.html#window">window</a> 에서 마우스 포인터를 자동으로 활성화 시킬 수 있습니다. 윈도우 레이아웃이나 다른 방법으로 윈도우 초점을 변경(<a class="reference external" href="http://neovim.io/doc/user/change.html#changing">changing</a>) 하려한다면, 마우스 포인터는 윈도우에서 이동하게된다는데&#8230;
+딱히 GUI로 할일은&nbsp;없음&#8230;</p>
+</div>
+<div class="section" id="mousehide">
+<h3><a class="reference external" href="http://neovim.io/doc/user/options.html#'mousehide'">mousehide</a></h3>
+<p><span class="quo">&#8216;</span>mh&#8217;  boolean (기본은 on) - {GUI에서만&nbsp;작동}</p>
+<p>입력할때 마우스 포인터를 감추고, 마우스가 움직이면 그때사&nbsp;보여줌.</p>
+</div>
+<div class="section" id="mousemodel">
+<h3><a class="reference external" href="http://neovim.io/doc/user/options.html#'mousemodel'">mousemodel</a></h3>
+<p><span class="quo">&#8216;</span>mousem&#8217;  string (기본은 &#8220;extend&#8221;, <a class="reference external" href="http://neovim.io/doc/user/os_win32.html#Win32">Win32</a> 에서는&nbsp;&#8220;popup&#8221;)</p>
+<p>마우스를 사용하는 모델을 설정한다. 마우스 오른쪽 키를 눌렸을때 뭘할지에 대해서 설정하는&nbsp;것.</p>
+<ul class="simple">
+<li>extend: 마우스 오른쪽 키를 누르면 섹션이 확장됩니다. <tt class="docutils literal">xterm</tt> 에서의 내용과 동일하게&nbsp;동작함.</li>
+<li>popup: 마우스 오른쪽 키를 누르면 팝업 메뉴가 뜸. 마우스 왼쪽키를 누르고 있으면, 섹션을 확장 합니다. <span class="caps">MS</span> Windows의 작업과&nbsp;동일함.</li>
+<li>popup_setpos: &#8220;popup&#8221;과 유사. 커서가 마우스 클릭된 곳으로 움직임. 자세한건 한번 읽어보는&nbsp;걸로.</li>
+</ul>
+<p>설정별 마우스&nbsp;동작</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="32%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">mouse</th>
+<th class="head">extend</th>
+<th class="head">popup(_setpost)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>왼쪽 클릭</td>
+<td>커서 위치</td>
+<td>커서 위치</td>
+</tr>
+<tr><td>왼쪽 끌기</td>
+<td>섹션 시작</td>
+<td>섹션 시작</td>
+</tr>
+<tr><td>시프트 - 왼쪽</td>
+<td><a class="reference external" href="http://neovim.io/doc/user/motion.html#word">word</a> 검색</td>
+<td>섹션 확장</td>
+</tr>
+<tr><td>오른쪽 클릭</td>
+<td>섹션 확장</td>
+<td>popup 메뉴 (커서 위치)</td>
+</tr>
+<tr><td>오른쪽 끌기</td>
+<td>섹션 확장</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>가운데 키</td>
+<td>붙이기</td>
+<td>붙이기</td>
+</tr>
+</tbody>
+</table>
+<p><span class="dquo">&#8220;</span>popup&#8221; 모델에서는 pop-up 메뉴를 구성할 수 있음. | <a class="reference external" href="http://neovim.io/doc/user/gui.html#popup-menu">popup-menu</a> | 에서 확인할&nbsp;것.</p>
+<p>마우스 버튼 맵핑을 바꿀려면 | <a class="reference external" href="http://neovim.io/doc/user/gui.html#gui-mouse-mapping">gui-mouse-mapping</a> | 확인. modeless 섹션에서는 작동&nbsp;안함.</p>
+<p><span class="quo">&#8216;</span><a class="reference external" href="http://neovim.io/doc/user/options.html#'mousemodel'">mousemodel</a>&#8216; 옵션은 <a class="reference external" href="http://neovim.io/doc/user/gui.html#:behave">:behave</a> 명령어로 설정할 수&nbsp;있음.</p>
+</div>
+<div class="section" id="mouseshape">
+<h3><a class="reference external" href="http://neovim.io/doc/user/options.html#'mouseshape'">mouseshape</a></h3>
+<p><span class="quo">&#8216;</span>mouses&#8217;  string (기본은 &#8220;i:beam,r:beam,s:updown,sd:corss,m:no,ml:up-arrow,v:rightup-arrow&#8221;) - {| <a class="reference external" href="http://neovim.io/doc/user/various.html#+mouseshape">+mouseshape</a> | 기능이 켜진채로 컴파일이 되었을 경우, 사용&nbsp;가능}</p>
+<p>다른 모드에서 마우스 포인터가 작동하는 것에대한 것들을 VIM에게 알려주는&nbsp;옵션(?).</p>
+<dl class="docutils">
+<dt>적용할 수 있는 모드&nbsp;목록:</dt>
+<dd><dl class="first last docutils">
+<dt>일반&nbsp;윈도우:</dt>
+<dd><dl class="first last docutils">
+<dt><a class="reference external" href="http://neovim.io/doc/user/pattern.html#n">n</a></dt>
+<dd><a class="reference external" href="http://neovim.io/doc/user/intro.html#Normal">Normal</a>&nbsp;모드</dd>
+<dt><a class="reference external" href="http://neovim.io/doc/user/visual.html#v">v</a></dt>
+<dd><a class="reference external" href="http://neovim.io/doc/user/visual.html#Visual">Visual</a>&nbsp;모드</dd>
+<dt>ve</dt>
+<dd><span class="quo">&#8216;</span><a class="reference external" href="http://neovim.io/doc/user/options.html#'selection'">selection</a>&#8216; &#8220;<a class="reference external" href="http://neovim.io/doc/user/motion.html#exclusive">exclusive</a>&#8220;가 포함된 <a class="reference external" href="http://neovim.io/doc/user/visual.html#Visual">Visual</a> 모드 (특정짓지 않은 거라면, <a class="reference external" href="http://neovim.io/doc/user/motion.html#as">as</a> &#8216;<a class="reference external" href="http://neovim.io/doc/user/visual.html#v">v</a>&#8216;와&nbsp;동일)</dd>
+<dt><a class="reference external" href="http://neovim.io/doc/user/insert.html#o">o</a></dt>
+<dd><a class="reference external" href="http://neovim.io/doc/user/intro.html#Operator-pending">Operator-pending</a>&nbsp;모드</dd>
+<dt><a class="reference external" href="http://neovim.io/doc/user/insert.html#i">i</a></dt>
+<dd><a class="reference external" href="http://neovim.io/doc/user/insert.html#Insert">Insert</a>&nbsp;모드</dd>
+<dt><a class="reference external" href="http://neovim.io/doc/user/change.html#r">r</a></dt>
+<dd><a class="reference external" href="http://neovim.io/doc/user/insert.html#Replace">Replace</a>&nbsp;모드</dd>
+</dl>
+</dd>
+<dt>나머지:</dt>
+<dd><dl class="first last docutils">
+<dt><a class="reference external" href="http://neovim.io/doc/user/change.html#c">c</a></dt>
+<dd>커멘드 라인에서&nbsp;추가</dd>
+<dt>ci</dt>
+<dd>커멘드 라인에서 삽입(<a class="reference external" href="http://neovim.io/doc/user/insert.html#inserting">inserting</a>)</dd>
+<dt>cr</dt>
+<dd>커멘드 라인에서 변경(<a class="reference external" href="http://neovim.io/doc/user/change.html#replacing">replacing</a>)</dd>
+<dt><a class="reference external" href="http://neovim.io/doc/user/motion.html#m">m</a></dt>
+<dd><span class="quo">&#8216;</span><span class="caps">HIT</span> <span class="caps">ENTER</span>&#8217;나 &#8216;More&#8217;&nbsp;프롬프트에서</dd>
+<dt>ml</dt>
+<dd>idem, 마지막 줄에 커서일&nbsp;경우</dd>
+<dt><a class="reference external" href="http://neovim.io/doc/user/motion.html#e">e</a></dt>
+<dd>어떤 모드든, 포인터에 마지막 <a class="reference external" href="http://neovim.io/doc/user/windows.html#window">window</a></dd>
+<dt><a class="reference external" href="http://neovim.io/doc/user/change.html#s">s</a></dt>
+<dd>어떤 모드든, 상태 라인 위에&nbsp;포인터</dd>
+<dt>sd</dt>
+<dd>어떤 모드든, 상태 라인으로&nbsp;드래그</dd>
+<dt>vs</dt>
+<dd>어떤 모드든, 수직 분할 라인에&nbsp;포인터</dd>
+<dt>vd</dt>
+<dd>어떤 모드든, 수직 분할 라인으로&nbsp;드래그</dd>
+<dt>a</dt>
+<dd>어디든&#8230;</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>마우스 모양(shape)는 다음 모양으로&nbsp;보여짐</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="18%" />
+<col width="74%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">avail</th>
+<th class="head">이름</th>
+<th class="head">뭐냐면&#8230;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a> <a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>arrow</td>
+<td>기본(<a class="reference external" href="http://neovim.io/doc/user/intro.html#Normal">Normal</a>) 마우스 포인터</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a> <a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>blank</td>
+<td>모든 곳에서 포인터가 아닌경우 (사용시 주의!)</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a> <a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>beam</td>
+<td>I-빔</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a> <a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>updown</td>
+<td>상하 크기 조절 화살표</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a> <a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>leftright</td>
+<td>좌우 크기 조절 화살표</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a> <a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>busy</td>
+<td>시스템에서 사용하는 busy 포인터</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a> <a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>no</td>
+<td>시스템에서 사용하는 &#8216;no input&#8217; 포인터</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>udsizing</td>
+<td>상하 크기 재조절을 가르킴</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>lrsizing</td>
+<td>좌우 크기 재조절를 가르킴</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>crosshair</td>
+<td>큰 &#8216;+&#8217;</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>hand1</td>
+<td>검은색 손</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>hand2</td>
+<td>흰색 손</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>pencil</td>
+<td>뭘 쓰고 싶을때</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>question</td>
+<td>큰 &#8216;?&#8217;</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>rightup-arrow</td>
+<td>오른쪽 위를 가르키는 화살표</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a> <a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>up-arrow</td>
+<td>위를 가르키는 화살표</td>
+</tr>
+<tr><td><a class="reference external" href="http://neovim.io/doc/user/change.html#x">x</a></td>
+<td>&lt;number&gt;</td>
+<td>모든 X11 포인트 숫자 (<tt class="docutils literal">X11/cursorfont.h</tt> 에서 확인 가능)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="dquo">&#8220;</span>avail&#8221; 칼럼의 내용에서 &#8216;<a class="reference external" href="http://neovim.io/doc/user/motion.html#w">w</a>&#8216; 의 경우 <a class="reference external" href="http://neovim.io/doc/user/os_win32.html#Win32">Win32</a> 에서 사용하는 것이고, <cite>x_</cite> 는 X11에서 사용하는 것에 대한 것임.
+Any modes not specified or shapes not available use the normal mouse pointer. - 영어의 짧음으로 뭔말인지&nbsp;모르겠다.</p>
+<p>예로 <tt class="docutils literal">:set mouseshape=s:udsizing,m:mo</tt> 요로케 작성가능. 이렇게 해놓으면, (클릭이후 마우스가 이상태에서 효과가 없으면,)상태 바에 마오스를 올리면 크기 조절 화살표로 변경되고, 화면에서 <a class="reference external" href="http://neovim.io/doc/user/message.html#hit-enter">hit-enter</a> 프롬프트일때 no input을&nbsp;가르키게됩니다.</p>
+</div>
+<div class="section" id="mousetime">
+<h3><a class="reference external" href="http://neovim.io/doc/user/options.html#'mousetime'">mousetime</a></h3>
+<p><span class="quo">&#8216;</span>mouset&#8217;  number (기본&nbsp;500)</p>
+<p><span class="caps">GUI</span>, <span class="caps">MS</span>-<span class="caps">DOS</span>, Win32, Unix의 <tt class="docutils literal">xterm</tt> 에서만 사용 가능. 다중 클릭으로 인식할 수 있는 두 번째 클릭에 대한 msec의 최대 값을&nbsp;정의함.</p>
+</div>
+</div>
+
+  </div>
+  <div class="article_meta">
+    <p>Posted on: 2015. 07. 25. Sat</p>
+    <p>Category: <a href="http://ujuc.github.io/category/develop.html">Develop</a>
+ / Tags:
+      <a href="http://ujuc.github.io/tag/vim.html">vim</a>,      <a href="http://ujuc.github.io/tag/vi.html">vi</a>,      <a href="http://ujuc.github.io/tag/vimrc.html">vimrc</a>,      <a href="http://ujuc.github.io/tag/mouse.html">mouse</a>,      <a href="http://ujuc.github.io/tag/gibon-seoljeong.html">기본 설정</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2015/07/25/vim-mouse-mode/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://ujucgithub.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+
+    <div id="ending_message">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>
