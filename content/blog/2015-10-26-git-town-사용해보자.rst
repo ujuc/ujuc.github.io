@@ -21,10 +21,9 @@ git-town 사용해보자
 
 * Development Workflow
 
-  - `
-    git hack <https://github.com/Originate/git-town/blob/master/documentation/commands/git-hack.md>`_ : 중심 가지에서 새로운 기능 가지를 때는데 사용함.
+  - `git hack <https://github.com/Originate/git-town/blob/master/documentation/commands/git-hack.md>`_ : 중심 가지에서 새로운 기능 가지를 때는데 사용함.
   - `git sync <https://github.com/Originate/git-town/blob/master/documentation/commands/git-sync.md>`_ : 원본 저장소의 변화분들을 현재 가지에 업데이트.
-  - ]`git new-pull-request <https://github.com/Originate/git-town/blob/master/documentation/commands/git-new-pull-request.md>`_ : 새로운 풀리퀘 생성.
+  - `git new-pull-request <https://github.com/Originate/git-town/blob/master/documentation/commands/git-new-pull-request.md>`_ : 새로운 풀리퀘 생성.
   - `git ship <https://github.com/Originate/git-town/blob/master/documentation/commands/git-ship.md>`_ : 기능 가지를 중심 가지로 넣고 꺽기.
 
 
