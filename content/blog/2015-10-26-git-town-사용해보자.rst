@@ -1,0 +1,44 @@
+git-town 사용해보자
+############################
+
+:date: 2015-10-26 01:11
+:category: Develop
+:tags: git, git-town, git plugins
+:slug: git-town-사용해보자
+:summary: Git 플러그인중 하나인 git-town에 대해서 알아보자.
+
+아무런 생각없이 메일 온것을 확인중... 발견한 `git-town`_...
+
+솔직히 `git-flow`_ 와 다른게 먼가 있을 것같아서 사용을 해볼려고 깔아뒀고,
+지금 작성하는 글도 브런치를 ``git town`` 명령어중 하나를 사용해서 브런치를
+딴 후 작성중이다.
+
+.. _git-town: https://github.com/Originate/git-town
+.. _git-flow: http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html
+
+
+명령어 9가지에 대해서 좀 알아보자. 사용법도 같이 좀 써보게...
+
+* Development Workflow
+
+  - `
+    git hack <https://github.com/Originate/git-town/blob/master/documentation/commands/git-hack.md>`_ : 중심 가지에서 새로운 기능 가지를 때는데 사용함.
+  - `git sync <https://github.com/Originate/git-town/blob/master/documentation/commands/git-sync.md>`_ : 원본 저장소의 변화분들을 현재 가지에 업데이트.
+  - ]`git new-pull-request <https://github.com/Originate/git-town/blob/master/documentation/commands/git-new-pull-request.md>`_ : 새로운 풀리퀘 생성.
+  - `git ship <https://github.com/Originate/git-town/blob/master/documentation/commands/git-ship.md>`_ : 기능 가지를 중심 가지로 넣고 꺽기.
+
+
+
+* Repository Maintenance
+
+  - `git kill <https://github.com/Originate/git-town/blob/master/documentation/commands/git-kill.md>`_ : 새로운 가지 꺽기
+  - `git prune-branches <https://github.com/Originate/git-town/blob/master/documentation/commands/git-prune-branches.md>`_ : 합쳐진 가지 꺽기
+  - `git rename-branch <https://github.com/Originate/git-town/blob/master/documentation/commands/git-rename-branch.md>`_ : 이름 변경
+  - `git repo <https://github.com/Originate/git-town/blob/master/documentation/commands/git-repo.md>`_ : 저장소 홈페이지로
+
+* Configuration and Help
+
+  - `git town <https://github.com/Originate/git-town/blob/master/documentation/commands/git-town.md>`_ : 도움말 보기, 구성 확인 및 변경.
+
+
+확인용이자 기억용으로 작성한건데... 옵션이 많다... 그냥 필요할때만 봐야지..
