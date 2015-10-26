@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="http://ujuc.github.io/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+
+  <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... Atom" />
+  <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+<meta name="keywords" content="git, git-town, git plugins">
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+&ndash; git-town&nbsp;사용해보자  </title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-58634276-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="http://ujuc.github.io">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
+      </a>
+      <h2><a href="http://ujuc.github.io">ujuc</a></h2>
+      <p></p>
+      <ul>
+        <li><a href="/">blog</a></li>
+        <li><a href="/tags.html">Tags</a></li>
+        <li><a href="/categories.html">Categories</a></li>
+        <li><a href="mailto:ujuc@ujuc.kr">Email</a></li>
+        <li><a href="https://github.com/ujuc">Github</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="http://ujuc.github.io">Index</a> &brvbar; <a href="http://ujuc.github.io/archives.html">Archives</a>
+      &brvbar; <a href="http://ujuc.github.io/feeds/all.atom.xml">Atom</a>
+      &brvbar; <a href="http://ujuc.github.io/feeds/rss.xml">RSS</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://ujuc.github.io/2015/10/26/git-town-사용해보자/">git-town&nbsp;사용해보자</a></h3>
+  </div>
+  <div class="article_text">
+    <p>아무런 생각없이 메일 온것을 확인중&#8230; 발견한 <a class="reference external" href="https://github.com/Originate/git-town">git-town</a>&#8230;</p>
+<p>솔직히 <a class="reference external" href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html">git-flow</a> 와 다른게 먼가 있을 것같아서 사용을 해볼려고 깔아뒀고,
+지금 작성하는 글도 브런치를 <tt class="docutils literal">git town</tt> 명령어중 하나를 사용해서 브런치를
+딴 후&nbsp;작성중이다.</p>
+<p>명령어 9가지에 대해서 좀 알아보자. 사용법도 같이 좀&nbsp;써보게&#8230;</p>
+<ul class="simple">
+<li>Development Workflow<ul>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-hack.md">git hack</a> : 중심 가지에서 새로운 기능 가지를 때는데&nbsp;사용함.</li>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-sync.md">git sync</a> : 원본 저장소의 변화분들을 현재 가지에&nbsp;업데이트.</li>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-new-pull-request.md">git new-pull-request</a> : 새로운 풀리퀘&nbsp;생성.</li>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-ship.md">git ship</a> : 기능 가지를 중심 가지로 넣고&nbsp;꺽기.</li>
+</ul>
+</li>
+<li>Repository Maintenance<ul>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-kill.md">git kill</a> : 새로운 가지&nbsp;꺽기</li>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-prune-branches.md">git prune-branches</a> : 합쳐진 가지&nbsp;꺽기</li>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-rename-branch.md">git rename-branch</a> : 이름&nbsp;변경</li>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-repo.md">git repo</a> : 저장소&nbsp;홈페이지로</li>
+</ul>
+</li>
+<li>Configuration and Help<ul>
+<li><a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-town.md">git town</a> : 도움말 보기, 구성 확인 및&nbsp;변경.</li>
+</ul>
+</li>
+</ul>
+<p>확인용이자 기억용으로 작성한건데&#8230; 옵션이 많다&#8230; 그냥 필요할때만&nbsp;봐야지..</p>
+<p>각 명령어별로 어떻게 돌아가는지에 대해서는 <a class="reference external" href="https://github.com/Originate/git-town/tree/master/features">features</a>
+폴더로 확인하는 편이 좋다. BDD로 테스트를 진행해서 해당 기능들이 어떻게 진행하고
+있는지를 그나마 보기 쉽게 되어있기&nbsp;때문이다.</p>
+<p>솔직히 내부 기능들이 Bash로 작성되어있어서 찾아다니기&nbsp;힘들다&#8230;</p>
+
+  </div>
+  <div class="article_meta">
+    <p>Posted on: 2015. 10. 26. Mon</p>
+    <p>Category: <a href="http://ujuc.github.io/category/develop.html">Develop</a>
+ / Tags:
+      <a href="http://ujuc.github.io/tag/git.html">git</a>,      <a href="http://ujuc.github.io/tag/git-town.html">git-town</a>,      <a href="http://ujuc.github.io/tag/git-plugins.html">git plugins</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2015/10/26/git-town-사용해보자/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://ujucgithub.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+
+    <div id="ending_message">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>

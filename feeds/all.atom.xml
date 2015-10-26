@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-08-15T16:00:00+09:00</updated><entry><title>Vim mouse mode</title><link href="http://ujuc.github.io/2015/07/25/vim-mouse-mode/" rel="alternate"></link><updated>2015-08-15T16:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-07-25:2015/07/25/vim-mouse-mode/</id><summary type="html">&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2015-10-27T00:00:00+09:00</updated><entry><title>git-town 사용해보자</title><link href="http://ujuc.github.io/2015/10/26/git-town-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/" rel="alternate"></link><updated>2015-10-26T01:11:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-10-26:2015/10/26/git-town-사용해보자/</id><summary type="html">&lt;p&gt;아무런 생각없이 메일 온것을 확인중&amp;#8230; 발견한 &lt;a class="reference external" href="https://github.com/Originate/git-town"&gt;git-town&lt;/a&gt;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;솔직히 &lt;a class="reference external" href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&lt;/a&gt; 와 다른게 먼가 있을 것같아서 사용을 해볼려고 깔아뒀고,
+지금 작성하는 글도 브런치를 &lt;tt class="docutils literal"&gt;git town&lt;/tt&gt; 명령어중 하나를 사용해서 브런치를
+딴 후&amp;nbsp;작성중이다.&lt;/p&gt;
+&lt;p&gt;명령어 9가지에 대해서 좀 알아보자. 사용법도 같이 좀&amp;nbsp;써보게&amp;#8230;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Development Workflow&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-hack.md"&gt;git hack&lt;/a&gt; : 중심 가지에서 새로운 기능 가지를 때는데&amp;nbsp;사용함.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-sync.md"&gt;git sync&lt;/a&gt; : 원본 저장소의 변화분들을 현재 가지에&amp;nbsp;업데이트.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-new-pull-request.md"&gt;git new-pull-request&lt;/a&gt; : 새로운 풀리퀘&amp;nbsp;생성.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-ship.md"&gt;git ship&lt;/a&gt; : 기능 가지를 중심 가지로 넣고&amp;nbsp;꺽기.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Repository Maintenance&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-kill.md"&gt;git kill&lt;/a&gt; : 새로운 가지&amp;nbsp;꺽기&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-prune-branches.md"&gt;git prune-branches&lt;/a&gt; : 합쳐진 가지&amp;nbsp;꺽기&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-rename-branch.md"&gt;git rename-branch&lt;/a&gt; : 이름&amp;nbsp;변경&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-repo.md"&gt;git repo&lt;/a&gt; : 저장소&amp;nbsp;홈페이지로&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configuration and Help&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-town.md"&gt;git town&lt;/a&gt; : 도움말 보기, 구성 확인 및&amp;nbsp;변경.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;확인용이자 기억용으로 작성한건데&amp;#8230; 옵션이 많다&amp;#8230; 그냥 필요할때만&amp;nbsp;봐야지..&lt;/p&gt;
+&lt;p&gt;각 명령어별로 어떻게 돌아가는지에 대해서는 &lt;a class="reference external" href="https://github.com/Originate/git-town/tree/master/features"&gt;features&lt;/a&gt;
+폴더로 확인하는 편이 좋다. BDD로 테스트를 진행해서 해당 기능들이 어떻게 진행하고
+있는지를 그나마 보기 쉽게 되어있기&amp;nbsp;때문이다.&lt;/p&gt;
+&lt;p&gt;솔직히 내부 기능들이 Bash로 작성되어있어서 찾아다니기&amp;nbsp;힘들다&amp;#8230;&lt;/p&gt;
+</summary><category term="git"></category><category term="git-town"></category><category term="git plugins"></category></entry><entry><title>Vim mouse mode</title><link href="http://ujuc.github.io/2015/07/25/vim-mouse-mode/" rel="alternate"></link><updated>2015-08-15T16:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-07-25:2015/07/25/vim-mouse-mode/</id><summary type="html">&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
 &lt;p&gt;그런데 얼마전부터 &lt;a class="reference external" href="http://neovim.io"&gt;NeoVim&lt;/a&gt; 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지&amp;#8230; 안그러면 또 안찾아볼 가능성이&amp;nbsp;높으니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;마우스와 관련된 옵션은 &lt;tt class="docutils literal"&gt;mouse_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousefocus_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;moushide_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousemodel_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mouseshape_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousetime_&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
@@ -492,7 +522,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2015-08-15T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2015-10-27T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -502,7 +532,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-08-15T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2015-10-27T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이

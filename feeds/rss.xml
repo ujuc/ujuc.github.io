@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 15 Aug 2015 16:00:00 +0900</lastBuildDate><item><title>Vim mouse mode</title><link>http://ujuc.github.io/2015/07/25/vim-mouse-mode/</link><description>&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0900</lastBuildDate><item><title>git-town 사용해보자</title><link>http://ujuc.github.io/2015/10/26/git-town-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;아무런 생각없이 메일 온것을 확인중&amp;#8230; 발견한 &lt;a class="reference external" href="https://github.com/Originate/git-town"&gt;git-town&lt;/a&gt;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;솔직히 &lt;a class="reference external" href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&lt;/a&gt; 와 다른게 먼가 있을 것같아서 사용을 해볼려고 깔아뒀고,
+지금 작성하는 글도 브런치를 &lt;tt class="docutils literal"&gt;git town&lt;/tt&gt; 명령어중 하나를 사용해서 브런치를
+딴 후&amp;nbsp;작성중이다.&lt;/p&gt;
+&lt;p&gt;명령어 9가지에 대해서 좀 알아보자. 사용법도 같이 좀&amp;nbsp;써보게&amp;#8230;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Development Workflow&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-hack.md"&gt;git hack&lt;/a&gt; : 중심 가지에서 새로운 기능 가지를 때는데&amp;nbsp;사용함.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-sync.md"&gt;git sync&lt;/a&gt; : 원본 저장소의 변화분들을 현재 가지에&amp;nbsp;업데이트.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-new-pull-request.md"&gt;git new-pull-request&lt;/a&gt; : 새로운 풀리퀘&amp;nbsp;생성.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-ship.md"&gt;git ship&lt;/a&gt; : 기능 가지를 중심 가지로 넣고&amp;nbsp;꺽기.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Repository Maintenance&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-kill.md"&gt;git kill&lt;/a&gt; : 새로운 가지&amp;nbsp;꺽기&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-prune-branches.md"&gt;git prune-branches&lt;/a&gt; : 합쳐진 가지&amp;nbsp;꺽기&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-rename-branch.md"&gt;git rename-branch&lt;/a&gt; : 이름&amp;nbsp;변경&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-repo.md"&gt;git repo&lt;/a&gt; : 저장소&amp;nbsp;홈페이지로&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configuration and Help&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Originate/git-town/blob/master/documentation/commands/git-town.md"&gt;git town&lt;/a&gt; : 도움말 보기, 구성 확인 및&amp;nbsp;변경.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;확인용이자 기억용으로 작성한건데&amp;#8230; 옵션이 많다&amp;#8230; 그냥 필요할때만&amp;nbsp;봐야지..&lt;/p&gt;
+&lt;p&gt;각 명령어별로 어떻게 돌아가는지에 대해서는 &lt;a class="reference external" href="https://github.com/Originate/git-town/tree/master/features"&gt;features&lt;/a&gt;
+폴더로 확인하는 편이 좋다. BDD로 테스트를 진행해서 해당 기능들이 어떻게 진행하고
+있는지를 그나마 보기 쉽게 되어있기&amp;nbsp;때문이다.&lt;/p&gt;
+&lt;p&gt;솔직히 내부 기능들이 Bash로 작성되어있어서 찾아다니기&amp;nbsp;힘들다&amp;#8230;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 26 Oct 2015 01:11:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-10-26:2015/10/26/git-town-사용해보자/</guid><category>git</category><category>git-town</category><category>git plugins</category></item><item><title>Vim mouse mode</title><link>http://ujuc.github.io/2015/07/25/vim-mouse-mode/</link><description>&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
 &lt;p&gt;그런데 얼마전부터 &lt;a class="reference external" href="http://neovim.io"&gt;NeoVim&lt;/a&gt; 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지&amp;#8230; 안그러면 또 안찾아볼 가능성이&amp;nbsp;높으니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;마우스와 관련된 옵션은 &lt;tt class="docutils literal"&gt;mouse_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousefocus_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;moushide_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousemodel_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mouseshape_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousetime_&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
@@ -502,7 +532,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 15 Aug 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>OpenStack</category><category>Cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 27 Oct 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>OpenStack</category><category>Cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
@@ -518,7 +548,7 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워
 손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 15 Aug 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 27 Oct 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
