@@ -1,5 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0900</lastBuildDate><item><title>git-town 사용해보자</title><link>http://ujuc.github.io/2015/10/26/git-town-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;아무런 생각없이 메일 온것을 확인중&amp;#8230; 발견한 &lt;a class="reference external" href="https://github.com/Originate/git-town"&gt;git-town&lt;/a&gt;&amp;#8230;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 16 Dec 2015 08:50:00 +0900</lastBuildDate><item><title>Git flow, GitHub flow, GitLab flow</title><link>http://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/</link><description>&lt;p&gt;회사에서  &lt;code&gt;git&lt;/code&gt;을 가지고서 버전관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. 
+물론 새로운 프로젝트를 진행하면서 어떤 방법으로 진행하는 것이 맞는 것인지도 필요하기도 했고, 그러다가 &lt;a href=""&gt;이상한 모임 Slack&lt;/a&gt;에서 관련 이야기가 나오면서 커밋을 하기위한 방법론 중 하나인 &lt;code&gt;git-flow&lt;/code&gt;의 종류가 3가지나 된다는 것을 보고 이놈들의 다른 점이 무엇인지 어떤 방법에서 편한 것인지에 대한 내용을 확인하고&amp;nbsp;싶어졌다.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="https://github.com/nvie/gitflow"&gt;Git&amp;nbsp;Flow&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;Vincent Driessen이 말한 branching model&lt;/a&gt;를 구현한 Git 확장 모듈이다. - &lt;a href="https://github.com/nvie/gitflow"&gt;nvie/gitflw&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;기본 브런치는 5가지를 이야기한다. &lt;code&gt;feature &amp;gt; develop &amp;gt; release &amp;gt; hotfix &amp;gt; master&lt;/code&gt; 브런치가 존재하며, 머지 순서는 앞에서 뒤로 진행된다. &lt;code&gt;release&lt;/code&gt; 브런치와 &lt;code&gt;hotfix&lt;/code&gt; 브런치의 경우, &lt;code&gt;develop&lt;/code&gt; 브런치의 오른쪽에 존재하기에 모두 &lt;code&gt;develop&lt;/code&gt; 브런치도 머지를 하도록 구성이&amp;nbsp;되어있다.&lt;/p&gt;
+&lt;p&gt;Vincent Driessen은 관련하여 스크림트로 명령을 구성해놨으며, 그냥 설치를 하여 CLI에서 명령으로 작업을 하여도 되고, &lt;span class="caps"&gt;GUI&lt;/span&gt; 툴들에서 기본 내장 git-flow 명령이나 플러그인을 설치하여 작업을 진행할 수 있도록 보편화되어잇는 브런칭&amp;nbsp;모델이다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://nvie.com/img/git-model@2x.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;구조와&amp;nbsp;흐름&lt;/h3&gt;
+&lt;p&gt;가장 중심이되는 브런치는 &lt;code&gt;master&lt;/code&gt;랑 &lt;code&gt;develop&lt;/code&gt; 브런치이며, 이 두개의 브런치는 무조건 있어야된다고 보면된다. 이름은 바뀔수 있다만 왠만해서는 변경하지 않고 진행하도록 하자. Git도 Production에서 사용하는 브런치는 &lt;code&gt;master&lt;/code&gt;를 사용하게 되니 관련된 부분을 변경하면 새로운 사람이 왔을때 스터디 커브가 존재할 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;머지된 &lt;code&gt;feature&lt;/code&gt;, &lt;code&gt;release&lt;/code&gt;, &lt;code&gt;hotfix&lt;/code&gt; 브런치는 삭제하도록&amp;nbsp;한다.&lt;/p&gt;
+&lt;h4&gt;Feature&amp;nbsp;브런치&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;브런치 나오는 곳 : &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;브런치가 들어가는 곳 : &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;이름 지정 : &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;develop&lt;/code&gt;, &lt;code&gt;release-*&lt;/code&gt;, &lt;code&gt;hotfix-*&lt;/code&gt;를 제외한 어떤 것이든&amp;nbsp;가능.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;새로운 기능을 추가하는 브런치이다.
+&lt;code&gt;feature&lt;/code&gt;브런치는 &lt;code&gt;origin&lt;/code&gt;에는 반영하지 않고, 개발자의 reop애만 존재하도록&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;여기서 머지를 할때, &lt;code&gt;--no-ff&lt;/code&gt; 옵션을 이용하여 브런치에서 머지가 되었음을 git 기록에 남겨두도록 한다. 이렇게되면 나중에 히스토리 관리가 어려워지는 부분이 존제한다고 한다만&amp;#8230; 그것을 확인할 수 있는 방법들은 많으니&amp;nbsp;뭐&amp;#8230;&lt;/p&gt;
+&lt;h4&gt;Release&amp;nbsp;브런치&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;브런치 나오는 곳 : &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;브런치가 들어가는 곳 : &lt;code&gt;develop&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;이름 지정 : &lt;code&gt;release-*&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;새로운 Production 릴리즈를 위한 브런치이다.
+지금까지 한 기능을 묶어 &lt;code&gt;develop&lt;/code&gt; 브런치에서 &lt;code&gt;release&lt;/code&gt; 브런치를 따내고, &lt;code&gt;develop&lt;/code&gt; 브런치에서는 다음번 릴리즈에서 사용할 기능을 추가한다.
+&lt;code&gt;release&lt;/code&gt; 브런치에서는 버그픽스에 대한 부분만 커밋하게되고, &lt;strong&gt;릴리즈가 준비되었다고 생각하면&lt;/strong&gt; &lt;code&gt;master&lt;/code&gt;로 머지를 진행한다. (이때도 &lt;code&gt;--no-ff&lt;/code&gt; 옵션을 이용하여 머지하였음을 남긴다.) 
+&lt;code&gt;master&lt;/code&gt;로 머지 후 &lt;code&gt;tag&lt;/code&gt; 명령을 이용하여 릴리즈 버전에 대해 명시를 하고, &lt;code&gt;-s&lt;/code&gt; 나 &lt;code&gt;-u &amp;lt;key&amp;gt;&lt;/code&gt; 옵션을 이용하여 머지한 사람의 정보를 남겨두도록 한다. 그런뒤 &lt;code&gt;develop&lt;/code&gt; 브런치로 머지하여, &lt;code&gt;release&lt;/code&gt; 브런치에서 수정된 내용이 &lt;code&gt;develop&lt;/code&gt; 브런치에 반영이되도록&amp;nbsp;한다.&lt;/p&gt;
+&lt;h4&gt;Hotfix&amp;nbsp;브런치&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;브런치 나오는 곳 : &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;브런치가 들어가는 곳 : &lt;code&gt;develop&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;이름 지정 : &lt;code&gt;hotfix-*&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Production에서 발생한 버그들은 전부 여기로&amp;#8230; 수정 끝나면, &lt;code&gt;develop&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt; 브런치에 반영하고, &lt;code&gt;master&lt;/code&gt;에 다가는 &lt;code&gt;tag&lt;/code&gt; 를 추가해준다.
+만약 &lt;code&gt;release&lt;/code&gt; 브런치가 존재한다면, &lt;code&gt;release&lt;/code&gt; 브런치에 &lt;code&gt;hotfix&lt;/code&gt; 브런치를 머지하여 릴리즈될때 반영이 될 수 있도록&amp;nbsp;한다.&lt;/p&gt;
+&lt;h3&gt;장점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;명령어가&amp;nbsp;나와있다.&lt;/li&gt;
+&lt;li&gt;왠만한 에디터와 IDE에는 플러그인으로&amp;nbsp;존재한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;단점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;브런치가 많아&amp;nbsp;복잡하다.&lt;/li&gt;
+&lt;li&gt;안쓰는 브런치가 있다. 그리고 몇몇 브런치는 애매한&amp;nbsp;포지션이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;참고&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;A successful Git branching model - Vincent&amp;nbsp;Driessen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/nvie/gitflow"&gt;nvie/gitflw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://huns.me/development/1131"&gt;gifflow, 쉬운 git brunch 관리 - 개발왕&amp;nbsp;김코딩&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ohgyun.com/402"&gt;git 브랜칭 전략과 git flow -&amp;nbsp;꿀벌개발일지&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;GitHub&amp;nbsp;Flow&lt;/h2&gt;
+&lt;p&gt;Scott chacon은 &lt;a href="http://scottchacon.com/2011/08/31/github-flow.html"&gt;GitHub Flow&lt;/a&gt;에서 Git flow가 좋은 방식이긴 하지만 GitHub에서 사용하기에는 복잡하다 여겨 사용하지 않고 &lt;code&gt;GitHub Flow&lt;/code&gt;라는 내용으로 사용을 하고 있다고 한다. 그리고 &lt;strong&gt;자동화의 계념이 들어가 있다는 점&lt;/strong&gt;. 자동화가 안되어있는 곳에서는 수동으로 관련 작업을 진행하면&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;흐름이 단순한만큼 룰도 단순하다. &lt;code&gt;master&lt;/code&gt; 브런치에대한 &lt;code&gt;role&lt;/code&gt;만 정확하다면 나머지 브런치들에는 관여를 하지 않는다. 그리고 &lt;code&gt;pull request&lt;/code&gt; 기능을 사용하도록 권장을&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shoma2da/20151104/20151104223339.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;특징&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;release&lt;/code&gt; 브런치가 명확하지 않는 시스템에서 사용에 맞게&amp;nbsp;되어있다. &lt;/li&gt;
+&lt;li&gt;여기에는 GitHub의 서비스 특성상. 릴리즈라는 개념이 없는 서비스를 진행하고 있어서 그런것으로 보이며, 웹 서비스들이 릴리즈라는 계념이 없이지고 있으니 사용하기 편할 것으로&amp;nbsp;보인다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hotfix&lt;/code&gt;와 가장 작은 기능을 구분하지 않는다. 어짜피 둘다 개발자가 수정해야되는 일중에 하나이다. 단지 우선 순위가 어디가 높냐라는&amp;nbsp;단계이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;그럼 어떻게 사용할&amp;nbsp;것인가?&lt;/h3&gt;
+&lt;h4&gt;1. &lt;code&gt;master&lt;/code&gt; 브런치는 어떤 때든 배포가&amp;nbsp;가능하다.&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;master&lt;/code&gt; 브런치는 항상 최신의 상태이며, stable 상태로 Product에 배포되는 브런치이다. 그리고 이 브런치에 대해서는 업격한 &lt;em&gt;role&lt;/em&gt;를 주어&amp;nbsp;사용한다. &lt;/p&gt;
+&lt;h4&gt;2. 새로운 일을 시작하기 위해 브런치를 &lt;code&gt;master&lt;/code&gt;에서 딴다면 이름은 어떤일을 하는지 명확하게&amp;nbsp;작성한다.&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git flow&lt;/code&gt; 와는 다르게 &lt;code&gt;feature&lt;/code&gt; 브런치나 &lt;code&gt;develop&lt;/code&gt; 브런치가 존재하지 않는다. 그렇기에 새로운 기능을 추가하거나 버그를 해결하기 위한 브런치의 이름은 자세하게 어떤 일을 하고 있는지에 대해서 작성해주도록 하자. Github 페이지에서 보면 어떤 일들이 진행되고 있는지를 확인하기 쉽게&amp;nbsp;말이다.&lt;/p&gt;
+&lt;h4&gt;3. 원격지 브런치로 수시로 push를&amp;nbsp;한다.&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git flow&lt;/code&gt; 와 가장 상반되는 방식이다. 항상 원격지에 자신이 하고 있는 일들을 올려 다른 사람들도 확인할 수 있도록 해준다.
+이 방법의 좋은점은 하드웨어에 문제가 발생하여 작업하던 부분이 날라가더라고 원격지에 있는 소스를 받아서 작업을 할 수 있도록&amp;nbsp;해준다.&lt;/p&gt;
+&lt;h4&gt;4. 피드백이나 도움이 필요할때, 그리고 머징 준비가 완료되었을때는 &lt;code&gt;pull request&lt;/code&gt;를&amp;nbsp;생성한다.&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;pull request&lt;/code&gt; 는 코드 리뷰를 도와주는 시스템이다. 
+그렇기에 이것을 이용하여 자신의 코드를 공유하고, 리뷰를 받을 수 있도록 한다. 물론 머지가 준비 완료되어 &lt;code&gt;master&lt;/code&gt; 브런치로 반영을 요구하여도&amp;nbsp;된다.&lt;/p&gt;
+&lt;h4&gt;5. 기능에 대한 리뷰와 사인이 끝난후 &lt;code&gt;master&lt;/code&gt;로&amp;nbsp;머지한다.&lt;/h4&gt;
+&lt;p&gt;곧장 product로 반영이될 기능이기에 이해관계가 연결된 사람들과 충분한 논의 이후 반영하도록&amp;nbsp;한다.&lt;/p&gt;
+&lt;h4&gt;6. &lt;code&gt;master&lt;/code&gt;로 머지되고 푸시되었을때는 즉시 배포되어야&amp;nbsp;한다.&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;GitHub Flow&lt;/strong&gt;의 핵심인듯한 &lt;code&gt;master&lt;/code&gt;로 머지가 일어나면 &lt;code&gt;hubot&lt;/code&gt;을 이용하여 자동으로 배포가 되도록 설정&amp;nbsp;해놓는다.&lt;/p&gt;
+&lt;h3&gt;장점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;브런치 전략이&amp;nbsp;단순하다.&lt;/li&gt;
+&lt;li&gt;처음 git을 접하는 사람에게 정말 좋은 시스템이&amp;nbsp;된다.&lt;/li&gt;
+&lt;li&gt;Github 사이트에서 제공하는 기능을 모두 사용하여 작업을&amp;nbsp;진행한다.&lt;/li&gt;
+&lt;li&gt;코드리뷰를 자연스럽게 사용할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;CI가 필수적이며, 배포는 자동으로 진행할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;Github가 작업을 할때 이렇게 작업하고&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;단점&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CI와 배포 자동화가 되어있지 않은 시스템에서는 사람이 관련된 업무를&amp;nbsp;진행한다.&lt;/li&gt;
+&lt;li&gt;많은 것들이 올라오기 시작하면&amp;#8230; 그때부터는&amp;nbsp;헬이&amp;#8230;&lt;/li&gt;
+&lt;li&gt;너무 간단하니&amp;#8230; 이거 단점이 있나&amp;nbsp;십다&amp;#8230;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;참고&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://scottchacon.com/2011/08/31/github-flow.html"&gt;GitHub&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://guides.github.com/introduction/flow/"&gt;Understanding the GitHub&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://dogfeet.github.io/articles/2011/github-flow.html"&gt;GitHub Flow -&amp;nbsp;dogfeet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://b.pyar.bz/blog/2014/01/22/github-flow/"&gt;Github-flowを分かりやすく図解してみた&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/"&gt;Git Flow vs Github&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/blog/1557-github-flow-in-the-browser"&gt;GitHub Flow in teh&amp;nbsp;Browser&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;GitLab&amp;nbsp;Flow&lt;/h2&gt;
+&lt;p&gt;Github에서 말하는 flow는 너무나도 간단하여 배포, 환경구성, 릴리즈, 통합에 대한 이슈를 남겨둔 것이 많았다. 그것을 보안하기위해 GitLab에서 관련 내용들을 추가적으로 덧붙여 설명한것을&amp;nbsp;일컷는다.&lt;/p&gt;
+&lt;h3&gt;Production branch with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/production_branch.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;production&lt;/code&gt; 브런치가 존재하여 커밋한 내용들을 일방적으로 디플로이를 하는 형태. GitHub에서 브런치 하나를 더 구성하여 사용하는 이것도 조금은 간단한 구성이다.
+이렇게 구성하면 배포 자동화가 되어있지않은 구성에서 어떻게 배포를 진행할 것인가에 대한 내용을 담았다. 물론 이걸로 부족하여 다음의 것도&amp;nbsp;추가되었다.&lt;/p&gt;
+&lt;h3&gt;Environment branches with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/environment_branches.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;master&lt;/code&gt;와 &lt;code&gt;production&lt;/code&gt; 사이에 &lt;code&gt;pre-production&lt;/code&gt;을 두어 개발한 내용을 곧장 반영하지 않고 시간을 두고 반영을 하는 것을 말한다. Staging을위한 공간을&amp;nbsp;만드는거지&amp;#8230;&lt;/p&gt;
+&lt;h3&gt;Release branches with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/release_branches.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;release&lt;/code&gt;한 브런치를 두고서 보안상 문제가 발생한 것이나 백포트를 위해서 작업을 할 경우, cherry-pick을 이용해서 작업을 진행할 수 도 있다. 아니면 해당 릴리즈에서 발생하는 버그들을 묶어서 수정하는 방식을 진행하며된다. 일반적으로 말하는 &amp;#8216;upstream first&amp;#8217; 정책이라고&amp;nbsp;보면된다.&lt;/p&gt;
+&lt;h3&gt;Merge/pull requests with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;p&gt;Pull request를 사용하는 방법이다. GitHub Flow에서 하는 방법과 동일하다. 원문은 길게 적어놨는데&amp;#8230;&amp;nbsp;딱히&amp;#8230;&lt;/p&gt;
+&lt;h3&gt;Issues with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;p&gt;Issue 트러커와 연결하여 사용하는 것을 말한다. 긴~~ 시간동안 작업을 할 경우, 이슈를 생성하여 작업을 진행하는 것으로&amp;#8230; 브런치 이름에는 이슈번호를 적어 작업중인 이슈가 어떤 것인지를 명확하게 해주는 것이 필요하다.
+작업이 끝나거나 코드 공유가 필요한 시점이면 Merge/pull requsts를&amp;nbsp;보낸다. &lt;/p&gt;
+&lt;p&gt;다적을려고 봤더니 그냥 GitLab 사용법에 대해서만 추가적으로 말하고 있어서 이쯤적고 영어로 읽자. 영어가 어렯다면&amp;#8230; 일본어를 번역해서 읽으면 좀 더 쉽게 읽을 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;h3&gt;참고&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://about.gitlab.com/2014/09/29/gitlab-flow/"&gt;GitLab&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://postd.cc/gitlab-flow/"&gt;GitLab&amp;nbsp;flowから学ぶワークフローの実践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://doc.gitlab.com/ee/workflow/gitlab_flow.html"&gt;GitLab&amp;nbsp;Document&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cloudsoftcorp.com/blog/2015/01/gitlab-flow-ftw/"&gt;GitLab Flow &lt;span class="caps"&gt;FTW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://shoma2da.hatenablog.com/entry/2015/11/04/233534"&gt;アプリ開発にはGitlab&amp;nbsp;flowが合うと思います&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;끝&lt;/h2&gt;
+&lt;p&gt;하&amp;#8230; 길었다. 모든 자료는 공식적으로 첫번째로 작성된 포스트의 내용을 가져와 작성하였다. 그쪽의 내용이 가장 먼저 말한사람의 생각이 들어가 있다고 생각했기때문이다. 그리고 찾으면서 발견한 글들의 경우, 참고 사이트로 작성을 해놨으니 그것을 확인하면&amp;nbsp;될듯. &lt;/p&gt;
+&lt;p&gt;Git flow가 편한줄 알았더니&amp;#8230; GitHub나 GitLab을 사용하고 있다면, 굳이 Git flow가 아니더라도 괜찮겠다는 생각이드는데 딱히 OpenSource를 하는 그룹에서도 Git flow를 사용하기보다는 자신의 코드가 들어가있는 플랫폼을 가지고서 작업을 하는 경우가 많아서&amp;#8230; 뭐. 업스트림에 작업을 할 수 있는 사람이&amp;nbsp;한정되어있으니까&amp;#8230;&lt;/p&gt;
+&lt;p&gt;이런 방법들을 어떻게 사용해보는 것이 좋을련지를 고민해보는 것도 필요하지 않을까 한다. 간단하게 하는 방법도 있고 하니까.. 그리고 내꺼나 차근차근 구축해&amp;nbsp;나가야되는데&amp;#8230; &lt;/p&gt;
+&lt;h3&gt;참고&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/nzakas/5511916"&gt;Using GitHub inside a company -&amp;nbsp;Gist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.nczonline.net/blog/2013/05/21/github-workflows-inside-of-a-company/"&gt;GitHub workflows inside of a&amp;nbsp;company&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/tkhm/items/cc7855d32d640687b43c"&gt;Git利用時のフローはどれを使うか&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The&amp;nbsp;gitworkflows(7)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 16 Dec 2015 08:50:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-12-16:2015/12/16/git-flow-github-flow-gitlab-flow/</guid><category>git</category><category>workflow</category><category>github</category><category>gitlab</category></item><item><title>git-town 사용해보자</title><link>http://ujuc.github.io/2015/10/26/git-town-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;아무런 생각없이 메일 온것을 확인중&amp;#8230; 발견한 &lt;a class="reference external" href="https://github.com/Originate/git-town"&gt;git-town&lt;/a&gt;&amp;#8230;&lt;/p&gt;
 &lt;p&gt;솔직히 &lt;a class="reference external" href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&lt;/a&gt; 와 다른게 먼가 있을 것같아서 사용을 해볼려고 깔아뒀고,
 지금 작성하는 글도 브런치를 &lt;tt class="docutils literal"&gt;git town&lt;/tt&gt; 명령어중 하나를 사용해서 브런치를
 딴 후&amp;nbsp;작성중이다.&lt;/p&gt;
@@ -532,7 +674,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 27 Oct 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>OpenStack</category><category>Cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 16 Dec 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>OpenStack</category><category>Cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
@@ -548,7 +690,7 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워
 손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 27 Oct 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 16 Dec 2015 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
