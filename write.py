@@ -19,7 +19,7 @@ from docopt import docopt
 RST_TEMPLATE = ('{title}\n'
                 '{hashes}\n'
                 '\n'
-                '{date}\n'
+                ':date: {date}\n'
                 ':category: \n'
                 ':tags: \n'
                 ':slug: {slug}\n'
@@ -42,7 +42,7 @@ def make_entry(title, path, template):
     today = datetime.today()
     # GTODO : 한국어를 영어로 변환하는 것이 필요
     slug = title.lower().strip().replace(' ', '-')
-    date = ":date: {year}-{month:02d}-{day:02d} {hour:02d}:{minute:02d}"\
+    date = "{year}-{month:02d}-{day:02d} {hour:02d}:{minute:02d}"\
         .format(year=today.year, month=today.month, day=today.day,
                 hour=today.hour, minute=today.minute)
 
