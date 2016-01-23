@@ -481,7 +481,7 @@ PR해줄 수 있느냐기에 신속하게 &lt;a class="reference external" href=
 을 보았고, PR을 뒤져보니 PR을 보내면 웬만해서는 받아주는 듯하여 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 부터 날리
 고 어떻게 할지 기다린 게 잘 된듯하다.
 뭐 이렇게 녹색 상자 한 칸 더 체우 는기지&amp;#8230;&amp;nbsp;ㅋㅋㅋㅋㅋ&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 02 Jun 2015 22:45:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</guid><category>자랑질</category><category>chat</category><category>RocketChat</category><category>번역</category><category>javascrtip</category><category>meteo</category></item><item><title>Edison pip install error</title><link>http://ujuc.github.io/2015/05/14/edison-pip-install-error/</link><description>&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 02 Jun 2015 22:45:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</guid><category>자랑질</category><category>chat</category><category>RocketChat</category><category>번역</category><category>javascript</category><category>meteo</category></item><item><title>Edison pip install error</title><link>http://ujuc.github.io/2015/05/14/edison-pip-install-error/</link><description>&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
 &lt;span class="c"&gt;# pip install flask
 &lt;/span&gt;Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call las&lt;span class="o"&gt;)&lt;/span&gt;:
