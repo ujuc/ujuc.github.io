@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-01-23T00:00:00+09:00</updated><entry><title>`_vim_files: function definition files net found` on zsh</title><link href="http://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/" rel="alternate"></link><updated>2016-01-16T22:53:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-16:2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</id><summary type="html">&lt;p&gt;아&amp;#8230; 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게&amp;nbsp;해야되지.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-01-27T00:57:00+09:00</updated><entry><title>Stderr check in zshell</title><link href="http://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" rel="alternate"></link><updated>2016-01-27T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-27:2016/01/27/stderr-check-in-zshell/</id><summary type="html">&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서
+쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가&amp;nbsp;출력된다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="stderr" src="http://ujuc.github.io/img/2016-01-26_shell_error.png" /&gt;&lt;/p&gt;
+&lt;p&gt;은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로&amp;nbsp;늘어난다.&lt;/p&gt;
+&lt;p&gt;그래서 찾았다. 찾다보니 내가 무심코 사용했던 내용에대해 조금더 볼 기회가&amp;nbsp;생긴듯.&lt;/p&gt;
+&lt;p&gt;우선 Shell에서 기본 I/O 스트림을 통해서 나오는 값들에대해서 다음 숫자로 제어할
+수&amp;nbsp;있다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Handle&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;stdin&lt;/td&gt;
+&lt;td&gt;Standard input&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;stdout&lt;/td&gt;
+&lt;td&gt;Standard output&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;stderr&lt;/td&gt;
+&lt;td&gt;Standard error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;간단히 하자.
+go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올&amp;nbsp;것이다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;which go
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="ex1_1" src="http://ujuc.github.io/img/2016-01-26_ex1_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;요놈을 안나오게&amp;nbsp;해보자.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;which go 1&amp;gt; /dev/null
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="ex1_2" src="http://ujuc.github.io/img/2016-01-26_ex1_2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;오~~~&lt;/p&gt;
+&lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;#8230; 이건 설치가 되어있으니&amp;#8230;&amp;nbsp;없는걸로&amp;#8230;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;which rbenv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="ex2_1" src="http://ujuc.github.io/img/2016-01-26_ex2_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을&amp;nbsp;사용하면&amp;#8230;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;which rbenv 1&amp;gt; /dev/null
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="ex2_2" src="http://ujuc.github.io/img/2016-01-26_ex2_2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;음&amp;#8230; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸&amp;nbsp;막으라했더니&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그럼 Python에서는 어디로&amp;nbsp;나올까?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                            &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;check_rbenv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;음?? 암것도&amp;nbsp;안나온다&amp;#8230;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;256&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;출력값이 256이라니&amp;#8230; 혹시나 해서 봤더니 8bit밀란다. 저걸 밀면 1이 떨어지는데&amp;#8230;
+리눅스에서 반환값이 1이면 비정상 종료일때로 알고 있다. 고로니 저넘은 제대로
+실행된 아이가 아니라는&amp;nbsp;말씀&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그럼 &lt;code&gt;which&lt;/code&gt; 명령어를 사용하여 명령어를 실행하게 되면, 정상종료면 위치를
+말해줄꺼고 비정상 종료면 stdout으로 없다는 메시지를 남기고 비정상 종료를
+시킨다고 해석하면&amp;nbsp;될듯.&lt;/p&gt;
+&lt;p&gt;결국 내가 하고 싶은데로 안되는거네&amp;#8230;&amp;nbsp;이런!&lt;/p&gt;
+&lt;p&gt;다른 방법으로 찾아야지 뭐 별수 있나&amp;#8230; 그래도 이번에 건진건 저렇게 숫자를
+사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;#8230; 그정도면 1시간동안
+작업한 것에 대한 내용은&amp;nbsp;될듯.&lt;/p&gt;</summary><category term="zsh"></category><category term="operation"></category></entry><entry><title>`_vim_files: function definition files net found` on zsh</title><link href="http://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/" rel="alternate"></link><updated>2016-01-16T22:53:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-16:2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</id><summary type="html">&lt;p&gt;아&amp;#8230; 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게&amp;nbsp;해야되지.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="error!" src="http://ujuc.github.io/img/2016-01-16_error.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;원인&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;zcompdump&lt;/code&gt; 때문이라고 하고, 이건 매번 문제가&amp;nbsp;있나보다.ㅡ.ㅡ;;&lt;/p&gt;
@@ -671,7 +756,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2016-01-23T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2016-01-27T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -681,7 +766,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2016-01-23T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2016-01-27T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="http://ujuc.github.io/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+
+  <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... Atom" />
+  <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+<meta name="keywords" content="zsh, operation">
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+&ndash; Stderr check in&nbsp;zshell  </title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-58634276-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href="http://ujuc.github.io">
+        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
+      </a>
+      <h2><a href="http://ujuc.github.io">ujuc</a></h2>
+      <p></p>
+      <ul>
+        <li><a href="/">blog</a></li>
+        <li><a href="/tags.html">Tags</a></li>
+        <li><a href="/categories.html">Categories</a></li>
+        <li><a href="mailto:ujuc@ujuc.kr">Email</a></li>
+        <li><a href="https://github.com/ujuc">Github</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="http://ujuc.github.io">Index</a> &brvbar; <a href="http://ujuc.github.io/archives.html">Archives</a>
+      &brvbar; <a href="http://ujuc.github.io/feeds/all.atom.xml">Atom</a>
+      &brvbar; <a href="http://ujuc.github.io/feeds/rss.xml">RSS</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://ujuc.github.io/2016/01/27/stderr-check-in-zshell/">Stderr check in&nbsp;zshell</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서
+쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가&nbsp;출력된다.</p>
+<p><img alt="stderr" src="http://ujuc.github.io/img/2016-01-26_shell_error.png" /></p>
+<p>은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로&nbsp;늘어난다.</p>
+<p>그래서 찾았다. 찾다보니 내가 무심코 사용했던 내용에대해 조금더 볼 기회가&nbsp;생긴듯.</p>
+<p>우선 Shell에서 기본 I/O 스트림을 통해서 나오는 값들에대해서 다음 숫자로 제어할
+수&nbsp;있다.</p>
+<table>
+<thead>
+<tr>
+<th>Handle</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>stdin</td>
+<td>Standard input</td>
+</tr>
+<tr>
+<td>1</td>
+<td>stdout</td>
+<td>Standard output</td>
+</tr>
+<tr>
+<td>2</td>
+<td>stderr</td>
+<td>Standard error</td>
+</tr>
+</tbody>
+</table>
+<p>간단히 하자.
+go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올&nbsp;것이다.</p>
+<div class="highlight"><pre><span class="nv">$ </span>which go
+</pre></div>
+
+
+<p><img alt="ex1_1" src="http://ujuc.github.io/img/2016-01-26_ex1_1.png" /></p>
+<p>요놈을 안나오게&nbsp;해보자.</p>
+<div class="highlight"><pre><span class="nv">$ </span>which go 1&gt; /dev/null
+</pre></div>
+
+
+<p><img alt="ex1_2" src="http://ujuc.github.io/img/2016-01-26_ex1_2.png" /></p>
+<p>오~~~</p>
+<p>stderr 값이 나오면 안나오게 할려고 보면&#8230; 이건 설치가 되어있으니&#8230;&nbsp;없는걸로&#8230;</p>
+<div class="highlight"><pre><span class="nv">$ </span>which rbenv
+</pre></div>
+
+
+<p><img alt="ex2_1" src="http://ujuc.github.io/img/2016-01-26_ex2_1.png" /></p>
+<p>이걸 위와 같이 <code>1</code> 을&nbsp;사용하면&#8230;</p>
+<div class="highlight"><pre><span class="nv">$ </span>which rbenv 1&gt; /dev/null
+</pre></div>
+
+
+<p><img alt="ex2_2" src="http://ujuc.github.io/img/2016-01-26_ex2_2.png" /></p>
+<p>음&#8230; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. <code>1</code>로 출력되는걸&nbsp;막으라했더니&#8230;</p>
+<p>그럼 Python에서는 어디로&nbsp;나올까?</p>
+<div class="highlight"><pre><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="kn">as</span> <span class="nn">sub</span>
+<span class="n">In</span><span class="p">:</span> <span class="n">check_rbenv</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s">&#39;which rbenv&#39;</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                            <span class="n">stderr</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
+<span class="n">In</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">check_rbenv</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">:</span> <span class="p">(</span><span class="n">b</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">b</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>음?? 암것도&nbsp;안나온다&#8230;</p>
+<div class="highlight"><pre><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="n">In</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s">&#39;which rbenv&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">:</span> <span class="mi">256</span>
+</pre></div>
+
+
+<p>출력값이 256이라니&#8230; 혹시나 해서 봤더니 8bit밀란다. 저걸 밀면 1이 떨어지는데&#8230;
+리눅스에서 반환값이 1이면 비정상 종료일때로 알고 있다. 고로니 저넘은 제대로
+실행된 아이가 아니라는&nbsp;말씀&#8230;</p>
+<p>그럼 <code>which</code> 명령어를 사용하여 명령어를 실행하게 되면, 정상종료면 위치를
+말해줄꺼고 비정상 종료면 stdout으로 없다는 메시지를 남기고 비정상 종료를
+시킨다고 해석하면&nbsp;될듯.</p>
+<p>결국 내가 하고 싶은데로 안되는거네&#8230;&nbsp;이런!</p>
+<p>다른 방법으로 찾아야지 뭐 별수 있나&#8230; 그래도 이번에 건진건 저렇게 숫자를
+사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&#8230; 그정도면 1시간동안
+작업한 것에 대한 내용은&nbsp;될듯.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: 2016. 01. 27. Wed</p>
+    <p>Category: <a href="http://ujuc.github.io/category/operation.html">Operation</a>
+ / Tags:
+      <a href="http://ujuc.github.io/tag/zsh.html">zsh</a>,      <a href="http://ujuc.github.io/tag/operation.html">operation</a>    </p>
+  </div>
+
+  <div id="article_comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_identifier = "2016/01/27/stderr-check-in-zshell/";
+        (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://ujucgithub.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+         })();
+    </script>
+  </div>
+
+</article>
+
+
+    <div id="ending_message">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>
