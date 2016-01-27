@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/operation.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 27 Jan 2016 00:57:00 +0900</lastBuildDate><item><title>Stderr check in zshell</title><link>http://ujuc.github.io/2016/01/27/stderr-check-in-zshell/</link><description>&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/operation.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 28 Jan 2016 01:10:00 +0900</lastBuildDate><item><title>mysql 복제 오류</title><link>http://ujuc.github.io/2016/01/28/mysql-%EB%B3%B5%EC%A0%9C-%EC%98%A4%EB%A5%98/</link><description>&lt;p&gt;오랜만에 설정할 일이 있어서 RDS로 접속했더니&amp;#8230; &lt;span class="caps"&gt;RDS&lt;/span&gt; 인스턴스에서 error 이벤트가
+발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&amp;#8230; 여기서&amp;nbsp;문제가&amp;#8230;&lt;/p&gt;
+&lt;p&gt;RDS를 제외하고 관련 내용을 찾았더니, &lt;code&gt;my.cnf&lt;/code&gt; 파일에다가 뭘 넣고 수정하라고
+한다. 이렇게 할려면 RDS는 안된다. 명령어를 입력하라는 말도 있었다. 그런데&amp;#8230;
+이넘의 RDS에서 사용자는 말그대로 사용자일 뿐이다. 어떠한 database에 대한 수정을
+가할 수 있는 권한 자체가 없다. 그 사용자 이름을 &lt;code&gt;root&lt;/code&gt;로 했다고 해도&amp;nbsp;말이다.&lt;/p&gt;
+&lt;p&gt;결국.. 찾다 돌아온 곳은.
+&lt;a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html"&gt;Amazon Relational Database Service - mysql_rds_skip_repl_error&lt;/a&gt;
+부분. 그냥 접근해서 &lt;code&gt;CALL mysql.rds_skip_repl_error&lt;/code&gt; 입력하면&amp;nbsp;된단다.&lt;/p&gt;
+&lt;p&gt;그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.
+mariadb를 사용하는게 정신 건강에&amp;nbsp;좋은&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 28 Jan 2016 01:10:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-01-28:2016/01/28/mysql-복제-오류/</guid><category>aws</category><category>rds</category><category>mysql</category><category>mariadb</category><category>replication</category></item><item><title>Stderr check in zshell</title><link>http://ujuc.github.io/2016/01/27/stderr-check-in-zshell/</link><description>&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서
 쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가&amp;nbsp;출력된다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="stderr" src="http://ujuc.github.io/img/2016-01-26_shell_error.png" /&gt;&lt;/p&gt;
 &lt;p&gt;은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로&amp;nbsp;늘어난다.&lt;/p&gt;
