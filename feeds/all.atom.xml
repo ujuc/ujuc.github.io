@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-01-28T01:10:00+09:00</updated><entry><title>mysql 복제 오류</title><link href="http://ujuc.github.io/2016/01/28/mysql-%EB%B3%B5%EC%A0%9C-%EC%98%A4%EB%A5%98/" rel="alternate"></link><updated>2016-01-28T01:10:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-28:2016/01/28/mysql-복제-오류/</id><summary type="html">&lt;p&gt;오랜만에 설정할 일이 있어서 RDS로 접속했더니&amp;#8230; &lt;span class="caps"&gt;RDS&lt;/span&gt; 인스턴스에서 error 이벤트가
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-01-29T22:35:00+09:00</updated><entry><title>unattended-upgrade 써보자</title><link href="http://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/" rel="alternate"></link><updated>2016-01-29T22:35:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-29:2016/01/29/unattended-upgrade-써보자/</id><summary type="html">&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,
+그것에 대한 패치들도 많이 올라오고 있다. 사용하다가 서비스를 하고 있는 패키지들
+을 업데이트를 할 수는 없고 (서비스에서 사용하는 패키지의 경우엔.. 답이 없다. 
+했다가 무슨 소릴 들을지 모르기도하고 어디서 문제가 발생했는지 모르기도 하고)
+보안 패치만큼은 하고&amp;nbsp;싶은데&amp;#8230;&lt;/p&gt;
+&lt;p&gt;찾다보니 &lt;code&gt;unattended-upgrade&lt;/code&gt;를 사용해서 할 수가&amp;nbsp;있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html"&gt;Ubuntu manpage -&amp;nbsp;unattended-upgrade&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;사용법&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo unattended-upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를&amp;nbsp;하면된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo unattended-upgrade --dry-run
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;왠만해서는 &lt;code&gt;--dry-run&lt;/code&gt; 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는&amp;nbsp;않지&amp;#8230;&lt;/p&gt;
+&lt;p&gt;단점은 아직 1.0이 아니다. 그래서 그런지 외부로 출력되는게 없고, 전부 log파일로만&amp;nbsp;나온다&amp;#8230;&lt;/p&gt;</summary><category term="ubuntu"></category><category term="manage"></category><category term="upgrade"></category><category term="security"></category><category term="command"></category></entry><entry><title>mysql 복제 오류</title><link href="http://ujuc.github.io/2016/01/28/mysql-%EB%B3%B5%EC%A0%9C-%EC%98%A4%EB%A5%98/" rel="alternate"></link><updated>2016-01-28T01:10:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-28:2016/01/28/mysql-복제-오류/</id><summary type="html">&lt;p&gt;오랜만에 설정할 일이 있어서 RDS로 접속했더니&amp;#8230; &lt;span class="caps"&gt;RDS&lt;/span&gt; 인스턴스에서 error 이벤트가
 발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&amp;#8230; 여기서&amp;nbsp;문제가&amp;#8230;&lt;/p&gt;
 &lt;p&gt;RDS를 제외하고 관련 내용을 찾았더니, &lt;code&gt;my.cnf&lt;/code&gt; 파일에다가 뭘 넣고 수정하라고
 한다. 이렇게 할려면 RDS는 안된다. 명령어를 입력하라는 말도 있었다. 그런데&amp;#8230;
@@ -766,7 +787,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2016-01-28T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2016-01-29T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -776,7 +797,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2016-01-28T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</summary><category term="OpenStack"></category><category term="Cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2016-01-29T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
