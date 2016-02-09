@@ -4,7 +4,7 @@ RAM 리뷰에서 본 버전별 특성
 :date: 2015-02-09 
 :modified: 2015-03-31 21:47
 :category: Hardware
-:tags: RAM, HW, 하드웨어
+:tags: ram, hw, 하드웨어
 :slug: RAM-reive
 :summary: RAM 사양에 대한 내용들로 그냥 기억용임.
 

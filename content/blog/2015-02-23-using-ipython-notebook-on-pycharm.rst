@@ -4,7 +4,7 @@ Pycharm에서 iPython notebook 사용
 :date: 2015-02-23
 :modified: 2015-04-01 21:07
 :category: Develop
-:tags: Pycharm, iPython, notebook
+:tags: pycharm, ipython, notebook
 :slug: using-ipython-notebook-on-pycharm
 :summary: Pycharm이 4.0으로 판올림되면서 iPython notebook을 사용할 수 있도록
           되었다. 아직 불편한감이 없지않아 있음.

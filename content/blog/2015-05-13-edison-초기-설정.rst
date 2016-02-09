@@ -3,7 +3,7 @@ Edison 초기 설정
 
 :date: 2015-05-13 22:46
 :category: Develop
-:tags: Edison, 개발, Embedded, 임베디드, Intel, IoT
+:tags: edison, 개발, embedded, 임베디드, intel, iot
 :slug: edison-초기-설정
 :summary: Edison을 사용하는데 있어서 초기에 설정하는 부분으로 구성을 한다.
 

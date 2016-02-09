@@ -3,7 +3,7 @@ OpenStack 새로운 버전 매기기 변경
 
 :date: 2015-06-28 22:24
 :category: Develop
-:tags: OpenStack, versioning
+:tags: openstack, versioning
 :slug: openstack-새로운-버전-매기기-변경
 :summary: OpenStack 버전 매기는 방법이 변경되었다. ``YEAR.N`` 에서 ``X.Y.Z`` 로..
 

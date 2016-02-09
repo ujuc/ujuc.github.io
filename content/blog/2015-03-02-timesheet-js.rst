@@ -4,7 +4,7 @@ timesheet.js??
 :date: 2015-03-02
 :modified: 2015-04-01 22:21
 :category: Develop
-:tags: javascript, JS
+:tags: javascript, js
 :slug: timesheet-js
 :summary: timesheet.js라는 연대표를 그려주는 JS 라이브러리
 

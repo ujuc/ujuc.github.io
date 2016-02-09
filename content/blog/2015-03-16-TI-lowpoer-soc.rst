@@ -4,7 +4,7 @@ TI에서 베터리를 가장 적게 먹는 칩 출시
 :date: 2015-03-16 23:56
 :modified: 2015-04-02 23:05
 :category: Hardware
-:tags: TI, chip, IoT, M3, ARM, BLE, Low energy
+:tags: ti, chip, iot, m3, arm, ble, low energy
 :slug: ti-lowpwoer-soc-release
 :summary: 뉴스가 나왔다. 베터리가 필요없는 SOC가 나왔다고, 믿지는 않았다. 그래서
           찾아봤다. 역시나... 그져 대기시에만 오랫동안 지낼수 있도록 가장 적은

@@ -4,7 +4,7 @@ OpenStack rootwrap
 :date: 2015-03-04
 :modified: 2015-04-02 21:18
 :category: Develop
-:tags: openstack, oslo, 오픈스택
+:tags: openstack, oslo
 :slug: openstack-rootwrap
 :summary: OpenStack의 Oslo에는 root권한을 얻긱위한 rootwrap이라는 라이브러리가
           존재한다.

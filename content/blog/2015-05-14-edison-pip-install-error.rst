@@ -3,7 +3,7 @@ Edison pip install error
 
 :date: 2015-05-14 01:39
 :category: Develop
-:tags: Edison, Pypi, pip, Python, error
+:tags: edison, pypi, pip, python, error
 :slug: edison-pip-install-error
 :summary: Edison으로 파이썬을 작업하기위해 패키지를 설치하려보면... 이넘이 안된
           다. 그것에 대한 내용이다.
