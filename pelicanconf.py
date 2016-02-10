@@ -74,4 +74,4 @@ AUTHORS = {
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 # markdwon toc
-MD_EXTENSIONS = (['toc'])
+MD_EXTENSIONS = (['toc', 'extra'])
