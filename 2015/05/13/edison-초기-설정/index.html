@@ -18,7 +18,7 @@
   <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... Atom" />
   <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
 
-<meta name="keywords" content="Edison, 개발, Embedded, 임베디드, Intel, IoT">
+<meta name="keywords" content="edison, 개발, embedded, 임베디드, intel, iot">
 
   <title>
     잘 밤에 쓸데없는 생각하기...
@@ -106,7 +106,7 @@
 <div class="section" id="hostname">
 <h3>Hostname</h3>
 <pre class="code bash literal-block">
-<span class="c"># configure_edison --name</span>
+<span class="c1"># configure_edison --name</span>
 </pre>
 <ul class="simple">
 <li>다음에 나오는 것들에따라서 입력해주면&nbsp;된다.</li>
@@ -115,7 +115,7 @@
 <div class="section" id="wifi">
 <h3>Wifi</h3>
 <pre class="code bash literal-block">
-<span class="c"># configure_edison --wifi</span>
+<span class="c1"># configure_edison --wifi</span>
 </pre>
 <ul class="simple">
 <li>근처에 있는 Wifi들이 다 잡힐 것이나 만약 아무것도 안보인다면 firmware를 업그레
@@ -132,7 +132,7 @@
 진행하도록&nbsp;한다.</li>
 </ul>
 <pre class="code bash literal-block">
-<span class="c"># configure_edison --password</span>
+<span class="c1"># configure_edison --password</span>
 </pre>
 </div>
 </div>
@@ -149,22 +149,22 @@ OpenWRT에서 사용하고&nbsp;있다.)</li>
 <li><a class="reference external" href="https://software.intel.com/en-us/articles/managing-devkit-libraries-intel-edison-or-intel-galileo-board">Intel&nbsp;page</a></li>
 </ul>
 <pre class="code bash literal-block">
-<span class="c"># echo &quot;src intel-iotdk http://iotdk.intel.com/repos/1.1/intelgalactic&quot; &gt; \
+<span class="c1"># echo &quot;src intel-iotdk http://iotdk.intel.com/repos/1.1/intelgalactic&quot; &gt; \
 </span>    /etc/opkg/intel-iotdk.conf# opkg update<span class="p">;</span> opkg upgrade
-<span class="c"># opkg update; opkg upgrade</span>
+<span class="c1"># opkg update; opkg upgrade</span>
 </pre>
 <ul class="simple">
 <li>이렇게하면 기본적인 것들은 추가가 된다만 패키지가 많지는&nbsp;않다.</li>
 <li>더 많은 패키지를 사용하려면 레포지토리를 추가해줘야&nbsp;된다.</li>
 </ul>
 <pre class="code bash literal-block">
-<span class="c"># vi /etc/opkg/base-feeds.conf
+<span class="c1"># vi /etc/opkg/base-feeds.conf
 </span>
 src/gz all http://repo.opkg.net/edison/repo/all
 src/gz edison http://repo.opkg.net/edison/repo/edison
 src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
 
-<span class="c"># opkg update</span>
+<span class="c1"># opkg update</span>
 </pre>
 </div>
 </div>
@@ -174,7 +174,7 @@ src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
     <p>Posted on: 2015. 05. 13. Wed</p>
     <p>Category: <a href="http://ujuc.github.io/category/develop.html">Develop</a>
  / Tags:
-      <a href="http://ujuc.github.io/tag/edison.html">Edison</a>,      <a href="http://ujuc.github.io/tag/gaebal.html">개발</a>,      <a href="http://ujuc.github.io/tag/embedded.html">Embedded</a>,      <a href="http://ujuc.github.io/tag/imbedideu.html">임베디드</a>,      <a href="http://ujuc.github.io/tag/intel.html">Intel</a>,      <a href="http://ujuc.github.io/tag/iot.html">IoT</a>    </p>
+      <a href="http://ujuc.github.io/tag/edison.html">edison</a>,      <a href="http://ujuc.github.io/tag/gaebal.html">개발</a>,      <a href="http://ujuc.github.io/tag/embedded.html">embedded</a>,      <a href="http://ujuc.github.io/tag/imbedideu.html">임베디드</a>,      <a href="http://ujuc.github.io/tag/intel.html">intel</a>,      <a href="http://ujuc.github.io/tag/iot.html">iot</a>    </p>
   </div>
 
   <div id="article_comments">

@@ -1,5 +1,722 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 03 Feb 2016 00:02:00 +0900</lastBuildDate><item><title>un~ 너는 뭐니?</title><link>http://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/</link><description>&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 10 Feb 2016 02:08:00 +0900</lastBuildDate><item><title>Tig Manual</title><link>http://ujuc.github.io/2016/02/10/tig-manual/</link><description>&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/jonas/tig"&gt;Tig&amp;nbsp;Homepage&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tig snap" src="http://ujuc.github.io/img/2016-02-10_tig_snap.png" /&gt;&lt;/p&gt;
+&lt;p&gt;실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&amp;#8230; 그리고 한국어로 곧장 옮기니 이상한 부분이&amp;nbsp;있어&amp;#8230;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href="http://jonas.nitro.dk/tig/manual.html"&gt;The Tig&amp;nbsp;Manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;이 문서는 Tig에 대한 메뉴얼이며, Tig는 Git에 대한 ncurses 기반의 텍스트 모드 인터페이스로 작성되었습니다. Tig는 Git 저장소의 변화를 확인하고 추가적으로 다양한 Git 명령에 대한 출력 내용을 확인할 수 있는 pager로 사용할 수 있습니다. Pager로 사용할 경우, stdin에서 입력을 표시하고, 생상을 추가할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;p&gt;저장소 확인용으로 사용할 경우, Tig는 기초적인 Git 명령을 사용하여 요약된 커밋 로그, 로그 메시지에서의 커밋 내용, diffstat, diff 와 같은 다양한 뷰를 이용하여 사용자에게&amp;nbsp;보여줍니다.&lt;/p&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#1-calling-conventions"&gt;1. Calling Conventions (호출 규칙)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#pager-mode-pager"&gt;Pager Mode (Pager&amp;nbsp;모드)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#git-command-options-git"&gt;Git Command Options (Git 명령어&amp;nbsp;옵션)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#2-the-viewer"&gt;2. The Viewer (뷰어)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#views"&gt;Views&amp;nbsp;(뷰)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#browsing-state-and-user-defined-commands"&gt;Browsing State and User-defined Commands (상태 확인과 사용자 정의&amp;nbsp;명령어)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#title-windows"&gt;Title Windows (제목&amp;nbsp;윈도우)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#3-environment-variables"&gt;3. Environment Variables (환경 변수)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#configuration-files"&gt;Configuration Files (구성&amp;nbsp;파일)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#repository-references"&gt;Repository References (저장소&amp;nbsp;참조)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#diff-options-diff"&gt;Diff options (Diff&amp;nbsp;옵션)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#4-default-keybindings"&gt;4. Default Keybindings (기본 키 바인딩)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#view-switching"&gt;View Switching (뷰&amp;nbsp;전환)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#view-manipulation"&gt;View Manipulation (뷰&amp;nbsp;조작)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#view-specific-actions"&gt;View Specific Actions (뷰 지정&amp;nbsp;동작)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#cursor-navigation"&gt;Cursor Navigation (커서&amp;nbsp;네비게이션)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#scrolling"&gt;Scrolling&amp;nbsp;(스크롤링)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#searching"&gt;Searching&amp;nbsp;(검색)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#misc"&gt;Misc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#prompt"&gt;Prompt&amp;nbsp;(프롬프트)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#external-commands"&gt;External Commands (외부&amp;nbsp;명령어)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#5-revision-specification"&gt;5. Revision Specification (리버전 사항)&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#limit-by-path-name"&gt;Limit by Path Name (패치 이름&amp;nbsp;제한)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#limit-by-date-or-number"&gt;Limit by Date or Number (날짜나 숫자&amp;nbsp;제한)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#limiting-by-commit-ranges"&gt;Limiting by Commit Ranges (커밋 범위&amp;nbsp;제한)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#limiting-by-reachability"&gt;Limiting by Reachability (도달 가능&amp;nbsp;제한)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#combining-revisions-specification"&gt;Combining Revisions Specification (변경 사항&amp;nbsp;연결)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#examining-all-repository-references"&gt;Examining All Repository References (모든 저장소 참조&amp;nbsp;검사)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#6-more-information"&gt;6. More Information (정보를 더&amp;nbsp;원하시면)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#7-copyright"&gt;7. Copyright&amp;nbsp;(저작권)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#8-see-also"&gt;8. See Also&amp;nbsp;(더보기)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h2 id="1-calling-conventions"&gt;1. Calling Conventions (호출&amp;nbsp;규칙)&lt;/h2&gt;
+&lt;h3 id="pager-mode-pager"&gt;Pager Mode (Pager&amp;nbsp;모드)&lt;/h3&gt;
+&lt;p&gt;Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되고 pager 뷰는 stdin으로 들어온 데이터를 로딩하여 확인할 수 있습니다. Pager 모드는 다양한 Git 명령에 대한 출력값을 색상을 추가하여 확인할 수 있도록&amp;nbsp;도와줍니다.&lt;/p&gt;
+&lt;p&gt;예로 &lt;code&gt;git-show(1)&lt;/code&gt; 명령에 대한 출력을 색상을 추가한 버전으로 보고&amp;nbsp;싶다면:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ git show &lt;span class="p"&gt;|&lt;/span&gt; tig
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git-show&lt;/code&gt;
+&lt;img alt="git-show" src="http://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git-show | tig&lt;/code&gt;
+&lt;img alt="git-show|tig" src="http://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="git-command-options-git"&gt;Git Command Options (Git 명령어&amp;nbsp;옵션)&lt;/h3&gt;
+&lt;p&gt;명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할&amp;nbsp;것입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;주의: 메인 뷰에 대한 옵션을 지정하는 경우엔, 메인 뷰에서 사용하는 형식으로 자동 설정되는 &lt;code&gt;--pretty&lt;/code&gt; 옵션을 사용할 수&amp;nbsp;없습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;커밋과 author, 커미터 정보를 모두 보여주는 방법에 대한&amp;nbsp;예:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig show --pretty&lt;span class="o"&gt;=&lt;/span&gt;fuller
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Git 명령에 대해 지원되는 변경 옵션 지원에 대한 소개는 &lt;a href="#5-revision-specification"&gt;지정 리버전&lt;/a&gt; 섹션을 참조하세요. 특정 Git 명령 옵션에 대한 자세한 설명은 해당 명령의 맨 페이지를&amp;nbsp;참조하세요.&lt;/p&gt;
+&lt;h2 id="2-the-viewer"&gt;2. The Viewer&amp;nbsp;(뷰어)&lt;/h2&gt;
+&lt;p&gt;디스플레이는 하나 이상의 뷰와 스크린으로 구성되어있으며, 맨 마지막 라인은 상태 윈도우로 사용됩니다. 기본 값은 한번에 하나의 뷰만을 보여줍니다. 하지만 메인과 로그 뷰로 나눠서 커밋 diff를 확인할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;p&gt;현재 라인이 커밋 라인일때, 로그 뷰에서 엔터키를 누르게되면 다음과 같은 명령이 실행되는 것과&amp;nbsp;같습니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;commit 4d55caff4cc89335192f3e566004b4ceef572521
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;뷰를 나눠서 볼 수 있는데, 로그 뷰는 윈도우 상단에, diff 뷰는 윈도우 하단에 위치시킬 수 있습니다. 탭을 눌러 두 뷰사이를 왔다갔다 할 수 있습니다. 로그 뷰만 보려면 &lt;code&gt;l&lt;/code&gt;를 누르면&amp;nbsp;됩니다.&lt;/p&gt;
+&lt;h3 id="views"&gt;Views&amp;nbsp;(뷰)&lt;/h3&gt;
+&lt;p&gt;저장소에서 여러가지 &lt;code&gt;views&lt;/code&gt;를 볼 수 있습니다. 각 뷰는 확장 명령, &lt;code&gt;git log&lt;/code&gt;, &lt;code&gt;git diff&lt;/code&gt;, &lt;code&gt;git show&lt;/code&gt;로부터 나오는 출력 값에 기반하여&amp;nbsp;보여줍니다.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;메인&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;기본 뷰이며, 리버전의 선택된 목록에서 각 커밋을 요약하여 보여줍니다. 요약한 내용에서는 author 날짜, author, 로그 메시지 첫 줄을 포함하고 있습니다. 추가적으로 태그와 같은 저장소 참조 표시도 같이&amp;nbsp;표시됩니다.&lt;/dd&gt;
+&lt;dt&gt;로그&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;전체 로그 메시지와 diffstat에대한 리버전 로그를 보여주는 다양한 뷰를&amp;nbsp;제공합니다.&lt;/dd&gt;
+&lt;dt&gt;Diff&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;현재 작업 트리에 대한 diff, 즉, 마지막 커밋이후 변화분, 로그 메시지, diffstat, diff에 대한 커밋 diff 완료 내용을&amp;nbsp;나타냅니다.&lt;/dd&gt;
+&lt;dt&gt;트리&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;디렉토리 목록을 트리로 표현하여 현재 리버전에대한 하위 디렉토리로 내려가며 확인하거나 올라오며 확인할 수 있으며 파일의 blob에 대해서도 확인이&amp;nbsp;가능합니다.&lt;/dd&gt;
+&lt;dt&gt;Blob&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;파일 내용이나 파일 이름에 대한 관련 데이터의 &amp;#8220;blob&amp;#8221;을&amp;nbsp;보여줍니다.&lt;/dd&gt;
+&lt;dt&gt;Blame&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;파일 내용의 주석이나 커밋에 대한 blam을&amp;nbsp;보여줍니다.&lt;/dd&gt;
+&lt;dt&gt;Refs&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;저장소에서 브런치, 리모트, 태그를&amp;nbsp;보여줍니다.&lt;/dd&gt;
+&lt;dt&gt;Status&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;작업 트리내의 파일 상태나 staged/unstaged 변화분 확인과 추적되지 않는 파일의 추가를 좀 더 쉽게&amp;nbsp;보여줍니다.&lt;/dd&gt;
+&lt;dt&gt;Stage&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;stage된 변화분, unstage된 파일의 추적분, 추적되지 않는 파일의 내용에 대한 diff를&amp;nbsp;보여줍니다.&lt;/dd&gt;
+&lt;dt&gt;Stash&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;저장소의 Stash 목록을&amp;nbsp;보여줍니다.&lt;/dd&gt;
+&lt;dt&gt;Grep&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;검색 패턴과 동일한 내용으로 모든 라인과 파일 목록을&amp;nbsp;보여줍니다.&lt;/dd&gt;
+&lt;dt&gt;Pager&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;Stdin으로 입력과 내부 프롬프트에서 입력된 Git 명령어로부터 출력 모두를 보여주는데&amp;nbsp;사용됩니다.&lt;/dd&gt;
+&lt;dt&gt;도움말&amp;nbsp;뷰&lt;/dt&gt;
+&lt;dd&gt;키 바인딩에 대한 간단한 참조를&amp;nbsp;보여줍니다.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3 id="browsing-state-and-user-defined-commands"&gt;Browsing State and User-defined Commands (상태 확인과 사용자 정의&amp;nbsp;명령어)&lt;/h3&gt;
+&lt;p&gt;뷰어는 head와 커밋 &lt;span class="caps"&gt;ID&lt;/span&gt; 모두를 추적하고, 현재 상태를 보여줍니다. 커밋 ID는 커서 라인에 따라가며 다른 커밋을 선택할때마다 강조표시가 변경됩니다. 커밋 ID가 변경되면, diff 뷰에선 열때마다 재로드됩니다. Head ID는 지나온 로그를 보면서 리버전된 것이 나타내는 메인과 로그 뷰를 확인할때&amp;nbsp;사용됩니다.&lt;/p&gt;
+&lt;p&gt;Tig에서 명령을 사용하거나 제공하는 명령을 구성할 수 있습니다. &lt;a href="#3-environment-variables"&gt;환경 변수&lt;/a&gt;의 일부와 &lt;a href="#external-commands"&gt;외부 명령&lt;/a&gt;을 사용할 수 있습니다. 사용자 정의 명령의 경우 다음 변수들을 이용하여 현재 브라우징 상태에 대한 참조 인자로 사용할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;변수 값&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(head)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 보여지는 &lt;code&gt;haed&lt;/code&gt; &lt;span class="caps"&gt;ID&lt;/span&gt;. 기본값은 &lt;code&gt;HEAD&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(commit)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 선택된 커밋 &lt;span class="caps"&gt;ID&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(blob)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 선택된 blob &lt;span class="caps"&gt;ID&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(branch)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 선택된 브런치 이름&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(stash)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 선택된 stash 이름&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(directory)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 트리 뷰에서 보여지는 위치, 루트 디렉토리일 경우, 빈칸으로 표시&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(file)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 선택된 파일&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(lineno)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 선택된 라인 번호. 기본 값은 &lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(ref)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;참조에서 재공되는 blame 또는 정의되지 않았을 경우, &lt;code&gt;HEAD&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(revargs)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;명령 라인에서 리버전 인수 값&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(fileargs)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;명령 라인에서 파일 인수 값&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(cmdlineargs)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;명령 라인에서 다른 옵션 인자 값&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(diffargs)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;diff-options&lt;/code&gt;나 diff 뷰에 대한 &lt;code&gt;TIG_DIFF_OPTS&lt;/code&gt;에서 사용되는 옵션&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(logargs)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Blame 뷰에 대한 &lt;code&gt;blame-options&lt;/code&gt;에서 사용된 옵션&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(mainargs)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;로그 뷰에 대한 &lt;code&gt;log-options&lt;/code&gt;에서 사용된 옵션&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%(prompt)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;인자 값에 대한 프롬프트&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;사용자 정의 명령어&amp;nbsp;예제들:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;마지막 커밋에 대해 amend&amp;nbsp;적용:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic + !git commit --amend
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;크립 보드에서 커밋 &lt;span class="caps"&gt;ID&lt;/span&gt;&amp;nbsp;복사:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic &lt;span class="m"&gt;9&lt;/span&gt; !@sh -c &lt;span class="s2"&gt;&amp;quot;echo -n %(commit) | xclip -selection c&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;리뷰 즁 현재 커밋에서 사용된 노트&amp;nbsp;추가/수정:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic T !git notes edit %&lt;span class="o"&gt;(&lt;/span&gt;commit&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Git 대화형으로 파일 내용에 세밀한 staging 추가&amp;nbsp;입력:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic I !git add -i %&lt;span class="o"&gt;(&lt;/span&gt;file&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;선택된 브런치의 최상위에서 현재 브런치로&amp;nbsp;리배이스:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; refs &lt;span class="m"&gt;3&lt;/span&gt; !git rebase -i %&lt;span class="o"&gt;(&lt;/span&gt;branch&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="title-windows"&gt;Title Windows (제목&amp;nbsp;윈도우)&lt;/h3&gt;
+&lt;p&gt;각 뷰는 뷰 이름에 대한 제목 윈도우를 가집니다. 가능하다면 현재 커밋 ID로도 나태낼 수 있으며, 뷰에서는 다음과 같이&amp;nbsp;위치됩니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; c622eefaa485995320bc743431bae0d497b1d875 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;61&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;1%&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;기본 값으로 현재 뷰의 제목은 굵은 폰트를 사용하여 강조됩니다. 긴 로딩이 있는 뷰의 경우(3초 이상), 로딩이 시작된 시간으로 부터의 시간이 추가되어&amp;nbsp;보여집니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; 77d9e40fbcea3238015aea403e06f61542df9a31 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;779&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;0%&lt;span class="o"&gt;)&lt;/span&gt; 5s
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="3-environment-variables"&gt;3. Environment Variables (환경&amp;nbsp;변수)&lt;/h2&gt;
+&lt;p&gt;Git 인터페이스에 관련된 몇가지 옵션을 환경 옵션을 통해 구성할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;h3 id="configuration-files"&gt;Configuration Files (구성&amp;nbsp;파일)&lt;/h3&gt;
+&lt;p&gt;시작시 Tig는 시스템 전체 구성 파일(기본 값 &lt;code&gt;{sysconfigdir}/tigrc&lt;/code&gt;)을 읽은 다음 사용자 구성 파일(기본 값 &lt;code&gt;~/.tigrc&lt;/code&gt;)을 읽습니다. 이 파일 중 하나의 경로를 다음과 같은 환경 변수를 이용하여 재정의 할 수&amp;nbsp;있습니다:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;TIGRC_USER&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;사용자 구성 파일&amp;nbsp;위치&lt;/dd&gt;
+&lt;dt&gt;&lt;code&gt;TIGRC_SYSTEM&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;시스템 전체 구성 파일&amp;nbsp;위치&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3 id="repository-references"&gt;Repository References (저장소&amp;nbsp;참조)&lt;/h3&gt;
+&lt;p&gt;태그와 브런치 head가 참조하는 커밋은  &lt;code&gt;[&lt;/code&gt;과 &lt;code&gt;]&lt;/code&gt;에 둘러쌓여 참조 이름으로&amp;nbsp;표시됩니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;2006-03-26 19:42 Petr Baudis         &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;cogito-0.17.1&lt;span class="o"&gt;]&lt;/span&gt; Cogito 0.17.1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;브런치가 보여지는 것을 제한하길 원한다면, 보여질 브런치의 이름이 &lt;code&gt;master&lt;/code&gt;이거나 &lt;code&gt;feature/&lt;/code&gt; 로 접두어로 시작하는 경우엔 다음과 같이 변수를 설정할 수&amp;nbsp;있습니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="nv"&gt;TIG_LS_REMOTE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git ls-remote . master feature/*&amp;quot;&lt;/span&gt; tig
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;또는 여러분의 환경에서 영구적으로 변수를 설하여 사용할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;TIG_LS_REMOTE&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;div class="codehilite"&gt;&lt;pre&gt;git ls-remote .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h3 id="diff-options-diff"&gt;Diff options (Diff&amp;nbsp;옵션)&lt;/h3&gt;
+&lt;p&gt;Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜와 같이 보길&amp;nbsp;원한다면:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="nv"&gt;TIG_DIFF_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--relative-date&amp;quot;&lt;/span&gt; tig
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;또는 여러분의 환경에서 영구적으로 변수를 설정하여 사용할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;h2 id="4-default-keybindings"&gt;4. Default Keybindings (기본 키&amp;nbsp;바인딩)&lt;/h2&gt;
+&lt;p&gt;기본 키 바인딩에 대해서는 아래와&amp;nbsp;같습니다.&lt;/p&gt;
+&lt;h3 id="view-switching"&gt;View Switching (뷰&amp;nbsp;전환)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;m&lt;/code&gt; | 메인 뷰로 전환
+&lt;img alt="tig main view" src="http://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; | diff 뷰로 전환
+&lt;img alt="tig diff view" src="http://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;l&lt;/code&gt; | 로그 뷰로 전환
+&lt;img alt="tig log view" src="http://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p&lt;/code&gt; | pager 뷰로 전환
+&lt;img alt="tig parger view" src="http://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t&lt;/code&gt; | 디렉토리 트리 뷰로 전환
+&lt;img alt="tig tree view" src="http://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;f&lt;/code&gt; | 파일 blob 뷰로 전환
+&lt;img alt="tig file blob view" src="http://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g&lt;/code&gt; | grep 뷰로 전환
+&lt;img alt="tig grep view" src="http://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;b&lt;/code&gt; | blame 뷰로 전환
+&lt;img alt="tig blame view" src="http://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; | refs 뷰로 전환
+&lt;img alt="tig refs view" src="http://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; | stash 뷰로 전환
+&lt;img alt="tig stash view" src="http://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;h&lt;/code&gt; | 도움말 뷰로 전환
+&lt;img alt="tig help view" src="http://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; | status 뷰로 전환
+&lt;img alt="tig status view" src="http://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; | stage 뷰로 전환
+&lt;img alt="tig stage view" src="http://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="view-manipulation"&gt;View Manipulation (뷰&amp;nbsp;조작)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;키&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;q&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;뷰를 닫는다. 여러뷰가 열려있다면, 뷰 스택 안에서 이전 뷰로 되돌아가게 된다. 마지막 뷰라면, Tig에서 나오게 됨. &lt;code&gt;Q&lt;/code&gt;를 이용하면 모든 뷰를 닫는다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Enter&lt;/td&gt;
+&lt;td&gt;이 키는 현제보고 있는 뷰에서 &amp;#8220;상황에 맞게(context sensitive)&amp;#8221; 동작합니다. 커밋줄에서의 로그 뷰나 메인 뷰일땐 뷰를 분활하여 커밋 diff를 보여줍니다. diff 뷰에서는 간단하게 한줄을 내리는데 사용됩니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Tab&lt;/td&gt;
+&lt;td&gt;다음 뷰로 전환&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;R&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 뷰를 리로드하거나 새로고침&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;O&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 뷰를 화면에 꽉차도록&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Up&lt;/td&gt;
+&lt;td&gt;&amp;#8220;상황에 맞게(context sensitive)&amp;#8221; 작동하며, 한 줄 위로 이동합니다. 그러나 메인 뷰에서(split이나 전체 화면에서) diff 뷰를 열경우, 메인 뷰에서는 이전 커밋으로 커서를 변경하고 해당 diff 뷰를 보여주게 됩니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Down&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Up&lt;/em&gt;과 동일하며 단지 아래로 내려갑니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;,&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;상위로 이동합니다. 트리 뷰에서는 상위 디렉토리로 이동하게 됩니다. blame 뷰에서는 상위 커밋에 대한 blame가 표시됩니다. 머지의 경우, 상위가 쿼리됩니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="view-specific-actions"&gt;View Specific Actions (뷰 지정&amp;nbsp;동작)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;키&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;u&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;파일 상태를 업데이트 합니다. Status 뷰에서는 다음 커밋에 대해 추가하지 않은 파일이나 stage 변경 파일에 대해서 추가할 수 있습니다.(&lt;code&gt;git-add &amp;lt;filename&amp;gt;&lt;/code&gt;과 동일한 작업입니다.) Stage 뷰에서는 diff 청크 라인에서는 다음 커밋에 대한 청크만 stage 합니다. diff에 표시되는 모든 변화가 diff 청크 라인에서 stage 되지는 않습니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;M&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;git-mergetool(1)&lt;/code&gt;을 실행하여 머지되지 않은 파일을 해결합니다. 주의, 원하는 머지 도구를 사용하기 휘해 초기 구성이 필요할 수 있습니다. 올바르게 작동하는지 확인하세요. &lt;code&gt;git-mergetool(1)&lt;/code&gt;의 맨페이지를 확인하세요.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;!&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Unstage된 변경을 파일에서 체크아웃합니다. 마지막 커밋한 콘텐츠가 포함된 파일을 재설정합니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Stage 싱글 diff 라인&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;@&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Stage 뷰에서 다음 청크로 이동&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;diff 콘텍스트 확장&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;[&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;diff 콘텍스트 축소&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="cursor-navigation"&gt;Cursor Navigation (커서&amp;nbsp;네비게이션)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;키&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;k&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;커서 한 라인 위로 이동&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;j&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;커서 한라인 아래로 이동&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PgUp, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;a&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;커서 한 페이지 위로 이동&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PgDown, Space&lt;/td&gt;
+&lt;td&gt;커서 한 페이지 아래로 이동&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;End&lt;/td&gt;
+&lt;td&gt;마지막 라인으로 점프&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Home&lt;/td&gt;
+&lt;td&gt;첫 라인으로 점프&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="scrolling"&gt;Scrolling&amp;nbsp;(스크롤링)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;키&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Insert&lt;/td&gt;
+&lt;td&gt;뷰 한 라인 위로 스크롤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Delete&lt;/td&gt;
+&lt;td&gt;뷰 한 라인 아래로 스크롤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ScrBack&lt;/td&gt;
+&lt;td&gt;뷰 한 페이지 위로 스크롤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ScrFwd&lt;/td&gt;
+&lt;td&gt;뷰 한 페이지 아래로 스크롤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Left&lt;/td&gt;
+&lt;td&gt;뷰 한 컬럼 왼쪽으로 스크롤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Right&lt;/td&gt;
+&lt;td&gt;뷰 한 컬럼 오른쪽으로 스크롤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;|&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;뷰 첫 칼럼으로 스크롤&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="searching"&gt;Searching&amp;nbsp;(검색)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;키&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;뷰에서 검색. 열려진 프롬프트에서 정규식을 사용해서 찾을 수 있음.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;?&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;뷰에서 뒤에서부터 검색. 이것도 정규식 사용 가능.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 검색 정규식과 동일한 다음 검색&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;N&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;현재 검색 정규식과 동일한 이전 검색&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="misc"&gt;Misc&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;키&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Q&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;나가기&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;C-L&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;스크린 새로고침&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;z&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;모든 백그라운드 로딩 정지. 리버전 로그의 제한 없이 긴 히스토리를 가진 저장소에서 Tig를 사용할때 필요할 수 있습니다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;v&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;버전 확인&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;o&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;옵션 메뉴 열기&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;#&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;라인 번호 on/off&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;D&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;날짜 표시 on/off/short/relative/local&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;A&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Author 표기 on/off/abbreviated/email/email 사용자 이름&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;G&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;리버전 그래프 시각화 on/off&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;~&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;라인 그래프 모드 on/off&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;F&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;참조 표시 on/off (태그, 브런치 이름)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;W&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;diff에 대한 공백 무시 on/off&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;X&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;커밋 &lt;span class="caps"&gt;ID&lt;/span&gt; 표시 on/off&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;모든 diff 대신에 현재 선택한 파일에 대한 diff를 참조하기 위한 파일 필터링 on/off&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;커밋 제목 넘어감에 대한 강조표시 on/off&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;프롬프트 열기. 특정 명령어를 실행할 수 있도록 허용&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;e&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;에디터에서 파일 열기&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="prompt"&gt;Prompt&amp;nbsp;(프롬프트)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;키&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:&amp;lt;number&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;특정 라인 번호로 점프. 예 &lt;code&gt;:80&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:&amp;lt;sha&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;특정 커밋으로 점프. 예 &lt;code&gt;:2f12bcc&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:&amp;lt;x&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;일치하는 키 바인딩 실행. 예 &lt;code&gt;:q&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:!&amp;lt;command&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Pager 내에서 시스템 명령어 실행. 예 &lt;code&gt;:!git log -p&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:&amp;lt;action&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Tig 명령 실행. 예 &lt;code&gt;:edit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:save-display &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;file&amp;gt;&lt;/code&gt;에서 현재 화면 저장&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:save-options &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;file&amp;gt;&lt;/code&gt;에서 현재 옵션 저장&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:script &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;file&amp;gt;&lt;/code&gt;로부터 명령어 실행&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:exec &amp;lt;flags&amp;gt;&amp;lt;args...&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;flags&amp;gt;&lt;/code&gt;에 정의된 확장 사용자 정의 명령 옵션과 &lt;code&gt;&amp;lt;args&amp;gt;&lt;/code&gt; 사용하여 명령 실행&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="external-commands"&gt;External Commands (외부&amp;nbsp;명령어)&lt;/h3&gt;
+&lt;p&gt;사용자에 따라 외부 명령어가 더 필요한 경우, 쉽게 스크립트다 프로그램을 사용할 수 있는 방법을 제공합니다. 현재 커밋 ID로 키를 연결하고 현재 보여지는 상태에서 정보를 사용할 수 있습니다. Tig에서 기본 등록되어있는 확장&amp;nbsp;명령어:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Keymap&lt;/th&gt;
+&lt;th&gt;키&lt;/th&gt;
+&lt;th&gt;동작&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;main&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;C&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;git cherry-pick %(commit)&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;status&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;C&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;generic&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;C&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;git gc&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="5-revision-specification"&gt;5. Revision Specification (리버전&amp;nbsp;사항)&lt;/h2&gt;
+&lt;p&gt;이 세션에서는 리버전을 표시하거나 볼 수 있는 내용을 제한할 수 있도록 설정하는 방법에 대해서 설명합니다. Tig에서는 구문 분석을 하지 않습니다. 리버전 옵션에 대한 자세한 설명은 Git 메뉴얼 페이지에서 확인하십시오. 연관된 맨페이지는 &lt;code&gt;git-log(1)&lt;/code&gt;을 기준으로 &lt;code&gt;git-diff(1)&lt;/code&gt;과 &lt;code&gt;git-rev-list(1)&lt;/code&gt;입니다.&lt;/p&gt;
+&lt;p&gt;설정 가능한 옵션을 사용하여 Git과 상호 작용을 이 세션에서 설명합니다. 예를 들어 &lt;a href="#diff-options-diff"&gt;diff 옵션&lt;/a&gt;에 대한 세션에서 설명된 환경 변수를 사용하여 구성할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;h3 id="limit-by-path-name"&gt;Limit by Path Name (패치 이름&amp;nbsp;제한)&lt;/h3&gt;
+&lt;p&gt;특정 파일 (또는 여러 파일) 변경에 대해서만 확인하고 싶다면 다음과 같이 목록으로&amp;nbsp;나타냅니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig Makefile README
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Tig의 하위 명령 또는 태그 이름과 같은 저장소 참조에서 발생할 수 있는 모호성을 방지하기 위해 Git 옵션의 경우 &lt;code&gt;--&lt;/code&gt;를 사용하여 구분해야됩니다. &lt;code&gt;states&lt;/code&gt;라는 이름을 가진 파일이 있다면, &lt;code&gt;status&lt;/code&gt; 하위 명령과 충돌을 일으킬꺼니 다음과 같이&amp;nbsp;사용해야합니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig -- status
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="limit-by-date-or-number"&gt;Limit by Date or Number (날짜나 숫자&amp;nbsp;제한)&lt;/h3&gt;
+&lt;p&gt;Git과의 상호작용 속도를 올리기 위해 로그와 메인 뷰에서 보여지는 커밋의 수를 제한할 수 있습니다. 예를 들어, 날짜로 제한을 걸 경우엔 &lt;code&gt;--since=1.month&lt;/code&gt;, 커밋 수로 제한을 걸 경우엔 &lt;code&gt;-n400&lt;/code&gt;와 같이&amp;nbsp;사용합니다.&lt;/p&gt;
+&lt;p&gt;만약 두 날짜 사이에 발생한 변경분에 대해서 확인하고&amp;nbsp;싶다면:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --after&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;May 5th&amp;quot;&lt;/span&gt; --before&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2006-05-16 15:44&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;주의, 공간을 포함하는 날짜를 사용하지 않는다면 &lt;code&gt;.&lt;/code&gt;를 이용하여 나타낼 수 있습니다. 예, &lt;code&gt;--after=May.5th&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="limiting-by-commit-ranges"&gt;Limiting by Commit Ranges (커밋 범위&amp;nbsp;제한)&lt;/h3&gt;
+&lt;p&gt;대안으로 &amp;#8220;&lt;code&gt;tag-1.0&lt;/code&gt;과 &lt;code&gt;tag-2.0&lt;/code&gt; 사이의 모든 커밋&amp;#8221;과 같은 특정 범위로 제안할 수 있습니다. 예를&amp;nbsp;들면:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig tag-1.0..tag-2.0
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;원격 브런치로 푸시되지 않은 커밋의 검색 제한은 다음과 같은 방법으로 가능합니다. &lt;code&gt;origin&lt;/code&gt;을 업스트림 원격 브런치고 가정하고&amp;nbsp;사용한다면:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig origin..HEAD
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;원격 브런치에서 부시된 내용들을 나열 합니다. 선택적으로 &lt;code&gt;HEAD&lt;/code&gt;는 생략될 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;h3 id="limiting-by-reachability"&gt;Limiting by Reachability (도달 가능&amp;nbsp;제한)&lt;/h3&gt;
+&lt;p&gt;Git 인터프리트에서는 &amp;#8220;tag-1.0&amp;#8230;tag-2.0&amp;#8221;을 사용하는 경우, &amp;#8220;&lt;code&gt;tag-1.0&lt;/code&gt;를 제외하고 &lt;code&gt;tag-2.0&lt;/code&gt;까지의 모든 커밋&amp;#8221;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;p&gt;이 방법으로 다음 미리 커밋을 지정하려는&amp;nbsp;경우:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig tag-2.0 ^tag-1.0
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;부정 연산자로 &lt;code&gt;^&lt;/code&gt;를 생각할 수 있습니다. 이 대체 문법을 사용하면 위의 어려 브런치의 cut off를 지정하여 커밋 브런치를 없에버릴 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;h3 id="combining-revisions-specification"&gt;Combining Revisions Specification (변경 사항&amp;nbsp;연결)&lt;/h3&gt;
+&lt;p&gt;리버전 옵션은 다음과 같이 연결하여 사용할 수 있습니다. &amp;#8220;&lt;code&gt;Documentation/&lt;/code&gt; 디렉토리에 있는 파일의 변경 사항들을 마지막달 20개 커밋까지 보여다오.&amp;#8221;를 다음과 같이 나타낼 수&amp;nbsp;있습니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --since&lt;span class="o"&gt;=&lt;/span&gt;1.month -n20 -- Documentation/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="examining-all-repository-references"&gt;Examining All Repository References (모든 저장소 참조&amp;nbsp;검사)&lt;/h3&gt;
+&lt;p&gt;일부 경우엔 저장소에 대한 모든 참조를 걸쳐서 변화를 조회하는 것이 편할 수 있습니다. 다음 예제는 &amp;#8220;이 저장소의 개발 라인에서 지난주내 특정파일이 변경되었는지&amp;#8221;에 대해 묻는 것입니다. 다음 명령으로&amp;nbsp;가능합니다:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --all --since&lt;span class="o"&gt;=&lt;/span&gt;1.week -- Makefile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="6-more-information"&gt;6. More Information (정보를 더&amp;nbsp;원하시면)&lt;/h2&gt;
+&lt;p&gt;Tig &lt;a href="http://jonas.nitro.dk/tig"&gt;홈페이지&lt;/a&gt;나 &lt;a href="https://github.com/jonas/tig"&gt;메인 Git 저장소&lt;/a&gt;를 방문하여 새로운 릴리즈 내용, 버그 리포트 내용, 기능 요청에 대한 정보를 얻어가시길&amp;nbsp;바랍니다.&lt;/p&gt;
+&lt;h2 id="7-copyright"&gt;7. Copyright&amp;nbsp;(저작권)&lt;/h2&gt;
+&lt;p&gt;Copyright (c) 2006-2014 Jonas Fonseca &lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#106;&amp;#111;&amp;#110;&amp;#97;&amp;#115;&amp;#46;&amp;#102;&amp;#111;&amp;#110;&amp;#115;&amp;#101;&amp;#99;&amp;#97;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#106;&amp;#111;&amp;#110;&amp;#97;&amp;#115;&amp;#46;&amp;#102;&amp;#111;&amp;#110;&amp;#115;&amp;#101;&amp;#99;&amp;#97;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This program is free software; you can redistribute it and/or modify it under the terms of the &lt;span class="caps"&gt;GNU&lt;/span&gt; General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later&amp;nbsp;version.&lt;/p&gt;
+&lt;h2 id="8-see-also"&gt;8. See Also&amp;nbsp;(더보기)&lt;/h2&gt;
+&lt;p&gt;맨&amp;nbsp;페이지:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://jonas.nitro.dk/tig/tig.1.html"&gt;tig(1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://jonas.nitro.dk/tig/tigrc.5.html"&gt;tigrc(5)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 10 Feb 2016 02:08:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-02-10:2016/02/10/tig-manual/</guid><category>tig</category></item><item><title>un~ 너는 뭐니?</title><link>http://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/</link><description>&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://vimhelp.appspot.com/vim_faq.txt.html#faq-7.2"&gt;Vimhelp -&amp;nbsp;faq-7.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;수정하고 저장할때마다 &lt;code&gt;un~&lt;/code&gt; 접미사가 붙은 파일이 생간다는 이야기에 대한 내용이다. undo 기능을 사용하기위해서 vim에서 사용하는 파일이라고 한다. 그래서 열었더니 이상한 것들만&amp;nbsp;보여줬구나&amp;#8230;&lt;/p&gt;
 &lt;p&gt;끄는 방법은 &lt;code&gt;:set noundofile&lt;/code&gt;을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은&amp;nbsp;지워야겠지만&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 03 Feb 2016 00:02:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-02-03:2016/02/03/un-너는-뭐니/</guid><category>vi</category><category>undo</category><category>vimrc</category></item><item><title>unattended-upgrade 써보자</title><link>http://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,
@@ -11,14 +728,14 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html"&gt;Ubuntu manpage -&amp;nbsp;unattended-upgrade&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;사용법&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo unattended-upgrade
+&lt;h3 id="_1"&gt;사용법&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ sudo unattended-upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를&amp;nbsp;하면된다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo unattended-upgrade --dry-run
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ sudo unattended-upgrade --dry-run
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -68,43 +785,43 @@ mariadb를 사용하는게 정신 건강에&amp;nbsp;좋은&amp;#8230;&lt;/p&gt;
 &lt;/table&gt;
 &lt;p&gt;간단히 하자.
 go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올&amp;nbsp;것이다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;which go
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ which go
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex1_1" src="http://ujuc.github.io/img/2016-01-26_ex1_1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;요놈을 안나오게&amp;nbsp;해보자.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;which go 1&amp;gt; /dev/null
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ which go 1&amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex1_2" src="http://ujuc.github.io/img/2016-01-26_ex1_2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;오~~~&lt;/p&gt;
 &lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;#8230; 이건 설치가 되어있으니&amp;#8230;&amp;nbsp;없는걸로&amp;#8230;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;which rbenv
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ which rbenv
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex2_1" src="http://ujuc.github.io/img/2016-01-26_ex2_1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을&amp;nbsp;사용하면&amp;#8230;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;which rbenv 1&amp;gt; /dev/null
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ which rbenv 1&amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex2_2" src="http://ujuc.github.io/img/2016-01-26_ex2_2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;음&amp;#8230; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸&amp;nbsp;막으라했더니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;그럼 Python에서는 어디로&amp;nbsp;나올까?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
                             &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;check_rbenv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;음?? 암것도&amp;nbsp;안나온다&amp;#8230;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;256&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -120,24 +837,24 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;#8230; 그정도면 1시간동안
 작업한 것에 대한 내용은&amp;nbsp;될듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 27 Jan 2016 00:57:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-01-27:2016/01/27/stderr-check-in-zshell/</guid><category>zsh</category><category>operation</category></item><item><title>`_vim_files: function definition files net found` on zsh</title><link>http://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</link><description>&lt;p&gt;아&amp;#8230; 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게&amp;nbsp;해야되지.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="error!" src="http://ujuc.github.io/img/2016-01-16_error.png" /&gt;&lt;/p&gt;
-&lt;h3&gt;원인&lt;/h3&gt;
+&lt;h3 id="_1"&gt;원인&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;zcompdump&lt;/code&gt; 때문이라고 하고, 이건 매번 문제가&amp;nbsp;있나보다.ㅡ.ㅡ;;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/robbyrussell/oh-my-zsh/issues/518"&gt;github/robbyrusell/oh-my-zsh/issues/518&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;해결방법&lt;/h3&gt;
+&lt;h3 id="_2"&gt;해결방법&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;rm ~/.zcompdump&lt;/code&gt;를 삭제하면 된다고&amp;#8230;
 그리고 꼭 하고 난뒤에 &lt;code&gt;exec zsh&lt;/code&gt;를 하도록&amp;nbsp;하자.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 16 Jan 2016 22:53:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-01-16:2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</guid><category>dev</category><category>zsh</category><category>vim</category></item><item><title>Git flow, GitHub flow, GitLab flow</title><link>http://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/</link><description>&lt;p&gt;회사에서  &lt;code&gt;git&lt;/code&gt;을 가지고서 버전관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. 
 물론 새로운 프로젝트를 진행하면서 어떤 방법으로 진행하는 것이 맞는 것인지도 필요하기도 했고, 그러다가 &lt;a href=""&gt;이상한 모임 Slack&lt;/a&gt;에서 관련 이야기가 나오면서 커밋을 하기위한 방법론 중 하나인 &lt;code&gt;git-flow&lt;/code&gt;의 종류가 3가지나 된다는 것을 보고 이놈들의 다른 점이 무엇인지 어떤 방법에서 편한 것인지에 대한 내용을 확인하고&amp;nbsp;싶어졌다.&lt;/p&gt;
-&lt;h2&gt;&lt;a href="https://github.com/nvie/gitflow"&gt;Git&amp;nbsp;Flow&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="git-flow"&gt;&lt;a href="https://github.com/nvie/gitflow"&gt;Git&amp;nbsp;Flow&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;Vincent Driessen이 말한 branching model&lt;/a&gt;를 구현한 Git 확장 모듈이다. - &lt;a href="https://github.com/nvie/gitflow"&gt;nvie/gitflw&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;기본 브랜치는 5가지를 이야기한다. &lt;code&gt;feature &amp;gt; develop &amp;gt; release &amp;gt; hotfix &amp;gt; master&lt;/code&gt; 브랜치가 존재하며, 머지 순서는 앞에서 뒤로 진행된다. &lt;code&gt;release&lt;/code&gt; 브랜치와 &lt;code&gt;hotfix&lt;/code&gt; 브랜치의 경우, &lt;code&gt;develop&lt;/code&gt; 브랜치의 오른쪽에 존재하기에 모두 &lt;code&gt;develop&lt;/code&gt; 브랜치도 머지를 하도록 구성이&amp;nbsp;되어있다.&lt;/p&gt;
 &lt;p&gt;Vincent Driessen은 관련하여 스크림트로 명령을 구성해놨으며, 그냥 설치를 하여 CLI에서 명령으로 작업을 하여도 되고, &lt;span class="caps"&gt;GUI&lt;/span&gt; 툴들에서 기본 내장 git-flow 명령이나 플러그인을 설치하여 작업을 진행할 수 있도록 보편화되어잇는 브런칭&amp;nbsp;모델이다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="http://nvie.com/img/git-model@2x.png" /&gt;&lt;/p&gt;
-&lt;h3&gt;구조와&amp;nbsp;흐름&lt;/h3&gt;
+&lt;h3 id="_1"&gt;구조와&amp;nbsp;흐름&lt;/h3&gt;
 &lt;p&gt;가장 중심이되는 브랜치는 &lt;code&gt;master&lt;/code&gt;랑 &lt;code&gt;develop&lt;/code&gt; 브랜치이며, 이 두개의 브랜치는 무조건 있어야된다고 보면된다. 이름은 바뀔수 있다만 왠만해서는 변경하지 않고 진행하도록 하자. Git도 Production에서 사용하는 브랜치는 &lt;code&gt;master&lt;/code&gt;를 사용하게 되니 관련된 부분을 변경하면 새로운 사람이 왔을때 스터디 커브가 존재할 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;머지된 &lt;code&gt;feature&lt;/code&gt;, &lt;code&gt;release&lt;/code&gt;, &lt;code&gt;hotfix&lt;/code&gt; 브랜치는 삭제하도록&amp;nbsp;한다.&lt;/p&gt;
-&lt;h4&gt;Feature&amp;nbsp;브랜치&lt;/h4&gt;
+&lt;h4 id="feature"&gt;Feature&amp;nbsp;브랜치&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;브랜치 나오는 곳 : &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;브랜치가 들어가는 곳 : &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
@@ -146,7 +863,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;p&gt;새로운 기능을 추가하는 브랜치이다.
 &lt;code&gt;feature&lt;/code&gt;브랜치는 &lt;code&gt;origin&lt;/code&gt;에는 반영하지 않고, 개발자의 reop애만 존재하도록&amp;nbsp;한다.&lt;/p&gt;
 &lt;p&gt;여기서 머지를 할때, &lt;code&gt;--no-ff&lt;/code&gt; 옵션을 이용하여 브랜치에서 머지가 되었음을 git 기록에 남겨두도록 한다. 이렇게되면 나중에 히스토리 관리가 어려워지는 부분이 존제한다고 한다만&amp;#8230; 그것을 확인할 수 있는 방법들은 많으니&amp;nbsp;뭐&amp;#8230;&lt;/p&gt;
-&lt;h4&gt;Release&amp;nbsp;브랜치&lt;/h4&gt;
+&lt;h4 id="release"&gt;Release&amp;nbsp;브랜치&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;브랜치 나오는 곳 : &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;브랜치가 들어가는 곳 : &lt;code&gt;develop&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
@@ -156,7 +873,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 지금까지 한 기능을 묶어 &lt;code&gt;develop&lt;/code&gt; 브랜치에서 &lt;code&gt;release&lt;/code&gt; 브랜치를 따내고, &lt;code&gt;develop&lt;/code&gt; 브랜치에서는 다음번 릴리즈에서 사용할 기능을 추가한다.
 &lt;code&gt;release&lt;/code&gt; 브랜치에서는 버그픽스에 대한 부분만 커밋하게되고, &lt;strong&gt;릴리즈가 준비되었다고 생각하면&lt;/strong&gt; &lt;code&gt;master&lt;/code&gt;로 머지를 진행한다. (이때도 &lt;code&gt;--no-ff&lt;/code&gt; 옵션을 이용하여 머지하였음을 남긴다.) 
 &lt;code&gt;master&lt;/code&gt;로 머지 후 &lt;code&gt;tag&lt;/code&gt; 명령을 이용하여 릴리즈 버전에 대해 명시를 하고, &lt;code&gt;-s&lt;/code&gt; 나 &lt;code&gt;-u &amp;lt;key&amp;gt;&lt;/code&gt; 옵션을 이용하여 머지한 사람의 정보를 남겨두도록 한다. 그런뒤 &lt;code&gt;develop&lt;/code&gt; 브랜치로 머지하여, &lt;code&gt;release&lt;/code&gt; 브랜치에서 수정된 내용이 &lt;code&gt;develop&lt;/code&gt; 브랜치에 반영이되도록&amp;nbsp;한다.&lt;/p&gt;
-&lt;h4&gt;Hotfix&amp;nbsp;브랜치&lt;/h4&gt;
+&lt;h4 id="hotfix"&gt;Hotfix&amp;nbsp;브랜치&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;브랜치 나오는 곳 : &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;브랜치가 들어가는 곳 : &lt;code&gt;develop&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
@@ -164,17 +881,17 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;/ul&gt;
 &lt;p&gt;Production에서 발생한 버그들은 전부 여기로&amp;#8230; 수정 끝나면, &lt;code&gt;develop&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt; 브랜치에 반영하고, &lt;code&gt;master&lt;/code&gt;에 다가는 &lt;code&gt;tag&lt;/code&gt; 를 추가해준다.
 만약 &lt;code&gt;release&lt;/code&gt; 브랜치가 존재한다면, &lt;code&gt;release&lt;/code&gt; 브랜치에 &lt;code&gt;hotfix&lt;/code&gt; 브랜치를 머지하여 릴리즈될때 반영이 될 수 있도록&amp;nbsp;한다.&lt;/p&gt;
-&lt;h3&gt;장점&lt;/h3&gt;
+&lt;h3 id="_2"&gt;장점&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;명령어가&amp;nbsp;나와있다.&lt;/li&gt;
 &lt;li&gt;왠만한 에디터와 IDE에는 플러그인으로&amp;nbsp;존재한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;단점&lt;/h3&gt;
+&lt;h3 id="_3"&gt;단점&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;브랜치가 많아&amp;nbsp;복잡하다.&lt;/li&gt;
 &lt;li&gt;안쓰는 브랜치가 있다. 그리고 몇몇 브랜치는 애매한&amp;nbsp;포지션이다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;참고&lt;/h3&gt;
+&lt;h3 id="_4"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;A successful Git branching model - Vincent&amp;nbsp;Driessen&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&amp;nbsp;cheatsheet&lt;/a&gt;&lt;/li&gt;
@@ -182,32 +899,32 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;li&gt;&lt;a href="http://huns.me/development/1131"&gt;gifflow, 쉬운 git brunch 관리 - 개발왕&amp;nbsp;김코딩&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://ohgyun.com/402"&gt;git 브랜칭 전략과 git flow -&amp;nbsp;꿀벌개발일지&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;GitHub&amp;nbsp;Flow&lt;/h2&gt;
+&lt;h2 id="github-flow"&gt;GitHub&amp;nbsp;Flow&lt;/h2&gt;
 &lt;p&gt;Scott chacon은 &lt;a href="http://scottchacon.com/2011/08/31/github-flow.html"&gt;GitHub Flow&lt;/a&gt;에서 Git flow가 좋은 방식이긴 하지만 GitHub에서 사용하기에는 복잡하다 여겨 사용하지 않고 &lt;code&gt;GitHub Flow&lt;/code&gt;라는 내용으로 사용을 하고 있다고 한다. 그리고 &lt;strong&gt;자동화의 계념이 들어가 있다는 점&lt;/strong&gt;. 자동화가 안되어있는 곳에서는 수동으로 관련 작업을 진행하면&amp;nbsp;된다.&lt;/p&gt;
 &lt;p&gt;흐름이 단순한만큼 룰도 단순하다. &lt;code&gt;master&lt;/code&gt; 브랜치에대한 &lt;code&gt;role&lt;/code&gt;만 정확하다면 나머지 브랜치들에는 관여를 하지 않는다. 그리고 &lt;code&gt;pull request&lt;/code&gt; 기능을 사용하도록 권장을&amp;nbsp;한다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shoma2da/20151104/20151104223339.png" /&gt;&lt;/p&gt;
-&lt;h3&gt;특징&lt;/h3&gt;
+&lt;h3 id="_5"&gt;특징&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;release&lt;/code&gt; 브랜치가 명확하지 않는 시스템에서 사용에 맞게&amp;nbsp;되어있다. &lt;/li&gt;
 &lt;li&gt;여기에는 GitHub의 서비스 특성상. 릴리즈라는 개념이 없는 서비스를 진행하고 있어서 그런것으로 보이며, 웹 서비스들이 릴리즈라는 계념이 없이지고 있으니 사용하기 편할 것으로&amp;nbsp;보인다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;hotfix&lt;/code&gt;와 가장 작은 기능을 구분하지 않는다. 어짜피 둘다 개발자가 수정해야되는 일중에 하나이다. 단지 우선 순위가 어디가 높냐라는&amp;nbsp;단계이다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;그럼 어떻게 사용할&amp;nbsp;것인가?&lt;/h3&gt;
-&lt;h4&gt;1. &lt;code&gt;master&lt;/code&gt; 브랜치는 어떤 때든 배포가&amp;nbsp;가능하다.&lt;/h4&gt;
+&lt;h3 id="_6"&gt;그럼 어떻게 사용할&amp;nbsp;것인가?&lt;/h3&gt;
+&lt;h4 id="1-master"&gt;1. &lt;code&gt;master&lt;/code&gt; 브랜치는 어떤 때든 배포가&amp;nbsp;가능하다.&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;master&lt;/code&gt; 브랜치는 항상 최신의 상태이며, stable 상태로 Product에 배포되는 브랜치이다. 그리고 이 브랜치에 대해서는 업격한 &lt;em&gt;role&lt;/em&gt;를 주어&amp;nbsp;사용한다. &lt;/p&gt;
-&lt;h4&gt;2. 새로운 일을 시작하기 위해 브랜치를 &lt;code&gt;master&lt;/code&gt;에서 딴다면 이름은 어떤일을 하는지 명확하게&amp;nbsp;작성한다.&lt;/h4&gt;
+&lt;h4 id="2-master"&gt;2. 새로운 일을 시작하기 위해 브랜치를 &lt;code&gt;master&lt;/code&gt;에서 딴다면 이름은 어떤일을 하는지 명확하게&amp;nbsp;작성한다.&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;git flow&lt;/code&gt; 와는 다르게 &lt;code&gt;feature&lt;/code&gt; 브랜치나 &lt;code&gt;develop&lt;/code&gt; 브랜치가 존재하지 않는다. 그렇기에 새로운 기능을 추가하거나 버그를 해결하기 위한 브랜치의 이름은 자세하게 어떤 일을 하고 있는지에 대해서 작성해주도록 하자. Github 페이지에서 보면 어떤 일들이 진행되고 있는지를 확인하기 쉽게&amp;nbsp;말이다.&lt;/p&gt;
-&lt;h4&gt;3. 원격지 브랜치로 수시로 push를&amp;nbsp;한다.&lt;/h4&gt;
+&lt;h4 id="3-push"&gt;3. 원격지 브랜치로 수시로 push를&amp;nbsp;한다.&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;git flow&lt;/code&gt; 와 가장 상반되는 방식이다. 항상 원격지에 자신이 하고 있는 일들을 올려 다른 사람들도 확인할 수 있도록 해준다.
 이 방법의 좋은점은 하드웨어에 문제가 발생하여 작업하던 부분이 날라가더라고 원격지에 있는 소스를 받아서 작업을 할 수 있도록&amp;nbsp;해준다.&lt;/p&gt;
-&lt;h4&gt;4. 피드백이나 도움이 필요할때, 그리고 머징 준비가 완료되었을때는 &lt;code&gt;pull request&lt;/code&gt;를&amp;nbsp;생성한다.&lt;/h4&gt;
+&lt;h4 id="4-pull-request"&gt;4. 피드백이나 도움이 필요할때, 그리고 머징 준비가 완료되었을때는 &lt;code&gt;pull request&lt;/code&gt;를&amp;nbsp;생성한다.&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;pull request&lt;/code&gt; 는 코드 리뷰를 도와주는 시스템이다. 
 그렇기에 이것을 이용하여 자신의 코드를 공유하고, 리뷰를 받을 수 있도록 한다. 물론 머지가 준비 완료되어 &lt;code&gt;master&lt;/code&gt; 브랜치로 반영을 요구하여도&amp;nbsp;된다.&lt;/p&gt;
-&lt;h4&gt;5. 기능에 대한 리뷰와 사인이 끝난후 &lt;code&gt;master&lt;/code&gt;로&amp;nbsp;머지한다.&lt;/h4&gt;
+&lt;h4 id="5-master"&gt;5. 기능에 대한 리뷰와 사인이 끝난후 &lt;code&gt;master&lt;/code&gt;로&amp;nbsp;머지한다.&lt;/h4&gt;
 &lt;p&gt;곧장 product로 반영이될 기능이기에 이해관계가 연결된 사람들과 충분한 논의 이후 반영하도록&amp;nbsp;한다.&lt;/p&gt;
-&lt;h4&gt;6. &lt;code&gt;master&lt;/code&gt;로 머지되고 푸시되었을때는 즉시 배포되어야&amp;nbsp;한다.&lt;/h4&gt;
+&lt;h4 id="6-master"&gt;6. &lt;code&gt;master&lt;/code&gt;로 머지되고 푸시되었을때는 즉시 배포되어야&amp;nbsp;한다.&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;GitHub Flow&lt;/strong&gt;의 핵심인듯한 &lt;code&gt;master&lt;/code&gt;로 머지가 일어나면 &lt;code&gt;hubot&lt;/code&gt;을 이용하여 자동으로 배포가 되도록 설정&amp;nbsp;해놓는다.&lt;/p&gt;
-&lt;h3&gt;장점&lt;/h3&gt;
+&lt;h3 id="_7"&gt;장점&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;브랜치 전략이&amp;nbsp;단순하다.&lt;/li&gt;
 &lt;li&gt;처음 git을 접하는 사람에게 정말 좋은 시스템이&amp;nbsp;된다.&lt;/li&gt;
@@ -216,13 +933,13 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;li&gt;CI가 필수적이며, 배포는 자동으로 진행할 수&amp;nbsp;있다.&lt;/li&gt;
 &lt;li&gt;Github가 작업을 할때 이렇게 작업하고&amp;nbsp;있다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;단점&lt;/h3&gt;
+&lt;h3 id="_8"&gt;단점&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;CI와 배포 자동화가 되어있지 않은 시스템에서는 사람이 관련된 업무를&amp;nbsp;진행한다.&lt;/li&gt;
 &lt;li&gt;많은 것들이 올라오기 시작하면&amp;#8230; 그때부터는&amp;nbsp;헬이&amp;#8230;&lt;/li&gt;
 &lt;li&gt;너무 간단하니&amp;#8230; 이거 단점이 있나&amp;nbsp;십다&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;참고&lt;/h3&gt;
+&lt;h3 id="_9"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://scottchacon.com/2011/08/31/github-flow.html"&gt;GitHub&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://guides.github.com/introduction/flow/"&gt;Understanding the GitHub&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
@@ -231,25 +948,25 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;li&gt;&lt;a href="http://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/"&gt;Git Flow vs Github&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/blog/1557-github-flow-in-the-browser"&gt;GitHub Flow in teh&amp;nbsp;Browser&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;GitLab&amp;nbsp;Flow&lt;/h2&gt;
+&lt;h2 id="gitlab-flow"&gt;GitLab&amp;nbsp;Flow&lt;/h2&gt;
 &lt;p&gt;Github에서 말하는 flow는 너무나도 간단하여 배포, 환경구성, 릴리즈, 통합에 대한 이슈를 남겨둔 것이 많았다. 그것을 보안하기위해 GitLab에서 관련 내용들을 추가적으로 덧붙여 설명한것을&amp;nbsp;일컷는다.&lt;/p&gt;
-&lt;h3&gt;Production branch with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;h3 id="production-branch-with-gitlab-flow"&gt;Production branch with GitLab&amp;nbsp;flow&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/production_branch.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;production&lt;/code&gt; 브랜치가 존재하여 커밋한 내용들을 일방적으로 디플로이를 하는 형태. GitHub에서 브랜치 하나를 더 구성하여 사용하는 이것도 조금은 간단한 구성이다.
 이렇게 구성하면 배포 자동화가 되어있지않은 구성에서 어떻게 배포를 진행할 것인가에 대한 내용을 담았다. 물론 이걸로 부족하여 다음의 것도&amp;nbsp;추가되었다.&lt;/p&gt;
-&lt;h3&gt;Environment branches with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;h3 id="environment-branches-with-gitlab-flow"&gt;Environment branches with GitLab&amp;nbsp;flow&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/environment_branches.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;master&lt;/code&gt;와 &lt;code&gt;production&lt;/code&gt; 사이에 &lt;code&gt;pre-production&lt;/code&gt;을 두어 개발한 내용을 곧장 반영하지 않고 시간을 두고 반영을 하는 것을 말한다. Staging을위한 공간을&amp;nbsp;만드는거지&amp;#8230;&lt;/p&gt;
-&lt;h3&gt;Release branches with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;h3 id="release-branches-with-gitlab-flow"&gt;Release branches with GitLab&amp;nbsp;flow&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/release_branches.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;release&lt;/code&gt;한 브랜치를 두고서 보안상 문제가 발생한 것이나 백포트를 위해서 작업을 할 경우, cherry-pick을 이용해서 작업을 진행할 수 도 있다. 아니면 해당 릴리즈에서 발생하는 버그들을 묶어서 수정하는 방식을 진행하며된다. 일반적으로 말하는 &amp;#8216;upstream first&amp;#8217; 정책이라고&amp;nbsp;보면된다.&lt;/p&gt;
-&lt;h3&gt;Merge/pull requests with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;h3 id="mergepull-requests-with-gitlab-flow"&gt;Merge/pull requests with GitLab&amp;nbsp;flow&lt;/h3&gt;
 &lt;p&gt;Pull request를 사용하는 방법이다. GitHub Flow에서 하는 방법과 동일하다. 원문은 길게 적어놨는데&amp;#8230;&amp;nbsp;딱히&amp;#8230;&lt;/p&gt;
-&lt;h3&gt;Issues with GitLab&amp;nbsp;flow&lt;/h3&gt;
+&lt;h3 id="issues-with-gitlab-flow"&gt;Issues with GitLab&amp;nbsp;flow&lt;/h3&gt;
 &lt;p&gt;Issue 트러커와 연결하여 사용하는 것을 말한다. 긴~~ 시간동안 작업을 할 경우, 이슈를 생성하여 작업을 진행하는 것으로&amp;#8230; 브랜치 이름에는 이슈번호를 적어 작업중인 이슈가 어떤 것인지를 명확하게 해주는 것이 필요하다.
 작업이 끝나거나 코드 공유가 필요한 시점이면 Merge/pull requsts를&amp;nbsp;보낸다. &lt;/p&gt;
 &lt;p&gt;다적을려고 봤더니 그냥 GitLab 사용법에 대해서만 추가적으로 말하고 있어서 이쯤적고 영어로 읽자. 영어가 어렯다면&amp;#8230; 일본어를 번역해서 읽으면 좀 더 쉽게 읽을 수&amp;nbsp;있다.&lt;/p&gt;
-&lt;h3&gt;참고&lt;/h3&gt;
+&lt;h3 id="_10"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://about.gitlab.com/2014/09/29/gitlab-flow/"&gt;GitLab&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://postd.cc/gitlab-flow/"&gt;GitLab&amp;nbsp;flowから学ぶワークフローの実践&lt;/a&gt;&lt;/li&gt;
@@ -257,11 +974,11 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;li&gt;&lt;a href="http://www.cloudsoftcorp.com/blog/2015/01/gitlab-flow-ftw/"&gt;GitLab Flow &lt;span class="caps"&gt;FTW&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://shoma2da.hatenablog.com/entry/2015/11/04/233534"&gt;アプリ開発にはGitlab&amp;nbsp;flowが合うと思います&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;끝&lt;/h2&gt;
+&lt;h2 id="_11"&gt;끝&lt;/h2&gt;
 &lt;p&gt;하&amp;#8230; 길었다. 모든 자료는 공식적으로 첫번째로 작성된 포스트의 내용을 가져와 작성하였다. 그쪽의 내용이 가장 먼저 말한사람의 생각이 들어가 있다고 생각했기때문이다. 그리고 찾으면서 발견한 글들의 경우, 참고 사이트로 작성을 해놨으니 그것을 확인하면&amp;nbsp;될듯. &lt;/p&gt;
 &lt;p&gt;Git flow가 편한줄 알았더니&amp;#8230; GitHub나 GitLab을 사용하고 있다면, 굳이 Git flow가 아니더라도 괜찮겠다는 생각이드는데 딱히 OpenSource를 하는 그룹에서도 Git flow를 사용하기보다는 자신의 코드가 들어가있는 플랫폼을 가지고서 작업을 하는 경우가 많아서&amp;#8230; 뭐. 업스트림에 작업을 할 수 있는 사람이&amp;nbsp;한정되어있으니까&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이런 방법들을 어떻게 사용해보는 것이 좋을련지를 고민해보는 것도 필요하지 않을까 한다. 간단하게 하는 방법도 있고 하니까.. 그리고 내꺼나 차근차근 구축해&amp;nbsp;나가야되는데&amp;#8230; &lt;/p&gt;
-&lt;h3&gt;참고&lt;/h3&gt;
+&lt;h3 id="_12"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://gist.github.com/nzakas/5511916"&gt;Using GitHub inside a company -&amp;nbsp;Gist&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.nczonline.net/blog/2013/05/21/github-workflows-inside-of-a-company/"&gt;GitHub workflows inside of a&amp;nbsp;company&lt;/a&gt;&lt;/li&gt;
@@ -557,7 +1274,7 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 22 Jul 2015 22:36:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-07-22:2015/07/22/cncf-org/</guid><category>Google</category><category>Kubernetes</category><category>Cloud</category><category>Container</category></item><item><title>OpenStack 새로운 버전 매기기 변경</title><link>http://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/</link><description>&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 22 Jul 2015 22:36:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-07-22:2015/07/22/cncf-org/</guid><category>google</category><category>kubernetes</category><category>cloud</category><category>container</category></item><item><title>OpenStack 새로운 버전 매기기 변경</title><link>http://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/</link><description>&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
 톤 이메일 &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[1]&lt;/a&gt; 에서 보면 알 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;그리고 이것에 대한 자세한 내용은 &lt;a class="reference external" href="http://ttx.re/new-versioning.html"&gt;New OpenStack Component Versioning&lt;/a&gt; 에서 확인&amp;nbsp;하면된다.&lt;/p&gt;
 &lt;p&gt;언제부터인가 OpenStack 버전은 &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;YEAR&lt;/span&gt;.N&lt;/tt&gt; 으로 버전을 진행하고 있었고,  Kilo의 경우도
@@ -586,7 +1303,7 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html"&gt;http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 28 Jun 2015 22:24:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</guid><category>OpenStack</category><category>versioning</category></item><item><title>CentOS 7 에서 zabbix-server 에러</title><link>http://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/</link><description>&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 28 Jun 2015 22:24:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</guid><category>openstack</category><category>versioning</category></item><item><title>CentOS 7 에서 zabbix-server 에러</title><link>http://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/</link><description>&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
 &lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;tt class="docutils literal"&gt;journal&lt;/tt&gt; 로 보여지는 것 말고도
 &lt;tt class="docutils literal"&gt;/var/log/zabbix&lt;/tt&gt; 가 보여서&amp;nbsp;확인했더니..&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;
@@ -626,9 +1343,9 @@ PR해줄 수 있느냐기에 신속하게 &lt;a class="reference external" href=
 을 보았고, PR을 뒤져보니 PR을 보내면 웬만해서는 받아주는 듯하여 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 부터 날리
 고 어떻게 할지 기다린 게 잘 된듯하다.
 뭐 이렇게 녹색 상자 한 칸 더 체우 는기지&amp;#8230;&amp;nbsp;ㅋㅋㅋㅋㅋ&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 02 Jun 2015 22:45:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</guid><category>자랑질</category><category>chat</category><category>RocketChat</category><category>번역</category><category>javascript</category><category>meteo</category></item><item><title>Edison pip install error</title><link>http://ujuc.github.io/2015/05/14/edison-pip-install-error/</link><description>&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 02 Jun 2015 22:45:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</guid><category>자랑질</category><category>chat</category><category>rocketchat</category><category>번역</category><category>javascript</category><category>meteo</category></item><item><title>Edison pip install error</title><link>http://ujuc.github.io/2015/05/14/edison-pip-install-error/</link><description>&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# pip install flask
+&lt;span class="c1"&gt;# pip install flask
 &lt;/span&gt;Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call las&lt;span class="o"&gt;)&lt;/span&gt;:
 File &lt;span class="s2"&gt;&amp;quot;/usr/bin/pip&amp;quot;&lt;/span&gt;, line 5, in &amp;lt;module&amp;gt;
 from pkg_resources import load_entry_point
@@ -636,9 +1353,9 @@ ImportError:No module named pkg_resources
 &lt;/pre&gt;
 &lt;p&gt;발생하는건 &lt;tt class="docutils literal"&gt;setuptools&lt;/tt&gt; 패키지가 설치되지 않아서&amp;nbsp;문제가&amp;#8230;&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# wget --no-check-certificate \
+&lt;span class="c1"&gt;# wget --no-check-certificate \
 &lt;/span&gt;  https://pypi.python.org/packages/source/s/setuptools/setuptools-15.2.tar.gz#md5&lt;span class="o"&gt;=&lt;/span&gt;a9028a9794fc7ae02320d32e2d7e12ee
-&lt;span class="c"&gt;# tar zxf setuptools-15.2.tar.gz
+&lt;span class="c1"&gt;# tar zxf setuptools-15.2.tar.gz
 # python setuptools-15.2/ez_setup.py&lt;/span&gt;
 &lt;/pre&gt;
 &lt;ul&gt;
@@ -651,7 +1368,7 @@ ImportError:No module named pkg_resources
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 14 May 2015 01:39:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-05-14:2015/05/14/edison-pip-install-error/</guid><category>Edison</category><category>Pypi</category><category>pip</category><category>Python</category><category>error</category></item><item><title>Edison 초기 설정</title><link>http://ujuc.github.io/2015/05/13/edison-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95/</link><description>&lt;div class="section" id="yocta-project-update"&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 14 May 2015 01:39:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-05-14:2015/05/14/edison-pip-install-error/</guid><category>edison</category><category>pypi</category><category>pip</category><category>python</category><category>error</category></item><item><title>Edison 초기 설정</title><link>http://ujuc.github.io/2015/05/13/edison-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95/</link><description>&lt;div class="section" id="yocta-project-update"&gt;
 &lt;h2&gt;Yocta Project&amp;nbsp;Update&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;무엇이든 처음 설정할때는 기본 OS먼저 업데이트를 해줘야된다. 최신 Yocta Project
@@ -688,7 +1405,7 @@ ImportError:No module named pkg_resources
 &lt;div class="section" id="hostname"&gt;
 &lt;h3&gt;Hostname&lt;/h3&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# configure_edison --name&lt;/span&gt;
+&lt;span class="c1"&gt;# configure_edison --name&lt;/span&gt;
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;다음에 나오는 것들에따라서 입력해주면&amp;nbsp;된다.&lt;/li&gt;
@@ -697,7 +1414,7 @@ ImportError:No module named pkg_resources
 &lt;div class="section" id="wifi"&gt;
 &lt;h3&gt;Wifi&lt;/h3&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# configure_edison --wifi&lt;/span&gt;
+&lt;span class="c1"&gt;# configure_edison --wifi&lt;/span&gt;
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;근처에 있는 Wifi들이 다 잡힐 것이나 만약 아무것도 안보인다면 firmware를 업그레
@@ -714,7 +1431,7 @@ ImportError:No module named pkg_resources
 진행하도록&amp;nbsp;한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# configure_edison --password&lt;/span&gt;
+&lt;span class="c1"&gt;# configure_edison --password&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -731,26 +1448,26 @@ OpenWRT에서 사용하고&amp;nbsp;있다.)&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://software.intel.com/en-us/articles/managing-devkit-libraries-intel-edison-or-intel-galileo-board"&gt;Intel&amp;nbsp;page&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# echo &amp;quot;src intel-iotdk http://iotdk.intel.com/repos/1.1/intelgalactic&amp;quot; &amp;gt; \
+&lt;span class="c1"&gt;# echo &amp;quot;src intel-iotdk http://iotdk.intel.com/repos/1.1/intelgalactic&amp;quot; &amp;gt; \
 &lt;/span&gt;    /etc/opkg/intel-iotdk.conf# opkg update&lt;span class="p"&gt;;&lt;/span&gt; opkg upgrade
-&lt;span class="c"&gt;# opkg update; opkg upgrade&lt;/span&gt;
+&lt;span class="c1"&gt;# opkg update; opkg upgrade&lt;/span&gt;
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;이렇게하면 기본적인 것들은 추가가 된다만 패키지가 많지는&amp;nbsp;않다.&lt;/li&gt;
 &lt;li&gt;더 많은 패키지를 사용하려면 레포지토리를 추가해줘야&amp;nbsp;된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# vi /etc/opkg/base-feeds.conf
+&lt;span class="c1"&gt;# vi /etc/opkg/base-feeds.conf
 &lt;/span&gt;
 src/gz all http://repo.opkg.net/edison/repo/all
 src/gz edison http://repo.opkg.net/edison/repo/edison
 src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
 
-&lt;span class="c"&gt;# opkg update&lt;/span&gt;
+&lt;span class="c1"&gt;# opkg update&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 13 May 2015 22:46:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-05-13:2015/05/13/edison-초기-설정/</guid><category>Edison</category><category>개발</category><category>Embedded</category><category>임베디드</category><category>Intel</category><category>IoT</category></item><item><title>Status bar &amp; Title bar 숨기기</title><link>http://ujuc.github.io/2015/04/23/status-bar-&amp;-title-bar-%EC%88%A8%EA%B8%B0%EA%B8%B0/</link><description>&lt;p&gt;요즘 안드로이중이다. 오랜만에 했더니 봐야될께 많다. 특히 UI를 많이 안해서
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 13 May 2015 22:46:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-05-13:2015/05/13/edison-초기-설정/</guid><category>edison</category><category>개발</category><category>embedded</category><category>임베디드</category><category>intel</category><category>iot</category></item><item><title>Status bar &amp; Title bar 숨기기</title><link>http://ujuc.github.io/2015/04/23/status-bar-&amp;-title-bar-%EC%88%A8%EA%B8%B0%EA%B8%B0/</link><description>&lt;p&gt;요즘 안드로이중이다. 오랜만에 했더니 봐야될께 많다. 특히 UI를 많이 안해서
 그런가.. 감이 잘 안온다는&amp;nbsp;문제도&amp;#8230;&lt;/p&gt;
 &lt;p&gt;SplashActivity를 추가해줘야되는데. 안드로이드에서 뭘 알아야지.. 그냥 예제에 있는
 것들을 찾아서 변경해 추가를 했지만, 정리를 한번 해놔야되서&amp;#8230; 뭐 간단하게 구성은
@@ -800,7 +1517,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 03 Feb 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>OpenStack</category><category>Cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 10 Feb 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
@@ -816,7 +1533,7 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워
 손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 03 Feb 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 10 Feb 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
@@ -843,7 +1560,7 @@ sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-
 &lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc1310"&gt;&lt;span class="caps"&gt;CC1310&lt;/span&gt;&lt;/a&gt; :&amp;nbsp;Sub-1GHz&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2620"&gt;&lt;span class="caps"&gt;CC2620&lt;/span&gt;&lt;/a&gt; : ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 23:05:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-16:2015/03/16/ti-lowpwoer-soc-release/</guid><category>TI</category><category>chip</category><category>IoT</category><category>M3</category><category>ARM</category><category>BLE</category><category>Low energy</category></item><item><title>xonsh?</title><link>http://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 23:05:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-16:2015/03/16/ti-lowpwoer-soc-release/</guid><category>ti</category><category>chip</category><category>iot</category><category>m3</category><category>arm</category><category>ble</category><category>low energy</category></item><item><title>xonsh?</title><link>http://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python-ish, BASHwards-compatible shell language and command&amp;nbsp;prompt.라고&amp;#8230;&lt;/p&gt;
 &lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이&amp;#8230;
 그리고 기본이 3.4라&amp;#8230; 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
@@ -871,28 +1588,28 @@ sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-
 &lt;li&gt;기본&amp;nbsp;설치&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;git clone https://github.com/git-ftp/git-ftp.git
-&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;git-ftp
-&lt;span class="nv"&gt;$ &lt;/span&gt;git tag
-&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout &amp;lt;tag&amp;gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo make install
+$ git clone https://github.com/git-ftp/git-ftp.git
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; git-ftp
+$ git tag
+$ git checkout &amp;lt;tag&amp;gt;
+$ sudo make install
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;업그레이드의&amp;nbsp;경우&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;git pull
-&lt;span class="nv"&gt;$ &lt;/span&gt;git tag
-&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout &amp;lt;tag&amp;gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo make install
+$ git pull
+$ git tag
+$ git checkout &amp;lt;tag&amp;gt;
+$ sudo make install
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Mac &lt;span class="caps"&gt;OS&lt;/span&gt;&amp;nbsp;X&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install git
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install curl --with-ssl --with-libssh2
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install git-ftp
+$ brew install git
+$ brew install curl --with-ssl --with-libssh2
+$ brew install git-ftp
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;curl&lt;/tt&gt; 을 기본으로 설치했는데 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;libssh2&lt;/tt&gt; 를 사용할 수 있도록 설정이
@@ -903,11 +1620,11 @@ sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-
 &lt;div class="section" id="id4"&gt;
 &lt;h2&gt;사용법&lt;/h2&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# Pushing for the fist time
-&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ftp init -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
+&lt;span class="c1"&gt;# Pushing for the fist time
+&lt;/span&gt;$ git ftp init -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
 
-&lt;span class="c"&gt;# using
-&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ftp push -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
+&lt;span class="c1"&gt;# using
+&lt;/span&gt;$ git ftp push -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;더 자세한 내용은 &lt;a class="reference external" href="https://gitub.com/git-ftp/git-ftp/blob/develop/man/git-ftp.1.md"&gt;man page&lt;/a&gt;.&lt;/li&gt;
@@ -995,7 +1712,7 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 보면 된다. - &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes"&gt;Available Filter Classes&lt;/a&gt; 가 아닌걸로도 볼 수&amp;nbsp;있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 21:18:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-04:2015/03/04/openstack-rootwrap/</guid><category>openstack</category><category>oslo</category><category>오픈스택</category></item><item><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link>http://ujuc.github.io/2015/03/03/vim-to-ide/</link><description>&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 21:18:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-04:2015/03/04/openstack-rootwrap/</guid><category>openstack</category><category>oslo</category></item><item><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link>http://ujuc.github.io/2015/03/03/vim-to-ide/</link><description>&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
 vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/jez/vim-as-an-ide"&gt;jez/vim-as-an-ide&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;뭐 특별한 것은 없어 보이지만, Vim을 설정하는 것들에대해 커밋을 통해서 작성해
@@ -1050,7 +1767,7 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 22:21:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-02:2015/03/02/timesheet-js/</guid><category>javascript</category><category>JS</category></item><item><title>Clojure 개발 환경 구축</title><link>http://ujuc.github.io/2015/03/01/clojure-development-env/</link><description>&lt;div class="section" id="id2"&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 22:21:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-02:2015/03/02/timesheet-js/</guid><category>javascript</category><category>js</category></item><item><title>Clojure 개발 환경 구축</title><link>http://ujuc.github.io/2015/03/01/clojure-development-env/</link><description>&lt;div class="section" id="id2"&gt;
 &lt;h2&gt;1.&amp;nbsp;개요&lt;/h2&gt;
 &lt;p&gt;Clojure를 공부하려하는데&amp;#8230; 이것 저것 작업을 하려하니 짧은 기억력으로는 계속
 봐야되는지라. 이렇게 작성을 해놔야 나중에 볼 듯하고, 또 어딘가에 넣어둔다고해도
@@ -1087,7 +1804,7 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;li&gt;이거 쓸려고 넘많이&amp;nbsp;적었다&amp;#8230;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;lein
+$ lein
     Leiningen is a tool &lt;span class="k"&gt;for&lt;/span&gt; working with Clojure projects.
 
     Several tasks are available:
@@ -1102,17 +1819,17 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
     help                Display a list of tasks or help for a given task.
     install             Install the current project to the local repository.
     jar                 Package up all the project'&lt;/span&gt;s files into a jar file.
-    javac               Compile Java &lt;span class="nb"&gt;source &lt;/span&gt;files.
+    javac               Compile Java &lt;span class="nb"&gt;source&lt;/span&gt; files.
     new                 Generate project scaffolding based on a template.
     plugin              DEPRECATED. Please use the :user profile instead.
     pom                 Write a pom.xml file to disk &lt;span class="k"&gt;for&lt;/span&gt; Maven interoperability.
     release             Perform :release-tasks.
     repl                Start a repl session either with the current project or standalone.
-    retest              Run only the &lt;span class="nb"&gt;test &lt;/span&gt;namespaces which failed last &lt;span class="nb"&gt;time &lt;/span&gt;around.
-    run                 Run a -main &lt;span class="k"&gt;function&lt;/span&gt; with optional &lt;span class="nb"&gt;command&lt;/span&gt;-line arguments.
+    retest              Run only the &lt;span class="nb"&gt;test&lt;/span&gt; namespaces which failed last &lt;span class="nb"&gt;time&lt;/span&gt; around.
+    run                 Run a -main &lt;span class="k"&gt;function&lt;/span&gt; with optional command-line arguments.
     search              Search remote maven repositories &lt;span class="k"&gt;for&lt;/span&gt; matching jars.
     show-profiles       List all available profiles or display one &lt;span class="k"&gt;if&lt;/span&gt; given an argument.
-    &lt;span class="nb"&gt;test                &lt;/span&gt;Run the project&lt;span class="s1"&gt;'s tests.
+    &lt;span class="nb"&gt;test&lt;/span&gt;                Run the project&lt;span class="s1"&gt;'s tests.
     trampoline          Run a task without nesting the project'&lt;/span&gt;s JVM inside Leiningen&lt;span class="s1"&gt;'s.
     uberjar             Package up the project files and dependencies into a jar file.
     update-in           Perform arbitrary transformations on your project map.
@@ -1225,7 +1942,7 @@ It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 물론 설치했다면, 다시 설치하면된다. 난 삭제하고 다시 설치&amp;#8230; (적다보니&amp;#8230; 자동화
 스크립트에 작성해둔거 변경을&amp;nbsp;해줘야겠다&amp;#8230;)&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install vim --with-cscope --with-lua --override-system-vim
+$ brew install vim --with-cscope --with-lua --override-system-vim
 &lt;/pre&gt;
 &lt;p&gt;설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이&amp;nbsp;줄었다.!!!&lt;/p&gt;
 </description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:14:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-26:2015/02/26/oh-my-vim-error-osx/</guid><category>vim</category><category>setting</category></item><item><title>Pycharm에서 iPython notebook 사용</title><link>http://ujuc.github.io/2015/02/23/using-ipython-notebook-on-pycharm/</link><description>&lt;p&gt;Pycharm iPython notebook 지원은 4.0에서부터 지원하기 시작했다. 아직 버전업이
@@ -1240,7 +1957,7 @@ It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 작동하는 것이 입력하기도 쉽고 값들을 확인하면서 작성하기가 더 쉽게 되어있으니
 사용자가 알아서&amp;#8230; 나는&amp;nbsp;안쓸꺼임&amp;#8230;&lt;/p&gt;
 &lt;p&gt;아마 업데이트 하면&amp;#8230; 괜찮아질꺼야&amp;#8230;&amp;nbsp;그럴꺼야&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:07:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-23:2015/02/23/using-ipython-notebook-on-pycharm/</guid><category>Pycharm</category><category>iPython</category><category>notebook</category></item><item><title>OpenStack Commit</title><link>http://ujuc.github.io/2015/02/13/openstack-commit/</link><description>&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:07:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-23:2015/02/23/using-ipython-notebook-on-pycharm/</guid><category>pycharm</category><category>ipython</category><category>notebook</category></item><item><title>OpenStack Commit</title><link>http://ujuc.github.io/2015/02/13/openstack-commit/</link><description>&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
 그런데&amp;#8230;. 왜이리&amp;nbsp;어려운거지&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런&amp;#8230; 어렵지 않을
 것같아&amp;nbsp;시작&amp;#8230;&lt;/p&gt;
@@ -1323,9 +2040,9 @@ references&lt;/a&gt; 를&amp;nbsp;보면됨.&lt;/li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;git remote update
-&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout master
-&lt;span class="nv"&gt;$ &lt;/span&gt;git pull --ff-only origin master
+$ git remote update
+$ git checkout master
+$ git pull --ff-only origin master
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;그리고 브런치를 따는데, Blueprint는 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bp/&amp;lt;blueprint_name&amp;gt;&lt;/span&gt;&lt;/tt&gt;, Bug는
@@ -1372,7 +2089,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 까먹으니까 작성한&amp;nbsp;것이기도하지만&amp;#8230;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 22:29:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</guid><category>OpenStack</category><category>commit</category></item><item><title>RAM 리뷰에서 본 버전별 특성</title><link>http://ujuc.github.io/2015/02/09/RAM-reive/</link><description>&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;&lt;span class="caps"&gt;DDR4&lt;/span&gt; Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 22:29:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</guid><category>openstack</category><category>commit</category></item><item><title>RAM 리뷰에서 본 버전별 특성</title><link>http://ujuc.github.io/2015/02/09/RAM-reive/</link><description>&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;&lt;span class="caps"&gt;DDR4&lt;/span&gt; Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
 &lt;span class="caps"&gt;ADATA&lt;/span&gt; and Crucial 에서 글이올라왔길레&amp;nbsp;봤는데&amp;#8230;&lt;/p&gt;
 &lt;p&gt;어떤분께서 그렇게 말씀하시던 RAM이 버전업되면서 달라지 내용과 다른 점이 보여서
 머릿속 내용을 업데이트하는 겸해서 작성해두는&amp;nbsp;내용이다.&lt;/p&gt;
@@ -1474,7 +2191,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 보여주는&amp;nbsp;것도&amp;#8230;&lt;/p&gt;
 &lt;p&gt;자세한건 기사내용을 보는 것이 더&amp;nbsp;좋은듯.&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 21:47:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-09:2015/02/09/RAM-reive/</guid><category>RAM</category><category>HW</category><category>하드웨어</category></item><item><title>gitworkflows(7)에대한 이야기</title><link>http://ujuc.github.io/2015/02/02/gitworkflows7/</link><description>&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 21:47:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-02-09:2015/02/09/RAM-reive/</guid><category>ram</category><category>hw</category><category>하드웨어</category></item><item><title>gitworkflows(7)에대한 이야기</title><link>http://ujuc.github.io/2015/02/02/gitworkflows7/</link><description>&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
 이야기하면서 슬라이드 &lt;a class="footnote-reference" href="#id3" id="id1"&gt;[1]&lt;/a&gt; 를 하나&amp;nbsp;올려주셨다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The gitworkflows(7)&amp;nbsp;illustrated&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;정말 슬라이드를 이렇게까지 만들어주는건 정말 좋은듯. 특히 발표 당시에 그것을

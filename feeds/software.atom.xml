@@ -16,28 +16,28 @@
 &lt;li&gt;기본&amp;nbsp;설치&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;git clone https://github.com/git-ftp/git-ftp.git
-&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;git-ftp
-&lt;span class="nv"&gt;$ &lt;/span&gt;git tag
-&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout &amp;lt;tag&amp;gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo make install
+$ git clone https://github.com/git-ftp/git-ftp.git
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; git-ftp
+$ git tag
+$ git checkout &amp;lt;tag&amp;gt;
+$ sudo make install
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;업그레이드의&amp;nbsp;경우&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;git pull
-&lt;span class="nv"&gt;$ &lt;/span&gt;git tag
-&lt;span class="nv"&gt;$ &lt;/span&gt;git checkout &amp;lt;tag&amp;gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo make install
+$ git pull
+$ git tag
+$ git checkout &amp;lt;tag&amp;gt;
+$ sudo make install
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;Mac &lt;span class="caps"&gt;OS&lt;/span&gt;&amp;nbsp;X&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install git
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install curl --with-ssl --with-libssh2
-&lt;span class="nv"&gt;$ &lt;/span&gt;brew install git-ftp
+$ brew install git
+$ brew install curl --with-ssl --with-libssh2
+$ brew install git-ftp
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;curl&lt;/tt&gt; 을 기본으로 설치했는데 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;libssh2&lt;/tt&gt; 를 사용할 수 있도록 설정이
@@ -48,11 +48,11 @@
 &lt;div class="section" id="id4"&gt;
 &lt;h2&gt;사용법&lt;/h2&gt;
 &lt;pre class="code bash literal-block"&gt;
-&lt;span class="c"&gt;# Pushing for the fist time
-&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ftp init -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
+&lt;span class="c1"&gt;# Pushing for the fist time
+&lt;/span&gt;$ git ftp init -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
 
-&lt;span class="c"&gt;# using
-&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git ftp push -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
+&lt;span class="c1"&gt;# using
+&lt;/span&gt;$ git ftp push -u &amp;lt;user&amp;gt; -P ftp://host.example.com/public_html
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;더 자세한 내용은 &lt;a class="reference external" href="https://gitub.com/git-ftp/git-ftp/blob/develop/man/git-ftp.1.md"&gt;man page&lt;/a&gt;.&lt;/li&gt;

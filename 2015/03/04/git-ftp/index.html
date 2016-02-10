@@ -81,28 +81,28 @@
 <li>기본&nbsp;설치</li>
 </ul>
 <pre class="code bash literal-block">
-<span class="nv">$ </span>git clone https://github.com/git-ftp/git-ftp.git
-<span class="nv">$ </span><span class="nb">cd </span>git-ftp
-<span class="nv">$ </span>git tag
-<span class="nv">$ </span>git checkout &lt;tag&gt;
-<span class="nv">$ </span>sudo make install
+$ git clone https://github.com/git-ftp/git-ftp.git
+$ <span class="nb">cd</span> git-ftp
+$ git tag
+$ git checkout &lt;tag&gt;
+$ sudo make install
 </pre>
 <ul class="simple">
 <li>업그레이드의&nbsp;경우</li>
 </ul>
 <pre class="code bash literal-block">
-<span class="nv">$ </span>git pull
-<span class="nv">$ </span>git tag
-<span class="nv">$ </span>git checkout &lt;tag&gt;
-<span class="nv">$ </span>sudo make install
+$ git pull
+$ git tag
+$ git checkout &lt;tag&gt;
+$ sudo make install
 </pre>
 <ul class="simple">
 <li>Mac <span class="caps">OS</span>&nbsp;X</li>
 </ul>
 <pre class="code bash literal-block">
-<span class="nv">$ </span>brew install git
-<span class="nv">$ </span>brew install curl --with-ssl --with-libssh2
-<span class="nv">$ </span>brew install git-ftp
+$ brew install git
+$ brew install curl --with-ssl --with-libssh2
+$ brew install git-ftp
 </pre>
 <ul class="simple">
 <li><tt class="docutils literal">curl</tt> 을 기본으로 설치했는데 <tt class="docutils literal">ssl</tt>, <tt class="docutils literal">libssh2</tt> 를 사용할 수 있도록 설정이
@@ -113,11 +113,11 @@
 <div class="section" id="id4">
 <h2>사용법</h2>
 <pre class="code bash literal-block">
-<span class="c"># Pushing for the fist time
-</span><span class="nv">$ </span>git ftp init -u &lt;user&gt; -P ftp://host.example.com/public_html
+<span class="c1"># Pushing for the fist time
+</span>$ git ftp init -u &lt;user&gt; -P ftp://host.example.com/public_html
 
-<span class="c"># using
-</span><span class="nv">$ </span>git ftp push -u &lt;user&gt; -P ftp://host.example.com/public_html
+<span class="c1"># using
+</span>$ git ftp push -u &lt;user&gt; -P ftp://host.example.com/public_html
 </pre>
 <ul class="simple">
 <li>더 자세한 내용은 <a class="reference external" href="https://gitub.com/git-ftp/git-ftp/blob/develop/man/git-ftp.1.md">man page</a>.</li>

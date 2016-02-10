@@ -26,7 +26,7 @@ sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-
 &lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc1310"&gt;&lt;span class="caps"&gt;CC1310&lt;/span&gt;&lt;/a&gt; :&amp;nbsp;Sub-1GHz&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2620"&gt;&lt;span class="caps"&gt;CC2620&lt;/span&gt;&lt;/a&gt; : ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="TI"></category><category term="chip"></category><category term="IoT"></category><category term="M3"></category><category term="ARM"></category><category term="BLE"></category><category term="Low energy"></category></entry><entry><title>RAM 리뷰에서 본 버전별 특성</title><link href="http://ujuc.github.io/2015/02/09/RAM-reive/" rel="alternate"></link><updated>2015-03-31T21:47:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-09:2015/02/09/RAM-reive/</id><summary type="html">&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;&lt;span class="caps"&gt;DDR4&lt;/span&gt; Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
+</summary><category term="ti"></category><category term="chip"></category><category term="iot"></category><category term="m3"></category><category term="arm"></category><category term="ble"></category><category term="low energy"></category></entry><entry><title>RAM 리뷰에서 본 버전별 특성</title><link href="http://ujuc.github.io/2015/02/09/RAM-reive/" rel="alternate"></link><updated>2015-03-31T21:47:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-09:2015/02/09/RAM-reive/</id><summary type="html">&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;&lt;span class="caps"&gt;DDR4&lt;/span&gt; Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
 &lt;span class="caps"&gt;ADATA&lt;/span&gt; and Crucial 에서 글이올라왔길레&amp;nbsp;봤는데&amp;#8230;&lt;/p&gt;
 &lt;p&gt;어떤분께서 그렇게 말씀하시던 RAM이 버전업되면서 달라지 내용과 다른 점이 보여서
 머릿속 내용을 업데이트하는 겸해서 작성해두는&amp;nbsp;내용이다.&lt;/p&gt;
@@ -128,4 +128,4 @@ sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-
 보여주는&amp;nbsp;것도&amp;#8230;&lt;/p&gt;
 &lt;p&gt;자세한건 기사내용을 보는 것이 더&amp;nbsp;좋은듯.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="RAM"></category><category term="HW"></category><category term="하드웨어"></category></entry></feed>
+</summary><category term="ram"></category><category term="hw"></category><category term="하드웨어"></category></entry></feed>
