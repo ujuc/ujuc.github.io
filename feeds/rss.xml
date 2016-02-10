@@ -850,7 +850,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;/blockquote&gt;
 &lt;p&gt;기본 브랜치는 5가지를 이야기한다. &lt;code&gt;feature &amp;gt; develop &amp;gt; release &amp;gt; hotfix &amp;gt; master&lt;/code&gt; 브랜치가 존재하며, 머지 순서는 앞에서 뒤로 진행된다. &lt;code&gt;release&lt;/code&gt; 브랜치와 &lt;code&gt;hotfix&lt;/code&gt; 브랜치의 경우, &lt;code&gt;develop&lt;/code&gt; 브랜치의 오른쪽에 존재하기에 모두 &lt;code&gt;develop&lt;/code&gt; 브랜치도 머지를 하도록 구성이&amp;nbsp;되어있다.&lt;/p&gt;
 &lt;p&gt;Vincent Driessen은 관련하여 스크림트로 명령을 구성해놨으며, 그냥 설치를 하여 CLI에서 명령으로 작업을 하여도 되고, &lt;span class="caps"&gt;GUI&lt;/span&gt; 툴들에서 기본 내장 git-flow 명령이나 플러그인을 설치하여 작업을 진행할 수 있도록 보편화되어잇는 브런칭&amp;nbsp;모델이다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://nvie.com/img/git-model@2x.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Git Flow model" src="http://nvie.com/img/git-model@2x.png" /&gt;&lt;/p&gt;
 &lt;h3 id="_1"&gt;구조와&amp;nbsp;흐름&lt;/h3&gt;
 &lt;p&gt;가장 중심이되는 브랜치는 &lt;code&gt;master&lt;/code&gt;랑 &lt;code&gt;develop&lt;/code&gt; 브랜치이며, 이 두개의 브랜치는 무조건 있어야된다고 보면된다. 이름은 바뀔수 있다만 왠만해서는 변경하지 않고 진행하도록 하자. Git도 Production에서 사용하는 브랜치는 &lt;code&gt;master&lt;/code&gt;를 사용하게 되니 관련된 부분을 변경하면 새로운 사람이 왔을때 스터디 커브가 존재할 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;머지된 &lt;code&gt;feature&lt;/code&gt;, &lt;code&gt;release&lt;/code&gt;, &lt;code&gt;hotfix&lt;/code&gt; 브랜치는 삭제하도록&amp;nbsp;한다.&lt;/p&gt;
@@ -902,7 +902,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;h2 id="github-flow"&gt;GitHub&amp;nbsp;Flow&lt;/h2&gt;
 &lt;p&gt;Scott chacon은 &lt;a href="http://scottchacon.com/2011/08/31/github-flow.html"&gt;GitHub Flow&lt;/a&gt;에서 Git flow가 좋은 방식이긴 하지만 GitHub에서 사용하기에는 복잡하다 여겨 사용하지 않고 &lt;code&gt;GitHub Flow&lt;/code&gt;라는 내용으로 사용을 하고 있다고 한다. 그리고 &lt;strong&gt;자동화의 계념이 들어가 있다는 점&lt;/strong&gt;. 자동화가 안되어있는 곳에서는 수동으로 관련 작업을 진행하면&amp;nbsp;된다.&lt;/p&gt;
 &lt;p&gt;흐름이 단순한만큼 룰도 단순하다. &lt;code&gt;master&lt;/code&gt; 브랜치에대한 &lt;code&gt;role&lt;/code&gt;만 정확하다면 나머지 브랜치들에는 관여를 하지 않는다. 그리고 &lt;code&gt;pull request&lt;/code&gt; 기능을 사용하도록 권장을&amp;nbsp;한다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shoma2da/20151104/20151104223339.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GitHub Flow Model" src="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shoma2da/20151104/20151104223339.png" /&gt;&lt;/p&gt;
 &lt;h3 id="_5"&gt;특징&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;release&lt;/code&gt; 브랜치가 명확하지 않는 시스템에서 사용에 맞게&amp;nbsp;되어있다. &lt;/li&gt;
@@ -951,14 +951,14 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;h2 id="gitlab-flow"&gt;GitLab&amp;nbsp;Flow&lt;/h2&gt;
 &lt;p&gt;Github에서 말하는 flow는 너무나도 간단하여 배포, 환경구성, 릴리즈, 통합에 대한 이슈를 남겨둔 것이 많았다. 그것을 보안하기위해 GitLab에서 관련 내용들을 추가적으로 덧붙여 설명한것을&amp;nbsp;일컷는다.&lt;/p&gt;
 &lt;h3 id="production-branch-with-gitlab-flow"&gt;Production branch with GitLab&amp;nbsp;flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/production_branch.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GitLab Flow Model - production branch" src="https://about.gitlab.com/images/git_flow/production_branch.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;production&lt;/code&gt; 브랜치가 존재하여 커밋한 내용들을 일방적으로 디플로이를 하는 형태. GitHub에서 브랜치 하나를 더 구성하여 사용하는 이것도 조금은 간단한 구성이다.
 이렇게 구성하면 배포 자동화가 되어있지않은 구성에서 어떻게 배포를 진행할 것인가에 대한 내용을 담았다. 물론 이걸로 부족하여 다음의 것도&amp;nbsp;추가되었다.&lt;/p&gt;
 &lt;h3 id="environment-branches-with-gitlab-flow"&gt;Environment branches with GitLab&amp;nbsp;flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/environment_branches.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GitLab Flow Model - environment branch" src="https://about.gitlab.com/images/git_flow/environment_branches.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;master&lt;/code&gt;와 &lt;code&gt;production&lt;/code&gt; 사이에 &lt;code&gt;pre-production&lt;/code&gt;을 두어 개발한 내용을 곧장 반영하지 않고 시간을 두고 반영을 하는 것을 말한다. Staging을위한 공간을&amp;nbsp;만드는거지&amp;#8230;&lt;/p&gt;
 &lt;h3 id="release-branches-with-gitlab-flow"&gt;Release branches with GitLab&amp;nbsp;flow&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="https://about.gitlab.com/images/git_flow/release_branches.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="GitLab Flow Model - Release branch" src="https://about.gitlab.com/images/git_flow/release_branches.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;release&lt;/code&gt;한 브랜치를 두고서 보안상 문제가 발생한 것이나 백포트를 위해서 작업을 할 경우, cherry-pick을 이용해서 작업을 진행할 수 도 있다. 아니면 해당 릴리즈에서 발생하는 버그들을 묶어서 수정하는 방식을 진행하며된다. 일반적으로 말하는 &amp;#8216;upstream first&amp;#8217; 정책이라고&amp;nbsp;보면된다.&lt;/p&gt;
 &lt;h3 id="mergepull-requests-with-gitlab-flow"&gt;Merge/pull requests with GitLab&amp;nbsp;flow&lt;/h3&gt;
 &lt;p&gt;Pull request를 사용하는 방법이다. GitHub Flow에서 하는 방법과 동일하다. 원문은 길게 적어놨는데&amp;#8230;&amp;nbsp;딱히&amp;#8230;&lt;/p&gt;
