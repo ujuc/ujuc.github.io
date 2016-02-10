@@ -328,7 +328,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Enter&lt;/td&gt;
-&lt;td&gt;이 키는 현제보고 있는 뷰에서 &amp;#8220;상황에 맞게(context sensitive)&amp;#8221; 동작합니다. 커밋줄에서의 로그 뷰나 메인 뷰일땐 뷰를 분활하여 커밋 diff를 보여줍니다. diff 뷰에서는 간단하게 한줄을 내리는데 사용됩니다.&lt;/td&gt;
+&lt;td&gt;이 키는 현재보고 있는 뷰에서 &amp;#8220;상황에 맞게(context sensitive)&amp;#8221; 동작합니다. 커밋줄에서의 로그 뷰나 메인 뷰일땐 뷰를 분활하여 커밋 diff를 보여줍니다. diff 뷰에서는 간단하게 한줄을 내리는데 사용됩니다.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Tab&lt;/td&gt;
@@ -685,7 +685,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;원격 브런치에서 부시된 내용들을 나열 합니다. 선택적으로 &lt;code&gt;HEAD&lt;/code&gt;는 생략될 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;p&gt;원격 브런치에서 푸시된 내용들을 나열 합니다. 선택적으로 &lt;code&gt;HEAD&lt;/code&gt;는 생략될 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;h3 id="limiting-by-reachability"&gt;Limiting by Reachability (도달 가능&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;Git 인터프리트에서는 &amp;#8220;tag-1.0&amp;#8230;tag-2.0&amp;#8221;을 사용하는 경우, &amp;#8220;&lt;code&gt;tag-1.0&lt;/code&gt;를 제외하고 &lt;code&gt;tag-2.0&lt;/code&gt;까지의 모든 커밋&amp;#8221;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;p&gt;이 방법으로 다음 미리 커밋을 지정하려는&amp;nbsp;경우:&lt;/p&gt;
@@ -693,7 +693,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;부정 연산자로 &lt;code&gt;^&lt;/code&gt;를 생각할 수 있습니다. 이 대체 문법을 사용하면 위의 어려 브런치의 cut off를 지정하여 커밋 브런치를 없에버릴 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;p&gt;부정 연산자로 &lt;code&gt;^&lt;/code&gt;를 생각할 수 있습니다. 이 대체 문법을 사용하면 위의 여려 브런치의 cut off를 지정하여 커밋 브런치를 없애버릴 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;h3 id="combining-revisions-specification"&gt;Combining Revisions Specification (변경 사항&amp;nbsp;연결)&lt;/h3&gt;
 &lt;p&gt;리버전 옵션은 다음과 같이 연결하여 사용할 수 있습니다. &amp;#8220;&lt;code&gt;Documentation/&lt;/code&gt; 디렉토리에 있는 파일의 변경 사항들을 마지막달 20개 커밋까지 보여다오.&amp;#8221;를 다음과 같이 나타낼 수&amp;nbsp;있습니다:&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --since&lt;span class="o"&gt;=&lt;/span&gt;1.month -n20 -- Documentation/
