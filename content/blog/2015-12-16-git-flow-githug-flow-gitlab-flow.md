@@ -16,7 +16,7 @@ Summary: Git flow, GitHub flow, GitLab flow 에대해서 좀 알아보자. 머�
 
 Vincent Driessen은 관련하여 스크림트로 명령을 구성해놨으며, 그냥 설치를 하여 CLI에서 명령으로 작업을 하여도 되고, GUI 툴들에서 기본 내장 git-flow 명령이나 플러그인을 설치하여 작업을 진행할 수 있도록 보편화되어잇는 브런칭 모델이다.
 
-![](http://nvie.com/img/git-model@2x.png)
+![Git Flow model](http://nvie.com/img/git-model@2x.png)
 
 ### 구조와 흐름
 
@@ -76,7 +76,7 @@ Scott chacon은 [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html
 
 흐름이 단순한만큼 룰도 단순하다. `master` 브랜치에대한 `role`만 정확하다면 나머지 브랜치들에는 관여를 하지 않는다. 그리고 `pull request` 기능을 사용하도록 권장을 한다.
 
-![](http://cdn-ak.f.st-hatena.com/images/fotolife/s/shoma2da/20151104/20151104223339.png)
+![GitHub Flow Model](http://cdn-ak.f.st-hatena.com/images/fotolife/s/shoma2da/20151104/20151104223339.png)
 
 ### 특징
 * `release` 브랜치가 명확하지 않는 시스템에서 사용에 맞게 되어있다. 
@@ -131,18 +131,18 @@ Scott chacon은 [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html
 Github에서 말하는 flow는 너무나도 간단하여 배포, 환경구성, 릴리즈, 통합에 대한 이슈를 남겨둔 것이 많았다. 그것을 보안하기위해 GitLab에서 관련 내용들을 추가적으로 덧붙여 설명한것을 일컷는다.
 
 ### Production branch with GitLab flow
-![](https://about.gitlab.com/images/git_flow/production_branch.png)
+![GitLab Flow Model - production branch](https://about.gitlab.com/images/git_flow/production_branch.png)
 
 `production` 브랜치가 존재하여 커밋한 내용들을 일방적으로 디플로이를 하는 형태. GitHub에서 브랜치 하나를 더 구성하여 사용하는 이것도 조금은 간단한 구성이다.
 이렇게 구성하면 배포 자동화가 되어있지않은 구성에서 어떻게 배포를 진행할 것인가에 대한 내용을 담았다. 물론 이걸로 부족하여 다음의 것도 추가되었다.
 
 ### Environment branches with GitLab flow
-![](https://about.gitlab.com/images/git_flow/environment_branches.png)
+![GitLab Flow Model - environment branch](https://about.gitlab.com/images/git_flow/environment_branches.png)
 
 `master`와 `production` 사이에 `pre-production`을 두어 개발한 내용을 곧장 반영하지 않고 시간을 두고 반영을 하는 것을 말한다. Staging을위한 공간을 만드는거지...
 
 ### Release branches with GitLab flow
-![](https://about.gitlab.com/images/git_flow/release_branches.png)
+![GitLab Flow Model - Release branch](https://about.gitlab.com/images/git_flow/release_branches.png)
 
 `release`한 브랜치를 두고서 보안상 문제가 발생한 것이나 백포트를 위해서 작업을 할 경우, cherry-pick을 이용해서 작업을 진행할 수 도 있다. 아니면 해당 릴리즈에서 발생하는 버그들을 묶어서 수정하는 방식을 진행하며된다. 일반적으로 말하는 'upstream first' 정책이라고 보면된다.
 
