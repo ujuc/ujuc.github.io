@@ -371,7 +371,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;M&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;git-mergetool(1)&lt;/code&gt;을 실행하여 머지되지 않은 파일을 해결합니다. 주의, 원하는 머지 도구를 사용하기 휘해 초기 구성이 필요할 수 있습니다. 올바르게 작동하는지 확인하세요. &lt;code&gt;git-mergetool(1)&lt;/code&gt;의 맨페이지를 확인하세요.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;git-mergetool(1)&lt;/code&gt;을 실행하여 머지되지 않은 파일을 해결합니다. 주의, 원하는 머지 도구를 사용하기 위해 초기 구성이 필요할 수 있습니다. 올바르게 작동하는지 확인하세요. &lt;code&gt;git-mergetool(1)&lt;/code&gt;의 맨페이지를 확인하세요.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;!&lt;/code&gt;&lt;/td&gt;
