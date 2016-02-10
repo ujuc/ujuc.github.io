@@ -8,3 +8,5 @@ __pycache__/
 .ropeproject/
 
 .idea/
+
+*.pid
