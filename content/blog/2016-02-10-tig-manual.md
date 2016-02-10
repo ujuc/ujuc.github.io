@@ -23,13 +23,13 @@ Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하�
 
 [TOC]
 
-## 1. 호출 규칙
+## 1. Calling Conventions (호출 규칙)
 
-### Pager 모드
+### Pager Mode (Pager 모드)
 
 Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되고 pager 뷰는 stdin으로 들어온 데이터를 로딩하여 확인할 수 있습니다. Pager 모드는 다양한 Git 명령에 대한 출력값을 색상을 추가하여 확인할 수 있도록 도와줍니다.
 
-예로 git-show(1) 명령에 대한 출력을 색상을 추가한 버전으로 보고 싶다면:
+예로 `git-show(1)` 명령에 대한 출력을 색상을 추가한 버전으로 보고 싶다면:
 
 	:::shell
 	$ git show | tig
@@ -40,7 +40,7 @@ Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되�
 * `git-show | tig`
 ![git-show|tig]({filename}/img/2016-02-10_tig_1-2.png)
 
-### Git 명령어 옵션
+### Git Command Options (Git 명령어 옵션)
 
 명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할 것입니다.
 
@@ -51,9 +51,9 @@ Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되�
 	:::shell
 	$ tig show --pretty=fuller
 
-Git 명령에 대해 지원되는 변경 옵션 지원에 대한 소개는 [지정 변경](#5) 섹션을 참조하세요. 특정 Git 명령 옵션에 대한 자세한 설명은 해당 명령의 맨 페이지를 참조하세요.
+Git 명령에 대해 지원되는 변경 옵션 지원에 대한 소개는 [지정 리버전](#5-revision-specification) 섹션을 참조하세요. 특정 Git 명령 옵션에 대한 자세한 설명은 해당 명령의 맨 페이지를 참조하세요.
 
-## 2. 뷰어
+## 2. The Viewer (뷰어)
 
 디스플레이는 하나 이상의 뷰와 스크린으로 구성되어있으며, 맨 마지막 라인은 상태 윈도우로 사용됩니다. 기본 값은 한번에 하나의 뷰만을 보여줍니다. 하지만 메인과 로그 뷰로 나눠서 커밋 diff를 확인할 수 있습니다.
 
@@ -64,7 +64,7 @@ Git 명령에 대해 지원되는 변경 옵션 지원에 대한 소개는 [지�
 
 뷰를 나눠서 볼 수 있는데, 로그 뷰는 윈도우 상단에, diff 뷰는 윈도우 하단에 위치시킬 수 있습니다. 탭을 눌러 두 뷰사이를 왔다갔다 할 수 있습니다. 로그 뷰만 보려면 `l`를 누르면 됩니다.
 
-### 뷰
+### Views (뷰)
 
 저장소에서 여러가지 `views`를 볼 수 있습니다. 각 뷰는 확장 명령, `git log`, `git diff`, `git show`로부터 나오는 출력 값에 기반하여 보여줍니다.
 
@@ -107,11 +107,11 @@ Pager 뷰
 도움말 뷰
 :    키 바인딩에 대한 간단한 참조를 보여줍니다.
 
-### 상태 확인과 사용자 정의 명령어
+### Browsing State and User-defined Commands (상태 확인과 사용자 정의 명령어)
 
 뷰어는 head와 커밋 ID 모두를 추적하고, 현재 상태를 보여줍니다. 커밋 ID는 커서 라인에 따라가며 다른 커밋을 선택할때마다 강조표시가 변경됩니다. 커밋 ID가 변경되면, diff 뷰에선 열때마다 재로드됩니다. Head ID는 지나온 로그를 보면서 리버전된 것이 나타내는 메인과 로그 뷰를 확인할때 사용됩니다.
 
-Tig에서 명령을 사용하거나 제공하는 명령을 구성할 수 있습니다. [환경 변수](#3)의 일부와 [외부 명령](#_13)을 사용할 수 있습니다. 사용자 정의 명령의 경우 다음 변수들을 이용하여 현재 브라우징 상태에 대한 참조 인자로 사용할 수 있습니다.
+Tig에서 명령을 사용하거나 제공하는 명령을 구성할 수 있습니다. [환경 변수](#3-environment-variables)의 일부와 [외부 명령](#external-commands)을 사용할 수 있습니다. 사용자 정의 명령의 경우 다음 변수들을 이용하여 현재 브라우징 상태에 대한 참조 인자로 사용할 수 있습니다.
 
 | 변수 값 | 설명 |
 | :-- | :-- |
@@ -136,30 +136,30 @@ Tig에서 명령을 사용하거나 제공하는 명령을 구성할 수 있습�
 
 * 마지막 커밋에 대해 amend 적용:
 
-	:::shell
-	bind generic + !git commit --amend
+		:::shell
+		bind generic + !git commit --amend
 
 * 크립 보드에서 커밋 ID 복사:
-
-	:::shell
-	bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c"
+	
+		:::shell
+		bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c"
 
 * 리뷰 즁 현재 커밋에서 사용된 노트 추가/수정:
-
-	:::shell
-	bind generic T !git notes edit %(commit)
+	
+		:::shell
+		bind generic T !git notes edit %(commit)
 
 * Git 대화형으로 파일 내용에 세밀한 staging 추가 입력:
-
-	:::shell
-	bind generic I !git add -i %(file)
+		
+		:::shell
+		bind generic I !git add -i %(file)
 
 * 선택된 브런치의 최상위에서 현재 브런치로 리배이스:
+		
+		:::shell
+		bind refs 3 !git rebase -i %(branch)
 
-	:::shell
-	bind refs 3 !git rebase -i %(branch)
-
-### 제목 윈도우
+### Title Windows (제목 윈도우)
 
 각 뷰는 뷰 이름에 대한 제목 윈도우를 가집니다. 가능하다면 현재 커밋 ID로도 나태낼 수 있으며, 뷰에서는 다음과 같이 위치됩니다:
 
@@ -171,11 +171,11 @@ Tig에서 명령을 사용하거나 제공하는 명령을 구성할 수 있습�
 	:::shell
 	[main] 77d9e40fbcea3238015aea403e06f61542df9a31 - commit 1 of 779 (0%) 5s
 
-## 3. 환경 변수
+## 3. Environment Variables (환경 변수)
 
 Git 인터페이스에 관련된 몇가지 옵션을 환경 옵션을 통해 구성할 수 있습니다.
 
-### 구성 파일
+### Configuration Files (구성 파일)
 
 시작시 Tig는 시스템 전체 구성 파일(기본 값 `{sysconfigdir}/tigrc`)을 읽은 다음 사용자 구성 파일(기본 값 `~/.tigrc`)을 읽습니다. 이 파일 중 하나의 경로를 다음과 같은 환경 변수를 이용하여 재정의 할 수 있습니다:
 
@@ -185,7 +185,7 @@ Git 인터페이스에 관련된 몇가지 옵션을 환경 옵션을 통해 구
 `TIGRC_SYSTEM`
 :    시스템 전체 구성 파일 위치
 
-### 저장소 참조
+### Repository References (저장소 참조)
 
 태그와 브런치 head가 참조하는 커밋은  `[`과 `]`에 둘러쌓여 참조 이름으로 표시됩니다:
 
@@ -202,23 +202,23 @@ Git 인터페이스에 관련된 몇가지 옵션을 환경 옵션을 통해 구
 `TIG_LS_REMOTE`
 :    모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 `git-ls-remote(1)` 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:
 
-	:::shell
-	git ls-remote .
+		:::shell
+		git ls-remote .
 
-### Diff 옵션
+### Diff options (Diff 옵션)
 
-Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜(-2days)와 같이 보길 원한다면:
+Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜와 같이 보길 원한다면:
 
 	:::shell
 	$ TIG_DIFF_OPTS="--relative-date" tig
 
 또는 여러분의 환경에서 영구적으로 변수를 설정하여 사용할 수 있습니다.
 
-## 4. 기본 키 바인딩
+## 4. Default Keybindings (기본 키 바인딩)
 
 기본 키 바인딩에 대해서는 아래와 같습니다.
 
-### 뷰 전환
+### View Switching (뷰 전환)
 
 * `m` | 메인 뷰로 전환
 ![tig main view]({filename}/img/2016-02-10_tig_2-1_main.png)
@@ -247,7 +247,7 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 * `c` | stage 뷰로 전환
 ![tig stage view]({filename}/img/2016-02-10_tig_2-13_stage.png)
 
-### 뷰 조작
+### View Manipulation (뷰 조작)
 
 | 키 | 동작 |
 | :-- | :-- |
@@ -260,7 +260,7 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 | Down | *Up*과 동일하며 단지 아래로 내려갑니다. |
 | `,` | 상위로 이동합니다. 트리 뷰에서는 상위 디렉토리로 이동하게 됩니다. blame 뷰에서는 상위 커밋에 대한 blame가 표시됩니다. 머지의 경우, 상위가 쿼리됩니다. |
 
-### 뷰 지정 동작
+### View Specific Actions (뷰 지정 동작)
 
 | 키 | 동작 |
 | :-- | :-- |
@@ -272,7 +272,7 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 | `]` | diff 콘텍스트 확장 |
 | `[` | diff 콘텍스트 축소 |
 
-### 커서 네비게이션
+### Cursor Navigation (커서 네비게이션)
 
 | 키 | 동작 |
 | :-- | :-- |
@@ -283,7 +283,7 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 | End | 마지막 라인으로 점프 |
 | Home | 첫 라인으로 점프 |
 
-### 스크롤링
+### Scrolling (스크롤링)
 
 | 키 | 동작 |
 | :-- | :-- |
@@ -295,7 +295,7 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 | Right | 뷰 한 컬럼 오른쪽으로 스크롤 |
 | `|` | 뷰 첫 칼럼으로 스크롤 |
 
-### 검색
+### Searching (검색)
 
 | 키 | 동작 |
 | :-- | :-- |
@@ -326,7 +326,7 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 | `:` | 프롬프트 열기. 특정 명령어를 실행할 수 있도록 허용 |
 | `e` | 에디터에서 파일 열기 |
 
-### 프롬프트
+### Prompt (프롬프트)
 
 | 키 | 동작 |
 | :-- | :-- |
@@ -340,9 +340,9 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 | `:script <file>` | `<file>`로부터 명령어 실행 |
 | `:exec <flags><args...>` | `<flags>`에 정의된 확장 사용자 정의 명령 옵션과 `<args>` 사용하여 명령 실행 |
 
-### 확장 명령어
+### External Commands (외부 명령어)
 
-사용자에 따라 확장 명령어가 더 필요한 경우, 쉽게 스크립트다 프로그램을 사용할 수 있는 방법을 제공합니다. 현재 커밋 ID로 키를 연결하고 현재 보여지는 상태에서 정보를 사용할 수 있습니다. Tig에서 기본 등록되어있는 확장 명령어:
+사용자에 따라 외부 명령어가 더 필요한 경우, 쉽게 스크립트다 프로그램을 사용할 수 있는 방법을 제공합니다. 현재 커밋 ID로 키를 연결하고 현재 보여지는 상태에서 정보를 사용할 수 있습니다. Tig에서 기본 등록되어있는 확장 명령어:
 
 | Keymap | 키 | 동작 |
 | :-- | :-- | :-- |
@@ -350,13 +350,13 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 | status | `C` | `git commit` |
 | generic | `C` | `git gc` |
 
-## 5. 리버전 사항
+## 5. Revision Specification (리버전 사항)
 
 이 세션에서는 리버전을 표시하거나 볼 수 있는 내용을 제한할 수 있도록 설정하는 방법에 대해서 설명합니다. Tig에서는 구문 분석을 하지 않습니다. 리버전 옵션에 대한 자세한 설명은 Git 메뉴얼 페이지에서 확인하십시오. 연관된 맨페이지는 `git-log(1)`을 기준으로 `git-diff(1)`과 `git-rev-list(1)`입니다.
 
-설정 가능한 옵션을 사용하여 Git과 상호 작용을 이 세션에서 설명합니다. 예를 들어 [diff 옵션](#diff)에 대한 세션에서 설명된 환경 변수를 사용하여 구성할 수 있습니다.
+설정 가능한 옵션을 사용하여 Git과 상호 작용을 이 세션에서 설명합니다. 예를 들어 [diff 옵션](#diff-options-diff)에 대한 세션에서 설명된 환경 변수를 사용하여 구성할 수 있습니다.
 
-### 패치 이름 제한
+### Limit by Path Name (패치 이름 제한)
 
 특정 파일 (또는 여러 파일) 변경에 대해서만 확인하고 싶다면 다음과 같이 목록으로 나타냅니다:
 
@@ -368,7 +368,7 @@ Tig의 하위 명령 또는 태그 이름과 같은 저장소 참조에서 발�
 	:::shell
 	$ tig -- status
 
-### 날짜나 숫자 제한
+### Limit by Date or Number (날짜나 숫자 제한)
 
 Git과의 상호작용 속도를 올리기 위해 로그와 메인 뷰에서 보여지는 커밋의 수를 제한할 수 있습니다. 예를 들어, 날짜로 제한을 걸 경우엔 `--since=1.month`, 커밋 수로 제한을 걸 경우엔 `-n400`와 같이 사용합니다.
 
@@ -379,7 +379,7 @@ Git과의 상호작용 속도를 올리기 위해 로그와 메인 뷰에서 보
 
 > 주의, 공간을 포함하는 날짜를 사용하지 않는다면 `.`를 이용하여 나타낼 수 있습니다. 예, `--after=May.5th`
 
-### 도달 가능 제한
+### Limiting by Commit Ranges (커밋 범위 제한)
 
 대안으로 "`tag-1.0`과 `tag-2.0` 사이의 모든 커밋"과 같은 특정 범위로 제안할 수 있습니다. 예를 들면:
 
@@ -393,32 +393,44 @@ Git과의 상호작용 속도를 올리기 위해 로그와 메인 뷰에서 보
 
 원격 브런치에서 부시된 내용들을 나열 합니다. 선택적으로 `HEAD`는 생략될 수 있습니다.
 
-### 변경 사항 연결
+### Limiting by Reachability (도달 가능 제한)
+
+Git 인터프리트에서는 "tag-1.0...tag-2.0"을 사용하는 경우, "`tag-1.0`를 제외하고 `tag-2.0`까지의 모든 커밋"으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수 있습니다.
+
+이 방법으로 다음 미리 커밋을 지정하려는 경우:
+
+	:::shell
+	$ tig tag-2.0 ^tag-1.0
+
+부정 연산자로 `^`를 생각할 수 있습니다. 이 대체 문법을 사용하면 위의 어려 브런치의 cut off를 지정하여 커밋 브런치를 없에버릴 수 있습니다.
+
+### Combining Revisions Specification (변경 사항 연결)
 
 리버전 옵션은 다음과 같이 연결하여 사용할 수 있습니다. "`Documentation/` 디렉토리에 있는 파일의 변경 사항들을 마지막달 20개 커밋까지 보여다오."를 다음과 같이 나타낼 수 있습니다:
 
 	:::shell
 	$ tig --since=1.month -n20 -- Documentation/
 
-### 모든 저장소 참조 검사
+### Examining All Repository References (모든 저장소 참조 검사)
 
 일부 경우엔 저장소에 대한 모든 참조를 걸쳐서 변화를 조회하는 것이 편할 수 있습니다. 다음 예제는 "이 저장소의 개발 라인에서 지난주내 특정파일이 변경되었는지"에 대해 묻는 것입니다. 다음 명령으로 가능합니다:
 
 	:::shell
 	$ tig --all --since=1.week -- Makefile
 
-## 6. 정보를 더 원하시면
+## 6. More Information (정보를 더 원하시면)
 
 Tig [홈페이지](http://jonas.nitro.dk/tig)나 [메인 Git 저장소](https://github.com/jonas/tig)를 방문하여 새로운 릴리즈 내용, 버그 리포트 내용, 기능 요청에 대한 정보를 얻어가시길 바랍니다.
 
-## 7. 저작권
+## 7. Copyright (저작권)
 
 Copyright (c) 2006-2014 Jonas Fonseca <jonas.fonseca@gmail.com>
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
-## 8. 더보기
+## 8. See Also (더보기)
 
 맨 페이지:
-	* [tig(1)](http://jonas.nitro.dk/tig/tig.1.html)
-	* [tigrc(5)](http://jonas.nitro.dk/tig/tigrc.5.html)
+
+* [tig(1)](http://jonas.nitro.dk/tig/tig.1.html)
+* [tigrc(5)](http://jonas.nitro.dk/tig/tigrc.5.html)
