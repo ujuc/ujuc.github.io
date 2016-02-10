@@ -77,5 +77,19 @@ Git 명령에 대해 지원되는 변경 옵션 지원에 대한 소개는 [지�
 ### 도달 가능 제한
 ### 변경 사항 연결
 ### 모든 저장소 참조 검사
-## 6. 저작권
-## 7. 더보기
+
+## 6. 정보를 더 원하시면
+
+Tig [홈페이지](http://jonas.nitro.dk/tig)나 [메인 Git 저장소](https://github.com/jonas/tig)를 방문하여 새로운 릴리즈 내용, 버그 리포트 내용, 기능 요청에 대한 정보를 얻어가시길 바랍니다.
+
+## 7. 저작권
+
+Copyright (c) 2006-2014 Jonas Fonseca <jonas.fonseca@gmail.com>
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+## 8. 더보기
+
+맨 페이지:
+	* [tig(1)](http://jonas.nitro.dk/tig/tig.1.html)
+	* [tigrc(5)](http://jonas.nitro.dk/tig/tigrc.5.html)
