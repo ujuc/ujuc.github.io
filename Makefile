@@ -59,6 +59,7 @@ html:
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR) $(BASEDIR)/__pycache__ $(BASEDIR)/cache
+	rm $(BASEDIR)/*.pid
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
