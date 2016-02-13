@@ -2,5 +2,8 @@
 	path = theme/svbhack
 	url = https://github.com/ujuc/pelican-svbhack
 [submodule "plugins"]
-	path = plugins
-	url = https://github.com/getpelican/pelican-plugins
+    path = plugins
+    url = https://github.com/getpelican/pelican-plugins
+[submodule "theme/clean"]
+	path = theme/clean
+	url = git@github.com:ujuc/clean_theme.git
