@@ -54,18 +54,13 @@ DISPALY_PAGES_ON_MENU = True
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 TYPOGRIFY = True
-THEME = "theme/svbhack/"
+THEME = "theme/clean/"
 
 # Address
 EMAIL_ADDRESS = 'ujuc@ujuc.kr'
 GITHUB_ADDRESS = 'https://github.com/ujuc'
 SO_ADDRESS = 'http://stackoverflow.com/users/978762/sungjin-gang'
 TWITTER_ADDRESS = 'https://twitter.com/ujuc'
-
-# Theme seeting
-BS3_URL = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'
-BS3_JS = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'
-BS3_THEME = 'https://bootswatch.com/sandstone/bootstrap.min.css'
 
 AUTHORS = {
 }
