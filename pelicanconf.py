@@ -14,14 +14,16 @@ PATH = 'content'
 TIMEZONE = 'Asia/Seoul'
 
 DEFAULT_LANG = 'ko'
-DEFAULT_DATE_FORMAT = '%Y. %m. %d. %a'
+DEFAULT_DATE_FORMAT = '%y. %m. %d.'
 
 LOAD_CONTENT_CACHE = False
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
+CATEGORY_FEED_RSS = None
 TRANSLATION_FEED_ATOM = None
+TRANSLATION_FEED_RSS = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
@@ -29,23 +31,21 @@ ARTICLE_PATHS = ['blog']
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
-MENUITEMS = [
-	('blog', '/'),
-	('Tags', '/tags.html'),
-	('Categories', '/categories.html'),
-	('Email', 'mailto:ujuc@ujuc.kr'),
-	('Github', 'https://github.com/ujuc'),
-]
+MENUITEMS = (
+    ('Blog', '/', 'fa-inbox'),
+    ('Archive', '/archives.html', 'fa-archive'),
+    ('Pages', '/pages.html', 'fa-file-text'),
+    ('Tags', '/tags.html', 'fa-tag'),
+    ('Categories', '/categories.html', 'fa-folder-open'),
+)
 
-# Blogroll
-# LINKS = (('Pelican', 'http://getpelican.com/'),
-#         ('Python.org', 'http://python.org/'),
-#         ('Jinja2', 'http://jinja.pocoo.org/'),
-#         ('You can modify those links in your config file', '#'),)
+SOCIAL = (
+    ('Github', 'https://github.com/ujuc', 'fa-github-square'),
+)
 
-# Social widget
-# SOCIAL = (('You can add links in your config file', '#'),
-#          ('Another social link', '#'),)
+LINKS = (
+
+)
 
 DEFAULT_PAGINATION = 5
 STATIC_PATHS = ['img', 'misc']
