@@ -35,9 +35,11 @@ Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되�
 	$ git show | tig
 
 * `git-show`
+
 ![git-show]({filename}/img/2016-02-10_tig_1-1.png)
 
 * `git-show | tig`
+
 ![git-show|tig]({filename}/img/2016-02-10_tig_1-2.png)
 
 ### Git Command Options (Git 명령어 옵션)
@@ -221,30 +223,55 @@ Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 
 ### View Switching (뷰 전환)
 
 * `m` | 메인 뷰로 전환
+
 ![tig main view]({filename}/img/2016-02-10_tig_2-1_main.png)
+
 * `d` | diff 뷰로 전환
+
 ![tig diff view]({filename}/img/2016-02-10_tig_2-2_diff.png)
+
 * `l` | 로그 뷰로 전환
+
 ![tig log view]({filename}/img/2016-02-10_tig_2-3_log.png)
+
 * `p` | pager 뷰로 전환
+
 ![tig parger view]({filename}/img/2016-02-10_tig_2-4_pager.png)
+
 * `t` | 디렉토리 트리 뷰로 전환
+
 ![tig tree view]({filename}/img/2016-02-10_tig_2-5_tree.png)
+
 * `f` | 파일 blob 뷰로 전환
+
 ![tig file blob view]({filename}/img/2016-02-10_tig_2-6_file.png)
+
 * `g` | grep 뷰로 전환
+
 ![tig grep view]({filename}/img/2016-02-10_tig_2-7_grep.png)
+
 * `b` | blame 뷰로 전환
+
 ![tig blame view]({filename}/img/2016-02-10_tig_2-8_blame.png)
+
 * `r` | refs 뷰로 전환
+
 ![tig refs view]({filename}/img/2016-02-10_tig_2-9_refs.png)
+
 * `y` | stash 뷰로 전환
+
 ![tig stash view]({filename}/img/2016-02-10_tig_2-10_stash.png)
+
 * `h` | 도움말 뷰로 전환
+
 ![tig help view]({filename}/img/2016-02-10_tig_2-11_help.png)
+
 * `s` | status 뷰로 전환
+
 ![tig status view]({filename}/img/2016-02-10_tig_2-12_status.png)
+
 * `c` | stage 뷰로 전환
+
 ![tig stage view]({filename}/img/2016-02-10_tig_2-13_stage.png)
 
 ### View Manipulation (뷰 조작)
