@@ -61,15 +61,13 @@
 
 
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;git-show&lt;/code&gt;
-&lt;img alt="git-show" src="http://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;git-show | tig&lt;/code&gt;
-&lt;img alt="git-show|tig" src="http://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git-show&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt="git-show" src="http://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git-show | tig&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="git-show|tig" src="http://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
 &lt;h3 id="git-command-options-git"&gt;Git Command Options (Git 명령어&amp;nbsp;옵션)&lt;/h3&gt;
 &lt;p&gt;명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할&amp;nbsp;것입니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -286,33 +284,57 @@
 &lt;p&gt;기본 키 바인딩에 대해서는 아래와&amp;nbsp;같습니다.&lt;/p&gt;
 &lt;h3 id="view-switching"&gt;View Switching (뷰&amp;nbsp;전환)&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;m&lt;/code&gt; | 메인 뷰로 전환
-&lt;img alt="tig main view" src="http://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;d&lt;/code&gt; | diff 뷰로 전환
-&lt;img alt="tig diff view" src="http://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;l&lt;/code&gt; | 로그 뷰로 전환
-&lt;img alt="tig log view" src="http://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;p&lt;/code&gt; | pager 뷰로 전환
-&lt;img alt="tig parger view" src="http://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;t&lt;/code&gt; | 디렉토리 트리 뷰로 전환
-&lt;img alt="tig tree view" src="http://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;f&lt;/code&gt; | 파일 blob 뷰로 전환
-&lt;img alt="tig file blob view" src="http://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g&lt;/code&gt; | grep 뷰로 전환
-&lt;img alt="tig grep view" src="http://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;b&lt;/code&gt; | blame 뷰로 전환
-&lt;img alt="tig blame view" src="http://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;r&lt;/code&gt; | refs 뷰로 전환
-&lt;img alt="tig refs view" src="http://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;y&lt;/code&gt; | stash 뷰로 전환
-&lt;img alt="tig stash view" src="http://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;h&lt;/code&gt; | 도움말 뷰로 전환
-&lt;img alt="tig help view" src="http://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;s&lt;/code&gt; | status 뷰로 전환
-&lt;img alt="tig status view" src="http://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;c&lt;/code&gt; | stage 뷰로 전환
-&lt;img alt="tig stage view" src="http://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;m&lt;/code&gt; | 메인 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig main view" src="http://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; | diff 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig diff view" src="http://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;l&lt;/code&gt; | 로그 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig log view" src="http://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p&lt;/code&gt; | pager 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig parger view" src="http://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;t&lt;/code&gt; | 디렉토리 트리 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig tree view" src="http://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;f&lt;/code&gt; | 파일 blob 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig file blob view" src="http://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;g&lt;/code&gt; | grep 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig grep view" src="http://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;b&lt;/code&gt; | blame 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig blame view" src="http://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; | refs 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig refs view" src="http://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; | stash 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig stash view" src="http://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;h&lt;/code&gt; | 도움말 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig help view" src="http://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; | status 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig status view" src="http://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; | stage 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig stage view" src="http://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/p&gt;
 &lt;h3 id="view-manipulation"&gt;View Manipulation (뷰&amp;nbsp;조작)&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;

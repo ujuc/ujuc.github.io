@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <!-- ## for client-side less
-  <link rel="stylesheet/less" type="text/css" href="http://ujuc.github.io/theme/css/style.less">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
-  -->
-  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
-  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta -->
+  <meta charset="UTF-8">
   <meta name="author" content="ujuc">
   <meta name="description" content="Posts and writings by ujuc">
 
-  <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... Atom" />
-  <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+  <!-- Style sheet -->
 
-<meta name="keywords" content="vim, setting">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
 
   <title>
     잘 밤에 쓸데없는 생각하기...
-&ndash; oh-my-vim 설치후 오류 (<span class="caps">OSX</span>)  </title>
+  </title>
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-58634276-1']);
-  _gaq.push(['_trackPageview']);
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
 </head>
-
 <body>
-  <aside>
-    <div id="user_meta">
-      <a href="http://ujuc.github.io">
-        <img src="http://ujuc.github.io/img/logo.jpg" alt="logo">
-      </a>
-      <h2><a href="http://ujuc.github.io">ujuc</a></h2>
-      <p></p>
-      <ul>
-        <li><a href="/">blog</a></li>
-        <li><a href="/tags.html">Tags</a></li>
-        <li><a href="/categories.html">Categories</a></li>
-        <li><a href="mailto:ujuc@ujuc.kr">Email</a></li>
-        <li><a href="https://github.com/ujuc">Github</a></li>
-      </ul>
-    </div>
-  </aside>
-
-  <main>
+  <div class="container">
     <header>
-      <p>
-      <a href="http://ujuc.github.io">Index</a> &brvbar; <a href="http://ujuc.github.io/archives.html">Archives</a>
-      &brvbar; <a href="http://ujuc.github.io/feeds/all.atom.xml">Atom</a>
-      &brvbar; <a href="http://ujuc.github.io/feeds/rss.xml">RSS</a>
-      </p>
+      <div class="col-md-offset-1 col-md-10">
+        <div class="row">
+          <ul class="nav nav-pills">
+              <li class="presentation"><a href="/"><i class="fa fa-inbox"></i> Blog</a></li>
+              <li class="presentation"><a href="/archives.html"><i class="fa fa-archive"></i> Archive</a></li>
+              <li class="presentation"><a href="/pages.html"><i class="fa fa-file-text"></i> Pages</a></li>
+              <li class="presentation"><a href="/tags.html"><i class="fa fa-tag"></i> Tags</a></li>
+              <li class="presentation"><a href="/categories.html"><i class="fa fa-folder-open"></i> Categories</a></li>
+          </ul>
+        </div>
+        <div class="row">
+        </div>
+      </div>
     </header>
-
-<article>
-  <div class="article_title">
-    <h3><a href="http://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/">oh-my-vim 설치후 오류 (<span class="caps">OSX</span>)</a></h3>
   </div>
-  <div class="article_text">
-    <p><a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim">oh-my-vim</a> 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
+
+  <div id="site_article" class="container">
+    <article>
+  <div class="col-md-offset-1 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/" class="h1">oh-my-vim 설치후 오류 (<span class="caps">OSX</span>)</a></h1>
+    </div>
+    <div class="row article">
+      <p>...</p>
+      <div class="article_text">
+        <p><a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim">oh-my-vim</a> 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
 변경하고 있긴하다만&#8230;). 달라진게 없다. 좀 더 화려해지고 플러그인들로 인해서
 IDE급으로 에디터가 변경됐을 뿐이다. 단지 80라인 와랩이&nbsp;필요했을뿐인데&#8230;</p>
 <p>암튼 그렇게 쓰다보니 실행할때마다 에러가&nbsp;뜬다.</p>
@@ -91,32 +94,68 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
 </pre>
 <p>설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이&nbsp;줄었다.!!!</p>
 
-  </div>
-  <div class="article_meta">
-    <p>Posted on: 2015. 02. 26. Thu</p>
-    <p>Category: <a href="http://ujuc.github.io/category/develop.html">Develop</a>
- / Tags:
-      <a href="http://ujuc.github.io/tag/vim.html">vim</a>,      <a href="http://ujuc.github.io/tag/setting.html">setting</a>    </p>
-  </div>
-
-  <div id="article_comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_identifier = "2015/02/26/oh-my-vim-error-osx/";
-        (function() {
-             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-             dsq.src = 'http://ujucgithub.disqus.com/embed.js';
-             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-         })();
-    </script>
-  </div>
-
-</article>
-
-
-    <div id="ending_message">
-      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+      </div>
+      <p>...</p>
     </div>
-  </main>
-</body>
+    <div class="row article_meta">
+      <div>
+        <p><i class="fa fa-calendar-plus-o"></i> 15. 02. 26. |
+        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/develop.html">Develop</a> |
+        <i class="fa fa-tags">
+            <a href="http://ujuc.github.io/tag/vim.html">vim</a>
+,             <a href="http://ujuc.github.io/tag/setting.html">setting</a>
+        </i></p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2015/02/26/oh-my-vim-error-osx/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+    </article>
+  </div>
+
+  <div class="container">
+  </div>
+
+  <div id="site_title" class="container">
+    <div class="col-md-offset-1 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i></a></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="site_footer" class="container">
+<footer>
+  <div class="col-md-offset-1 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>  </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></body>
 </html>

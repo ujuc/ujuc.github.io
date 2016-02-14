@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 11 Feb 2016 00:00:00 +0900</lastBuildDate><item><title>Tig Manual</title><link>http://ujuc.github.io/2016/02/10/tig-manual/</link><description>&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 14 Feb 2016 00:00:00 +0900</lastBuildDate><item><title>Tig Manual</title><link>http://ujuc.github.io/2016/02/10/tig-manual/</link><description>&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/jonas/tig"&gt;Tig&amp;nbsp;Homepage&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Tig snap" src="http://ujuc.github.io/img/2016-02-10_tig_snap.png" /&gt;&lt;/p&gt;
 &lt;p&gt;실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&amp;#8230; 그리고 한국어로 곧장 옮기니 이상한 부분이&amp;nbsp;있어&amp;#8230;&lt;/p&gt;
@@ -61,15 +61,13 @@
 
 
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;git-show&lt;/code&gt;
-&lt;img alt="git-show" src="http://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;git-show | tig&lt;/code&gt;
-&lt;img alt="git-show|tig" src="http://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git-show&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt="git-show" src="http://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git-show | tig&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="git-show|tig" src="http://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
 &lt;h3 id="git-command-options-git"&gt;Git Command Options (Git 명령어&amp;nbsp;옵션)&lt;/h3&gt;
 &lt;p&gt;명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할&amp;nbsp;것입니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -286,33 +284,57 @@
 &lt;p&gt;기본 키 바인딩에 대해서는 아래와&amp;nbsp;같습니다.&lt;/p&gt;
 &lt;h3 id="view-switching"&gt;View Switching (뷰&amp;nbsp;전환)&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;m&lt;/code&gt; | 메인 뷰로 전환
-&lt;img alt="tig main view" src="http://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;d&lt;/code&gt; | diff 뷰로 전환
-&lt;img alt="tig diff view" src="http://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;l&lt;/code&gt; | 로그 뷰로 전환
-&lt;img alt="tig log view" src="http://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;p&lt;/code&gt; | pager 뷰로 전환
-&lt;img alt="tig parger view" src="http://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;t&lt;/code&gt; | 디렉토리 트리 뷰로 전환
-&lt;img alt="tig tree view" src="http://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;f&lt;/code&gt; | 파일 blob 뷰로 전환
-&lt;img alt="tig file blob view" src="http://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g&lt;/code&gt; | grep 뷰로 전환
-&lt;img alt="tig grep view" src="http://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;b&lt;/code&gt; | blame 뷰로 전환
-&lt;img alt="tig blame view" src="http://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;r&lt;/code&gt; | refs 뷰로 전환
-&lt;img alt="tig refs view" src="http://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;y&lt;/code&gt; | stash 뷰로 전환
-&lt;img alt="tig stash view" src="http://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;h&lt;/code&gt; | 도움말 뷰로 전환
-&lt;img alt="tig help view" src="http://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;s&lt;/code&gt; | status 뷰로 전환
-&lt;img alt="tig status view" src="http://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;c&lt;/code&gt; | stage 뷰로 전환
-&lt;img alt="tig stage view" src="http://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;m&lt;/code&gt; | 메인 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig main view" src="http://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; | diff 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig diff view" src="http://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;l&lt;/code&gt; | 로그 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig log view" src="http://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p&lt;/code&gt; | pager 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig parger view" src="http://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;t&lt;/code&gt; | 디렉토리 트리 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig tree view" src="http://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;f&lt;/code&gt; | 파일 blob 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig file blob view" src="http://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;g&lt;/code&gt; | grep 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig grep view" src="http://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;b&lt;/code&gt; | blame 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig blame view" src="http://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;r&lt;/code&gt; | refs 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig refs view" src="http://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; | stash 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig stash view" src="http://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;h&lt;/code&gt; | 도움말 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig help view" src="http://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; | status 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig status view" src="http://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; | stage 뷰로&amp;nbsp;전환&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="tig stage view" src="http://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/p&gt;
 &lt;h3 id="view-manipulation"&gt;View Manipulation (뷰&amp;nbsp;조작)&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1517,7 +1539,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 11 Feb 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 14 Feb 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
@@ -1533,7 +1555,7 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워
 손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 11 Feb 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 14 Feb 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
