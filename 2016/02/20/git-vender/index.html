@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="col-md-offset-1 col-md-10">
+        <div class="row">
+          <ul class="nav nav-pills">
+              <li class="presentation"><a href="/"><i class="fa fa-inbox"></i> Blog</a></li>
+              <li class="presentation"><a href="/archives.html"><i class="fa fa-archive"></i> Archive</a></li>
+              <li class="presentation"><a href="/tags.html"><i class="fa fa-tag"></i> Tags</a></li>
+              <li class="presentation"><a href="/categories.html"><i class="fa fa-folder-open"></i> Categories</a></li>
+          </ul>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div id="site_article" class="container">
+    <article>
+  <div class="col-md-offset-1 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2016/02/20/git-vender/" class="h1">git-vendor</a></h1>
+    </div>
+    <div class="row article">
+      <p>...</p>
+      <div class="article_text">
+        <p>brew 업그레이드하다가 <code>git-vender</code>라는 확장 프로그램이 보였다. 이건 뭐하는 넘인지 궁금해서&nbsp;정리한다.</p>
+<p><code>git-vender</code>는 git 명령어를 이용하여 vendor 소스를 관리할 수 있도록 도와주는 확장이다. <code>git-subtree</code>를 이용해서 소스를 체크 아웃하고 업데이트된 내용들을 관리할 수 있도록&nbsp;해준다.</p>
+<p><code>git-vendor</code>는 golang에서 vendor 종속성을 관리하는 패턴에 따라서 작업을 진행한다고&nbsp;한다.</p>
+<ul>
+<li>연관되는 소스들은 <code>vendor/</code> 디렉토리에&nbsp;저장된다.</li>
+<li>프로젝트에대한 전체 위치로 폴더가 생성되게&nbsp;된다.</li>
+</ul>
+<h3 id="_1">기본&nbsp;명령어</h3>
+<ul>
+<li><code>git vendor add [--prefix &lt;dir&gt;] &lt;name&gt; &lt;repository&gt; [&lt;ref&gt;]</code> : 새로운 vendor 연관 소스&nbsp;추가</li>
+<li><code>git vendor list [&lt;name&gt;]</code> : 현재 레포에 있는 vendor 연관 소스&nbsp;보기.</li>
+<li><code>git vendor update &lt;name&gt; [&lt;ref&gt;]</code> : vendor 연관 소스&nbsp;업데이트.</li>
+</ul>
+<p>설치는&nbsp;알아서&#8230;</p>
+<h3 id="_2">예제</h3>
+<p>Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 <code>git-subtree</code>를 모르겠는데&nbsp;뭐&#8230;</p>
+<div class="codehilite"><pre>$ <span class="c1"># Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.</span>
+$ git vendor add forge https://github.com/brettlangdon/forge v0.1.6
++ git subtree add --prefix vendor/github.com/brettlangdon/forge --message <span class="s1">&#39;Add &quot;forge&quot; from &quot;https://github.com/brettlangdon/   forge@v0.1.6&quot;</span>
+
+<span class="s1">git-vendor-name: forge</span>
+<span class="s1">git-vendor-dir: vendor/github.com/brettlangdon/forge</span>
+<span class="s1">git-vendor-repository: https://github.com/brettlangdon/forge</span>
+<span class="s1">git-vendor-ref: v0.1.6</span>
+<span class="s1">&#39;</span> https://github.com/brettlangdon/forge v0.1.6 --squash
+git fetch https://github.com/brettlangdon/forge v0.1.6
+warning: no common commits
+remote: Counting objects: 405, <span class="k">done</span>.
+remote: Total <span class="m">405</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 404
+Receiving objects: 100% <span class="o">(</span>405/405<span class="o">)</span>, 68.31 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>227/227<span class="o">)</span>, <span class="k">done</span>.
+From https://github.com/brettlangdon/forge
+ * tag               v0.1.6     -&gt; FETCH_HEAD
+Added dir <span class="s1">&#39;vendor/github.com/brettlangdon/forge&#39;</span>
+
+$ <span class="c1"># 목록으로보면..</span>
+$ git vendor list
+forge@v0.1.6:
+    name:   forge
+    dir:    vendor/github.com/brettlangdon/forge
+    repo:   https://github.com/brettlangdon/forge
+    ref:    v0.1.6
+    commit: 3335840c5f0ad9e821006588f1b16a3385d9c318
+
+$ <span class="c1"># 업데이트를 하면</span>
+$ git vendor update forge v0.1.7
+From https://github.com/brettlangdon/forge
+    * tag               v0.1.7     -&gt; FETCH_HEAD
+Merge made by the <span class="s1">&#39;recursive&#39;</span> strategy.
+ vendor/github.com/brettlangdon/forge/forge_test.go <span class="p">|</span> <span class="m">2</span> ++
+ vendor/github.com/brettlangdon/forge/scanner.go    <span class="p">|</span> <span class="m">4</span> ++++
+ vendor/github.com/brettlangdon/forge/test.cfg      <span class="p">|</span> <span class="m">1</span> +
+ <span class="m">3</span> files changed, <span class="m">7</span> insertions<span class="o">(</span>+<span class="o">)</span>
+
+$ <span class="c1"># 확인하면..</span>
+$ git vendor list
+forge@v0.1.7:
+    name:   forge
+    dir:    vendor/github.com/brettlangdon/forge
+    repo:   https://github.com/brettlangdon/forge
+    ref:    v0.1.7
+    commit: 071c5f108e0af39bf67a87fc766ea9bfb72b9ee7
+</pre></div>
+
+
+<h2 id="_3">관련&nbsp;페이지</h2>
+<ul>
+<li><a href="https://github.com/brettlangdon/git-vendor">Github</a></li>
+<li><a href="https://brettlangdon.github.io/git-vendor/">Manpage</a></li>
+</ul>
+      </div>
+      <p>...</p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p><i class="fa fa-calendar-plus-o"></i> 16. 02. 20. |
+        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/development.html">Development</a> |
+        <i class="fa fa-tags">
+            <a href="http://ujuc.github.io/tag/git.html">git</a>
+,             <a href="http://ujuc.github.io/tag/git-vendor.html">git-vendor</a>
+,             <a href="http://ujuc.github.io/tag/git-subtree.html">git-subtree</a>
+,             <a href="http://ujuc.github.io/tag/dependencies.html">dependencies</a>
+        </i></p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2016/02/20/git-vender/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+    </article>
+  </div>
+
+  <div class="container">
+  </div>
+
+  <div id="site_title" class="container">
+    <div class="col-md-offset-1 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i></a></span>
+          <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i></a></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="site_footer" class="container">
+<footer>
+  <div class="col-md-offset-1 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>  </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></body>
+</html>

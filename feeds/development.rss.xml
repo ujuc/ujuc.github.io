@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/development.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 10 Feb 2016 02:08:00 +0900</lastBuildDate><item><title>Tig Manual</title><link>http://ujuc.github.io/2016/02/10/tig-manual/</link><description>&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/development.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 20 Feb 2016 21:02:00 +0900</lastBuildDate><item><title>git-vendor</title><link>http://ujuc.github.io/2016/02/20/git-vender/</link><description>&lt;p&gt;brew 업그레이드하다가 &lt;code&gt;git-vender&lt;/code&gt;라는 확장 프로그램이 보였다. 이건 뭐하는 넘인지 궁금해서&amp;nbsp;정리한다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git-vender&lt;/code&gt;는 git 명령어를 이용하여 vendor 소스를 관리할 수 있도록 도와주는 확장이다. &lt;code&gt;git-subtree&lt;/code&gt;를 이용해서 소스를 체크 아웃하고 업데이트된 내용들을 관리할 수 있도록&amp;nbsp;해준다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git-vendor&lt;/code&gt;는 golang에서 vendor 종속성을 관리하는 패턴에 따라서 작업을 진행한다고&amp;nbsp;한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;연관되는 소스들은 &lt;code&gt;vendor/&lt;/code&gt; 디렉토리에&amp;nbsp;저장된다.&lt;/li&gt;
+&lt;li&gt;프로젝트에대한 전체 위치로 폴더가 생성되게&amp;nbsp;된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_1"&gt;기본&amp;nbsp;명령어&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git vendor add [--prefix &amp;lt;dir&amp;gt;] &amp;lt;name&amp;gt; &amp;lt;repository&amp;gt; [&amp;lt;ref&amp;gt;]&lt;/code&gt; : 새로운 vendor 연관 소스&amp;nbsp;추가&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git vendor list [&amp;lt;name&amp;gt;]&lt;/code&gt; : 현재 레포에 있는 vendor 연관 소스&amp;nbsp;보기.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git vendor update &amp;lt;name&amp;gt; [&amp;lt;ref&amp;gt;]&lt;/code&gt; : vendor 연관 소스&amp;nbsp;업데이트.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;설치는&amp;nbsp;알아서&amp;#8230;&lt;/p&gt;
+&lt;h3 id="_2"&gt;예제&lt;/h3&gt;
+&lt;p&gt;Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 &lt;code&gt;git-subtree&lt;/code&gt;를 모르겠는데&amp;nbsp;뭐&amp;#8230;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="c1"&gt;# Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.&lt;/span&gt;
+$ git vendor add forge https://github.com/brettlangdon/forge v0.1.6
++ git subtree add --prefix vendor/github.com/brettlangdon/forge --message &lt;span class="s1"&gt;&amp;#39;Add &amp;quot;forge&amp;quot; from &amp;quot;https://github.com/brettlangdon/   forge@v0.1.6&amp;quot;&lt;/span&gt;
+
+&lt;span class="s1"&gt;git-vendor-name: forge&lt;/span&gt;
+&lt;span class="s1"&gt;git-vendor-dir: vendor/github.com/brettlangdon/forge&lt;/span&gt;
+&lt;span class="s1"&gt;git-vendor-repository: https://github.com/brettlangdon/forge&lt;/span&gt;
+&lt;span class="s1"&gt;git-vendor-ref: v0.1.6&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; https://github.com/brettlangdon/forge v0.1.6 --squash
+git fetch https://github.com/brettlangdon/forge v0.1.6
+warning: no common commits
+remote: Counting objects: 405, &lt;span class="k"&gt;done&lt;/span&gt;.
+remote: Total &lt;span class="m"&gt;405&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 0&lt;span class="o"&gt;)&lt;/span&gt;, reused &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 0&lt;span class="o"&gt;)&lt;/span&gt;, pack-reused 404
+Receiving objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;405/405&lt;span class="o"&gt;)&lt;/span&gt;, 68.31 KiB &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; bytes/s, &lt;span class="k"&gt;done&lt;/span&gt;.
+Resolving deltas: 100% &lt;span class="o"&gt;(&lt;/span&gt;227/227&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
+From https://github.com/brettlangdon/forge
+ * tag               v0.1.6     -&amp;gt; FETCH_HEAD
+Added dir &lt;span class="s1"&gt;&amp;#39;vendor/github.com/brettlangdon/forge&amp;#39;&lt;/span&gt;
+
+$ &lt;span class="c1"&gt;# 목록으로보면..&lt;/span&gt;
+$ git vendor list
+forge@v0.1.6:
+    name:   forge
+    dir:    vendor/github.com/brettlangdon/forge
+    repo:   https://github.com/brettlangdon/forge
+    ref:    v0.1.6
+    commit: 3335840c5f0ad9e821006588f1b16a3385d9c318
+
+$ &lt;span class="c1"&gt;# 업데이트를 하면&lt;/span&gt;
+$ git vendor update forge v0.1.7
+From https://github.com/brettlangdon/forge
+    * tag               v0.1.7     -&amp;gt; FETCH_HEAD
+Merge made by the &lt;span class="s1"&gt;&amp;#39;recursive&amp;#39;&lt;/span&gt; strategy.
+ vendor/github.com/brettlangdon/forge/forge_test.go &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; ++
+ vendor/github.com/brettlangdon/forge/scanner.go    &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;4&lt;/span&gt; ++++
+ vendor/github.com/brettlangdon/forge/test.cfg      &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt; +
+ &lt;span class="m"&gt;3&lt;/span&gt; files changed, &lt;span class="m"&gt;7&lt;/span&gt; insertions&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
+
+$ &lt;span class="c1"&gt;# 확인하면..&lt;/span&gt;
+$ git vendor list
+forge@v0.1.7:
+    name:   forge
+    dir:    vendor/github.com/brettlangdon/forge
+    repo:   https://github.com/brettlangdon/forge
+    ref:    v0.1.7
+    commit: 071c5f108e0af39bf67a87fc766ea9bfb72b9ee7
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_3"&gt;관련&amp;nbsp;페이지&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/brettlangdon/git-vendor"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://brettlangdon.github.io/git-vendor/"&gt;Manpage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 20 Feb 2016 21:02:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-02-20:2016/02/20/git-vender/</guid><category>git</category><category>git-vendor</category><category>git-subtree</category><category>dependencies</category></item><item><title>Tig Manual</title><link>http://ujuc.github.io/2016/02/10/tig-manual/</link><description>&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/jonas/tig"&gt;Tig&amp;nbsp;Homepage&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Tig snap" src="http://ujuc.github.io/img/2016-02-10_tig_snap.png" /&gt;&lt;/p&gt;
 &lt;p&gt;실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&amp;#8230; 그리고 한국어로 곧장 옮기니 이상한 부분이&amp;nbsp;있어&amp;#8230;&lt;/p&gt;
