@@ -1,6 +1,6 @@
 Title: git-vendor
 Date: 2016-02-20 21:02
-Category: Development
+Category: Develop
 Tags: git, git-vendor, git-subtree, dependencies
 Slug: git-vender
 Summary: git-vendor. git 확장이며 git-subtree를 이용하여 vendor 소스를 관리할 수 있도록 도와준다.

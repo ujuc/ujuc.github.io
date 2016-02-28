@@ -1,6 +1,6 @@
 Title: Tig Manual
 Date: 2016-02-10 02:08
-Category: Development
+Category: Develop
 Tags: tig
 Slug: tig-manual
 Summary: Tig 메뉴얼 번역 축약본
