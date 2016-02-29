@@ -103,33 +103,33 @@
 </table>
 <p>간단히 하자.
 go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올&nbsp;것이다.</p>
-<div class="codehilite"><pre>$ which go
+<div class="codehilite"><pre><span></span>$ which go
 </pre></div>
 
 
 <p><img alt="ex1_1" src="http://ujuc.github.io/img/2016-01-26_ex1_1.png" /></p>
 <p>요놈을 안나오게&nbsp;해보자.</p>
-<div class="codehilite"><pre>$ which go 1&gt; /dev/null
+<div class="codehilite"><pre><span></span>$ which go 1&gt; /dev/null
 </pre></div>
 
 
 <p><img alt="ex1_2" src="http://ujuc.github.io/img/2016-01-26_ex1_2.png" /></p>
 <p>오~~~</p>
 <p>stderr 값이 나오면 안나오게 할려고 보면&#8230; 이건 설치가 되어있으니&#8230;&nbsp;없는걸로&#8230;</p>
-<div class="codehilite"><pre>$ which rbenv
+<div class="codehilite"><pre><span></span>$ which rbenv
 </pre></div>
 
 
 <p><img alt="ex2_1" src="http://ujuc.github.io/img/2016-01-26_ex2_1.png" /></p>
 <p>이걸 위와 같이 <code>1</code> 을&nbsp;사용하면&#8230;</p>
-<div class="codehilite"><pre>$ which rbenv 1&gt; /dev/null
+<div class="codehilite"><pre><span></span>$ which rbenv 1&gt; /dev/null
 </pre></div>
 
 
 <p><img alt="ex2_2" src="http://ujuc.github.io/img/2016-01-26_ex2_2.png" /></p>
 <p>음&#8230; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. <code>1</code>로 출력되는걸&nbsp;막으라했더니&#8230;</p>
 <p>그럼 Python에서는 어디로&nbsp;나올까?</p>
-<div class="codehilite"><pre><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="kn">as</span> <span class="nn">sub</span>
+<div class="codehilite"><pre><span></span><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="kn">as</span> <span class="nn">sub</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">check_rbenv</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;which rbenv&#39;</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
                             <span class="n">stderr</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
 <span class="n">In</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">check_rbenv</span><span class="p">)</span>
@@ -138,7 +138,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 
 
 <p>음?? 암것도&nbsp;안나온다&#8230;</p>
-<div class="codehilite"><pre><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
+<div class="codehilite"><pre><span></span><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;which rbenv&#39;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span> <span class="mi">256</span>
 </pre></div>

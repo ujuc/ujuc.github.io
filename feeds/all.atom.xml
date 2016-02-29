@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-02-28T00:00:00+09:00</updated><entry><title>git-vendor</title><link href="http://ujuc.github.io/2016/02/20/git-vender/" rel="alternate"></link><updated>2016-02-20T21:02:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-20:2016/02/20/git-vender/</id><summary type="html">&lt;p&gt;brew 업그레이드하다가 &lt;code&gt;git-vender&lt;/code&gt;라는 확장 프로그램이 보였다. 이건 뭐하는 넘인지 궁금해서&amp;nbsp;정리한다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-03-01T00:00:00+09:00</updated><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><updated>2016-02-29T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
+&lt;p&gt;우선 이 패키지는 14년 5월 이후로 &lt;a href="https://pypi.python.org/pypi/pysftp"&gt;pypi 프로젝트&lt;/a&gt;에서는 업로드가 되고 있지 않으며, &lt;a href="https://bitbucket.org/dundeemt/pysftp"&gt;Project repo&lt;/a&gt;의 업로드는 이루워지고 있으며, 3.4까지 테스팅을 해봣단다. 파일만 올리기위해서 사용했던 라이브러리라 간단히 sftp를 이용하여 파일을 올리고 받기를 원한다면 괜찮을&amp;nbsp;듯.&lt;/p&gt;
+&lt;h2 id="package"&gt;Package&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;SFTP를 python에서 직접 사용할 수 있도록 도와주며, 내부는 C로 구성되어있다.&lt;ul&gt;
+&lt;li&gt;그 덕분에 설치시 &lt;code&gt;python-dev&lt;/code&gt; 페키지가 필요하다. (Ubuntu 리눅스&amp;nbsp;기준)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;사용하는 원격지에 ssh가 설치되어있는지 확인하자. 가끔 설치가 안되어있는 경우도&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_1"&gt;사용법&lt;/h2&gt;
+&lt;p&gt;간단히 적겠다. 모자르면 &lt;a href="http://pysftp.readthedocs.org/en/release_0.2.8/cookbook.html"&gt;문서&lt;/a&gt;를&amp;nbsp;보자.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pysftp&lt;/span&gt;
+
+&lt;span class="n"&gt;cinfo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;host&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hostname&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ujuc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+         &lt;span class="s1"&gt;&amp;#39;private_key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/path/to/keyfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;port&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2222&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;pysftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Connection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;cinfo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mybackupfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myoriginfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;static&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;here&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;there&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이정도 주석 달다가 지웠다. 그것이 없어도 sftp를 사용하고 있다면 간단히 상요할 정도로 sftp 명령어에서 사용하는 내용들을&amp;nbsp;추가해놓았다.&lt;/p&gt;
+&lt;p&gt;아직 pypi 측으로 버전업된 것이 반영되지 않아 새버전을 사용하고 싶으면 레포로 가서 작업을 진행하는 것을&amp;nbsp;추천한다.&lt;/p&gt;</summary><category term="python"></category><category term="sftp"></category><category term="lib"></category></entry><entry><title>git-vendor</title><link href="http://ujuc.github.io/2016/02/20/git-vender/" rel="alternate"></link><updated>2016-02-20T21:02:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-20:2016/02/20/git-vender/</id><summary type="html">&lt;p&gt;brew 업그레이드하다가 &lt;code&gt;git-vender&lt;/code&gt;라는 확장 프로그램이 보였다. 이건 뭐하는 넘인지 궁금해서&amp;nbsp;정리한다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git-vender&lt;/code&gt;는 git 명령어를 이용하여 vendor 소스를 관리할 수 있도록 도와주는 확장이다. &lt;code&gt;git-subtree&lt;/code&gt;를 이용해서 소스를 체크 아웃하고 업데이트된 내용들을 관리할 수 있도록&amp;nbsp;해준다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git-vendor&lt;/code&gt;는 golang에서 vendor 종속성을 관리하는 패턴에 따라서 작업을 진행한다고&amp;nbsp;한다.&lt;/p&gt;
 &lt;ul&gt;
@@ -15,7 +42,7 @@
 &lt;p&gt;설치는&amp;nbsp;알아서&amp;#8230;&lt;/p&gt;
 &lt;h3 id="_2"&gt;예제&lt;/h3&gt;
 &lt;p&gt;Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 &lt;code&gt;git-subtree&lt;/code&gt;를 모르겠는데&amp;nbsp;뭐&amp;#8230;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="c1"&gt;# Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="c1"&gt;# Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.&lt;/span&gt;
 $ git vendor add forge https://github.com/brettlangdon/forge v0.1.6
 + git subtree add --prefix vendor/github.com/brettlangdon/forge --message &lt;span class="s1"&gt;&amp;#39;Add &amp;quot;forge&amp;quot; from &amp;quot;https://github.com/brettlangdon/   forge@v0.1.6&amp;quot;&lt;/span&gt;
 
@@ -250,7 +277,7 @@ forge@v0.1.7:
 &lt;h3 id="pager-mode-pager"&gt;Pager Mode (Pager&amp;nbsp;모드)&lt;/h3&gt;
 &lt;p&gt;Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되고 pager 뷰는 stdin으로 들어온 데이터를 로딩하여 확인할 수 있습니다. Pager 모드는 다양한 Git 명령에 대한 출력값을 색상을 추가하여 확인할 수 있도록&amp;nbsp;도와줍니다.&lt;/p&gt;
 &lt;p&gt;예로 &lt;code&gt;git-show(1)&lt;/code&gt; 명령에 대한 출력을 색상을 추가한 버전으로 보고&amp;nbsp;싶다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ git show &lt;span class="p"&gt;|&lt;/span&gt; tig
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git show &lt;span class="p"&gt;|&lt;/span&gt; tig
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -268,7 +295,7 @@ forge@v0.1.7:
 &lt;p&gt;주의: 메인 뷰에 대한 옵션을 지정하는 경우엔, 메인 뷰에서 사용하는 형식으로 자동 설정되는 &lt;code&gt;--pretty&lt;/code&gt; 옵션을 사용할 수&amp;nbsp;없습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;커밋과 author, 커미터 정보를 모두 보여주는 방법에 대한&amp;nbsp;예:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig show --pretty&lt;span class="o"&gt;=&lt;/span&gt;fuller
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig show --pretty&lt;span class="o"&gt;=&lt;/span&gt;fuller
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -276,7 +303,7 @@ forge@v0.1.7:
 &lt;h2 id="2-the-viewer"&gt;2. The Viewer&amp;nbsp;(뷰어)&lt;/h2&gt;
 &lt;p&gt;디스플레이는 하나 이상의 뷰와 스크린으로 구성되어있으며, 맨 마지막 라인은 상태 윈도우로 사용됩니다. 기본 값은 한번에 하나의 뷰만을 보여줍니다. 하지만 메인과 로그 뷰로 나눠서 커밋 diff를 확인할 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;p&gt;현재 라인이 커밋 라인일때, 로그 뷰에서 엔터키를 누르게되면 다음과 같은 명령이 실행되는 것과&amp;nbsp;같습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;commit 4d55caff4cc89335192f3e566004b4ceef572521
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;commit 4d55caff4cc89335192f3e566004b4ceef572521
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -392,35 +419,35 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;마지막 커밋에 대해 amend&amp;nbsp;적용:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic + !git commit --amend
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic + !git commit --amend
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;크립 보드에서 커밋 &lt;span class="caps"&gt;ID&lt;/span&gt;&amp;nbsp;복사:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic &lt;span class="m"&gt;9&lt;/span&gt; !@sh -c &lt;span class="s2"&gt;&amp;quot;echo -n %(commit) | xclip -selection c&amp;quot;&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic &lt;span class="m"&gt;9&lt;/span&gt; !@sh -c &lt;span class="s2"&gt;&amp;quot;echo -n %(commit) | xclip -selection c&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;리뷰 즁 현재 커밋에서 사용된 노트&amp;nbsp;추가/수정:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic T !git notes edit %&lt;span class="o"&gt;(&lt;/span&gt;commit&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic T !git notes edit %&lt;span class="o"&gt;(&lt;/span&gt;commit&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Git 대화형으로 파일 내용에 세밀한 staging 추가&amp;nbsp;입력:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic I !git add -i %&lt;span class="o"&gt;(&lt;/span&gt;file&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic I !git add -i %&lt;span class="o"&gt;(&lt;/span&gt;file&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;선택된 브런치의 최상위에서 현재 브런치로&amp;nbsp;리배이스:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; refs &lt;span class="m"&gt;3&lt;/span&gt; !git rebase -i %&lt;span class="o"&gt;(&lt;/span&gt;branch&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; refs &lt;span class="m"&gt;3&lt;/span&gt; !git rebase -i %&lt;span class="o"&gt;(&lt;/span&gt;branch&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -428,12 +455,12 @@ forge@v0.1.7:
 &lt;/ul&gt;
 &lt;h3 id="title-windows"&gt;Title Windows (제목&amp;nbsp;윈도우)&lt;/h3&gt;
 &lt;p&gt;각 뷰는 뷰 이름에 대한 제목 윈도우를 가집니다. 가능하다면 현재 커밋 ID로도 나태낼 수 있으며, 뷰에서는 다음과 같이&amp;nbsp;위치됩니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; c622eefaa485995320bc743431bae0d497b1d875 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;61&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;1%&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; c622eefaa485995320bc743431bae0d497b1d875 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;61&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;1%&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;기본 값으로 현재 뷰의 제목은 굵은 폰트를 사용하여 강조됩니다. 긴 로딩이 있는 뷰의 경우(3초 이상), 로딩이 시작된 시간으로 부터의 시간이 추가되어&amp;nbsp;보여집니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; 77d9e40fbcea3238015aea403e06f61542df9a31 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;779&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;0%&lt;span class="o"&gt;)&lt;/span&gt; 5s
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; 77d9e40fbcea3238015aea403e06f61542df9a31 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;779&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;0%&lt;span class="o"&gt;)&lt;/span&gt; 5s
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -449,19 +476,19 @@ forge@v0.1.7:
 &lt;/dl&gt;
 &lt;h3 id="repository-references"&gt;Repository References (저장소&amp;nbsp;참조)&lt;/h3&gt;
 &lt;p&gt;태그와 브런치 head가 참조하는 커밋은  &lt;code&gt;[&lt;/code&gt;과 &lt;code&gt;]&lt;/code&gt;에 둘러쌓여 참조 이름으로&amp;nbsp;표시됩니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;2006-03-26 19:42 Petr Baudis         &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;cogito-0.17.1&lt;span class="o"&gt;]&lt;/span&gt; Cogito 0.17.1
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;2006-03-26 19:42 Petr Baudis         &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;cogito-0.17.1&lt;span class="o"&gt;]&lt;/span&gt; Cogito 0.17.1
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;브런치가 보여지는 것을 제한하길 원한다면, 보여질 브런치의 이름이 &lt;code&gt;master&lt;/code&gt;이거나 &lt;code&gt;feature/&lt;/code&gt; 로 접두어로 시작하는 경우엔 다음과 같이 변수를 설정할 수&amp;nbsp;있습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="nv"&gt;TIG_LS_REMOTE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git ls-remote . master feature/*&amp;quot;&lt;/span&gt; tig
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;TIG_LS_REMOTE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git ls-remote . master feature/*&amp;quot;&lt;/span&gt; tig
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;또는 여러분의 환경에서 영구적으로 변수를 설하여 사용할 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;&lt;code&gt;TIG_LS_REMOTE&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;div class="codehilite"&gt;&lt;pre&gt;git ls-remote .
+&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git ls-remote .
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -469,7 +496,7 @@ forge@v0.1.7:
 &lt;/dl&gt;
 &lt;h3 id="diff-options-diff"&gt;Diff options (Diff&amp;nbsp;옵션)&lt;/h3&gt;
 &lt;p&gt;Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜와 같이 보길&amp;nbsp;원한다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="nv"&gt;TIG_DIFF_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--relative-date&amp;quot;&lt;/span&gt; tig
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;TIG_DIFF_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--relative-date&amp;quot;&lt;/span&gt; tig
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -871,19 +898,19 @@ forge@v0.1.7:
 &lt;p&gt;설정 가능한 옵션을 사용하여 Git과 상호 작용을 이 세션에서 설명합니다. 예를 들어 &lt;a href="#diff-options-diff"&gt;diff 옵션&lt;/a&gt;에 대한 세션에서 설명된 환경 변수를 사용하여 구성할 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;h3 id="limit-by-path-name"&gt;Limit by Path Name (패치 이름&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;특정 파일 (또는 여러 파일) 변경에 대해서만 확인하고 싶다면 다음과 같이 목록으로&amp;nbsp;나타냅니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig Makefile README
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig Makefile README
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Tig의 하위 명령 또는 태그 이름과 같은 저장소 참조에서 발생할 수 있는 모호성을 방지하기 위해 Git 옵션의 경우 &lt;code&gt;--&lt;/code&gt;를 사용하여 구분해야됩니다. &lt;code&gt;states&lt;/code&gt;라는 이름을 가진 파일이 있다면, &lt;code&gt;status&lt;/code&gt; 하위 명령과 충돌을 일으킬꺼니 다음과 같이&amp;nbsp;사용해야합니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig -- status
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig -- status
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3 id="limit-by-date-or-number"&gt;Limit by Date or Number (날짜나 숫자&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;Git과의 상호작용 속도를 올리기 위해 로그와 메인 뷰에서 보여지는 커밋의 수를 제한할 수 있습니다. 예를 들어, 날짜로 제한을 걸 경우엔 &lt;code&gt;--since=1.month&lt;/code&gt;, 커밋 수로 제한을 걸 경우엔 &lt;code&gt;-n400&lt;/code&gt;와 같이&amp;nbsp;사용합니다.&lt;/p&gt;
 &lt;p&gt;만약 두 날짜 사이에 발생한 변경분에 대해서 확인하고&amp;nbsp;싶다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --after&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;May 5th&amp;quot;&lt;/span&gt; --before&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2006-05-16 15:44&amp;quot;&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig --after&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;May 5th&amp;quot;&lt;/span&gt; --before&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2006-05-16 15:44&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -892,12 +919,12 @@ forge@v0.1.7:
 &lt;/blockquote&gt;
 &lt;h3 id="limiting-by-commit-ranges"&gt;Limiting by Commit Ranges (커밋 범위&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;대안으로 &amp;#8220;&lt;code&gt;tag-1.0&lt;/code&gt;과 &lt;code&gt;tag-2.0&lt;/code&gt; 사이의 모든 커밋&amp;#8221;과 같은 특정 범위로 제안할 수 있습니다. 예를&amp;nbsp;들면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig tag-1.0..tag-2.0
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig tag-1.0..tag-2.0
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;원격 브런치로 푸시되지 않은 커밋의 검색 제한은 다음과 같은 방법으로 가능합니다. &lt;code&gt;origin&lt;/code&gt;을 업스트림 원격 브런치고 가정하고&amp;nbsp;사용한다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig origin..HEAD
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig origin..HEAD
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -905,20 +932,20 @@ forge@v0.1.7:
 &lt;h3 id="limiting-by-reachability"&gt;Limiting by Reachability (도달 가능&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;Git 인터프리트에서는 &amp;#8220;tag-1.0&amp;#8230;tag-2.0&amp;#8221;을 사용하는 경우, &amp;#8220;&lt;code&gt;tag-1.0&lt;/code&gt;를 제외하고 &lt;code&gt;tag-2.0&lt;/code&gt;까지의 모든 커밋&amp;#8221;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;p&gt;이 방법으로 다음 미리 커밋을 지정하려는&amp;nbsp;경우:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig tag-2.0 ^tag-1.0
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig tag-2.0 ^tag-1.0
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;부정 연산자로 &lt;code&gt;^&lt;/code&gt;를 생각할 수 있습니다. 이 대체 문법을 사용하면 위의 여려 브런치의 cut off를 지정하여 커밋 브런치를 없애버릴 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;h3 id="combining-revisions-specification"&gt;Combining Revisions Specification (변경 사항&amp;nbsp;연결)&lt;/h3&gt;
 &lt;p&gt;리버전 옵션은 다음과 같이 연결하여 사용할 수 있습니다. &amp;#8220;&lt;code&gt;Documentation/&lt;/code&gt; 디렉토리에 있는 파일의 변경 사항들을 마지막달 20개 커밋까지 보여다오.&amp;#8221;를 다음과 같이 나타낼 수&amp;nbsp;있습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --since&lt;span class="o"&gt;=&lt;/span&gt;1.month -n20 -- Documentation/
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig --since&lt;span class="o"&gt;=&lt;/span&gt;1.month -n20 -- Documentation/
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3 id="examining-all-repository-references"&gt;Examining All Repository References (모든 저장소 참조&amp;nbsp;검사)&lt;/h3&gt;
 &lt;p&gt;일부 경우엔 저장소에 대한 모든 참조를 걸쳐서 변화를 조회하는 것이 편할 수 있습니다. 다음 예제는 &amp;#8220;이 저장소의 개발 라인에서 지난주내 특정파일이 변경되었는지&amp;#8221;에 대해 묻는 것입니다. 다음 명령으로&amp;nbsp;가능합니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --all --since&lt;span class="o"&gt;=&lt;/span&gt;1.week -- Makefile
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig --all --since&lt;span class="o"&gt;=&lt;/span&gt;1.week -- Makefile
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -945,13 +972,13 @@ forge@v0.1.7:
 &lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html"&gt;Ubuntu manpage -&amp;nbsp;unattended-upgrade&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_1"&gt;사용법&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ sudo unattended-upgrade
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo unattended-upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를&amp;nbsp;하면된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ sudo unattended-upgrade --dry-run
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo unattended-upgrade --dry-run
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1001,33 +1028,33 @@ mariadb를 사용하는게 정신 건강에&amp;nbsp;좋은&amp;#8230;&lt;/p&gt;
 &lt;/table&gt;
 &lt;p&gt;간단히 하자.
 go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올&amp;nbsp;것이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ which go
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which go
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex1_1" src="http://ujuc.github.io/img/2016-01-26_ex1_1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;요놈을 안나오게&amp;nbsp;해보자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ which go 1&amp;gt; /dev/null
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which go 1&amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex1_2" src="http://ujuc.github.io/img/2016-01-26_ex1_2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;오~~~&lt;/p&gt;
 &lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;#8230; 이건 설치가 되어있으니&amp;#8230;&amp;nbsp;없는걸로&amp;#8230;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ which rbenv
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which rbenv
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex2_1" src="http://ujuc.github.io/img/2016-01-26_ex2_1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을&amp;nbsp;사용하면&amp;#8230;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ which rbenv 1&amp;gt; /dev/null
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which rbenv 1&amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex2_2" src="http://ujuc.github.io/img/2016-01-26_ex2_2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;음&amp;#8230; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸&amp;nbsp;막으라했더니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;그럼 Python에서는 어디로&amp;nbsp;나올까?&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
                             &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;check_rbenv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1036,7 +1063,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 
 
 &lt;p&gt;음?? 암것도&amp;nbsp;안나온다&amp;#8230;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;256&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1723,7 +1750,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2016-02-28T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2016-03-01T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -1733,7 +1760,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</summary><category term="openstack"></category><category term="cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2016-02-28T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</summary><category term="openstack"></category><category term="cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2016-03-01T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이

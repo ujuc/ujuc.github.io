@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/devlop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-02-29T21:55:00+09:00</updated><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><updated>2016-02-29T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
+&lt;p&gt;우선 이 패키지는 14년 5월 이후로 &lt;a href="https://pypi.python.org/pypi/pysftp"&gt;pypi 프로젝트&lt;/a&gt;에서는 업로드가 되고 있지 않으며, &lt;a href="https://bitbucket.org/dundeemt/pysftp"&gt;Project repo&lt;/a&gt;의 업로드는 이루워지고 있으며, 3.4까지 테스팅을 해봣단다. 파일만 올리기위해서 사용했던 라이브러리라 간단히 sftp를 이용하여 파일을 올리고 받기를 원한다면 괜찮을&amp;nbsp;듯.&lt;/p&gt;
+&lt;h2 id="package"&gt;Package&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;SFTP를 python에서 직접 사용할 수 있도록 도와주며, 내부는 C로 구성되어있다.&lt;ul&gt;
+&lt;li&gt;그 덕분에 설치시 &lt;code&gt;python-dev&lt;/code&gt; 페키지가 필요하다. (Ubuntu 리눅스&amp;nbsp;기준)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;사용하는 원격지에 ssh가 설치되어있는지 확인하자. 가끔 설치가 안되어있는 경우도&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_1"&gt;사용법&lt;/h2&gt;
+&lt;p&gt;간단히 적겠다. 모자르면 &lt;a href="http://pysftp.readthedocs.org/en/release_0.2.8/cookbook.html"&gt;문서&lt;/a&gt;를&amp;nbsp;보자.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pysftp&lt;/span&gt;
+
+&lt;span class="n"&gt;cinfo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;host&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hostname&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ujuc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+         &lt;span class="s1"&gt;&amp;#39;private_key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/path/to/keyfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;port&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2222&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;pysftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Connection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;cinfo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mybackupfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myoriginfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;static&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;here&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;there&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이정도 주석 달다가 지웠다. 그것이 없어도 sftp를 사용하고 있다면 간단히 상요할 정도로 sftp 명령어에서 사용하는 내용들을&amp;nbsp;추가해놓았다.&lt;/p&gt;
+&lt;p&gt;아직 pypi 측으로 버전업된 것이 반영되지 않아 새버전을 사용하고 싶으면 레포로 가서 작업을 진행하는 것을&amp;nbsp;추천한다.&lt;/p&gt;</summary><category term="python"></category><category term="sftp"></category><category term="lib"></category></entry></feed>

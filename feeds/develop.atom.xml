@@ -15,7 +15,7 @@
 &lt;p&gt;설치는&amp;nbsp;알아서&amp;#8230;&lt;/p&gt;
 &lt;h3 id="_2"&gt;예제&lt;/h3&gt;
 &lt;p&gt;Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 &lt;code&gt;git-subtree&lt;/code&gt;를 모르겠는데&amp;nbsp;뭐&amp;#8230;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="c1"&gt;# Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="c1"&gt;# Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.&lt;/span&gt;
 $ git vendor add forge https://github.com/brettlangdon/forge v0.1.6
 + git subtree add --prefix vendor/github.com/brettlangdon/forge --message &lt;span class="s1"&gt;&amp;#39;Add &amp;quot;forge&amp;quot; from &amp;quot;https://github.com/brettlangdon/   forge@v0.1.6&amp;quot;&lt;/span&gt;
 
@@ -125,7 +125,7 @@ forge@v0.1.7:
 &lt;h3 id="pager-mode-pager"&gt;Pager Mode (Pager&amp;nbsp;모드)&lt;/h3&gt;
 &lt;p&gt;Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되고 pager 뷰는 stdin으로 들어온 데이터를 로딩하여 확인할 수 있습니다. Pager 모드는 다양한 Git 명령에 대한 출력값을 색상을 추가하여 확인할 수 있도록&amp;nbsp;도와줍니다.&lt;/p&gt;
 &lt;p&gt;예로 &lt;code&gt;git-show(1)&lt;/code&gt; 명령에 대한 출력을 색상을 추가한 버전으로 보고&amp;nbsp;싶다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ git show &lt;span class="p"&gt;|&lt;/span&gt; tig
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git show &lt;span class="p"&gt;|&lt;/span&gt; tig
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -143,7 +143,7 @@ forge@v0.1.7:
 &lt;p&gt;주의: 메인 뷰에 대한 옵션을 지정하는 경우엔, 메인 뷰에서 사용하는 형식으로 자동 설정되는 &lt;code&gt;--pretty&lt;/code&gt; 옵션을 사용할 수&amp;nbsp;없습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;커밋과 author, 커미터 정보를 모두 보여주는 방법에 대한&amp;nbsp;예:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig show --pretty&lt;span class="o"&gt;=&lt;/span&gt;fuller
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig show --pretty&lt;span class="o"&gt;=&lt;/span&gt;fuller
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -151,7 +151,7 @@ forge@v0.1.7:
 &lt;h2 id="2-the-viewer"&gt;2. The Viewer&amp;nbsp;(뷰어)&lt;/h2&gt;
 &lt;p&gt;디스플레이는 하나 이상의 뷰와 스크린으로 구성되어있으며, 맨 마지막 라인은 상태 윈도우로 사용됩니다. 기본 값은 한번에 하나의 뷰만을 보여줍니다. 하지만 메인과 로그 뷰로 나눠서 커밋 diff를 확인할 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;p&gt;현재 라인이 커밋 라인일때, 로그 뷰에서 엔터키를 누르게되면 다음과 같은 명령이 실행되는 것과&amp;nbsp;같습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;commit 4d55caff4cc89335192f3e566004b4ceef572521
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;commit 4d55caff4cc89335192f3e566004b4ceef572521
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -267,35 +267,35 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;마지막 커밋에 대해 amend&amp;nbsp;적용:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic + !git commit --amend
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic + !git commit --amend
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;크립 보드에서 커밋 &lt;span class="caps"&gt;ID&lt;/span&gt;&amp;nbsp;복사:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic &lt;span class="m"&gt;9&lt;/span&gt; !@sh -c &lt;span class="s2"&gt;&amp;quot;echo -n %(commit) | xclip -selection c&amp;quot;&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic &lt;span class="m"&gt;9&lt;/span&gt; !@sh -c &lt;span class="s2"&gt;&amp;quot;echo -n %(commit) | xclip -selection c&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;리뷰 즁 현재 커밋에서 사용된 노트&amp;nbsp;추가/수정:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic T !git notes edit %&lt;span class="o"&gt;(&lt;/span&gt;commit&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic T !git notes edit %&lt;span class="o"&gt;(&lt;/span&gt;commit&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Git 대화형으로 파일 내용에 세밀한 staging 추가&amp;nbsp;입력:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic I !git add -i %&lt;span class="o"&gt;(&lt;/span&gt;file&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; generic I !git add -i %&lt;span class="o"&gt;(&lt;/span&gt;file&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;선택된 브런치의 최상위에서 현재 브런치로&amp;nbsp;리배이스:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; refs &lt;span class="m"&gt;3&lt;/span&gt; !git rebase -i %&lt;span class="o"&gt;(&lt;/span&gt;branch&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; refs &lt;span class="m"&gt;3&lt;/span&gt; !git rebase -i %&lt;span class="o"&gt;(&lt;/span&gt;branch&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -303,12 +303,12 @@ forge@v0.1.7:
 &lt;/ul&gt;
 &lt;h3 id="title-windows"&gt;Title Windows (제목&amp;nbsp;윈도우)&lt;/h3&gt;
 &lt;p&gt;각 뷰는 뷰 이름에 대한 제목 윈도우를 가집니다. 가능하다면 현재 커밋 ID로도 나태낼 수 있으며, 뷰에서는 다음과 같이&amp;nbsp;위치됩니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; c622eefaa485995320bc743431bae0d497b1d875 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;61&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;1%&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; c622eefaa485995320bc743431bae0d497b1d875 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;61&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;1%&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;기본 값으로 현재 뷰의 제목은 굵은 폰트를 사용하여 강조됩니다. 긴 로딩이 있는 뷰의 경우(3초 이상), 로딩이 시작된 시간으로 부터의 시간이 추가되어&amp;nbsp;보여집니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; 77d9e40fbcea3238015aea403e06f61542df9a31 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;779&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;0%&lt;span class="o"&gt;)&lt;/span&gt; 5s
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt; 77d9e40fbcea3238015aea403e06f61542df9a31 - commit &lt;span class="m"&gt;1&lt;/span&gt; of &lt;span class="m"&gt;779&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;0%&lt;span class="o"&gt;)&lt;/span&gt; 5s
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -324,19 +324,19 @@ forge@v0.1.7:
 &lt;/dl&gt;
 &lt;h3 id="repository-references"&gt;Repository References (저장소&amp;nbsp;참조)&lt;/h3&gt;
 &lt;p&gt;태그와 브런치 head가 참조하는 커밋은  &lt;code&gt;[&lt;/code&gt;과 &lt;code&gt;]&lt;/code&gt;에 둘러쌓여 참조 이름으로&amp;nbsp;표시됩니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;2006-03-26 19:42 Petr Baudis         &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;cogito-0.17.1&lt;span class="o"&gt;]&lt;/span&gt; Cogito 0.17.1
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;2006-03-26 19:42 Petr Baudis         &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;cogito-0.17.1&lt;span class="o"&gt;]&lt;/span&gt; Cogito 0.17.1
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;브런치가 보여지는 것을 제한하길 원한다면, 보여질 브런치의 이름이 &lt;code&gt;master&lt;/code&gt;이거나 &lt;code&gt;feature/&lt;/code&gt; 로 접두어로 시작하는 경우엔 다음과 같이 변수를 설정할 수&amp;nbsp;있습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="nv"&gt;TIG_LS_REMOTE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git ls-remote . master feature/*&amp;quot;&lt;/span&gt; tig
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;TIG_LS_REMOTE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git ls-remote . master feature/*&amp;quot;&lt;/span&gt; tig
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;또는 여러분의 환경에서 영구적으로 변수를 설하여 사용할 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;&lt;code&gt;TIG_LS_REMOTE&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;div class="codehilite"&gt;&lt;pre&gt;git ls-remote .
+&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git ls-remote .
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -344,7 +344,7 @@ forge@v0.1.7:
 &lt;/dl&gt;
 &lt;h3 id="diff-options-diff"&gt;Diff options (Diff&amp;nbsp;옵션)&lt;/h3&gt;
 &lt;p&gt;Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜와 같이 보길&amp;nbsp;원한다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ &lt;span class="nv"&gt;TIG_DIFF_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--relative-date&amp;quot;&lt;/span&gt; tig
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;TIG_DIFF_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--relative-date&amp;quot;&lt;/span&gt; tig
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -746,19 +746,19 @@ forge@v0.1.7:
 &lt;p&gt;설정 가능한 옵션을 사용하여 Git과 상호 작용을 이 세션에서 설명합니다. 예를 들어 &lt;a href="#diff-options-diff"&gt;diff 옵션&lt;/a&gt;에 대한 세션에서 설명된 환경 변수를 사용하여 구성할 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;h3 id="limit-by-path-name"&gt;Limit by Path Name (패치 이름&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;특정 파일 (또는 여러 파일) 변경에 대해서만 확인하고 싶다면 다음과 같이 목록으로&amp;nbsp;나타냅니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig Makefile README
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig Makefile README
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Tig의 하위 명령 또는 태그 이름과 같은 저장소 참조에서 발생할 수 있는 모호성을 방지하기 위해 Git 옵션의 경우 &lt;code&gt;--&lt;/code&gt;를 사용하여 구분해야됩니다. &lt;code&gt;states&lt;/code&gt;라는 이름을 가진 파일이 있다면, &lt;code&gt;status&lt;/code&gt; 하위 명령과 충돌을 일으킬꺼니 다음과 같이&amp;nbsp;사용해야합니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig -- status
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig -- status
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3 id="limit-by-date-or-number"&gt;Limit by Date or Number (날짜나 숫자&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;Git과의 상호작용 속도를 올리기 위해 로그와 메인 뷰에서 보여지는 커밋의 수를 제한할 수 있습니다. 예를 들어, 날짜로 제한을 걸 경우엔 &lt;code&gt;--since=1.month&lt;/code&gt;, 커밋 수로 제한을 걸 경우엔 &lt;code&gt;-n400&lt;/code&gt;와 같이&amp;nbsp;사용합니다.&lt;/p&gt;
 &lt;p&gt;만약 두 날짜 사이에 발생한 변경분에 대해서 확인하고&amp;nbsp;싶다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --after&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;May 5th&amp;quot;&lt;/span&gt; --before&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2006-05-16 15:44&amp;quot;&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig --after&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;May 5th&amp;quot;&lt;/span&gt; --before&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2006-05-16 15:44&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -767,12 +767,12 @@ forge@v0.1.7:
 &lt;/blockquote&gt;
 &lt;h3 id="limiting-by-commit-ranges"&gt;Limiting by Commit Ranges (커밋 범위&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;대안으로 &amp;#8220;&lt;code&gt;tag-1.0&lt;/code&gt;과 &lt;code&gt;tag-2.0&lt;/code&gt; 사이의 모든 커밋&amp;#8221;과 같은 특정 범위로 제안할 수 있습니다. 예를&amp;nbsp;들면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig tag-1.0..tag-2.0
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig tag-1.0..tag-2.0
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;원격 브런치로 푸시되지 않은 커밋의 검색 제한은 다음과 같은 방법으로 가능합니다. &lt;code&gt;origin&lt;/code&gt;을 업스트림 원격 브런치고 가정하고&amp;nbsp;사용한다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig origin..HEAD
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig origin..HEAD
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -780,20 +780,20 @@ forge@v0.1.7:
 &lt;h3 id="limiting-by-reachability"&gt;Limiting by Reachability (도달 가능&amp;nbsp;제한)&lt;/h3&gt;
 &lt;p&gt;Git 인터프리트에서는 &amp;#8220;tag-1.0&amp;#8230;tag-2.0&amp;#8221;을 사용하는 경우, &amp;#8220;&lt;code&gt;tag-1.0&lt;/code&gt;를 제외하고 &lt;code&gt;tag-2.0&lt;/code&gt;까지의 모든 커밋&amp;#8221;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;p&gt;이 방법으로 다음 미리 커밋을 지정하려는&amp;nbsp;경우:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig tag-2.0 ^tag-1.0
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig tag-2.0 ^tag-1.0
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;부정 연산자로 &lt;code&gt;^&lt;/code&gt;를 생각할 수 있습니다. 이 대체 문법을 사용하면 위의 여려 브런치의 cut off를 지정하여 커밋 브런치를 없애버릴 수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;h3 id="combining-revisions-specification"&gt;Combining Revisions Specification (변경 사항&amp;nbsp;연결)&lt;/h3&gt;
 &lt;p&gt;리버전 옵션은 다음과 같이 연결하여 사용할 수 있습니다. &amp;#8220;&lt;code&gt;Documentation/&lt;/code&gt; 디렉토리에 있는 파일의 변경 사항들을 마지막달 20개 커밋까지 보여다오.&amp;#8221;를 다음과 같이 나타낼 수&amp;nbsp;있습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --since&lt;span class="o"&gt;=&lt;/span&gt;1.month -n20 -- Documentation/
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig --since&lt;span class="o"&gt;=&lt;/span&gt;1.month -n20 -- Documentation/
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3 id="examining-all-repository-references"&gt;Examining All Repository References (모든 저장소 참조&amp;nbsp;검사)&lt;/h3&gt;
 &lt;p&gt;일부 경우엔 저장소에 대한 모든 참조를 걸쳐서 변화를 조회하는 것이 편할 수 있습니다. 다음 예제는 &amp;#8220;이 저장소의 개발 라인에서 지난주내 특정파일이 변경되었는지&amp;#8221;에 대해 묻는 것입니다. 다음 명령으로&amp;nbsp;가능합니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;$ tig --all --since&lt;span class="o"&gt;=&lt;/span&gt;1.week -- Makefile
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ tig --all --since&lt;span class="o"&gt;=&lt;/span&gt;1.week -- Makefile
 &lt;/pre&gt;&lt;/div&gt;
 
 
