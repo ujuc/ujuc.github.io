@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <ul class="nav nav-pills">
+              <li class="presentation"><a href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span></a></li>
+              <li class="presentation"><a href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span></a></li>
+              <li class="presentation"><a href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span></a></li>
+              <li class="presentation"><a href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span></a></li>
+          </ul>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div id="site_article" class="container">
+    <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/" class="h1">[Google Cloud Platfrom] Google Cloud&nbsp;Endpoints</a></h1>
+    </div>
+    <div class="row article">
+      <p>...</p>
+      <div class="article_text">
+        <ul>
+<li>App의 API를 구성하기 쉽도록 제공하는&nbsp;서비스</li>
+<li>Remote Procedure Call(<span class="caps">RPC</span>)를 이용하여 작업을 진행할 수 있도록&nbsp;구성.</li>
+</ul>
+<h2 id="_1">사용</h2>
+<ul>
+<li>2가지 방법이 존재<ul>
+<li>RPC의 <code>message</code> 클래스를 이용하는&nbsp;방법.</li>
+<li>RPC를 통하지 않고 직접 작업하는&nbsp;방법. </li>
+<li>사용은 RPC를 통하지 않는 방법이&nbsp;간단하긴하다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">예제</h2>
+<ol>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-helloendpoints-python">appengine-endpoints-helloendpoints-python</a><ul>
+<li><span class="caps">RPC</span> <code>message</code> 클래스를 이용하도록&nbsp;되어있음.</li>
+<li>랩핑하는 것에 대한 내용이&nbsp;포함.</li>
+</ul>
+</li>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-angular-todos-python">appengine-endpoints-angular-todos-python</a><ul>
+<li><span class="caps">RPC</span> <code>message</code> 클래스를 사용하지&nbsp;않음.</li>
+<li>Angular.js를 이용하도록 예제가 되어있어서 확인해보면&nbsp;될듯함.</li>
+</ul>
+</li>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-tictactoe-python">appengine-endpoints-tictactoe-python</a><ul>
+<li>게임 예제로 보이나 아직 테스트해보지&nbsp;않음.</li>
+</ul>
+</li>
+</ol>
+<h2 id="_3">필요&nbsp;패키지</h2>
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/endpoints-proto-datastore">endpoints-proto-datastore</a></li>
+<li>ProtoRPC 를 사용하지 않아도 된다고 함. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></li>
+<li>지금은 NDB만 지원. 추후 DB지원은&nbsp;모르겠음.</li>
+<li>DB를 사용하려면 전부 분해하고 설정하는 것이 필요할 것으로&nbsp;보임.</li>
+</ul>
+<h2 id="api"><span class="caps">API</span>&nbsp;구성</h2>
+<ul>
+<li><code>/_ah/spi/.*</code> URL은 <code>app.yaml</code> 파일에 하나만&nbsp;가능함.</li>
+<li>
+<p>여러 API를 사용하고 싶으면 <code>main.py</code> 에 일반 예제들처럼 API클래스를 생성하고 다음과 같이&nbsp;설정해주면됨.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># app.yaml</span>
+<span class="o">-</span> <span class="n">url</span><span class="p">:</span> <span class="o">/</span><span class="n">_ah</span><span class="o">/</span><span class="n">spi</span><span class="o">/.*</span>
+  <span class="n">script</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">application</span>
+
+<span class="c1"># main.py</span>
+<span class="n">application</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api_server</span><span class="p">([</span><span class="n">App1_api</span><span class="p">,</span> <span class="n">App2_api</span><span class="p">,</span> <span class="o">...</span><span class="p">])</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>하나의 API에 여러 클래스를 두고 싶다면 아래의 방법으로&nbsp;구성</p>
+<div class="codehilite"><pre><span></span><span class="c1"># API를 종류별로 나눔 </span>
+<span class="n">test_api_v1</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
+<span class="n">test1_api_v1</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test1&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
+
+<span class="c1"># API를 처리할 Class구성</span>
+<span class="nd">@test_api_v1.api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Hello</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">Service</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="nd">@test_api_v1.api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;bye&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Bye</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">Service</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="nd">@test1_api_v1.api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;todo&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Todo</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">Service</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="nd">@test1_api_v1.api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;plan&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Plan</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">Service</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">application</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api_server</span><span class="p">([</span><span class="n">Hello</span><span class="p">,</span> <span class="n">Bye</span><span class="p">,</span> <span class="n">Todo</span><span class="p">,</span> <span class="n">Plan</span><span class="p">])</span>
+</pre></div>
+
+
+</li>
+</ul>
+<h2 id="api_1"><span class="caps">API</span>&nbsp;등록확인</h2>
+<ul>
+<li><code>project-id.appspot.com/_ah/api/explorer</code> 로 접근하여&nbsp;확인.</li>
+<li>업로드되어 표시되는 시간이 오래걸리니(최소 5분은 걸리는듯.) 올라갔는지 확인을 하려면 Google Developers Console에서 로그로&nbsp;확인하면된다.</li>
+<li>올라갔다면 아래와 같이 표시된다.<div class="codehilite"><pre><span></span>https://1-dot-project-id.appspot.com/_ah/api/test@v1.0 Saved
+https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
+</pre></div>
+
+
+</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>http://endpoints-proto-datastore.appspot.com/&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+      </div>
+      <p>...</p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p><i class="fa fa-calendar-plus-o"></i> 14. 11. 14. |
+        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/devlop.html">Devlop</a> |
+        <i class="fa fa-tags">
+            <a href="http://ujuc.github.io/tag/google.html">google</a>
+,             <a href="http://ujuc.github.io/tag/cloud.html">cloud</a>
+,             <a href="http://ujuc.github.io/tag/gcp.html">gcp</a>
+,             <a href="http://ujuc.github.io/tag/google-cloud-platform.html">google cloud platform</a>
+,             <a href="http://ujuc.github.io/tag/google-cloud-endpoint.html">google cloud endpoint</a>
+        </i></p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2014/11/14/google-cloud-platform-google-cloud-endpoints/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+    </article>
+  </div>
+
+  <div class="container">
+  </div>
+
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>  </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></body>
+</html>
