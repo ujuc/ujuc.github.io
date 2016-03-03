@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/operation.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 03 Feb 2016 00:02:00 +0900</lastBuildDate><item><title>un~ 너는 뭐니?</title><link>http://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/</link><description>&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/operation.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 03 Mar 2016 22:08:00 +0900</lastBuildDate><item><title>un~ 너는 뭐니?</title><link>http://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/</link><description>&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://vimhelp.appspot.com/vim_faq.txt.html#faq-7.2"&gt;Vimhelp -&amp;nbsp;faq-7.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;수정하고 저장할때마다 &lt;code&gt;un~&lt;/code&gt; 접미사가 붙은 파일이 생간다는 이야기에 대한 내용이다. undo 기능을 사용하기위해서 vim에서 사용하는 파일이라고 한다. 그래서 열었더니 이상한 것들만&amp;nbsp;보여줬구나&amp;#8230;&lt;/p&gt;
 &lt;p&gt;끄는 방법은 &lt;code&gt;:set noundofile&lt;/code&gt;을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은&amp;nbsp;지워야겠지만&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 03 Feb 2016 00:02:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-02-03:2016/02/03/un-너는-뭐니/</guid><category>vi</category><category>undo</category><category>vimrc</category></item><item><title>unattended-upgrade 써보자</title><link>http://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,
@@ -118,4 +118,88 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;p&gt;결국 내가 하고 싶은데로 안되는거네&amp;#8230;&amp;nbsp;이런!&lt;/p&gt;
 &lt;p&gt;다른 방법으로 찾아야지 뭐 별수 있나&amp;#8230; 그래도 이번에 건진건 저렇게 숫자를
 사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;#8230; 그정도면 1시간동안
-작업한 것에 대한 내용은&amp;nbsp;될듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 27 Jan 2016 00:57:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-01-27:2016/01/27/stderr-check-in-zshell/</guid><category>zsh</category><category>operation</category></item></channel></rss>
+작업한 것에 대한 내용은&amp;nbsp;될듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 27 Jan 2016 00:57:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-01-27:2016/01/27/stderr-check-in-zshell/</guid><category>zsh</category><category>operation</category></item><item><title>[Monitoring] SkwiSSH 설치 및 구성</title><link>http://ujuc.github.io/2014/02/28/skwissh-install-n-config/</link><description>&lt;h1 id="skwissh"&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;SkwiSSH&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여&amp;nbsp;구성해봤다.&lt;/p&gt;
+&lt;p&gt;코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 &lt;code&gt;setup.py&lt;/code&gt;를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가&amp;nbsp;발생한다.&lt;/p&gt;
+&lt;p&gt;그리고 외부 서버를 추가하기 위해서 &lt;code&gt;server_ip:22&lt;/code&gt;를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;아직은 부족한 점이&amp;nbsp;많다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sensor(명령어를 날려서 값을 받아오는 worker를 의미한다.) 추가하고 변경하려면 변경사항이 적용이 안되는&amp;nbsp;현상.&lt;/li&gt;
+&lt;li&gt;Sensor들의 정렬을 임의로 할 수 없다는 것. (오름차순으로&amp;nbsp;구성되어있다.)&lt;/li&gt;
+&lt;li&gt;기본 명령어 날리는게 1분간격으로 수정할만한 탭이&amp;nbsp;안보인다.&lt;/li&gt;
+&lt;li&gt;기본 DB로 SQLite3 파일을 사용하는데 점점 커지는 모습을 확인 할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;bash를 사용할 줄 안다면 정말 쉽게 사용이 가능하다.&lt;ul&gt;
+&lt;li&gt;명령을 SSH로 날리기에 그쪽 서버 콘솔로 리턴값을 넘길 수 있는 프로그램이라면 어떻게든&amp;nbsp;사용하면된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 글에서는 Sensor에 명령어와 파셔 세팅은 작성하지&amp;nbsp;않았다.&lt;/p&gt;
+&lt;h2 id="_1"&gt;기본&amp;nbsp;구성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;OS&lt;/span&gt;: Ubuntu 12.04.4&amp;nbsp;server&lt;/li&gt;
+&lt;li&gt;Install&amp;nbsp;Package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="_2"&gt;패키지&amp;nbsp;설치&lt;/h3&gt;
+&lt;h4 id="django"&gt;Django&amp;nbsp;설치&lt;/h4&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo pip isntall Django
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4 id="django-skwissh"&gt;Django-skwissh&amp;nbsp;설치&lt;/h4&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install buid-essential python-dev
+$ git clone https://github.com/rsaikali/django-skwissh.git
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; django-skwissh
+$ sudo python setup.py install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="django_1"&gt;Django&amp;nbsp;설정&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ django-admin.py startproject mysite
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; mysite
+$ vi mysql/settings.py
+
+&lt;span class="nv"&gt;INSTALL_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;kronos&amp;quot;&lt;/span&gt;,
+    &lt;span class="s2"&gt;&amp;quot;skwissh&amp;quot;&lt;/span&gt;,
+&lt;span class="o"&gt;)&lt;/span&gt;
+
+$ vi mysite/urls.py
+
+&lt;span class="c1"&gt;# Skwissh&lt;/span&gt;
+url&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;skwissh&amp;quot;&lt;/span&gt;, include&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;skwissh.urls&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;,
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;데이터 베이스&amp;nbsp;설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.p syncdb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Skwissh 테스트&amp;nbsp;설치&lt;/li&gt;
+&lt;li&gt;이작업을 하면 crontab에 테스크가&amp;nbsp;등록된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py installtask
+&lt;span class="c1"&gt;# crontab에 등록되었는지 확인&lt;/span&gt;
+$ crontab -l
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Django 서버&amp;nbsp;작동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python mange.py runserver 0.0.0.0:8000
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_3"&gt;참고&amp;nbsp;페이지&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rsaikali.github.io/django-skwissh/"&gt;Gitpage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 03 Mar 2016 22:08:00 +0900</pubDate><guid>tag:ujuc.github.io,2014-02-28:2014/02/28/skwissh-install-n-config/</guid><category>python</category><category>monitoring</category><category>ssh</category><category>django</category></item></channel></rss>

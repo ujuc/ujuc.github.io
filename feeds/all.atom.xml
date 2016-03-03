@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-03-03T22:00:00+09:00</updated><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><updated>2016-02-29T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-03-03T22:08:00+09:00</updated><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><updated>2016-02-29T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;우선 이 패키지는 14년 5월 이후로 &lt;a href="https://pypi.python.org/pypi/pysftp"&gt;pypi 프로젝트&lt;/a&gt;에서는 업로드가 되고 있지 않으며, &lt;a href="https://bitbucket.org/dundeemt/pysftp"&gt;Project repo&lt;/a&gt;의 업로드는 이루워지고 있으며, 3.4까지 테스팅을 해봣단다. 파일만 올리기위해서 사용했던 라이브러리라 간단히 sftp를 이용하여 파일을 올리고 받기를 원한다면 괜찮을&amp;nbsp;듯.&lt;/p&gt;
 &lt;h2 id="package"&gt;Package&lt;/h2&gt;
 &lt;ol&gt;
@@ -2813,4 +2813,88 @@ sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get autoremove
 &lt;li&gt;&lt;a href="http://docs.paramiko.org/en/latest/index.html"&gt;Docs&amp;nbsp;paramiko&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Programming With Paramiko | Completely&amp;nbsp;Different&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://segfault.in/2010/03/paramiko-ssh-and-sftp-with-python/"&gt;Paramiko: &lt;span class="caps"&gt;SSH&lt;/span&gt; and &lt;span class="caps"&gt;SFTP&lt;/span&gt; With&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="python"></category><category term="paramiko"></category><category term="ssh"></category><category term="lib"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="python"></category><category term="paramiko"></category><category term="ssh"></category><category term="lib"></category></entry><entry><title>[Monitoring] SkwiSSH 설치 및 구성</title><link href="http://ujuc.github.io/2014/02/28/skwissh-install-n-config/" rel="alternate"></link><updated>2016-03-03T22:08:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-02-28:2014/02/28/skwissh-install-n-config/</id><summary type="html">&lt;h1 id="skwissh"&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;SkwiSSH&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여&amp;nbsp;구성해봤다.&lt;/p&gt;
+&lt;p&gt;코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 &lt;code&gt;setup.py&lt;/code&gt;를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가&amp;nbsp;발생한다.&lt;/p&gt;
+&lt;p&gt;그리고 외부 서버를 추가하기 위해서 &lt;code&gt;server_ip:22&lt;/code&gt;를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;아직은 부족한 점이&amp;nbsp;많다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sensor(명령어를 날려서 값을 받아오는 worker를 의미한다.) 추가하고 변경하려면 변경사항이 적용이 안되는&amp;nbsp;현상.&lt;/li&gt;
+&lt;li&gt;Sensor들의 정렬을 임의로 할 수 없다는 것. (오름차순으로&amp;nbsp;구성되어있다.)&lt;/li&gt;
+&lt;li&gt;기본 명령어 날리는게 1분간격으로 수정할만한 탭이&amp;nbsp;안보인다.&lt;/li&gt;
+&lt;li&gt;기본 DB로 SQLite3 파일을 사용하는데 점점 커지는 모습을 확인 할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;bash를 사용할 줄 안다면 정말 쉽게 사용이 가능하다.&lt;ul&gt;
+&lt;li&gt;명령을 SSH로 날리기에 그쪽 서버 콘솔로 리턴값을 넘길 수 있는 프로그램이라면 어떻게든&amp;nbsp;사용하면된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 글에서는 Sensor에 명령어와 파셔 세팅은 작성하지&amp;nbsp;않았다.&lt;/p&gt;
+&lt;h2 id="_1"&gt;기본&amp;nbsp;구성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;OS&lt;/span&gt;: Ubuntu 12.04.4&amp;nbsp;server&lt;/li&gt;
+&lt;li&gt;Install&amp;nbsp;Package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install python-pip
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="_2"&gt;패키지&amp;nbsp;설치&lt;/h3&gt;
+&lt;h4 id="django"&gt;Django&amp;nbsp;설치&lt;/h4&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo pip isntall Django
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4 id="django-skwissh"&gt;Django-skwissh&amp;nbsp;설치&lt;/h4&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install buid-essential python-dev
+$ git clone https://github.com/rsaikali/django-skwissh.git
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; django-skwissh
+$ sudo python setup.py install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="django_1"&gt;Django&amp;nbsp;설정&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ django-admin.py startproject mysite
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; mysite
+$ vi mysql/settings.py
+
+&lt;span class="nv"&gt;INSTALL_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;kronos&amp;quot;&lt;/span&gt;,
+    &lt;span class="s2"&gt;&amp;quot;skwissh&amp;quot;&lt;/span&gt;,
+&lt;span class="o"&gt;)&lt;/span&gt;
+
+$ vi mysite/urls.py
+
+&lt;span class="c1"&gt;# Skwissh&lt;/span&gt;
+url&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;skwissh&amp;quot;&lt;/span&gt;, include&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;skwissh.urls&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;,
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;데이터 베이스&amp;nbsp;설정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.p syncdb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Skwissh 테스트&amp;nbsp;설치&lt;/li&gt;
+&lt;li&gt;이작업을 하면 crontab에 테스크가&amp;nbsp;등록된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py installtask
+&lt;span class="c1"&gt;# crontab에 등록되었는지 확인&lt;/span&gt;
+$ crontab -l
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Django 서버&amp;nbsp;작동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python mange.py runserver 0.0.0.0:8000
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_3"&gt;참고&amp;nbsp;페이지&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rsaikali.github.io/django-skwissh/"&gt;Gitpage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="python"></category><category term="monitoring"></category><category term="ssh"></category><category term="django"></category></entry></feed>
