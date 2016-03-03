@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/devlop.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 03 Mar 2016 21:47:00 +0900</lastBuildDate><item><title>pysftp 간략 사용기</title><link>http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/</link><description>&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/devlop.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 03 Mar 2016 22:00:00 +0900</lastBuildDate><item><title>pysftp 간략 사용기</title><link>http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/</link><description>&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;우선 이 패키지는 14년 5월 이후로 &lt;a href="https://pypi.python.org/pypi/pysftp"&gt;pypi 프로젝트&lt;/a&gt;에서는 업로드가 되고 있지 않으며, &lt;a href="https://bitbucket.org/dundeemt/pysftp"&gt;Project repo&lt;/a&gt;의 업로드는 이루워지고 있으며, 3.4까지 테스팅을 해봣단다. 파일만 올리기위해서 사용했던 라이브러리라 간단히 sftp를 이용하여 파일을 올리고 받기를 원한다면 괜찮을&amp;nbsp;듯.&lt;/p&gt;
 &lt;h2 id="package"&gt;Package&lt;/h2&gt;
 &lt;ol&gt;
@@ -280,4 +280,80 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 &lt;li&gt;딱히 적을 내용도&amp;nbsp;없음.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 03 Mar 2016 21:47:00 +0900</pubDate><guid>tag:ujuc.github.io,2014-11-10:2014/11/10/google-app-engine-ndb-properties/</guid><category>google</category><category>cloud</category><category>gcp</category><category>google cloud platform</category><category>ndb</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 03 Mar 2016 21:47:00 +0900</pubDate><guid>tag:ujuc.github.io,2014-11-10:2014/11/10/google-app-engine-ndb-properties/</guid><category>google</category><category>cloud</category><category>gcp</category><category>google cloud platform</category><category>ndb</category></item><item><title>[Python] Paramiko</title><link>http://ujuc.github.io/2014/04/07/python-paramiko/</link><description>&lt;p&gt;한글로된 글이 없어서 우선 내가 알아낸 곳과 사용한 곳까지 작성을&amp;nbsp;해둘려고한다.&lt;/p&gt;
+&lt;h1 id="paramiko"&gt;&lt;a href="http://www.paramiko.org/"&gt;Paramiko&lt;/a&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 2.6+, 3.3+에서 사용할 수 있는 SSHv2&amp;nbsp;구현체이다.&lt;/li&gt;
+&lt;li&gt;물론 Client, Server를 둘다 사용이&amp;nbsp;가능하다.&lt;/li&gt;
+&lt;li&gt;저 레벨 암호화를 위해서 &lt;a href="http://pycrypto.org/"&gt;PyCrypro&lt;/a&gt;(이부분은 Python C 확장으로 구현)를 제외한 나머지 부분들은 전부 Python으로만&amp;nbsp;구현되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_1"&gt;사용&lt;/h2&gt;
+&lt;h3 id="1"&gt;1. 사용&amp;nbsp;예제&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;paramiko&lt;/span&gt;
+
+&lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SSHClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ujuc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;lol&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="2-host-keys"&gt;2. Host&amp;nbsp;Keys&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;첫 접근시 받아오는 Host Keys가 있다. 이것을 받아서 저장하던 날려먹던 상관은 하지 않지만 있어야지 접근이&amp;nbsp;가능하다.&lt;/li&gt;
+&lt;li&gt;처음 &lt;code&gt;ssh&lt;/code&gt;로 접근시 무의식적으로 &lt;code&gt;yes&lt;/code&gt;를 누르는&amp;nbsp;그것!!&lt;/li&gt;
+&lt;li&gt;그러다보니 여기서도 그것에 관련된 내용을 사용할 수&amp;nbsp;있다. &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;set_missing_host_key_policy(policy)&lt;/code&gt;를 이용하여 host keys를 받아 저장할 것인지 아닌지를 판단하게 되는데. 기본값은 &lt;code&gt;RejectPolicy&lt;/code&gt;로 되어있으며, &lt;code&gt;yes&lt;/code&gt;를 받아와야한다면 &lt;code&gt;AutoAddPolicy&lt;/code&gt;를 사용하도록&amp;nbsp;한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;paramiko&lt;/span&gt;
+
+&lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SSHClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_missing_host_key_policy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AutoAddPolicy&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ujuc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;lol&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;물론 Public key를 이용해서 비밀번호 없이 접근이 가능하도록 할 수 있을듯 한데 그건 좀 확인이&amp;nbsp;필요할듯.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3"&gt;3.&amp;nbsp;실행&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;실행 명령어 &lt;code&gt;exec_command&lt;/code&gt;를 실행하게되면, 값을 3개를 &lt;code&gt;tuple&lt;/code&gt;로&amp;nbsp;받아온다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stdin&lt;/code&gt;, &lt;code&gt;stdout&lt;/code&gt;, &lt;code&gt;stderr&lt;/code&gt;이다.
+*명령어에 대한 값들을 받아와 확인할때는 아래와 같이 작성을&amp;nbsp;하면된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readlines&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;test&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;만약 &lt;code&gt;sudo&lt;/code&gt;명령어가 필요한&amp;nbsp;경우,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sudo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;lol&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;위와 같이하여 작성을 하도록&amp;nbsp;한다.&lt;/li&gt;
+&lt;li&gt;그리고 &lt;code&gt;write&lt;/code&gt;다음에는 &lt;code&gt;flush&lt;/code&gt;를 꼭 해줘야 작동을 하니 그점은 주의하도록 한다. 관련 내용은 &lt;a href="http://docs.paramiko.org/en/latest/api/file.html#paramiko.file.BufferedFile.write"&gt;여기&lt;/a&gt;에&amp;nbsp;있다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4"&gt;4. 연결&amp;nbsp;끊기&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;작업이 끝났으면 연결을&amp;nbsp;끊어야된다.&lt;/li&gt;
+&lt;li&gt;그냥 &lt;code&gt;close()&lt;/code&gt;를 불러오면 알아서&amp;nbsp;끊어준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="5-sftp"&gt;5. &lt;span class="caps"&gt;SFTP&lt;/span&gt;&amp;nbsp;사용.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;어찌보면 &lt;code&gt;ssh&lt;/code&gt;를 사용하면서 편했던 것이 &lt;code&gt;sftp&lt;/code&gt;의 사용이다. 간단한 사용방법과 &lt;code&gt;ssh&lt;/code&gt;가 설치가되어있으면 따로 &lt;code&gt;ftp&lt;/code&gt;를 생성하지 않더라도 간단한 파일을 주고 받을 수 있도록 되어있기&amp;nbsp;때문이다.&lt;/li&gt;
+&lt;li&gt;먼저 &lt;code&gt;ssh&lt;/code&gt;로 접속한 다음, &lt;code&gt;open_sftp()&lt;/code&gt;후 파일을 가져올때는 &lt;code&gt;get('localfile.py', 'remotefile.py')&lt;/code&gt;를 이용하고, 올려둘때는 &lt;code&gt;put('localfile.py', 'remotefile.py')&lt;/code&gt;를&amp;nbsp;사용하면된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;참고&amp;nbsp;자료&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.paramiko.org/"&gt;Paramiko&amp;nbsp;Homepage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.paramiko.org/en/latest/index.html"&gt;Docs&amp;nbsp;paramiko&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Programming With Paramiko | Completely&amp;nbsp;Different&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://segfault.in/2010/03/paramiko-ssh-and-sftp-with-python/"&gt;Paramiko: &lt;span class="caps"&gt;SSH&lt;/span&gt; and &lt;span class="caps"&gt;SFTP&lt;/span&gt; With&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 03 Mar 2016 22:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2014-04-07:2014/04/07/python-paramiko/</guid><category>python</category><category>paramiko</category><category>ssh</category><category>lib</category></item></channel></rss>

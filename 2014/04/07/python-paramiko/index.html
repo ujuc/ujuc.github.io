@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <ul class="nav nav-pills">
+              <li class="presentation"><a href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span></a></li>
+              <li class="presentation"><a href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span></a></li>
+              <li class="presentation"><a href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span></a></li>
+              <li class="presentation"><a href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span></a></li>
+          </ul>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div id="site_article" class="container">
+    <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2014/04/07/python-paramiko/" class="h1">[Python]&nbsp;Paramiko</a></h1>
+    </div>
+    <div class="row article">
+      <p>...</p>
+      <div class="article_text">
+        <p>한글로된 글이 없어서 우선 내가 알아낸 곳과 사용한 곳까지 작성을&nbsp;해둘려고한다.</p>
+<h1 id="paramiko"><a href="http://www.paramiko.org/">Paramiko</a></h1>
+<ul>
+<li>Python 2.6+, 3.3+에서 사용할 수 있는 SSHv2&nbsp;구현체이다.</li>
+<li>물론 Client, Server를 둘다 사용이&nbsp;가능하다.</li>
+<li>저 레벨 암호화를 위해서 <a href="http://pycrypto.org/">PyCrypro</a>(이부분은 Python C 확장으로 구현)를 제외한 나머지 부분들은 전부 Python으로만&nbsp;구현되어있다.</li>
+</ul>
+<h2 id="_1">사용</h2>
+<h3 id="1">1. 사용&nbsp;예제</h3>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">paramiko</span>
+
+<span class="n">ssh</span> <span class="o">=</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">SSHClient</span><span class="p">()</span>
+<span class="n">ssh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;ujuc&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;lol&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="2-host-keys">2. Host&nbsp;Keys</h3>
+<ul>
+<li>첫 접근시 받아오는 Host Keys가 있다. 이것을 받아서 저장하던 날려먹던 상관은 하지 않지만 있어야지 접근이&nbsp;가능하다.</li>
+<li>처음 <code>ssh</code>로 접근시 무의식적으로 <code>yes</code>를 누르는&nbsp;그것!!</li>
+<li>그러다보니 여기서도 그것에 관련된 내용을 사용할 수&nbsp;있다. </li>
+<li><code>set_missing_host_key_policy(policy)</code>를 이용하여 host keys를 받아 저장할 것인지 아닌지를 판단하게 되는데. 기본값은 <code>RejectPolicy</code>로 되어있으며, <code>yes</code>를 받아와야한다면 <code>AutoAddPolicy</code>를 사용하도록&nbsp;한다.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">paramiko</span>
+
+<span class="n">ssh</span> <span class="o">=</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">SSHClient</span><span class="p">()</span>
+<span class="n">ssh</span><span class="o">.</span><span class="n">set_missing_host_key_policy</span><span class="p">(</span><span class="n">paramiko</span><span class="o">.</span><span class="n">AutoAddPolicy</span><span class="p">())</span>
+<span class="n">ssh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;ujuc&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;lol&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>물론 Public key를 이용해서 비밀번호 없이 접근이 가능하도록 할 수 있을듯 한데 그건 좀 확인이&nbsp;필요할듯.</li>
+</ul>
+<h3 id="3">3.&nbsp;실행</h3>
+<ul>
+<li>실행 명령어 <code>exec_command</code>를 실행하게되면, 값을 3개를 <code>tuple</code>로&nbsp;받아온다.</li>
+<li><code>stdin</code>, <code>stdout</code>, <code>stderr</code>이다.
+*명령어에 대한 값들을 받아와 확인할때는 아래와 같이 작성을&nbsp;하면된다.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">exec_command</span><span class="p">()</span>
+<span class="n">stdout</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="p">[</span><span class="s1">&#39;test</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span>
+</pre></div>
+
+
+<ul>
+<li>만약 <code>sudo</code>명령어가 필요한&nbsp;경우,</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">exec_command</span><span class="p">(</span><span class="s1">&#39;sudo&#39;</span><span class="p">)</span>
+<span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;lol</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">stdin</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">stdout</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+
+<ul>
+<li>위와 같이하여 작성을 하도록&nbsp;한다.</li>
+<li>그리고 <code>write</code>다음에는 <code>flush</code>를 꼭 해줘야 작동을 하니 그점은 주의하도록 한다. 관련 내용은 <a href="http://docs.paramiko.org/en/latest/api/file.html#paramiko.file.BufferedFile.write">여기</a>에&nbsp;있다</li>
+</ul>
+<h3 id="4">4. 연결&nbsp;끊기</h3>
+<ul>
+<li>작업이 끝났으면 연결을&nbsp;끊어야된다.</li>
+<li>그냥 <code>close()</code>를 불러오면 알아서&nbsp;끊어준다.</li>
+</ul>
+<h3 id="5-sftp">5. <span class="caps">SFTP</span>&nbsp;사용.</h3>
+<ul>
+<li>어찌보면 <code>ssh</code>를 사용하면서 편했던 것이 <code>sftp</code>의 사용이다. 간단한 사용방법과 <code>ssh</code>가 설치가되어있으면 따로 <code>ftp</code>를 생성하지 않더라도 간단한 파일을 주고 받을 수 있도록 되어있기&nbsp;때문이다.</li>
+<li>먼저 <code>ssh</code>로 접속한 다음, <code>open_sftp()</code>후 파일을 가져올때는 <code>get('localfile.py', 'remotefile.py')</code>를 이용하고, 올려둘때는 <code>put('localfile.py', 'remotefile.py')</code>를&nbsp;사용하면된다.</li>
+</ul>
+<h2 id="_2">참고&nbsp;자료</h2>
+<ul>
+<li><a href="http://www.paramiko.org/">Paramiko&nbsp;Homepage</a></li>
+<li><a href="http://docs.paramiko.org/en/latest/index.html">Docs&nbsp;paramiko</a></li>
+<li><a href="http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different"><span class="caps">SSH</span> Programming With Paramiko | Completely&nbsp;Different</a></li>
+<li><a href="http://segfault.in/2010/03/paramiko-ssh-and-sftp-with-python/">Paramiko: <span class="caps">SSH</span> and <span class="caps">SFTP</span> With&nbsp;Python</a></li>
+</ul>
+      </div>
+      <p>...</p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p><i class="fa fa-calendar-plus-o"></i> 14. 04. 07. |
+        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/devlop.html">Devlop</a> |
+        <i class="fa fa-tags">
+            <a href="http://ujuc.github.io/tag/python.html">python</a>
+,             <a href="http://ujuc.github.io/tag/paramiko.html">paramiko</a>
+,             <a href="http://ujuc.github.io/tag/ssh.html">ssh</a>
+,             <a href="http://ujuc.github.io/tag/lib.html">lib</a>
+        </i></p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2014/04/07/python-paramiko/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+    </article>
+  </div>
+
+  <div class="container">
+  </div>
+
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>  </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></body>
+</html>
