@@ -1,7 +1,7 @@
 Title: [Google App Engine] NDB - Properties
 Date: 2014-11-10 18:05
 Modified: 2016-03-03 21:47
-Category: Devlop
+Category: Develop
 Tags: google, cloud, gcp, google cloud platform, ndb
 Slug: google-app-engine-ndb-properties
 Summary: NDB 문서를 번역해놓은 것.

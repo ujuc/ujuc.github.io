@@ -1,7 +1,7 @@
 Title: [Google Cloud Platfrom] Google Cloud Endpoints
 Date: 2014-11-14 15:05
 Modified: 2016-03-01 00:38
-Category: Devlop
+Category: Develop
 Tags: google, cloud, gcp, google cloud platform, google cloud endpoint
 Slug: google-cloud-platform-google-cloud-endpoints
 Summary: Google Cloud Endpoints 간략하게 확인하기.

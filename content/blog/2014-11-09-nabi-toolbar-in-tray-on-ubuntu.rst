@@ -3,7 +3,7 @@ Uubntu에서 Nabi 툴바를 tray에 넣기
 
 :date: 2014-11-09 00:44
 :modified: 2015-04-12 14:12
-:category: software
+:category: Software
 :tags: linux, ubuntu, nabi, setting
 :slug: nabi-toolbar-in-tray-on-ubuntu
 :summary: Ubuntu에서 nabi를 입력기로 사용한다. 그런데 언제부터인가. tray로

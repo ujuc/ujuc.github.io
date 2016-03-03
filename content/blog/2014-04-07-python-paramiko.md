@@ -1,7 +1,7 @@
 Title: [Python] Paramiko
 Date: 2014-04-07 01:56
 Modified: 2016-03-03 22:00
-Category: Devlop
+Category: Develop
 Tags: python, paramiko, ssh, lib
 Slug: python-paramiko
 Summary: Python ssh 모듈인 paramiko에 대한 내용을 작성함.
