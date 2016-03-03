@@ -60,14 +60,14 @@ $ cd mysite
 $ vi mysql/settings.py
 
 INSTALL_APPS = (
-	"kronos",
-	"skwissh",
+	'kronos',
+	'skwissh',
 )
 
 $ vi mysite/urls.py
 
 # Skwissh
-url("skwissh", include("skwissh.urls")),
+url('skwissh', include('skwissh.urls')),
 ```
 
 * 데이터 베이스 설정
