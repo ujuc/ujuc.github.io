@@ -2858,14 +2858,14 @@ $ &lt;span class="nb"&gt;cd&lt;/span&gt; mysite
 $ vi mysql/settings.py
 
 &lt;span class="nv"&gt;INSTALL_APPS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;
-    &lt;span class="s2"&gt;&amp;quot;kronos&amp;quot;&lt;/span&gt;,
-    &lt;span class="s2"&gt;&amp;quot;skwissh&amp;quot;&lt;/span&gt;,
+    &lt;span class="s1"&gt;&amp;#39;kronos&amp;#39;&lt;/span&gt;,
+    &lt;span class="s1"&gt;&amp;#39;skwissh&amp;#39;&lt;/span&gt;,
 &lt;span class="o"&gt;)&lt;/span&gt;
 
 $ vi mysite/urls.py
 
 &lt;span class="c1"&gt;# Skwissh&lt;/span&gt;
-url&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;skwissh&amp;quot;&lt;/span&gt;, include&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;skwissh.urls&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;,
+url&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh&amp;#39;&lt;/span&gt;, include&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh.urls&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;,
 &lt;/pre&gt;&lt;/div&gt;
 
 
