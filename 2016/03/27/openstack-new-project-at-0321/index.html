@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <ul class="nav nav-pills">
+              <li class="presentation"><a href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span></a></li>
+              <li class="presentation"><a href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span></a></li>
+              <li class="presentation"><a href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span></a></li>
+              <li class="presentation"><a href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span></a></li>
+          </ul>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div id="site_article" class="container">
+    <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2016/03/27/openstack-new-project-at-0321/" class="h1">OpenStack new project at&nbsp;0321</a></h1>
+    </div>
+    <div class="row article">
+      <p>...</p>
+      <div class="article_text">
+        <p>해당 내용 나온 곳 : <a href="http://www.openstack.org/blog/2016/03/technical-committee-highlights-march-21-2016/">Technical Committee Highlights March 21,&nbsp;2016</a></p>
+<h2 id="dragonflow">Dragonflow</h2>
+<ul>
+<li><a href="https://wiki.openstack.org/wiki/Dragonflow">Main&nbsp;wiki</a></li>
+<li><a href="http://docs.openstack.org/developer/dragonflow/centralized_dragonflow.html">Documentation</a></li>
+<li><a href="https://github.com/openstack/dragonflow">Github</a></li>
+<li>OpenStack® Neutron™ 에서 사용하는 fully distributed virtual&nbsp;router.</li>
+</ul>
+<h3 id="_1">기능</h3>
+<ul>
+<li><span class="caps">API</span> for routing IPv4 East-West&nbsp;traffic</li>
+<li>Performance improvement for inter-subnet network by removing the amount of kernel layers (namespaces and their <span class="caps">TCP</span> stack&nbsp;overhead)</li>
+<li>Scalability improvement for inter-subnet newtork by offloading L3 East-West routing from the Network Node to all Compute&nbsp;Nodes</li>
+<li>Reliability improvement for inter-subnet network by removal of Network Node from the East-West&nbsp;traffic</li>
+<li>Simplified virtual routing&nbsp;management</li>
+<li>Support for all type dirvers <span class="caps">GRE</span>/<span class="caps">VXLAN</span>/<span class="caps">LAN</span></li>
+<li>Support for centralized shared public network (<span class="caps">SNAT</span>) based on the legacy L3&nbsp;implementation</li>
+<li>Support for centralized floating <span class="caps">IP</span> (<span class="caps">DNAT</span>) based on the legacy L3&nbsp;implementation</li>
+<li>Support for <span class="caps">HA</span>, in case the connection to the legacy L3 <span class="caps">HA</span>. (Controller <span class="caps">HA</span> will be supported in the next&nbsp;rlease).</li>
+<li>Support for centralized IPv6 based on the legacy L3&nbsp;implementation</li>
+</ul>
+<h2 id="kuryr">Kuryr</h2>
+<ul>
+<li><a href="https://wiki.openstack.org/wiki/Kuryr">Main&nbsp;wiki</a></li>
+<li><a href="http://docs.openstack.org/developer/kuryr/">Documentation</a></li>
+<li><a href="https://github.com/openstack/kuryr">Github</a></li>
+<li>Docker 네트워크&nbsp;플러그인</li>
+</ul>
+<h2 id="tacker">Tacker</h2>
+<ul>
+<li><a href="https://wiki.openstack.org/wiki/Tacker">Main&nbsp;wiki</a></li>
+<li><a href="http://tacker-docs.readthedocs.org/en/latest/index.html">Dcoumentation</a></li>
+<li><a href="https://github.com/openstack/tacker">Github</a></li>
+<li>OpenStack service for <span class="caps">NFV</span> Orchestration with a general purpose <span class="caps">VNF</span> Manager to deploy and operate Virtual Network Functions (VNFs) and Network Services on an <span class="caps">NFV</span> Platform. It is based on <span class="caps">ETSI</span> <span class="caps">MANO</span> Architectural&nbsp;Framework.</li>
+</ul>
+<h3 id="feature">Feature</h3>
+<ul>
+<li><a href="http://tacker-docs.readthedocs.org/en/latest/devref/monitor-api.html">Tracker Monitoring&nbsp;Framework</a></li>
+<li><a href="http://tacker-docs.readthedocs.org/en/latest/devref/vnfd_template_parameterization.html"><span class="caps">VNFD</span> Template&nbsp;Parameterization</a></li>
+</ul>
+<h2 id="ec2api"><span class="caps">EC2API</span></h2>
+<ul>
+<li><a href="https://wiki.openstack.org/wiki/EC2API">Main&nbsp;wiki</a></li>
+<li><a href="https://github.com/openstack/ec2-api">Github</a></li>
+<li><span class="caps">AWS</span> <span class="caps">EC2</span> and <span class="caps">VPC</span> <span class="caps">API</span> support in standalone service for&nbsp;OpenStack.</li>
+</ul>
+      </div>
+      <p>...</p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p><i class="fa fa-calendar-plus-o"></i> 16. 03. 27. |
+        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/community.html">Community</a> |
+        <i class="fa fa-tags">
+            <a href="http://ujuc.github.io/tag/openstack.html">openstack</a>
+,             <a href="http://ujuc.github.io/tag/big-tent.html">big tent</a>
+        </i></p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2016/03/27/openstack-new-project-at-0321/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+    </article>
+  </div>
+
+  <div class="container">
+  </div>
+
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>  </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></body>
+</html>

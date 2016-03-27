@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-03-26T00:00:00+09:00</updated><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><updated>2016-02-29T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-03-28T00:00:00+09:00</updated><entry><title>OpenStack new project at 0321</title><link href="http://ujuc.github.io/2016/03/27/openstack-new-project-at-0321/" rel="alternate"></link><updated>2016-03-27T22:47:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-03-27:2016/03/27/openstack-new-project-at-0321/</id><summary type="html">&lt;p&gt;해당 내용 나온 곳 : &lt;a href="http://www.openstack.org/blog/2016/03/technical-committee-highlights-march-21-2016/"&gt;Technical Committee Highlights March 21,&amp;nbsp;2016&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="dragonflow"&gt;Dragonflow&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/Dragonflow"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.openstack.org/developer/dragonflow/centralized_dragonflow.html"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/openstack/dragonflow"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpenStack® Neutron™ 에서 사용하는 fully distributed virtual&amp;nbsp;router.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_1"&gt;기능&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;API&lt;/span&gt; for routing IPv4 East-West&amp;nbsp;traffic&lt;/li&gt;
+&lt;li&gt;Performance improvement for inter-subnet network by removing the amount of kernel layers (namespaces and their &lt;span class="caps"&gt;TCP&lt;/span&gt; stack&amp;nbsp;overhead)&lt;/li&gt;
+&lt;li&gt;Scalability improvement for inter-subnet newtork by offloading L3 East-West routing from the Network Node to all Compute&amp;nbsp;Nodes&lt;/li&gt;
+&lt;li&gt;Reliability improvement for inter-subnet network by removal of Network Node from the East-West&amp;nbsp;traffic&lt;/li&gt;
+&lt;li&gt;Simplified virtual routing&amp;nbsp;management&lt;/li&gt;
+&lt;li&gt;Support for all type dirvers &lt;span class="caps"&gt;GRE&lt;/span&gt;/&lt;span class="caps"&gt;VXLAN&lt;/span&gt;/&lt;span class="caps"&gt;LAN&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Support for centralized shared public network (&lt;span class="caps"&gt;SNAT&lt;/span&gt;) based on the legacy L3&amp;nbsp;implementation&lt;/li&gt;
+&lt;li&gt;Support for centralized floating &lt;span class="caps"&gt;IP&lt;/span&gt; (&lt;span class="caps"&gt;DNAT&lt;/span&gt;) based on the legacy L3&amp;nbsp;implementation&lt;/li&gt;
+&lt;li&gt;Support for &lt;span class="caps"&gt;HA&lt;/span&gt;, in case the connection to the legacy L3 &lt;span class="caps"&gt;HA&lt;/span&gt;. (Controller &lt;span class="caps"&gt;HA&lt;/span&gt; will be supported in the next&amp;nbsp;rlease).&lt;/li&gt;
+&lt;li&gt;Support for centralized IPv6 based on the legacy L3&amp;nbsp;implementation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="kuryr"&gt;Kuryr&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/Kuryr"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.openstack.org/developer/kuryr/"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/openstack/kuryr"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Docker 네트워크&amp;nbsp;플러그인&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="tacker"&gt;Tacker&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/Tacker"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://tacker-docs.readthedocs.org/en/latest/index.html"&gt;Dcoumentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/openstack/tacker"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpenStack service for &lt;span class="caps"&gt;NFV&lt;/span&gt; Orchestration with a general purpose &lt;span class="caps"&gt;VNF&lt;/span&gt; Manager to deploy and operate Virtual Network Functions (VNFs) and Network Services on an &lt;span class="caps"&gt;NFV&lt;/span&gt; Platform. It is based on &lt;span class="caps"&gt;ETSI&lt;/span&gt; &lt;span class="caps"&gt;MANO&lt;/span&gt; Architectural&amp;nbsp;Framework.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="feature"&gt;Feature&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://tacker-docs.readthedocs.org/en/latest/devref/monitor-api.html"&gt;Tracker Monitoring&amp;nbsp;Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://tacker-docs.readthedocs.org/en/latest/devref/vnfd_template_parameterization.html"&gt;&lt;span class="caps"&gt;VNFD&lt;/span&gt; Template&amp;nbsp;Parameterization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ec2api"&gt;&lt;span class="caps"&gt;EC2API&lt;/span&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/EC2API"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/openstack/ec2-api"&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt; &lt;span class="caps"&gt;EC2&lt;/span&gt; and &lt;span class="caps"&gt;VPC&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; support in standalone service for&amp;nbsp;OpenStack.&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="openstack"></category><category term="big tent"></category></entry><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><updated>2016-02-29T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;우선 이 패키지는 14년 5월 이후로 &lt;a href="https://pypi.python.org/pypi/pysftp"&gt;pypi 프로젝트&lt;/a&gt;에서는 업로드가 되고 있지 않으며, &lt;a href="https://bitbucket.org/dundeemt/pysftp"&gt;Project repo&lt;/a&gt;의 업로드는 이루워지고 있으며, 3.4까지 테스팅을 해봣단다. 파일만 올리기위해서 사용했던 라이브러리라 간단히 sftp를 이용하여 파일을 올리고 받기를 원한다면 괜찮을&amp;nbsp;듯.&lt;/p&gt;
 &lt;h2 id="package"&gt;Package&lt;/h2&gt;
 &lt;ol&gt;
@@ -1750,7 +1795,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2016-03-26T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>Odin is?</title><link href="http://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><updated>2016-03-28T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</id><summary type="html">&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -1760,7 +1805,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</summary><category term="openstack"></category><category term="cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2016-03-26T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</summary><category term="openstack"></category><category term="cloud"></category><category term="parallels"></category></entry><entry><title>백업 완료</title><link href="http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><updated>2016-03-28T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</id><summary type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
