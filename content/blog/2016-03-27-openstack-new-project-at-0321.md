@@ -1,4 +1,4 @@
-Title: OpenStack new project at 0321
+Title: OpenStack New Project at 0321
 Date: 2016-03-27 22:47
 Category: Community
 Tags: openstack, big tent
