@@ -1015,7 +1015,7 @@ forge@v0.1.7:
 &lt;p&gt;솔직히 내부 기능들이 Bash로 작성되어있어서 찾아다니기&amp;nbsp;힘들다&amp;#8230;&lt;/p&gt;
 </summary><category term="git"></category><category term="git-town"></category><category term="git plugins"></category></entry><entry><title>Vim mouse mode</title><link href="http://ujuc.github.io/2015/07/25/vim-mouse-mode/" rel="alternate"></link><updated>2015-08-15T16:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-07-25:2015/07/25/vim-mouse-mode/</id><summary type="html">&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
 &lt;p&gt;그런데 얼마전부터 &lt;a class="reference external" href="http://neovim.io"&gt;NeoVim&lt;/a&gt; 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지&amp;#8230; 안그러면 또 안찾아볼 가능성이&amp;nbsp;높으니&amp;#8230;&lt;/p&gt;
-&lt;p&gt;마우스와 관련된 옵션은 &lt;tt class="docutils literal"&gt;mouse_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousefocus_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;moushide_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousemodel_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mouseshape_&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousetime_&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;마우스와 관련된 옵션은 &lt;tt class="docutils literal"&gt;mouse&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousefocus&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;moushide&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousemodel&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mouseshape&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousetime&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;옵션 설명(이라쓰고&amp;nbsp;번역&amp;#8230;)&lt;/h2&gt;
 &lt;div class="section" id="mouse"&gt;
@@ -1237,7 +1237,7 @@ forge@v0.1.7:
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;avail&amp;#8221; 칼럼의 내용에서 &amp;#8216;&lt;a class="reference external" href="http://neovim.io/doc/user/motion.html#w"&gt;w&lt;/a&gt;&amp;#8216; 의 경우 &lt;a class="reference external" href="http://neovim.io/doc/user/os_win32.html#Win32"&gt;Win32&lt;/a&gt; 에서 사용하는 것이고, &lt;cite&gt;x_&lt;/cite&gt; 는 X11에서 사용하는 것에 대한 것임.
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;avail&amp;#8221; 칼럼의 내용에서 &amp;#8216;&lt;a class="reference external" href="http://neovim.io/doc/user/motion.html#w"&gt;w&lt;/a&gt;&amp;#8216; 의 경우 &lt;a class="reference external" href="http://neovim.io/doc/user/os_win32.html#Win32"&gt;Win32&lt;/a&gt; 에서 사용하는 것이고, &amp;#8216;&lt;a class="reference external" href="http://neovim.io/doc/user/change.html#x"&gt;x&lt;/a&gt;&amp;#8216; 는 X11에서 사용하는 것에 대한 것임.
 Any modes not specified or shapes not available use the normal mouse pointer. - 영어의 짧음으로 뭔말인지&amp;nbsp;모르겠다.&lt;/p&gt;
 &lt;p&gt;예로 &lt;tt class="docutils literal"&gt;:set mouseshape=s:udsizing,m:mo&lt;/tt&gt; 요로케 작성가능. 이렇게 해놓으면, (클릭이후 마우스가 이상태에서 효과가 없으면,)상태 바에 마오스를 올리면 크기 조절 화살표로 변경되고, 화면에서 &lt;a class="reference external" href="http://neovim.io/doc/user/message.html#hit-enter"&gt;hit-enter&lt;/a&gt; 프롬프트일때 no input을&amp;nbsp;가르키게됩니다.&lt;/p&gt;
 &lt;/div&gt;
