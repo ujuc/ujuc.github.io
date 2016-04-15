@@ -13,7 +13,7 @@ Vim mouse mode
 
 그런데 얼마전부터 NeoVim_ 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지... 안그러면 또 안찾아볼 가능성이 높으니...
 
-마우스와 관련된 옵션은 ``mouse_``, ``mousefocus_``, ``moushide_``, ``mousemodel_``, ``mouseshape_``, ``mousetime_``
+마우스와 관련된 옵션은 ``mouse``, ``mousefocus``, ``moushide``, ``mousemodel``, ``mouseshape``, ``mousetime``
 
 옵션 설명(이라쓰고 번역...)
 ---------------------------------------
@@ -181,7 +181,7 @@ mouseshape_
 .. _x: http://neovim.io/doc/user/change.html#x
 .. _Normal: http://neovim.io/doc/user/intro.html#Normal
 
-"avail" 칼럼의 내용에서 'w_' 의 경우 `Win32 <http://neovim.io/doc/user/os_win32.html#Win32>`_ 에서 사용하는 것이고, `x_` 는 X11에서 사용하는 것에 대한 것임.
+"avail" 칼럼의 내용에서 'w_' 의 경우 `Win32 <http://neovim.io/doc/user/os_win32.html#Win32>`_ 에서 사용하는 것이고, 'x_' 는 X11에서 사용하는 것에 대한 것임.
 Any modes not specified or shapes not available use the normal mouse pointer. - 영어의 짧음으로 뭔말인지 모르겠다.
 
 예로 ``:set mouseshape=s:udsizing,m:mo`` 요로케 작성가능. 이렇게 해놓으면, (클릭이후 마우스가 이상태에서 효과가 없으면,)상태 바에 마오스를 올리면 크기 조절 화살표로 변경되고, 화면에서 `hit-enter <http://neovim.io/doc/user/message.html#hit-enter>`_ 프롬프트일때 no input을 가르키게됩니다.
