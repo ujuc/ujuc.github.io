@@ -1,5 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 15 Apr 2016 00:00:00 +0900</lastBuildDate><item><title>OpenStack New Project at 0321</title><link>http://ujuc.github.io/2016/03/27/openstack-new-project-at-0321/</link><description>&lt;p&gt;해당 내용 나온 곳 : &lt;a href="http://www.openstack.org/blog/2016/03/technical-committee-highlights-march-21-2016/"&gt;Technical Committee Highlights March 21,&amp;nbsp;2016&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 17 Apr 2016 12:23:00 +0900</lastBuildDate><item><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link>http://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/</link><description>&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;#8230; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;#8230; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;참고는 &lt;a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/"&gt;15 Examples of How to Use New Advanced Package Tool (&lt;span class="caps"&gt;APT&lt;/span&gt;) in Ubuntu/Debian&lt;/a&gt; 을 사용함. 기본적으로 되는 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html"&gt;Ubuntu man&lt;/a&gt; 페이지는 끼고&amp;nbsp;살자&amp;#8230;&lt;/p&gt;
+&lt;h2 id="1"&gt;1. 패키지&amp;nbsp;설치&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install glances
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;항상 사용하던건 &lt;code&gt;apt-get&lt;/code&gt; 명령어로 설치를 하는거였는데 4글자 줄엇다!
+&lt;code&gt;sudo aptitude install&lt;/code&gt; 로도 가능하다만&amp;#8230; 이렇게 하는 사람들&amp;nbsp;잘못봤다.&lt;/p&gt;
+&lt;h2 id="2"&gt;2. 패키지가 설치된 위치&amp;nbsp;확인&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt content glances
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는 명령어는 &lt;code&gt;dpkg -L&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="3"&gt;3. 패키지 디펜던시&amp;nbsp;확인&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt depends glances
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는 명령어가 &lt;code&gt;apt-get check&lt;/code&gt;, &lt;code&gt;dpkg -C&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="4"&gt;4. 패키지&amp;nbsp;찾기&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt search openstack
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는 명령어는 &lt;code&gt;apt-cache search&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="5"&gt;5. 패키지 정보&amp;nbsp;확인&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt show firefox
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는 명령어 &lt;code&gt;apt-cache show&lt;/code&gt;, &lt;code&gt;dpkg -p&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="6"&gt;6. 깨진 디펜던시가 있는지&amp;nbsp;확인&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt check firefox
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이거와 대응되는게 있는지&amp;nbsp;잘모르겠다.&lt;/p&gt;
+&lt;h2 id="7"&gt;7. 제공된 패키지에서 빠진 패키지에 대한 목록&amp;nbsp;보여주기&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt recommends apache2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="8"&gt;8. 패키지 버전&amp;nbsp;체크&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt version firefox
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="9"&gt;9. 시스템 패키지&amp;nbsp;업데이트&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt update
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get update&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="10"&gt;10. 시스템&amp;nbsp;업그레이드&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get upgrade&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="11"&gt;11. 커널 버전까지 시스템&amp;nbsp;업그레이드&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt full-upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get dist-upgrade&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="12"&gt;12. 사용하지 않는 페키지&amp;nbsp;삭제&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt autoremove
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get autoremove&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="13"&gt;13. 다운로드된 페키지에서 오래된 저장소&amp;nbsp;삭제&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt autoclean
+sudo apt clean
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get clean&lt;/code&gt;, &lt;code&gt;apt-get autoclean&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="14"&gt;14. 패키지 구성파일까지&amp;nbsp;삭제&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt purge glance
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-purge&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="15-deb"&gt;15. deb 패키지&amp;nbsp;설치&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt deb atom-amd64.deb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;dpkg&lt;/code&gt; 에서&amp;nbsp;찾으면될듯..&lt;/p&gt;
+&lt;h2 id="16"&gt;16.&amp;nbsp;사용법은&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt &lt;span class="nb"&gt;help&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;apt&lt;/code&gt; 사용법을 찾아서 작업하면 될것으로&amp;nbsp;보여짐.&lt;/p&gt;
+&lt;h2 id="_1"&gt;맺음&lt;/h2&gt;
+&lt;p&gt;동일한 명령어가 여러가지 존재하고 사용하는 방법에 따라 달라지는 것으로 보여지는데&amp;#8230;
+패키지 메니저가 &lt;code&gt;dpkg&lt;/code&gt;, &lt;code&gt;aptitude&lt;/code&gt;, &lt;code&gt;apt&lt;/code&gt;로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될&amp;nbsp;듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 17 Apr 2016 12:23:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-04-17:2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</guid><category>ubuntu</category><category>debian</category><category>apt</category><category>system</category></item><item><title>OpenStack New Project at 0321</title><link>http://ujuc.github.io/2016/03/27/openstack-new-project-at-0321/</link><description>&lt;p&gt;해당 내용 나온 곳 : &lt;a href="http://www.openstack.org/blog/2016/03/technical-committee-highlights-march-21-2016/"&gt;Technical Committee Highlights March 21,&amp;nbsp;2016&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="dragonflow"&gt;Dragonflow&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/Dragonflow"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
@@ -1805,7 +1905,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 15 Apr 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 17 Apr 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
@@ -1821,7 +1921,7 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워
 손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 15 Apr 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 17 Apr 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,

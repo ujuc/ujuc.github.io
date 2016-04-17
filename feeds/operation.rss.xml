@@ -1,5 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/operation.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 03 Mar 2016 22:08:00 +0900</lastBuildDate><item><title>un~ 너는 뭐니?</title><link>http://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/</link><description>&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/operation.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 17 Apr 2016 12:23:00 +0900</lastBuildDate><item><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link>http://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/</link><description>&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;#8230; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;#8230; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;참고는 &lt;a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/"&gt;15 Examples of How to Use New Advanced Package Tool (&lt;span class="caps"&gt;APT&lt;/span&gt;) in Ubuntu/Debian&lt;/a&gt; 을 사용함. 기본적으로 되는 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html"&gt;Ubuntu man&lt;/a&gt; 페이지는 끼고&amp;nbsp;살자&amp;#8230;&lt;/p&gt;
+&lt;h2 id="1"&gt;1. 패키지&amp;nbsp;설치&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install glances
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;항상 사용하던건 &lt;code&gt;apt-get&lt;/code&gt; 명령어로 설치를 하는거였는데 4글자 줄엇다!
+&lt;code&gt;sudo aptitude install&lt;/code&gt; 로도 가능하다만&amp;#8230; 이렇게 하는 사람들&amp;nbsp;잘못봤다.&lt;/p&gt;
+&lt;h2 id="2"&gt;2. 패키지가 설치된 위치&amp;nbsp;확인&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt content glances
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는 명령어는 &lt;code&gt;dpkg -L&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="3"&gt;3. 패키지 디펜던시&amp;nbsp;확인&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt depends glances
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는 명령어가 &lt;code&gt;apt-get check&lt;/code&gt;, &lt;code&gt;dpkg -C&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="4"&gt;4. 패키지&amp;nbsp;찾기&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt search openstack
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는 명령어는 &lt;code&gt;apt-cache search&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="5"&gt;5. 패키지 정보&amp;nbsp;확인&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt show firefox
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는 명령어 &lt;code&gt;apt-cache show&lt;/code&gt;, &lt;code&gt;dpkg -p&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="6"&gt;6. 깨진 디펜던시가 있는지&amp;nbsp;확인&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt check firefox
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이거와 대응되는게 있는지&amp;nbsp;잘모르겠다.&lt;/p&gt;
+&lt;h2 id="7"&gt;7. 제공된 패키지에서 빠진 패키지에 대한 목록&amp;nbsp;보여주기&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt recommends apache2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="8"&gt;8. 패키지 버전&amp;nbsp;체크&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt version firefox
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="9"&gt;9. 시스템 패키지&amp;nbsp;업데이트&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt update
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get update&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="10"&gt;10. 시스템&amp;nbsp;업그레이드&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get upgrade&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="11"&gt;11. 커널 버전까지 시스템&amp;nbsp;업그레이드&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt full-upgrade
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get dist-upgrade&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="12"&gt;12. 사용하지 않는 페키지&amp;nbsp;삭제&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt autoremove
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get autoremove&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="13"&gt;13. 다운로드된 페키지에서 오래된 저장소&amp;nbsp;삭제&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt autoclean
+sudo apt clean
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-get clean&lt;/code&gt;, &lt;code&gt;apt-get autoclean&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="14"&gt;14. 패키지 구성파일까지&amp;nbsp;삭제&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt purge glance
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;apt-purge&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="15-deb"&gt;15. deb 패키지&amp;nbsp;설치&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt deb atom-amd64.deb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;대응되는건 &lt;code&gt;dpkg&lt;/code&gt; 에서&amp;nbsp;찾으면될듯..&lt;/p&gt;
+&lt;h2 id="16"&gt;16.&amp;nbsp;사용법은&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt &lt;span class="nb"&gt;help&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;apt&lt;/code&gt; 사용법을 찾아서 작업하면 될것으로&amp;nbsp;보여짐.&lt;/p&gt;
+&lt;h2 id="_1"&gt;맺음&lt;/h2&gt;
+&lt;p&gt;동일한 명령어가 여러가지 존재하고 사용하는 방법에 따라 달라지는 것으로 보여지는데&amp;#8230;
+패키지 메니저가 &lt;code&gt;dpkg&lt;/code&gt;, &lt;code&gt;aptitude&lt;/code&gt;, &lt;code&gt;apt&lt;/code&gt;로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될&amp;nbsp;듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 17 Apr 2016 12:23:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-04-17:2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</guid><category>ubuntu</category><category>debian</category><category>apt</category><category>system</category></item><item><title>un~ 너는 뭐니?</title><link>http://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/</link><description>&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://vimhelp.appspot.com/vim_faq.txt.html#faq-7.2"&gt;Vimhelp -&amp;nbsp;faq-7.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;수정하고 저장할때마다 &lt;code&gt;un~&lt;/code&gt; 접미사가 붙은 파일이 생간다는 이야기에 대한 내용이다. undo 기능을 사용하기위해서 vim에서 사용하는 파일이라고 한다. 그래서 열었더니 이상한 것들만&amp;nbsp;보여줬구나&amp;#8230;&lt;/p&gt;
 &lt;p&gt;끄는 방법은 &lt;code&gt;:set noundofile&lt;/code&gt;을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은&amp;nbsp;지워야겠지만&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 03 Feb 2016 00:02:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-02-03:2016/02/03/un-너는-뭐니/</guid><category>vi</category><category>undo</category><category>vimrc</category></item><item><title>unattended-upgrade 써보자</title><link>http://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,

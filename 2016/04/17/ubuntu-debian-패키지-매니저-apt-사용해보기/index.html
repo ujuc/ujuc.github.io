@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <ul class="nav nav-pills">
+              <li class="presentation"><a href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span></a></li>
+              <li class="presentation"><a href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span></a></li>
+              <li class="presentation"><a href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span></a></li>
+              <li class="presentation"><a href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span></a></li>
+          </ul>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div id="site_article" class="container">
+    <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/" class="h1">Ubuntu-Debian 패키지 매니저 apt&nbsp;사용해보기</a></h1>
+    </div>
+    <div class="row article">
+      <p>...</p>
+      <div class="article_text">
+        <p>기본적으로 <code>apt</code> 패키지가 설치되어있었지만&#8230; 사용하지 않았었다. 여기저기서 <code>apt-get</code> 같은 명령어를 알려줬기에&#8230; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&nbsp;한다.</p>
+<p>참고는 <a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/">15 Examples of How to Use New Advanced Package Tool (<span class="caps">APT</span>) in Ubuntu/Debian</a> 을 사용함. 기본적으로 되는 <a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html">Ubuntu man</a> 페이지는 끼고&nbsp;살자&#8230;</p>
+<h2 id="1">1. 패키지&nbsp;설치</h2>
+<div class="codehilite"><pre><span></span>sudo apt install glances
+</pre></div>
+
+
+<p>항상 사용하던건 <code>apt-get</code> 명령어로 설치를 하는거였는데 4글자 줄엇다!
+<code>sudo aptitude install</code> 로도 가능하다만&#8230; 이렇게 하는 사람들&nbsp;잘못봤다.</p>
+<h2 id="2">2. 패키지가 설치된 위치&nbsp;확인</h2>
+<div class="codehilite"><pre><span></span>sudo apt content glances
+</pre></div>
+
+
+<p>대응되는 명령어는 <code>dpkg -L</code>.</p>
+<h2 id="3">3. 패키지 디펜던시&nbsp;확인</h2>
+<div class="codehilite"><pre><span></span>sudo apt depends glances
+</pre></div>
+
+
+<p>대응되는 명령어가 <code>apt-get check</code>, <code>dpkg -C</code>.</p>
+<h2 id="4">4. 패키지&nbsp;찾기</h2>
+<div class="codehilite"><pre><span></span>sudo apt search openstack
+</pre></div>
+
+
+<p>대응되는 명령어는 <code>apt-cache search</code>.</p>
+<h2 id="5">5. 패키지 정보&nbsp;확인</h2>
+<div class="codehilite"><pre><span></span>sudo apt show firefox
+</pre></div>
+
+
+<p>대응되는 명령어 <code>apt-cache show</code>, <code>dpkg -p</code></p>
+<h2 id="6">6. 깨진 디펜던시가 있는지&nbsp;확인</h2>
+<div class="codehilite"><pre><span></span>sudo apt check firefox
+</pre></div>
+
+
+<p>이거와 대응되는게 있는지&nbsp;잘모르겠다.</p>
+<h2 id="7">7. 제공된 패키지에서 빠진 패키지에 대한 목록&nbsp;보여주기</h2>
+<div class="codehilite"><pre><span></span>sudo apt recommends apache2
+</pre></div>
+
+
+<h2 id="8">8. 패키지 버전&nbsp;체크</h2>
+<div class="codehilite"><pre><span></span>sudo apt version firefox
+</pre></div>
+
+
+<h2 id="9">9. 시스템 패키지&nbsp;업데이트</h2>
+<div class="codehilite"><pre><span></span>sudo apt update
+</pre></div>
+
+
+<p>대응되는건 <code>apt-get update</code>.</p>
+<h2 id="10">10. 시스템&nbsp;업그레이드</h2>
+<div class="codehilite"><pre><span></span>sudo apt upgrade
+</pre></div>
+
+
+<p>대응되는건 <code>apt-get upgrade</code>.</p>
+<h2 id="11">11. 커널 버전까지 시스템&nbsp;업그레이드</h2>
+<div class="codehilite"><pre><span></span>sudo apt full-upgrade
+</pre></div>
+
+
+<p>대응되는건 <code>apt-get dist-upgrade</code>.</p>
+<h2 id="12">12. 사용하지 않는 페키지&nbsp;삭제</h2>
+<div class="codehilite"><pre><span></span>sudo apt autoremove
+</pre></div>
+
+
+<p>대응되는건 <code>apt-get autoremove</code>.</p>
+<h2 id="13">13. 다운로드된 페키지에서 오래된 저장소&nbsp;삭제</h2>
+<div class="codehilite"><pre><span></span>sudo apt autoclean
+sudo apt clean
+</pre></div>
+
+
+<p>대응되는건 <code>apt-get clean</code>, <code>apt-get autoclean</code>.</p>
+<h2 id="14">14. 패키지 구성파일까지&nbsp;삭제</h2>
+<div class="codehilite"><pre><span></span>sudo apt purge glance
+</pre></div>
+
+
+<p>대응되는건 <code>apt-purge</code>.</p>
+<h2 id="15-deb">15. deb 패키지&nbsp;설치</h2>
+<div class="codehilite"><pre><span></span>sudo apt deb atom-amd64.deb
+</pre></div>
+
+
+<p>대응되는건 <code>dpkg</code> 에서&nbsp;찾으면될듯..</p>
+<h2 id="16">16.&nbsp;사용법은</h2>
+<div class="codehilite"><pre><span></span>apt <span class="nb">help</span>
+</pre></div>
+
+
+<p><code>apt</code> 사용법을 찾아서 작업하면 될것으로&nbsp;보여짐.</p>
+<h2 id="_1">맺음</h2>
+<p>동일한 명령어가 여러가지 존재하고 사용하는 방법에 따라 달라지는 것으로 보여지는데&#8230;
+패키지 메니저가 <code>dpkg</code>, <code>aptitude</code>, <code>apt</code>로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될&nbsp;듯.</p>
+      </div>
+      <p>...</p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p><i class="fa fa-calendar-plus-o"></i> 16. 04. 17. |
+        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/operation.html">Operation</a> |
+        <i class="fa fa-tags">
+            <a href="http://ujuc.github.io/tag/ubuntu.html">ubuntu</a>
+,             <a href="http://ujuc.github.io/tag/debian.html">debian</a>
+,             <a href="http://ujuc.github.io/tag/apt.html">apt</a>
+,             <a href="http://ujuc.github.io/tag/system.html">system</a>
+        </i></p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+    </article>
+  </div>
+
+  <div class="container">
+  </div>
+
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>  </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script></body>
+</html>

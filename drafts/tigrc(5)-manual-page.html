@@ -181,22 +181,22 @@ set blame-view = \
 <code>blame-options</code>(string)</dd>
 </dl>
 <h3 id="_2">뷰&nbsp;설정</h3>
-<h2 id="_3">바인드&nbsp;명령어</h2>
-<h3 id="_4">외부 사용자 정의&nbsp;명령어</h3>
+<h2 id="bind">Bind&nbsp;명령어</h2>
+<h3 id="_3">외부 사용자 정의&nbsp;명령어</h3>
 <h4 id="browsing">Browsing 상태&nbsp;변수</h4>
-<h4 id="_5">고급 셸같은&nbsp;명령어</h4>
-<h3 id="_6">내부 사용자 정의&nbsp;명령어</h3>
-<h3 id="_7">동작&nbsp;이름</h3>
-<h4 id="_8">뷰&nbsp;전환</h4>
-<h4 id="_9">뷰&nbsp;조작</h4>
-<h4 id="_10">커서&nbsp;네비게이션</h4>
-<h4 id="_11">스크롤링</h4>
-<h4 id="_12">검색</h4>
+<h4 id="_4">고급 셸같은&nbsp;명령어</h4>
+<h3 id="_5">내부 사용자 정의&nbsp;명령어</h3>
+<h3 id="_6">동작&nbsp;이름</h3>
+<h4 id="_7">뷰&nbsp;전환</h4>
+<h4 id="_8">뷰&nbsp;조작</h4>
+<h4 id="_9">커서&nbsp;네비게이션</h4>
+<h4 id="_10">스크롤링</h4>
+<h4 id="_11">검색</h4>
 <h4 id="misc">Misc</h4>
-<h2 id="_13">색&nbsp;명령어</h2>
+<h2 id="_12">색&nbsp;명령어</h2>
 <h3 id="ui"><span class="caps">UI</span>&nbsp;색</h3>
 <p>강조 표시시되거나 기본 터미널 색상 사용을 지정하지 않은 텍스트와 색상의 속성은 <strong>기본</strong> 색상 옵션을 제어하여 설정할 수&nbsp;있습니다.</p>
-<p>Table 1.&nbsp;일반</p>
+<h4 id="table-1">Table 1.&nbsp;일반</h4>
 <p>| default | 기본 터미널 색상을 덮어씁니다. |
 | cursor | 커서 라인 |
 | status | 상태 윈도우에서 보여주는 정보 메시지 |
@@ -209,11 +209,83 @@ set blame-view = \
 | date | 작성 일자 |
 | author | 커밋 작성자 |
 | mode | 권한과 유형을 유지하는 파일 모드 |
-| overflow | 텍스트 넘침 |
+| overflow | 텍스트 오버플로우 |
 | directory | 디렉토리 이름 |
 | file | 파일 이름 |
 | file-size | 파일 크기&nbsp;|</p>
-<h3 id="_14">구문&nbsp;강조</h3>
+<h4 id="table-2">Table 2. 메인&nbsp;뷰</h4>
+<table>
+<thead>
+<tr>
+<th>graph-commit</th>
+<th>리버전 그래프에서 커밋 점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>main-commit</td>
+<td>커밋 코멘트</td>
+</tr>
+<tr>
+<td>main-head</td>
+<td>현재 브런치 라벨</td>
+</tr>
+<tr>
+<td>main-remote</td>
+<td>원격 라벨</td>
+</tr>
+<tr>
+<td>main-tracked</td>
+<td>현재 브런치에대한 원격 tracked 라벨</td>
+</tr>
+<tr>
+<td>main-tag</td>
+<td>signed 태그 라벨</td>
+</tr>
+<tr>
+<td>main-local-tag</td>
+<td>로컬 태그 라벨</td>
+</tr>
+<tr>
+<td>main-ref</td>
+<td>다른 reference 라벨</td>
+</tr>
+<tr>
+<td>main=replace</td>
+<td>replaced reference 라벨</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-3">Table 3. 상태&nbsp;뷰</h4>
+<table>
+<thead>
+<tr>
+<th>state-none</th>
+<th>빈 상태 라벨</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stat-unstaged</td>
+<td>unstaged 파일 상태 플래그</td>
+</tr>
+<tr>
+<td>stat-untracked</td>
+<td>untarcked 파일 상태 플래그</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-4">Table 4. 헬프&nbsp;뷰</h4>
+<table>
+<thead>
+<tr>
+<th>help-group</th>
+<th>헬프 그룹 이름</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<h3 id="_13">구문&nbsp;강조</h3>
 <dl>
 <dt>Diff을마크업</dt>
 <dd>diff 시작, 청크, 라인 추가, 삭제를&nbsp;합니다.</dd>
@@ -241,7 +313,7 @@ set blame-view = \
 <dd>Tree 뷰에대한 정보에 색을&nbsp;더합니다.</dd>
 </dl>
 <p><strong>tree-dir,&nbsp;tree-file</strong></p>
-<h2 id="_15">소스&nbsp;명령</h2>
+<h2 id="_14">소스&nbsp;명령</h2>
 <p>소스 명령은 추가 설정 파일을 불러올 수 있도록 합니다. 소스로 구성된 파일은 해당 자리에 포함되고 소스 명령과 만났을때 해당 파일을 읽어오게 됩니다. 현재 구성 파일에 있는 명령 이후에 해당 명령을 먼저 실행합니다. 구문은 다음과&nbsp;같습니다:</p>
 <blockquote>
 <p>source&nbsp;path</p>
