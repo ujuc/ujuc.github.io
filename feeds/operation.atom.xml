@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-04-17T12:23:00+09:00</updated><entry><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link href="http://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" rel="alternate"></link><updated>2016-04-17T12:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-17:2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</id><summary type="html">&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;#8230; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;#8230; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&amp;nbsp;한다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-04-22T22:59:00+09:00</updated><entry><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link href="http://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" rel="alternate"></link><updated>2016-04-22T22:59:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-22:2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</id><summary type="html">&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가&amp;nbsp;발생했다.&lt;/p&gt;
+&lt;p&gt;Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&amp;#8230; Ubuntu 16.04버전이 4.4.0&amp;#8230; 그래서 백포트하고, 드라이버를 옮겨주는것으로&amp;nbsp;해결.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation&lt;/a&gt; 에서 말하는 작업을&amp;nbsp;설치해주면된다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install build-essential linux-headers-&lt;span class="k"&gt;$(&lt;/span&gt;uname -r&lt;span class="k"&gt;)&lt;/span&gt; git
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;options ath10k_core skip_otp=y&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sudo tee /etc/modprobe.d/ath10k_core.conf
+wget https://www.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/backports-4.4.2-1.tar.gz
+tar -zxvf backports-4.4.2-1.tar.gz
+&lt;span class="nb"&gt;cd&lt;/span&gt; backport-4.4.2-1
+make defconfig-wifi
+make
+sudo make install
+git clone https://github.com/kvalo/ath10k-firmware.git
+sudo cp -r ath10k-firmware/QCA9377 /lib/firmware/ath10k/
+sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;그리고&amp;nbsp;하나더&amp;#8230;&lt;/p&gt;
+&lt;p&gt;이건 위에껄 하고 안되면 추가해주도록&amp;nbsp;하자.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; blacklist ideapad_laptop &lt;span class="p"&gt;|&lt;/span&gt; sudo tee /etc/modprobe.d/blacklist.conf
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link href="http://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" rel="alternate"></link><updated>2016-04-17T12:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-17:2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</id><summary type="html">&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;#8230; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;#8230; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&amp;nbsp;한다.&lt;/p&gt;
 &lt;p&gt;참고는 &lt;a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/"&gt;15 Examples of How to Use New Advanced Package Tool (&lt;span class="caps"&gt;APT&lt;/span&gt;) in Ubuntu/Debian&lt;/a&gt; 을 사용함. 기본적으로 되는 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html"&gt;Ubuntu man&lt;/a&gt; 페이지는 끼고&amp;nbsp;살자&amp;#8230;&lt;/p&gt;
 &lt;h2 id="1"&gt;1. 패키지&amp;nbsp;설치&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install glances

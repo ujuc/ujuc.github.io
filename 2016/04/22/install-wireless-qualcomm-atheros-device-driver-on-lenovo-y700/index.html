@@ -62,58 +62,70 @@
 
   <div id="site_article" class="container">
     <article>
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <article>
-          <h3><a href="http://ujuc.github.io/2016/01/27/stderr-check-in-zshell/">Stderr check in&nbsp;zshell</a></h3>
-          <p><p>zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고&nbsp;싶었다.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 16. 01. 27.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="http://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/">`_vim_files: function definition files net found` on&nbsp;zsh</a></h3>
-          <p><p>zsh이 올라가고 난뒤에 vim도 같이 올라갔더니 에러를&nbsp;뿝네&#8230;</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 16. 01. 16.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="http://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/">Git flow, GitHub flow, GitLab&nbsp;flow</a></h3>
-          <p><p>Git flow, GitHub flow, GitLab flow 에대해서 좀 알아보자.&nbsp;머리아프다.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 12. 16.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="http://ujuc.github.io/2015/10/26/git-town-사용해보자/">git-town&nbsp;사용해보자</a></h3>
-          <p><p class="first last">Git 플러그인중 하나인 git-town에 대해서&nbsp;알아보자.</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 10. 26.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="http://ujuc.github.io/2015/07/25/vim-mouse-mode/">Vim mouse&nbsp;mode</a></h3>
-          <p><p class="first last">.vimrc 설정을 하는데 사용했던 &#8220;mouse&#8221; 명령어에 대한&nbsp;내용.</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 07. 25.</p>
-        </article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" class="h1">Install wireless Qualcomm Atheros device driver on Lenovo&nbsp;Y700</a></h1>
     </div>
-  </div>
+    <div class="row article">
+      <p>...</p>
+      <div class="article_text">
+        <p>새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가&nbsp;발생했다.</p>
+<p>Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&#8230; Ubuntu 16.04버전이 4.4.0&#8230; 그래서 백포트하고, 드라이버를 옮겨주는것으로&nbsp;해결.</p>
+<p><a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation">Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation</a> 에서 말하는 작업을&nbsp;설치해주면된다.</p>
+<div class="codehilite"><pre><span></span>sudo apt install build-essential linux-headers-<span class="k">$(</span>uname -r<span class="k">)</span> git
+<span class="nb">echo</span> <span class="s2">&quot;options ath10k_core skip_otp=y&quot;</span> <span class="p">|</span> sudo tee /etc/modprobe.d/ath10k_core.conf
+wget https://www.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/backports-4.4.2-1.tar.gz
+tar -zxvf backports-4.4.2-1.tar.gz
+<span class="nb">cd</span> backport-4.4.2-1
+make defconfig-wifi
+make
+sudo make install
+git clone https://github.com/kvalo/ath10k-firmware.git
+sudo cp -r ath10k-firmware/QCA9377 /lib/firmware/ath10k/
+sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin
+</pre></div>
 
+
+<p>그리고&nbsp;하나더&#8230;</p>
+<p>이건 위에껄 하고 안되면 추가해주도록&nbsp;하자.</p>
+<div class="codehilite"><pre><span></span><span class="nb">echo</span> blacklist ideapad_laptop <span class="p">|</span> sudo tee /etc/modprobe.d/blacklist.conf
+</pre></div>
+      </div>
+      <p>...</p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p><i class="fa fa-calendar-plus-o"></i> 16. 04. 22. |
+        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/operation.html">Operation</a> |
+        <i class="fa fa-tags">
+            <a href="http://ujuc.github.io/tag/lenovo.html">lenovo</a>
+,             <a href="http://ujuc.github.io/tag/ubuntu.html">ubuntu</a>
+,             <a href="http://ujuc.github.io/tag/qualcomm.html">qualcomm</a>
+,             <a href="http://ujuc.github.io/tag/driver.html">driver</a>
+,             <a href="http://ujuc.github.io/tag/wireless.html">wireless</a>
+,             <a href="http://ujuc.github.io/tag/1604.html">16.04</a>
+        </i></p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
     </article>
   </div>
 
   <div class="container">
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <ul class="pagination center">
-            <li class="prev">
-              <a href="http://ujuc.github.io/author/ujuc2.html"><i class="fa fa-arrow-circle-left"></i> Prev</a>
-            </li>
-          <li class="next">
-            <a href="/author/ujuc4.html">Next <i class="fa fa-arrow-circle-right"></i></a>
-          </li>
-      </ul>
-    </div>
-  </div>
   </div>
 
   <div id="site_title" class="container">
