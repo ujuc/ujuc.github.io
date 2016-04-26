@@ -16,7 +16,7 @@ Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널�
 	echo "options ath10k_core skip_otp=y" | sudo tee /etc/modprobe.d/ath10k_core.conf
 	wget https://www.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/backports-4.4.2-1.tar.gz
 	tar -zxvf backports-4.4.2-1.tar.gz
-	cd backport-4.4.2-1
+	cd backports-4.4.2-1
 	make defconfig-wifi
 	make
 	sudo make install
