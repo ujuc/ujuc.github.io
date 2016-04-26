@@ -19,7 +19,7 @@ highlight ColorColumn ctermbg=17 guibg=navyblue
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;options ath10k_core skip_otp=y&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sudo tee /etc/modprobe.d/ath10k_core.conf
 wget https://www.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/backports-4.4.2-1.tar.gz
 tar -zxvf backports-4.4.2-1.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; backport-4.4.2-1
+&lt;span class="nb"&gt;cd&lt;/span&gt; backports-4.4.2-1
 make defconfig-wifi
 make
 sudo make install
