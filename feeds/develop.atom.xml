@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-03-03T22:00:00+09:00</updated><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><updated>2016-02-29T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-04-26T22:04:00+09:00</updated><entry><title>Vim ColorColumn Settings</title><link href="http://ujuc.github.io/2016/04/26/vim-colorcolumn-settings/" rel="alternate"></link><updated>2016-04-26T22:04:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-26:2016/04/26/vim-colorcolumn-settings/</id><summary type="html">&lt;p&gt;나같은 경우엔, &lt;code&gt;git commit&lt;/code&gt; 명령어를 실행하면 기본 에디터로 &lt;code&gt;vim&lt;/code&gt;으로 구성해뒀다.
+그러다보니 가끔 길이를 확인해서 커밋을 해야되는 경우가&amp;nbsp;발생하는데&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그나마 기본적으로 설정해놓은 80줄은 쉽게 찾으나&amp;#8230; 커밋 제목인 50자, 커밋 메시지
+제한인 72자를 확인하는게 쉽지가 않아서 줄을 그어놓고 사용하기위해 설정을&amp;nbsp;한다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set cc=51,73,81,121
+highlight ColorColumn ctermbg=17 guibg=navyblue
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;위와 같이 설정하면 아래와 같이 줄이 그어져있는 모습을 볼 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="vim_ex" src="http://ujuc.github.io/img/2016-04-26_vim.png" /&gt;&lt;/p&gt;
+&lt;p&gt;이건&amp;nbsp;덤&amp;#8230;&lt;/p&gt;
+&lt;p&gt;vim에서 사용하는 색이름과 설정값에 대해서 확인할 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim"&gt;Xterm256 color names for console&amp;nbsp;Vim&lt;/a&gt;&lt;/p&gt;</summary><category term="vim"></category><category term="vimrc"></category><category term="colorcolumn"></category><category term="cc"></category></entry><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><updated>2016-02-29T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;우선 이 패키지는 14년 5월 이후로 &lt;a href="https://pypi.python.org/pypi/pysftp"&gt;pypi 프로젝트&lt;/a&gt;에서는 업로드가 되고 있지 않으며, &lt;a href="https://bitbucket.org/dundeemt/pysftp"&gt;Project repo&lt;/a&gt;의 업로드는 이루워지고 있으며, 3.4까지 테스팅을 해봣단다. 파일만 올리기위해서 사용했던 라이브러리라 간단히 sftp를 이용하여 파일을 올리고 받기를 원한다면 괜찮을&amp;nbsp;듯.&lt;/p&gt;
 &lt;h2 id="package"&gt;Package&lt;/h2&gt;
 &lt;ol&gt;
