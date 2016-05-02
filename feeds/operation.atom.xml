@@ -105,7 +105,7 @@ sudo apt clean
 
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-purge&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="15-deb"&gt;15. deb 패키지&amp;nbsp;설치&lt;/h2&gt;
+&lt;h2 id="15-deb-160502"&gt;15. deb 패키지 설치 (작동이 안된다&amp;#8230;&amp;nbsp;-160502)&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt deb atom-amd64.deb
 &lt;/pre&gt;&lt;/div&gt;
 
