@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/software.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 02 May 2016 23:27:00 +0900</lastBuildDate><item><title>Select text of vim with set mouse=a enabled</title><link>http://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</link><description>&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/software.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 21 May 2016 00:06:00 +0900</lastBuildDate><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>http://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
+&lt;p&gt;아&amp;#8230; 이건 아니다 싶어서 다시 nightly 버전으로 점프하여 설치를&amp;nbsp;하였더니&amp;#8230;&lt;/p&gt;
+&lt;p&gt;뜨는&amp;nbsp;무언가.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="install shell integration" src="http://ujuc.github.io/img/2016-05-21_warning_shell_integration.png" /&gt;&lt;/p&gt;
+&lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고&amp;nbsp;설치&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="installing shell integration" src="http://ujuc.github.io/img/2016-05-21_installing_shell_integration.png" /&gt;&lt;/p&gt;
+&lt;p&gt;음.! 뭔가&amp;nbsp;이상하다&amp;#8230;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;You will also have these commands:
+imgcat filename
+  Displays the image inline.
+it2dl filename
+  Downloads the specified file, saving it in your Downloads folder.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;????&lt;/p&gt;
+&lt;p&gt;그래서&amp;nbsp;실행해봤다.!&lt;/p&gt;
+&lt;h3 id="imgcat"&gt;imgcat&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="imgcat image!" src="http://ujuc.github.io/img/2016-05-21_imgcat_image.png" /&gt;&lt;/p&gt;
+&lt;p&gt;용량이 크면 여는데 오래걸린다. Raw 파일은 정말 오래걸린다. tif 파일은 정말&amp;#8230; (70MB가 넘어가니 엄청&amp;nbsp;걸린다.)&lt;/p&gt;
+&lt;h3 id="it2dl"&gt;it2dl&lt;/h3&gt;
+&lt;p&gt;모르겠다&amp;nbsp;관심없다.&lt;/p&gt;
+&lt;h3 id="_1"&gt;설치를 못했다나.. 다시 해보고&amp;nbsp;싶다면&amp;#8230;&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="menu" src="http://ujuc.github.io/img/2016-05-21_menu.png" /&gt;&lt;/p&gt;
+&lt;h3 id="_2"&gt;참고&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities.md"&gt;iterm2 -&amp;nbsp;utilites&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:06:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-05-21:2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</guid><category>iTerm2</category><category>terminal</category><category>Mac OS X</category></item><item><title>Select text of vim with set mouse=a enabled</title><link>http://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</link><description>&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
 &lt;p&gt;조금 쉽게 사용하려고 vim에 &lt;code&gt;mouse=a&lt;/code&gt; 설정을 하였다. 그것이 원흉이 었지만. 결국&amp;nbsp;찾았다!&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/4608161/copy-text-out-of-vim-with-set-mouse-a-enabled"&gt;Copy text out of vim with set mouse=a&amp;nbsp;enabled&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;리눅스에서는 &lt;code&gt;shift&lt;/code&gt;를 누르고 선택하는것이고, Mac에서는 &lt;code&gt;alt/option&lt;/code&gt;을 누르고 선택하면&amp;nbsp;된다.&lt;/p&gt;
