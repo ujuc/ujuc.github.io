@@ -1,5 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 21 May 2016 00:06:00 +0900</lastBuildDate><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>http://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 29 May 2016 13:43:00 +0900</lastBuildDate><item><title>Spec Architecture Design Guide Restructure (번역)</title><link>http://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure%20(%EB%B2%88%EC%97%AD)/</link><description>&lt;p&gt;&lt;a href="http://docs.openstack.org/arch-design/"&gt;Architecture Design Guide&lt;/a&gt;가 새롭게 작성이되려나보다. 그것에 대한 스펙문서&amp;nbsp;번역이다.&lt;/p&gt;
+&lt;p&gt;원문: &lt;a href="http://specs.openstack.org/openstack/docs-specs/specs/newton/arch-guide-restructure.html"&gt;Architecture Design Guide&amp;nbsp;Restructure&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id="_1"&gt;문제점&amp;nbsp;설명&lt;/h2&gt;
+&lt;p&gt;지금의 Architecture Design Giude는 주로 사용 사례를 중심으로 구성되어 있습니다. 그러나 OpenStack 클라우드를 설계함에 있어 여러 사용 사례에서 기능들이 조합되어 사용되는 경우가&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;p&gt;사용자가 모든 요구 사항을 고려할 수 있는 OpenStack 클라우드 아키텍처를 결정하는 것을 돕기위한 정보로 재구성하는 것이 필요합니다. 개발중이거나 단계적으로 반영을 하거나, 실제 서비스하고 있는 환경에서 OpenStack을 설계할때 필요한 정보를 추가해야합니다. 이번 제안은 클라우드에대한 아키텍처 컨셉과 다양한 OpenStack 프로젝트 추상화에 대한 더 상세한 구조를 개발하는 것입니다. 이것을 통해서 쉽게 가이드를 유지하고 업데이트 할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;h2 id="_2"&gt;변경사항&amp;nbsp;제안&lt;/h2&gt;
+&lt;p&gt;이번 가이드에서 제안되는 구조는 일반적인 클라우드 사용사례, 일반적인 아키텍처 컨셉, 주요 클라우드 아키텍처 구성요소에서 장애가 발생하였을때에 대한 자세한 설명과 그것에 대한 설계 방법 등을&amp;nbsp;설명합니다.&lt;/p&gt;
+&lt;p&gt;각 장은 다음과 같이&amp;nbsp;설계됩니다:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Technical&amp;nbsp;Detail&lt;/li&gt;
+&lt;li&gt;Capacity and&amp;nbsp;Scale&lt;/li&gt;
+&lt;li&gt;High&amp;nbsp;Availablility&lt;/li&gt;
+&lt;li&gt;Operator&amp;nbsp;Requirements&lt;/li&gt;
+&lt;li&gt;Deployment&amp;nbsp;Considerations&lt;/li&gt;
+&lt;li&gt;Maintenance&amp;nbsp;Considerations&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;표제에서 제공될 정보에 대한 형식은 따로 가이드라인을 제공할 예정입니다. 이것을 이용하여 정보를 호출하기위해 특정한 필요학 있는 경우에만&amp;nbsp;사용됩니다.&lt;/p&gt;
+&lt;h2 id="_3"&gt;목차&amp;nbsp;제안&lt;/h2&gt;
+&lt;p&gt;새로운 Architecture Design Guide는 다음과 같이 새롭게&amp;nbsp;구성됩니다:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;General&amp;nbsp;Overview&lt;/li&gt;
+&lt;li&gt;Use Cases&lt;ol&gt;
+&lt;li&gt;Development Cloud&lt;ol&gt;
+&lt;li&gt;Stackeholder&lt;/li&gt;
+&lt;li&gt;User&amp;nbsp;Stories&lt;/li&gt;
+&lt;li&gt;Designe&amp;nbsp;Model&lt;/li&gt;
+&lt;li&gt;Component Block&amp;nbsp;Diagram&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;General Compute Cloud&lt;ol&gt;
+&lt;li&gt;Stakeholders&lt;/li&gt;
+&lt;li&gt;User&amp;nbsp;Stories&lt;/li&gt;
+&lt;li&gt;Design&amp;nbsp;Model&lt;/li&gt;
+&lt;li&gt;Component Block&amp;nbsp;Diagram&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Web Scale Cloud&lt;ol&gt;
+&lt;li&gt;Stakeholders&lt;/li&gt;
+&lt;li&gt;User&amp;nbsp;Stories&lt;/li&gt;
+&lt;li&gt;Design&amp;nbsp;Model&lt;/li&gt;
+&lt;li&gt;Component Block&amp;nbsp;Diagram&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Public Cloud&lt;ol&gt;
+&lt;li&gt;Stakeholders&lt;/li&gt;
+&lt;li&gt;User&amp;nbsp;Stories&lt;/li&gt;
+&lt;li&gt;Design&amp;nbsp;Model&lt;/li&gt;
+&lt;li&gt;Component Block&amp;nbsp;Diagram&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;High Availability&lt;ol&gt;
+&lt;li&gt;Overview&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Capacity and Scale&lt;ol&gt;
+&lt;li&gt;Overview&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Design&lt;ol&gt;
+&lt;li&gt;Compute&lt;/li&gt;
+&lt;li&gt;Storage&lt;/li&gt;
+&lt;li&gt;Networking&lt;/li&gt;
+&lt;li&gt;Identity&lt;/li&gt;
+&lt;li&gt;Iamge&lt;/li&gt;
+&lt;li&gt;Control&amp;nbsp;Plane&lt;/li&gt;
+&lt;li&gt;Dashboard and&amp;nbsp;APIs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;뭐 이정도까지&amp;#8230; 더해봤자&amp;#8230; 의미가&amp;nbsp;없다&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 29 May 2016 13:43:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-05-29:2016/05/29/spec-architecture-design-guide-restructure (번역)/</guid><category>openstack</category><category>documents</category><category>spec</category><category>architecture design guide</category></item><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>http://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
 &lt;p&gt;아&amp;#8230; 이건 아니다 싶어서 다시 nightly 버전으로 점프하여 설치를&amp;nbsp;하였더니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;뜨는&amp;nbsp;무언가.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="install shell integration" src="http://ujuc.github.io/img/2016-05-21_warning_shell_integration.png" /&gt;&lt;/p&gt;
@@ -1970,7 +2043,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 29 May 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
@@ -1986,7 +2059,7 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워
 손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 29 May 2016 00:00:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
