@@ -2,7 +2,6 @@ Odin is?
 ########
 
 :date: 2015-04-10 01:00
-:modified:
 :category: Cloud
 :tags: openstack, cloud, parallels
 :slug: odin-is

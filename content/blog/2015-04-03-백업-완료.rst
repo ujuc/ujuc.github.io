@@ -2,7 +2,6 @@
 #########
 
 :date: 2015-04-03 00:57
-:modified:
 :category: Chat
 :tags: 백업완료
 :slug: 백업-완료

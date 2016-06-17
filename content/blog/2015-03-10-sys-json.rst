@@ -2,7 +2,7 @@ sys.json
 =========
 
 :date: 2015-03-10 13:52
-:modefied: 2015-04-02 22:30
+:modified: 2015-04-02 22:30
 :category: Develop
 :tags: go, json, api
 :slug: sys-json
