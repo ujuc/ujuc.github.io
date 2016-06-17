@@ -15,6 +15,7 @@ Usage:
 
 from datetime import datetime
 from docopt import docopt
+import kroman
 
 RST_TEMPLATE = ('{title}\n'
                 '{hashes}\n'
@@ -41,7 +42,7 @@ page_path = "content/pages"
 def make_entry(title, path, template):
     today = datetime.today()
     # GTODO : 한국어를 영어로 변환하는 것이 필요
-    slug = title.lower().strip().replace(' ', '-')
+    slug = kroman.parse(title).lower().strip().replace(' ', '_')
     date = "{year}-{month:02d}-{day:02d} {hour:02d}:{minute:02d}"\
         .format(year=today.year, month=today.month, day=today.day,
                 hour=today.hour, minute=today.minute)
