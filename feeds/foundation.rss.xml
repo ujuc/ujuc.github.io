@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/foundation.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 22 Jul 2015 22:36:00 +0900</lastBuildDate><item><title>Cloud Native Computing Foundation</title><link>http://ujuc.github.io/2015/07/22/cncf-org/</link><description>&lt;p&gt;얼마 전 아시는 분께서 공유를 해주신 사이트&amp;#8230;
+<rss version="2.0"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><lastBuildDate>Wed, 22 Jul 2015 22:36:00 +0900</lastBuildDate><item><title>Cloud Native Computing Foundation</title><link>http://ujuc.github.io/2015/07/22/cncf-org/</link><description>&lt;p&gt;얼마 전 아시는 분께서 공유를 해주신 사이트&amp;#8230;
 구글에서 &lt;a class="reference external" href="http://kubernetes.io/"&gt;Kubernetes&lt;/a&gt; v1.0을 공개하면서 &lt;a class="reference external" href="https://cncf.io/"&gt;Cloud Native Computing Foundation&lt;/a&gt; 와 함께 Container의 생태계를 만들어나갈 거라 전함. &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;여기의 목표(?) 미션은 현대 분산 시스템 환경에 특화된 새로운 컴퓨팅 패러다임을 생성하고 진행하는 데 있다고 한다. &lt;a class="footnote-reference" href="#id6" id="id2"&gt;[2]&lt;/a&gt; (무의식적으로 번역하고&amp;nbsp;있었다.;;)&lt;/p&gt;
 &lt;p&gt;또 번역하다가&amp;nbsp;때리치웠&amp;#8230;&lt;/p&gt;
@@ -25,4 +25,4 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 22 Jul 2015 22:36:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-07-22:2015/07/22/cncf-org/</guid><category>google</category><category>kubernetes</category><category>cloud</category><category>container</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 22 Jul 2015 22:36:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-07-22:2015/07/22/cncf-org/</guid><category>google</category><category>kubernetes</category><category>cloud</category><category>container</category></item></channel></rss>

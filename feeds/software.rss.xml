@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><atom:link href="http://ujuc.github.io/feeds/software.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 21 May 2016 00:06:00 +0900</lastBuildDate><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>http://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
+<rss version="2.0"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><lastBuildDate>Sat, 21 May 2016 00:06:00 +0900</lastBuildDate><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>http://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
 &lt;p&gt;아&amp;#8230; 이건 아니다 싶어서 다시 nightly 버전으로 점프하여 설치를&amp;nbsp;하였더니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;뜨는&amp;nbsp;무언가.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="install shell integration" src="http://ujuc.github.io/img/2016-05-21_warning_shell_integration.png" /&gt;&lt;/p&gt;
@@ -26,17 +26,17 @@ it2dl filename
 &lt;h3 id="_2"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities.md"&gt;iterm2 -&amp;nbsp;utilites&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:06:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-05-21:2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</guid><category>iTerm2</category><category>terminal</category><category>Mac OS X</category></item><item><title>Select text of vim with set mouse=a enabled</title><link>http://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</link><description>&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:06:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-21:2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</guid><category>iTerm2</category><category>terminal</category><category>Mac OS X</category></item><item><title>Select text of vim with set mouse=a enabled</title><link>http://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</link><description>&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
 &lt;p&gt;조금 쉽게 사용하려고 vim에 &lt;code&gt;mouse=a&lt;/code&gt; 설정을 하였다. 그것이 원흉이 었지만. 결국&amp;nbsp;찾았다!&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/4608161/copy-text-out-of-vim-with-set-mouse-a-enabled"&gt;Copy text out of vim with set mouse=a&amp;nbsp;enabled&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;리눅스에서는 &lt;code&gt;shift&lt;/code&gt;를 누르고 선택하는것이고, Mac에서는 &lt;code&gt;alt/option&lt;/code&gt;을 누르고 선택하면&amp;nbsp;된다.&lt;/p&gt;
 &lt;p&gt;설정하나때문에 많은 삽질을 하는 사람들에게 남겨둠..
-그런데 설정은 tmux에서도&amp;nbsp;사용이가능하다.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 02 May 2016 23:27:00 +0900</pubDate><guid>tag:ujuc.github.io,2016-05-02:2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</guid><category>vim</category><category>mouse</category><category>copy</category></item><item><title>xonsh?</title><link>http://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
+그런데 설정은 tmux에서도&amp;nbsp;사용이가능하다.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 02 May 2016 23:27:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-02:2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</guid><category>vim</category><category>mouse</category><category>copy</category></item><item><title>xonsh?</title><link>http://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python-ish, BASHwards-compatible shell language and command&amp;nbsp;prompt.라고&amp;#8230;&lt;/p&gt;
 &lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이&amp;#8230;
 그리고 기본이 3.4라&amp;#8230; 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
 기본으로 장착한 배포판의 경우엔&amp;nbsp;다르겠지만.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:23:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</guid><category>python</category><category>shell</category></item><item><title>git-ftp로 ftp 클라이언트를!</title><link>http://ujuc.github.io/2015/03/04/git-ftp/</link><description>&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:23:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</guid><category>python</category><category>shell</category></item><item><title>git-ftp로 ftp 클라이언트를!</title><link>http://ujuc.github.io/2015/03/04/git-ftp/</link><description>&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
 이용해서 &lt;span class="caps"&gt;FTP&lt;/span&gt; 클라잉너트를&amp;nbsp;만들었다.&lt;/p&gt;
 &lt;p&gt;뭔짓이지&amp;#8230;&lt;/p&gt;
 &lt;p&gt;암튼&amp;#8230; 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;&amp;#8230; 역시 다른
@@ -103,7 +103,7 @@ $ brew install git-ftp
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid>tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가&amp;#8230;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가&amp;#8230;
 쓰던거 쓰자해서 &lt;tt class="docutils literal"&gt;nabi&lt;/tt&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&amp;nbsp;않는다.&lt;/p&gt;
 &lt;p&gt;그래서 조금 검색을 했더니&amp;#8230;
 &lt;tt class="docutils literal"&gt;gsettings get com.canonical.Unity.Panel &lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 라는 걸로 추가를
@@ -127,4 +127,4 @@ nabi가 트레이에 들어가게&amp;nbsp;된다.&lt;/p&gt;
 sudo apt-add-repository -r ppa:guran/systray-utopic
 sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get autoremove
 &lt;/pre&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 12 Apr 2015 14:12:00 +0900</pubDate><guid>tag:ujuc.github.io,2014-11-09:2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</guid><category>linux</category><category>ubuntu</category><category>nabi</category><category>setting</category></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 12 Apr 2015 14:12:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-11-09:2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</guid><category>linux</category><category>ubuntu</category><category>nabi</category><category>setting</category></item></channel></rss>
