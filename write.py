@@ -5,7 +5,8 @@
 """write
 
 Usage:
-    write new [-m | --markdown] [-p | --page] <title>
+    write new [-m | --markdown] <title>
+    write page [-r | --rst] <title>
     write edit <title>
     write backup <title> <date>
 
@@ -13,6 +14,7 @@ Usage:
 
 """
 
+import os
 from datetime import datetime
 from docopt import docopt
 import kroman
@@ -70,6 +72,8 @@ def make_entry(title, path, template):
                 slug=slug,
                 date=date)
 
+    if not os.path.isdir(path):
+        os.mkdir(path)
     with open(file_create, 'w') as w:
         w.write(article)
     print("File created -> " + file_create)
@@ -95,6 +99,11 @@ if __name__ == '__main__':
             make_entry(opt["<title>"], post_path, 'md')
         else:
             make_entry(opt["<title>"], post_path, 'rst')
+    elif opt['page']:
+        if opt["-r"] or opt["--rst"]:
+            make_entry(opt["<title>"], page_path, 'rst')
+        else:
+            make_entry(opt["<title>"], page_path, 'md')
     elif opt['edit']:
         print("edit")
     elif opt["backup"]:
