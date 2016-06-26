@@ -5,7 +5,7 @@
 """write
 
 Usage:
-    write new [-m | --markdown] <title>
+    write new [-r | --rst] <title>
     write page [-r | --rst] <title>
     write edit <title>
     write backup <title> <date>
@@ -95,10 +95,10 @@ if __name__ == '__main__':
     if opt['new']:
         if opt["-p"] or opt["--page"]:
             make_entry(opt["<title>"], page_path)
-        elif opt["-m"] or opt["--markdown"]:
-            make_entry(opt["<title>"], post_path, 'md')
-        else:
+        elif opt["-r"] or opt["--rst"]:
             make_entry(opt["<title>"], post_path, 'rst')
+        else:
+            make_entry(opt["<title>"], post_path, 'md')
     elif opt['page']:
         if opt["-r"] or opt["--rst"]:
             make_entry(opt["<title>"], page_path, 'rst')
