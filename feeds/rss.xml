@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><lastBuildDate>Wed, 22 Jun 2016 00:12:00 +0900</lastBuildDate><item><title>Edison - Bluetooth 설정</title><link>http://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/</link><description>&lt;p&gt;오래된 글이다 잠시 IoT로 하면서 기본적으로 설정하면서 나왔던 것. 정리한&amp;nbsp;내용이다.&lt;/p&gt;
+<rss version="2.0"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><lastBuildDate>Fri, 08 Jul 2016 00:29:00 +0900</lastBuildDate><item><title>파이썬으로 내가 쓸 셸 만들기</title><link>http://ujuc.github.io/2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/</link><description>&lt;p&gt;매주 python관련 뉴스들이 오는데 이번에는 흥미로운 것이 있어서 이렇게&amp;nbsp;남긴다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://hackercollider.com/articles/2016/07/05/create-your-own-shell-in-python-part-1/"&gt;Create Your Own Shell in Python: Part&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hackercollider.com/articles/2016/07/06/create-your-own-shell-in-python-part-2/"&gt;Create Your Own Shell in Python: Part&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/supasate/yosh"&gt;supasate/yosh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;yosh&lt;/code&gt; 프로젝트로 간단히 Python을 이용해서 셸을 구성할 수 있도록 도와준다. 그리고 이것을 이용해서 조금이나마 편하게 사용할 수 있음을 이야기해주고도 있다.
+다른 것보다는 손쉽게 내가 원하는 셸을 만들어서 사용할 수 있다는 점과 내가 2014년에 PyconKR에서 봤던 것들로 구성만 하고 있엇던 &lt;a href="https://docs.python.org/3.5/library/cmd.html"&gt;&lt;code&gt;cmd&lt;/code&gt;&lt;/a&gt; 라이브러리가 아닌 &lt;a href="https://docs.python.org/3.5/library/shlex.html"&gt;&lt;code&gt;shlex&lt;/code&gt;&lt;/a&gt; 라이브러리를 사용해서 셸에서 입력하는 것과 유사하게 만들어주는 것으로&amp;nbsp;보인다.&lt;/p&gt;
+&lt;p&gt;첫번째로 부럽다. 생각만했지 실행으로 옮기지는 못했다. 내가 사용하는 셸 프로그램들을 묶어서 내가 원하는 생각대로 실행할 수 있도록 하는 것. 쉽지 않다고 생각만 했지. 언젠가 하려고만 했지. 이렇게까지 만들 수 있으리라 생각하지&amp;nbsp;못했다.&lt;/p&gt;
+&lt;p&gt;한번 도전해봐야겠다. 처음 생각했던 &lt;a href="https://docs.python.org/3.5/library/cmd.html"&gt;&lt;code&gt;cmd&lt;/code&gt;&lt;/a&gt; 라이브러리로 기본 라이브러리 구성을 남겨두고, 작업을 진행할 수&amp;nbsp;있도록.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 08 Jul 2016 00:29:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-08:2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/</guid><category>python</category><category>shell</category><category>yosh</category><category>Your Own SHell</category></item><item><title>Edison - Bluetooth 설정</title><link>http://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/</link><description>&lt;p&gt;오래된 글이다 잠시 IoT로 하면서 기본적으로 설정하면서 나왔던 것. 정리한&amp;nbsp;내용이다.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id="bluetooth"&gt;Bluetooth&amp;nbsp;설정&lt;/h1&gt;
 &lt;ul&gt;
