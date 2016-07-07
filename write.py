@@ -93,9 +93,7 @@ if __name__ == '__main__':
     opt = docopt(__doc__, version='write 0.1')
 
     if opt['new']:
-        if opt["-p"] or opt["--page"]:
-            make_entry(opt["<title>"], page_path)
-        elif opt["-r"] or opt["--rst"]:
+        if opt["-r"] or opt["--rst"]:
             make_entry(opt["<title>"], post_path, 'rst')
         else:
             make_entry(opt["<title>"], post_path, 'md')
