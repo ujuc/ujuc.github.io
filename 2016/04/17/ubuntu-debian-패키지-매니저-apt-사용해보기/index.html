@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <!-- Meta -->
   <meta charset="UTF-8">
@@ -42,32 +43,33 @@
 
 </script>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <div class="row">
-          <ul class="nav nav-pills">
-              <li class="presentation"><a href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span></a></li>
-              <li class="presentation"><a href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span></a></li>
-              <li class="presentation"><a href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span></a></li>
-              <li class="presentation"><a href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span></a></li>
-          </ul>
+  <body>
+    <div class="container">
+      <header>
+        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+          <div class="row">
+            <nav class="nav nav-inline">
+                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+            </nav>
+          </div>
+          <div class="row">
+  <meta name="keywords" content="ubuntu, debian, apt, system">
+          </div>
         </div>
-        <div class="row">
-        </div>
-      </div>
-    </header>
-  </div>
+      </header>
+    </div>
 
-  <div id="site_article" class="container">
-    <article>
+    <div id="site_article" class="container">
+      <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
       <h1><a href="http://ujuc.github.io/2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/" class="h1">Ubuntu-Debian 패키지 매니저 apt&nbsp;사용해보기</a></h1>
     </div>
     <div class="row article">
-      <p>...</p>
+      <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
         <p>기본적으로 <code>apt</code> 패키지가 설치되어있었지만&#8230; 사용하지 않았었다. 여기저기서 <code>apt-get</code> 같은 명령어를 알려줬기에&#8230; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&nbsp;한다.</p>
 <p>참고는 <a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/">15 Examples of How to Use New Advanced Package Tool (<span class="caps">APT</span>) in Ubuntu/Debian</a> 을 사용함. 기본적으로 되는 <a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html">Ubuntu man</a> 페이지는 끼고&nbsp;살자&#8230;</p>
@@ -171,18 +173,22 @@ sudo apt clean
 <p>동일한 명령어가 여러가지 존재하고 사용하는 방법에 따라 달라지는 것으로 보여지는데&#8230;
 패키지 메니저가 <code>dpkg</code>, <code>aptitude</code>, <code>apt</code>로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될&nbsp;듯.</p>
       </div>
-      <p>...</p>
+      <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
     <div class="row article_meta">
       <div>
-        <p><i class="fa fa-calendar-plus-o"></i> 16. 04. 17. |
-        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/operation.html">Operation</a> |
-        <i class="fa fa-tags">
-            <a href="http://ujuc.github.io/tag/ubuntu.html">ubuntu</a>
-,             <a href="http://ujuc.github.io/tag/debian.html">debian</a>
-,             <a href="http://ujuc.github.io/tag/apt.html">apt</a>
-,             <a href="http://ujuc.github.io/tag/system.html">system</a>
-        </i></p>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 16. 04. 17.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/operation.html">Operation</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="http://ujuc.github.io/tag/ubuntu.html">ubuntu</a>
+,               <a href="http://ujuc.github.io/tag/debian.html">debian</a>
+,               <a href="http://ujuc.github.io/tag/apt.html">apt</a>
+,               <a href="http://ujuc.github.io/tag/system.html">system</a>
+          </i>
+        </p>
       </div>
     </div>
 
@@ -200,41 +206,42 @@ sudo apt clean
   </script>
 </div>      </div>
   </div>
-    </article>
-  </div>
+      </article>
+    </div>
 
-  <div class="container">
-  </div>
+    <div class="container">
+    </div>
 
-  <div id="site_title" class="container">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <div class="row">
-        <hr />
-        <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-      </div>
-      <div class="row">
-        <p>Anythink, Everythink!</p>
-      </div>
-      <div class="row">
-          <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-          <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+    <!-- Title -->
+    <div id="site_title" class="container">
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <hr />
+          <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+        </div>
+        <div class="row">
+          <p>Anythink, Everythink!</p>
+        </div>
+        <div class="row">
+            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="site_footer" class="container">
+    <div id="site_footer" class="container">
 <footer>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row">
       <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
     </div>
   </div>
-</footer>  </div>
+</footer>    </div>
 
 <!-- Javascript -->
 <!-- Jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script></body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
 </html>

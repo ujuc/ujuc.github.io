@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <!-- Meta -->
   <meta charset="UTF-8">
@@ -42,32 +43,33 @@
 
 </script>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <div class="row">
-          <ul class="nav nav-pills">
-              <li class="presentation"><a href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span></a></li>
-              <li class="presentation"><a href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span></a></li>
-              <li class="presentation"><a href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span></a></li>
-              <li class="presentation"><a href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span></a></li>
-          </ul>
+  <body>
+    <div class="container">
+      <header>
+        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+          <div class="row">
+            <nav class="nav nav-inline">
+                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+            </nav>
+          </div>
+          <div class="row">
+  <meta name="keywords" content="zabbix, centos">
+          </div>
         </div>
-        <div class="row">
-        </div>
-      </div>
-    </header>
-  </div>
+      </header>
+    </div>
 
-  <div id="site_article" class="container">
-    <article>
+    <div id="site_article" class="container">
+      <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
       <h1><a href="http://ujuc.github.io/2015/06/14/centos-7-에서-zabbix-server-에러/" class="h1">CentOS 7 에서 zabbix-server&nbsp;에러</a></h1>
     </div>
     <div class="row article">
-      <p>...</p>
+      <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
         <p>2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&nbsp;있는데.</p>
 <p>CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 <tt class="docutils literal">journal</tt> 로 보여지는 것 말고도
@@ -98,16 +100,20 @@ $ sudo systemctl start zabbix-server
 <p>이 글은 <strong>CentOS 7.1.1503</strong> 버전, <strong>Zabbix 2.4.5</strong> 버전에서 확인되었고 테스트되었다. 이후 버전에서는 관련 버그가&nbsp;잡히길.</p>
 
       </div>
-      <p>...</p>
+      <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
     <div class="row article_meta">
       <div>
-        <p><i class="fa fa-calendar-plus-o"></i> 15. 06. 14. |
-        <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/develop.html">Develop</a> |
-        <i class="fa fa-tags">
-            <a href="http://ujuc.github.io/tag/zabbix.html">zabbix</a>
-,             <a href="http://ujuc.github.io/tag/centos.html">centos</a>
-        </i></p>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 15. 06. 14.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="http://ujuc.github.io/tag/zabbix.html">zabbix</a>
+,               <a href="http://ujuc.github.io/tag/centos.html">centos</a>
+          </i>
+        </p>
       </div>
     </div>
 
@@ -125,41 +131,42 @@ $ sudo systemctl start zabbix-server
   </script>
 </div>      </div>
   </div>
-    </article>
-  </div>
+      </article>
+    </div>
 
-  <div class="container">
-  </div>
+    <div class="container">
+    </div>
 
-  <div id="site_title" class="container">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <div class="row">
-        <hr />
-        <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-      </div>
-      <div class="row">
-        <p>Anythink, Everythink!</p>
-      </div>
-      <div class="row">
-          <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-          <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+    <!-- Title -->
+    <div id="site_title" class="container">
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <hr />
+          <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+        </div>
+        <div class="row">
+          <p>Anythink, Everythink!</p>
+        </div>
+        <div class="row">
+            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="site_footer" class="container">
+    <div id="site_footer" class="container">
 <footer>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row">
       <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
     </div>
   </div>
-</footer>  </div>
+</footer>    </div>
 
 <!-- Javascript -->
 <!-- Jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script></body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
 </html>
