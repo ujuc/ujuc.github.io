@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+          <div class="row">
+            <nav class="nav nav-inline">
+                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+            </nav>
+          </div>
+          <div class="row">
+  <meta name="keywords" content="json, api, specification, json api, 기능문서">
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div id="site_article" class="container">
+      <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(1)/" class="h1"><span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0&nbsp;(1)</a></h1>
+    </div>
+    <div class="row article">
+      <p><i class="fa fa-flash"></i></p>
+      <div class="article_text">
+        <p><span class="caps">JSON</span> <span class="caps">API</span> 문서이다. 해당 문서는 <a href="http://jsonapi.org/format/">여기서</a> 확인이 가능하다. 라이센스는<a href="https://creativecommons.org/publicdomain/zero/1.0/">퍼블릭 도메인 라이센스</a>.</p>
+<p>나중에 번역한 것이 도움이 되길&nbsp;바라며&#8230;</p>
+<hr />
+<h1 id="1-status">1. 문서 상태&nbsp;(Status)</h1>
+<p>이 페이지는 <span class="caps">JSON</span> <span class="caps">API</span> 마지막으로 공개된 버전 내용을 담고 있습니다. 현재버전은 1.0 입니뀋¤. <span class="caps">JSON</span> <span class="caps">API</span> 새로운 버전에서는 <strong>이전 문서와 호환을 위해</strong> 삭제하지 않고, 오로지 추가만 됩니다. 추가 사항들은 우리 <a href="http://discuss.jsonapi.org/">discussion forum</a>에서 확인할수 있습니다.
+스펙 문서상 에러를 발견하거나, 구현한다면 이슈를 등록하거나 PR을 <a href="https://github.com/json-api/json-api">GitHub repository</a>로 해주면&nbsp;됩니다.</p>
+<p>This page represents the latest published version of <span class="caps">JSON</span> <span class="caps">API</span>, which is currently version 1.0. New versions of <span class="caps">JSON</span> <span class="caps">API</span> <strong>will always be backwards compatible</strong> using a never remove, only add strategy. Additions can be proposed in our <a href="http://discuss.jsonapi.org/">discussion forum</a>.
+If you catch an error in the specification’s text, or if you write an implementation, please let us know by opening an issue or pull request at our <a href="https://github.com/json-api/json-api">GitHub repository</a>.</p>
+<hr />
+<h1 id="2-introduction">2. 소개&nbsp;(Introduction)</h1>
+<p><span class="caps">JSON</span> API는 클라이언트에서 요구하는 리소스를 제공하거나 수정하는 것에 대해 서버가 어떻게 대응 할 것인지에 대한 사양입니다.
+<span class="caps">JSON</span> API는 클라이언트와 서버사이에서 전송되는 데이터 총량과 요청 수에대해 최소화하도록 설계되었습니다. 가독성, 유연성, 검색 기능을 잃지 않고 효율성을 높일수 있습니다.
+<span class="caps">JSON</span> API는 데이터를 변경하여 <span class="caps">JSON</span> <span class="caps">API</span> 미디어 타입 (application/vnd.api+json) 을 사용하게 하는것이&nbsp;필요합니다.</p>
+<p><span class="caps">JSON</span> <span class="caps">API</span> is a specification for how a client should request that resources be fetched or modified, and how a server should respond to those requests.
+<span class="caps">JSON</span> <span class="caps">API</span> is designed to minimize both the number of requests and the amount of data transmitted between clients and servers. This efficiency is achieved without compromising readability, flexibility, or discoverability.
+<span class="caps">JSON</span> <span class="caps">API</span> requires use of the <span class="caps">JSON</span> <span class="caps">API</span> media type (<a href="http://www.iana.org/assignments/media-types/application/vnd.api+json">application/vnd.api+json</a>) for exchanging&nbsp;data.</p>
+<hr />
+<h1 id="3-conventions">3. 규칙&nbsp;(Conventions)</h1>
+<p>The key words “<span class="caps">MUST</span>”, “<span class="caps">MUST</span> <span class="caps">NOT</span>”, “<span class="caps">REQUIRED</span>”, “<span class="caps">SHALL</span>”, “<span class="caps">SHALL</span> <span class="caps">NOT</span>”, “<span class="caps">SHOULD</span>”, “<span class="caps">SHOULD</span> <span class="caps">NOT</span>”, “<span class="caps">RECOMMENDED</span>”, “<span class="caps">MAY</span>”, and “<span class="caps">OPTIONAL</span>” in this document are to be interpreted as described in <a href="http://tools.ietf.org/html/rfc2119"><span class="caps">RFC</span> 2119</a> (<a href="http://techhtml.github.io/rfc/RFC2119.html"><span class="caps">RFC</span> 2119 한국어 번역</a>).</p>
+      </div>
+      <p><i class="fa fa-hand-spock-o"></i></p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 16. 07. 16.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="http://ujuc.github.io/tag/json.html">json</a>
+,               <a href="http://ujuc.github.io/tag/api.html">api</a>
+,               <a href="http://ujuc.github.io/tag/specification.html">specification</a>
+,               <a href="http://ujuc.github.io/tag/json-api.html">json api</a>
+,               <a href="http://ujuc.github.io/tag/gineungmunseo.html">기능문서</a>
+          </i>
+        </p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2016/07/16/json_api_specification_v1.0_(1)/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+      </article>
+    </div>
+
+    <div class="container">
+    </div>
+
+    <!-- Title -->
+    <div id="site_title" class="container">
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <hr />
+          <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+        </div>
+        <div class="row">
+          <p>Anythink, Everythink!</p>
+        </div>
+        <div class="row">
+            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>    </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+</html>
