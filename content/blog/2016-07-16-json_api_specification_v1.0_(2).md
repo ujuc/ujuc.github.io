@@ -19,7 +19,7 @@ JSON API를 사용하는 서버와 클르이언트에서 처리를 해야되는 
 
 > Clients **MUST** send all JSON API data in request documents with the header `Content-Type: application/vnd.api+json` without any media type parameters.
 
-클라이언트는 `Accept` 해더에 작성된 미디어 타입 매개변수 중 맨마지막 하나**MUST** 를 지정하여 JSON API 미디어 타입을 포함해야 합니다. <**MUST**>
+클라이언트는 `Accept` 해더에 작성된 미디어 타입 매개변수 중 맨마지막 하나를 지정하여 JSON API 미디어 타입을 포함해야 합니다. <**MUST**>
 
 > Clients that include the JSON API media type in their `Accept` header **MUST** specify the media type there at least once without any media type parameters.
 
