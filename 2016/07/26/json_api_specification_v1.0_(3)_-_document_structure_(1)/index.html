@@ -66,43 +66,29 @@
       <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
-      <h1><a href="http://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(2)/" class="h1"><span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0&nbsp;(2)</a></h1>
+      <h1><a href="http://ujuc.github.io/2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/" class="h1"><span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0 (3) - Document Structure&nbsp;(1)</a></h1>
     </div>
     <div class="row article">
       <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
-        <p><span class="caps">JSON</span> API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서&nbsp;이야기한다.</p>
+        <h1 id="5-document-structure">5. 문서 구조 (Document&nbsp;Structure)</h1>
 <hr />
-<h1 id="4-content-negotiation">4. 컨텐츠 처리 (Content&nbsp;Negotiation)</h1>
-<hr />
-<h2 id="client-responsibilities">클라이언트 의무 사항 (Client&nbsp;Responsibilities)</h2>
-<p>클라이언트는 해더에 <code>Content-Type: application/vnd.api+json</code>를 포함하고 다른 미디어 타입 매개변수를 포함하지 않는 요청 문서를 생성하여 모든 <span class="caps">JSON</span> <span class="caps">API</span> 데이터를 보내야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
+<p>이 세션에서는 미디어 타입 <a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"><code>application/vnd.api+json</code></a>에서 확인가능한 <span class="caps">JSON</span> <span class="caps">API</span> 문서 구조에 대해 설명합니다. <span class="caps">JSON</span> <span class="caps">API</span> 문서는 JavaScript Object Notation (<span class="caps">JSON</span>) <a href="http://tools.ietf.org/html/rfc7159"><span class="caps">RFC7159</span></a>에 정의&nbsp;되어있습니다.</p>
 <blockquote>
-<p>Clients <strong><span class="caps">MUST</span></strong> send all <span class="caps">JSON</span> <span class="caps">API</span> data in request documents with the header <code>Content-Type: application/vnd.api+json</code> without any media type&nbsp;parameters.</p>
+<p>This section describes the structure of a <span class="caps">JSON</span> <span class="caps">API</span> document, which is identified by the media type <a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"><code>application/vnd.api+json</code></a>. <span class="caps">JSON</span> <span class="caps">API</span> documents are defined in JavaScript Object Notation (<span class="caps">JSON</span>) <a href="http://tools.ietf.org/html/rfc7159"><span class="caps">RFC7159</span></a>.</p>
 </blockquote>
-<p>클라이언트는 <code>Accept</code> 해더에 작성된 미디어 타입 매개변수 중 맨마지막 하나를 지정하여 <span class="caps">JSON</span> <span class="caps">API</span> 미디어 타입을 포함해야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
+<p>동일한 미디어 타입은 요청과 응답 문서에서 모두 사용되지만, 특정 상황에서는 한 곳에서나 다른 곳에 적용이 가능합니다. 이런 차이를 다음 내용으로&nbsp;부릅니다.</p>
 <blockquote>
-<p>Clients that include the <span class="caps">JSON</span> <span class="caps">API</span> media type in their <code>Accept</code> header <strong><span class="caps">MUST</span></strong> specify the media type there at least once without any media type&nbsp;parameters.</p>
+<p>Although the same media type is used for both request and response documents, certain aspects are only applicable to one or the other. These differences are called out&nbsp;below.</p>
 </blockquote>
-<p>클라이언트는 응답 문서에 대한 <code>Content-Type</code> 해더에서 받은 <code>application/vnd.api+json</code> 미디어 타입에대해 어떠한 매개변수라도 무시합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
+<p>별도로 명시하지 않는한, 사양에 정의된 객체는 임의의 추가 멤버를 포함할 수 없습니다. &lt;<strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong>&gt; 클라이언트와 서버 구현시 이 사양에서 인식되지 않는 멤버는 무시합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
 <blockquote>
-<p>Clients <strong><span class="caps">MUST</span></strong> ignore any parameters for the <code>application/vnd.api+json</code> media type received in the <code>Content-Type</code> header of response&nbsp;documents.</p>
+<p>Unless otherwise noted, objects defined by this specification <strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong> contain any additional members. Client and server implementations <strong><span class="caps">MUST</span></strong> ignore members not recognized by this&nbsp;specification.</p>
 </blockquote>
 <hr />
-<h2 id="server-responsibilities">서버 의무 사항 (Server&nbsp;Responsibilities)</h2>
-<p>서버는 모든 미디어 타입 매개 변수를 지정하지 않고서 해더 <code>Content-Type: application/vnd.api+json</code>​와 함께 응답 문서에 모든 <span class="caps">JSON</span> <span class="caps">API</span> 데이터를 전송합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
 <blockquote>
-<p>Servers <strong><span class="caps">MUST</span></strong> send all <span class="caps">JSON</span> <span class="caps">API</span> data in response documents with the header <code>Content-Type: application/vnd.api+json</code> without any media type&nbsp;parameters.</p>
-</blockquote>
-<p>서버는 요청이 임의의 미디어 타입 매개변수를 가지는 헤더 <code>Content-Type: application/vnd.api+json</code>로 지정하면 <code>415 Unsupported Media Type</code> 상태 코드로 응답합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Servers <strong><span class="caps">MUST</span></strong> respond with a <code>415 Unsupported Media Type</code> status code if a request specifies the header <code>Content-Type: application/vnd.api+json</code> with any media type&nbsp;parameters.</p>
-</blockquote>
-<p>서버는 요청한 <code>Accept</code> 해더에 <span class="caps">JSON</span> <span class="caps">API</span> 미디어 타입을 포함하고 있으며 해당 미디어 타입에대한 모든 인스턴스에서 미디어 타입 매개변수가 수정된 경우, <code>406 Not Acceptable</code> 상태 코드로 응답합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Servers <strong><span class="caps">MUST</span></strong> respond with a <code>406 Not Acceptable</code> status code if a request’s <code>Accept</code> header contains the <span class="caps">JSON</span> <span class="caps">API</span> media type and all instances of that media type are modified with media type&nbsp;parameters.</p>
-<p>Note: 컨텐츠 처리 요구사항은 향후 버전에서 확장된 처리 방법과 버전 관리를 위한 미디어 타입 매개 변수를 사용할 수 있도록&nbsp;존재합니다.</p>
-<p>Note: The content negotiation requirements exist to allow future versions of this specification to use media type parameters for extension negotiation and&nbsp;versioning.</p>
+<p>Note: 이러한 조건은 사양에 이것저것 더하고 변경을 통한 진화를&nbsp;허용합니다.</p>
+<p>Note: These conditions allow this specification to evolve through additive&nbsp;changes.</p>
 </blockquote>
       </div>
       <p><i class="fa fa-hand-spock-o"></i></p>
@@ -110,7 +96,7 @@
     <div class="row article_meta">
       <div>
         <p>
-          <i class="fa fa-calendar-plus-o"></i> 16. 07. 16.
+          <i class="fa fa-calendar-plus-o"></i> 16. 07. 26.
         <i class="fa fa-ellipsis-v"> </i>
           <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/develop.html">Develop</a>
         <i class="fa fa-ellipsis-v"> </i>
@@ -129,7 +115,7 @@
 <div class="row">
   <div id="disqus_thread"></div>
   <script>
-    var disqus_identifier = "2016/07/16/json_api_specification_v1.0_(2)/";
+    var disqus_identifier = "2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/";
     (function() {
       var d = document, s = d.createElement('script');
       s.src = '//ujucgithub.disqus.com/embed.js';

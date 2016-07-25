@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-07-16T14:53:00+09:00</updated><entry><title>JSON API Specification v1.0 (2)</title><link href="http://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(2)/" rel="alternate"></link><published>2016-07-16T14:53:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(2)/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서&amp;nbsp;이야기한다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-07-26T02:06:00+09:00</updated><entry><title>JSON API Specification v1.0 (3) - Document Structure (1)</title><link href="http://ujuc.github.io/2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/" rel="alternate"></link><published>2016-07-26T02:06:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-26:2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/</id><summary type="html">&lt;h1 id="5-document-structure"&gt;5. 문서 구조 (Document&amp;nbsp;Structure)&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;p&gt;이 세션에서는 미디어 타입 &lt;a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"&gt;&lt;code&gt;application/vnd.api+json&lt;/code&gt;&lt;/a&gt;에서 확인가능한 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서 구조에 대해 설명합니다. &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서는 JavaScript Object Notation (&lt;span class="caps"&gt;JSON&lt;/span&gt;) &lt;a href="http://tools.ietf.org/html/rfc7159"&gt;&lt;span class="caps"&gt;RFC7159&lt;/span&gt;&lt;/a&gt;에 정의&amp;nbsp;되어있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This section describes the structure of a &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; document, which is identified by the media type &lt;a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"&gt;&lt;code&gt;application/vnd.api+json&lt;/code&gt;&lt;/a&gt;. &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; documents are defined in JavaScript Object Notation (&lt;span class="caps"&gt;JSON&lt;/span&gt;) &lt;a href="http://tools.ietf.org/html/rfc7159"&gt;&lt;span class="caps"&gt;RFC7159&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;동일한 미디어 타입은 요청과 응답 문서에서 모두 사용되지만, 특정 상황에서는 한 곳에서나 다른 곳에 적용이 가능합니다. 이런 차이를 다음 내용으로&amp;nbsp;부릅니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Although the same media type is used for both request and response documents, certain aspects are only applicable to one or the other. These differences are called out&amp;nbsp;below.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;별도로 명시하지 않는한, 사양에 정의된 객체는 임의의 추가 멤버를 포함할 수 없습니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;&lt;/strong&gt;&amp;gt; 클라이언트와 서버 구현시 이 사양에서 인식되지 않는 멤버는 무시합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Unless otherwise noted, objects defined by this specification &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;&lt;/strong&gt; contain any additional members. Client and server implementations &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; ignore members not recognized by this&amp;nbsp;specification.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: 이러한 조건은 사양에 이것저것 더하고 변경을 통한 진화를&amp;nbsp;허용합니다.&lt;/p&gt;
+&lt;p&gt;Note: These conditions allow this specification to evolve through additive&amp;nbsp;changes.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (2)</title><link href="http://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(2)/" rel="alternate"></link><published>2016-07-16T14:53:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(2)/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서&amp;nbsp;이야기한다.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id="4-content-negotiation"&gt;4. 컨텐츠 처리 (Content&amp;nbsp;Negotiation)&lt;/h1&gt;
 &lt;hr /&gt;
@@ -8,7 +26,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Clients &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; send all &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; data in request documents with the header &lt;code&gt;Content-Type: application/vnd.api+json&lt;/code&gt; without any media type&amp;nbsp;parameters.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;클라이언트는 &lt;code&gt;Accept&lt;/code&gt; 해더에 작성된 미디어 타입 매개변수 중 맨마지막 하나&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; 를 지정하여 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 미디어 타입을 포함해야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;클라이언트는 &lt;code&gt;Accept&lt;/code&gt; 해더에 작성된 미디어 타입 매개변수 중 맨마지막 하나를 지정하여 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 미디어 타입을 포함해야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Clients that include the &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; media type in their &lt;code&gt;Accept&lt;/code&gt; header &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; specify the media type there at least once without any media type&amp;nbsp;parameters.&lt;/p&gt;
 &lt;/blockquote&gt;
