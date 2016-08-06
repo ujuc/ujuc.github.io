@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="http://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="http://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="http://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+          <div class="row">
+            <nav class="nav nav-inline">
+                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+            </nav>
+          </div>
+          <div class="row">
+  <meta name="keywords" content="json, api, specification, json api, 스펙 문서">
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div id="site_article" class="container">
+      <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="http://ujuc.github.io/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/" class="h1"><span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0 (3) - Document Structure&nbsp;(2)</a></h1>
+    </div>
+    <div class="row article">
+      <p><i class="fa fa-flash"></i></p>
+      <div class="article_text">
+        <h2 id="51-top-level">5.1. 최상위 (Top&nbsp;Level)</h2>
+<hr />
+<p><span class="caps">JSON</span> 오브젝트는 데이터를 포함한 <span class="caps">JSON</span> <span class="caps">API</span> 요청과 응답에 대한 근본(root) 입니다. &lt;<strong><span class="caps">MUST</span></strong>&gt; 이 오브젝트를 문서의 “최상위”라&nbsp;정의합니다.</p>
+<blockquote>
+<p>A <span class="caps">JSON</span> object <strong><span class="caps">MUST</span></strong> be at the root of every <span class="caps">JSON</span> <span class="caps">API</span> request and response containing data. This object defines a document’s “top&nbsp;level”.</p>
+</blockquote>
+<p>문서에서는 최소한 다음 최상위 멤버중 하나를 포함해야 합니다 &lt;<strong><span class="caps">MUST</span></strong>&gt;:</p>
+<ul>
+<li><code>data</code>: 문서에서 “일차&nbsp;데이터”</li>
+<li><code>errors</code>: <a href="http://jsonapi.org/format/#errors">error objects</a> 에대한&nbsp;배열</li>
+<li><code>meta</code>: 비표준 메타 정보가 포함되어있는 <a href="http://jsonapi.org/format/#document-meta">meta object</a>.</li>
+</ul>
+<blockquote>
+<p>A document <strong><span class="caps">MUST</span></strong> contain at least one of the following top-level&nbsp;members:</p>
+<ul>
+<li><code>data</code>: the document’s “primary&nbsp;data”</li>
+<li>​<code>errors</code>: an array of <a href="http://jsonapi.org/format/#errors">error&nbsp;objects</a></li>
+<li><code>meta</code>: a <a href="http://jsonapi.org/format/#document-meta">meta object</a> that contains non-standard&nbsp;meta-information.</li>
+</ul>
+</blockquote>
+<p><code>data</code>와 <code>errors</code> 멤버는 동일한 문서에 공존할 수 없습니다. &lt;<strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong>&gt;</p>
+<blockquote>
+<p>The members <code>data</code> and <code>errors</code> <strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong> coexist in the same&nbsp;document.</p>
+</blockquote>
+<p>문서에서는 다음 내용과 같은 최상위 멤버가 포함될 수 있습니다 &lt;<strong><span class="caps">MAY</span></strong>&gt;:</p>
+<ul>
+<li><code>jsonapi</code>: 서버에서 구현을 기술하는&nbsp;오브젝트</li>
+<li><code>links</code>: <a href="http://jsonapi.org/format/#document-links">links object</a>는 일차 데이터와&nbsp;연결됩니다.</li>
+<li><code>included</code>: 포함된 리소스중 각기 다르거나 일차 데이터와 관련된 <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a>에 대한&nbsp;배열.</li>
+</ul>
+<blockquote>
+<p>A document <strong><span class="caps">MAY</span></strong> contain any of these top-level&nbsp;members:</p>
+<ul>
+<li><code>jsonapi</code>: an object describing the server’s&nbsp;implementation</li>
+<li><code>links</code>: a <a href="http://jsonapi.org/format/#document-links">links object</a> related to the primary&nbsp;data.</li>
+<li><code>included</code>: an array of <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a> that are related to the primary data and/or each other (“included&nbsp;resources”).</li>
+</ul>
+</blockquote>
+<p>문서에 최상위 <code>data</code> 키가 포함되지 않은 경우, <code>included</code> 멤버 중 하나에 존재할 수 없습니다. &lt;<strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong>&gt;</p>
+<blockquote>
+<p>If a document does not contain a top-level <code>data</code> key, the <code>included</code> member <strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong> be present&nbsp;either.</p>
+</blockquote>
+<p>최상위 <a href="http://jsonapi.org/format/#document-links">links object</a>는 다음 맴버를 포함할 수 있습니다 &lt;<strong><span class="caps">MAY</span></strong>&gt;:</p>
+<ul>
+<li><code>self</code>: 현재 응답 문서를 생성한 <a href="http://jsonapi.org/format/#document-links">link</a>.</li>
+<li><code>related</code>: 일차 데이터와 리소스간 관계를 나타내는 <a href="http://jsonapi.org/format/#document-resource-object-related-resource-links">related resource link</a>.</li>
+<li>일차 데이터에 대한 <a href="http://jsonapi.org/format/#fetching-pagination">pagination</a>&nbsp;링크.</li>
+</ul>
+<blockquote>
+<p>The top-level <a href="http://jsonapi.org/format/#document-links">links object</a> <strong><span class="caps">MAY</span></strong> contain the following&nbsp;members:</p>
+<ul>
+<li><code>self</code>: the <a href="http://jsonapi.org/format/#document-links">link</a> that generated the current response&nbsp;document.</li>
+<li><code>related</code>: a <a href="http://jsonapi.org/format/#document-resource-object-related-resource-links">related resource link</a> when the primary data represents a resource&nbsp;relationship.</li>
+<li><a href="http://jsonapi.org/format/#fetching-pagination">pagination</a> links for the primary&nbsp;data.</li>
+</ul>
+</blockquote>
+<p>문서에서 “일차 데이터”는 요청에의해 대상이되는 자원의 컬렉션이나 자원 관계를&nbsp;나타냅니다.</p>
+<blockquote>
+<p>The document’s “primary data” is a representation of the resource or collection of resources targeted by a&nbsp;request.</p>
+</blockquote>
+<p>일차 데이터는 다음 중 하나 입니다 &lt;<strong><span class="caps">MUST</span></strong>&gt;:</p>
+<ul>
+<li>단일 자원을 대상으로 요구하는 단일 <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a>, 단일 <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>, <code>null</code>을&nbsp;나타냅니다.</li>
+<li>타겟 리소스 컬렉션 요청에 대한 <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a> 배열, <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier objects</a> 배열, 빈 배열 (<code>[]</code>)를&nbsp;나타냅니다.</li>
+</ul>
+<blockquote>
+<p>Primary data <strong><span class="caps">MUST</span></strong> be&nbsp;either:</p>
+<ul>
+<li>a single <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a>, a single <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>, or <code>null</code>, for requests that target single&nbsp;resources</li>
+<li>an array of <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a>, an array of <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier objects</a>, or an empty array (<code>[]</code>), for requests that target resource&nbsp;collections</li>
+</ul>
+</blockquote>
+<p>예를 들어, 다음 일차 데이터는 단일 리소스 오브젝트를&nbsp;나타냅니다:</p>
+<blockquote>
+<p>For example, the following primary data is a single resource&nbsp;object:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>{
+ &quot;data&quot;: {
+    &quot;type&quot;: &quot;articles&quot;,
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;attributes&quot;: {
+      // ... this article&#39;s attributes
+    },
+    &quot;relationships&quot;: {
+      // ... this article&#39;s relationships
+    }
+  }
+}
+</pre></div>
+
+
+<p>다음 일차 데이터는 동일한 리소스를 참조하는 단일 <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>입니다:</p>
+<blockquote>
+<p>The following primary data is a single <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a> that references the same&nbsp;resource:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>{
+ &quot;data&quot;: {
+    &quot;type&quot;: &quot;articles&quot;,
+    &quot;id&quot;: &quot;1&quot;
+  }
+}
+</pre></div>
+
+
+<p>리소스에 대한 논리 컬렉션은 아이템 하나만 있거나 비어있더라도 배열로 표현합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
+<blockquote>
+<p>A logical collection of resources <strong><span class="caps">MUST</span></strong> be represented as an array, even if it only contains one item or is&nbsp;empty.</p>
+</blockquote>
+      </div>
+      <p><i class="fa fa-hand-spock-o"></i></p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 16. 08. 06.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="http://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="http://ujuc.github.io/tag/json.html">json</a>
+,               <a href="http://ujuc.github.io/tag/api.html">api</a>
+,               <a href="http://ujuc.github.io/tag/specification.html">specification</a>
+,               <a href="http://ujuc.github.io/tag/json-api.html">json api</a>
+,               <a href="http://ujuc.github.io/tag/seupeg-munseo.html">스펙 문서</a>
+          </i>
+        </p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+      </article>
+    </div>
+
+    <div class="container">
+    </div>
+
+    <!-- Title -->
+    <div id="site_title" class="container">
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <hr />
+          <h3><a href="http://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+        </div>
+        <div class="row">
+          <p>Anythink, Everythink!</p>
+        </div>
+        <div class="row">
+            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>    </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+</html>
