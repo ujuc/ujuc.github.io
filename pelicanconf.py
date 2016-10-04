@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'ujuc'
 SITENAME = '잘 밤에 쓸데없는 생각하기...'
 SITESUBTITLE = 'Anythink, Everythink!'
-SITEURL = 'http://ujuc.github.io'
+SITEURL = 'https://ujuc.github.io'
 
 USER_LOGO_URL = 'img/logo.jpg'
 
@@ -59,7 +59,7 @@ THEME = "theme/clean/"
 # Address
 EMAIL_ADDRESS = 'ujuc@ujuc.kr'
 GITHUB_ADDRESS = 'https://github.com/ujuc'
-SO_ADDRESS = 'http://stackoverflow.com/users/978762/sungjin-gang'
+SO_ADDRESS = 'https://stackoverflow.com/users/978762/sungjin-gang'
 TWITTER_ADDRESS = 'https://twitter.com/ujuc'
 
 AUTHORS = {
