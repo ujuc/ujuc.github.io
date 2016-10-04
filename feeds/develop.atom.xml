@@ -1,5 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="http://ujuc.github.io/" rel="alternate"></link><link href="http://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>http://ujuc.github.io/</id><updated>2016-08-06T14:40:00+09:00</updated><entry><title>JSON API Specification v1.0 (3) - Document Structure (2)</title><link href="http://ujuc.github.io/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/" rel="alternate"></link><published>2016-08-06T14:40:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-08-06:2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/</id><summary type="html">&lt;h2 id="51-top-level"&gt;5.1. 최상위 (Top&amp;nbsp;Level)&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2016-09-17T20:55:00+09:00</updated><entry><title>JSON API Specification v1.0 (3) - Document Structure (4)</title><link href="https://ujuc.github.io/2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(4)/" rel="alternate"></link><published>2016-09-17T20:55:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-09-17:2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(4)/</id><summary type="html">&lt;h3 id="identification"&gt;검증&amp;nbsp;(Identification)&lt;/h3&gt;
+&lt;p&gt;모든 &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource object&lt;/a&gt;는 &lt;code&gt;id&lt;/code&gt; 멤버와 &lt;code&gt;type&lt;/code&gt; 멤버는 포함하고 있어야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; &lt;code&gt;id&lt;/code&gt;와 &lt;code&gt;type&lt;/code&gt; 멤버 값은 문자열이어야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Every &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource object&lt;/a&gt; &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; contain an &lt;code&gt;id&lt;/code&gt; member and a &lt;code&gt;type&lt;/code&gt; member. The values of the &lt;code&gt;id&lt;/code&gt; and &lt;code&gt;type&lt;/code&gt; members &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; be&amp;nbsp;strings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;주어진 API에서 각 리소스 오브젝트에서 &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;id&lt;/code&gt; 쌍은 반드시 하나인 고유한 리소스임을 증명해야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; (서버 한 대이거나 단일 작업을 하는 여러 서버에서 제어되는 &lt;span class="caps"&gt;URI&lt;/span&gt; 집합으로 API를&amp;nbsp;구성합니다.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Within a given &lt;span class="caps"&gt;API&lt;/span&gt;, each resource object’s &lt;code&gt;type&lt;/code&gt; and &lt;code&gt;id&lt;/code&gt; pair &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; identify a single, unique resource. (The set of URIs controlled by a server, or multiple servers acting as one, constitute an &lt;span class="caps"&gt;API&lt;/span&gt;.)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;type&lt;/code&gt; 멤버는 공통된 속성과 관계를 공유하는 &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource objects&lt;/a&gt;를 설명하는 데&amp;nbsp;사용됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;type&lt;/code&gt; member is used to describe &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource objects&lt;/a&gt; that share common attributes and&amp;nbsp;relationships.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;type&lt;/code&gt; 멤버 값은 &lt;a href="http://jsonapi.org/format/#document-member-names"&gt;member names&lt;/a&gt;와 같은 제약에 따라야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The values of &lt;code&gt;type&lt;/code&gt; members &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; adhere to the same constraints as &lt;a href="http://jsonapi.org/format/#document-member-names"&gt;member names&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Note: 이 스펙은 inflection 법칙에 얽매이지 않습니다. 또한 &lt;code&gt;type&lt;/code&gt; 값은 복수이거나 단수일 수 있습니다. 그러나 같은 값이 구현된 &lt;span class="caps"&gt;API&lt;/span&gt; 전체에서 일관되게 사용되어야&amp;nbsp;합니다.&lt;/p&gt;
+&lt;p&gt;Note: This spec is agnostic about inflection rules, so the value of &lt;code&gt;type&lt;/code&gt; can be either plural or singular. However, the same value should be used consistently throughout an&amp;nbsp;implementation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h3 id="fields"&gt;필드&amp;nbsp;(Fields)&lt;/h3&gt;
+&lt;p&gt;리소스 오브젝트에서 &lt;a href="http://jsonapi.org/format/#document-resource-object-attributes"&gt;attributes&lt;/a&gt;과 &lt;a href="http://jsonapi.org/format/#document-resource-object-relationships"&gt;relationships&lt;/a&gt;는 “&lt;a href="http://jsonapi.org/format/#document-resource-object-fields"&gt;fields&lt;/a&gt;”로 묶어서&amp;nbsp;부릅니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A resource object’s &lt;a href="http://jsonapi.org/format/#document-resource-object-attributes"&gt;attributes&lt;/a&gt; and its &lt;a href="http://jsonapi.org/format/#document-resource-object-relationships"&gt;relationships&lt;/a&gt; are collectively called its “&lt;a href="http://jsonapi.org/format/#document-resource-object-fields"&gt;fields&lt;/a&gt;”.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource object&lt;/a&gt; 필드는 반드시 각기 다른 공통된 네임스페이스, &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;id&lt;/code&gt;를 공유해야합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; 다른 말로는, 리소스는 동일한 이름으로 속성 값과 관계를 가질 수 없으나 &lt;code&gt;type&lt;/code&gt;이나 &lt;code&gt;id&lt;/code&gt;에대한 속성이나 관계는 동일한 이름을 가질 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fields for a &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource object&lt;/a&gt; &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; share a common namespace with each other and with &lt;code&gt;type&lt;/code&gt; and &lt;code&gt;id&lt;/code&gt;. In other words, a resource can not have an attribute and relationship with the same name, nor can it have an attribute or relationship named &lt;code&gt;type&lt;/code&gt; or &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (3) - Document Structure (3)</title><link href="https://ujuc.github.io/2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(3)/" rel="alternate"></link><published>2016-09-17T20:46:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-09-17:2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(3)/</id><summary type="html">&lt;h2 id="52-resource-objects"&gt;5.2. 리소스 오브젝트 (Resource&amp;nbsp;Objects)&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;“리소스 오브젝트”는 자원을 나타내는 데 사용되는 &lt;span class="caps"&gt;JSON&lt;/span&gt; API에&amp;nbsp;표시됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Resource objects” appear in a &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; document to represent&amp;nbsp;resources.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;리소스 오브젝트는 적어도 다음 최상위 멤버가 포함되어 있어야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&amp;nbsp;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A resource object &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; contain at least the following top-level&amp;nbsp;members:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;예외: 리소스 오브젝트가 클라이언트에서 고안되고, 서버에서 생성된 새로운 리소스를 나타낼 때는 &lt;code&gt;id&lt;/code&gt; 멤버는 필요하지&amp;nbsp;않습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Exception: The &lt;code&gt;id&lt;/code&gt; member is not required when the resource object originates at the client and represents a new resource to be created on the&amp;nbsp;server.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;추가로 리소스 오브젝트는 다음 최상위 멤버 중 하나가 포함될 수도 있습니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MAY&lt;/span&gt;&lt;/strong&gt;&amp;gt;&amp;nbsp;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;attributes&lt;/code&gt;: &lt;a href="http://jsonapi.org/format/#document-resource-object-attributes"&gt;attributes object&lt;/a&gt;는 리소스 데이터 일부를&amp;nbsp;나타냅니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;relationships&lt;/code&gt;: &lt;a href="http://jsonapi.org/format/#document-resource-object-relationships"&gt;relationships object&lt;/a&gt;는 리소스와 다른 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 리소스간 관계를&amp;nbsp;표현합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;links&lt;/code&gt;: &lt;a href="http://jsonapi.org/format/#document-links"&gt;links object&lt;/a&gt;는 리소스와 관련된 링크를&amp;nbsp;포함합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meta&lt;/code&gt;: &lt;a href="http://jsonapi.org/format/#document-meta"&gt;meta object&lt;/a&gt;는 속성과 관계로는 나타낼 수 없는 리소스에 대한 비표준 메타 정보를&amp;nbsp;포함합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In addition, a resource object &lt;strong&gt;&lt;span class="caps"&gt;MAY&lt;/span&gt;&lt;/strong&gt; contain any of these top-level&amp;nbsp;members:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;attributes&lt;/code&gt;: an &lt;a href="http://jsonapi.org/format/#document-resource-object-attributes"&gt;attributes object&lt;/a&gt; representing some of the resource’s&amp;nbsp;data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;relationships&lt;/code&gt;: a &lt;a href="http://jsonapi.org/format/#document-resource-object-relationships"&gt;relationships object&lt;/a&gt; describing relationships between the resource and other &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;resources.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;links&lt;/code&gt;: a &lt;a href="http://jsonapi.org/format/#document-links"&gt;links object&lt;/a&gt; containing links related to the&amp;nbsp;resource.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meta&lt;/code&gt;: a &lt;a href="http://jsonapi.org/format/#document-meta"&gt;meta object&lt;/a&gt; containing non-standard meta-information about a resource that can not be represented as an attribute or&amp;nbsp;relationship.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;여기서 아티클(즉, “articles” 타입)이 문서에 표시될 수 있습니다. 그 방법은 다음과&amp;nbsp;같습니다:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here’s how an article (i.e. a resource of type “articles”) might appear in a&amp;nbsp;document:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// ...
+{
+ &amp;quot;type&amp;quot;: &amp;quot;articles&amp;quot;,
+  &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;,
+  &amp;quot;attributes&amp;quot;: {
+    &amp;quot;title&amp;quot;: &amp;quot;Rails is Omakase&amp;quot;
+  },
+  &amp;quot;relationships&amp;quot;: {
+    &amp;quot;author&amp;quot;: {
+      &amp;quot;links&amp;quot;: {
+        &amp;quot;self&amp;quot;: &amp;quot;/articles/1/relationships/author&amp;quot;,
+        &amp;quot;related&amp;quot;: &amp;quot;/articles/1/author&amp;quot;
+      },
+      &amp;quot;data&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;people&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;9&amp;quot; }
+    }
+  }
+}
+    // ...
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (3) - Document Structure (2)</title><link href="https://ujuc.github.io/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/" rel="alternate"></link><published>2016-08-06T14:40:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-08-06:2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/</id><summary type="html">&lt;h2 id="51-top-level"&gt;5.1. 최상위 (Top&amp;nbsp;Level)&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; 오브젝트는 데이터를 포함한 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 요청과 응답에 대한 근본(root) 입니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; 이 오브젝트를 문서의 “최상위”라&amp;nbsp;정의합니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -106,7 +194,7 @@
 &lt;p&gt;리소스에 대한 논리 컬렉션은 아이템 하나만 있거나 비어있더라도 배열로 표현합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A logical collection of resources &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; be represented as an array, even if it only contains one item or is&amp;nbsp;empty.&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (3) - Document Structure (1)</title><link href="http://ujuc.github.io/2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/" rel="alternate"></link><published>2016-07-26T02:06:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-26:2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/</id><summary type="html">&lt;h1 id="5-document-structure"&gt;5. 문서 구조 (Document&amp;nbsp;Structure)&lt;/h1&gt;
+&lt;/blockquote&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (3) - Document Structure (1)</title><link href="https://ujuc.github.io/2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/" rel="alternate"></link><published>2016-07-26T02:06:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-26:2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/</id><summary type="html">&lt;h1 id="5-document-structure"&gt;5. 문서 구조 (Document&amp;nbsp;Structure)&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;이 세션에서는 미디어 타입 &lt;a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"&gt;&lt;code&gt;application/vnd.api+json&lt;/code&gt;&lt;/a&gt;에서 확인가능한 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서 구조에 대해 설명합니다. &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서는 JavaScript Object Notation (&lt;span class="caps"&gt;JSON&lt;/span&gt;) &lt;a href="http://tools.ietf.org/html/rfc7159"&gt;&lt;span class="caps"&gt;RFC7159&lt;/span&gt;&lt;/a&gt;에 정의&amp;nbsp;되어있습니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -124,7 +212,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Note: 이러한 조건은 사양에 이것저것 더하고 변경을 통한 진화를&amp;nbsp;허용합니다.&lt;/p&gt;
 &lt;p&gt;Note: These conditions allow this specification to evolve through additive&amp;nbsp;changes.&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (2)</title><link href="http://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(2)/" rel="alternate"></link><published>2016-07-16T14:53:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(2)/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서&amp;nbsp;이야기한다.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (2)</title><link href="https://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(2)/" rel="alternate"></link><published>2016-07-16T14:53:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(2)/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서&amp;nbsp;이야기한다.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id="4-content-negotiation"&gt;4. 컨텐츠 처리 (Content&amp;nbsp;Negotiation)&lt;/h1&gt;
 &lt;hr /&gt;
@@ -156,7 +244,7 @@
 &lt;p&gt;Servers &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; respond with a &lt;code&gt;406 Not Acceptable&lt;/code&gt; status code if a request’s &lt;code&gt;Accept&lt;/code&gt; header contains the &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; media type and all instances of that media type are modified with media type&amp;nbsp;parameters.&lt;/p&gt;
 &lt;p&gt;Note: 컨텐츠 처리 요구사항은 향후 버전에서 확장된 처리 방법과 버전 관리를 위한 미디어 타입 매개 변수를 사용할 수 있도록&amp;nbsp;존재합니다.&lt;/p&gt;
 &lt;p&gt;Note: The content negotiation requirements exist to allow future versions of this specification to use media type parameters for extension negotiation and&amp;nbsp;versioning.&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (1)</title><link href="http://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(1)/" rel="alternate"></link><published>2016-07-16T12:08:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(1)/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서이다. 해당 문서는 &lt;a href="http://jsonapi.org/format/"&gt;여기서&lt;/a&gt; 확인이 가능하다. 라이센스는&lt;a href="https://creativecommons.org/publicdomain/zero/1.0/"&gt;퍼블릭 도메인 라이센스&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category></entry><entry><title>JSON API Specification v1.0 (1)</title><link href="https://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(1)/" rel="alternate"></link><published>2016-07-16T12:08:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(1)/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서이다. 해당 문서는 &lt;a href="http://jsonapi.org/format/"&gt;여기서&lt;/a&gt; 확인이 가능하다. 라이센스는&lt;a href="https://creativecommons.org/publicdomain/zero/1.0/"&gt;퍼블릭 도메인 라이센스&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;나중에 번역한 것이 도움이 되길&amp;nbsp;바라며&amp;#8230;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id="1-status"&gt;1. 문서 상태&amp;nbsp;(Status)&lt;/h1&gt;
@@ -184,7 +272,7 @@
 &lt;/blockquote&gt;
 &lt;hr /&gt;
 &lt;h1 id="3-conventions"&gt;3. 규칙&amp;nbsp;(Conventions)&lt;/h1&gt;
-&lt;p&gt;The key words “&lt;span class="caps"&gt;MUST&lt;/span&gt;”, “&lt;span class="caps"&gt;MUST&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;REQUIRED&lt;/span&gt;”, “&lt;span class="caps"&gt;SHALL&lt;/span&gt;”, “&lt;span class="caps"&gt;SHALL&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;SHOULD&lt;/span&gt;”, “&lt;span class="caps"&gt;SHOULD&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;RECOMMENDED&lt;/span&gt;”, “&lt;span class="caps"&gt;MAY&lt;/span&gt;”, and “&lt;span class="caps"&gt;OPTIONAL&lt;/span&gt;” in this document are to be interpreted as described in &lt;a href="http://tools.ietf.org/html/rfc2119"&gt;&lt;span class="caps"&gt;RFC&lt;/span&gt; 2119&lt;/a&gt; (&lt;a href="http://techhtml.github.io/rfc/RFC2119.html"&gt;&lt;span class="caps"&gt;RFC&lt;/span&gt; 2119 한국어 번역&lt;/a&gt;).&lt;/p&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스팩 문서"></category></entry><entry><title>파이썬으로 내가 쓸 셸 만들기</title><link href="http://ujuc.github.io/2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/" rel="alternate"></link><published>2016-07-08T00:29:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-08:2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/</id><summary type="html">&lt;p&gt;매주 python관련 뉴스들이 오는데 이번에는 흥미로운 것이 있어서 이렇게&amp;nbsp;남긴다.&lt;/p&gt;
+&lt;p&gt;The key words “&lt;span class="caps"&gt;MUST&lt;/span&gt;”, “&lt;span class="caps"&gt;MUST&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;REQUIRED&lt;/span&gt;”, “&lt;span class="caps"&gt;SHALL&lt;/span&gt;”, “&lt;span class="caps"&gt;SHALL&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;SHOULD&lt;/span&gt;”, “&lt;span class="caps"&gt;SHOULD&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;RECOMMENDED&lt;/span&gt;”, “&lt;span class="caps"&gt;MAY&lt;/span&gt;”, and “&lt;span class="caps"&gt;OPTIONAL&lt;/span&gt;” in this document are to be interpreted as described in &lt;a href="http://tools.ietf.org/html/rfc2119"&gt;&lt;span class="caps"&gt;RFC&lt;/span&gt; 2119&lt;/a&gt; (&lt;a href="http://techhtml.github.io/rfc/RFC2119.html"&gt;&lt;span class="caps"&gt;RFC&lt;/span&gt; 2119 한국어 번역&lt;/a&gt;).&lt;/p&gt;</summary><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스팩 문서"></category></entry><entry><title>파이썬으로 내가 쓸 셸 만들기</title><link href="https://ujuc.github.io/2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/" rel="alternate"></link><published>2016-07-08T00:29:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-07-08:2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/</id><summary type="html">&lt;p&gt;매주 python관련 뉴스들이 오는데 이번에는 흥미로운 것이 있어서 이렇게&amp;nbsp;남긴다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://hackercollider.com/articles/2016/07/05/create-your-own-shell-in-python-part-1/"&gt;Create Your Own Shell in Python: Part&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://hackercollider.com/articles/2016/07/06/create-your-own-shell-in-python-part-2/"&gt;Create Your Own Shell in Python: Part&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
@@ -193,7 +281,7 @@
 &lt;p&gt;&lt;code&gt;yosh&lt;/code&gt; 프로젝트로 간단히 Python을 이용해서 셸을 구성할 수 있도록 도와준다. 그리고 이것을 이용해서 조금이나마 편하게 사용할 수 있음을 이야기해주고도 있다.
 다른 것보다는 손쉽게 내가 원하는 셸을 만들어서 사용할 수 있다는 점과 내가 2014년에 PyconKR에서 봤던 것들로 구성만 하고 있엇던 &lt;a href="https://docs.python.org/3.5/library/cmd.html"&gt;&lt;code&gt;cmd&lt;/code&gt;&lt;/a&gt; 라이브러리가 아닌 &lt;a href="https://docs.python.org/3.5/library/shlex.html"&gt;&lt;code&gt;shlex&lt;/code&gt;&lt;/a&gt; 라이브러리를 사용해서 셸에서 입력하는 것과 유사하게 만들어주는 것으로&amp;nbsp;보인다.&lt;/p&gt;
 &lt;p&gt;첫번째로 부럽다. 생각만했지 실행으로 옮기지는 못했다. 내가 사용하는 셸 프로그램들을 묶어서 내가 원하는 생각대로 실행할 수 있도록 하는 것. 쉽지 않다고 생각만 했지. 언젠가 하려고만 했지. 이렇게까지 만들 수 있으리라 생각하지&amp;nbsp;못했다.&lt;/p&gt;
-&lt;p&gt;한번 도전해봐야겠다. 처음 생각했던 &lt;a href="https://docs.python.org/3.5/library/cmd.html"&gt;&lt;code&gt;cmd&lt;/code&gt;&lt;/a&gt; 라이브러리로 기본 라이브러리 구성을 남겨두고, 작업을 진행할 수&amp;nbsp;있도록.&lt;/p&gt;</summary><category term="python"></category><category term="shell"></category><category term="yosh"></category><category term="Your Own SHell"></category></entry><entry><title>Vim ColorColumn Settings</title><link href="http://ujuc.github.io/2016/04/26/vim-colorcolumn-settings/" rel="alternate"></link><published>2016-04-26T22:04:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-26:2016/04/26/vim-colorcolumn-settings/</id><summary type="html">&lt;p&gt;나같은 경우엔, &lt;code&gt;git commit&lt;/code&gt; 명령어를 실행하면 기본 에디터로 &lt;code&gt;vim&lt;/code&gt;으로 구성해뒀다.
+&lt;p&gt;한번 도전해봐야겠다. 처음 생각했던 &lt;a href="https://docs.python.org/3.5/library/cmd.html"&gt;&lt;code&gt;cmd&lt;/code&gt;&lt;/a&gt; 라이브러리로 기본 라이브러리 구성을 남겨두고, 작업을 진행할 수&amp;nbsp;있도록.&lt;/p&gt;</summary><category term="python"></category><category term="shell"></category><category term="yosh"></category><category term="Your Own SHell"></category></entry><entry><title>Vim ColorColumn Settings</title><link href="https://ujuc.github.io/2016/04/26/vim-colorcolumn-settings/" rel="alternate"></link><published>2016-04-26T22:04:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-26:2016/04/26/vim-colorcolumn-settings/</id><summary type="html">&lt;p&gt;나같은 경우엔, &lt;code&gt;git commit&lt;/code&gt; 명령어를 실행하면 기본 에디터로 &lt;code&gt;vim&lt;/code&gt;으로 구성해뒀다.
 그러다보니 가끔 길이를 확인해서 커밋을 해야되는 경우가&amp;nbsp;발생하는데&amp;#8230;&lt;/p&gt;
 &lt;p&gt;그나마 기본적으로 설정해놓은 80줄은 쉽게 찾으나&amp;#8230; 커밋 제목인 50자, 커밋 메시지
 제한인 72자를 확인하는게 쉽지가 않아서 줄을 그어놓고 사용하기위해 설정을&amp;nbsp;한다.&lt;/p&gt;
@@ -203,10 +291,10 @@ highlight ColorColumn ctermbg=17 guibg=navyblue
 
 
 &lt;p&gt;위와 같이 설정하면 아래와 같이 줄이 그어져있는 모습을 볼 수&amp;nbsp;있다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="vim_ex" src="http://ujuc.github.io/img/2016-04-26_vim.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="vim_ex" src="https://ujuc.github.io/img/2016-04-26_vim.png" /&gt;&lt;/p&gt;
 &lt;p&gt;이건&amp;nbsp;덤&amp;#8230;&lt;/p&gt;
 &lt;p&gt;vim에서 사용하는 색이름과 설정값에 대해서 확인할 수&amp;nbsp;있다.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim"&gt;Xterm256 color names for console&amp;nbsp;Vim&lt;/a&gt;&lt;/p&gt;</summary><category term="vim"></category><category term="vimrc"></category><category term="colorcolumn"></category><category term="cc"></category></entry><entry><title>pysftp 간략 사용기</title><link href="http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><published>2016-02-29T21:55:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim"&gt;Xterm256 color names for console&amp;nbsp;Vim&lt;/a&gt;&lt;/p&gt;</summary><category term="vim"></category><category term="vimrc"></category><category term="colorcolumn"></category><category term="cc"></category></entry><entry><title>pysftp 간략 사용기</title><link href="https://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/" rel="alternate"></link><published>2016-02-29T21:55:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</id><summary type="html">&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;우선 이 패키지는 14년 5월 이후로 &lt;a href="https://pypi.python.org/pypi/pysftp"&gt;pypi 프로젝트&lt;/a&gt;에서는 업로드가 되고 있지 않으며, &lt;a href="https://bitbucket.org/dundeemt/pysftp"&gt;Project repo&lt;/a&gt;의 업로드는 이루워지고 있으며, 3.4까지 테스팅을 해봣단다. 파일만 올리기위해서 사용했던 라이브러리라 간단히 sftp를 이용하여 파일을 올리고 받기를 원한다면 괜찮을&amp;nbsp;듯.&lt;/p&gt;
 &lt;h2 id="package"&gt;Package&lt;/h2&gt;
 &lt;ol&gt;
@@ -233,7 +321,7 @@ highlight ColorColumn ctermbg=17 guibg=navyblue
 
 
 &lt;p&gt;이정도 주석 달다가 지웠다. 그것이 없어도 sftp를 사용하고 있다면 간단히 상요할 정도로 sftp 명령어에서 사용하는 내용들을&amp;nbsp;추가해놓았다.&lt;/p&gt;
-&lt;p&gt;아직 pypi 측으로 버전업된 것이 반영되지 않아 새버전을 사용하고 싶으면 레포로 가서 작업을 진행하는 것을&amp;nbsp;추천한다.&lt;/p&gt;</summary><category term="python"></category><category term="sftp"></category><category term="lib"></category></entry><entry><title>git-vendor</title><link href="http://ujuc.github.io/2016/02/20/git-vender/" rel="alternate"></link><published>2016-02-20T21:02:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-20:2016/02/20/git-vender/</id><summary type="html">&lt;p&gt;brew 업그레이드하다가 &lt;code&gt;git-vender&lt;/code&gt;라는 확장 프로그램이 보였다. 이건 뭐하는 넘인지 궁금해서&amp;nbsp;정리한다.&lt;/p&gt;
+&lt;p&gt;아직 pypi 측으로 버전업된 것이 반영되지 않아 새버전을 사용하고 싶으면 레포로 가서 작업을 진행하는 것을&amp;nbsp;추천한다.&lt;/p&gt;</summary><category term="python"></category><category term="sftp"></category><category term="lib"></category></entry><entry><title>git-vendor</title><link href="https://ujuc.github.io/2016/02/20/git-vender/" rel="alternate"></link><published>2016-02-20T21:02:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-20:2016/02/20/git-vender/</id><summary type="html">&lt;p&gt;brew 업그레이드하다가 &lt;code&gt;git-vender&lt;/code&gt;라는 확장 프로그램이 보였다. 이건 뭐하는 넘인지 궁금해서&amp;nbsp;정리한다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git-vender&lt;/code&gt;는 git 명령어를 이용하여 vendor 소스를 관리할 수 있도록 도와주는 확장이다. &lt;code&gt;git-subtree&lt;/code&gt;를 이용해서 소스를 체크 아웃하고 업데이트된 내용들을 관리할 수 있도록&amp;nbsp;해준다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git-vendor&lt;/code&gt;는 golang에서 vendor 종속성을 관리하는 패턴에 따라서 작업을 진행한다고&amp;nbsp;한다.&lt;/p&gt;
 &lt;ul&gt;
@@ -302,9 +390,9 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/brettlangdon/git-vendor"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://brettlangdon.github.io/git-vendor/"&gt;Manpage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="git"></category><category term="git-vendor"></category><category term="git-subtree"></category><category term="dependencies"></category></entry><entry><title>Tig Manual</title><link href="http://ujuc.github.io/2016/02/10/tig-manual/" rel="alternate"></link><published>2016-02-10T02:08:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-10:2016/02/10/tig-manual/</id><summary type="html">&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="git"></category><category term="git-vendor"></category><category term="git-subtree"></category><category term="dependencies"></category></entry><entry><title>Tig Manual</title><link href="https://ujuc.github.io/2016/02/10/tig-manual/" rel="alternate"></link><published>2016-02-10T02:08:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-10:2016/02/10/tig-manual/</id><summary type="html">&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/jonas/tig"&gt;Tig&amp;nbsp;Homepage&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tig snap" src="http://ujuc.github.io/img/2016-02-10_tig_snap.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tig snap" src="https://ujuc.github.io/img/2016-02-10_tig_snap.png" /&gt;&lt;/p&gt;
 &lt;p&gt;실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&amp;#8230; 그리고 한국어로 곧장 옮기니 이상한 부분이&amp;nbsp;있어&amp;#8230;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;a href="http://jonas.nitro.dk/tig/manual.html"&gt;The Tig&amp;nbsp;Manual&lt;/a&gt;&lt;/p&gt;
@@ -366,11 +454,11 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git-show&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="git-show" src="http://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="git-show" src="https://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git-show | tig&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="git-show|tig" src="http://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="git-show|tig" src="https://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
 &lt;h3 id="git-command-options-git"&gt;Git Command Options (Git 명령어&amp;nbsp;옵션)&lt;/h3&gt;
 &lt;p&gt;명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할&amp;nbsp;것입니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -589,55 +677,55 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;m&lt;/code&gt; | 메인 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig main view" src="http://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig main view" src="https://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;d&lt;/code&gt; | diff 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig diff view" src="http://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig diff view" src="https://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;l&lt;/code&gt; | 로그 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig log view" src="http://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig log view" src="https://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;p&lt;/code&gt; | pager 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig parger view" src="http://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig parger view" src="https://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;t&lt;/code&gt; | 디렉토리 트리 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig tree view" src="http://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig tree view" src="https://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;f&lt;/code&gt; | 파일 blob 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig file blob view" src="http://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig file blob view" src="https://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;g&lt;/code&gt; | grep 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig grep view" src="http://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig grep view" src="https://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;b&lt;/code&gt; | blame 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig blame view" src="http://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig blame view" src="https://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;r&lt;/code&gt; | refs 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig refs view" src="http://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig refs view" src="https://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;y&lt;/code&gt; | stash 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig stash view" src="http://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig stash view" src="https://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;h&lt;/code&gt; | 도움말 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig help view" src="http://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig help view" src="https://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;s&lt;/code&gt; | status 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig status view" src="http://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig status view" src="https://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;c&lt;/code&gt; | stage 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig stage view" src="http://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig stage view" src="https://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/p&gt;
 &lt;h3 id="view-manipulation"&gt;View Manipulation (뷰&amp;nbsp;조작)&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1041,14 +1129,14 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://jonas.nitro.dk/tig/tig.1.html"&gt;tig(1)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://jonas.nitro.dk/tig/tigrc.5.html"&gt;tigrc(5)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="tig"></category></entry><entry><title>`_vim_files: function definition files net found` on zsh</title><link href="http://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/" rel="alternate"></link><published>2016-01-16T22:53:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-16:2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</id><summary type="html">&lt;p&gt;아&amp;#8230; 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게&amp;nbsp;해야되지.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="error!" src="http://ujuc.github.io/img/2016-01-16_error.png" /&gt;&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="tig"></category></entry><entry><title>`_vim_files: function definition files net found` on zsh</title><link href="https://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/" rel="alternate"></link><published>2016-01-16T22:53:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-16:2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</id><summary type="html">&lt;p&gt;아&amp;#8230; 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게&amp;nbsp;해야되지.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="error!" src="https://ujuc.github.io/img/2016-01-16_error.png" /&gt;&lt;/p&gt;
 &lt;h3 id="_1"&gt;원인&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;zcompdump&lt;/code&gt; 때문이라고 하고, 이건 매번 문제가&amp;nbsp;있나보다.ㅡ.ㅡ;;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/robbyrussell/oh-my-zsh/issues/518"&gt;github/robbyrusell/oh-my-zsh/issues/518&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="_2"&gt;해결방법&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;rm ~/.zcompdump&lt;/code&gt;를 삭제하면 된다고&amp;#8230;
-그리고 꼭 하고 난뒤에 &lt;code&gt;exec zsh&lt;/code&gt;를 하도록&amp;nbsp;하자.&lt;/p&gt;</summary><category term="dev"></category><category term="zsh"></category><category term="vim"></category></entry><entry><title>Git flow, GitHub flow, GitLab flow</title><link href="http://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/" rel="alternate"></link><published>2015-12-16T08:50:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-12-16:2015/12/16/git-flow-github-flow-gitlab-flow/</id><summary type="html">&lt;p&gt;회사에서  &lt;code&gt;git&lt;/code&gt;을 가지고서 버전관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. 
+그리고 꼭 하고 난뒤에 &lt;code&gt;exec zsh&lt;/code&gt;를 하도록&amp;nbsp;하자.&lt;/p&gt;</summary><category term="dev"></category><category term="zsh"></category><category term="vim"></category></entry><entry><title>Git flow, GitHub flow, GitLab flow</title><link href="https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/" rel="alternate"></link><published>2015-12-16T08:50:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-12-16:2015/12/16/git-flow-github-flow-gitlab-flow/</id><summary type="html">&lt;p&gt;회사에서  &lt;code&gt;git&lt;/code&gt;을 가지고서 버전관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. 
 물론 새로운 프로젝트를 진행하면서 어떤 방법으로 진행하는 것이 맞는 것인지도 필요하기도 했고, 그러다가 &lt;a href=""&gt;이상한 모임 Slack&lt;/a&gt;에서 관련 이야기가 나오면서 커밋을 하기위한 방법론 중 하나인 &lt;code&gt;git-flow&lt;/code&gt;의 종류가 3가지나 된다는 것을 보고 이놈들의 다른 점이 무엇인지 어떤 방법에서 편한 것인지에 대한 내용을 확인하고&amp;nbsp;싶어졌다.&lt;/p&gt;
 &lt;h2 id="git-flow"&gt;&lt;a href="https://github.com/nvie/gitflow"&gt;Git&amp;nbsp;Flow&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -1190,7 +1278,7 @@ forge@v0.1.7:
 &lt;li&gt;&lt;a href="https://www.nczonline.net/blog/2013/05/21/github-workflows-inside-of-a-company/"&gt;GitHub workflows inside of a&amp;nbsp;company&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://qiita.com/tkhm/items/cc7855d32d640687b43c"&gt;Git利用時のフローはどれを使うか&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The&amp;nbsp;gitworkflows(7)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="git"></category><category term="workflow"></category><category term="github"></category><category term="gitlab"></category></entry><entry><title>git-town 사용해보자</title><link href="http://ujuc.github.io/2015/10/26/git-town-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/" rel="alternate"></link><published>2015-10-26T01:11:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-10-26:2015/10/26/git-town-사용해보자/</id><summary type="html">&lt;p&gt;아무런 생각없이 메일 온것을 확인중&amp;#8230; 발견한 &lt;a class="reference external" href="https://github.com/Originate/git-town"&gt;git-town&lt;/a&gt;&amp;#8230;&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="git"></category><category term="workflow"></category><category term="github"></category><category term="gitlab"></category></entry><entry><title>git-town 사용해보자</title><link href="https://ujuc.github.io/2015/10/26/git-town-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/" rel="alternate"></link><published>2015-10-26T01:11:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-10-26:2015/10/26/git-town-사용해보자/</id><summary type="html">&lt;p&gt;아무런 생각없이 메일 온것을 확인중&amp;#8230; 발견한 &lt;a class="reference external" href="https://github.com/Originate/git-town"&gt;git-town&lt;/a&gt;&amp;#8230;&lt;/p&gt;
 &lt;p&gt;솔직히 &lt;a class="reference external" href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&lt;/a&gt; 와 다른게 먼가 있을 것같아서 사용을 해볼려고 깔아뒀고,
 지금 작성하는 글도 브런치를 &lt;tt class="docutils literal"&gt;git town&lt;/tt&gt; 명령어중 하나를 사용해서 브런치를
 딴 후&amp;nbsp;작성중이다.&lt;/p&gt;
@@ -1220,7 +1308,7 @@ forge@v0.1.7:
 폴더로 확인하는 편이 좋다. BDD로 테스트를 진행해서 해당 기능들이 어떻게 진행하고
 있는지를 그나마 보기 쉽게 되어있기&amp;nbsp;때문이다.&lt;/p&gt;
 &lt;p&gt;솔직히 내부 기능들이 Bash로 작성되어있어서 찾아다니기&amp;nbsp;힘들다&amp;#8230;&lt;/p&gt;
-</summary><category term="git"></category><category term="git-town"></category><category term="git plugins"></category></entry><entry><title>Vim mouse mode</title><link href="http://ujuc.github.io/2015/07/25/vim-mouse-mode/" rel="alternate"></link><published>2015-08-15T16:00:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-07-25:2015/07/25/vim-mouse-mode/</id><summary type="html">&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
+</summary><category term="git"></category><category term="git-town"></category><category term="git plugins"></category></entry><entry><title>Vim mouse mode</title><link href="https://ujuc.github.io/2015/07/25/vim-mouse-mode/" rel="alternate"></link><published>2015-08-15T16:00:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-07-25:2015/07/25/vim-mouse-mode/</id><summary type="html">&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
 &lt;p&gt;그런데 얼마전부터 &lt;a class="reference external" href="http://neovim.io"&gt;NeoVim&lt;/a&gt; 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지&amp;#8230; 안그러면 또 안찾아볼 가능성이&amp;nbsp;높으니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;마우스와 관련된 옵션은 &lt;tt class="docutils literal"&gt;mouse&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousefocus&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;moushide&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousemodel&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mouseshape&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousetime&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
@@ -1454,7 +1542,7 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;p&gt;&lt;span class="caps"&gt;GUI&lt;/span&gt;, &lt;span class="caps"&gt;MS&lt;/span&gt;-&lt;span class="caps"&gt;DOS&lt;/span&gt;, Win32, Unix의 &lt;tt class="docutils literal"&gt;xterm&lt;/tt&gt; 에서만 사용 가능. 다중 클릭으로 인식할 수 있는 두 번째 클릭에 대한 msec의 최대 값을&amp;nbsp;정의함.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="vim"></category><category term="vi"></category><category term="vimrc"></category><category term="mouse"></category><category term="기본 설정"></category></entry><entry><title>OpenStack 새로운 버전 매기기 변경</title><link href="http://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/" rel="alternate"></link><published>2015-06-28T22:24:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</id><summary type="html">&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
+</summary><category term="vim"></category><category term="vi"></category><category term="vimrc"></category><category term="mouse"></category><category term="기본 설정"></category></entry><entry><title>OpenStack 새로운 버전 매기기 변경</title><link href="https://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/" rel="alternate"></link><published>2015-06-28T22:24:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</id><summary type="html">&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
 톤 이메일 &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[1]&lt;/a&gt; 에서 보면 알 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;그리고 이것에 대한 자세한 내용은 &lt;a class="reference external" href="http://ttx.re/new-versioning.html"&gt;New OpenStack Component Versioning&lt;/a&gt; 에서 확인&amp;nbsp;하면된다.&lt;/p&gt;
 &lt;p&gt;언제부터인가 OpenStack 버전은 &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;YEAR&lt;/span&gt;.N&lt;/tt&gt; 으로 버전을 진행하고 있었고,  Kilo의 경우도
@@ -1483,7 +1571,7 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html"&gt;http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</summary><category term="openstack"></category><category term="versioning"></category></entry><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="http://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><published>2015-06-14T22:30:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
+</summary><category term="openstack"></category><category term="versioning"></category></entry><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="https://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><published>2015-06-14T22:30:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
 &lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;tt class="docutils literal"&gt;journal&lt;/tt&gt; 로 보여지는 것 말고도
 &lt;tt class="docutils literal"&gt;/var/log/zabbix&lt;/tt&gt; 가 보여서&amp;nbsp;확인했더니..&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;
@@ -1510,7 +1598,7 @@ $ sudo systemctl start zabbix-server
 &lt;/pre&gt;
 &lt;p&gt;작동되는 것을 확인할 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;이 글은 &lt;strong&gt;CentOS 7.1.1503&lt;/strong&gt; 버전, &lt;strong&gt;Zabbix 2.4.5&lt;/strong&gt; 버전에서 확인되었고 테스트되었다. 이후 버전에서는 관련 버그가&amp;nbsp;잡히길.&lt;/p&gt;
-</summary><category term="zabbix"></category><category term="centos"></category></entry><entry><title>Rocket.Chat 번역기</title><link href="http://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/" rel="alternate"></link><published>2015-06-02T22:45:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</id><summary type="html">&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
+</summary><category term="zabbix"></category><category term="centos"></category></entry><entry><title>Rocket.Chat 번역기</title><link href="https://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/" rel="alternate"></link><published>2015-06-02T22:45:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</id><summary type="html">&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
 일링에 추가된 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat"&gt;Rocket.Chat&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;심심해서 코드 보던 중 발견한 &lt;tt class="docutils literal"&gt;i18n&lt;/tt&gt;. 클클클 번역이나 해야지 짧을 꺼야&amp;#8230; 그런 심보
 로 시작. 10분 만에 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt;&amp;nbsp;등록.&lt;/p&gt;
@@ -1523,7 +1611,7 @@ PR해줄 수 있느냐기에 신속하게 &lt;a class="reference external" href=
 을 보았고, PR을 뒤져보니 PR을 보내면 웬만해서는 받아주는 듯하여 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 부터 날리
 고 어떻게 할지 기다린 게 잘 된듯하다.
 뭐 이렇게 녹색 상자 한 칸 더 체우 는기지&amp;#8230;&amp;nbsp;ㅋㅋㅋㅋㅋ&lt;/p&gt;
-</summary><category term="자랑질"></category><category term="chat"></category><category term="rocketchat"></category><category term="번역"></category><category term="javascript"></category><category term="meteo"></category></entry><entry><title>Edison pip install error</title><link href="http://ujuc.github.io/2015/05/14/edison-pip-install-error/" rel="alternate"></link><published>2015-05-14T01:39:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-05-14:2015/05/14/edison-pip-install-error/</id><summary type="html">&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
+</summary><category term="자랑질"></category><category term="chat"></category><category term="rocketchat"></category><category term="번역"></category><category term="javascript"></category><category term="meteo"></category></entry><entry><title>Edison pip install error</title><link href="https://ujuc.github.io/2015/05/14/edison-pip-install-error/" rel="alternate"></link><published>2015-05-14T01:39:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-05-14:2015/05/14/edison-pip-install-error/</id><summary type="html">&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
 &lt;span class="c1"&gt;# pip install flask
 &lt;/span&gt;Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call las&lt;span class="o"&gt;)&lt;/span&gt;:
@@ -1548,7 +1636,7 @@ ImportError:No module named pkg_resources
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</summary><category term="edison"></category><category term="pypi"></category><category term="pip"></category><category term="python"></category><category term="error"></category></entry><entry><title>Edison 초기 설정</title><link href="http://ujuc.github.io/2015/05/13/edison-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95/" rel="alternate"></link><published>2015-05-13T22:46:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-05-13:2015/05/13/edison-초기-설정/</id><summary type="html">&lt;div class="section" id="yocta-project-update"&gt;
+</summary><category term="edison"></category><category term="pypi"></category><category term="pip"></category><category term="python"></category><category term="error"></category></entry><entry><title>Edison 초기 설정</title><link href="https://ujuc.github.io/2015/05/13/edison-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95/" rel="alternate"></link><published>2015-05-13T22:46:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-05-13:2015/05/13/edison-초기-설정/</id><summary type="html">&lt;div class="section" id="yocta-project-update"&gt;
 &lt;h2&gt;Yocta Project&amp;nbsp;Update&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;무엇이든 처음 설정할때는 기본 OS먼저 업데이트를 해줘야된다. 최신 Yocta Project
@@ -1647,7 +1735,7 @@ src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="edison"></category><category term="개발"></category><category term="embedded"></category><category term="임베디드"></category><category term="intel"></category><category term="iot"></category></entry><entry><title>Status bar &amp; Title bar 숨기기</title><link href="http://ujuc.github.io/2015/04/23/status-bar-&amp;-title-bar-%EC%88%A8%EA%B8%B0%EA%B8%B0/" rel="alternate"></link><published>2015-04-23T01:25:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-23:2015/04/23/status-bar-&amp;-title-bar-숨기기/</id><summary type="html">&lt;p&gt;요즘 안드로이중이다. 오랜만에 했더니 봐야될께 많다. 특히 UI를 많이 안해서
+</summary><category term="edison"></category><category term="개발"></category><category term="embedded"></category><category term="임베디드"></category><category term="intel"></category><category term="iot"></category></entry><entry><title>Status bar &amp; Title bar 숨기기</title><link href="https://ujuc.github.io/2015/04/23/status-bar-&amp;-title-bar-%EC%88%A8%EA%B8%B0%EA%B8%B0/" rel="alternate"></link><published>2015-04-23T01:25:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-23:2015/04/23/status-bar-&amp;-title-bar-숨기기/</id><summary type="html">&lt;p&gt;요즘 안드로이중이다. 오랜만에 했더니 봐야될께 많다. 특히 UI를 많이 안해서
 그런가.. 감이 잘 안온다는&amp;nbsp;문제도&amp;#8230;&lt;/p&gt;
 &lt;p&gt;SplashActivity를 추가해줘야되는데. 안드로이드에서 뭘 알아야지.. 그냥 예제에 있는
 것들을 찾아서 변경해 추가를 했지만, 정리를 한번 해놔야되서&amp;#8230; 뭐 간단하게 구성은
@@ -1687,7 +1775,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>sys.json</title><link href="http://ujuc.github.io/2015/03/10/sys-json/" rel="alternate"></link><published>2015-04-02T22:30:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-10:2015/03/10/sys-json/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/EricR/sys.json"&gt;EricR/sys.json&lt;/a&gt;&lt;/p&gt;
+</summary><category term="android"></category><category term="기본"></category><category term="난 모르겠다."></category></entry><entry><title>sys.json</title><link href="https://ujuc.github.io/2015/03/10/sys-json/" rel="alternate"></link><published>2015-04-02T22:30:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-10:2015/03/10/sys-json/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/EricR/sys.json"&gt;EricR/sys.json&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;좀 독특하다고&amp;nbsp;해야되나?&lt;/p&gt;
 &lt;p&gt;Golang을 이용해서 웹을 간단히 띄우고, &lt;tt class="docutils literal"&gt;proc&lt;/tt&gt; 를 이용해서 내용들을 불러와 &lt;span class="caps"&gt;JSON&lt;/span&gt;
 형태로 뽑아주도록&amp;nbsp;되어있다.&lt;/p&gt;
@@ -1698,7 +1786,7 @@ ture)]&lt;/span&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/nicolargo/glances"&gt;nicolargo/glances&lt;/a&gt; - Python으로 구성되어있으며, 서버 형식으로 API들을 뽑아 올
 수 있다. 물론 간단한 웹으로도&amp;nbsp;가능하다.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="go"></category><category term="json"></category><category term="api"></category></entry><entry><title>OpenStack rootwrap</title><link href="http://ujuc.github.io/2015/03/04/openstack-rootwrap/" rel="alternate"></link><published>2015-04-02T21:18:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-04:2015/03/04/openstack-rootwrap/</id><summary type="html">&lt;p&gt;OpenStack 프로젝트들에서 사용되는 것들 중&amp;#8230; &lt;strong&gt;root&lt;/strong&gt; 와 관련된 작업을
+</summary><category term="go"></category><category term="json"></category><category term="api"></category></entry><entry><title>OpenStack rootwrap</title><link href="https://ujuc.github.io/2015/03/04/openstack-rootwrap/" rel="alternate"></link><published>2015-04-02T21:18:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-04:2015/03/04/openstack-rootwrap/</id><summary type="html">&lt;p&gt;OpenStack 프로젝트들에서 사용되는 것들 중&amp;#8230; &lt;strong&gt;root&lt;/strong&gt; 와 관련된 작업을
 진행해야하는 경우가 있다. 그럴때 사용하려고 만들어둔 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap"&gt;rootwrap&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Wiki에서는 이 &lt;a class="reference external" href="https://fnords.wordpress.com/2011/11/23/improving-nova-privilege-escalation-model-part-1/"&gt;블로그&lt;/a&gt; 에 작성된 문제를 해결하기 위해서 만들어졌다고&amp;nbsp;한다.&lt;/p&gt;
 &lt;p&gt;짧은 내기억으로는 간단한 팡리로만 존재했던 것같은데. (아닐 가능성 100%라논
@@ -1767,7 +1855,7 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 보면 된다. - &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes"&gt;Available Filter Classes&lt;/a&gt; 가 아닌걸로도 볼 수&amp;nbsp;있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</summary><category term="openstack"></category><category term="oslo"></category></entry><entry><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link href="http://ujuc.github.io/2015/03/03/vim-to-ide/" rel="alternate"></link><published>2015-04-01T23:52:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</id><summary type="html">&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
+</summary><category term="openstack"></category><category term="oslo"></category></entry><entry><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link href="https://ujuc.github.io/2015/03/03/vim-to-ide/" rel="alternate"></link><published>2015-04-01T23:52:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</id><summary type="html">&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
 vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/jez/vim-as-an-ide"&gt;jez/vim-as-an-ide&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;뭐 특별한 것은 없어 보이지만, Vim을 설정하는 것들에대해 커밋을 통해서 작성해
@@ -1786,7 +1874,7 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 설치해서 사용은 하고 있지만&amp;#8230; 그렇게 많은 기능들을 다 사용하지 않는 이상&amp;#8230;
 조금씩 덜어내는 것도 필요할&amp;nbsp;듯.&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="vim"></category><category term="vimrc"></category><category term="ide"></category></entry><entry><title>timesheet.js??</title><link href="http://ujuc.github.io/2015/03/02/timesheet-js/" rel="alternate"></link><published>2015-04-01T22:21:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-02:2015/03/02/timesheet-js/</id><summary type="html">&lt;p&gt;놀다 보니 이것저것 보는 것들도 많다. 그런것들이라도 간단히&amp;nbsp;적어둬야지&amp;#8230;&lt;/p&gt;
+</summary><category term="vim"></category><category term="vimrc"></category><category term="ide"></category></entry><entry><title>timesheet.js??</title><link href="https://ujuc.github.io/2015/03/02/timesheet-js/" rel="alternate"></link><published>2015-04-01T22:21:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-02:2015/03/02/timesheet-js/</id><summary type="html">&lt;p&gt;놀다 보니 이것저것 보는 것들도 많다. 그런것들이라도 간단히&amp;nbsp;적어둬야지&amp;#8230;&lt;/p&gt;
 &lt;p&gt;노트에다가 작성을 해놓고 넣어두는 것도 한 방법이지만, 봤을때 좋은거라 생각한다면
 그것으로 작업이 가능하지 않을까&amp;nbsp;하여&amp;#8230;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
@@ -1822,7 +1910,7 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary><category term="javascript"></category><category term="js"></category></entry><entry><title>Clojure 개발 환경 구축</title><link href="http://ujuc.github.io/2015/03/01/clojure-development-env/" rel="alternate"></link><published>2015-04-01T21:30:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-01:2015/03/01/clojure-development-env/</id><summary type="html">&lt;div class="section" id="id2"&gt;
+</summary><category term="javascript"></category><category term="js"></category></entry><entry><title>Clojure 개발 환경 구축</title><link href="https://ujuc.github.io/2015/03/01/clojure-development-env/" rel="alternate"></link><published>2015-04-01T21:30:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-01:2015/03/01/clojure-development-env/</id><summary type="html">&lt;div class="section" id="id2"&gt;
 &lt;h2&gt;1.&amp;nbsp;개요&lt;/h2&gt;
 &lt;p&gt;Clojure를 공부하려하는데&amp;#8230; 이것 저것 작업을 하려하니 짧은 기억력으로는 계속
 봐야되는지라. 이렇게 작성을 해놔야 나중에 볼 듯하고, 또 어딘가에 넣어둔다고해도
@@ -1979,7 +2067,7 @@ lein repl
 &lt;dd&gt;emacs로 되어있는 부부만&amp;nbsp;제외했&amp;#8230;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
-</summary><category term="clojure"></category><category term="개발 환경"></category><category term="lein"></category></entry><entry><title>oh-my-vim 설치후 오류 (OSX)</title><link href="http://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/" rel="alternate"></link><published>2015-04-01T21:14:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-26:2015/02/26/oh-my-vim-error-osx/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim"&gt;oh-my-vim&lt;/a&gt; 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
+</summary><category term="clojure"></category><category term="개발 환경"></category><category term="lein"></category></entry><entry><title>oh-my-vim 설치후 오류 (OSX)</title><link href="https://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/" rel="alternate"></link><published>2015-04-01T21:14:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-26:2015/02/26/oh-my-vim-error-osx/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim"&gt;oh-my-vim&lt;/a&gt; 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
 변경하고 있긴하다만&amp;#8230;). 달라진게 없다. 좀 더 화려해지고 플러그인들로 인해서
 IDE급으로 에디터가 변경됐을 뿐이다. 단지 80라인 와랩이&amp;nbsp;필요했을뿐인데&amp;#8230;&lt;/p&gt;
 &lt;p&gt;암튼 그렇게 쓰다보니 실행할때마다 에러가&amp;nbsp;뜬다.&lt;/p&gt;
@@ -2000,7 +2088,7 @@ It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 $ brew install vim --with-cscope --with-lua --override-system-vim
 &lt;/pre&gt;
 &lt;p&gt;설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이&amp;nbsp;줄었다.!!!&lt;/p&gt;
-</summary><category term="vim"></category><category term="setting"></category></entry><entry><title>Pycharm에서 iPython notebook 사용</title><link href="http://ujuc.github.io/2015/02/23/using-ipython-notebook-on-pycharm/" rel="alternate"></link><published>2015-04-01T21:07:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-23:2015/02/23/using-ipython-notebook-on-pycharm/</id><summary type="html">&lt;p&gt;Pycharm iPython notebook 지원은 4.0에서부터 지원하기 시작했다. 아직 버전업이
+</summary><category term="vim"></category><category term="setting"></category></entry><entry><title>Pycharm에서 iPython notebook 사용</title><link href="https://ujuc.github.io/2015/02/23/using-ipython-notebook-on-pycharm/" rel="alternate"></link><published>2015-04-01T21:07:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-23:2015/02/23/using-ipython-notebook-on-pycharm/</id><summary type="html">&lt;p&gt;Pycharm iPython notebook 지원은 4.0에서부터 지원하기 시작했다. 아직 버전업이
 안됐으니&amp;nbsp;작년인듯&amp;#8230;&lt;/p&gt;
 &lt;p&gt;iPython을 설치하고 Pycharm에서 설치하려고 봤더니 제대로 돌아가질 않는다.
 그렇다고 오류가 보이지도 않아서 직접 터미널에서&amp;nbsp;쳤더니&amp;#8230;&lt;/p&gt;
@@ -2012,7 +2100,7 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
 작동하는 것이 입력하기도 쉽고 값들을 확인하면서 작성하기가 더 쉽게 되어있으니
 사용자가 알아서&amp;#8230; 나는&amp;nbsp;안쓸꺼임&amp;#8230;&lt;/p&gt;
 &lt;p&gt;아마 업데이트 하면&amp;#8230; 괜찮아질꺼야&amp;#8230;&amp;nbsp;그럴꺼야&amp;#8230;&lt;/p&gt;
-</summary><category term="pycharm"></category><category term="ipython"></category><category term="notebook"></category></entry><entry><title>OpenStack Commit</title><link href="http://ujuc.github.io/2015/02/13/openstack-commit/" rel="alternate"></link><published>2015-03-31T22:29:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</id><summary type="html">&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
+</summary><category term="pycharm"></category><category term="ipython"></category><category term="notebook"></category></entry><entry><title>OpenStack Commit</title><link href="https://ujuc.github.io/2015/02/13/openstack-commit/" rel="alternate"></link><published>2015-03-31T22:29:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</id><summary type="html">&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
 그런데&amp;#8230;. 왜이리&amp;nbsp;어려운거지&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런&amp;#8230; 어렵지 않을
 것같아&amp;nbsp;시작&amp;#8230;&lt;/p&gt;
@@ -2144,7 +2232,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 까먹으니까 작성한&amp;nbsp;것이기도하지만&amp;#8230;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="openstack"></category><category term="commit"></category></entry><entry><title>gitworkflows(7)에대한 이야기</title><link href="http://ujuc.github.io/2015/02/02/gitworkflows7/" rel="alternate"></link><published>2015-03-31T00:13:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</id><summary type="html">&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
+</summary><category term="openstack"></category><category term="commit"></category></entry><entry><title>gitworkflows(7)에대한 이야기</title><link href="https://ujuc.github.io/2015/02/02/gitworkflows7/" rel="alternate"></link><published>2015-03-31T00:13:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</id><summary type="html">&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
 이야기하면서 슬라이드 &lt;a class="footnote-reference" href="#id3" id="id1"&gt;[1]&lt;/a&gt; 를 하나&amp;nbsp;올려주셨다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The gitworkflows(7)&amp;nbsp;illustrated&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;정말 슬라이드를 이렇게까지 만들어주는건 정말 좋은듯. 특히 발표 당시에 그것을
@@ -2167,7 +2255,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 필요.&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</summary><category term="git"></category><category term="workflow"></category></entry><entry><title>[Google Cloud Platfrom] Google Cloud Endpoints</title><link href="http://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/" rel="alternate"></link><published>2016-03-01T00:38:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-14:2014/11/14/google-cloud-platform-google-cloud-endpoints/</id><summary type="html">&lt;ul&gt;
+</summary><category term="git"></category><category term="workflow"></category></entry><entry><title>[Google Cloud Platfrom] Google Cloud Endpoints</title><link href="https://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/" rel="alternate"></link><published>2016-03-01T00:38:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-14:2014/11/14/google-cloud-platform-google-cloud-endpoints/</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;App의 API를 구성하기 쉽도록 제공하는&amp;nbsp;서비스&lt;/li&gt;
 &lt;li&gt;Remote Procedure Call(&lt;span class="caps"&gt;RPC&lt;/span&gt;)를 이용하여 작업을 진행할 수 있도록&amp;nbsp;구성.&lt;/li&gt;
 &lt;/ul&gt;
@@ -2266,7 +2354,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 &lt;p&gt;http://endpoints-proto-datastore.appspot.com/&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="google"></category><category term="cloud"></category><category term="gcp"></category><category term="google cloud platform"></category><category term="google cloud endpoint"></category></entry><entry><title>[Google App Engine] NDB - Properties</title><link href="http://ujuc.github.io/2014/11/10/google-app-engine-ndb-properties/" rel="alternate"></link><published>2016-03-03T21:47:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-10:2014/11/10/google-app-engine-ndb-properties/</id><summary type="html">&lt;ul&gt;
+&lt;/div&gt;</summary><category term="google"></category><category term="cloud"></category><category term="gcp"></category><category term="google cloud platform"></category><category term="google cloud endpoint"></category></entry><entry><title>[Google App Engine] NDB - Properties</title><link href="https://ujuc.github.io/2014/11/10/google-app-engine-ndb-properties/" rel="alternate"></link><published>2016-03-03T21:47:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-10:2014/11/10/google-app-engine-ndb-properties/</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;관련해서 한글로되 문서가 없어서 &lt;a href="https://cloud.google.com/appengine/docs/python/ndb/properties"&gt;2014/10/27일자 문서&lt;/a&gt;를 가지고서&amp;nbsp;정리하였다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;소개&lt;/h2&gt;
@@ -2421,7 +2509,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 &lt;li&gt;딱히 적을 내용도&amp;nbsp;없음.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="google"></category><category term="cloud"></category><category term="gcp"></category><category term="google cloud platform"></category><category term="ndb"></category></entry><entry><title>[Python] Paramiko</title><link href="http://ujuc.github.io/2014/04/07/python-paramiko/" rel="alternate"></link><published>2016-03-03T22:00:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-04-07:2014/04/07/python-paramiko/</id><summary type="html">&lt;p&gt;한글로된 글이 없어서 우선 내가 알아낸 곳과 사용한 곳까지 작성을&amp;nbsp;해둘려고한다.&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="google"></category><category term="cloud"></category><category term="gcp"></category><category term="google cloud platform"></category><category term="ndb"></category></entry><entry><title>[Python] Paramiko</title><link href="https://ujuc.github.io/2014/04/07/python-paramiko/" rel="alternate"></link><published>2016-03-03T22:00:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-04-07:2014/04/07/python-paramiko/</id><summary type="html">&lt;p&gt;한글로된 글이 없어서 우선 내가 알아낸 곳과 사용한 곳까지 작성을&amp;nbsp;해둘려고한다.&lt;/p&gt;
 &lt;h1 id="paramiko"&gt;&lt;a href="http://www.paramiko.org/"&gt;Paramiko&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Python 2.6+, 3.3+에서 사용할 수 있는 SSHv2&amp;nbsp;구현체이다.&lt;/li&gt;

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+          <div class="row">
+            <nav class="nav nav-inline">
+                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+            </nav>
+          </div>
+          <div class="row">
+  <meta name="keywords" content="json, api, specification, json api, 스펙 문서">
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div id="site_article" class="container">
+      <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="https://ujuc.github.io/2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(4)/" class="h1"><span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0 (3) - Document Structure&nbsp;(4)</a></h1>
+    </div>
+    <div class="row article">
+      <p><i class="fa fa-flash"></i></p>
+      <div class="article_text">
+        <h3 id="identification">검증&nbsp;(Identification)</h3>
+<p>모든 <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a>는 <code>id</code> 멤버와 <code>type</code> 멤버는 포함하고 있어야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt; <code>id</code>와 <code>type</code> 멤버 값은 문자열이어야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
+<blockquote>
+<p>Every <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a> <strong><span class="caps">MUST</span></strong> contain an <code>id</code> member and a <code>type</code> member. The values of the <code>id</code> and <code>type</code> members <strong><span class="caps">MUST</span></strong> be&nbsp;strings.</p>
+</blockquote>
+<p>주어진 API에서 각 리소스 오브젝트에서 <code>type</code>, <code>id</code> 쌍은 반드시 하나인 고유한 리소스임을 증명해야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt; (서버 한 대이거나 단일 작업을 하는 여러 서버에서 제어되는 <span class="caps">URI</span> 집합으로 API를&nbsp;구성합니다.)</p>
+<blockquote>
+<p>Within a given <span class="caps">API</span>, each resource object’s <code>type</code> and <code>id</code> pair <strong><span class="caps">MUST</span></strong> identify a single, unique resource. (The set of URIs controlled by a server, or multiple servers acting as one, constitute an <span class="caps">API</span>.)</p>
+</blockquote>
+<p><code>type</code> 멤버는 공통된 속성과 관계를 공유하는 <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a>를 설명하는 데&nbsp;사용됩니다.</p>
+<blockquote>
+<p>The <code>type</code> member is used to describe <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a> that share common attributes and&nbsp;relationships.</p>
+</blockquote>
+<p><code>type</code> 멤버 값은 <a href="http://jsonapi.org/format/#document-member-names">member names</a>와 같은 제약에 따라야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
+<blockquote>
+<p>The values of <code>type</code> members <strong><span class="caps">MUST</span></strong> adhere to the same constraints as <a href="http://jsonapi.org/format/#document-member-names">member names</a>.</p>
+<p>Note: 이 스펙은 inflection 법칙에 얽매이지 않습니다. 또한 <code>type</code> 값은 복수이거나 단수일 수 있습니다. 그러나 같은 값이 구현된 <span class="caps">API</span> 전체에서 일관되게 사용되어야&nbsp;합니다.</p>
+<p>Note: This spec is agnostic about inflection rules, so the value of <code>type</code> can be either plural or singular. However, the same value should be used consistently throughout an&nbsp;implementation.</p>
+</blockquote>
+<hr />
+<h3 id="fields">필드&nbsp;(Fields)</h3>
+<p>리소스 오브젝트에서 <a href="http://jsonapi.org/format/#document-resource-object-attributes">attributes</a>과 <a href="http://jsonapi.org/format/#document-resource-object-relationships">relationships</a>는 “<a href="http://jsonapi.org/format/#document-resource-object-fields">fields</a>”로 묶어서&nbsp;부릅니다.</p>
+<blockquote>
+<p>A resource object’s <a href="http://jsonapi.org/format/#document-resource-object-attributes">attributes</a> and its <a href="http://jsonapi.org/format/#document-resource-object-relationships">relationships</a> are collectively called its “<a href="http://jsonapi.org/format/#document-resource-object-fields">fields</a>”.</p>
+</blockquote>
+<p><a href="http://jsonapi.org/format/#document-resource-objects">resource object</a> 필드는 반드시 각기 다른 공통된 네임스페이스, <code>type</code>, <code>id</code>를 공유해야합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt; 다른 말로는, 리소스는 동일한 이름으로 속성 값과 관계를 가질 수 없으나 <code>type</code>이나 <code>id</code>에대한 속성이나 관계는 동일한 이름을 가질 수&nbsp;있습니다.</p>
+<blockquote>
+<p>Fields for a <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a> <strong><span class="caps">MUST</span></strong> share a common namespace with each other and with <code>type</code> and <code>id</code>. In other words, a resource can not have an attribute and relationship with the same name, nor can it have an attribute or relationship named <code>type</code> or <code>id</code>.</p>
+</blockquote>
+      </div>
+      <p><i class="fa fa-hand-spock-o"></i></p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 16. 09. 17.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="https://ujuc.github.io/tag/json.html">json</a>
+,               <a href="https://ujuc.github.io/tag/api.html">api</a>
+,               <a href="https://ujuc.github.io/tag/specification.html">specification</a>
+,               <a href="https://ujuc.github.io/tag/json-api.html">json api</a>
+,               <a href="https://ujuc.github.io/tag/seupeg-munseo.html">스펙 문서</a>
+          </i>
+        </p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(4)/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+      </article>
+    </div>
+
+    <div class="container">
+    </div>
+
+    <!-- Title -->
+    <div id="site_title" class="container">
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <hr />
+          <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+        </div>
+        <div class="row">
+          <p>Anythink, Everythink!</p>
+        </div>
+        <div class="row">
+            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>    </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+</html>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><lastBuildDate>Sat, 18 Jun 2016 11:41:00 +0900</lastBuildDate><item><title>독특하다. Onshape</title><link>http://ujuc.github.io/2016/06/18/dog-teug-ha-da_onshape/</link><description>&lt;p&gt;페이스북에서 로봇 그룹에 웹 서비스 3D &lt;span class="caps"&gt;CAD&lt;/span&gt; 서비스인 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt;가&amp;nbsp;올라왔다.&lt;/p&gt;
+<rss version="2.0"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>https://ujuc.github.io/</link><description>Anythink, Everythink!</description><lastBuildDate>Sat, 18 Jun 2016 11:41:00 +0900</lastBuildDate><item><title>독특하다. Onshape</title><link>https://ujuc.github.io/2016/06/18/dog-teug-ha-da_onshape/</link><description>&lt;p&gt;페이스북에서 로봇 그룹에 웹 서비스 3D &lt;span class="caps"&gt;CAD&lt;/span&gt; 서비스인 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt;가&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;처음에는 그냥 CAD계에서 사용하는 Github로 봤는데. 이건 Github가 아니라 3D &lt;span class="caps"&gt;CAD&lt;/span&gt; 프로그램을 할 수 있는 사이트이다.
 그것도 정말&amp;nbsp;괜찮은&amp;#8230;&lt;/p&gt;
 &lt;p&gt;내가 마지막으로 기억했던 것은. CATIA6에서 중앙에 서버를 두고 작업을 할 수 있도록 하였었는데. 이건 그것보다 더 많은것을 하고&amp;nbsp;있구나&amp;#8230;&lt;/p&gt;
 &lt;p&gt;그리고 학교 같은데서 아이들이 쓰면 좋겠구나. 50G까지는 무료로 주는 서비스이니 개인적으로 가입해서 작업을 하고 해당 프로그램으로 출력도가능할 것같은데&amp;#8230;
 써봐야.. 아는&amp;nbsp;부분이고&amp;#8230;&lt;/p&gt;
 &lt;p&gt;좋다. 부럽다. 그리고 저들은 저만치간다. 우리나라에서는 이 서비스를 쓸 업체는 없을 것이다. 그들은 이런것에 돈을 내는 것보다 자기들이 투자하지않고 돈을 버는데 더 많은 신경을&amp;nbsp;쓸것이기에&amp;#8230;&lt;/p&gt;
-&lt;p&gt;자세한건 &lt;a href="https://www.onshape.com/3d-cad"&gt;여기&lt;/a&gt;서&amp;nbsp;확인하자.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 18 Jun 2016 11:41:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-06-18:2016/06/18/dog-teug-ha-da_onshape/</guid><category>cad</category><category>cloud</category><category>engineering</category><category>3d cad</category></item><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>http://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
+&lt;p&gt;자세한건 &lt;a href="https://www.onshape.com/3d-cad"&gt;여기&lt;/a&gt;서&amp;nbsp;확인하자.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 18 Jun 2016 11:41:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-06-18:2016/06/18/dog-teug-ha-da_onshape/</guid><category>cad</category><category>cloud</category><category>engineering</category><category>3d cad</category></item><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>https://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
 &lt;p&gt;아&amp;#8230; 이건 아니다 싶어서 다시 nightly 버전으로 점프하여 설치를&amp;nbsp;하였더니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;뜨는&amp;nbsp;무언가.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="install shell integration" src="http://ujuc.github.io/img/2016-05-21_warning_shell_integration.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="install shell integration" src="https://ujuc.github.io/img/2016-05-21_warning_shell_integration.png" /&gt;&lt;/p&gt;
 &lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고&amp;nbsp;설치&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="installing shell integration" src="http://ujuc.github.io/img/2016-05-21_installing_shell_integration.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016-05-21_installing_shell_integration.png" /&gt;&lt;/p&gt;
 &lt;p&gt;음.! 뭔가&amp;nbsp;이상하다&amp;#8230;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;You will also have these commands:
 imgcat filename
@@ -24,26 +24,26 @@ it2dl filename
 &lt;p&gt;????&lt;/p&gt;
 &lt;p&gt;그래서&amp;nbsp;실행해봤다.!&lt;/p&gt;
 &lt;h3 id="imgcat"&gt;imgcat&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="imgcat image!" src="http://ujuc.github.io/img/2016-05-21_imgcat_image.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imgcat image!" src="https://ujuc.github.io/img/2016-05-21_imgcat_image.png" /&gt;&lt;/p&gt;
 &lt;p&gt;용량이 크면 여는데 오래걸린다. Raw 파일은 정말 오래걸린다. tif 파일은 정말&amp;#8230; (70MB가 넘어가니 엄청&amp;nbsp;걸린다.)&lt;/p&gt;
 &lt;h3 id="it2dl"&gt;it2dl&lt;/h3&gt;
 &lt;p&gt;모르겠다&amp;nbsp;관심없다.&lt;/p&gt;
 &lt;h3 id="_1"&gt;설치를 못했다나.. 다시 해보고&amp;nbsp;싶다면&amp;#8230;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="menu" src="http://ujuc.github.io/img/2016-05-21_menu.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="menu" src="https://ujuc.github.io/img/2016-05-21_menu.png" /&gt;&lt;/p&gt;
 &lt;h3 id="_2"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities.md"&gt;iterm2 -&amp;nbsp;utilites&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:06:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-21:2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</guid><category>iTerm2</category><category>terminal</category><category>Mac OS X</category></item><item><title>Select text of vim with set mouse=a enabled</title><link>http://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</link><description>&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:06:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-21:2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</guid><category>iTerm2</category><category>terminal</category><category>Mac OS X</category></item><item><title>Select text of vim with set mouse=a enabled</title><link>https://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</link><description>&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
 &lt;p&gt;조금 쉽게 사용하려고 vim에 &lt;code&gt;mouse=a&lt;/code&gt; 설정을 하였다. 그것이 원흉이 었지만. 결국&amp;nbsp;찾았다!&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/4608161/copy-text-out-of-vim-with-set-mouse-a-enabled"&gt;Copy text out of vim with set mouse=a&amp;nbsp;enabled&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;리눅스에서는 &lt;code&gt;shift&lt;/code&gt;를 누르고 선택하는것이고, Mac에서는 &lt;code&gt;alt/option&lt;/code&gt;을 누르고 선택하면&amp;nbsp;된다.&lt;/p&gt;
 &lt;p&gt;설정하나때문에 많은 삽질을 하는 사람들에게 남겨둠..
-그런데 설정은 tmux에서도&amp;nbsp;사용이가능하다.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 02 May 2016 23:27:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-02:2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</guid><category>vim</category><category>mouse</category><category>copy</category></item><item><title>xonsh?</title><link>http://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
+그런데 설정은 tmux에서도&amp;nbsp;사용이가능하다.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 02 May 2016 23:27:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-02:2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</guid><category>vim</category><category>mouse</category><category>copy</category></item><item><title>xonsh?</title><link>https://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python-ish, BASHwards-compatible shell language and command&amp;nbsp;prompt.라고&amp;#8230;&lt;/p&gt;
 &lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이&amp;#8230;
 그리고 기본이 3.4라&amp;#8230; 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
 기본으로 장착한 배포판의 경우엔&amp;nbsp;다르겠지만.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:23:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</guid><category>python</category><category>shell</category></item><item><title>git-ftp로 ftp 클라이언트를!</title><link>http://ujuc.github.io/2015/03/04/git-ftp/</link><description>&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:23:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</guid><category>python</category><category>shell</category></item><item><title>git-ftp로 ftp 클라이언트를!</title><link>https://ujuc.github.io/2015/03/04/git-ftp/</link><description>&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
 이용해서 &lt;span class="caps"&gt;FTP&lt;/span&gt; 클라잉너트를&amp;nbsp;만들었다.&lt;/p&gt;
 &lt;p&gt;뭔짓이지&amp;#8230;&lt;/p&gt;
 &lt;p&gt;암튼&amp;#8230; 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;&amp;#8230; 역시 다른
@@ -110,7 +110,7 @@ $ brew install git-ftp
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가&amp;#8230;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>https://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가&amp;#8230;
 쓰던거 쓰자해서 &lt;tt class="docutils literal"&gt;nabi&lt;/tt&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&amp;nbsp;않는다.&lt;/p&gt;
 &lt;p&gt;그래서 조금 검색을 했더니&amp;#8230;
 &lt;tt class="docutils literal"&gt;gsettings get com.canonical.Unity.Panel &lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 라는 걸로 추가를

@@ -1,5 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>http://ujuc.github.io/</link><description>Anythink, Everythink!</description><lastBuildDate>Sat, 06 Aug 2016 14:40:00 +0900</lastBuildDate><item><title>JSON API Specification v1.0 (3) - Document Structure (2)</title><link>http://ujuc.github.io/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/</link><description>&lt;h2 id="51-top-level"&gt;5.1. 최상위 (Top&amp;nbsp;Level)&lt;/h2&gt;
+<rss version="2.0"><channel><title>잘 밤에 쓸데없는 생각하기...</title><link>https://ujuc.github.io/</link><description>Anythink, Everythink!</description><lastBuildDate>Sat, 17 Sep 2016 20:55:00 +0900</lastBuildDate><item><title>JSON API Specification v1.0 (3) - Document Structure (4)</title><link>https://ujuc.github.io/2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(4)/</link><description>&lt;h3 id="identification"&gt;검증&amp;nbsp;(Identification)&lt;/h3&gt;
+&lt;p&gt;모든 &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource object&lt;/a&gt;는 &lt;code&gt;id&lt;/code&gt; 멤버와 &lt;code&gt;type&lt;/code&gt; 멤버는 포함하고 있어야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; &lt;code&gt;id&lt;/code&gt;와 &lt;code&gt;type&lt;/code&gt; 멤버 값은 문자열이어야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Every &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource object&lt;/a&gt; &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; contain an &lt;code&gt;id&lt;/code&gt; member and a &lt;code&gt;type&lt;/code&gt; member. The values of the &lt;code&gt;id&lt;/code&gt; and &lt;code&gt;type&lt;/code&gt; members &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; be&amp;nbsp;strings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;주어진 API에서 각 리소스 오브젝트에서 &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;id&lt;/code&gt; 쌍은 반드시 하나인 고유한 리소스임을 증명해야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; (서버 한 대이거나 단일 작업을 하는 여러 서버에서 제어되는 &lt;span class="caps"&gt;URI&lt;/span&gt; 집합으로 API를&amp;nbsp;구성합니다.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Within a given &lt;span class="caps"&gt;API&lt;/span&gt;, each resource object’s &lt;code&gt;type&lt;/code&gt; and &lt;code&gt;id&lt;/code&gt; pair &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; identify a single, unique resource. (The set of URIs controlled by a server, or multiple servers acting as one, constitute an &lt;span class="caps"&gt;API&lt;/span&gt;.)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;type&lt;/code&gt; 멤버는 공통된 속성과 관계를 공유하는 &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource objects&lt;/a&gt;를 설명하는 데&amp;nbsp;사용됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;type&lt;/code&gt; member is used to describe &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource objects&lt;/a&gt; that share common attributes and&amp;nbsp;relationships.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;type&lt;/code&gt; 멤버 값은 &lt;a href="http://jsonapi.org/format/#document-member-names"&gt;member names&lt;/a&gt;와 같은 제약에 따라야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The values of &lt;code&gt;type&lt;/code&gt; members &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; adhere to the same constraints as &lt;a href="http://jsonapi.org/format/#document-member-names"&gt;member names&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Note: 이 스펙은 inflection 법칙에 얽매이지 않습니다. 또한 &lt;code&gt;type&lt;/code&gt; 값은 복수이거나 단수일 수 있습니다. 그러나 같은 값이 구현된 &lt;span class="caps"&gt;API&lt;/span&gt; 전체에서 일관되게 사용되어야&amp;nbsp;합니다.&lt;/p&gt;
+&lt;p&gt;Note: This spec is agnostic about inflection rules, so the value of &lt;code&gt;type&lt;/code&gt; can be either plural or singular. However, the same value should be used consistently throughout an&amp;nbsp;implementation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h3 id="fields"&gt;필드&amp;nbsp;(Fields)&lt;/h3&gt;
+&lt;p&gt;리소스 오브젝트에서 &lt;a href="http://jsonapi.org/format/#document-resource-object-attributes"&gt;attributes&lt;/a&gt;과 &lt;a href="http://jsonapi.org/format/#document-resource-object-relationships"&gt;relationships&lt;/a&gt;는 “&lt;a href="http://jsonapi.org/format/#document-resource-object-fields"&gt;fields&lt;/a&gt;”로 묶어서&amp;nbsp;부릅니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A resource object’s &lt;a href="http://jsonapi.org/format/#document-resource-object-attributes"&gt;attributes&lt;/a&gt; and its &lt;a href="http://jsonapi.org/format/#document-resource-object-relationships"&gt;relationships&lt;/a&gt; are collectively called its “&lt;a href="http://jsonapi.org/format/#document-resource-object-fields"&gt;fields&lt;/a&gt;”.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource object&lt;/a&gt; 필드는 반드시 각기 다른 공통된 네임스페이스, &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;id&lt;/code&gt;를 공유해야합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; 다른 말로는, 리소스는 동일한 이름으로 속성 값과 관계를 가질 수 없으나 &lt;code&gt;type&lt;/code&gt;이나 &lt;code&gt;id&lt;/code&gt;에대한 속성이나 관계는 동일한 이름을 가질 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fields for a &lt;a href="http://jsonapi.org/format/#document-resource-objects"&gt;resource object&lt;/a&gt; &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; share a common namespace with each other and with &lt;code&gt;type&lt;/code&gt; and &lt;code&gt;id&lt;/code&gt;. In other words, a resource can not have an attribute and relationship with the same name, nor can it have an attribute or relationship named &lt;code&gt;type&lt;/code&gt; or &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 17 Sep 2016 20:55:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-09-17:2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(4)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스펙 문서</category></item><item><title>JSON API Specification v1.0 (3) - Document Structure (3)</title><link>https://ujuc.github.io/2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(3)/</link><description>&lt;h2 id="52-resource-objects"&gt;5.2. 리소스 오브젝트 (Resource&amp;nbsp;Objects)&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;“리소스 오브젝트”는 자원을 나타내는 데 사용되는 &lt;span class="caps"&gt;JSON&lt;/span&gt; API에&amp;nbsp;표시됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Resource objects” appear in a &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; document to represent&amp;nbsp;resources.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;리소스 오브젝트는 적어도 다음 최상위 멤버가 포함되어 있어야 합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&amp;nbsp;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A resource object &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; contain at least the following top-level&amp;nbsp;members:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;예외: 리소스 오브젝트가 클라이언트에서 고안되고, 서버에서 생성된 새로운 리소스를 나타낼 때는 &lt;code&gt;id&lt;/code&gt; 멤버는 필요하지&amp;nbsp;않습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Exception: The &lt;code&gt;id&lt;/code&gt; member is not required when the resource object originates at the client and represents a new resource to be created on the&amp;nbsp;server.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;추가로 리소스 오브젝트는 다음 최상위 멤버 중 하나가 포함될 수도 있습니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MAY&lt;/span&gt;&lt;/strong&gt;&amp;gt;&amp;nbsp;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;attributes&lt;/code&gt;: &lt;a href="http://jsonapi.org/format/#document-resource-object-attributes"&gt;attributes object&lt;/a&gt;는 리소스 데이터 일부를&amp;nbsp;나타냅니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;relationships&lt;/code&gt;: &lt;a href="http://jsonapi.org/format/#document-resource-object-relationships"&gt;relationships object&lt;/a&gt;는 리소스와 다른 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 리소스간 관계를&amp;nbsp;표현합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;links&lt;/code&gt;: &lt;a href="http://jsonapi.org/format/#document-links"&gt;links object&lt;/a&gt;는 리소스와 관련된 링크를&amp;nbsp;포함합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meta&lt;/code&gt;: &lt;a href="http://jsonapi.org/format/#document-meta"&gt;meta object&lt;/a&gt;는 속성과 관계로는 나타낼 수 없는 리소스에 대한 비표준 메타 정보를&amp;nbsp;포함합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In addition, a resource object &lt;strong&gt;&lt;span class="caps"&gt;MAY&lt;/span&gt;&lt;/strong&gt; contain any of these top-level&amp;nbsp;members:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;attributes&lt;/code&gt;: an &lt;a href="http://jsonapi.org/format/#document-resource-object-attributes"&gt;attributes object&lt;/a&gt; representing some of the resource’s&amp;nbsp;data.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;relationships&lt;/code&gt;: a &lt;a href="http://jsonapi.org/format/#document-resource-object-relationships"&gt;relationships object&lt;/a&gt; describing relationships between the resource and other &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&amp;nbsp;resources.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;links&lt;/code&gt;: a &lt;a href="http://jsonapi.org/format/#document-links"&gt;links object&lt;/a&gt; containing links related to the&amp;nbsp;resource.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;meta&lt;/code&gt;: a &lt;a href="http://jsonapi.org/format/#document-meta"&gt;meta object&lt;/a&gt; containing non-standard meta-information about a resource that can not be represented as an attribute or&amp;nbsp;relationship.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;여기서 아티클(즉, “articles” 타입)이 문서에 표시될 수 있습니다. 그 방법은 다음과&amp;nbsp;같습니다:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here’s how an article (i.e. a resource of type “articles”) might appear in a&amp;nbsp;document:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// ...
+{
+ &amp;quot;type&amp;quot;: &amp;quot;articles&amp;quot;,
+  &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;,
+  &amp;quot;attributes&amp;quot;: {
+    &amp;quot;title&amp;quot;: &amp;quot;Rails is Omakase&amp;quot;
+  },
+  &amp;quot;relationships&amp;quot;: {
+    &amp;quot;author&amp;quot;: {
+      &amp;quot;links&amp;quot;: {
+        &amp;quot;self&amp;quot;: &amp;quot;/articles/1/relationships/author&amp;quot;,
+        &amp;quot;related&amp;quot;: &amp;quot;/articles/1/author&amp;quot;
+      },
+      &amp;quot;data&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;people&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;9&amp;quot; }
+    }
+  }
+}
+    // ...
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 17 Sep 2016 20:46:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-09-17:2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(3)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스펙 문서</category></item><item><title>JSON API Specification v1.0 (3) - Document Structure (2)</title><link>https://ujuc.github.io/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/</link><description>&lt;h2 id="51-top-level"&gt;5.1. 최상위 (Top&amp;nbsp;Level)&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; 오브젝트는 데이터를 포함한 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 요청과 응답에 대한 근본(root) 입니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; 이 오브젝트를 문서의 “최상위”라&amp;nbsp;정의합니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -106,7 +194,7 @@
 &lt;p&gt;리소스에 대한 논리 컬렉션은 아이템 하나만 있거나 비어있더라도 배열로 표현합니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A logical collection of resources &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; be represented as an array, even if it only contains one item or is&amp;nbsp;empty.&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 06 Aug 2016 14:40:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-08-06:2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스펙 문서</category></item><item><title>JSON API Specification v1.0 (3) - Document Structure (1)</title><link>http://ujuc.github.io/2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/</link><description>&lt;h1 id="5-document-structure"&gt;5. 문서 구조 (Document&amp;nbsp;Structure)&lt;/h1&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 06 Aug 2016 14:40:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-08-06:2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스펙 문서</category></item><item><title>JSON API Specification v1.0 (3) - Document Structure (1)</title><link>https://ujuc.github.io/2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/</link><description>&lt;h1 id="5-document-structure"&gt;5. 문서 구조 (Document&amp;nbsp;Structure)&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;이 세션에서는 미디어 타입 &lt;a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"&gt;&lt;code&gt;application/vnd.api+json&lt;/code&gt;&lt;/a&gt;에서 확인가능한 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서 구조에 대해 설명합니다. &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서는 JavaScript Object Notation (&lt;span class="caps"&gt;JSON&lt;/span&gt;) &lt;a href="http://tools.ietf.org/html/rfc7159"&gt;&lt;span class="caps"&gt;RFC7159&lt;/span&gt;&lt;/a&gt;에 정의&amp;nbsp;되어있습니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -124,7 +212,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Note: 이러한 조건은 사양에 이것저것 더하고 변경을 통한 진화를&amp;nbsp;허용합니다.&lt;/p&gt;
 &lt;p&gt;Note: These conditions allow this specification to evolve through additive&amp;nbsp;changes.&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 26 Jul 2016 02:06:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-26:2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스펙 문서</category></item><item><title>JSON API Specification v1.0 (2)</title><link>http://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(2)/</link><description>&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서&amp;nbsp;이야기한다.&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 26 Jul 2016 02:06:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-26:2016/07/26/json_api_specification_v1.0_(3)_-_document_structure_(1)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스펙 문서</category></item><item><title>JSON API Specification v1.0 (2)</title><link>https://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(2)/</link><description>&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서&amp;nbsp;이야기한다.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id="4-content-negotiation"&gt;4. 컨텐츠 처리 (Content&amp;nbsp;Negotiation)&lt;/h1&gt;
 &lt;hr /&gt;
@@ -156,7 +244,7 @@
 &lt;p&gt;Servers &lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt; respond with a &lt;code&gt;406 Not Acceptable&lt;/code&gt; status code if a request’s &lt;code&gt;Accept&lt;/code&gt; header contains the &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; media type and all instances of that media type are modified with media type&amp;nbsp;parameters.&lt;/p&gt;
 &lt;p&gt;Note: 컨텐츠 처리 요구사항은 향후 버전에서 확장된 처리 방법과 버전 관리를 위한 미디어 타입 매개 변수를 사용할 수 있도록&amp;nbsp;존재합니다.&lt;/p&gt;
 &lt;p&gt;Note: The content negotiation requirements exist to allow future versions of this specification to use media type parameters for extension negotiation and&amp;nbsp;versioning.&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 16 Jul 2016 14:53:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(2)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스펙 문서</category></item><item><title>JSON API Specification v1.0 (1)</title><link>http://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(1)/</link><description>&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서이다. 해당 문서는 &lt;a href="http://jsonapi.org/format/"&gt;여기서&lt;/a&gt; 확인이 가능하다. 라이센스는&lt;a href="https://creativecommons.org/publicdomain/zero/1.0/"&gt;퍼블릭 도메인 라이센스&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 16 Jul 2016 14:53:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(2)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스펙 문서</category></item><item><title>JSON API Specification v1.0 (1)</title><link>https://ujuc.github.io/2016/07/16/json_api_specification_v1.0_(1)/</link><description>&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 문서이다. 해당 문서는 &lt;a href="http://jsonapi.org/format/"&gt;여기서&lt;/a&gt; 확인이 가능하다. 라이센스는&lt;a href="https://creativecommons.org/publicdomain/zero/1.0/"&gt;퍼블릭 도메인 라이센스&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;나중에 번역한 것이 도움이 되길&amp;nbsp;바라며&amp;#8230;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id="1-status"&gt;1. 문서 상태&amp;nbsp;(Status)&lt;/h1&gt;
@@ -184,7 +272,7 @@
 &lt;/blockquote&gt;
 &lt;hr /&gt;
 &lt;h1 id="3-conventions"&gt;3. 규칙&amp;nbsp;(Conventions)&lt;/h1&gt;
-&lt;p&gt;The key words “&lt;span class="caps"&gt;MUST&lt;/span&gt;”, “&lt;span class="caps"&gt;MUST&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;REQUIRED&lt;/span&gt;”, “&lt;span class="caps"&gt;SHALL&lt;/span&gt;”, “&lt;span class="caps"&gt;SHALL&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;SHOULD&lt;/span&gt;”, “&lt;span class="caps"&gt;SHOULD&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;RECOMMENDED&lt;/span&gt;”, “&lt;span class="caps"&gt;MAY&lt;/span&gt;”, and “&lt;span class="caps"&gt;OPTIONAL&lt;/span&gt;” in this document are to be interpreted as described in &lt;a href="http://tools.ietf.org/html/rfc2119"&gt;&lt;span class="caps"&gt;RFC&lt;/span&gt; 2119&lt;/a&gt; (&lt;a href="http://techhtml.github.io/rfc/RFC2119.html"&gt;&lt;span class="caps"&gt;RFC&lt;/span&gt; 2119 한국어 번역&lt;/a&gt;).&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 16 Jul 2016 12:08:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(1)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스팩 문서</category></item><item><title>파이썬으로 내가 쓸 셸 만들기</title><link>http://ujuc.github.io/2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/</link><description>&lt;p&gt;매주 python관련 뉴스들이 오는데 이번에는 흥미로운 것이 있어서 이렇게&amp;nbsp;남긴다.&lt;/p&gt;
+&lt;p&gt;The key words “&lt;span class="caps"&gt;MUST&lt;/span&gt;”, “&lt;span class="caps"&gt;MUST&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;REQUIRED&lt;/span&gt;”, “&lt;span class="caps"&gt;SHALL&lt;/span&gt;”, “&lt;span class="caps"&gt;SHALL&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;SHOULD&lt;/span&gt;”, “&lt;span class="caps"&gt;SHOULD&lt;/span&gt; &lt;span class="caps"&gt;NOT&lt;/span&gt;”, “&lt;span class="caps"&gt;RECOMMENDED&lt;/span&gt;”, “&lt;span class="caps"&gt;MAY&lt;/span&gt;”, and “&lt;span class="caps"&gt;OPTIONAL&lt;/span&gt;” in this document are to be interpreted as described in &lt;a href="http://tools.ietf.org/html/rfc2119"&gt;&lt;span class="caps"&gt;RFC&lt;/span&gt; 2119&lt;/a&gt; (&lt;a href="http://techhtml.github.io/rfc/RFC2119.html"&gt;&lt;span class="caps"&gt;RFC&lt;/span&gt; 2119 한국어 번역&lt;/a&gt;).&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 16 Jul 2016 12:08:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-16:2016/07/16/json_api_specification_v1.0_(1)/</guid><category>json</category><category>api</category><category>specification</category><category>json api</category><category>스팩 문서</category></item><item><title>파이썬으로 내가 쓸 셸 만들기</title><link>https://ujuc.github.io/2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/</link><description>&lt;p&gt;매주 python관련 뉴스들이 오는데 이번에는 흥미로운 것이 있어서 이렇게&amp;nbsp;남긴다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://hackercollider.com/articles/2016/07/05/create-your-own-shell-in-python-part-1/"&gt;Create Your Own Shell in Python: Part&amp;nbsp;1&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://hackercollider.com/articles/2016/07/06/create-your-own-shell-in-python-part-2/"&gt;Create Your Own Shell in Python: Part&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
@@ -193,7 +281,7 @@
 &lt;p&gt;&lt;code&gt;yosh&lt;/code&gt; 프로젝트로 간단히 Python을 이용해서 셸을 구성할 수 있도록 도와준다. 그리고 이것을 이용해서 조금이나마 편하게 사용할 수 있음을 이야기해주고도 있다.
 다른 것보다는 손쉽게 내가 원하는 셸을 만들어서 사용할 수 있다는 점과 내가 2014년에 PyconKR에서 봤던 것들로 구성만 하고 있엇던 &lt;a href="https://docs.python.org/3.5/library/cmd.html"&gt;&lt;code&gt;cmd&lt;/code&gt;&lt;/a&gt; 라이브러리가 아닌 &lt;a href="https://docs.python.org/3.5/library/shlex.html"&gt;&lt;code&gt;shlex&lt;/code&gt;&lt;/a&gt; 라이브러리를 사용해서 셸에서 입력하는 것과 유사하게 만들어주는 것으로&amp;nbsp;보인다.&lt;/p&gt;
 &lt;p&gt;첫번째로 부럽다. 생각만했지 실행으로 옮기지는 못했다. 내가 사용하는 셸 프로그램들을 묶어서 내가 원하는 생각대로 실행할 수 있도록 하는 것. 쉽지 않다고 생각만 했지. 언젠가 하려고만 했지. 이렇게까지 만들 수 있으리라 생각하지&amp;nbsp;못했다.&lt;/p&gt;
-&lt;p&gt;한번 도전해봐야겠다. 처음 생각했던 &lt;a href="https://docs.python.org/3.5/library/cmd.html"&gt;&lt;code&gt;cmd&lt;/code&gt;&lt;/a&gt; 라이브러리로 기본 라이브러리 구성을 남겨두고, 작업을 진행할 수&amp;nbsp;있도록.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 08 Jul 2016 00:29:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-08:2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/</guid><category>python</category><category>shell</category><category>yosh</category><category>Your Own SHell</category></item><item><title>Edison - Bluetooth 설정</title><link>http://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/</link><description>&lt;p&gt;오래된 글이다 잠시 IoT로 하면서 기본적으로 설정하면서 나왔던 것. 정리한&amp;nbsp;내용이다.&lt;/p&gt;
+&lt;p&gt;한번 도전해봐야겠다. 처음 생각했던 &lt;a href="https://docs.python.org/3.5/library/cmd.html"&gt;&lt;code&gt;cmd&lt;/code&gt;&lt;/a&gt; 라이브러리로 기본 라이브러리 구성을 남겨두고, 작업을 진행할 수&amp;nbsp;있도록.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 08 Jul 2016 00:29:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-07-08:2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/</guid><category>python</category><category>shell</category><category>yosh</category><category>Your Own SHell</category></item><item><title>Edison - Bluetooth 설정</title><link>https://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/</link><description>&lt;p&gt;오래된 글이다 잠시 IoT로 하면서 기본적으로 설정하면서 나왔던 것. 정리한&amp;nbsp;내용이다.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id="bluetooth"&gt;Bluetooth&amp;nbsp;설정&lt;/h1&gt;
 &lt;ul&gt;
@@ -257,14 +345,14 @@
 &lt;li&gt;&lt;a href="https://github.com/karulis/pybluez"&gt;pybluez&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/intel-iot-devkit/edison-guides/wiki"&gt;edison-guies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://software.intel.com/en-us/articles/connecting-to-intel-edison-from-android-with-bluetooth-le-ble"&gt;Connecting to Intel Edison from Android with Bluetooth &lt;span class="caps"&gt;LE&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 22 Jun 2016 00:12:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-06-22:2016/06/22/edison_-_bluetooth_seor-jeong/</guid><category>edison</category><category>bluetooth</category><category>iot</category></item><item><title>독특하다. Onshape</title><link>http://ujuc.github.io/2016/06/18/dog-teug-ha-da_onshape/</link><description>&lt;p&gt;페이스북에서 로봇 그룹에 웹 서비스 3D &lt;span class="caps"&gt;CAD&lt;/span&gt; 서비스인 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt;가&amp;nbsp;올라왔다.&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 22 Jun 2016 00:12:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-06-22:2016/06/22/edison_-_bluetooth_seor-jeong/</guid><category>edison</category><category>bluetooth</category><category>iot</category></item><item><title>독특하다. Onshape</title><link>https://ujuc.github.io/2016/06/18/dog-teug-ha-da_onshape/</link><description>&lt;p&gt;페이스북에서 로봇 그룹에 웹 서비스 3D &lt;span class="caps"&gt;CAD&lt;/span&gt; 서비스인 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt;가&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;처음에는 그냥 CAD계에서 사용하는 Github로 봤는데. 이건 Github가 아니라 3D &lt;span class="caps"&gt;CAD&lt;/span&gt; 프로그램을 할 수 있는 사이트이다.
 그것도 정말&amp;nbsp;괜찮은&amp;#8230;&lt;/p&gt;
 &lt;p&gt;내가 마지막으로 기억했던 것은. CATIA6에서 중앙에 서버를 두고 작업을 할 수 있도록 하였었는데. 이건 그것보다 더 많은것을 하고&amp;nbsp;있구나&amp;#8230;&lt;/p&gt;
 &lt;p&gt;그리고 학교 같은데서 아이들이 쓰면 좋겠구나. 50G까지는 무료로 주는 서비스이니 개인적으로 가입해서 작업을 하고 해당 프로그램으로 출력도가능할 것같은데&amp;#8230;
 써봐야.. 아는&amp;nbsp;부분이고&amp;#8230;&lt;/p&gt;
 &lt;p&gt;좋다. 부럽다. 그리고 저들은 저만치간다. 우리나라에서는 이 서비스를 쓸 업체는 없을 것이다. 그들은 이런것에 돈을 내는 것보다 자기들이 투자하지않고 돈을 버는데 더 많은 신경을&amp;nbsp;쓸것이기에&amp;#8230;&lt;/p&gt;
-&lt;p&gt;자세한건 &lt;a href="https://www.onshape.com/3d-cad"&gt;여기&lt;/a&gt;서&amp;nbsp;확인하자.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 18 Jun 2016 11:41:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-06-18:2016/06/18/dog-teug-ha-da_onshape/</guid><category>cad</category><category>cloud</category><category>engineering</category><category>3d cad</category></item><item><title>Qualcomm Atheros 드라이버 설치 - 업글</title><link>http://ujuc.github.io/2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/</link><description>&lt;p&gt;&lt;a href="http://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/"&gt;이전글&lt;/a&gt;로 글로 설치를 하고 썼으나 제대로된 펌웨어가 아닌지 설정을 해주고 설치했어야 했는데 그렇지 않아서 인지 1Mbps 로만 작동을&amp;nbsp;하였다.&lt;/p&gt;
+&lt;p&gt;자세한건 &lt;a href="https://www.onshape.com/3d-cad"&gt;여기&lt;/a&gt;서&amp;nbsp;확인하자.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 18 Jun 2016 11:41:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-06-18:2016/06/18/dog-teug-ha-da_onshape/</guid><category>cad</category><category>cloud</category><category>engineering</category><category>3d cad</category></item><item><title>Qualcomm Atheros 드라이버 설치 - 업글</title><link>https://ujuc.github.io/2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/</link><description>&lt;p&gt;&lt;a href="http://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/"&gt;이전글&lt;/a&gt;로 글로 설치를 하고 썼으나 제대로된 펌웨어가 아닌지 설정을 해주고 설치했어야 했는데 그렇지 않아서 인지 1Mbps 로만 작동을&amp;nbsp;하였다.&lt;/p&gt;
 &lt;p&gt;몇번 재설치 끝에 귀찮아서 다시 우분투를 설치중. &lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;스택오프플로 글&lt;/a&gt;이 업데이트가 되어있어 설치를 하였더니 원 속도까지&amp;nbsp;나오더라.&lt;/p&gt;
 &lt;p&gt;그런데 이게 좀&amp;nbsp;그런게&amp;#8230;&lt;/p&gt;
 &lt;p&gt;커널은 4.2이상. 16.04가 버전업되면서 커널도 업글이되어서 이건&amp;nbsp;넘어갔다.&lt;/p&gt;
@@ -278,7 +366,7 @@ sudo dpkg -i linux-firmware_1.158_all.deb
 &lt;p&gt;그리고 리붓해주면 손쉽게&amp;#8230; 설치가&amp;nbsp;가능하다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;참고: &lt;a href="http://packages.ubuntu.com/search?keywords=linux-firmware"&gt;Ubuntu&amp;nbsp;package&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 18 Jun 2016 02:13:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-06-18:2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/</guid><category>lenovo</category><category>ubuntu</category><category>qualcomm</category><category>driver</category><category>wireless</category><category>16.04</category></item><item><title>Spec Architecture Design Guide Restructure (번역)</title><link>http://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure%20(%EB%B2%88%EC%97%AD)/</link><description>&lt;p&gt;&lt;a href="http://docs.openstack.org/arch-design/"&gt;Architecture Design Guide&lt;/a&gt;가 새롭게 작성이되려나보다. 그것에 대한 스펙문서&amp;nbsp;번역이다.&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 18 Jun 2016 02:13:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-06-18:2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/</guid><category>lenovo</category><category>ubuntu</category><category>qualcomm</category><category>driver</category><category>wireless</category><category>16.04</category></item><item><title>Spec Architecture Design Guide Restructure (번역)</title><link>https://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure%20(%EB%B2%88%EC%97%AD)/</link><description>&lt;p&gt;&lt;a href="http://docs.openstack.org/arch-design/"&gt;Architecture Design Guide&lt;/a&gt;가 새롭게 작성이되려나보다. 그것에 대한 스펙문서&amp;nbsp;번역이다.&lt;/p&gt;
 &lt;p&gt;원문: &lt;a href="http://specs.openstack.org/openstack/docs-specs/specs/newton/arch-guide-restructure.html"&gt;Architecture Design Guide&amp;nbsp;Restructure&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id="_1"&gt;문제점&amp;nbsp;설명&lt;/h2&gt;
@@ -351,12 +439,12 @@ sudo dpkg -i linux-firmware_1.158_all.deb
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
-&lt;p&gt;뭐 이정도까지&amp;#8230; 더해봤자&amp;#8230; 의미가&amp;nbsp;없다&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 29 May 2016 13:43:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-29:2016/05/29/spec-architecture-design-guide-restructure (번역)/</guid><category>openstack</category><category>documents</category><category>spec</category><category>architecture design guide</category></item><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>http://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
+&lt;p&gt;뭐 이정도까지&amp;#8230; 더해봤자&amp;#8230; 의미가&amp;nbsp;없다&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 29 May 2016 13:43:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-29:2016/05/29/spec-architecture-design-guide-restructure (번역)/</guid><category>openstack</category><category>documents</category><category>spec</category><category>architecture design guide</category></item><item><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link>https://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</link><description>&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;#8230;&lt;/p&gt;
 &lt;p&gt;아&amp;#8230; 이건 아니다 싶어서 다시 nightly 버전으로 점프하여 설치를&amp;nbsp;하였더니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;뜨는&amp;nbsp;무언가.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="install shell integration" src="http://ujuc.github.io/img/2016-05-21_warning_shell_integration.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="install shell integration" src="https://ujuc.github.io/img/2016-05-21_warning_shell_integration.png" /&gt;&lt;/p&gt;
 &lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고&amp;nbsp;설치&amp;#8230;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="installing shell integration" src="http://ujuc.github.io/img/2016-05-21_installing_shell_integration.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016-05-21_installing_shell_integration.png" /&gt;&lt;/p&gt;
 &lt;p&gt;음.! 뭔가&amp;nbsp;이상하다&amp;#8230;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;You will also have these commands:
 imgcat filename
@@ -369,21 +457,21 @@ it2dl filename
 &lt;p&gt;????&lt;/p&gt;
 &lt;p&gt;그래서&amp;nbsp;실행해봤다.!&lt;/p&gt;
 &lt;h3 id="imgcat"&gt;imgcat&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="imgcat image!" src="http://ujuc.github.io/img/2016-05-21_imgcat_image.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imgcat image!" src="https://ujuc.github.io/img/2016-05-21_imgcat_image.png" /&gt;&lt;/p&gt;
 &lt;p&gt;용량이 크면 여는데 오래걸린다. Raw 파일은 정말 오래걸린다. tif 파일은 정말&amp;#8230; (70MB가 넘어가니 엄청&amp;nbsp;걸린다.)&lt;/p&gt;
 &lt;h3 id="it2dl"&gt;it2dl&lt;/h3&gt;
 &lt;p&gt;모르겠다&amp;nbsp;관심없다.&lt;/p&gt;
 &lt;h3 id="_1"&gt;설치를 못했다나.. 다시 해보고&amp;nbsp;싶다면&amp;#8230;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="menu" src="http://ujuc.github.io/img/2016-05-21_menu.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="menu" src="https://ujuc.github.io/img/2016-05-21_menu.png" /&gt;&lt;/p&gt;
 &lt;h3 id="_2"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities.md"&gt;iterm2 -&amp;nbsp;utilites&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:06:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-21:2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</guid><category>iTerm2</category><category>terminal</category><category>Mac OS X</category></item><item><title>Select text of vim with set mouse=a enabled</title><link>http://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</link><description>&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 21 May 2016 00:06:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-21:2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</guid><category>iTerm2</category><category>terminal</category><category>Mac OS X</category></item><item><title>Select text of vim with set mouse=a enabled</title><link>https://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</link><description>&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
 &lt;p&gt;조금 쉽게 사용하려고 vim에 &lt;code&gt;mouse=a&lt;/code&gt; 설정을 하였다. 그것이 원흉이 었지만. 결국&amp;nbsp;찾았다!&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/4608161/copy-text-out-of-vim-with-set-mouse-a-enabled"&gt;Copy text out of vim with set mouse=a&amp;nbsp;enabled&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;리눅스에서는 &lt;code&gt;shift&lt;/code&gt;를 누르고 선택하는것이고, Mac에서는 &lt;code&gt;alt/option&lt;/code&gt;을 누르고 선택하면&amp;nbsp;된다.&lt;/p&gt;
 &lt;p&gt;설정하나때문에 많은 삽질을 하는 사람들에게 남겨둠..
-그런데 설정은 tmux에서도&amp;nbsp;사용이가능하다.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 02 May 2016 23:27:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-02:2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</guid><category>vim</category><category>mouse</category><category>copy</category></item><item><title>Vim ColorColumn Settings</title><link>http://ujuc.github.io/2016/04/26/vim-colorcolumn-settings/</link><description>&lt;p&gt;나같은 경우엔, &lt;code&gt;git commit&lt;/code&gt; 명령어를 실행하면 기본 에디터로 &lt;code&gt;vim&lt;/code&gt;으로 구성해뒀다.
+그런데 설정은 tmux에서도&amp;nbsp;사용이가능하다.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 02 May 2016 23:27:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-05-02:2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</guid><category>vim</category><category>mouse</category><category>copy</category></item><item><title>Vim ColorColumn Settings</title><link>https://ujuc.github.io/2016/04/26/vim-colorcolumn-settings/</link><description>&lt;p&gt;나같은 경우엔, &lt;code&gt;git commit&lt;/code&gt; 명령어를 실행하면 기본 에디터로 &lt;code&gt;vim&lt;/code&gt;으로 구성해뒀다.
 그러다보니 가끔 길이를 확인해서 커밋을 해야되는 경우가&amp;nbsp;발생하는데&amp;#8230;&lt;/p&gt;
 &lt;p&gt;그나마 기본적으로 설정해놓은 80줄은 쉽게 찾으나&amp;#8230; 커밋 제목인 50자, 커밋 메시지
 제한인 72자를 확인하는게 쉽지가 않아서 줄을 그어놓고 사용하기위해 설정을&amp;nbsp;한다.&lt;/p&gt;
@@ -393,10 +481,10 @@ highlight ColorColumn ctermbg=17 guibg=navyblue
 
 
 &lt;p&gt;위와 같이 설정하면 아래와 같이 줄이 그어져있는 모습을 볼 수&amp;nbsp;있다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="vim_ex" src="http://ujuc.github.io/img/2016-04-26_vim.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="vim_ex" src="https://ujuc.github.io/img/2016-04-26_vim.png" /&gt;&lt;/p&gt;
 &lt;p&gt;이건&amp;nbsp;덤&amp;#8230;&lt;/p&gt;
 &lt;p&gt;vim에서 사용하는 색이름과 설정값에 대해서 확인할 수&amp;nbsp;있다.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim"&gt;Xterm256 color names for console&amp;nbsp;Vim&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 26 Apr 2016 22:04:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-04-26:2016/04/26/vim-colorcolumn-settings/</guid><category>vim</category><category>vimrc</category><category>colorcolumn</category><category>cc</category></item><item><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link>http://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</link><description>&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가&amp;nbsp;발생했다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim"&gt;Xterm256 color names for console&amp;nbsp;Vim&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 26 Apr 2016 22:04:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-04-26:2016/04/26/vim-colorcolumn-settings/</guid><category>vim</category><category>vimrc</category><category>colorcolumn</category><category>cc</category></item><item><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link>https://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</link><description>&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가&amp;nbsp;발생했다.&lt;/p&gt;
 &lt;p&gt;Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&amp;#8230; Ubuntu 16.04버전이 4.4.0&amp;#8230; 그래서 백포트하고, 드라이버를 옮겨주는것으로&amp;nbsp;해결.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation&lt;/a&gt; 에서 말하는 작업을&amp;nbsp;설치해주면된다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install build-essential linux-headers-&lt;span class="k"&gt;$(&lt;/span&gt;uname -r&lt;span class="k"&gt;)&lt;/span&gt; git
@@ -416,7 +504,7 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
 &lt;p&gt;그리고&amp;nbsp;하나더&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이건 위에껄 하고 안되면 추가해주도록&amp;nbsp;하자.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; blacklist ideapad_laptop &lt;span class="p"&gt;|&lt;/span&gt; sudo tee /etc/modprobe.d/blacklist.conf
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 22 Apr 2016 22:59:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-04-22:2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</guid><category>lenovo</category><category>ubuntu</category><category>qualcomm</category><category>driver</category><category>wireless</category><category>16.04</category></item><item><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link>http://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/</link><description>&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;#8230; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;#8230; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&amp;nbsp;한다.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 22 Apr 2016 22:59:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-04-22:2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</guid><category>lenovo</category><category>ubuntu</category><category>qualcomm</category><category>driver</category><category>wireless</category><category>16.04</category></item><item><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link>https://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/</link><description>&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;#8230; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;#8230; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&amp;nbsp;한다.&lt;/p&gt;
 &lt;p&gt;참고는 &lt;a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/"&gt;15 Examples of How to Use New Advanced Package Tool (&lt;span class="caps"&gt;APT&lt;/span&gt;) in Ubuntu/Debian&lt;/a&gt; 을 사용함. 기본적으로 되는 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html"&gt;Ubuntu man&lt;/a&gt; 페이지는 끼고&amp;nbsp;살자&amp;#8230;&lt;/p&gt;
 &lt;h2 id="1"&gt;1. 패키지&amp;nbsp;설치&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install glances
@@ -516,7 +604,7 @@ sudo apt clean
 &lt;p&gt;&lt;code&gt;apt&lt;/code&gt; 사용법을 찾아서 작업하면 될것으로&amp;nbsp;보여짐.&lt;/p&gt;
 &lt;h2 id="_1"&gt;맺음&lt;/h2&gt;
 &lt;p&gt;동일한 명령어가 여러가지 존재하고 사용하는 방법에 따라 달라지는 것으로 보여지는데&amp;#8230;
-패키지 메니저가 &lt;code&gt;dpkg&lt;/code&gt;, &lt;code&gt;aptitude&lt;/code&gt;, &lt;code&gt;apt&lt;/code&gt;로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될&amp;nbsp;듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 17 Apr 2016 12:23:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-04-17:2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</guid><category>ubuntu</category><category>debian</category><category>apt</category><category>system</category></item><item><title>OpenStack New Project at 0321</title><link>http://ujuc.github.io/2016/03/27/openstack-new-project-at-0321/</link><description>&lt;p&gt;해당 내용 나온 곳 : &lt;a href="http://www.openstack.org/blog/2016/03/technical-committee-highlights-march-21-2016/"&gt;Technical Committee Highlights March 21,&amp;nbsp;2016&lt;/a&gt;&lt;/p&gt;
+패키지 메니저가 &lt;code&gt;dpkg&lt;/code&gt;, &lt;code&gt;aptitude&lt;/code&gt;, &lt;code&gt;apt&lt;/code&gt;로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될&amp;nbsp;듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 17 Apr 2016 12:23:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-04-17:2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</guid><category>ubuntu</category><category>debian</category><category>apt</category><category>system</category></item><item><title>OpenStack New Project at 0321</title><link>https://ujuc.github.io/2016/03/27/openstack-new-project-at-0321/</link><description>&lt;p&gt;해당 내용 나온 곳 : &lt;a href="http://www.openstack.org/blog/2016/03/technical-committee-highlights-march-21-2016/"&gt;Technical Committee Highlights March 21,&amp;nbsp;2016&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="dragonflow"&gt;Dragonflow&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/Dragonflow"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
@@ -561,7 +649,7 @@ sudo apt clean
 &lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/EC2API"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/openstack/ec2-api"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt; &lt;span class="caps"&gt;EC2&lt;/span&gt; and &lt;span class="caps"&gt;VPC&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; support in standalone service for&amp;nbsp;OpenStack.&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 27 Mar 2016 22:47:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-03-27:2016/03/27/openstack-new-project-at-0321/</guid><category>openstack</category><category>big tent</category></item><item><title>pysftp 간략 사용기</title><link>http://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/</link><description>&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 27 Mar 2016 22:47:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-03-27:2016/03/27/openstack-new-project-at-0321/</guid><category>openstack</category><category>big tent</category></item><item><title>pysftp 간략 사용기</title><link>https://ujuc.github.io/2016/02/29/pysftp-%EA%B0%84%EB%9E%B5-%EC%82%AC%EC%9A%A9%EA%B8%B0/</link><description>&lt;p&gt;처음 작성해놓은게 2013년 11월 달이다. 그때 사용한 것을 Evernote 정리중 확인하여 남겨뒀는데 새로 써야겠다. 다&amp;nbsp;바겼다.ㅡ.ㅡ&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;우선 이 패키지는 14년 5월 이후로 &lt;a href="https://pypi.python.org/pypi/pysftp"&gt;pypi 프로젝트&lt;/a&gt;에서는 업로드가 되고 있지 않으며, &lt;a href="https://bitbucket.org/dundeemt/pysftp"&gt;Project repo&lt;/a&gt;의 업로드는 이루워지고 있으며, 3.4까지 테스팅을 해봣단다. 파일만 올리기위해서 사용했던 라이브러리라 간단히 sftp를 이용하여 파일을 올리고 받기를 원한다면 괜찮을&amp;nbsp;듯.&lt;/p&gt;
 &lt;h2 id="package"&gt;Package&lt;/h2&gt;
 &lt;ol&gt;
@@ -588,7 +676,7 @@ sudo apt clean
 
 
 &lt;p&gt;이정도 주석 달다가 지웠다. 그것이 없어도 sftp를 사용하고 있다면 간단히 상요할 정도로 sftp 명령어에서 사용하는 내용들을&amp;nbsp;추가해놓았다.&lt;/p&gt;
-&lt;p&gt;아직 pypi 측으로 버전업된 것이 반영되지 않아 새버전을 사용하고 싶으면 레포로 가서 작업을 진행하는 것을&amp;nbsp;추천한다.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 29 Feb 2016 21:55:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</guid><category>python</category><category>sftp</category><category>lib</category></item><item><title>git-vendor</title><link>http://ujuc.github.io/2016/02/20/git-vender/</link><description>&lt;p&gt;brew 업그레이드하다가 &lt;code&gt;git-vender&lt;/code&gt;라는 확장 프로그램이 보였다. 이건 뭐하는 넘인지 궁금해서&amp;nbsp;정리한다.&lt;/p&gt;
+&lt;p&gt;아직 pypi 측으로 버전업된 것이 반영되지 않아 새버전을 사용하고 싶으면 레포로 가서 작업을 진행하는 것을&amp;nbsp;추천한다.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 29 Feb 2016 21:55:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-29:2016/02/29/pysftp-간략-사용기/</guid><category>python</category><category>sftp</category><category>lib</category></item><item><title>git-vendor</title><link>https://ujuc.github.io/2016/02/20/git-vender/</link><description>&lt;p&gt;brew 업그레이드하다가 &lt;code&gt;git-vender&lt;/code&gt;라는 확장 프로그램이 보였다. 이건 뭐하는 넘인지 궁금해서&amp;nbsp;정리한다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git-vender&lt;/code&gt;는 git 명령어를 이용하여 vendor 소스를 관리할 수 있도록 도와주는 확장이다. &lt;code&gt;git-subtree&lt;/code&gt;를 이용해서 소스를 체크 아웃하고 업데이트된 내용들을 관리할 수 있도록&amp;nbsp;해준다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git-vendor&lt;/code&gt;는 golang에서 vendor 종속성을 관리하는 패턴에 따라서 작업을 진행한다고&amp;nbsp;한다.&lt;/p&gt;
 &lt;ul&gt;
@@ -657,7 +745,7 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/brettlangdon/git-vendor"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://brettlangdon.github.io/git-vendor/"&gt;Manpage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 20 Feb 2016 21:02:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-20:2016/02/20/git-vender/</guid><category>git</category><category>git-vendor</category><category>git-subtree</category><category>dependencies</category></item><item><title>1월 23일부터 2월 5일까지 OpenStack에서 나온 이야기들</title><link>http://ujuc.github.io/2016/02/16/1%EC%9B%94-23%EC%9D%BC%EB%B6%80%ED%84%B0-2%EC%9B%94-5%EC%9D%BC%EA%B9%8C%EC%A7%80-openstack%EC%97%90%EC%84%9C-%EB%82%98%EC%98%A8-%EC%9D%B4%EC%95%BC%EA%B8%B0%EB%93%A4/</link><description>&lt;p&gt;&lt;a href="http://www.openstack.org/blog/2016/02/openstack-developer-mailing-list-digest-20160205/"&gt;원&amp;nbsp;페이지&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 20 Feb 2016 21:02:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-20:2016/02/20/git-vender/</guid><category>git</category><category>git-vendor</category><category>git-subtree</category><category>dependencies</category></item><item><title>1월 23일부터 2월 5일까지 OpenStack에서 나온 이야기들</title><link>https://ujuc.github.io/2016/02/16/1%EC%9B%94-23%EC%9D%BC%EB%B6%80%ED%84%B0-2%EC%9B%94-5%EC%9D%BC%EA%B9%8C%EC%A7%80-openstack%EC%97%90%EC%84%9C-%EB%82%98%EC%98%A8-%EC%9D%B4%EC%95%BC%EA%B8%B0%EB%93%A4/</link><description>&lt;p&gt;&lt;a href="http://www.openstack.org/blog/2016/02/openstack-developer-mailing-list-digest-20160205/"&gt;원&amp;nbsp;페이지&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;철지난 소식이긴하지만 읽을 거리가 많아서&amp;nbsp;번역해둔다.&lt;/p&gt;
 &lt;h2 id="successbot-says"&gt;SuccessBot&amp;nbsp;Says&lt;/h2&gt;
 &lt;p&gt;역: 해당 파트는 무언가 릴리즈가되면 메일링으로 메일을 쏘아주는 사람들의 글들을 모아둔&amp;nbsp;것.&lt;/p&gt;
@@ -782,9 +870,9 @@ forge@v0.1.7:
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;먼가 번역을 하다보니 2주가 지났다&amp;#8230; 이런 내용들이 매주 업데이트가 되고있으니.. 언제 다 보나.ㅡ.ㅡ;; 따라가는 것도 힘들고. 몇몇 내용은 봐도&amp;nbsp;모르겠고.&lt;/p&gt;
-&lt;p&gt;그래도 봐야지 흐름이라도&amp;nbsp;알지&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 16 Feb 2016 21:48:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-16:2016/02/16/1월-23일부터-2월-5일까지-openstack에서-나온-이야기들/</guid><category>openstack</category><category>mailling</category><category>digest</category></item><item><title>Tig Manual</title><link>http://ujuc.github.io/2016/02/10/tig-manual/</link><description>&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
+&lt;p&gt;그래도 봐야지 흐름이라도&amp;nbsp;알지&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 16 Feb 2016 21:48:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-16:2016/02/16/1월-23일부터-2월-5일까지-openstack에서-나온-이야기들/</guid><category>openstack</category><category>mailling</category><category>digest</category></item><item><title>Tig Manual</title><link>https://ujuc.github.io/2016/02/10/tig-manual/</link><description>&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 &lt;span class="caps"&gt;GUI&lt;/span&gt; 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;#8230; 명령어가 많아질&amp;nbsp;뿐이다&amp;#8230;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/jonas/tig"&gt;Tig&amp;nbsp;Homepage&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tig snap" src="http://ujuc.github.io/img/2016-02-10_tig_snap.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tig snap" src="https://ujuc.github.io/img/2016-02-10_tig_snap.png" /&gt;&lt;/p&gt;
 &lt;p&gt;실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&amp;#8230; 그리고 한국어로 곧장 옮기니 이상한 부분이&amp;nbsp;있어&amp;#8230;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;a href="http://jonas.nitro.dk/tig/manual.html"&gt;The Tig&amp;nbsp;Manual&lt;/a&gt;&lt;/p&gt;
@@ -846,11 +934,11 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git-show&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="git-show" src="http://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="git-show" src="https://ujuc.github.io/img/2016-02-10_tig_1-1.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git-show | tig&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="git-show|tig" src="http://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="git-show|tig" src="https://ujuc.github.io/img/2016-02-10_tig_1-2.png" /&gt;&lt;/p&gt;
 &lt;h3 id="git-command-options-git"&gt;Git Command Options (Git 명령어&amp;nbsp;옵션)&lt;/h3&gt;
 &lt;p&gt;명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할&amp;nbsp;것입니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1069,55 +1157,55 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;m&lt;/code&gt; | 메인 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig main view" src="http://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig main view" src="https://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;d&lt;/code&gt; | diff 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig diff view" src="http://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig diff view" src="https://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;l&lt;/code&gt; | 로그 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig log view" src="http://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig log view" src="https://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;p&lt;/code&gt; | pager 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig parger view" src="http://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig parger view" src="https://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;t&lt;/code&gt; | 디렉토리 트리 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig tree view" src="http://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig tree view" src="https://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;f&lt;/code&gt; | 파일 blob 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig file blob view" src="http://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig file blob view" src="https://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;g&lt;/code&gt; | grep 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig grep view" src="http://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig grep view" src="https://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;b&lt;/code&gt; | blame 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig blame view" src="http://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig blame view" src="https://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;r&lt;/code&gt; | refs 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig refs view" src="http://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig refs view" src="https://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;y&lt;/code&gt; | stash 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig stash view" src="http://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig stash view" src="https://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;h&lt;/code&gt; | 도움말 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig help view" src="http://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig help view" src="https://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;s&lt;/code&gt; | status 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig status view" src="http://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig status view" src="https://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;c&lt;/code&gt; | stage 뷰로&amp;nbsp;전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig stage view" src="http://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig stage view" src="https://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /&gt;&lt;/p&gt;
 &lt;h3 id="view-manipulation"&gt;View Manipulation (뷰&amp;nbsp;조작)&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1521,10 +1609,10 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://jonas.nitro.dk/tig/tig.1.html"&gt;tig(1)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://jonas.nitro.dk/tig/tigrc.5.html"&gt;tigrc(5)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 10 Feb 2016 02:08:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-10:2016/02/10/tig-manual/</guid><category>tig</category></item><item><title>un~ 너는 뭐니?</title><link>http://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/</link><description>&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 10 Feb 2016 02:08:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-10:2016/02/10/tig-manual/</guid><category>tig</category></item><item><title>un~ 너는 뭐니?</title><link>https://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/</link><description>&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://vimhelp.appspot.com/vim_faq.txt.html#faq-7.2"&gt;Vimhelp -&amp;nbsp;faq-7.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;수정하고 저장할때마다 &lt;code&gt;un~&lt;/code&gt; 접미사가 붙은 파일이 생간다는 이야기에 대한 내용이다. undo 기능을 사용하기위해서 vim에서 사용하는 파일이라고 한다. 그래서 열었더니 이상한 것들만&amp;nbsp;보여줬구나&amp;#8230;&lt;/p&gt;
-&lt;p&gt;끄는 방법은 &lt;code&gt;:set noundofile&lt;/code&gt;을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은&amp;nbsp;지워야겠지만&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 03 Feb 2016 00:02:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-03:2016/02/03/un-너는-뭐니/</guid><category>vi</category><category>undo</category><category>vimrc</category></item><item><title>unattended-upgrade 써보자</title><link>http://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,
+&lt;p&gt;끄는 방법은 &lt;code&gt;:set noundofile&lt;/code&gt;을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은&amp;nbsp;지워야겠지만&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 03 Feb 2016 00:02:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-02-03:2016/02/03/un-너는-뭐니/</guid><category>vi</category><category>undo</category><category>vimrc</category></item><item><title>unattended-upgrade 써보자</title><link>https://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,
 그것에 대한 패치들도 많이 올라오고 있다. 사용하다가 서비스를 하고 있는 패키지들
 을 업데이트를 할 수는 없고 (서비스에서 사용하는 패키지의 경우엔.. 답이 없다. 
 했다가 무슨 소릴 들을지 모르기도하고 어디서 문제가 발생했는지 모르기도 하고)
@@ -1545,7 +1633,7 @@ forge@v0.1.7:
 
 
 &lt;p&gt;왠만해서는 &lt;code&gt;--dry-run&lt;/code&gt; 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는&amp;nbsp;않지&amp;#8230;&lt;/p&gt;
-&lt;p&gt;단점은 아직 1.0이 아니다. 그래서 그런지 외부로 출력되는게 없고, 전부 log파일로만&amp;nbsp;나온다&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 29 Jan 2016 22:35:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-01-29:2016/01/29/unattended-upgrade-써보자/</guid><category>ubuntu</category><category>manage</category><category>upgrade</category><category>security</category><category>command</category></item><item><title>mysql 복제 오류</title><link>http://ujuc.github.io/2016/01/28/mysql-%EB%B3%B5%EC%A0%9C-%EC%98%A4%EB%A5%98/</link><description>&lt;p&gt;오랜만에 설정할 일이 있어서 RDS로 접속했더니&amp;#8230; &lt;span class="caps"&gt;RDS&lt;/span&gt; 인스턴스에서 error 이벤트가
+&lt;p&gt;단점은 아직 1.0이 아니다. 그래서 그런지 외부로 출력되는게 없고, 전부 log파일로만&amp;nbsp;나온다&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 29 Jan 2016 22:35:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-01-29:2016/01/29/unattended-upgrade-써보자/</guid><category>ubuntu</category><category>manage</category><category>upgrade</category><category>security</category><category>command</category></item><item><title>mysql 복제 오류</title><link>https://ujuc.github.io/2016/01/28/mysql-%EB%B3%B5%EC%A0%9C-%EC%98%A4%EB%A5%98/</link><description>&lt;p&gt;오랜만에 설정할 일이 있어서 RDS로 접속했더니&amp;#8230; &lt;span class="caps"&gt;RDS&lt;/span&gt; 인스턴스에서 error 이벤트가
 발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&amp;#8230; 여기서&amp;nbsp;문제가&amp;#8230;&lt;/p&gt;
 &lt;p&gt;RDS를 제외하고 관련 내용을 찾았더니, &lt;code&gt;my.cnf&lt;/code&gt; 파일에다가 뭘 넣고 수정하라고
 한다. 이렇게 할려면 RDS는 안된다. 명령어를 입력하라는 말도 있었다. 그런데&amp;#8230;
@@ -1555,9 +1643,9 @@ forge@v0.1.7:
 &lt;a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html"&gt;Amazon Relational Database Service - mysql_rds_skip_repl_error&lt;/a&gt;
 부분. 그냥 접근해서 &lt;code&gt;CALL mysql.rds_skip_repl_error&lt;/code&gt; 입력하면&amp;nbsp;된단다.&lt;/p&gt;
 &lt;p&gt;그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.
-mariadb를 사용하는게 정신 건강에&amp;nbsp;좋은&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 28 Jan 2016 01:10:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-01-28:2016/01/28/mysql-복제-오류/</guid><category>aws</category><category>rds</category><category>mysql</category><category>mariadb</category><category>replication</category></item><item><title>Stderr check in zshell</title><link>http://ujuc.github.io/2016/01/27/stderr-check-in-zshell/</link><description>&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서
+mariadb를 사용하는게 정신 건강에&amp;nbsp;좋은&amp;#8230;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 28 Jan 2016 01:10:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-01-28:2016/01/28/mysql-복제-오류/</guid><category>aws</category><category>rds</category><category>mysql</category><category>mariadb</category><category>replication</category></item><item><title>Stderr check in zshell</title><link>https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/</link><description>&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서
 쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가&amp;nbsp;출력된다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="stderr" src="http://ujuc.github.io/img/2016-01-26_shell_error.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="stderr" src="https://ujuc.github.io/img/2016-01-26_shell_error.png" /&gt;&lt;/p&gt;
 &lt;p&gt;은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로&amp;nbsp;늘어난다.&lt;/p&gt;
 &lt;p&gt;그래서 찾았다. 찾다보니 내가 무심코 사용했던 내용에대해 조금더 볼 기회가&amp;nbsp;생긴듯.&lt;/p&gt;
 &lt;p&gt;우선 Shell에서 기본 I/O 스트림을 통해서 나오는 값들에대해서 다음 숫자로 제어할
@@ -1594,26 +1682,26 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="ex1_1" src="http://ujuc.github.io/img/2016-01-26_ex1_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;요놈을 안나오게&amp;nbsp;해보자.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which go 1&amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="ex1_2" src="http://ujuc.github.io/img/2016-01-26_ex1_2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;오~~~&lt;/p&gt;
 &lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;#8230; 이건 설치가 되어있으니&amp;#8230;&amp;nbsp;없는걸로&amp;#8230;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which rbenv
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="ex2_1" src="http://ujuc.github.io/img/2016-01-26_ex2_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을&amp;nbsp;사용하면&amp;#8230;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which rbenv 1&amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="ex2_2" src="http://ujuc.github.io/img/2016-01-26_ex2_2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;음&amp;#8230; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸&amp;nbsp;막으라했더니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;그럼 Python에서는 어디로&amp;nbsp;나올까?&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
@@ -1640,14 +1728,14 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;p&gt;결국 내가 하고 싶은데로 안되는거네&amp;#8230;&amp;nbsp;이런!&lt;/p&gt;
 &lt;p&gt;다른 방법으로 찾아야지 뭐 별수 있나&amp;#8230; 그래도 이번에 건진건 저렇게 숫자를
 사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;#8230; 그정도면 1시간동안
-작업한 것에 대한 내용은&amp;nbsp;될듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 27 Jan 2016 00:57:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-01-27:2016/01/27/stderr-check-in-zshell/</guid><category>zsh</category><category>operation</category></item><item><title>`_vim_files: function definition files net found` on zsh</title><link>http://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</link><description>&lt;p&gt;아&amp;#8230; 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게&amp;nbsp;해야되지.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="error!" src="http://ujuc.github.io/img/2016-01-16_error.png" /&gt;&lt;/p&gt;
+작업한 것에 대한 내용은&amp;nbsp;될듯.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 27 Jan 2016 00:57:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-01-27:2016/01/27/stderr-check-in-zshell/</guid><category>zsh</category><category>operation</category></item><item><title>`_vim_files: function definition files net found` on zsh</title><link>https://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</link><description>&lt;p&gt;아&amp;#8230; 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게&amp;nbsp;해야되지.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="error!" src="https://ujuc.github.io/img/2016-01-16_error.png" /&gt;&lt;/p&gt;
 &lt;h3 id="_1"&gt;원인&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;zcompdump&lt;/code&gt; 때문이라고 하고, 이건 매번 문제가&amp;nbsp;있나보다.ㅡ.ㅡ;;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/robbyrussell/oh-my-zsh/issues/518"&gt;github/robbyrusell/oh-my-zsh/issues/518&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="_2"&gt;해결방법&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;rm ~/.zcompdump&lt;/code&gt;를 삭제하면 된다고&amp;#8230;
-그리고 꼭 하고 난뒤에 &lt;code&gt;exec zsh&lt;/code&gt;를 하도록&amp;nbsp;하자.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 16 Jan 2016 22:53:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-01-16:2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</guid><category>dev</category><category>zsh</category><category>vim</category></item><item><title>Git flow, GitHub flow, GitLab flow</title><link>http://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/</link><description>&lt;p&gt;회사에서  &lt;code&gt;git&lt;/code&gt;을 가지고서 버전관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. 
+그리고 꼭 하고 난뒤에 &lt;code&gt;exec zsh&lt;/code&gt;를 하도록&amp;nbsp;하자.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 16 Jan 2016 22:53:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2016-01-16:2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</guid><category>dev</category><category>zsh</category><category>vim</category></item><item><title>Git flow, GitHub flow, GitLab flow</title><link>https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/</link><description>&lt;p&gt;회사에서  &lt;code&gt;git&lt;/code&gt;을 가지고서 버전관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. 
 물론 새로운 프로젝트를 진행하면서 어떤 방법으로 진행하는 것이 맞는 것인지도 필요하기도 했고, 그러다가 &lt;a href=""&gt;이상한 모임 Slack&lt;/a&gt;에서 관련 이야기가 나오면서 커밋을 하기위한 방법론 중 하나인 &lt;code&gt;git-flow&lt;/code&gt;의 종류가 3가지나 된다는 것을 보고 이놈들의 다른 점이 무엇인지 어떤 방법에서 편한 것인지에 대한 내용을 확인하고&amp;nbsp;싶어졌다.&lt;/p&gt;
 &lt;h2 id="git-flow"&gt;&lt;a href="https://github.com/nvie/gitflow"&gt;Git&amp;nbsp;Flow&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -1789,7 +1877,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;li&gt;&lt;a href="https://www.nczonline.net/blog/2013/05/21/github-workflows-inside-of-a-company/"&gt;GitHub workflows inside of a&amp;nbsp;company&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://qiita.com/tkhm/items/cc7855d32d640687b43c"&gt;Git利用時のフローはどれを使うか&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The&amp;nbsp;gitworkflows(7)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 16 Dec 2015 08:50:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-12-16:2015/12/16/git-flow-github-flow-gitlab-flow/</guid><category>git</category><category>workflow</category><category>github</category><category>gitlab</category></item><item><title>git-town 사용해보자</title><link>http://ujuc.github.io/2015/10/26/git-town-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;아무런 생각없이 메일 온것을 확인중&amp;#8230; 발견한 &lt;a class="reference external" href="https://github.com/Originate/git-town"&gt;git-town&lt;/a&gt;&amp;#8230;&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 16 Dec 2015 08:50:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-12-16:2015/12/16/git-flow-github-flow-gitlab-flow/</guid><category>git</category><category>workflow</category><category>github</category><category>gitlab</category></item><item><title>git-town 사용해보자</title><link>https://ujuc.github.io/2015/10/26/git-town-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90/</link><description>&lt;p&gt;아무런 생각없이 메일 온것을 확인중&amp;#8230; 발견한 &lt;a class="reference external" href="https://github.com/Originate/git-town"&gt;git-town&lt;/a&gt;&amp;#8230;&lt;/p&gt;
 &lt;p&gt;솔직히 &lt;a class="reference external" href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&lt;/a&gt; 와 다른게 먼가 있을 것같아서 사용을 해볼려고 깔아뒀고,
 지금 작성하는 글도 브런치를 &lt;tt class="docutils literal"&gt;git town&lt;/tt&gt; 명령어중 하나를 사용해서 브런치를
 딴 후&amp;nbsp;작성중이다.&lt;/p&gt;
@@ -1819,7 +1907,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 폴더로 확인하는 편이 좋다. BDD로 테스트를 진행해서 해당 기능들이 어떻게 진행하고
 있는지를 그나마 보기 쉽게 되어있기&amp;nbsp;때문이다.&lt;/p&gt;
 &lt;p&gt;솔직히 내부 기능들이 Bash로 작성되어있어서 찾아다니기&amp;nbsp;힘들다&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 26 Oct 2015 01:11:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-10-26:2015/10/26/git-town-사용해보자/</guid><category>git</category><category>git-town</category><category>git plugins</category></item><item><title>Vim mouse mode</title><link>http://ujuc.github.io/2015/07/25/vim-mouse-mode/</link><description>&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 26 Oct 2015 01:11:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-10-26:2015/10/26/git-town-사용해보자/</guid><category>git</category><category>git-town</category><category>git plugins</category></item><item><title>Vim mouse mode</title><link>https://ujuc.github.io/2015/07/25/vim-mouse-mode/</link><description>&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&amp;nbsp;않았다.&lt;/p&gt;
 &lt;p&gt;그런데 얼마전부터 &lt;a class="reference external" href="http://neovim.io"&gt;NeoVim&lt;/a&gt; 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지&amp;#8230; 안그러면 또 안찾아볼 가능성이&amp;nbsp;높으니&amp;#8230;&lt;/p&gt;
 &lt;p&gt;마우스와 관련된 옵션은 &lt;tt class="docutils literal"&gt;mouse&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousefocus&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;moushide&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousemodel&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mouseshape&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousetime&lt;/tt&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
@@ -2053,7 +2141,7 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;p&gt;&lt;span class="caps"&gt;GUI&lt;/span&gt;, &lt;span class="caps"&gt;MS&lt;/span&gt;-&lt;span class="caps"&gt;DOS&lt;/span&gt;, Win32, Unix의 &lt;tt class="docutils literal"&gt;xterm&lt;/tt&gt; 에서만 사용 가능. 다중 클릭으로 인식할 수 있는 두 번째 클릭에 대한 msec의 최대 값을&amp;nbsp;정의함.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 15 Aug 2015 16:00:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-07-25:2015/07/25/vim-mouse-mode/</guid><category>vim</category><category>vi</category><category>vimrc</category><category>mouse</category><category>기본 설정</category></item><item><title>Cloud Native Computing Foundation</title><link>http://ujuc.github.io/2015/07/22/cncf-org/</link><description>&lt;p&gt;얼마 전 아시는 분께서 공유를 해주신 사이트&amp;#8230;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sat, 15 Aug 2015 16:00:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-07-25:2015/07/25/vim-mouse-mode/</guid><category>vim</category><category>vi</category><category>vimrc</category><category>mouse</category><category>기본 설정</category></item><item><title>Cloud Native Computing Foundation</title><link>https://ujuc.github.io/2015/07/22/cncf-org/</link><description>&lt;p&gt;얼마 전 아시는 분께서 공유를 해주신 사이트&amp;#8230;
 구글에서 &lt;a class="reference external" href="http://kubernetes.io/"&gt;Kubernetes&lt;/a&gt; v1.0을 공개하면서 &lt;a class="reference external" href="https://cncf.io/"&gt;Cloud Native Computing Foundation&lt;/a&gt; 와 함께 Container의 생태계를 만들어나갈 거라 전함. &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;여기의 목표(?) 미션은 현대 분산 시스템 환경에 특화된 새로운 컴퓨팅 패러다임을 생성하고 진행하는 데 있다고 한다. &lt;a class="footnote-reference" href="#id6" id="id2"&gt;[2]&lt;/a&gt; (무의식적으로 번역하고&amp;nbsp;있었다.;;)&lt;/p&gt;
 &lt;p&gt;또 번역하다가&amp;nbsp;때리치웠&amp;#8230;&lt;/p&gt;
@@ -2079,7 +2167,7 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 22 Jul 2015 22:36:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-07-22:2015/07/22/cncf-org/</guid><category>google</category><category>kubernetes</category><category>cloud</category><category>container</category></item><item><title>OpenStack 새로운 버전 매기기 변경</title><link>http://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/</link><description>&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 22 Jul 2015 22:36:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-07-22:2015/07/22/cncf-org/</guid><category>google</category><category>kubernetes</category><category>cloud</category><category>container</category></item><item><title>OpenStack 새로운 버전 매기기 변경</title><link>https://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/</link><description>&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
 톤 이메일 &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[1]&lt;/a&gt; 에서 보면 알 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;그리고 이것에 대한 자세한 내용은 &lt;a class="reference external" href="http://ttx.re/new-versioning.html"&gt;New OpenStack Component Versioning&lt;/a&gt; 에서 확인&amp;nbsp;하면된다.&lt;/p&gt;
 &lt;p&gt;언제부터인가 OpenStack 버전은 &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;YEAR&lt;/span&gt;.N&lt;/tt&gt; 으로 버전을 진행하고 있었고,  Kilo의 경우도
@@ -2108,7 +2196,7 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html"&gt;http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 28 Jun 2015 22:24:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</guid><category>openstack</category><category>versioning</category></item><item><title>CentOS 7 에서 zabbix-server 에러</title><link>http://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/</link><description>&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 28 Jun 2015 22:24:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-06-28:2015/06/28/openstack-새로운-버전-매기기-변경/</guid><category>openstack</category><category>versioning</category></item><item><title>CentOS 7 에서 zabbix-server 에러</title><link>https://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/</link><description>&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고&amp;nbsp;있는데.&lt;/p&gt;
 &lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;tt class="docutils literal"&gt;journal&lt;/tt&gt; 로 보여지는 것 말고도
 &lt;tt class="docutils literal"&gt;/var/log/zabbix&lt;/tt&gt; 가 보여서&amp;nbsp;확인했더니..&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;
@@ -2135,7 +2223,7 @@ $ sudo systemctl start zabbix-server
 &lt;/pre&gt;
 &lt;p&gt;작동되는 것을 확인할 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;이 글은 &lt;strong&gt;CentOS 7.1.1503&lt;/strong&gt; 버전, &lt;strong&gt;Zabbix 2.4.5&lt;/strong&gt; 버전에서 확인되었고 테스트되었다. 이후 버전에서는 관련 버그가&amp;nbsp;잡히길.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 14 Jun 2015 22:30:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-06-14:2015/06/14/centos-7-에서-zabbix-server-에러/</guid><category>zabbix</category><category>centos</category></item><item><title>Rocket.Chat 번역기</title><link>http://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/</link><description>&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 14 Jun 2015 22:30:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-06-14:2015/06/14/centos-7-에서-zabbix-server-에러/</guid><category>zabbix</category><category>centos</category></item><item><title>Rocket.Chat 번역기</title><link>https://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/</link><description>&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
 일링에 추가된 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat"&gt;Rocket.Chat&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;심심해서 코드 보던 중 발견한 &lt;tt class="docutils literal"&gt;i18n&lt;/tt&gt;. 클클클 번역이나 해야지 짧을 꺼야&amp;#8230; 그런 심보
 로 시작. 10분 만에 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt;&amp;nbsp;등록.&lt;/p&gt;
@@ -2148,7 +2236,7 @@ PR해줄 수 있느냐기에 신속하게 &lt;a class="reference external" href=
 을 보았고, PR을 뒤져보니 PR을 보내면 웬만해서는 받아주는 듯하여 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 부터 날리
 고 어떻게 할지 기다린 게 잘 된듯하다.
 뭐 이렇게 녹색 상자 한 칸 더 체우 는기지&amp;#8230;&amp;nbsp;ㅋㅋㅋㅋㅋ&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 02 Jun 2015 22:45:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</guid><category>자랑질</category><category>chat</category><category>rocketchat</category><category>번역</category><category>javascript</category><category>meteo</category></item><item><title>Edison pip install error</title><link>http://ujuc.github.io/2015/05/14/edison-pip-install-error/</link><description>&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 02 Jun 2015 22:45:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-06-02:2015/06/02/rocket.chat-번역기/</guid><category>자랑질</category><category>chat</category><category>rocketchat</category><category>번역</category><category>javascript</category><category>meteo</category></item><item><title>Edison pip install error</title><link>https://ujuc.github.io/2015/05/14/edison-pip-install-error/</link><description>&lt;p&gt;pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
 &lt;span class="c1"&gt;# pip install flask
 &lt;/span&gt;Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call las&lt;span class="o"&gt;)&lt;/span&gt;:
@@ -2173,7 +2261,7 @@ ImportError:No module named pkg_resources
 &lt;/dl&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 14 May 2015 01:39:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-05-14:2015/05/14/edison-pip-install-error/</guid><category>edison</category><category>pypi</category><category>pip</category><category>python</category><category>error</category></item><item><title>Edison 초기 설정</title><link>http://ujuc.github.io/2015/05/13/edison-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95/</link><description>&lt;div class="section" id="yocta-project-update"&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 14 May 2015 01:39:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-05-14:2015/05/14/edison-pip-install-error/</guid><category>edison</category><category>pypi</category><category>pip</category><category>python</category><category>error</category></item><item><title>Edison 초기 설정</title><link>https://ujuc.github.io/2015/05/13/edison-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95/</link><description>&lt;div class="section" id="yocta-project-update"&gt;
 &lt;h2&gt;Yocta Project&amp;nbsp;Update&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;무엇이든 처음 설정할때는 기본 OS먼저 업데이트를 해줘야된다. 최신 Yocta Project
@@ -2272,7 +2360,7 @@ src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 13 May 2015 22:46:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-05-13:2015/05/13/edison-초기-설정/</guid><category>edison</category><category>개발</category><category>embedded</category><category>임베디드</category><category>intel</category><category>iot</category></item><item><title>Status bar &amp; Title bar 숨기기</title><link>http://ujuc.github.io/2015/04/23/status-bar-&amp;-title-bar-%EC%88%A8%EA%B8%B0%EA%B8%B0/</link><description>&lt;p&gt;요즘 안드로이중이다. 오랜만에 했더니 봐야될께 많다. 특히 UI를 많이 안해서
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 13 May 2015 22:46:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-05-13:2015/05/13/edison-초기-설정/</guid><category>edison</category><category>개발</category><category>embedded</category><category>임베디드</category><category>intel</category><category>iot</category></item><item><title>Status bar &amp; Title bar 숨기기</title><link>https://ujuc.github.io/2015/04/23/status-bar-&amp;-title-bar-%EC%88%A8%EA%B8%B0%EA%B8%B0/</link><description>&lt;p&gt;요즘 안드로이중이다. 오랜만에 했더니 봐야될께 많다. 특히 UI를 많이 안해서
 그런가.. 감이 잘 안온다는&amp;nbsp;문제도&amp;#8230;&lt;/p&gt;
 &lt;p&gt;SplashActivity를 추가해줘야되는데. 안드로이드에서 뭘 알아야지.. 그냥 예제에 있는
 것들을 찾아서 변경해 추가를 했지만, 정리를 한번 해놔야되서&amp;#8230; 뭐 간단하게 구성은
@@ -2312,7 +2400,7 @@ ture)]&lt;/span&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 23 Apr 2015 01:25:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-04-23:2015/04/23/status-bar-&amp;-title-bar-숨기기/</guid><category>android</category><category>기본</category><category>난 모르겠다.</category></item><item><title>Odin is?</title><link>http://ujuc.github.io/2015/04/10/odin-is/</link><description>&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 23 Apr 2015 01:25:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-04-23:2015/04/23/status-bar-&amp;-title-bar-숨기기/</guid><category>android</category><category>기본</category><category>난 모르겠다.</category></item><item><title>Odin is?</title><link>https://ujuc.github.io/2015/04/10/odin-is/</link><description>&lt;p&gt;Mirantis 블로그를 보다보니&amp;#8230; Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
 source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라는 글이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
 자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
@@ -2322,7 +2410,7 @@ source, wants OpenStack&amp;#8217;s help to penetrate enterprise&lt;/a&gt; 라�
 &lt;p&gt;그냥 푸념이지만&amp;#8230; 분명 많은 곳에서 하고 있는 것같은데&amp;#8230; 파운데이션 후원사
 목록에는 아무도 없다는게&amp;#8230; 좀&amp;nbsp;그래&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은&amp;#8230; 오픈소스 프로젝트 기부에대한&amp;nbsp;푸념으로&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 10 Apr 2015 01:00:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>http://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 10 Apr 2015 01:00:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-04-10:2015/04/10/odin-is/</guid><category>openstack</category><category>cloud</category><category>parallels</category></item><item><title>백업 완료</title><link>https://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
@@ -2338,7 +2426,7 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워
 손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:57:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>http://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:57:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-04-03:2015/04/03/백업-완료/</guid><category>백업완료</category></item><item><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link>https://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;#8220;&lt;span class="caps"&gt;TI&lt;/span&gt;, 베터리 없는 IoT 커넥티비티 구현&amp;#8221; 이라는 뉴스가 올라왔다.
 뭔일인가 해서 봤더니만&amp;#8230; SimpleLink라는 초전력 플랫폼을 개발했다는&amp;nbsp;소리였다.&lt;/p&gt;
 &lt;p&gt;기본 코어는 &lt;span class="caps"&gt;ARM&lt;/span&gt;® Cortext®-M3 MCU를 사용했고, 플래시 / &lt;span class="caps"&gt;RAM&lt;/span&gt;, &lt;span class="caps"&gt;ADC&lt;/span&gt;, 이것 저것들을
 같이 묶은 것에 통신은 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bluetooth_low_energy"&gt;Bluetooth Low Energy(&lt;span class="caps"&gt;BLE&lt;/span&gt;)&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ZigBee"&gt;ZigBee®&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/6LoWPAN"&gt;6LoWPAN&lt;/a&gt;,
@@ -2365,12 +2453,12 @@ sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-
 &lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc1310"&gt;&lt;span class="caps"&gt;CC1310&lt;/span&gt;&lt;/a&gt; :&amp;nbsp;Sub-1GHz&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2620"&gt;&lt;span class="caps"&gt;CC2620&lt;/span&gt;&lt;/a&gt; : ZigBee &lt;span class="caps"&gt;RF4CE&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 23:05:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-16:2015/03/16/ti-lowpwoer-soc-release/</guid><category>ti</category><category>chip</category><category>iot</category><category>m3</category><category>arm</category><category>ble</category><category>low energy</category></item><item><title>xonsh?</title><link>http://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 23:05:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-16:2015/03/16/ti-lowpwoer-soc-release/</guid><category>ti</category><category>chip</category><category>iot</category><category>m3</category><category>arm</category><category>ble</category><category>low energy</category></item><item><title>xonsh?</title><link>https://ujuc.github.io/2015/03/16/xonsh/</link><description>&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python-ish, BASHwards-compatible shell language and command&amp;nbsp;prompt.라고&amp;#8230;&lt;/p&gt;
 &lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이&amp;#8230;
 그리고 기본이 3.4라&amp;#8230; 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
 기본으로 장착한 배포판의 경우엔&amp;nbsp;다르겠지만.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:23:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</guid><category>python</category><category>shell</category></item><item><title>sys.json</title><link>http://ujuc.github.io/2015/03/10/sys-json/</link><description>&lt;p&gt;&lt;a class="reference external" href="https://github.com/EricR/sys.json"&gt;EricR/sys.json&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Fri, 03 Apr 2015 00:23:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-16:2015/03/16/xonsh/</guid><category>python</category><category>shell</category></item><item><title>sys.json</title><link>https://ujuc.github.io/2015/03/10/sys-json/</link><description>&lt;p&gt;&lt;a class="reference external" href="https://github.com/EricR/sys.json"&gt;EricR/sys.json&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;좀 독특하다고&amp;nbsp;해야되나?&lt;/p&gt;
 &lt;p&gt;Golang을 이용해서 웹을 간단히 띄우고, &lt;tt class="docutils literal"&gt;proc&lt;/tt&gt; 를 이용해서 내용들을 불러와 &lt;span class="caps"&gt;JSON&lt;/span&gt;
 형태로 뽑아주도록&amp;nbsp;되어있다.&lt;/p&gt;
@@ -2381,7 +2469,7 @@ sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/nicolargo/glances"&gt;nicolargo/glances&lt;/a&gt; - Python으로 구성되어있으며, 서버 형식으로 API들을 뽑아 올
 수 있다. 물론 간단한 웹으로도&amp;nbsp;가능하다.&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 22:30:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-10:2015/03/10/sys-json/</guid><category>go</category><category>json</category><category>api</category></item><item><title>git-ftp로 ftp 클라이언트를!</title><link>http://ujuc.github.io/2015/03/04/git-ftp/</link><description>&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 22:30:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-10:2015/03/10/sys-json/</guid><category>go</category><category>json</category><category>api</category></item><item><title>git-ftp로 ftp 클라이언트를!</title><link>https://ujuc.github.io/2015/03/04/git-ftp/</link><description>&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
 이용해서 &lt;span class="caps"&gt;FTP&lt;/span&gt; 클라잉너트를&amp;nbsp;만들었다.&lt;/p&gt;
 &lt;p&gt;뭔짓이지&amp;#8230;&lt;/p&gt;
 &lt;p&gt;암튼&amp;#8230; 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;&amp;#8230; 역시 다른
@@ -2448,7 +2536,7 @@ $ brew install git-ftp
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>OpenStack rootwrap</title><link>http://ujuc.github.io/2015/03/04/openstack-rootwrap/</link><description>&lt;p&gt;OpenStack 프로젝트들에서 사용되는 것들 중&amp;#8230; &lt;strong&gt;root&lt;/strong&gt; 와 관련된 작업을
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 00:48:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-04:2015/03/04/git-ftp/</guid><category>git</category><category>ftp</category><category>shell</category><category>cli</category><category>bash</category></item><item><title>OpenStack rootwrap</title><link>https://ujuc.github.io/2015/03/04/openstack-rootwrap/</link><description>&lt;p&gt;OpenStack 프로젝트들에서 사용되는 것들 중&amp;#8230; &lt;strong&gt;root&lt;/strong&gt; 와 관련된 작업을
 진행해야하는 경우가 있다. 그럴때 사용하려고 만들어둔 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap"&gt;rootwrap&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Wiki에서는 이 &lt;a class="reference external" href="https://fnords.wordpress.com/2011/11/23/improving-nova-privilege-escalation-model-part-1/"&gt;블로그&lt;/a&gt; 에 작성된 문제를 해결하기 위해서 만들어졌다고&amp;nbsp;한다.&lt;/p&gt;
 &lt;p&gt;짧은 내기억으로는 간단한 팡리로만 존재했던 것같은데. (아닐 가능성 100%라논
@@ -2517,7 +2605,7 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 보면 된다. - &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes"&gt;Available Filter Classes&lt;/a&gt; 가 아닌걸로도 볼 수&amp;nbsp;있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 21:18:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-04:2015/03/04/openstack-rootwrap/</guid><category>openstack</category><category>oslo</category></item><item><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link>http://ujuc.github.io/2015/03/03/vim-to-ide/</link><description>&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 02 Apr 2015 21:18:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-04:2015/03/04/openstack-rootwrap/</guid><category>openstack</category><category>oslo</category></item><item><title>vim을 IDE처럼 만드는 법을 알아보자.</title><link>https://ujuc.github.io/2015/03/03/vim-to-ide/</link><description>&lt;p&gt;메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
 vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/jez/vim-as-an-ide"&gt;jez/vim-as-an-ide&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;뭐 특별한 것은 없어 보이지만, Vim을 설정하는 것들에대해 커밋을 통해서 작성해
@@ -2536,7 +2624,7 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 설치해서 사용은 하고 있지만&amp;#8230; 그렇게 많은 기능들을 다 사용하지 않는 이상&amp;#8230;
 조금씩 덜어내는 것도 필요할&amp;nbsp;듯.&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 23:52:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</guid><category>vim</category><category>vimrc</category><category>ide</category></item><item><title>timesheet.js??</title><link>http://ujuc.github.io/2015/03/02/timesheet-js/</link><description>&lt;p&gt;놀다 보니 이것저것 보는 것들도 많다. 그런것들이라도 간단히&amp;nbsp;적어둬야지&amp;#8230;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 23:52:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-03:2015/03/03/vim-to-ide/</guid><category>vim</category><category>vimrc</category><category>ide</category></item><item><title>timesheet.js??</title><link>https://ujuc.github.io/2015/03/02/timesheet-js/</link><description>&lt;p&gt;놀다 보니 이것저것 보는 것들도 많다. 그런것들이라도 간단히&amp;nbsp;적어둬야지&amp;#8230;&lt;/p&gt;
 &lt;p&gt;노트에다가 작성을 해놓고 넣어두는 것도 한 방법이지만, 봤을때 좋은거라 생각한다면
 그것으로 작업이 가능하지 않을까&amp;nbsp;하여&amp;#8230;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
@@ -2572,7 +2660,7 @@ vim에 관련된 내용이&amp;nbsp;올라왔다.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 22:21:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-02:2015/03/02/timesheet-js/</guid><category>javascript</category><category>js</category></item><item><title>Clojure 개발 환경 구축</title><link>http://ujuc.github.io/2015/03/01/clojure-development-env/</link><description>&lt;div class="section" id="id2"&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 22:21:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-02:2015/03/02/timesheet-js/</guid><category>javascript</category><category>js</category></item><item><title>Clojure 개발 환경 구축</title><link>https://ujuc.github.io/2015/03/01/clojure-development-env/</link><description>&lt;div class="section" id="id2"&gt;
 &lt;h2&gt;1.&amp;nbsp;개요&lt;/h2&gt;
 &lt;p&gt;Clojure를 공부하려하는데&amp;#8230; 이것 저것 작업을 하려하니 짧은 기억력으로는 계속
 봐야되는지라. 이렇게 작성을 해놔야 나중에 볼 듯하고, 또 어딘가에 넣어둔다고해도
@@ -2729,7 +2817,7 @@ lein repl
 &lt;dd&gt;emacs로 되어있는 부부만&amp;nbsp;제외했&amp;#8230;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:30:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-01:2015/03/01/clojure-development-env/</guid><category>clojure</category><category>개발 환경</category><category>lein</category></item><item><title>oh-my-vim 설치후 오류 (OSX)</title><link>http://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/</link><description>&lt;p&gt;&lt;a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim"&gt;oh-my-vim&lt;/a&gt; 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:30:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-03-01:2015/03/01/clojure-development-env/</guid><category>clojure</category><category>개발 환경</category><category>lein</category></item><item><title>oh-my-vim 설치후 오류 (OSX)</title><link>https://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/</link><description>&lt;p&gt;&lt;a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim"&gt;oh-my-vim&lt;/a&gt; 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
 변경하고 있긴하다만&amp;#8230;). 달라진게 없다. 좀 더 화려해지고 플러그인들로 인해서
 IDE급으로 에디터가 변경됐을 뿐이다. 단지 80라인 와랩이&amp;nbsp;필요했을뿐인데&amp;#8230;&lt;/p&gt;
 &lt;p&gt;암튼 그렇게 쓰다보니 실행할때마다 에러가&amp;nbsp;뜬다.&lt;/p&gt;
@@ -2750,7 +2838,7 @@ It requires &amp;quot;if_lua&amp;quot; enabled Vim(7.3.885 or above).
 $ brew install vim --with-cscope --with-lua --override-system-vim
 &lt;/pre&gt;
 &lt;p&gt;설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이&amp;nbsp;줄었다.!!!&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:14:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-26:2015/02/26/oh-my-vim-error-osx/</guid><category>vim</category><category>setting</category></item><item><title>Pycharm에서 iPython notebook 사용</title><link>http://ujuc.github.io/2015/02/23/using-ipython-notebook-on-pycharm/</link><description>&lt;p&gt;Pycharm iPython notebook 지원은 4.0에서부터 지원하기 시작했다. 아직 버전업이
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:14:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-26:2015/02/26/oh-my-vim-error-osx/</guid><category>vim</category><category>setting</category></item><item><title>Pycharm에서 iPython notebook 사용</title><link>https://ujuc.github.io/2015/02/23/using-ipython-notebook-on-pycharm/</link><description>&lt;p&gt;Pycharm iPython notebook 지원은 4.0에서부터 지원하기 시작했다. 아직 버전업이
 안됐으니&amp;nbsp;작년인듯&amp;#8230;&lt;/p&gt;
 &lt;p&gt;iPython을 설치하고 Pycharm에서 설치하려고 봤더니 제대로 돌아가질 않는다.
 그렇다고 오류가 보이지도 않아서 직접 터미널에서&amp;nbsp;쳤더니&amp;#8230;&lt;/p&gt;
@@ -2762,7 +2850,7 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
 작동하는 것이 입력하기도 쉽고 값들을 확인하면서 작성하기가 더 쉽게 되어있으니
 사용자가 알아서&amp;#8230; 나는&amp;nbsp;안쓸꺼임&amp;#8230;&lt;/p&gt;
 &lt;p&gt;아마 업데이트 하면&amp;#8230; 괜찮아질꺼야&amp;#8230;&amp;nbsp;그럴꺼야&amp;#8230;&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:07:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-23:2015/02/23/using-ipython-notebook-on-pycharm/</guid><category>pycharm</category><category>ipython</category><category>notebook</category></item><item><title>OpenStack Commit</title><link>http://ujuc.github.io/2015/02/13/openstack-commit/</link><description>&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Wed, 01 Apr 2015 21:07:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-23:2015/02/23/using-ipython-notebook-on-pycharm/</guid><category>pycharm</category><category>ipython</category><category>notebook</category></item><item><title>OpenStack Commit</title><link>https://ujuc.github.io/2015/02/13/openstack-commit/</link><description>&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer&amp;#8217;s Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
 그런데&amp;#8230;. 왜이리&amp;nbsp;어려운거지&amp;#8230;.&lt;/p&gt;
 &lt;p&gt;신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런&amp;#8230; 어렵지 않을
 것같아&amp;nbsp;시작&amp;#8230;&lt;/p&gt;
@@ -2894,7 +2982,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 까먹으니까 작성한&amp;nbsp;것이기도하지만&amp;#8230;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 22:29:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</guid><category>openstack</category><category>commit</category></item><item><title>RAM 리뷰에서 본 버전별 특성</title><link>http://ujuc.github.io/2015/02/09/RAM-reive/</link><description>&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;&lt;span class="caps"&gt;DDR4&lt;/span&gt; Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 22:29:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-13:2015/02/13/openstack-commit/</guid><category>openstack</category><category>commit</category></item><item><title>RAM 리뷰에서 본 버전별 특성</title><link>https://ujuc.github.io/2015/02/09/RAM-reive/</link><description>&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;&lt;span class="caps"&gt;DDR4&lt;/span&gt; Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
 &lt;span class="caps"&gt;ADATA&lt;/span&gt; and Crucial 에서 글이올라왔길레&amp;nbsp;봤는데&amp;#8230;&lt;/p&gt;
 &lt;p&gt;어떤분께서 그렇게 말씀하시던 RAM이 버전업되면서 달라지 내용과 다른 점이 보여서
 머릿속 내용을 업데이트하는 겸해서 작성해두는&amp;nbsp;내용이다.&lt;/p&gt;
@@ -2996,7 +3084,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 보여주는&amp;nbsp;것도&amp;#8230;&lt;/p&gt;
 &lt;p&gt;자세한건 기사내용을 보는 것이 더&amp;nbsp;좋은듯.&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 21:47:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-09:2015/02/09/RAM-reive/</guid><category>ram</category><category>hw</category><category>하드웨어</category></item><item><title>gitworkflows(7)에대한 이야기</title><link>http://ujuc.github.io/2015/02/02/gitworkflows7/</link><description>&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 21:47:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-09:2015/02/09/RAM-reive/</guid><category>ram</category><category>hw</category><category>하드웨어</category></item><item><title>gitworkflows(7)에대한 이야기</title><link>https://ujuc.github.io/2015/02/02/gitworkflows7/</link><description>&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
 이야기하면서 슬라이드 &lt;a class="footnote-reference" href="#id3" id="id1"&gt;[1]&lt;/a&gt; 를 하나&amp;nbsp;올려주셨다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The gitworkflows(7)&amp;nbsp;illustrated&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;정말 슬라이드를 이렇게까지 만들어주는건 정말 좋은듯. 특히 발표 당시에 그것을
@@ -3019,9 +3107,9 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 필요.&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 00:13:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</guid><category>git</category><category>workflow</category></item><item><title>단장 완료</title><link>http://ujuc.github.io/2015/01/31/%EB%8B%A8%EC%9E%A5-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;간단하게 작업을 진행해서 뭐 넣은 것 없는 그런페이지가&amp;nbsp;만들어진듯&amp;#8230;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 31 Mar 2015 00:13:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-02-02:2015/02/02/gitworkflows7/</guid><category>git</category><category>workflow</category></item><item><title>단장 완료</title><link>https://ujuc.github.io/2015/01/31/%EB%8B%A8%EC%9E%A5-%EC%99%84%EB%A3%8C/</link><description>&lt;p&gt;간단하게 작업을 진행해서 뭐 넣은 것 없는 그런페이지가&amp;nbsp;만들어진듯&amp;#8230;&lt;/p&gt;
 &lt;p&gt;여기다 아무리 무겁게 글을 써도 불러오는 속도가 빠르니 뭐 간다낳게 작성하기는&amp;nbsp;좋을듯.&lt;/p&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 30 Mar 2015 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-01-31:2015/01/31/단장-완료/</guid><category>시작</category></item><item><title>[Google Cloud Platfrom] Google Cloud Endpoints</title><link>http://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/</link><description>&lt;ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Mon, 30 Mar 2015 00:00:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2015-01-31:2015/01/31/단장-완료/</guid><category>시작</category></item><item><title>[Google Cloud Platfrom] Google Cloud Endpoints</title><link>https://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/</link><description>&lt;ul&gt;
 &lt;li&gt;App의 API를 구성하기 쉽도록 제공하는&amp;nbsp;서비스&lt;/li&gt;
 &lt;li&gt;Remote Procedure Call(&lt;span class="caps"&gt;RPC&lt;/span&gt;)를 이용하여 작업을 진행할 수 있도록&amp;nbsp;구성.&lt;/li&gt;
 &lt;/ul&gt;
@@ -3120,7 +3208,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 &lt;p&gt;http://endpoints-proto-datastore.appspot.com/&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 01 Mar 2016 00:38:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-11-14:2014/11/14/google-cloud-platform-google-cloud-endpoints/</guid><category>google</category><category>cloud</category><category>gcp</category><category>google cloud platform</category><category>google cloud endpoint</category></item><item><title>[Google App Engine] NDB - Properties</title><link>http://ujuc.github.io/2014/11/10/google-app-engine-ndb-properties/</link><description>&lt;ul&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Tue, 01 Mar 2016 00:38:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-11-14:2014/11/14/google-cloud-platform-google-cloud-endpoints/</guid><category>google</category><category>cloud</category><category>gcp</category><category>google cloud platform</category><category>google cloud endpoint</category></item><item><title>[Google App Engine] NDB - Properties</title><link>https://ujuc.github.io/2014/11/10/google-app-engine-ndb-properties/</link><description>&lt;ul&gt;
 &lt;li&gt;관련해서 한글로되 문서가 없어서 &lt;a href="https://cloud.google.com/appengine/docs/python/ndb/properties"&gt;2014/10/27일자 문서&lt;/a&gt;를 가지고서&amp;nbsp;정리하였다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;소개&lt;/h2&gt;
@@ -3275,7 +3363,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 &lt;li&gt;딱히 적을 내용도&amp;nbsp;없음.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 03 Mar 2016 21:47:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-11-10:2014/11/10/google-app-engine-ndb-properties/</guid><category>google</category><category>cloud</category><category>gcp</category><category>google cloud platform</category><category>ndb</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>http://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가&amp;#8230;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 03 Mar 2016 21:47:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-11-10:2014/11/10/google-app-engine-ndb-properties/</guid><category>google</category><category>cloud</category><category>gcp</category><category>google cloud platform</category><category>ndb</category></item><item><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link>https://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</link><description>&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가&amp;#8230;
 쓰던거 쓰자해서 &lt;tt class="docutils literal"&gt;nabi&lt;/tt&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&amp;nbsp;않는다.&lt;/p&gt;
 &lt;p&gt;그래서 조금 검색을 했더니&amp;#8230;
 &lt;tt class="docutils literal"&gt;gsettings get com.canonical.Unity.Panel &lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 라는 걸로 추가를
@@ -3299,7 +3387,7 @@ nabi가 트레이에 들어가게&amp;nbsp;된다.&lt;/p&gt;
 sudo apt-add-repository -r ppa:guran/systray-utopic
 sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get autoremove
 &lt;/pre&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 12 Apr 2015 14:12:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-11-09:2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</guid><category>linux</category><category>ubuntu</category><category>nabi</category><category>setting</category></item><item><title>[Python] Paramiko</title><link>http://ujuc.github.io/2014/04/07/python-paramiko/</link><description>&lt;p&gt;한글로된 글이 없어서 우선 내가 알아낸 곳과 사용한 곳까지 작성을&amp;nbsp;해둘려고한다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Sun, 12 Apr 2015 14:12:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-11-09:2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</guid><category>linux</category><category>ubuntu</category><category>nabi</category><category>setting</category></item><item><title>[Python] Paramiko</title><link>https://ujuc.github.io/2014/04/07/python-paramiko/</link><description>&lt;p&gt;한글로된 글이 없어서 우선 내가 알아낸 곳과 사용한 곳까지 작성을&amp;nbsp;해둘려고한다.&lt;/p&gt;
 &lt;h1 id="paramiko"&gt;&lt;a href="http://www.paramiko.org/"&gt;Paramiko&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Python 2.6+, 3.3+에서 사용할 수 있는 SSHv2&amp;nbsp;구현체이다.&lt;/li&gt;
@@ -3375,7 +3463,7 @@ sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get autoremove
 &lt;li&gt;&lt;a href="http://docs.paramiko.org/en/latest/index.html"&gt;Docs&amp;nbsp;paramiko&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Programming With Paramiko | Completely&amp;nbsp;Different&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://segfault.in/2010/03/paramiko-ssh-and-sftp-with-python/"&gt;Paramiko: &lt;span class="caps"&gt;SSH&lt;/span&gt; and &lt;span class="caps"&gt;SFTP&lt;/span&gt; With&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 03 Mar 2016 22:00:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-04-07:2014/04/07/python-paramiko/</guid><category>python</category><category>paramiko</category><category>ssh</category><category>lib</category></item><item><title>[Monitoring] SkwiSSH 설치 및 구성</title><link>http://ujuc.github.io/2014/02/28/skwissh-install-n-config/</link><description>&lt;h1 id="skwissh"&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;SkwiSSH&lt;/a&gt;&lt;/h1&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">ujuc</dc:creator><pubDate>Thu, 03 Mar 2016 22:00:00 +0900</pubDate><guid isPermaLink="false">tag:ujuc.github.io,2014-04-07:2014/04/07/python-paramiko/</guid><category>python</category><category>paramiko</category><category>ssh</category><category>lib</category></item><item><title>[Monitoring] SkwiSSH 설치 및 구성</title><link>https://ujuc.github.io/2014/02/28/skwissh-install-n-config/</link><description>&lt;h1 id="skwissh"&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;SkwiSSH&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여&amp;nbsp;구성해봤다.&lt;/p&gt;
 &lt;p&gt;코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 &lt;code&gt;setup.py&lt;/code&gt;를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가&amp;nbsp;발생한다.&lt;/p&gt;
 &lt;p&gt;그리고 외부 서버를 추가하기 위해서 &lt;code&gt;server_ip:22&lt;/code&gt;를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게&amp;nbsp;된다.&lt;/p&gt;

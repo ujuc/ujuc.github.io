@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+          <div class="row">
+            <nav class="nav nav-inline">
+                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+            </nav>
+          </div>
+          <div class="row">
+  <meta name="keywords" content="json, api, specification, json api, 스펙 문서">
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div id="site_article" class="container">
+      <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="https://ujuc.github.io/2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(3)/" class="h1"><span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0 (3) - Document Structure&nbsp;(3)</a></h1>
+    </div>
+    <div class="row article">
+      <p><i class="fa fa-flash"></i></p>
+      <div class="article_text">
+        <h2 id="52-resource-objects">5.2. 리소스 오브젝트 (Resource&nbsp;Objects)</h2>
+<hr />
+<p>“리소스 오브젝트”는 자원을 나타내는 데 사용되는 <span class="caps">JSON</span> API에&nbsp;표시됩니다.</p>
+<blockquote>
+<p>“Resource objects” appear in a <span class="caps">JSON</span> <span class="caps">API</span> document to represent&nbsp;resources.</p>
+</blockquote>
+<p>리소스 오브젝트는 적어도 다음 최상위 멤버가 포함되어 있어야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;&nbsp;:</p>
+<ul>
+<li><code>id</code></li>
+<li><code>type</code></li>
+</ul>
+<blockquote>
+<p>A resource object <strong><span class="caps">MUST</span></strong> contain at least the following top-level&nbsp;members:</p>
+<ul>
+<li><code>id</code></li>
+<li><code>type</code></li>
+</ul>
+</blockquote>
+<p>예외: 리소스 오브젝트가 클라이언트에서 고안되고, 서버에서 생성된 새로운 리소스를 나타낼 때는 <code>id</code> 멤버는 필요하지&nbsp;않습니다.</p>
+<blockquote>
+<p>Exception: The <code>id</code> member is not required when the resource object originates at the client and represents a new resource to be created on the&nbsp;server.</p>
+</blockquote>
+<p>추가로 리소스 오브젝트는 다음 최상위 멤버 중 하나가 포함될 수도 있습니다. &lt;<strong><span class="caps">MAY</span></strong>&gt;&nbsp;:</p>
+<ul>
+<li><code>attributes</code>: <a href="http://jsonapi.org/format/#document-resource-object-attributes">attributes object</a>는 리소스 데이터 일부를&nbsp;나타냅니다.</li>
+<li><code>relationships</code>: <a href="http://jsonapi.org/format/#document-resource-object-relationships">relationships object</a>는 리소스와 다른 <span class="caps">JSON</span> <span class="caps">API</span> 리소스간 관계를&nbsp;표현합니다.</li>
+<li><code>links</code>: <a href="http://jsonapi.org/format/#document-links">links object</a>는 리소스와 관련된 링크를&nbsp;포함합니다.</li>
+<li><code>meta</code>: <a href="http://jsonapi.org/format/#document-meta">meta object</a>는 속성과 관계로는 나타낼 수 없는 리소스에 대한 비표준 메타 정보를&nbsp;포함합니다.</li>
+</ul>
+<blockquote>
+<p>In addition, a resource object <strong><span class="caps">MAY</span></strong> contain any of these top-level&nbsp;members:</p>
+<ul>
+<li><code>attributes</code>: an <a href="http://jsonapi.org/format/#document-resource-object-attributes">attributes object</a> representing some of the resource’s&nbsp;data.</li>
+<li><code>relationships</code>: a <a href="http://jsonapi.org/format/#document-resource-object-relationships">relationships object</a> describing relationships between the resource and other <span class="caps">JSON</span> <span class="caps">API</span>&nbsp;resources.</li>
+<li><code>links</code>: a <a href="http://jsonapi.org/format/#document-links">links object</a> containing links related to the&nbsp;resource.</li>
+<li><code>meta</code>: a <a href="http://jsonapi.org/format/#document-meta">meta object</a> containing non-standard meta-information about a resource that can not be represented as an attribute or&nbsp;relationship.</li>
+</ul>
+</blockquote>
+<p>여기서 아티클(즉, “articles” 타입)이 문서에 표시될 수 있습니다. 그 방법은 다음과&nbsp;같습니다:</p>
+<blockquote>
+<p>Here’s how an article (i.e. a resource of type “articles”) might appear in a&nbsp;document:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// ...
+{
+ &quot;type&quot;: &quot;articles&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;attributes&quot;: {
+    &quot;title&quot;: &quot;Rails is Omakase&quot;
+  },
+  &quot;relationships&quot;: {
+    &quot;author&quot;: {
+      &quot;links&quot;: {
+        &quot;self&quot;: &quot;/articles/1/relationships/author&quot;,
+        &quot;related&quot;: &quot;/articles/1/author&quot;
+      },
+      &quot;data&quot;: { &quot;type&quot;: &quot;people&quot;, &quot;id&quot;: &quot;9&quot; }
+    }
+  }
+}
+    // ...
+</pre></div>
+      </div>
+      <p><i class="fa fa-hand-spock-o"></i></p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 16. 09. 17.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="https://ujuc.github.io/tag/json.html">json</a>
+,               <a href="https://ujuc.github.io/tag/api.html">api</a>
+,               <a href="https://ujuc.github.io/tag/specification.html">specification</a>
+,               <a href="https://ujuc.github.io/tag/json-api.html">json api</a>
+,               <a href="https://ujuc.github.io/tag/seupeg-munseo.html">스펙 문서</a>
+          </i>
+        </p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2016/09/17/json_api_specification_v1.0_(3)_-_document_structure_(3)/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
+      </article>
+    </div>
+
+    <div class="container">
+    </div>
+
+    <!-- Title -->
+    <div id="site_title" class="container">
+      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <div class="row">
+          <hr />
+          <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+        </div>
+        <div class="row">
+          <p>Anythink, Everythink!</p>
+        </div>
+        <div class="row">
+            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>    </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+</html>
