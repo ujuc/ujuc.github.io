@@ -93,3 +93,12 @@ MARKDOWN = {
     },
     'output_format': 'html5'
 }
+
+# Plugins
+PLUGIN_PATHS = [
+    './plugins/pelican-gist'
+]
+
+PLUGINS = [
+    'pelican_gist'
+]
