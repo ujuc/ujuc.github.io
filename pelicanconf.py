@@ -69,4 +69,27 @@ AUTHORS = {
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 # markdwon toc
-MD_EXTENSIONS = (['extra', 'toc', 'codehilite'])
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.extra': {},
+        'markdown.extensions.abbr': {},
+        'markdown.extensions.attr_list': {},
+        'markdown.extensions.def_list': {},
+        'markdown.extensions.fenced_code': {},
+        'markdown.extensions.footnotes': {},
+        'markdown.extensions.tables': {},
+        # 'markdown.extensions.start_strong': {},
+        'markdown.extensions.admonition': {},
+        'markdown.extensions.codehilite': {
+            'linenums': True
+        },
+        'markdown.extensions.headerid': {},
+        'markdown.extensions.meta': {},
+        'markdown.extensions.nl2br': {},
+        # 'markdown.extensions.sane_lists': {},
+        'markdown.extensions.smarty': {},
+        'markdown.extensions.toc': {},
+        # 'markdown.extensions.wikilinks': {}
+    },
+    'output_format': 'html5'
+}
