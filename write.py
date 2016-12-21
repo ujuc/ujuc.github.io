@@ -90,7 +90,7 @@ def edit_entry(title):
 
 
 if __name__ == '__main__':
-    opt = docopt(__doc__, version='write 0.1')
+    opt = docopt(__doc__, version='write 1.0')
 
     if opt['new']:
         if opt["-r"] or opt["--rst"]:
