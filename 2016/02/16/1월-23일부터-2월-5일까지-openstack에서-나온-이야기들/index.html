@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta name="author" content="ujuc">
   <meta name="description" content="Posts and writings by ujuc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,19 +44,20 @@
 </script>
 </head>
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 15px;">
       <header>
-        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-          <div class="row">
-            <nav class="nav nav-inline">
-                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-            </nav>
-          </div>
-          <div class="row">
-  <meta name="keywords" content="openstack, mailling, digest">
+        <div class="navbar navbar-static-top">
+          <div class="container-fluid">
+            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+              <div class="row">
+                <nav class="nav nav-inline">
+                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -103,15 +104,15 @@
 <li><span class="caps">API</span> 사용자에게 더 좋게 제공할 수 있으며, <a href="https://www.openstack.org/community/members/profile/1346">Dean Troyer</a>에 의하면 <span class="caps">API</span> 워킹 그룹과 같이 올바른 방향으로 갈 수 있도록&nbsp;선택해야합니다.</li>
 <li>엔트포인트와 <span class="caps">API</span> 서비스에 대한 기본 식별자(identifier)로서 서비스 타입은 잘 확립되어있고, 서비스 카탈로그가 제대로 작동하는 방법입니다. 서비스 타입에 따라 이동하는 방법이&nbsp;있어야합니다.</li>
 <li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/085145.html">service type vs. project name for use in&nbsp;headers</a></li>
-<li>역: 뭔가 짧게 줄인게 더 이해가&nbsp;안되네&#8230;</li>
+<li>역: 뭔가 짧게 줄인게 더 이해가&nbsp;안되네&hellip;</li>
 </ul>
 <h2 id="openstack-ansible-without-containers">OpenStack Ansible Without&nbsp;Containers</h2>
 <ul>
 <li>Gyorgy가 새로운 OpenStack installer로 GPLv3 라이센스로 Ansible을 사용해서 발표했으며 여기에는 컨테이너는&nbsp;빠져있다.</li>
 <li>이미 OpenStack에는 Ansible 프로젝트와 <a href="https://wiki.openstack.org/wiki/Kolla">Kolla</a> 가 있는데 왜 새로운 installer를 만들었을까?:<ul>
 <li>컨테이너에 불필요한 복잡성&nbsp;추가.</li>
-<li>패키지: pip 패키지와 배포판 패키지를 섞어 사용하고 있지 않음. 배포판 패키지는 init 스크립트, 적당한 시스템 사용자, 업그레이드 가능한 것들&#8230;이 포함되어있는 것을&nbsp;말함.</li>
-<li>Kevin Carter의 답장에서는 이 내용은 OpenStack Ansible 프로젝트에 포함되어있는 내용이라고&nbsp;발혔다고&#8230;</li>
+<li>패키지: pip 패키지와 배포판 패키지를 섞어 사용하고 있지 않음. 배포판 패키지는 init 스크립트, 적당한 시스템 사용자, 업그레이드 가능한 것들&hellip;이 포함되어있는 것을&nbsp;말함.</li>
+<li>Kevin Carter의 답장에서는 이 내용은 OpenStack Ansible 프로젝트에 포함되어있는 내용이라고&nbsp;발혔다고&hellip;</li>
 </ul>
 </li>
 <li>컨테이너를 사용하지 않고 동시에 모든 서비스를 업그레이드를 한뒤 하나의 컨트롤러를 업데이트 하는건 까다롭고 깨질수도 있습니다. 롤백도&nbsp;쉽구요.</li>
@@ -134,13 +135,13 @@
 <li>Mitaka 3: 2월 29일 - 3월 4일 ( 기능 프리징과 소프트 문자 프리징&nbsp;포함해서)</li>
 <li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085705.html">Release countdown for week R-8, Feb&nbsp;8-12</a></li>
 </ul>
-<h2 id="no-open-core-in-2016"><span class="dquo">&#8220;</span>No Open Core&#8221; in&nbsp;2016</h2>
+<h2 id="no-open-core-in-2016"><span class="dquo">&ldquo;</span>No Open Core&rdquo; in&nbsp;2016</h2>
 <ul>
-<li>OpenStack은 이름을 가지기 전, &#8220;four opens&#8221;라는 신념은 우리가 커뮤니티를 운영하는 방법을 정의하는데&nbsp;만들어졌습니다.</li>
-<li>OpenStack이 시작하였던 2010년, 우리는 제품 코어를 오픈소스화하는 방법으로 불편한 커뮤니티 에디션과 &#8220;엔터프라이즈 버전&#8221;으로 내놓는 다른 오픈소스 클라우드 플랫폼(Eucalyptus)과는&nbsp;달랐습니다.</li>
-<li>오늘날 우리는 &#8220;엔터프라이즈 에디션&#8221;을 할 수 없는 비영리 독립&nbsp;재단입니다.</li>
-<li>현재 화원사들은 아파치 라이센스인 업스트림 프로젝트 위에 &#8220;기업 제품&#8221;을 만들 수 있습니다. 일부는 고유 구성요소에서 기능들을 보여줘야되는 드라이버로&nbsp;되어있습니다.</li>
-<li>그럼 2016년 &#8220;not do open core&#8221;는 뭔가요? 어떤것은 가능하고 어떤것은 안되는&nbsp;것인가요?</li>
+<li>OpenStack은 이름을 가지기 전, &ldquo;four opens&rdquo;라는 신념은 우리가 커뮤니티를 운영하는 방법을 정의하는데&nbsp;만들어졌습니다.</li>
+<li>OpenStack이 시작하였던 2010년, 우리는 제품 코어를 오픈소스화하는 방법으로 불편한 커뮤니티 에디션과 &ldquo;엔터프라이즈 버전&rdquo;으로 내놓는 다른 오픈소스 클라우드 플랫폼(Eucalyptus)과는&nbsp;달랐습니다.</li>
+<li>오늘날 우리는 &ldquo;엔터프라이즈 에디션&rdquo;을 할 수 없는 비영리 독립&nbsp;재단입니다.</li>
+<li>현재 화원사들은 아파치 라이센스인 업스트림 프로젝트 위에 &ldquo;기업 제품&rdquo;을 만들 수 있습니다. 일부는 고유 구성요소에서 기능들을 보여줘야되는 드라이버로&nbsp;되어있습니다.</li>
+<li>그럼 2016년 &ldquo;not do open core&rdquo;는 뭔가요? 어떤것은 가능하고 어떤것은 안되는&nbsp;것인가요?</li>
 <li>Thierry Carrez는 OpenStack 공식 프로젝트들이 새롭게 변화하는 시간으로 받아 들일 것이라&nbsp;믿습니다.</li>
 <li>그것은 제품에 대한 모든 기능들을 오픈 소스로&nbsp;구현해야합니다.</li>
 <li>여러분이 모든 프로젝트를 사용하는 상용 기업의 독점 소프트웨어가 필요하다면, OpenStack 공식 프로젝트로 허용되지 않을 것입니다.<ul>
@@ -150,7 +151,7 @@
 <li>Doug Hellmann은 공식 OpenStack 프로젝트로 적용되는 <a href="https://review.openstack.org/#/c/273756/">Poppy</a>를 제출&nbsp;하였습니다.</li>
 <li>컨텐트 제공 네트워크의 렙퍼인데, 오픈소스 솔루션이&nbsp;없었스니다.</li>
 <li>공식 프로젝트가 될 수 있을까? 그럼 이게 오픈&nbsp;코어인가?</li>
-<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085855.html">&#8220;No Open Core&#8221; in&nbsp;2016</a></li>
+<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085855.html">&ldquo;No Open Core&rdquo; in&nbsp;2016</a></li>
 </ul>
 <h2 id="the-trouble-with-names">The Trouble with&nbsp;Names</h2>
 <ul>
@@ -167,7 +168,7 @@
 </li>
 <li>공통된 이름에 대한 저장소.<ul>
 <li>장점: 공통된 이름을 사용해서 어디서든 안전하게 사용할 수 있으며, 충돌에 대한 공포를 줄일 수&nbsp;있습니다.</li>
-<li>단점: 다른 논쟁점이 있을&nbsp;수도&#8230;</li>
+<li>단점: 다른 논쟁점이 있을&nbsp;수도&hellip;</li>
 </ul>
 </li>
 <li>커뮤니티의 사람들은 공통 이름을 가지고서 저장소를 만들기를 바라고 있다. 어쩌면 가버넌트 <a href="https://git.openstack.org/cgit/openstack/governance/tree/reference/projects.yaml">projects.yaml</a>에 있지&nbsp;않을까?</li>
@@ -185,18 +186,18 @@
 <li>Ekko는 Nova 인스턴스의 실시간 증분 블록 레벨 백업을 활용하는&nbsp;것.</li>
 </ul>
 </li>
-<li>Jay Pipes는 <span class="caps">REST</span> <span class="caps">API</span> 엔드포인트가 중복되는지 확인하기위한 것과 두개의 프로젝트(Freezer와 Ekko)에 대해서 논의를 시작함. 거의 동일한 백업을 수행하기위해 두개의 API를 가지는 것은 좋지&nbsp;않다고&#8230;</li>
-<li>Ekko 젝작자는 다른 백업 프로젝트와 동일한 API를 호출할 경우에도 &#8220;실제 구현체와 최종 결과물은 완전히다르다&#8221;고&nbsp;밝혔다.</li>
+<li>Jay Pipes는 <span class="caps">REST</span> <span class="caps">API</span> 엔드포인트가 중복되는지 확인하기위한 것과 두개의 프로젝트(Freezer와 Ekko)에 대해서 논의를 시작함. 거의 동일한 백업을 수행하기위해 두개의 API를 가지는 것은 좋지&nbsp;않다고&hellip;</li>
+<li>Ekko 젝작자는 다른 백업 프로젝트와 동일한 API를 호출할 경우에도 &ldquo;실제 구현체와 최종 결과물은 완전히다르다&rdquo;고&nbsp;밝혔다.</li>
 <li>Jay는 다음 엔트포인트가 존재하는 지금을 이해할 수&nbsp;없다고:</li>
 <li>Freezer <code>/backups</code></li>
 <li>Cinder <code>/{tenant_id}/backups</code></li>
-<li>이 엔드포인트로 나쁜 사용자 경험을 만들어 혼란을 마들고&nbsp;있다고&#8230;</li>
+<li>이 엔드포인트로 나쁜 사용자 경험을 만들어 혼란을 마들고&nbsp;있다고&hellip;</li>
 <li>현재 거버넌스 모델에서는 프로젝트간 경쟁을 하길 바라지 않습니다. 두 프로젝트는 <span class="caps">API</span> 엔트포인트가 겹치는 경우, 논의를 하여 협력하는 방법으로&nbsp;나가야한다.</li>
-<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084739.html">Announcing Ekko &#8212; Scalable block-based backup for&nbsp;OpenStack</a></li>
+<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084739.html">Announcing Ekko &ndash; Scalable block-based backup for&nbsp;OpenStack</a></li>
 </ul>
-<hr />
-<p>먼가 번역을 하다보니 2주가 지났다&#8230; 이런 내용들이 매주 업데이트가 되고있으니.. 언제 다 보나.ㅡ.ㅡ;; 따라가는 것도 힘들고. 몇몇 내용은 봐도&nbsp;모르겠고.</p>
-<p>그래도 봐야지 흐름이라도&nbsp;알지&#8230;</p>
+<hr>
+<p>먼가 번역을 하다보니 2주가 지났다&hellip; 이런 내용들이 매주 업데이트가 되고있으니.. 언제 다 보나.ㅡ.ㅡ;; 따라가는 것도 힘들고. 몇몇 내용은 봐도&nbsp;모르겠고.</p>
+<p>그래도 봐야지 흐름이라도&nbsp;알지&hellip;</p>
       </div>
       <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
@@ -264,8 +265,7 @@
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
 </html>

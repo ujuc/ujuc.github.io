@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta name="author" content="ujuc">
   <meta name="description" content="Posts and writings by ujuc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,19 +44,20 @@
 </script>
 </head>
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 15px;">
       <header>
-        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-          <div class="row">
-            <nav class="nav nav-inline">
-                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-            </nav>
-          </div>
-          <div class="row">
-  <meta name="keywords" content="aws, rds, mysql, mariadb, replication">
+        <div class="navbar navbar-static-top">
+          <div class="container-fluid">
+            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+              <div class="row">
+                <nav class="nav nav-inline">
+                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -71,17 +72,17 @@
     <div class="row article">
       <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
-        <p>오랜만에 설정할 일이 있어서 RDS로 접속했더니&#8230; <span class="caps">RDS</span> 인스턴스에서 error 이벤트가
-발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&#8230; 여기서&nbsp;문제가&#8230;</p>
-<p>RDS를 제외하고 관련 내용을 찾았더니, <code>my.cnf</code> 파일에다가 뭘 넣고 수정하라고
-한다. 이렇게 할려면 RDS는 안된다. 명령어를 입력하라는 말도 있었다. 그런데&#8230;
-이넘의 RDS에서 사용자는 말그대로 사용자일 뿐이다. 어떠한 database에 대한 수정을
+        <p>오랜만에 설정할 일이 있어서 RDS로 접속했더니&hellip; <span class="caps">RDS</span> 인스턴스에서 error 이벤트가<br>
+발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&hellip; 여기서<br>&nbsp;문제가&hellip;</p>
+<p>RDS를 제외하고 관련 내용을 찾았더니, <code>my.cnf</code> 파일에다가 뭘 넣고 수정하라고<br>
+한다. 이렇게 할려면 RDS는 안된다. 명령어를 입력하라는 말도 있었다. 그런데&hellip;<br>
+이넘의 RDS에서 사용자는 말그대로 사용자일 뿐이다. 어떠한 database에 대한 수정을<br>
 가할 수 있는 권한 자체가 없다. 그 사용자 이름을 <code>root</code>로 했다고 해도&nbsp;말이다.</p>
-<p>결국.. 찾다 돌아온 곳은.
-<a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html">Amazon Relational Database Service - mysql_rds_skip_repl_error</a>
+<p>결국.. 찾다 돌아온 곳은.<br>
+<a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html">Amazon Relational Database Service - mysql_rds_skip_repl_error</a><br>
 부분. 그냥 접근해서 <code>CALL mysql.rds_skip_repl_error</code> 입력하면&nbsp;된단다.</p>
-<p>그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.
-mariadb를 사용하는게 정신 건강에&nbsp;좋은&#8230;</p>
+<p>그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.<br>
+mariadb를 사용하는게 정신 건강에&nbsp;좋은&hellip;</p>
       </div>
       <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
@@ -151,8 +152,7 @@ mariadb를 사용하는게 정신 건강에&nbsp;좋은&#8230;</p>
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
 </html>

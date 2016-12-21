@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/community.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2016-03-27T22:47:00+09:00</updated><entry><title>OpenStack New Project at 0321</title><link href="https://ujuc.github.io/2016/03/27/openstack-new-project-at-0321/" rel="alternate"></link><published>2016-03-27T22:47:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-03-27:2016/03/27/openstack-new-project-at-0321/</id><summary type="html">&lt;p&gt;해당 내용 나온 곳 : &lt;a href="http://www.openstack.org/blog/2016/03/technical-committee-highlights-march-21-2016/"&gt;Technical Committee Highlights March 21,&amp;nbsp;2016&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Community</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/community.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2016-03-27T22:47:00+09:00</updated><entry><title>OpenStack New Project at 0321</title><link href="https://ujuc.github.io/2016/03/27/openstack-new-project-at-0321/" rel="alternate"></link><published>2016-03-27T22:47:00+09:00</published><updated>2016-03-27T22:47:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-03-27:/2016/03/27/openstack-new-project-at-0321/</id><summary type="html">&lt;p&gt;이번에 새롭게 official project로 등록된&amp;nbsp;프로젝트들.&lt;/p&gt;</summary><content type="html">&lt;p&gt;해당 내용 나온 곳 : &lt;a href="http://www.openstack.org/blog/2016/03/technical-committee-highlights-march-21-2016/"&gt;Technical Committee Highlights March 21,&amp;nbsp;2016&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="dragonflow"&gt;Dragonflow&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/Dragonflow"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
@@ -44,7 +44,7 @@
 &lt;li&gt;&lt;a href="https://wiki.openstack.org/wiki/EC2API"&gt;Main&amp;nbsp;wiki&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/openstack/ec2-api"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class="caps"&gt;AWS&lt;/span&gt; &lt;span class="caps"&gt;EC2&lt;/span&gt; and &lt;span class="caps"&gt;VPC&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; support in standalone service for&amp;nbsp;OpenStack.&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="openstack"></category><category term="big tent"></category></entry><entry><title>1월 23일부터 2월 5일까지 OpenStack에서 나온 이야기들</title><link href="https://ujuc.github.io/2016/02/16/1%EC%9B%94-23%EC%9D%BC%EB%B6%80%ED%84%B0-2%EC%9B%94-5%EC%9D%BC%EA%B9%8C%EC%A7%80-openstack%EC%97%90%EC%84%9C-%EB%82%98%EC%98%A8-%EC%9D%B4%EC%95%BC%EA%B8%B0%EB%93%A4/" rel="alternate"></link><published>2016-02-16T21:48:00+09:00</published><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-16:2016/02/16/1월-23일부터-2월-5일까지-openstack에서-나온-이야기들/</id><summary type="html">&lt;p&gt;&lt;a href="http://www.openstack.org/blog/2016/02/openstack-developer-mailing-list-digest-20160205/"&gt;원&amp;nbsp;페이지&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><category term="openstack"></category><category term="big tent"></category></entry><entry><title>1월 23일부터 2월 5일까지 OpenStack에서 나온 이야기들</title><link href="https://ujuc.github.io/2016/02/16/1%EC%9B%94-23%EC%9D%BC%EB%B6%80%ED%84%B0-2%EC%9B%94-5%EC%9D%BC%EA%B9%8C%EC%A7%80-openstack%EC%97%90%EC%84%9C-%EB%82%98%EC%98%A8-%EC%9D%B4%EC%95%BC%EA%B8%B0%EB%93%A4/" rel="alternate"></link><published>2016-02-16T21:48:00+09:00</published><updated>2016-02-16T21:48:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-16:/2016/02/16/1월-23일부터-2월-5일까지-openstack에서-나온-이야기들/</id><summary type="html">&lt;p&gt;그냥 궁금해서 번역했는데 더 궁금해졌다. 메일링을&amp;nbsp;봐야되나&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://www.openstack.org/blog/2016/02/openstack-developer-mailing-list-digest-20160205/"&gt;원&amp;nbsp;페이지&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;철지난 소식이긴하지만 읽을 거리가 많아서&amp;nbsp;번역해둔다.&lt;/p&gt;
 &lt;h2 id="successbot-says"&gt;SuccessBot&amp;nbsp;Says&lt;/h2&gt;
 &lt;p&gt;역: 해당 파트는 무언가 릴리즈가되면 메일링으로 메일을 쏘아주는 사람들의 글들을 모아둔&amp;nbsp;것.&lt;/p&gt;
@@ -76,15 +76,15 @@
 &lt;li&gt;&lt;span class="caps"&gt;API&lt;/span&gt; 사용자에게 더 좋게 제공할 수 있으며, &lt;a href="https://www.openstack.org/community/members/profile/1346"&gt;Dean Troyer&lt;/a&gt;에 의하면 &lt;span class="caps"&gt;API&lt;/span&gt; 워킹 그룹과 같이 올바른 방향으로 갈 수 있도록&amp;nbsp;선택해야합니다.&lt;/li&gt;
 &lt;li&gt;엔트포인트와 &lt;span class="caps"&gt;API&lt;/span&gt; 서비스에 대한 기본 식별자(identifier)로서 서비스 타입은 잘 확립되어있고, 서비스 카탈로그가 제대로 작동하는 방법입니다. 서비스 타입에 따라 이동하는 방법이&amp;nbsp;있어야합니다.&lt;/li&gt;
 &lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/085145.html"&gt;service type vs. project name for use in&amp;nbsp;headers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;역: 뭔가 짧게 줄인게 더 이해가&amp;nbsp;안되네&amp;#8230;&lt;/li&gt;
+&lt;li&gt;역: 뭔가 짧게 줄인게 더 이해가&amp;nbsp;안되네&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="openstack-ansible-without-containers"&gt;OpenStack Ansible Without&amp;nbsp;Containers&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Gyorgy가 새로운 OpenStack installer로 GPLv3 라이센스로 Ansible을 사용해서 발표했으며 여기에는 컨테이너는&amp;nbsp;빠져있다.&lt;/li&gt;
 &lt;li&gt;이미 OpenStack에는 Ansible 프로젝트와 &lt;a href="https://wiki.openstack.org/wiki/Kolla"&gt;Kolla&lt;/a&gt; 가 있는데 왜 새로운 installer를 만들었을까?:&lt;ul&gt;
 &lt;li&gt;컨테이너에 불필요한 복잡성&amp;nbsp;추가.&lt;/li&gt;
-&lt;li&gt;패키지: pip 패키지와 배포판 패키지를 섞어 사용하고 있지 않음. 배포판 패키지는 init 스크립트, 적당한 시스템 사용자, 업그레이드 가능한 것들&amp;#8230;이 포함되어있는 것을&amp;nbsp;말함.&lt;/li&gt;
-&lt;li&gt;Kevin Carter의 답장에서는 이 내용은 OpenStack Ansible 프로젝트에 포함되어있는 내용이라고&amp;nbsp;발혔다고&amp;#8230;&lt;/li&gt;
+&lt;li&gt;패키지: pip 패키지와 배포판 패키지를 섞어 사용하고 있지 않음. 배포판 패키지는 init 스크립트, 적당한 시스템 사용자, 업그레이드 가능한 것들&amp;hellip;이 포함되어있는 것을&amp;nbsp;말함.&lt;/li&gt;
+&lt;li&gt;Kevin Carter의 답장에서는 이 내용은 OpenStack Ansible 프로젝트에 포함되어있는 내용이라고&amp;nbsp;발혔다고&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;컨테이너를 사용하지 않고 동시에 모든 서비스를 업그레이드를 한뒤 하나의 컨트롤러를 업데이트 하는건 까다롭고 깨질수도 있습니다. 롤백도&amp;nbsp;쉽구요.&lt;/li&gt;
@@ -107,13 +107,13 @@
 &lt;li&gt;Mitaka 3: 2월 29일 - 3월 4일 ( 기능 프리징과 소프트 문자 프리징&amp;nbsp;포함해서)&lt;/li&gt;
 &lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085705.html"&gt;Release countdown for week R-8, Feb&amp;nbsp;8-12&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="no-open-core-in-2016"&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;No Open Core&amp;#8221; in&amp;nbsp;2016&lt;/h2&gt;
+&lt;h2 id="no-open-core-in-2016"&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;No Open Core&amp;rdquo; in&amp;nbsp;2016&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;OpenStack은 이름을 가지기 전, &amp;#8220;four opens&amp;#8221;라는 신념은 우리가 커뮤니티를 운영하는 방법을 정의하는데&amp;nbsp;만들어졌습니다.&lt;/li&gt;
-&lt;li&gt;OpenStack이 시작하였던 2010년, 우리는 제품 코어를 오픈소스화하는 방법으로 불편한 커뮤니티 에디션과 &amp;#8220;엔터프라이즈 버전&amp;#8221;으로 내놓는 다른 오픈소스 클라우드 플랫폼(Eucalyptus)과는&amp;nbsp;달랐습니다.&lt;/li&gt;
-&lt;li&gt;오늘날 우리는 &amp;#8220;엔터프라이즈 에디션&amp;#8221;을 할 수 없는 비영리 독립&amp;nbsp;재단입니다.&lt;/li&gt;
-&lt;li&gt;현재 화원사들은 아파치 라이센스인 업스트림 프로젝트 위에 &amp;#8220;기업 제품&amp;#8221;을 만들 수 있습니다. 일부는 고유 구성요소에서 기능들을 보여줘야되는 드라이버로&amp;nbsp;되어있습니다.&lt;/li&gt;
-&lt;li&gt;그럼 2016년 &amp;#8220;not do open core&amp;#8221;는 뭔가요? 어떤것은 가능하고 어떤것은 안되는&amp;nbsp;것인가요?&lt;/li&gt;
+&lt;li&gt;OpenStack은 이름을 가지기 전, &amp;ldquo;four opens&amp;rdquo;라는 신념은 우리가 커뮤니티를 운영하는 방법을 정의하는데&amp;nbsp;만들어졌습니다.&lt;/li&gt;
+&lt;li&gt;OpenStack이 시작하였던 2010년, 우리는 제품 코어를 오픈소스화하는 방법으로 불편한 커뮤니티 에디션과 &amp;ldquo;엔터프라이즈 버전&amp;rdquo;으로 내놓는 다른 오픈소스 클라우드 플랫폼(Eucalyptus)과는&amp;nbsp;달랐습니다.&lt;/li&gt;
+&lt;li&gt;오늘날 우리는 &amp;ldquo;엔터프라이즈 에디션&amp;rdquo;을 할 수 없는 비영리 독립&amp;nbsp;재단입니다.&lt;/li&gt;
+&lt;li&gt;현재 화원사들은 아파치 라이센스인 업스트림 프로젝트 위에 &amp;ldquo;기업 제품&amp;rdquo;을 만들 수 있습니다. 일부는 고유 구성요소에서 기능들을 보여줘야되는 드라이버로&amp;nbsp;되어있습니다.&lt;/li&gt;
+&lt;li&gt;그럼 2016년 &amp;ldquo;not do open core&amp;rdquo;는 뭔가요? 어떤것은 가능하고 어떤것은 안되는&amp;nbsp;것인가요?&lt;/li&gt;
 &lt;li&gt;Thierry Carrez는 OpenStack 공식 프로젝트들이 새롭게 변화하는 시간으로 받아 들일 것이라&amp;nbsp;믿습니다.&lt;/li&gt;
 &lt;li&gt;그것은 제품에 대한 모든 기능들을 오픈 소스로&amp;nbsp;구현해야합니다.&lt;/li&gt;
 &lt;li&gt;여러분이 모든 프로젝트를 사용하는 상용 기업의 독점 소프트웨어가 필요하다면, OpenStack 공식 프로젝트로 허용되지 않을 것입니다.&lt;ul&gt;
@@ -123,7 +123,7 @@
 &lt;li&gt;Doug Hellmann은 공식 OpenStack 프로젝트로 적용되는 &lt;a href="https://review.openstack.org/#/c/273756/"&gt;Poppy&lt;/a&gt;를 제출&amp;nbsp;하였습니다.&lt;/li&gt;
 &lt;li&gt;컨텐트 제공 네트워크의 렙퍼인데, 오픈소스 솔루션이&amp;nbsp;없었스니다.&lt;/li&gt;
 &lt;li&gt;공식 프로젝트가 될 수 있을까? 그럼 이게 오픈&amp;nbsp;코어인가?&lt;/li&gt;
-&lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085855.html"&gt;&amp;#8220;No Open Core&amp;#8221; in&amp;nbsp;2016&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085855.html"&gt;&amp;ldquo;No Open Core&amp;rdquo; in&amp;nbsp;2016&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="the-trouble-with-names"&gt;The Trouble with&amp;nbsp;Names&lt;/h2&gt;
 &lt;ul&gt;
@@ -140,7 +140,7 @@
 &lt;/li&gt;
 &lt;li&gt;공통된 이름에 대한 저장소.&lt;ul&gt;
 &lt;li&gt;장점: 공통된 이름을 사용해서 어디서든 안전하게 사용할 수 있으며, 충돌에 대한 공포를 줄일 수&amp;nbsp;있습니다.&lt;/li&gt;
-&lt;li&gt;단점: 다른 논쟁점이 있을&amp;nbsp;수도&amp;#8230;&lt;/li&gt;
+&lt;li&gt;단점: 다른 논쟁점이 있을&amp;nbsp;수도&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;커뮤니티의 사람들은 공통 이름을 가지고서 저장소를 만들기를 바라고 있다. 어쩌면 가버넌트 &lt;a href="https://git.openstack.org/cgit/openstack/governance/tree/reference/projects.yaml"&gt;projects.yaml&lt;/a&gt;에 있지&amp;nbsp;않을까?&lt;/li&gt;
@@ -158,15 +158,15 @@
 &lt;li&gt;Ekko는 Nova 인스턴스의 실시간 증분 블록 레벨 백업을 활용하는&amp;nbsp;것.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Jay Pipes는 &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 엔드포인트가 중복되는지 확인하기위한 것과 두개의 프로젝트(Freezer와 Ekko)에 대해서 논의를 시작함. 거의 동일한 백업을 수행하기위해 두개의 API를 가지는 것은 좋지&amp;nbsp;않다고&amp;#8230;&lt;/li&gt;
-&lt;li&gt;Ekko 젝작자는 다른 백업 프로젝트와 동일한 API를 호출할 경우에도 &amp;#8220;실제 구현체와 최종 결과물은 완전히다르다&amp;#8221;고&amp;nbsp;밝혔다.&lt;/li&gt;
+&lt;li&gt;Jay Pipes는 &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 엔드포인트가 중복되는지 확인하기위한 것과 두개의 프로젝트(Freezer와 Ekko)에 대해서 논의를 시작함. 거의 동일한 백업을 수행하기위해 두개의 API를 가지는 것은 좋지&amp;nbsp;않다고&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Ekko 젝작자는 다른 백업 프로젝트와 동일한 API를 호출할 경우에도 &amp;ldquo;실제 구현체와 최종 결과물은 완전히다르다&amp;rdquo;고&amp;nbsp;밝혔다.&lt;/li&gt;
 &lt;li&gt;Jay는 다음 엔트포인트가 존재하는 지금을 이해할 수&amp;nbsp;없다고:&lt;/li&gt;
 &lt;li&gt;Freezer &lt;code&gt;/backups&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Cinder &lt;code&gt;/{tenant_id}/backups&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;이 엔드포인트로 나쁜 사용자 경험을 만들어 혼란을 마들고&amp;nbsp;있다고&amp;#8230;&lt;/li&gt;
+&lt;li&gt;이 엔드포인트로 나쁜 사용자 경험을 만들어 혼란을 마들고&amp;nbsp;있다고&amp;hellip;&lt;/li&gt;
 &lt;li&gt;현재 거버넌스 모델에서는 프로젝트간 경쟁을 하길 바라지 않습니다. 두 프로젝트는 &lt;span class="caps"&gt;API&lt;/span&gt; 엔트포인트가 겹치는 경우, 논의를 하여 협력하는 방법으로&amp;nbsp;나가야한다.&lt;/li&gt;
-&lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084739.html"&gt;Announcing Ekko &amp;#8212; Scalable block-based backup for&amp;nbsp;OpenStack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084739.html"&gt;Announcing Ekko &amp;ndash; Scalable block-based backup for&amp;nbsp;OpenStack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;먼가 번역을 하다보니 2주가 지났다&amp;#8230; 이런 내용들이 매주 업데이트가 되고있으니.. 언제 다 보나.ㅡ.ㅡ;; 따라가는 것도 힘들고. 몇몇 내용은 봐도&amp;nbsp;모르겠고.&lt;/p&gt;
-&lt;p&gt;그래도 봐야지 흐름이라도&amp;nbsp;알지&amp;#8230;&lt;/p&gt;</summary><category term="openstack"></category><category term="mailling"></category><category term="digest"></category></entry></feed>
+&lt;hr&gt;
+&lt;p&gt;먼가 번역을 하다보니 2주가 지났다&amp;hellip; 이런 내용들이 매주 업데이트가 되고있으니.. 언제 다 보나.ㅡ.ㅡ;; 따라가는 것도 힘들고. 몇몇 내용은 봐도&amp;nbsp;모르겠고.&lt;/p&gt;
+&lt;p&gt;그래도 봐야지 흐름이라도&amp;nbsp;알지&amp;hellip;&lt;/p&gt;</content><category term="openstack"></category><category term="mailling"></category><category term="digest"></category></entry></feed>

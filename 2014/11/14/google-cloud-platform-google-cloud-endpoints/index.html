@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta name="author" content="ujuc">
   <meta name="description" content="Posts and writings by ujuc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,19 +44,20 @@
 </script>
 </head>
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 15px;">
       <header>
-        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-          <div class="row">
-            <nav class="nav nav-inline">
-                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-            </nav>
-          </div>
-          <div class="row">
-  <meta name="keywords" content="google, cloud, gcp, google cloud platform, google cloud endpoint">
+        <div class="navbar navbar-static-top">
+          <div class="container-fluid">
+            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+              <div class="row">
+                <nav class="nav nav-inline">
+                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -104,7 +105,7 @@
 <h2 id="_3">필요&nbsp;패키지</h2>
 <ul>
 <li><a href="https://github.com/GoogleCloudPlatform/endpoints-proto-datastore">endpoints-proto-datastore</a></li>
-<li>ProtoRPC 를 사용하지 않아도 된다고 함. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></li>
+<li>ProtoRPC 를 사용하지 않아도 된다고 함. <sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup></li>
 <li>지금은 NDB만 지원. 추후 DB지원은&nbsp;모르겠음.</li>
 <li>DB를 사용하려면 전부 분해하고 설정하는 것이 필요할 것으로&nbsp;보임.</li>
 </ul>
@@ -113,19 +114,45 @@
 <li><code>/_ah/spi/.*</code> URL은 <code>app.yaml</code> 파일에 하나만&nbsp;가능함.</li>
 <li>
 <p>여러 API를 사용하고 싶으면 <code>main.py</code> 에 일반 예제들처럼 API클래스를 생성하고 다음과 같이&nbsp;설정해주면됨.</p>
-<div class="codehilite"><pre><span></span><span class="c1"># app.yaml</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># app.yaml</span>
 <span class="o">-</span> <span class="n">url</span><span class="p">:</span> <span class="o">/</span><span class="n">_ah</span><span class="o">/</span><span class="n">spi</span><span class="o">/.*</span>
   <span class="n">script</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">application</span>
 
 <span class="c1"># main.py</span>
 <span class="n">application</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api_server</span><span class="p">([</span><span class="n">App1_api</span><span class="p">,</span> <span class="n">App2_api</span><span class="p">,</span> <span class="o">...</span><span class="p">])</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
 <p>하나의 API에 여러 클래스를 두고 싶다면 아래의 방법으로&nbsp;구성</p>
-<div class="codehilite"><pre><span></span><span class="c1"># API를 종류별로 나눔 </span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># API를 종류별로 나눔 </span>
 <span class="n">test_api_v1</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
 <span class="n">test1_api_v1</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test1&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
 
@@ -148,7 +175,7 @@
 
 <span class="n">application</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api_server</span><span class="p">([</span><span class="n">Hello</span><span class="p">,</span> <span class="n">Bye</span><span class="p">,</span> <span class="n">Todo</span><span class="p">,</span> <span class="n">Plan</span><span class="p">])</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 </ul>
@@ -156,18 +183,19 @@
 <ul>
 <li><code>project-id.appspot.com/_ah/api/explorer</code> 로 접근하여&nbsp;확인.</li>
 <li>업로드되어 표시되는 시간이 오래걸리니(최소 5분은 걸리는듯.) 올라갔는지 확인을 하려면 Google Developers Console에서 로그로&nbsp;확인하면된다.</li>
-<li>올라갔다면 아래와 같이 표시된다.<div class="codehilite"><pre><span></span>https://1-dot-project-id.appspot.com/_ah/api/test@v1.0 Saved
+<li>올라갔다면 아래와 같이 표시된다.<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>https://1-dot-project-id.appspot.com/_ah/api/test@v1.0 Saved
 https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 </pre></div>
-
+</td></tr></table>
 
 </li>
 </ul>
 <div class="footnote">
-<hr />
+<hr>
 <ol>
-<li id="fn:1">
-<p>http://endpoints-proto-datastore.appspot.com/&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li id="fn-1">
+<p>http://endpoints-proto-datastore.appspot.com/&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -240,8 +268,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
 </html>

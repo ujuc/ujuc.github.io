@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta name="author" content="ujuc">
   <meta name="description" content="Posts and writings by ujuc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,19 +44,20 @@
 </script>
 </head>
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 15px;">
       <header>
-        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-          <div class="row">
-            <nav class="nav nav-inline">
-                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-            </nav>
-          </div>
-          <div class="row">
-  <meta name="keywords" content="tig">
+        <div class="navbar navbar-static-top">
+          <div class="container-fluid">
+            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+              <div class="row">
+                <nav class="nav nav-inline">
+                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -71,11 +72,11 @@
     <div class="row article">
       <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
-        <p>Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 <span class="caps">GUI</span> 프로그램 못지않은 사용성을 보여주고 있다. 단지&#8230; 명령어가 많아질&nbsp;뿐이다&#8230;</p>
+        <p>Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 <span class="caps">GUI</span> 프로그램 못지않은 사용성을 보여주고 있다. 단지&hellip; 명령어가 많아질&nbsp;뿐이다&hellip;</p>
 <p><a href="https://github.com/jonas/tig">Tig&nbsp;Homepage</a></p>
-<p><img alt="Tig snap" src="https://ujuc.github.io/img/2016-02-10_tig_snap.png" /></p>
-<p>실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&#8230; 그리고 한국어로 곧장 옮기니 이상한 부분이&nbsp;있어&#8230;</p>
-<hr />
+<p><img alt="Tig snap" src="https://ujuc.github.io/img/2016-02-10_tig_snap.png"></p>
+<p>실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&hellip; 그리고 한국어로 곧장 옮기니 이상한 부분이&nbsp;있어&hellip;</p>
+<hr>
 <p><a href="http://jonas.nitro.dk/tig/manual.html">The Tig&nbsp;Manual</a></p>
 <p>이 문서는 Tig에 대한 메뉴얼이며, Tig는 Git에 대한 ncurses 기반의 텍스트 모드 인터페이스로 작성되었습니다. Tig는 Git 저장소의 변화를 확인하고 추가적으로 다양한 Git 명령에 대한 출력 내용을 확인할 수 있는 pager로 사용할 수 있습니다. Pager로 사용할 경우, stdin에서 입력을 표시하고, 생상을 추가할 수&nbsp;있습니다.</p>
 <p>저장소 확인용으로 사용할 경우, Tig는 기초적인 Git 명령을 사용하여 요약된 커밋 로그, 로그 메시지에서의 커밋 내용, diffstat, diff 와 같은 다양한 뷰를 이용하여 사용자에게&nbsp;보여줍니다.</p>
@@ -128,35 +129,35 @@
 <h3 id="pager-mode-pager">Pager Mode (Pager&nbsp;모드)</h3>
 <p>Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되고 pager 뷰는 stdin으로 들어온 데이터를 로딩하여 확인할 수 있습니다. Pager 모드는 다양한 Git 명령에 대한 출력값을 색상을 추가하여 확인할 수 있도록&nbsp;도와줍니다.</p>
 <p>예로 <code>git-show(1)</code> 명령에 대한 출력을 색상을 추가한 버전으로 보고&nbsp;싶다면:</p>
-<div class="codehilite"><pre><span></span>$ git show <span class="p">|</span> tig
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ git show <span class="p">|</span> tig
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li><code>git-show</code></li>
 </ul>
-<p><img alt="git-show" src="https://ujuc.github.io/img/2016-02-10_tig_1-1.png" /></p>
+<p><img alt="git-show" src="https://ujuc.github.io/img/2016-02-10_tig_1-1.png"></p>
 <ul>
 <li><code>git-show | tig</code></li>
 </ul>
-<p><img alt="git-show|tig" src="https://ujuc.github.io/img/2016-02-10_tig_1-2.png" /></p>
+<p><img alt="git-show|tig" src="https://ujuc.github.io/img/2016-02-10_tig_1-2.png"></p>
 <h3 id="git-command-options-git">Git Command Options (Git 명령어&nbsp;옵션)</h3>
 <p>명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할&nbsp;것입니다.</p>
 <blockquote>
 <p>주의: 메인 뷰에 대한 옵션을 지정하는 경우엔, 메인 뷰에서 사용하는 형식으로 자동 설정되는 <code>--pretty</code> 옵션을 사용할 수&nbsp;없습니다.</p>
 </blockquote>
 <p>커밋과 author, 커미터 정보를 모두 보여주는 방법에 대한&nbsp;예:</p>
-<div class="codehilite"><pre><span></span>$ tig show --pretty<span class="o">=</span>fuller
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig show --pretty<span class="o">=</span>fuller
 </pre></div>
-
+</td></tr></table>
 
 <p>Git 명령에 대해 지원되는 변경 옵션 지원에 대한 소개는 <a href="#5-revision-specification">지정 리버전</a> 섹션을 참조하세요. 특정 Git 명령 옵션에 대한 자세한 설명은 해당 명령의 맨 페이지를&nbsp;참조하세요.</p>
 <h2 id="2-the-viewer">2. The Viewer&nbsp;(뷰어)</h2>
 <p>디스플레이는 하나 이상의 뷰와 스크린으로 구성되어있으며, 맨 마지막 라인은 상태 윈도우로 사용됩니다. 기본 값은 한번에 하나의 뷰만을 보여줍니다. 하지만 메인과 로그 뷰로 나눠서 커밋 diff를 확인할 수&nbsp;있습니다.</p>
 <p>현재 라인이 커밋 라인일때, 로그 뷰에서 엔터키를 누르게되면 다음과 같은 명령이 실행되는 것과&nbsp;같습니다:</p>
-<div class="codehilite"><pre><span></span>commit 4d55caff4cc89335192f3e566004b4ceef572521
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>commit 4d55caff4cc89335192f3e566004b4ceef572521
 </pre></div>
-
+</td></tr></table>
 
 <p>뷰를 나눠서 볼 수 있는데, 로그 뷰는 윈도우 상단에, diff 뷰는 윈도우 하단에 위치시킬 수 있습니다. 탭을 눌러 두 뷰사이를 왔다갔다 할 수 있습니다. 로그 뷰만 보려면 <code>l</code>를 누르면&nbsp;됩니다.</p>
 <h3 id="views">Views&nbsp;(뷰)</h3>
@@ -171,7 +172,7 @@
 <dt>트리&nbsp;뷰</dt>
 <dd>디렉토리 목록을 트리로 표현하여 현재 리버전에대한 하위 디렉토리로 내려가며 확인하거나 올라오며 확인할 수 있으며 파일의 blob에 대해서도 확인이&nbsp;가능합니다.</dd>
 <dt>Blob&nbsp;뷰</dt>
-<dd>파일 내용이나 파일 이름에 대한 관련 데이터의 &#8220;blob&#8221;을&nbsp;보여줍니다.</dd>
+<dd>파일 내용이나 파일 이름에 대한 관련 데이터의 &ldquo;blob&rdquo;을&nbsp;보여줍니다.</dd>
 <dt>Blame&nbsp;뷰</dt>
 <dd>파일 내용의 주석이나 커밋에 대한 blam을&nbsp;보여줍니다.</dd>
 <dt>Refs&nbsp;뷰</dt>
@@ -195,74 +196,74 @@
 <table>
 <thead>
 <tr>
-<th>변수 값</th>
-<th>설명</th>
+<th align="left">변수 값</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>%(head)</code></td>
-<td>현재 보여지는 <code>haed</code> <span class="caps">ID</span>. 기본값은 <code>HEAD</code></td>
+<td align="left"><code>%(head)</code></td>
+<td align="left">현재 보여지는 <code>haed</code> <span class="caps">ID</span>. 기본값은 <code>HEAD</code></td>
 </tr>
 <tr>
-<td><code>%(commit)</code></td>
-<td>현재 선택된 커밋 <span class="caps">ID</span></td>
+<td align="left"><code>%(commit)</code></td>
+<td align="left">현재 선택된 커밋 <span class="caps">ID</span></td>
 </tr>
 <tr>
-<td><code>%(blob)</code></td>
-<td>현재 선택된 blob <span class="caps">ID</span></td>
+<td align="left"><code>%(blob)</code></td>
+<td align="left">현재 선택된 blob <span class="caps">ID</span></td>
 </tr>
 <tr>
-<td><code>%(branch)</code></td>
-<td>현재 선택된 브런치 이름</td>
+<td align="left"><code>%(branch)</code></td>
+<td align="left">현재 선택된 브런치 이름</td>
 </tr>
 <tr>
-<td><code>%(stash)</code></td>
-<td>현재 선택된 stash 이름</td>
+<td align="left"><code>%(stash)</code></td>
+<td align="left">현재 선택된 stash 이름</td>
 </tr>
 <tr>
-<td><code>%(directory)</code></td>
-<td>현재 트리 뷰에서 보여지는 위치, 루트 디렉토리일 경우, 빈칸으로 표시</td>
+<td align="left"><code>%(directory)</code></td>
+<td align="left">현재 트리 뷰에서 보여지는 위치, 루트 디렉토리일 경우, 빈칸으로 표시</td>
 </tr>
 <tr>
-<td><code>%(file)</code></td>
-<td>현재 선택된 파일</td>
+<td align="left"><code>%(file)</code></td>
+<td align="left">현재 선택된 파일</td>
 </tr>
 <tr>
-<td><code>%(lineno)</code></td>
-<td>현재 선택된 라인 번호. 기본 값은 <code>0</code></td>
+<td align="left"><code>%(lineno)</code></td>
+<td align="left">현재 선택된 라인 번호. 기본 값은 <code>0</code></td>
 </tr>
 <tr>
-<td><code>%(ref)</code></td>
-<td>참조에서 재공되는 blame 또는 정의되지 않았을 경우, <code>HEAD</code></td>
+<td align="left"><code>%(ref)</code></td>
+<td align="left">참조에서 재공되는 blame 또는 정의되지 않았을 경우, <code>HEAD</code></td>
 </tr>
 <tr>
-<td><code>%(revargs)</code></td>
-<td>명령 라인에서 리버전 인수 값</td>
+<td align="left"><code>%(revargs)</code></td>
+<td align="left">명령 라인에서 리버전 인수 값</td>
 </tr>
 <tr>
-<td><code>%(fileargs)</code></td>
-<td>명령 라인에서 파일 인수 값</td>
+<td align="left"><code>%(fileargs)</code></td>
+<td align="left">명령 라인에서 파일 인수 값</td>
 </tr>
 <tr>
-<td><code>%(cmdlineargs)</code></td>
-<td>명령 라인에서 다른 옵션 인자 값</td>
+<td align="left"><code>%(cmdlineargs)</code></td>
+<td align="left">명령 라인에서 다른 옵션 인자 값</td>
 </tr>
 <tr>
-<td><code>%(diffargs)</code></td>
-<td><code>diff-options</code>나 diff 뷰에 대한 <code>TIG_DIFF_OPTS</code>에서 사용되는 옵션</td>
+<td align="left"><code>%(diffargs)</code></td>
+<td align="left"><code>diff-options</code>나 diff 뷰에 대한 <code>TIG_DIFF_OPTS</code>에서 사용되는 옵션</td>
 </tr>
 <tr>
-<td><code>%(logargs)</code></td>
-<td>Blame 뷰에 대한 <code>blame-options</code>에서 사용된 옵션</td>
+<td align="left"><code>%(logargs)</code></td>
+<td align="left">Blame 뷰에 대한 <code>blame-options</code>에서 사용된 옵션</td>
 </tr>
 <tr>
-<td><code>%(mainargs)</code></td>
-<td>로그 뷰에 대한 <code>log-options</code>에서 사용된 옵션</td>
+<td align="left"><code>%(mainargs)</code></td>
+<td align="left">로그 뷰에 대한 <code>log-options</code>에서 사용된 옵션</td>
 </tr>
 <tr>
-<td><code>%(prompt)</code></td>
-<td>인자 값에 대한 프롬프트</td>
+<td align="left"><code>%(prompt)</code></td>
+<td align="left">인자 값에 대한 프롬프트</td>
 </tr>
 </tbody>
 </table>
@@ -270,50 +271,50 @@
 <ul>
 <li>
 <p>마지막 커밋에 대해 amend&nbsp;적용:</p>
-<div class="codehilite"><pre><span></span><span class="nb">bind</span> generic + !git commit --amend
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">bind</span> generic + !git commit --amend
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
 <p>크립 보드에서 커밋 <span class="caps">ID</span>&nbsp;복사:</p>
-<div class="codehilite"><pre><span></span><span class="nb">bind</span> generic <span class="m">9</span> !@sh -c <span class="s2">&quot;echo -n %(commit) | xclip -selection c&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">bind</span> generic <span class="m">9</span> !@sh -c <span class="s2">&quot;echo -n %(commit) | xclip -selection c&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
 <p>리뷰 즁 현재 커밋에서 사용된 노트&nbsp;추가/수정:</p>
-<div class="codehilite"><pre><span></span><span class="nb">bind</span> generic T !git notes edit %<span class="o">(</span>commit<span class="o">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">bind</span> generic T !git notes edit %<span class="o">(</span>commit<span class="o">)</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
 <p>Git 대화형으로 파일 내용에 세밀한 staging 추가&nbsp;입력:</p>
-<div class="codehilite"><pre><span></span><span class="nb">bind</span> generic I !git add -i %<span class="o">(</span>file<span class="o">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">bind</span> generic I !git add -i %<span class="o">(</span>file<span class="o">)</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
 <p>선택된 브런치의 최상위에서 현재 브런치로&nbsp;리배이스:</p>
-<div class="codehilite"><pre><span></span><span class="nb">bind</span> refs <span class="m">3</span> !git rebase -i %<span class="o">(</span>branch<span class="o">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">bind</span> refs <span class="m">3</span> !git rebase -i %<span class="o">(</span>branch<span class="o">)</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 </ul>
 <h3 id="title-windows">Title Windows (제목&nbsp;윈도우)</h3>
 <p>각 뷰는 뷰 이름에 대한 제목 윈도우를 가집니다. 가능하다면 현재 커밋 ID로도 나태낼 수 있으며, 뷰에서는 다음과 같이&nbsp;위치됩니다:</p>
-<div class="codehilite"><pre><span></span><span class="o">[</span>main<span class="o">]</span> c622eefaa485995320bc743431bae0d497b1d875 - commit <span class="m">1</span> of <span class="m">61</span> <span class="o">(</span>1%<span class="o">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">[</span>main<span class="o">]</span> c622eefaa485995320bc743431bae0d497b1d875 - commit <span class="m">1</span> of <span class="m">61</span> <span class="o">(</span>1%<span class="o">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>기본 값으로 현재 뷰의 제목은 굵은 폰트를 사용하여 강조됩니다. 긴 로딩이 있는 뷰의 경우(3초 이상), 로딩이 시작된 시간으로 부터의 시간이 추가되어&nbsp;보여집니다:</p>
-<div class="codehilite"><pre><span></span><span class="o">[</span>main<span class="o">]</span> 77d9e40fbcea3238015aea403e06f61542df9a31 - commit <span class="m">1</span> of <span class="m">779</span> <span class="o">(</span>0%<span class="o">)</span> 5s
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">[</span>main<span class="o">]</span> 77d9e40fbcea3238015aea403e06f61542df9a31 - commit <span class="m">1</span> of <span class="m">779</span> <span class="o">(</span>0%<span class="o">)</span> 5s
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="3-environment-variables">3. Environment Variables (환경&nbsp;변수)</h2>
 <p>Git 인터페이스에 관련된 몇가지 옵션을 환경 옵션을 통해 구성할 수&nbsp;있습니다.</p>
@@ -327,29 +328,29 @@
 </dl>
 <h3 id="repository-references">Repository References (저장소&nbsp;참조)</h3>
 <p>태그와 브런치 head가 참조하는 커밋은  <code>[</code>과 <code>]</code>에 둘러쌓여 참조 이름으로&nbsp;표시됩니다:</p>
-<div class="codehilite"><pre><span></span>2006-03-26 19:42 Petr Baudis         <span class="p">|</span> <span class="o">[</span>cogito-0.17.1<span class="o">]</span> Cogito 0.17.1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>2006-03-26 19:42 Petr Baudis         <span class="p">|</span> <span class="o">[</span>cogito-0.17.1<span class="o">]</span> Cogito 0.17.1
 </pre></div>
-
+</td></tr></table>
 
 <p>브런치가 보여지는 것을 제한하길 원한다면, 보여질 브런치의 이름이 <code>master</code>이거나 <code>feature/</code> 로 접두어로 시작하는 경우엔 다음과 같이 변수를 설정할 수&nbsp;있습니다:</p>
-<div class="codehilite"><pre><span></span>$ <span class="nv">TIG_LS_REMOTE</span><span class="o">=</span><span class="s2">&quot;git ls-remote . master feature/*&quot;</span> tig
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nv">TIG_LS_REMOTE</span><span class="o">=</span><span class="s2">&quot;git ls-remote . master feature/*&quot;</span> tig
 </pre></div>
-
+</td></tr></table>
 
 <p>또는 여러분의 환경에서 영구적으로 변수를 설하여 사용할 수&nbsp;있습니다.</p>
 <dl>
 <dt><code>TIG_LS_REMOTE</code></dt>
-<dd>모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 <code>git-ls-remote(1)</code> 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:<div class="codehilite"><pre><span></span>git ls-remote .
+<dd>모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 <code>git-ls-remote(1)</code> 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git ls-remote .
 </pre></div>
-
+</td></tr></table>
 
 </dd>
 </dl>
 <h3 id="diff-options-diff">Diff options (Diff&nbsp;옵션)</h3>
 <p>Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜와 같이 보길&nbsp;원한다면:</p>
-<div class="codehilite"><pre><span></span>$ <span class="nv">TIG_DIFF_OPTS</span><span class="o">=</span><span class="s2">&quot;--relative-date&quot;</span> tig
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nv">TIG_DIFF_OPTS</span><span class="o">=</span><span class="s2">&quot;--relative-date&quot;</span> tig
 </pre></div>
-
+</td></tr></table>
 
 <p>또는 여러분의 환경에서 영구적으로 변수를 설정하여 사용할 수&nbsp;있습니다.</p>
 <h2 id="4-default-keybindings">4. Default Keybindings (기본 키&nbsp;바인딩)</h2>
@@ -358,95 +359,95 @@
 <ul>
 <li><code>m</code> | 메인 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig main view" src="https://ujuc.github.io/img/2016-02-10_tig_2-1_main.png" /></p>
+<p><img alt="tig main view" src="https://ujuc.github.io/img/2016-02-10_tig_2-1_main.png"></p>
 <ul>
 <li><code>d</code> | diff 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig diff view" src="https://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png" /></p>
+<p><img alt="tig diff view" src="https://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png"></p>
 <ul>
 <li><code>l</code> | 로그 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig log view" src="https://ujuc.github.io/img/2016-02-10_tig_2-3_log.png" /></p>
+<p><img alt="tig log view" src="https://ujuc.github.io/img/2016-02-10_tig_2-3_log.png"></p>
 <ul>
 <li><code>p</code> | pager 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig parger view" src="https://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png" /></p>
+<p><img alt="tig parger view" src="https://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png"></p>
 <ul>
 <li><code>t</code> | 디렉토리 트리 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig tree view" src="https://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png" /></p>
+<p><img alt="tig tree view" src="https://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png"></p>
 <ul>
 <li><code>f</code> | 파일 blob 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig file blob view" src="https://ujuc.github.io/img/2016-02-10_tig_2-6_file.png" /></p>
+<p><img alt="tig file blob view" src="https://ujuc.github.io/img/2016-02-10_tig_2-6_file.png"></p>
 <ul>
 <li><code>g</code> | grep 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig grep view" src="https://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png" /></p>
+<p><img alt="tig grep view" src="https://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png"></p>
 <ul>
 <li><code>b</code> | blame 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig blame view" src="https://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png" /></p>
+<p><img alt="tig blame view" src="https://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png"></p>
 <ul>
 <li><code>r</code> | refs 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig refs view" src="https://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png" /></p>
+<p><img alt="tig refs view" src="https://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png"></p>
 <ul>
 <li><code>y</code> | stash 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig stash view" src="https://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png" /></p>
+<p><img alt="tig stash view" src="https://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png"></p>
 <ul>
 <li><code>h</code> | 도움말 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig help view" src="https://ujuc.github.io/img/2016-02-10_tig_2-11_help.png" /></p>
+<p><img alt="tig help view" src="https://ujuc.github.io/img/2016-02-10_tig_2-11_help.png"></p>
 <ul>
 <li><code>s</code> | status 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig status view" src="https://ujuc.github.io/img/2016-02-10_tig_2-12_status.png" /></p>
+<p><img alt="tig status view" src="https://ujuc.github.io/img/2016-02-10_tig_2-12_status.png"></p>
 <ul>
 <li><code>c</code> | stage 뷰로&nbsp;전환</li>
 </ul>
-<p><img alt="tig stage view" src="https://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png" /></p>
+<p><img alt="tig stage view" src="https://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png"></p>
 <h3 id="view-manipulation">View Manipulation (뷰&nbsp;조작)</h3>
 <table>
 <thead>
 <tr>
-<th>키</th>
-<th>동작</th>
+<th align="left">키</th>
+<th align="left">동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>q</code></td>
-<td>뷰를 닫는다. 여러뷰가 열려있다면, 뷰 스택 안에서 이전 뷰로 되돌아가게 된다. 마지막 뷰라면, Tig에서 나오게 됨. <code>Q</code>를 이용하면 모든 뷰를 닫는다.</td>
+<td align="left"><code>q</code></td>
+<td align="left">뷰를 닫는다. 여러뷰가 열려있다면, 뷰 스택 안에서 이전 뷰로 되돌아가게 된다. 마지막 뷰라면, Tig에서 나오게 됨. <code>Q</code>를 이용하면 모든 뷰를 닫는다.</td>
 </tr>
 <tr>
-<td>Enter</td>
-<td>이 키는 현재보고 있는 뷰에서 &#8220;상황에 맞게(context sensitive)&#8221; 동작합니다. 커밋줄에서의 로그 뷰나 메인 뷰일땐 뷰를 분활하여 커밋 diff를 보여줍니다. diff 뷰에서는 간단하게 한줄을 내리는데 사용됩니다.</td>
+<td align="left">Enter</td>
+<td align="left">이 키는 현재보고 있는 뷰에서 &ldquo;상황에 맞게(context sensitive)&rdquo; 동작합니다. 커밋줄에서의 로그 뷰나 메인 뷰일땐 뷰를 분활하여 커밋 diff를 보여줍니다. diff 뷰에서는 간단하게 한줄을 내리는데 사용됩니다.</td>
 </tr>
 <tr>
-<td>Tab</td>
-<td>다음 뷰로 전환</td>
+<td align="left">Tab</td>
+<td align="left">다음 뷰로 전환</td>
 </tr>
 <tr>
-<td><code>R</code></td>
-<td>현재 뷰를 리로드하거나 새로고침</td>
+<td align="left"><code>R</code></td>
+<td align="left">현재 뷰를 리로드하거나 새로고침</td>
 </tr>
 <tr>
-<td><code>O</code></td>
-<td>현재 뷰를 화면에 꽉차도록</td>
+<td align="left"><code>O</code></td>
+<td align="left">현재 뷰를 화면에 꽉차도록</td>
 </tr>
 <tr>
-<td>Up</td>
-<td>&#8220;상황에 맞게(context sensitive)&#8221; 작동하며, 한 줄 위로 이동합니다. 그러나 메인 뷰에서(split이나 전체 화면에서) diff 뷰를 열경우, 메인 뷰에서는 이전 커밋으로 커서를 변경하고 해당 diff 뷰를 보여주게 됩니다.</td>
+<td align="left">Up</td>
+<td align="left">&ldquo;상황에 맞게(context sensitive)&rdquo; 작동하며, 한 줄 위로 이동합니다. 그러나 메인 뷰에서(split이나 전체 화면에서) diff 뷰를 열경우, 메인 뷰에서는 이전 커밋으로 커서를 변경하고 해당 diff 뷰를 보여주게 됩니다.</td>
 </tr>
 <tr>
-<td>Down</td>
-<td><em>Up</em>과 동일하며 단지 아래로 내려갑니다.</td>
+<td align="left">Down</td>
+<td align="left"><em>Up</em>과 동일하며 단지 아래로 내려갑니다.</td>
 </tr>
 <tr>
-<td><code>,</code></td>
-<td>상위로 이동합니다. 트리 뷰에서는 상위 디렉토리로 이동하게 됩니다. blame 뷰에서는 상위 커밋에 대한 blame가 표시됩니다. 머지의 경우, 상위가 쿼리됩니다.</td>
+<td align="left"><code>,</code></td>
+<td align="left">상위로 이동합니다. 트리 뷰에서는 상위 디렉토리로 이동하게 됩니다. blame 뷰에서는 상위 커밋에 대한 blame가 표시됩니다. 머지의 경우, 상위가 쿼리됩니다.</td>
 </tr>
 </tbody>
 </table>
@@ -454,38 +455,38 @@
 <table>
 <thead>
 <tr>
-<th>키</th>
-<th>동작</th>
+<th align="left">키</th>
+<th align="left">동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>u</code></td>
-<td>파일 상태를 업데이트 합니다. Status 뷰에서는 다음 커밋에 대해 추가하지 않은 파일이나 stage 변경 파일에 대해서 추가할 수 있습니다.(<code>git-add &lt;filename&gt;</code>과 동일한 작업입니다.) Stage 뷰에서는 diff 청크 라인에서는 다음 커밋에 대한 청크만 stage 합니다. diff에 표시되는 모든 변화가 diff 청크 라인에서 stage 되지는 않습니다.</td>
+<td align="left"><code>u</code></td>
+<td align="left">파일 상태를 업데이트 합니다. Status 뷰에서는 다음 커밋에 대해 추가하지 않은 파일이나 stage 변경 파일에 대해서 추가할 수 있습니다.(<code>git-add &lt;filename&gt;</code>과 동일한 작업입니다.) Stage 뷰에서는 diff 청크 라인에서는 다음 커밋에 대한 청크만 stage 합니다. diff에 표시되는 모든 변화가 diff 청크 라인에서 stage 되지는 않습니다.</td>
 </tr>
 <tr>
-<td><code>M</code></td>
-<td><code>git-mergetool(1)</code>을 실행하여 머지되지 않은 파일을 해결합니다. 주의, 원하는 머지 도구를 사용하기 위해 초기 구성이 필요할 수 있습니다. 올바르게 작동하는지 확인하세요. <code>git-mergetool(1)</code>의 맨페이지를 확인하세요.</td>
+<td align="left"><code>M</code></td>
+<td align="left"><code>git-mergetool(1)</code>을 실행하여 머지되지 않은 파일을 해결합니다. 주의, 원하는 머지 도구를 사용하기 위해 초기 구성이 필요할 수 있습니다. 올바르게 작동하는지 확인하세요. <code>git-mergetool(1)</code>의 맨페이지를 확인하세요.</td>
 </tr>
 <tr>
-<td><code>!</code></td>
-<td>Unstage된 변경을 파일에서 체크아웃합니다. 마지막 커밋한 콘텐츠가 포함된 파일을 재설정합니다.</td>
+<td align="left"><code>!</code></td>
+<td align="left">Unstage된 변경을 파일에서 체크아웃합니다. 마지막 커밋한 콘텐츠가 포함된 파일을 재설정합니다.</td>
 </tr>
 <tr>
-<td><code>1</code></td>
-<td>Stage 싱글 diff 라인</td>
+<td align="left"><code>1</code></td>
+<td align="left">Stage 싱글 diff 라인</td>
 </tr>
 <tr>
-<td><code>@</code></td>
-<td>Stage 뷰에서 다음 청크로 이동</td>
+<td align="left"><code>@</code></td>
+<td align="left">Stage 뷰에서 다음 청크로 이동</td>
 </tr>
 <tr>
-<td><code>]</code></td>
-<td>diff 콘텍스트 확장</td>
+<td align="left"><code>]</code></td>
+<td align="left">diff 콘텍스트 확장</td>
 </tr>
 <tr>
-<td><code>[</code></td>
-<td>diff 콘텍스트 축소</td>
+<td align="left"><code>[</code></td>
+<td align="left">diff 콘텍스트 축소</td>
 </tr>
 </tbody>
 </table>
@@ -493,34 +494,34 @@
 <table>
 <thead>
 <tr>
-<th>키</th>
-<th>동작</th>
+<th align="left">키</th>
+<th align="left">동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>k</code></td>
-<td>커서 한 라인 위로 이동</td>
+<td align="left"><code>k</code></td>
+<td align="left">커서 한 라인 위로 이동</td>
 </tr>
 <tr>
-<td><code>j</code></td>
-<td>커서 한라인 아래로 이동</td>
+<td align="left"><code>j</code></td>
+<td align="left">커서 한라인 아래로 이동</td>
 </tr>
 <tr>
-<td>PgUp, <code>-</code>, <code>a</code></td>
-<td>커서 한 페이지 위로 이동</td>
+<td align="left">PgUp, <code>-</code>, <code>a</code></td>
+<td align="left">커서 한 페이지 위로 이동</td>
 </tr>
 <tr>
-<td>PgDown, Space</td>
-<td>커서 한 페이지 아래로 이동</td>
+<td align="left">PgDown, Space</td>
+<td align="left">커서 한 페이지 아래로 이동</td>
 </tr>
 <tr>
-<td>End</td>
-<td>마지막 라인으로 점프</td>
+<td align="left">End</td>
+<td align="left">마지막 라인으로 점프</td>
 </tr>
 <tr>
-<td>Home</td>
-<td>첫 라인으로 점프</td>
+<td align="left">Home</td>
+<td align="left">첫 라인으로 점프</td>
 </tr>
 </tbody>
 </table>
@@ -528,38 +529,38 @@
 <table>
 <thead>
 <tr>
-<th>키</th>
-<th>동작</th>
+<th align="left">키</th>
+<th align="left">동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Insert</td>
-<td>뷰 한 라인 위로 스크롤</td>
+<td align="left">Insert</td>
+<td align="left">뷰 한 라인 위로 스크롤</td>
 </tr>
 <tr>
-<td>Delete</td>
-<td>뷰 한 라인 아래로 스크롤</td>
+<td align="left">Delete</td>
+<td align="left">뷰 한 라인 아래로 스크롤</td>
 </tr>
 <tr>
-<td>ScrBack</td>
-<td>뷰 한 페이지 위로 스크롤</td>
+<td align="left">ScrBack</td>
+<td align="left">뷰 한 페이지 위로 스크롤</td>
 </tr>
 <tr>
-<td>ScrFwd</td>
-<td>뷰 한 페이지 아래로 스크롤</td>
+<td align="left">ScrFwd</td>
+<td align="left">뷰 한 페이지 아래로 스크롤</td>
 </tr>
 <tr>
-<td>Left</td>
-<td>뷰 한 컬럼 왼쪽으로 스크롤</td>
+<td align="left">Left</td>
+<td align="left">뷰 한 컬럼 왼쪽으로 스크롤</td>
 </tr>
 <tr>
-<td>Right</td>
-<td>뷰 한 컬럼 오른쪽으로 스크롤</td>
+<td align="left">Right</td>
+<td align="left">뷰 한 컬럼 오른쪽으로 스크롤</td>
 </tr>
 <tr>
-<td><code>|</code></td>
-<td>뷰 첫 칼럼으로 스크롤</td>
+<td align="left"><code>|</code></td>
+<td align="left">뷰 첫 칼럼으로 스크롤</td>
 </tr>
 </tbody>
 </table>
@@ -567,26 +568,26 @@
 <table>
 <thead>
 <tr>
-<th>키</th>
-<th>동작</th>
+<th align="left">키</th>
+<th align="left">동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>/</code></td>
-<td>뷰에서 검색. 열려진 프롬프트에서 정규식을 사용해서 찾을 수 있음.</td>
+<td align="left"><code>/</code></td>
+<td align="left">뷰에서 검색. 열려진 프롬프트에서 정규식을 사용해서 찾을 수 있음.</td>
 </tr>
 <tr>
-<td><code>?</code></td>
-<td>뷰에서 뒤에서부터 검색. 이것도 정규식 사용 가능.</td>
+<td align="left"><code>?</code></td>
+<td align="left">뷰에서 뒤에서부터 검색. 이것도 정규식 사용 가능.</td>
 </tr>
 <tr>
-<td><code>n</code></td>
-<td>현재 검색 정규식과 동일한 다음 검색</td>
+<td align="left"><code>n</code></td>
+<td align="left">현재 검색 정규식과 동일한 다음 검색</td>
 </tr>
 <tr>
-<td><code>N</code></td>
-<td>현재 검색 정규식과 동일한 이전 검색</td>
+<td align="left"><code>N</code></td>
+<td align="left">현재 검색 정규식과 동일한 이전 검색</td>
 </tr>
 </tbody>
 </table>
@@ -594,78 +595,78 @@
 <table>
 <thead>
 <tr>
-<th>키</th>
-<th>동작</th>
+<th align="left">키</th>
+<th align="left">동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>Q</code></td>
-<td>나가기</td>
+<td align="left"><code>Q</code></td>
+<td align="left">나가기</td>
 </tr>
 <tr>
-<td><code>&lt;C-L&gt;</code></td>
-<td>스크린 새로고침</td>
+<td align="left"><code>&lt;C-L&gt;</code></td>
+<td align="left">스크린 새로고침</td>
 </tr>
 <tr>
-<td><code>z</code></td>
-<td>모든 백그라운드 로딩 정지. 리버전 로그의 제한 없이 긴 히스토리를 가진 저장소에서 Tig를 사용할때 필요할 수 있습니다.</td>
+<td align="left"><code>z</code></td>
+<td align="left">모든 백그라운드 로딩 정지. 리버전 로그의 제한 없이 긴 히스토리를 가진 저장소에서 Tig를 사용할때 필요할 수 있습니다.</td>
 </tr>
 <tr>
-<td><code>v</code></td>
-<td>버전 확인</td>
+<td align="left"><code>v</code></td>
+<td align="left">버전 확인</td>
 </tr>
 <tr>
-<td><code>o</code></td>
-<td>옵션 메뉴 열기</td>
+<td align="left"><code>o</code></td>
+<td align="left">옵션 메뉴 열기</td>
 </tr>
 <tr>
-<td><code>#</code></td>
-<td>라인 번호 on/off</td>
+<td align="left"><code>#</code></td>
+<td align="left">라인 번호 on/off</td>
 </tr>
 <tr>
-<td><code>D</code></td>
-<td>날짜 표시 on/off/short/relative/local</td>
+<td align="left"><code>D</code></td>
+<td align="left">날짜 표시 on/off/short/relative/local</td>
 </tr>
 <tr>
-<td><code>A</code></td>
-<td>Author 표기 on/off/abbreviated/email/email 사용자 이름</td>
+<td align="left"><code>A</code></td>
+<td align="left">Author 표기 on/off/abbreviated/email/email 사용자 이름</td>
 </tr>
 <tr>
-<td><code>G</code></td>
-<td>리버전 그래프 시각화 on/off</td>
+<td align="left"><code>G</code></td>
+<td align="left">리버전 그래프 시각화 on/off</td>
 </tr>
 <tr>
-<td><code>~</code></td>
-<td>라인 그래프 모드 on/off</td>
+<td align="left"><code>~</code></td>
+<td align="left">라인 그래프 모드 on/off</td>
 </tr>
 <tr>
-<td><code>F</code></td>
-<td>참조 표시 on/off (태그, 브런치 이름)</td>
+<td align="left"><code>F</code></td>
+<td align="left">참조 표시 on/off (태그, 브런치 이름)</td>
 </tr>
 <tr>
-<td><code>W</code></td>
-<td>diff에 대한 공백 무시 on/off</td>
+<td align="left"><code>W</code></td>
+<td align="left">diff에 대한 공백 무시 on/off</td>
 </tr>
 <tr>
-<td><code>X</code></td>
-<td>커밋 <span class="caps">ID</span> 표시 on/off</td>
+<td align="left"><code>X</code></td>
+<td align="left">커밋 <span class="caps">ID</span> 표시 on/off</td>
 </tr>
 <tr>
-<td><code>%</code></td>
-<td>모든 diff 대신에 현재 선택한 파일에 대한 diff를 참조하기 위한 파일 필터링 on/off</td>
+<td align="left"><code>%</code></td>
+<td align="left">모든 diff 대신에 현재 선택한 파일에 대한 diff를 참조하기 위한 파일 필터링 on/off</td>
 </tr>
 <tr>
-<td><code>$</code></td>
-<td>커밋 제목 넘어감에 대한 강조표시 on/off</td>
+<td align="left"><code>$</code></td>
+<td align="left">커밋 제목 넘어감에 대한 강조표시 on/off</td>
 </tr>
 <tr>
-<td><code>:</code></td>
-<td>프롬프트 열기. 특정 명령어를 실행할 수 있도록 허용</td>
+<td align="left"><code>:</code></td>
+<td align="left">프롬프트 열기. 특정 명령어를 실행할 수 있도록 허용</td>
 </tr>
 <tr>
-<td><code>e</code></td>
-<td>에디터에서 파일 열기</td>
+<td align="left"><code>e</code></td>
+<td align="left">에디터에서 파일 열기</td>
 </tr>
 </tbody>
 </table>
@@ -673,46 +674,46 @@
 <table>
 <thead>
 <tr>
-<th>키</th>
-<th>동작</th>
+<th align="left">키</th>
+<th align="left">동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>:&lt;number&gt;</code></td>
-<td>특정 라인 번호로 점프. 예 <code>:80</code></td>
+<td align="left"><code>:&lt;number&gt;</code></td>
+<td align="left">특정 라인 번호로 점프. 예 <code>:80</code></td>
 </tr>
 <tr>
-<td><code>:&lt;sha&gt;</code></td>
-<td>특정 커밋으로 점프. 예 <code>:2f12bcc</code></td>
+<td align="left"><code>:&lt;sha&gt;</code></td>
+<td align="left">특정 커밋으로 점프. 예 <code>:2f12bcc</code></td>
 </tr>
 <tr>
-<td><code>:&lt;x&gt;</code></td>
-<td>일치하는 키 바인딩 실행. 예 <code>:q</code></td>
+<td align="left"><code>:&lt;x&gt;</code></td>
+<td align="left">일치하는 키 바인딩 실행. 예 <code>:q</code></td>
 </tr>
 <tr>
-<td><code>:!&lt;command&gt;</code></td>
-<td>Pager 내에서 시스템 명령어 실행. 예 <code>:!git log -p</code></td>
+<td align="left"><code>:!&lt;command&gt;</code></td>
+<td align="left">Pager 내에서 시스템 명령어 실행. 예 <code>:!git log -p</code></td>
 </tr>
 <tr>
-<td><code>:&lt;action&gt;</code></td>
-<td>Tig 명령 실행. 예 <code>:edit</code></td>
+<td align="left"><code>:&lt;action&gt;</code></td>
+<td align="left">Tig 명령 실행. 예 <code>:edit</code></td>
 </tr>
 <tr>
-<td><code>:save-display &lt;file&gt;</code></td>
-<td><code>&lt;file&gt;</code>에서 현재 화면 저장</td>
+<td align="left"><code>:save-display &lt;file&gt;</code></td>
+<td align="left"><code>&lt;file&gt;</code>에서 현재 화면 저장</td>
 </tr>
 <tr>
-<td><code>:save-options &lt;file&gt;</code></td>
-<td><code>&lt;file&gt;</code>에서 현재 옵션 저장</td>
+<td align="left"><code>:save-options &lt;file&gt;</code></td>
+<td align="left"><code>&lt;file&gt;</code>에서 현재 옵션 저장</td>
 </tr>
 <tr>
-<td><code>:script &lt;file&gt;</code></td>
-<td><code>&lt;file&gt;</code>로부터 명령어 실행</td>
+<td align="left"><code>:script &lt;file&gt;</code></td>
+<td align="left"><code>&lt;file&gt;</code>로부터 명령어 실행</td>
 </tr>
 <tr>
-<td><code>:exec &lt;flags&gt;&lt;args...&gt;</code></td>
-<td><code>&lt;flags&gt;</code>에 정의된 확장 사용자 정의 명령 옵션과 <code>&lt;args&gt;</code> 사용하여 명령 실행</td>
+<td align="left"><code>:exec &lt;flags&gt;&lt;args...&gt;</code></td>
+<td align="left"><code>&lt;flags&gt;</code>에 정의된 확장 사용자 정의 명령 옵션과 <code>&lt;args&gt;</code> 사용하여 명령 실행</td>
 </tr>
 </tbody>
 </table>
@@ -721,26 +722,26 @@
 <table>
 <thead>
 <tr>
-<th>Keymap</th>
-<th>키</th>
-<th>동작</th>
+<th align="left">Keymap</th>
+<th align="left">키</th>
+<th align="left">동작</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>main</td>
-<td><code>C</code></td>
-<td><code>git cherry-pick %(commit)</code></td>
+<td align="left">main</td>
+<td align="left"><code>C</code></td>
+<td align="left"><code>git cherry-pick %(commit)</code></td>
 </tr>
 <tr>
-<td>status</td>
-<td><code>C</code></td>
-<td><code>git commit</code></td>
+<td align="left">status</td>
+<td align="left"><code>C</code></td>
+<td align="left"><code>git commit</code></td>
 </tr>
 <tr>
-<td>generic</td>
-<td><code>C</code></td>
-<td><code>git gc</code></td>
+<td align="left">generic</td>
+<td align="left"><code>C</code></td>
+<td align="left"><code>git gc</code></td>
 </tr>
 </tbody>
 </table>
@@ -749,56 +750,56 @@
 <p>설정 가능한 옵션을 사용하여 Git과 상호 작용을 이 세션에서 설명합니다. 예를 들어 <a href="#diff-options-diff">diff 옵션</a>에 대한 세션에서 설명된 환경 변수를 사용하여 구성할 수&nbsp;있습니다.</p>
 <h3 id="limit-by-path-name">Limit by Path Name (패치 이름&nbsp;제한)</h3>
 <p>특정 파일 (또는 여러 파일) 변경에 대해서만 확인하고 싶다면 다음과 같이 목록으로&nbsp;나타냅니다:</p>
-<div class="codehilite"><pre><span></span>$ tig Makefile README
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig Makefile README
 </pre></div>
-
+</td></tr></table>
 
 <p>Tig의 하위 명령 또는 태그 이름과 같은 저장소 참조에서 발생할 수 있는 모호성을 방지하기 위해 Git 옵션의 경우 <code>--</code>를 사용하여 구분해야됩니다. <code>states</code>라는 이름을 가진 파일이 있다면, <code>status</code> 하위 명령과 충돌을 일으킬꺼니 다음과 같이&nbsp;사용해야합니다:</p>
-<div class="codehilite"><pre><span></span>$ tig -- status
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig -- status
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="limit-by-date-or-number">Limit by Date or Number (날짜나 숫자&nbsp;제한)</h3>
 <p>Git과의 상호작용 속도를 올리기 위해 로그와 메인 뷰에서 보여지는 커밋의 수를 제한할 수 있습니다. 예를 들어, 날짜로 제한을 걸 경우엔 <code>--since=1.month</code>, 커밋 수로 제한을 걸 경우엔 <code>-n400</code>와 같이&nbsp;사용합니다.</p>
 <p>만약 두 날짜 사이에 발생한 변경분에 대해서 확인하고&nbsp;싶다면:</p>
-<div class="codehilite"><pre><span></span>$ tig --after<span class="o">=</span><span class="s2">&quot;May 5th&quot;</span> --before<span class="o">=</span><span class="s2">&quot;2006-05-16 15:44&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig --after<span class="o">=</span><span class="s2">&quot;May 5th&quot;</span> --before<span class="o">=</span><span class="s2">&quot;2006-05-16 15:44&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>주의, 공간을 포함하는 날짜를 사용하지 않는다면 <code>.</code>를 이용하여 나타낼 수 있습니다. 예, <code>--after=May.5th</code></p>
 </blockquote>
 <h3 id="limiting-by-commit-ranges">Limiting by Commit Ranges (커밋 범위&nbsp;제한)</h3>
-<p>대안으로 &#8220;<code>tag-1.0</code>과 <code>tag-2.0</code> 사이의 모든 커밋&#8221;과 같은 특정 범위로 제안할 수 있습니다. 예를&nbsp;들면:</p>
-<div class="codehilite"><pre><span></span>$ tig tag-1.0..tag-2.0
+<p>대안으로 &ldquo;<code>tag-1.0</code>과 <code>tag-2.0</code> 사이의 모든 커밋&rdquo;과 같은 특정 범위로 제안할 수 있습니다. 예를&nbsp;들면:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig tag-1.0..tag-2.0
 </pre></div>
-
+</td></tr></table>
 
 <p>원격 브런치로 푸시되지 않은 커밋의 검색 제한은 다음과 같은 방법으로 가능합니다. <code>origin</code>을 업스트림 원격 브런치고 가정하고&nbsp;사용한다면:</p>
-<div class="codehilite"><pre><span></span>$ tig origin..HEAD
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig origin..HEAD
 </pre></div>
-
+</td></tr></table>
 
 <p>원격 브런치에서 푸시된 내용들을 나열 합니다. 선택적으로 <code>HEAD</code>는 생략될 수&nbsp;있습니다.</p>
 <h3 id="limiting-by-reachability">Limiting by Reachability (도달 가능&nbsp;제한)</h3>
-<p>Git 인터프리트에서는 &#8220;tag-1.0&#8230;tag-2.0&#8221;을 사용하는 경우, &#8220;<code>tag-1.0</code>를 제외하고 <code>tag-2.0</code>까지의 모든 커밋&#8221;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수&nbsp;있습니다.</p>
+<p>Git 인터프리트에서는 &ldquo;tag-1.0&hellip;tag-2.0&rdquo;을 사용하는 경우, &ldquo;<code>tag-1.0</code>를 제외하고 <code>tag-2.0</code>까지의 모든 커밋&rdquo;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수&nbsp;있습니다.</p>
 <p>이 방법으로 다음 미리 커밋을 지정하려는&nbsp;경우:</p>
-<div class="codehilite"><pre><span></span>$ tig tag-2.0 ^tag-1.0
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig tag-2.0 ^tag-1.0
 </pre></div>
-
+</td></tr></table>
 
 <p>부정 연산자로 <code>^</code>를 생각할 수 있습니다. 이 대체 문법을 사용하면 위의 여려 브런치의 cut off를 지정하여 커밋 브런치를 없애버릴 수&nbsp;있습니다.</p>
 <h3 id="combining-revisions-specification">Combining Revisions Specification (변경 사항&nbsp;연결)</h3>
-<p>리버전 옵션은 다음과 같이 연결하여 사용할 수 있습니다. &#8220;<code>Documentation/</code> 디렉토리에 있는 파일의 변경 사항들을 마지막달 20개 커밋까지 보여다오.&#8221;를 다음과 같이 나타낼 수&nbsp;있습니다:</p>
-<div class="codehilite"><pre><span></span>$ tig --since<span class="o">=</span>1.month -n20 -- Documentation/
+<p>리버전 옵션은 다음과 같이 연결하여 사용할 수 있습니다. &ldquo;<code>Documentation/</code> 디렉토리에 있는 파일의 변경 사항들을 마지막달 20개 커밋까지 보여다오.&rdquo;를 다음과 같이 나타낼 수&nbsp;있습니다:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig --since<span class="o">=</span>1.month -n20 -- Documentation/
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="examining-all-repository-references">Examining All Repository References (모든 저장소 참조&nbsp;검사)</h3>
-<p>일부 경우엔 저장소에 대한 모든 참조를 걸쳐서 변화를 조회하는 것이 편할 수 있습니다. 다음 예제는 &#8220;이 저장소의 개발 라인에서 지난주내 특정파일이 변경되었는지&#8221;에 대해 묻는 것입니다. 다음 명령으로&nbsp;가능합니다:</p>
-<div class="codehilite"><pre><span></span>$ tig --all --since<span class="o">=</span>1.week -- Makefile
+<p>일부 경우엔 저장소에 대한 모든 참조를 걸쳐서 변화를 조회하는 것이 편할 수 있습니다. 다음 예제는 &ldquo;이 저장소의 개발 라인에서 지난주내 특정파일이 변경되었는지&rdquo;에 대해 묻는 것입니다. 다음 명령으로&nbsp;가능합니다:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ tig --all --since<span class="o">=</span>1.week -- Makefile
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="6-more-information">6. More Information (정보를 더&nbsp;원하시면)</h2>
 <p>Tig <a href="http://jonas.nitro.dk/tig">홈페이지</a>나 <a href="https://github.com/jonas/tig">메인 Git 저장소</a>를 방문하여 새로운 릴리즈 내용, 버그 리포트 내용, 기능 요청에 대한 정보를 얻어가시길&nbsp;바랍니다.</p>
@@ -876,8 +877,7 @@
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
 </html>

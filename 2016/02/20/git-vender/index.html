@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta name="author" content="ujuc">
   <meta name="description" content="Posts and writings by ujuc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,19 +44,20 @@
 </script>
 </head>
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 15px;">
       <header>
-        <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-          <div class="row">
-            <nav class="nav nav-inline">
-                <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-            </nav>
-          </div>
-          <div class="row">
-  <meta name="keywords" content="git, git-vendor, git-subtree, dependencies">
+        <div class="navbar navbar-static-top">
+          <div class="container-fluid">
+            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+              <div class="row">
+                <nav class="nav nav-inline">
+                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
+                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
+                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
+                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
+                </nav>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -84,10 +85,55 @@
 <li><code>git vendor list [&lt;name&gt;]</code> : 현재 레포에 있는 vendor 연관 소스&nbsp;보기.</li>
 <li><code>git vendor update &lt;name&gt; [&lt;ref&gt;]</code> : vendor 연관 소스&nbsp;업데이트.</li>
 </ul>
-<p>설치는&nbsp;알아서&#8230;</p>
+<p>설치는&nbsp;알아서&hellip;</p>
 <h3 id="_2">예제</h3>
-<p>Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 <code>git-subtree</code>를 모르겠는데&nbsp;뭐&#8230;</p>
-<div class="codehilite"><pre><span></span>$ <span class="c1"># Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.</span>
+<p>Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 <code>git-subtree</code>를 모르겠는데&nbsp;뭐&hellip;</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="c1"># Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.</span>
 $ git vendor add forge https://github.com/brettlangdon/forge v0.1.6
 + git subtree add --prefix vendor/github.com/brettlangdon/forge --message <span class="s1">&#39;Add &quot;forge&quot; from &quot;https://github.com/brettlangdon/   forge@v0.1.6&quot;</span>
 
@@ -134,7 +180,7 @@ forge@v0.1.7:
     ref:    v0.1.7
     commit: 071c5f108e0af39bf67a87fc766ea9bfb72b9ee7
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_3">관련&nbsp;페이지</h2>
 <ul>
@@ -209,8 +255,7 @@ forge@v0.1.7:
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
 </html>
