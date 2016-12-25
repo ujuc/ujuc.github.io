@@ -15,9 +15,9 @@ Usage:
 """
 
 import os
-from datetime import datetime
 from docopt import docopt
 import kroman
+import pendulum
 
 RST_TEMPLATE = ('{title}\n'
                 '{hashes}\n'
@@ -42,19 +42,14 @@ page_path = "content/pages"
 
 
 def make_entry(title, path, template):
-    today = datetime.today()
     # GTODO : 한국어를 영어로 변환하는 것이 필요
+    today = pendulum.now(tz='Asia/Seoul')
     slug = kroman.parse(title).lower().strip().replace(' ', '_')
-    date = "{year}-{month:02d}-{day:02d} {hour:02d}:{minute:02d}"\
-        .format(year=today.year, month=today.month, day=today.day,
-                hour=today.hour, minute=today.minute)
+    date = today.to_datetime_string()
+    file_name = f'{path}/{today.to_date_string()}-{slug}'
 
     if template == 'rst':
-        file_create = \
-            "{0}/{1}-{2:0>2}-{3:0>2}-{4}.rst".format(path,
-                                                     today.year,
-                                                     today.month,
-                                                     today.day, slug)
+        file_create = f'{file_name}.rst'
         article = RST_TEMPLATE.strip().format(
                 title=title,
                 hashes='#' * len(title) * 2,
@@ -62,11 +57,7 @@ def make_entry(title, path, template):
                 date=date,
                 modified="")
     elif template == 'md':
-        file_create = \
-            "{0}/{1}-{2:0>2}-{3:0>2}-{4}.md".format(path,
-                                                    today.year,
-                                                    today.month,
-                                                    today.day, slug)
+        file_create = f'{file_name}.md'
         article = MD_TEMPLATE.strip().format(
                 title=title,
                 slug=slug,
