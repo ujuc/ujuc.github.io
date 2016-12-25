@@ -15,53 +15,49 @@ Usage:
 """
 
 import os
-from docopt import docopt
+
 import kroman
 import pendulum
-
-RST_TEMPLATE = ('{title}\n'
-                '{hashes}\n'
-                '\n'
-                ':date: {date}\n'
-                ':category: \n'
-                ':tags: \n'
-                ':slug: {slug}\n'
-                ':summary: \n'
-                '{modified}\n'
-                '\n')
-
-MD_TEMPLATE = ('Title: {title}\n'
-               'Date: {date}\n'
-               'Category: \n'
-               'Tags: \n'
-               'Slug: {slug}\n'
-               'Summary: \n')
+from docopt import docopt
 
 POST_PATH = "content/blog"
 PAGE_PATH = "content/pages"
 
 
 def make_entry(title, path, template):
-    # GTODO : 한국어를 영어로 변환하는 것이 필요
     today = pendulum.now(tz='Asia/Seoul')
+
     slug = kroman.parse(title).lower().strip().replace(' ', '_')
     date = today.to_datetime_string()
     file_name = f'{path}/{today.to_date_string()}-{slug}'
 
     if template == 'rst':
         file_create = f'{file_name}.rst'
-        article = RST_TEMPLATE.strip().format(
-                title=title,
-                hashes='#' * len(title) * 2,
-                slug=slug,
-                date=date,
-                modified="")
+        hashes = '#' * len(title) * 2
+        modified = ''
+
+        article = (
+            f'{title}\n'
+            f'{hashes}\n\n'
+            f':date: {date}\n'
+            f':modified: {modified}\n'
+            f':category: \n'
+            f':tags: \n'
+            f':slug: {slug}\n\n'
+        )
     elif template == 'md':
         file_create = f'{file_name}.md'
-        article = MD_TEMPLATE.strip().format(
-                title=title,
-                slug=slug,
-                date=date)
+        modified = ''
+
+        article = (
+            f'Title: {title}\n'
+            f'Date: {date}\n'
+            f'Modified: {modified}\n'
+            f'Category: \n'
+            f'Tags: \n'
+            f'Slug: {slug}\n'
+            f'Summary: \n\n'
+        )
 
     if not os.path.isdir(path):
         os.mkdir(path)
