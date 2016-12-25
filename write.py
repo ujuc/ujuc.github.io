@@ -37,8 +37,8 @@ MD_TEMPLATE = ('Title: {title}\n'
                'Slug: {slug}\n'
                'Summary: \n')
 
-post_path = "content/blog"
-page_path = "content/pages"
+POST_PATH = "content/blog"
+PAGE_PATH = "content/pages"
 
 
 def make_entry(title, path, template):
@@ -65,15 +65,17 @@ def make_entry(title, path, template):
 
     if not os.path.isdir(path):
         os.mkdir(path)
+
     with open(file_create, 'w') as w:
         w.write(article)
+
     print("File created -> " + file_create)
 
 
 def edit_entry(title):
     """
-    title을 가져오는데, file_path는 동일하고 앞에 일자-제목이 붙으니 그것까지 가져와서 변경해야되는
-    점이있음.
+    title 을 가져오는데, file_path 는 동일하고 앞에 일자-제목이 붙으니
+    그것까지 가져와서 변경해야되는 점이있음.
     :param title:
     :return:
     """
@@ -85,14 +87,14 @@ if __name__ == '__main__':
 
     if opt['new']:
         if opt["-r"] or opt["--rst"]:
-            make_entry(opt["<title>"], post_path, 'rst')
+            make_entry(opt["<title>"], POST_PATH, 'rst')
         else:
-            make_entry(opt["<title>"], post_path, 'md')
+            make_entry(opt["<title>"], POST_PATH, 'md')
     elif opt['page']:
         if opt["-r"] or opt["--rst"]:
-            make_entry(opt["<title>"], page_path, 'rst')
+            make_entry(opt["<title>"], PAGE_PATH, 'rst')
         else:
-            make_entry(opt["<title>"], page_path, 'md')
+            make_entry(opt["<title>"], PAGE_PATH, 'md')
     elif opt['edit']:
         print("edit")
     elif opt["backup"]:
