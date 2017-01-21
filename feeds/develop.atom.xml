@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2016-12-28T23:36:13+09:00</updated><entry><title>Pendulum 버전업</title><link href="https://ujuc.github.io/2016/12/28/pendulum_beo-jeon-eob/" rel="alternate"></link><published>2016-12-28T23:36:13+09:00</published><updated>2016-12-28T23:36:13+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-12-28:/2016/12/28/pendulum_beo-jeon-eob/</id><summary type="html">&lt;p&gt;datetime 패키지중 하나인 Pendulum이 업그래이드 했다. 그래서&amp;hellip; 에러가&amp;nbsp;발생했다&lt;/p&gt;</summary><content type="html">&lt;p&gt;기본 패키지 인 datetime 이 영 불편해서 회사 프로젝트에서 사용중이던 date 파일을 &lt;a href="https://pendulum.eustace.io"&gt;Pendulum&lt;/a&gt;으로 변경하여 구성하고 잘 쓰고 있었는데&amp;hellip; 패키지 업그레이드로 사용하던 기능이 deprecate 되어버렸다.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-01-21T16:40:06+09:00</updated><entry><title>autoenv 설정</title><link href="https://ujuc.github.io/2017/01/21/autoenv_seor-jeong/" rel="alternate"></link><published>2017-01-21T16:40:06+09:00</published><updated>2017-01-21T16:40:06+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-01-21:/2017/01/21/autoenv_seor-jeong/</id><summary type="html">&lt;p&gt;컴퓨터를 밀었다. env 구성을 해야되는데 &lt;code&gt;autoenv&lt;/code&gt; 를 사용하면 해당 프로젝트로 들어가면 자동으로 해준다기에 설정을&amp;nbsp;했다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="authenv"&gt;&lt;code&gt;authenv&lt;/code&gt; 설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프로젝트 url: &lt;a href="https://github.com/kennethreitz/autoenv"&gt;kennethreitz/autoenv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;나는 맥에서 설치하는 &lt;code&gt;brew install autoenv&lt;/code&gt; 로 설치한다. 딴걸로 써볼려고도 했었는데&amp;hellip; &lt;code&gt;brew&lt;/code&gt; 하나로 구성해서 관리하는게 더 좋다.&lt;br&gt;
+셸에도 넣어주자. &lt;code&gt;zsh&lt;/code&gt; 를 사용하니 &lt;code&gt;~/.zshrc&lt;/code&gt; 에 &lt;code&gt;source $(brew --prefix autoenv)/activate.sh&lt;/code&gt; 를 넣어두게 되면&amp;nbsp;쉽다.&lt;/p&gt;
+&lt;h2 id="_1"&gt;설정&lt;/h2&gt;
+&lt;p&gt;블로그를 &lt;code&gt;pelican&lt;/code&gt; 으로 구성해서 작성하다보니 &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;venv&lt;/code&gt; 설정해서 패키지 설치 파일이 필요해서&amp;nbsp;구성했다.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# ujuc.github.io
+
+source ../env/blog/bin/activate
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;다 좋은데 다른 폴더로 가거나 다른 프로젝트로 갔을때&amp;hellip; 문제가 생길 수 있어서 끄는 방법을 찾았다. 상위 폴더에 다음 &lt;code&gt;.evn&lt;/code&gt;를 만들어서 넣어주면 된다. 개발하면서 자주가는 곳에다가는 꼭 박아두자. (&lt;a href="https://github.com/kennethreitz/autoenv/issues/30#issuecomment-26832177"&gt;원문&lt;/a&gt;)&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="x"&gt; .env&lt;/span&gt;
+
+&lt;span class="x"&gt;if [ -n &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;VIRTUAL_ENV&lt;/span&gt;&lt;span class="x"&gt;&amp;quot; ] ; then&lt;/span&gt;
+&lt;span class="x"&gt;    deactivate&lt;/span&gt;
+&lt;span class="x"&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</content><category term="autoenv"></category><category term="env"></category><category term="setup"></category></entry><entry><title>Pendulum 버전업</title><link href="https://ujuc.github.io/2016/12/28/pendulum_beo-jeon-eob/" rel="alternate"></link><published>2016-12-28T23:36:13+09:00</published><updated>2016-12-28T23:36:13+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-12-28:/2016/12/28/pendulum_beo-jeon-eob/</id><summary type="html">&lt;p&gt;datetime 패키지중 하나인 Pendulum이 업그래이드 했다. 그래서&amp;hellip; 에러가&amp;nbsp;발생했다&lt;/p&gt;</summary><content type="html">&lt;p&gt;기본 패키지 인 datetime 이 영 불편해서 회사 프로젝트에서 사용중이던 date 파일을 &lt;a href="https://pendulum.eustace.io"&gt;Pendulum&lt;/a&gt;으로 변경하여 구성하고 잘 쓰고 있었는데&amp;hellip; 패키지 업그레이드로 사용하던 기능이 deprecate 되어버렸다.&lt;br&gt;
 아직 정식 1.0 버전이 나오지 않았기에 내용들이 계속 바뀌고 있다보니&amp;hellip;&amp;nbsp;속이&amp;hellip;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="070"&gt;0.7.0&lt;/h2&gt;

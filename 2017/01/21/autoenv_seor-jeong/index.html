@@ -65,57 +65,78 @@
 
     <div id="site_article" class="container">
       <article>
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <article>
-          <h3><a href="https://ujuc.github.io/2016/06/18/dog-teug-ha-da_onshape/">독특하다.&nbsp;Onshape</a></h3>
-          <p><p>독특하다. 정말 독특하다. 웹서비스에서 3D 캐드를 구현하여 작업할 수&nbsp;있다니.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 16. 06. 18.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/">Qualcomm Atheros 드라이버 설치 -&nbsp;업글</a></h3>
-          <p><p>이전 글에서 설치한건 너무 느렸다. 그러나 정식 버전이 패키지로 들어가면서 조금&nbsp;나아졌다.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 16. 06. 18.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure (번역)/">Spec Architecture Design Guide Restructure&nbsp;(번역)</a></h3>
-          <p><p>이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서&nbsp;올라왔다.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 16. 05. 29.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&-utilities/">iTerm2(nightly) Shell Integration <span class="amp">&amp;</span>&nbsp;Utilities</a></h3>
-          <p><p>오랜만에 iTerm2 nightly 버전을 받았다. 새로운 기능을 보았다.!&nbsp;남긴다.!</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 16. 05. 21.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/">Select text of vim with set mouse=a&nbsp;enabled</a></h3>
-          <p><p>Vim사용에 있어서 마우스로 블록을 선택할 수 있도록 하였다. 그랬더니 다른&nbsp;부분에서</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 16. 05. 02.</p>
-        </article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="https://ujuc.github.io/2017/01/21/autoenv_seor-jeong/" class="h1">autoenv&nbsp;설정</a></h1>
     </div>
-  </div>
+    <div class="row article">
+      <p><i class="fa fa-flash"></i></p>
+      <div class="article_text">
+        <h2 id="authenv"><code>authenv</code> 설치</h2>
+<ul>
+<li>프로젝트 url: <a href="https://github.com/kennethreitz/autoenv">kennethreitz/autoenv</a></li>
+</ul>
+<p>나는 맥에서 설치하는 <code>brew install autoenv</code> 로 설치한다. 딴걸로 써볼려고도 했었는데&hellip; <code>brew</code> 하나로 구성해서 관리하는게 더 좋다.<br>
+셸에도 넣어주자. <code>zsh</code> 를 사용하니 <code>~/.zshrc</code> 에 <code>source $(brew --prefix autoenv)/activate.sh</code> 를 넣어두게 되면&nbsp;쉽다.</p>
+<h2 id="_1">설정</h2>
+<p>블로그를 <code>pelican</code> 으로 구성해서 작성하다보니 <code>pyenv</code>, <code>venv</code> 설정해서 패키지 설치 파일이 필요해서&nbsp;구성했다.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># ujuc.github.io
 
+source ../env/blog/bin/activate
+</pre></div>
+</td></tr></table>
+
+<p>다 좋은데 다른 폴더로 가거나 다른 프로젝트로 갔을때&hellip; 문제가 생길 수 있어서 끄는 방법을 찾았다. 상위 폴더에 다음 <code>.evn</code>를 만들어서 넣어주면 된다. 개발하면서 자주가는 곳에다가는 꼭 박아두자. (<a href="https://github.com/kennethreitz/autoenv/issues/30#issuecomment-26832177">원문</a>)</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">#</span><span class="x"> .env</span>
+
+<span class="x">if [ -n &quot;</span><span class="p">$</span><span class="nv">VIRTUAL_ENV</span><span class="x">&quot; ] ; then</span>
+<span class="x">    deactivate</span>
+<span class="x">fi</span>
+</pre></div>
+</td></tr></table>
+      </div>
+      <p><i class="fa fa-hand-spock-o"></i></p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 17. 01. 21.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="https://ujuc.github.io/tag/autoenv.html">autoenv</a>
+,               <a href="https://ujuc.github.io/tag/env.html">env</a>
+,               <a href="https://ujuc.github.io/tag/setup.html">setup</a>
+          </i>
+        </p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2017/01/21/autoenv_seor-jeong/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
       </article>
     </div>
 
     <div class="container">
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <ul class="pagination center">
-            <li class="page-item">
-              <a href="https://ujuc.github.io/index2.html"><i class="fa fa-arrow-circle-left"></i> Next</a>
-            </li>
-      <i class="fa fa-dot-circle-o text-danger"></i>
-          <li class="page-item">
-            <a href="/index4.html">Prev <i class="fa fa-arrow-circle-right"></i></a>
-          </li>
-      </ul>
-    </div>
-  </div>
     </div>
 
     <!-- Title -->
