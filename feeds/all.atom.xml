@@ -1,5 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-01-28T22:46:29+09:00</updated><entry><title>vim 빌드해보자</title><link href="https://ujuc.github.io/2017/01/28/vim_bir-deu-hae-bo-ja/" rel="alternate"></link><published>2017-01-28T22:46:29+09:00</published><updated>2017-01-28T22:46:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-01-28:/2017/01/28/vim_bir-deu-hae-bo-ja/</id><summary type="html">&lt;p&gt;이번에 플러그인을 사용하기 위해서 했던 작업들을&amp;nbsp;구성해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;vim 플러그인중 jedi-vim 을 사용하는데. 설치된 vim 에서 python 플러그가 켜있지 않아 관련되서 플러그인을 사용하지 않는다는 아래와 같은 에러 메시지를 뿜고&amp;nbsp;있었다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-02-08T20:44:05+09:00</updated><entry><title>direnv</title><link href="https://ujuc.github.io/2017/02/08/direnv/" rel="alternate"></link><published>2017-02-08T20:44:05+09:00</published><updated>2017-02-08T20:44:05+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-02-08:/2017/02/08/direnv/</id><summary type="html">&lt;p&gt;이것 참&amp;hellip; 결국 env 종류를 다 돌고&amp;nbsp;있다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;이번에 소개할 direnv 는 이상한 모임에서 autoenv 를 올리고 난뒤 &lt;a href="http://raccoonyy.github.io/"&gt;@raccoony&lt;/a&gt;님께서 알려주셨다. 오홍 신기한거&amp;nbsp;많다.&lt;/p&gt;
+&lt;h3 id="direnv"&gt;&lt;a href="https://direnv.net/"&gt;direnv&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;홈페이지는 제목을 누르면 연결이되고 깃허브 주소는 &lt;a href="https://github.com/direnv/direnv"&gt;direnv/direnv&lt;/a&gt; 이다. 신기한건 go로 작성이 되었네&amp;hellip; 마지막 커밋이 이글 쓰는 날 기준으로&amp;nbsp;10일전!&lt;/p&gt;
+&lt;p&gt;다른 env 프로그램들과 비슷하게 이건 셸에서 사용하는 환경변수를 변경할 수 있도록 도와준다.&lt;br&gt;
+코드에는 넣지 못하는 환경변수들을 셸에 &lt;code&gt;.bashrc&lt;/code&gt; 나 &lt;code&gt;.profile&lt;/code&gt; 에 모든 곳에서 사용하는 경우가 생기는데, 이걸 쓰면 프로젝트마다 다른 내용을 생성하여 보안을 높힐 수 있는 기회가 된다. (모든 보안은 사람이 행하는 보안을 제외하고&amp;hellip; 직접 OS에 들어와서 까는건 어쩔 수&amp;nbsp;없잖아&amp;hellip;)&lt;/p&gt;
+&lt;h4 id="_1"&gt;설치&lt;/h4&gt;
+&lt;h5 id="_2"&gt;빠지지 않는 메뉴얼&amp;nbsp;설치!&lt;/h5&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git clone https://github.com/direnv/direnv
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; direnv
+$ make install
+&lt;span class="c1"&gt;# or symlink ./direnv into the $PATH&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h5 id="brew"&gt;brew&lt;/h5&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install direnv
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;리눅스 패키지도 있다고 하니 사용하는 것에 있는지 검색해보고 설치하도록&amp;nbsp;하자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="_3"&gt;사용&lt;/h4&gt;
+&lt;p&gt;우선 사용한 셸 구성 파일에 다음 내용들을&amp;nbsp;넣어준다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;eval &amp;quot;$(direnv hook bash)&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.zshrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;eval &amp;quot;$(direnv hook zsh)&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.config/fish/config.fish&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;eval (direnv hook fish)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~/.cshrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;eval `direnv hook tcsh`
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;다음으로는 다음과 같이 설정해주면&amp;nbsp;된다.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;cd&lt;/span&gt; playground
+$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;FOO&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;foo &amp;gt; .envrc
+direnv: error .envrc is blocked. Run &lt;span class="sb"&gt;`&lt;/span&gt;direnv allow&lt;span class="sb"&gt;`&lt;/span&gt; to approve its content.
+$ direnv allow
+direnv: loading .envrc
+direnv: &lt;span class="nb"&gt;export&lt;/span&gt; +FOO -PS2
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; ..
+direnv: unloading
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; playground
+direnv: loading .envrc
+direnv: &lt;span class="nb"&gt;export&lt;/span&gt; +FOO -PS2
+$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;FOO&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+foo
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;사용법은&amp;nbsp;간단하다.&lt;/p&gt;
+&lt;p&gt;그런데 이걸 쓰는 이유는 코드에 자동으로 생성하는 비번이나 아니면 Auth token 등을 넣으실껀데&amp;hellip;&lt;br&gt;
+절대로 git 에는 올리지 말길&amp;hellip; 꼭 &lt;code&gt;.gitignore&lt;/code&gt; 설정해서 사용하도록&amp;nbsp;하자.&lt;/p&gt;
+&lt;p&gt;더 자세한건 홈페이지에서!!&lt;br&gt;
+그런데 이거 참 좋당.&lt;br&gt;
+이제 어디서&amp;nbsp;쓰써볼까나&amp;hellip;&lt;/p&gt;</content><category term="env"></category><category term="shell"></category><category term="environment"></category></entry><entry><title>vim 빌드해보자</title><link href="https://ujuc.github.io/2017/01/28/vim_bir-deu-hae-bo-ja/" rel="alternate"></link><published>2017-01-28T22:46:29+09:00</published><updated>2017-01-28T22:46:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-01-28:/2017/01/28/vim_bir-deu-hae-bo-ja/</id><summary type="html">&lt;p&gt;이번에 플러그인을 사용하기 위해서 했던 작업들을&amp;nbsp;구성해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;vim 플러그인중 jedi-vim 을 사용하는데. 설치된 vim 에서 python 플러그가 켜있지 않아 관련되서 플러그인을 사용하지 않는다는 아래와 같은 에러 메시지를 뿜고&amp;nbsp;있었다.&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
 3
