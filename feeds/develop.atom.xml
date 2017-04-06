@@ -1600,7 +1600,7 @@ forge@v0.1.7:
 &lt;h3 id="_5"&gt;특징&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;release&lt;/code&gt; 브랜치가 명확하지 않는 시스템에서 사용에 맞게&amp;nbsp;되어있다. &lt;/li&gt;
-&lt;li&gt;여기에는 GitHub의 서비스 특성상. 릴리즈라는 개념이 없는 서비스를 진행하고 있어서 그런것으로 보이며, 웹 서비스들이 릴리즈라는 계념이 없이지고 있으니 사용하기 편할 것으로&amp;nbsp;보인다.&lt;/li&gt;
+&lt;li&gt;여기에는 GitHub의 서비스 특성상. 릴리즈라는 개념이 없는 서비스를 진행하고 있어서 그런것으로 보이며, 웹 서비스들이 릴리즈라는 개념이 없이지고 있으니 사용하기 편할 것으로&amp;nbsp;보인다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;hotfix&lt;/code&gt;와 가장 작은 기능을 구분하지 않는다. 어짜피 둘다 개발자가 수정해야되는 일중에 하나이다. 단지 우선 순위가 어디가 높냐라는&amp;nbsp;단계이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_6"&gt;그럼 어떻게 사용할&amp;nbsp;것인가?&lt;/h3&gt;
@@ -1631,7 +1631,7 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;CI와 배포 자동화가 되어있지 않은 시스템에서는 사람이 관련된 업무를&amp;nbsp;진행한다.&lt;/li&gt;
 &lt;li&gt;많은 것들이 올라오기 시작하면&amp;hellip; 그때부터는&amp;nbsp;헬이&amp;hellip;&lt;/li&gt;
-&lt;li&gt;너무 간단하니&amp;hellip; 이거 단점이 있나&amp;nbsp;십다&amp;hellip;&lt;/li&gt;
+&lt;li&gt;너무 간단하니&amp;hellip; 이거 단점이 있나&amp;nbsp;싶다&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_9"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
