@@ -13,7 +13,7 @@ JSON API 문서이다. 해당 문서는 [여기서](http://jsonapi.org/format/) 
 
 # 1. 문서 상태 (Status)
 
-이 페이지는 JSON API 마지막으로 공개된 버전 내용을 담고 있습니다. 현재버전은 1.0 입니뀋¤. JSON API 새로운 버전에서는 **이전 문서와 호환을 위해** 삭제하지 않고, 오로지 추가만 됩니다. 추가 사항들은 우리 [discussion forum](http://discuss.jsonapi.org/)에서 확인할수 있습니다.
+이 페이지는 JSON API 마지막으로 공개된 버전 내용을 담고 있습니다. 현재버전은 1.0 입니다. JSON API 새로운 버전에서는 **이전 문서와 호환을 위해** 삭제하지 않고, 오로지 추가만 됩니다. 추가 사항들은 우리 [discussion forum](http://discuss.jsonapi.org/)에서 확인할수 있습니다.
 
 > This page represents the latest published version of JSON API, which is currently version 1.0. New versions of JSON API **will always be backwards compatible** using a never remove, only add strategy. Additions can be proposed in our [discussion forum](http://discuss.jsonapi.org/).
 
