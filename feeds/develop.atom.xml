@@ -592,7 +592,7 @@ fi
 &lt;p&gt;나중에 번역한 것이 도움이 되길&amp;nbsp;바라며&amp;hellip;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id="1-status"&gt;1. 문서 상태&amp;nbsp;(Status)&lt;/h1&gt;
-&lt;p&gt;이 페이지는 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 마지막으로 공개된 버전 내용을 담고 있습니다. 현재버전은 1.0 입니뀋¤. &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 새로운 버전에서는 &lt;strong&gt;이전 문서와 호환을 위해&lt;/strong&gt; 삭제하지 않고, 오로지 추가만 됩니다. 추가 사항들은 우리 &lt;a href="http://discuss.jsonapi.org/"&gt;discussion forum&lt;/a&gt;에서 확인할수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;p&gt;이 페이지는 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 마지막으로 공개된 버전 내용을 담고 있습니다. 현재버전은 1.0 입니다. &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 새로운 버전에서는 &lt;strong&gt;이전 문서와 호환을 위해&lt;/strong&gt; 삭제하지 않고, 오로지 추가만 됩니다. 추가 사항들은 우리 &lt;a href="http://discuss.jsonapi.org/"&gt;discussion forum&lt;/a&gt;에서 확인할수&amp;nbsp;있습니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This page represents the latest published version of &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;, which is currently version 1.0. New versions of &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; &lt;strong&gt;will always be backwards compatible&lt;/strong&gt; using a never remove, only add strategy. Additions can be proposed in our &lt;a href="http://discuss.jsonapi.org/"&gt;discussion forum&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
