@@ -67,54 +67,17 @@
       <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
-      <h1><a href="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/" class="h1">[Monitoring] SkwiSSH 설치 및&nbsp;구성</a></h1>
+      <h1><a href="https://ujuc.github.io/2017/07/19/cron-style_job_system_-_cronsun/" class="h1">Cron-Style Job System -&nbsp;cronsun</a></h1>
     </div>
     <div class="row article">
       <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
-        <h1 id="skwissh"><a href="https://github.com/rsaikali/django-skwissh">SkwiSSH</a></h1>
-<p>오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여&nbsp;구성해봤다.</p>
-<p>코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 <code>setup.py</code>를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가&nbsp;발생한다.</p>
-<p>그리고 외부 서버를 추가하기 위해서 <code>server_ip:22</code>를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게&nbsp;된다.</p>
-<p>아직은 부족한 점이&nbsp;많다.</p>
-<ul>
-<li>Sensor(명령어를 날려서 값을 받아오는 worker를 의미한다.) 추가하고 변경하려면 변경사항이 적용이 안되는&nbsp;현상.</li>
-<li>Sensor들의 정렬을 임의로 할 수 없다는 것. (오름차순으로&nbsp;구성되어있다.)</li>
-<li>기본 명령어 날리는게 1분간격으로 수정할만한 탭이&nbsp;안보인다.</li>
-<li>기본 DB로 SQLite3 파일을 사용하는데 점점 커지는 모습을 확인 할 수&nbsp;있다.</li>
-<li>bash를 사용할 줄 안다면 정말 쉽게 사용이 가능하다.<ul>
-<li>명령을 SSH로 날리기에 그쪽 서버 콘솔로 리턴값을 넘길 수 있는 프로그램이라면 어떻게든&nbsp;사용하면된다.</li>
+        <ul>
+<li><a href="https://github.com/shunfei/cronsun">Github</a></li>
+<li>Lang:&nbsp;Golang</li>
 </ul>
-</li>
-</ul>
-<p>이 글에서는 Sensor에 명령어와 파셔 세팅은 작성하지&nbsp;않았다.</p>
-<h2 id="_1">기본&nbsp;구성</h2>
-<ul>
-<li><span class="caps">OS</span>: Ubuntu 12.04.4&nbsp;server</li>
-<li>Install&nbsp;Package</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ sudo apt-get install python-pip
-</pre></div>
-</td></tr></table>
-
-<h3 id="_2">패키지&nbsp;설치</h3>
-<h4 id="django">Django&nbsp;설치</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ sudo pip isntall Django
-</pre></div>
-</td></tr></table>
-
-<h4 id="django-skwissh">Django-skwissh&nbsp;설치</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ sudo apt-get install buid-essential python-dev
-$ git clone https://github.com/rsaikali/django-skwissh.git
-$ <span class="nb">cd</span> django-skwissh
-$ sudo python setup.py install
-</pre></div>
-</td></tr></table>
-
-<h3 id="django_1">Django&nbsp;설정</h3>
+<p>분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나&nbsp;적어야겠다.</p>
+<h2 id="_1">아키텍쳐</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -127,68 +90,68 @@ $ sudo python setup.py install
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ django-admin.py startproject mysite
-$ <span class="nb">cd</span> mysite
-$ vi mysql/settings.py
-
-<span class="nv">INSTALL_APPS</span> <span class="o">=</span> <span class="o">(</span>
-    <span class="s1">&#39;kronos&#39;</span>,
-    <span class="s1">&#39;skwissh&#39;</span>,
-<span class="o">)</span>
-
-$ vi mysite/urls.py
-
-<span class="c1"># Skwissh</span>
-url<span class="o">(</span><span class="s1">&#39;skwissh&#39;</span>, include<span class="o">(</span><span class="s1">&#39;skwissh.urls&#39;</span><span class="o">))</span>,
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>                                         <span class="p">[</span><span class="n">web</span><span class="p">]</span>
+                                           <span class="o">+</span>
+                                           <span class="o">|</span>
+                                 <span class="o">+---------+----------------+</span>
+                                 <span class="o">|</span>                          <span class="o">|</span>
+<span class="p">(</span><span class="n">Add</span><span class="o">/</span><span class="n">Delete</span><span class="o">/</span><span class="n">Update</span><span class="o">/</span><span class="n">Execute</span> <span class="n">jobs</span><span class="p">)</span> <span class="o">|</span>                          <span class="o">|</span> <span class="p">(</span><span class="n">Query</span> <span class="n">job</span> <span class="n">exec</span> <span class="n">result</span><span class="p">)</span>
+                                 <span class="o">+</span>                          <span class="o">+</span>
+                               <span class="p">[</span><span class="n">etcd</span><span class="p">]</span>                   <span class="p">[</span><span class="n">MongoDB</span><span class="p">]</span>
+                                 <span class="o">+</span>                          <span class="o">^</span>
+                      <span class="o">+----------------------+</span>              <span class="o">|</span>
+                      <span class="o">+</span>          <span class="o">+</span>           <span class="o">+</span>              <span class="o">|</span>
+                   <span class="p">[</span><span class="n">node</span><span class="mf">.1</span><span class="p">]</span>   <span class="p">[</span><span class="n">node</span><span class="mf">.2</span><span class="p">]</span>   <span class="p">[</span><span class="n">node</span><span class="p">.</span><span class="n">n</span><span class="p">]</span>           <span class="o">|</span>
+                      <span class="o">+</span>          <span class="o">+</span>           <span class="o">+</span>              <span class="o">|</span>
+                      <span class="o">+----------------------+</span>              <span class="o">|</span>
+                                 <span class="o">|</span>                          <span class="o">|</span>
+                                 <span class="o">|</span>                          <span class="o">|</span>
+             <span class="p">(</span><span class="n">Job</span> <span class="n">execute</span> <span class="n">fail</span><span class="p">)</span>  <span class="o">|</span>   <span class="p">(</span><span class="n">Job</span> <span class="n">execute</span> <span class="n">result</span><span class="p">)</span>   <span class="o">|</span>
+                                 <span class="o">|</span>                          <span class="o">|</span>
+ <span class="p">[</span><span class="n">Send</span> <span class="n">Mail</span><span class="p">]</span><span class="o">&lt;--------------------+--------------------------+</span>
 </pre></div>
 </td></tr></table>
 
-<ul>
-<li>데이터 베이스&nbsp;설정</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python manage.p syncdb
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li>Skwissh 테스트&nbsp;설치</li>
-<li>이작업을 하면 crontab에 테스크가&nbsp;등록된다.</li>
-</ul>
+<p>Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.<br>
+노드는 여러개를 사용할 수 있는 것인지&hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이&nbsp;봐야될듯함.</p>
+<h2 id="_2">빌드</h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python manage.py installtask
-<span class="c1"># crontab에 등록되었는지 확인</span>
-$ crontab -l
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>go get -u github.com/shunfei/cronsun
+<span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/shunfei/cronsun
+sh build.sh
 </pre></div>
 </td></tr></table>
 
-<ul>
-<li>Django 서버&nbsp;작동</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python mange.py runserver <span class="m">0</span>.0.0.0:8000
-</pre></div>
-</td></tr></table>
-
-<h2 id="_3">참고&nbsp;페이지</h2>
-<ul>
-<li><a href="https://github.com/rsaikali/django-skwissh">Github</a></li>
-<li><a href="http://rsaikali.github.io/django-skwissh/">Gitpage</a></li>
-</ul>
+<h2 id="_3">실행</h2>
+<ol>
+<li>MongoDB, etcd3&nbsp;설치</li>
+<li><code>conf</code> 폴더에 있는 config&nbsp;수정</li>
+<li>샘플은 <code>conf/files</code> 에 항목별로 존재한다. 확인이&nbsp;필요.</li>
+<li>Node 실행: <code>./cronnode -conf conf/base.json</code></li>
+<li>웹서버 실행: <code>./cronweb -conf conf/base.json</code></li>
+<li>접속은 <code>http://127.0.0.1:7079/ui/</code></li>
+</ol>
       </div>
       <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
     <div class="row article_meta">
       <div>
         <p>
-          <i class="fa fa-calendar-plus-o"></i> 14. 02. 28.
+          <i class="fa fa-calendar-plus-o"></i> 17. 07. 19.
         <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/software.html">Software</a>
         <i class="fa fa-ellipsis-v"> </i>
           <i class="fa fa-tags">
-              <a href="https://ujuc.github.io/tag/python.html">python</a>
-,               <a href="https://ujuc.github.io/tag/monitoring.html">monitoring</a>
-,               <a href="https://ujuc.github.io/tag/ssh.html">ssh</a>
-,               <a href="https://ujuc.github.io/tag/django.html">django</a>
+              <a href="https://ujuc.github.io/tag/go.html">go</a>
+,               <a href="https://ujuc.github.io/tag/cron.html">cron</a>
+,               <a href="https://ujuc.github.io/tag/job-system.html">job system</a>
           </i>
         </p>
       </div>
@@ -198,7 +161,7 @@ $ crontab -l
 <div class="row">
   <div id="disqus_thread"></div>
   <script>
-    var disqus_identifier = "2014/02/28/skwissh-install-n-config/";
+    var disqus_identifier = "2017/07/19/cron-style_job_system_-_cronsun/";
     (function() {
       var d = document, s = d.createElement('script');
       s.src = '//ujucgithub.disqus.com/embed.js';

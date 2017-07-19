@@ -65,78 +65,29 @@
 
     <div id="site_article" class="container">
       <article>
-  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-    <div class="row article_title">
-      <h1><a href="https://ujuc.github.io/2015/05/14/edison-pip-install-error/" class="h1">Edison pip install&nbsp;error</a></h1>
+  <div class="row">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+        <article>
+          <h3><a href="https://ujuc.github.io/2017/07/19/cron-style_job_system_-_cronsun/">Cron-Style Job System -&nbsp;cronsun</a></h3>
+          <p><p>Go 메일링을 보다가 cron과 비슷한 서비스라 말하기에&nbsp;확인.</p></p>
+          <p><i class="fa fa-calendar-plus-o"></i> 17. 07. 19.</p>
+        </article>
     </div>
-    <div class="row article">
-      <p><i class="fa fa-flash"></i></p>
-      <div class="article_text">
-        <p>pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가&nbsp;발생한다.</p>
-<pre class="code bash literal-block">
-<span class="c1"># pip install flask
-</span>Traceback <span class="o">(</span>most recent call las<span class="o">)</span>:
-File <span class="s2">&quot;/usr/bin/pip&quot;</span>, line <span class="m">5</span>, in &lt;module&gt;
-from pkg_resources import load_entry_point
-ImportError:No module named pkg_resources
-</pre>
-<p>발생하는건 <tt class="docutils literal">setuptools</tt> 패키지가 설치되지 않아서&nbsp;문제가&#8230;</p>
-<pre class="code bash literal-block">
-<span class="c1"># wget --no-check-certificate \
-</span>  https://pypi.python.org/packages/source/s/setuptools/setuptools-15.2.tar.gz#md5<span class="o">=</span>a9028a9794fc7ae02320d32e2d7e12ee
-<span class="c1"># tar zxf setuptools-15.2.tar.gz
-# python setuptools-15.2/ez_setup.py</span>
-</pre>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt><tt class="docutils literal">pip install <span class="pre">--upgrade</span> pip</tt> 로 제대로 설치된건지&nbsp;확인하자.</dt>
-<dd><ul class="first last">
-<li>기본 설치되는 pip 버전이 낮으니.. 업글해줘야되기도&nbsp;해서..</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-
-      </div>
-      <p><i class="fa fa-hand-spock-o"></i></p>
-    </div>
-    <div class="row article_meta">
-      <div>
-        <p>
-          <i class="fa fa-calendar-plus-o"></i> 15. 05. 14.
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-tags">
-              <a href="https://ujuc.github.io/tag/edison.html">edison</a>
-,               <a href="https://ujuc.github.io/tag/pypi.html">pypi</a>
-,               <a href="https://ujuc.github.io/tag/pip.html">pip</a>
-,               <a href="https://ujuc.github.io/tag/python.html">python</a>
-,               <a href="https://ujuc.github.io/tag/error.html">error</a>
-          </i>
-        </p>
-      </div>
-    </div>
-
-      <div class="article_comments">
-<div class="row">
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_identifier = "2015/05/14/edison-pip-install-error/";
-    (function() {
-      var d = document, s = d.createElement('script');
-      s.src = '//ujucgithub.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-</div>      </div>
   </div>
+
       </article>
     </div>
 
     <div class="container">
+  <div class="row">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <ul class="pagination center">
+          <li class="page-item"><a rel="next"><i class="fa fa-times"></i> Next</a></li>
+      <i class="fa fa-dot-circle-o text-danger"></i>
+          <li class="page-item"><a rel="prev">Prev <i class="fa fa-times"></i></a></li>
+      </ul>
+    </div>
+  </div>
     </div>
 
     <!-- Title -->
