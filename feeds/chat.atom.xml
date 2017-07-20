@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Chat</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/chat.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2015-04-03T00:57:00+09:00</updated><entry><title>백업 완료</title><link href="https://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-04-03T00:57:00+09:00</published><updated>2015-04-03T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:/2015/04/03/백업-완료/</id><summary type="html">&lt;p class="first last"&gt;이제 다시 시작. Jekyll &amp;gt; Octopress &amp;gt; Pelican&amp;nbsp;정착기.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Chat</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/chat.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-07-20T16:33:15+09:00</updated><entry><title>Commnets in Markdown</title><link href="https://ujuc.github.io/2017/07/20/commnets_in_markdown/" rel="alternate"></link><published>2017-07-20T16:33:15+09:00</published><updated>2017-07-20T16:33:15+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-20:/2017/07/20/commnets_in_markdown/</id><summary type="html">&lt;p&gt;Markdown에서는 comment는 어떻게&amp;nbsp;해야되지&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 스팩 문서를 다시 번역하면서 꽤나 긴 markdown 문서를 작성해야되는 경우가 발생했다. 그러다보니&amp;hellip; 코멘트로 나눔이 필요한 경우가&amp;nbsp;발생!&lt;/p&gt;
+&lt;p&gt;구글에서 간단하게 검색하니 &lt;a href="https://stackoverflow.com/questions/4823468/comments-in-markdown"&gt;Comments in Markdown - Stackoverflow&lt;/a&gt; 라는 글이 하나&amp;nbsp;발견&amp;hellip;&lt;/p&gt;
+&lt;p&gt;코멘트 남기는 방법은 다음처럼 구성하면&amp;nbsp;된다.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[comment]: # (This is a comment.)
+[//]: # (This is a comment.)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;개인적 취향은 두번째가 좋아보인다. 그리고 긴 코멘트가 필요하다면&amp;hellip; &lt;span class="caps"&gt;HTML&lt;/span&gt; 코멘트 태그를 사용해도&amp;nbsp;좋을듯.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;!---
+This is comment.
+---&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;오늘은&amp;nbsp;여기까지&amp;hellip;&lt;/p&gt;</content><category term="markdown"></category><category term="comment"></category><category term="문법"></category></entry><entry><title>백업 완료</title><link href="https://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-04-03T00:57:00+09:00</published><updated>2015-04-03T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:/2015/04/03/백업-완료/</id><summary type="html">&lt;p class="first last"&gt;이제 다시 시작. Jekyll &amp;gt; Octopress &amp;gt; Pelican&amp;nbsp;정착기.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;

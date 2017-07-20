@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-07-19T17:08:01+09:00</updated><entry><title>Cron-Style Job System - cronsun</title><link href="https://ujuc.github.io/2017/07/19/cron-style_job_system_-_cronsun/" rel="alternate"></link><published>2017-07-19T17:08:01+09:00</published><updated>2017-07-19T17:08:01+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-19:/2017/07/19/cron-style_job_system_-_cronsun/</id><summary type="html">&lt;p&gt;Go 메일링을 보다가 cron과 비슷한 서비스라 말하기에&amp;nbsp;확인.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-07-20T16:33:15+09:00</updated><entry><title>Commnets in Markdown</title><link href="https://ujuc.github.io/2017/07/20/commnets_in_markdown/" rel="alternate"></link><published>2017-07-20T16:33:15+09:00</published><updated>2017-07-20T16:33:15+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-20:/2017/07/20/commnets_in_markdown/</id><summary type="html">&lt;p&gt;Markdown에서는 comment는 어떻게&amp;nbsp;해야되지&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 스팩 문서를 다시 번역하면서 꽤나 긴 markdown 문서를 작성해야되는 경우가 발생했다. 그러다보니&amp;hellip; 코멘트로 나눔이 필요한 경우가&amp;nbsp;발생!&lt;/p&gt;
+&lt;p&gt;구글에서 간단하게 검색하니 &lt;a href="https://stackoverflow.com/questions/4823468/comments-in-markdown"&gt;Comments in Markdown - Stackoverflow&lt;/a&gt; 라는 글이 하나&amp;nbsp;발견&amp;hellip;&lt;/p&gt;
+&lt;p&gt;코멘트 남기는 방법은 다음처럼 구성하면&amp;nbsp;된다.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[comment]: # (This is a comment.)
+[//]: # (This is a comment.)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;개인적 취향은 두번째가 좋아보인다. 그리고 긴 코멘트가 필요하다면&amp;hellip; &lt;span class="caps"&gt;HTML&lt;/span&gt; 코멘트 태그를 사용해도&amp;nbsp;좋을듯.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;!---
+This is comment.
+---&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;오늘은&amp;nbsp;여기까지&amp;hellip;&lt;/p&gt;</content><category term="markdown"></category><category term="comment"></category><category term="문법"></category></entry><entry><title>Cron-Style Job System - cronsun</title><link href="https://ujuc.github.io/2017/07/19/cron-style_job_system_-_cronsun/" rel="alternate"></link><published>2017-07-19T17:08:01+09:00</published><updated>2017-07-19T17:08:01+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-19:/2017/07/19/cron-style_job_system_-_cronsun/</id><summary type="html">&lt;p&gt;Go 메일링을 보다가 cron과 비슷한 서비스라 말하기에&amp;nbsp;확인.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/shunfei/cronsun"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Lang:&amp;nbsp;Golang&lt;/li&gt;
 &lt;/ul&gt;
