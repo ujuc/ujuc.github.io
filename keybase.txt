@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/ujuc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ujuc.github.io
+  * I am ujuc (https://keybase.io/ujuc) on keybase.
+  * I have a public key with fingerprint 24BD E476 1968 FECB F613  0629 407D 7E3B 5CC4 4D07
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01011a5b5a00d55c96d760171d18bd8823658994d10a3ded2532a6a024204a722ba40a",
+      "fingerprint": "24bde4761968fecbf6130629407d7e3b5cc44d07",
+      "host": "keybase.io",
+      "key_id": "407d7e3b5cc44d07",
+      "kid": "01011a5b5a00d55c96d760171d18bd8823658994d10a3ded2532a6a024204a722ba40a",
+      "uid": "c77ddb58b9ba1a90e678da337f8e4119",
+      "username": "ujuc"
+    },
+    "service": {
+      "hostname": "ujuc.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1501651656,
+  "expire_in": 157680000,
+  "prev": "a5e49cf23b9b129bb49bd8e057f7fa961fa45f4b7047d6e4859eedc6956d7821",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.73
+Comment: https://keybase.io/crypto
+
+yMIjAnicrVJJaBRBFJ1o1GQ0JKCInhI7GFTiUNVT1csYkoOgHpQo7iQwVnVVT9rE
+7pnuniSjuEQUD66ouMYdsxziGhc0h7iAihc1EnA7iIoRB0EP6iEu1VHBg0eLgqL+
+f+/Vf4+6XTA8FM6B+InlnvqSzbl/Y186tLyF3l0jUYdlpNgaqZ4PHbyBcc+P11tM
+ikkAAggJppgAwDA2dIWpCoAqZFCjTNPkqII1XUcMAhJlnMk4KhOFABnJABFVlilB
+gEjlkmnZCe4mXcv2hayMKONIVaCuaCY3qKnAKFBkHQGVqTxKsWEgxIAqiHWOFzDE
+cJR4PGI5oiYu8aHx/oH/z3Onh+QMVWWMYo3qlECiA66oGiPRqGpqHEGoB0CPuzZZ
+xQU6vTJtSGvLJVFptAwehBq4+KsbSVh+XZr+cpN0Hd8xnAbRq/P9pBcLuH4mGYCb
+OI3/lolTy2YiRcFo5K5nObYUgwJp+FagCzGAChZbKZd4c9JyedwKEFhVNCBW8A5v
+FJIEc6QbphwVZqCsU4p0kQgHWDVVk+gKNAnCJqIqQCpTONKwzjkzFB2LDDUZSoGx
+lO0IbSHqk4TQ9KyETfy0y6W1N3trc0M54dDIEcOC7xUK5xf9+XQjI6N+sIkwWbr7
+aO+m0XvmNXUMvnl2emPri4LxZnFb2wd30tNrg1rVwsldzTurWy+1FUbqX87+tqyl
+oI8cnXv28v66Ujz3ZvZpfMkZo7KseltFln3cfDU2f/uRh+dnlDxqz1zpfjVu8PXF
+kyvGhvRNO2a/7Hw/vTvbvCHSPXlFf3Fl3pOOlV87K6YculD0/MYWNH5Be21YOWfv
+zQykJuSxRaW7Flcfq3U6jj9O9RcfnFn48Orqjkdvu9YtnfWuYfGJvqqi3OK8UM/+
+O2NGPAC3phZeL3culMzp+ez1tfYO7rH7f9zK5A+0T+vxEmWpA1fG3GvJD6PuTzV5
+tama9aGt7a2V2e/jyg4Pc34CYP486Q==
+=Z3IH
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ujuc
+
+==================================================================
+
