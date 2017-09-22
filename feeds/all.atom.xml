@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-08-04T11:07:25+09:00</updated><entry><title>Scala에서 val, var 차이</title><link href="https://ujuc.github.io/2017/08/04/scalae-seo_val,_var_ca-i/" rel="alternate"></link><published>2017-08-04T11:07:25+09:00</published><updated>2017-08-04T11:07:25+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-08-04:/2017/08/04/scalae-seo_val,_var_ca-i/</id><summary type="html">&lt;p&gt;Scala에서 &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;val&lt;/code&gt;의 차이가&amp;nbsp;궁금해졌다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;요세 Java를 공부하기는 싫고 JVM에서 도는 걸 찾다가. Scala쪽으로 어떤분이 약을 파셔서&amp;nbsp;약을먹었다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-09-22T17:18:08+09:00</updated><entry><title>OpenStack에서 사용할 Windows imange 생성</title><link href="https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/" rel="alternate"></link><published>2017-09-22T17:18:08+09:00</published><updated>2017-09-22T17:18:08+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-09-22:/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/</id><summary type="html">&lt;p&gt;OpenStack에서 사용할 Windows 이미지를&amp;nbsp;생성해보자.&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;기본&amp;nbsp;준비사항&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu&amp;nbsp;16.04&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://fedoraproject.org/wiki/Windows_Virtio_Drivers"&gt;VirtIO&amp;nbsp;driver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://cloudbase.it/cloudbase-init"&gt;CloudBase&amp;nbsp;init&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows &lt;span class="caps"&gt;CD&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="virt-manager"&gt;virt-manager&amp;nbsp;설치&lt;/h2&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt install -y kvm virt-manager
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;virt-manager 설치 후에 VM을&amp;nbsp;생성한다.&lt;/li&gt;
+&lt;li&gt;이미지는 &lt;code&gt;qcow2&lt;/code&gt;로&amp;nbsp;만들어야된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="virtio"&gt;VirtIO 드라이버&amp;nbsp;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;가장&amp;nbsp;중요하다.&lt;/li&gt;
+&lt;li&gt;이 작업을 하지 않으면, &lt;span class="caps"&gt;OS&lt;/span&gt; 부팅할때 에러가&amp;nbsp;뜬다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지&amp;nbsp;않는다.&lt;/li&gt;
+&lt;li&gt;이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록&amp;nbsp;한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="cloudbase-init"&gt;CloudBase init&amp;nbsp;설치&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloud init 파일을 만들어주는&amp;nbsp;프로그램이다.&lt;/li&gt;
+&lt;li&gt;그냥 받아서 설치해주면 되는데 맨마지막 &lt;strong&gt;일반화&lt;/strong&gt; 라는 항목이&amp;nbsp;있는데.&lt;/li&gt;
+&lt;li&gt;이것을 하게되면, Windows 첫 설치시 새로운 계정을 만들 수 있도록 이전 설정을 다날리는 작업을 해주기에 필요하다면 하고 아니라면 체크하지말고 설치를 하도록&amp;nbsp;하자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;디바이스 드라이버&amp;nbsp;확인&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;혹시나 없는 드라이버가 있는지 확인하고 하도록&amp;nbsp;하자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="glance-imange"&gt;Glance에 Imange&amp;nbsp;업로드&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hoizon&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt; : &lt;code&gt;/var/tmp&lt;/code&gt; 에다가 올린다. 그러니 &lt;code&gt;/var&lt;/code&gt; 폴더에 용량이 있는지 확인하고&amp;nbsp;올리도록.&lt;/li&gt;
+&lt;li&gt;편하게&amp;nbsp;올리자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;CLI&lt;/span&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--disk-format&lt;/code&gt;은 기본값이 &lt;code&gt;raw&lt;/code&gt;이다. 그렇기에 &lt;code&gt;qcow2&lt;/code&gt;로 변경해주고&amp;nbsp;올려야된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ openstack image create --disk-format qcow2 --file windows.qcow2 windows
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h2 id="_3"&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;http://gotocloud.co.kr/?p=1575&lt;/li&gt;
+&lt;li&gt;http://heavenkong.blogspot.kr/2014/04/create-windows7-virtual-machine-image.html&lt;/li&gt;
+&lt;li&gt;https://fedoraproject.org/wiki/Windows_Virtio_Drivers&lt;/li&gt;
+&lt;/ul&gt;</content><category term="openstack"></category><category term="nova"></category><category term="image"></category><category term="windows"></category></entry><entry><title>Scala에서 val, var 차이</title><link href="https://ujuc.github.io/2017/08/04/scalae-seo_val,_var_ca-i/" rel="alternate"></link><published>2017-08-04T11:07:25+09:00</published><updated>2017-08-04T11:07:25+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-08-04:/2017/08/04/scalae-seo_val,_var_ca-i/</id><summary type="html">&lt;p&gt;Scala에서 &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;val&lt;/code&gt;의 차이가&amp;nbsp;궁금해졌다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;요세 Java를 공부하기는 싫고 JVM에서 도는 걸 찾다가. Scala쪽으로 어떤분이 약을 파셔서&amp;nbsp;약을먹었다.&lt;/p&gt;
 &lt;p&gt;초기 공부는 역시 홈페이지에 있는 문서를 기반으로&amp;hellip; &lt;a href="http://docs.scala-lang.org/tour/tour-of-scala.html"&gt;Scala Tour&lt;/a&gt; 를 보다 &lt;a href="http://docs.scala-lang.org/tour/classes.html"&gt;Classes&lt;/a&gt;에 갔더니 예제로 다음 과 같은 내용이&amp;nbsp;있었다.&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
