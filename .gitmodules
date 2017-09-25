@@ -1,6 +1,3 @@
-[submodule "plugins"]
-    path = plugins
-    url = https://github.com/getpelican/pelican-plugins
 [submodule "theme/clean"]
     path = theme/clean
     url=git@github.com:ujuc/clean.git
