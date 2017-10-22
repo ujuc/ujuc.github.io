@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-08-04T11:07:25+09:00</updated><entry><title>Scala에서 val, var 차이</title><link href="https://ujuc.github.io/2017/08/04/scalae-seo_val,_var_ca-i/" rel="alternate"></link><published>2017-08-04T11:07:25+09:00</published><updated>2017-08-04T11:07:25+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-08-04:/2017/08/04/scalae-seo_val,_var_ca-i/</id><summary type="html">&lt;p&gt;Scala에서 &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;val&lt;/code&gt;의 차이가&amp;nbsp;궁금해졌다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;요세 Java를 공부하기는 싫고 JVM에서 도는 걸 찾다가. Scala쪽으로 어떤분이 약을 파셔서&amp;nbsp;약을먹었다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-10-22T18:21:49+09:00</updated><entry><title>파이썬으로 리눅스 배포판 확인하기</title><link href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" rel="alternate"></link><published>2017-10-22T18:21:49+09:00</published><updated>2017-10-22T18:21:49+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-10-22:/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/</id><summary type="html">&lt;p&gt;파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가&amp;nbsp;발생했다!&lt;/p&gt;</summary><content type="html">&lt;p&gt;요즘 코딩을 안하니&amp;hellip; 머리가 멍해져가는지라.&lt;br&gt;
+컴퓨터를 밀고 나면 새롭게 설정하기위해서 만들어뒀던 셸  스크립트를 파이썬 cmd 라이버리를 가지고 변경하는중. (이건 따로 작성하자. 새로운 기능을&amp;nbsp;많이써서&amp;hellip;)&lt;/p&gt;
+&lt;p&gt;리눅스 배포판 별로 설치하는 프로그램 명령어가 다르니 배포판을 구분하여 명령어를 다르게 적용할수 있도록 구현이&amp;nbsp;필요했다.&lt;/p&gt;
+&lt;p&gt;찾다보니 &lt;a href="https://docs.python.org/3/library/platform.html"&gt;&lt;code&gt;platform&lt;/code&gt;&lt;/a&gt; 라이브러리가 내부에 존재하고 해당 라이브러리에서 Unix 환경에서 사용이 가능한 &lt;code&gt;dist&lt;/code&gt;, &lt;code&gt;linux_distribution&lt;/code&gt; 메소드가 존재를 한다. 그런데 이거 3.5때 방출에 대한 논의 (&lt;a href="https://bugs.python.org/issue1322"&gt;issue 1322&lt;/a&gt;)가 되었고, 3.7에서 삭제되는 걸로&amp;nbsp;끝&amp;hellip;&lt;/p&gt;
+&lt;p&gt;이런. 난 매번 버전 업데이트되면 최신으로&amp;nbsp;맞출껀데&amp;hellip;&lt;/p&gt;
+&lt;p&gt;댓글을 읽다보니 해당 기능을 따로 빼내어 다른 서비스로 만들어둔 용자가 있었다. 이름은 &lt;a href="https://pypi.python.org/pypi/distro"&gt;&lt;code&gt;distro&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;그런데 이건 Unix 환경에서만 작동이된다. 맥에서는 패키지는 깔리지만 사용할 수&amp;nbsp;없다.&lt;/p&gt;
+&lt;p&gt;원리는 간단하다. &lt;code&gt;/etc/*-release&lt;/code&gt; 파일에 작성되어있는 내용을 가져와 표시해주는 것으로 보인다. 뭐 Todo로 &lt;code&gt;lsb_release&lt;/code&gt; 파일을 만들 수 있는게 있어보이지만&amp;hellip; 언제될지는&amp;nbsp;모르겠고.&lt;/p&gt;
+&lt;h2 id="_1"&gt;사용법&lt;/h2&gt;
+&lt;h3 id="linux_distributionfull_distribution_nametrue"&gt;&lt;code&gt;linux_distribution(full_distribution_name=True)&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Output : &lt;code&gt;(id_name, version, codename)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;platform.linux_distribution()&lt;/code&gt; 와&amp;nbsp;동일하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id&gt;&lt;code&gt;id()&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 배포판 id를&amp;nbsp;반환한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="nameprettyfalse"&gt;&lt;code&gt;name(pretty=False)&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 배포판 이름을&amp;nbsp;반환한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pretty&lt;/code&gt; 옵션을 사용하면 자세하게&amp;nbsp;나온단다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="versionprettyfalse-bestfalse"&gt;&lt;code&gt;version(pretty=False, best=False)&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;배포판 버전이다. (16.04, 17.05&amp;nbsp;이런거…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="codename"&gt;&lt;code&gt;codename()&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;배포판&amp;nbsp;코드네임&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="infoprettyfalse-bestfalse"&gt;&lt;code&gt;info(pretty=False, best=False)&lt;/code&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;리눅스 배포판에 대한 정보를&amp;nbsp;보여준다.&lt;/li&gt;
+&lt;li&gt;여기에 키값으로 되어있는 것들이 메소드 명과 1:1&amp;nbsp;매칭된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;다른 것도 많으니 &lt;a href="http://distro.readthedocs.io/en/latest/"&gt;문서&lt;/a&gt;&amp;nbsp;확인하자.&lt;/p&gt;</content><category term="python"></category><category term="linux"></category><category term="distribution"></category><category term="lib"></category></entry><entry><title>Scala에서 val, var 차이</title><link href="https://ujuc.github.io/2017/08/04/scalae-seo_val,_var_ca-i/" rel="alternate"></link><published>2017-08-04T11:07:25+09:00</published><updated>2017-08-04T11:07:25+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-08-04:/2017/08/04/scalae-seo_val,_var_ca-i/</id><summary type="html">&lt;p&gt;Scala에서 &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;val&lt;/code&gt;의 차이가&amp;nbsp;궁금해졌다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;요세 Java를 공부하기는 싫고 JVM에서 도는 걸 찾다가. Scala쪽으로 어떤분이 약을 파셔서&amp;nbsp;약을먹었다.&lt;/p&gt;
 &lt;p&gt;초기 공부는 역시 홈페이지에 있는 문서를 기반으로&amp;hellip; &lt;a href="http://docs.scala-lang.org/tour/tour-of-scala.html"&gt;Scala Tour&lt;/a&gt; 를 보다 &lt;a href="http://docs.scala-lang.org/tour/classes.html"&gt;Classes&lt;/a&gt;에 갔더니 예제로 다음 과 같은 내용이&amp;nbsp;있었다.&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2

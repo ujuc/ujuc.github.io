@@ -65,65 +65,88 @@
 
     <div id="site_article" class="container">
       <article>
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/03/03/vim-to-ide/">vim을 IDE처럼 만드는 법을&nbsp;알아보자.</a></h3>
-          <p><p class="first last">vimrc를 만드는&nbsp;방법에대해서&#8230;</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 03. 03.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/03/02/timesheet-js/">timesheet.js??</a></h3>
-          <p><p class="first last">timesheet.js라는 연대표를 그려주는 <span class="caps">JS</span>&nbsp;라이브러리</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 03. 02.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/03/01/clojure-development-env/">Clojure 개발 환경&nbsp;구축</a></h3>
-          <p><p class="first last">Clojure 개발 환경 구축&#8230; <a class="reference external" href="https://www.facebook.com/weweirdmeetup">#이상한 모임</a> 에서 웹 작업을 진행하는데
-있어서&#8230; 내가&nbsp;불편하여&#8230;</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 03. 01.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/">oh-my-vim 설치후 오류 (<span class="caps">OSX</span>)</a></h3>
-          <p><p class="first last">oh-my-vim 설치하고나면 오류가 난다. 그것때문에 작성한글이다. 혹시나
-동일한 것이 있으면&nbsp;수정합세&#8230;</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 02. 26.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/02/23/using-ipython-notebook-on-pycharm/">Pycharm에서 iPython notebook&nbsp;사용</a></h3>
-          <p><p class="first last">Pycharm이 4.0으로 판올림되면서 iPython notebook을 사용할 수 있도록
-되었다. 아직 불편한감이 없지않아&nbsp;있음.</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 02. 23.</p>
-        </article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" class="h1">파이썬으로 리눅스 배포판&nbsp;확인하기</a></h1>
     </div>
-  </div>
+    <div class="row article">
+      <p><i class="fa fa-flash"></i></p>
+      <div class="article_text">
+        <p>요즘 코딩을 안하니&hellip; 머리가 멍해져가는지라.<br>
+컴퓨터를 밀고 나면 새롭게 설정하기위해서 만들어뒀던 셸  스크립트를 파이썬 cmd 라이버리를 가지고 변경하는중. (이건 따로 작성하자. 새로운 기능을&nbsp;많이써서&hellip;)</p>
+<p>리눅스 배포판 별로 설치하는 프로그램 명령어가 다르니 배포판을 구분하여 명령어를 다르게 적용할수 있도록 구현이&nbsp;필요했다.</p>
+<p>찾다보니 <a href="https://docs.python.org/3/library/platform.html"><code>platform</code></a> 라이브러리가 내부에 존재하고 해당 라이브러리에서 Unix 환경에서 사용이 가능한 <code>dist</code>, <code>linux_distribution</code> 메소드가 존재를 한다. 그런데 이거 3.5때 방출에 대한 논의 (<a href="https://bugs.python.org/issue1322">issue 1322</a>)가 되었고, 3.7에서 삭제되는 걸로&nbsp;끝&hellip;</p>
+<p>이런. 난 매번 버전 업데이트되면 최신으로&nbsp;맞출껀데&hellip;</p>
+<p>댓글을 읽다보니 해당 기능을 따로 빼내어 다른 서비스로 만들어둔 용자가 있었다. 이름은 <a href="https://pypi.python.org/pypi/distro"><code>distro</code></a>.</p>
+<p>그런데 이건 Unix 환경에서만 작동이된다. 맥에서는 패키지는 깔리지만 사용할 수&nbsp;없다.</p>
+<p>원리는 간단하다. <code>/etc/*-release</code> 파일에 작성되어있는 내용을 가져와 표시해주는 것으로 보인다. 뭐 Todo로 <code>lsb_release</code> 파일을 만들 수 있는게 있어보이지만&hellip; 언제될지는&nbsp;모르겠고.</p>
+<h2 id="_1">사용법</h2>
+<h3 id="linux_distributionfull_distribution_nametrue"><code>linux_distribution(full_distribution_name=True)</code></h3>
+<ul>
+<li>Output : <code>(id_name, version, codename)</code></li>
+<li><code>platform.linux_distribution()</code> 와&nbsp;동일하다.</li>
+</ul>
+<h3 id><code>id()</code></h3>
+<ul>
+<li>리눅스 배포판 id를&nbsp;반환한다.</li>
+</ul>
+<h3 id="nameprettyfalse"><code>name(pretty=False)</code></h3>
+<ul>
+<li>리눅스 배포판 이름을&nbsp;반환한다.</li>
+<li><code>pretty</code> 옵션을 사용하면 자세하게&nbsp;나온단다.</li>
+</ul>
+<h3 id="versionprettyfalse-bestfalse"><code>version(pretty=False, best=False)</code></h3>
+<ul>
+<li>배포판 버전이다. (16.04, 17.05&nbsp;이런거…)</li>
+</ul>
+<h3 id="codename"><code>codename()</code></h3>
+<ul>
+<li>배포판&nbsp;코드네임</li>
+</ul>
+<h3 id="infoprettyfalse-bestfalse"><code>info(pretty=False, best=False)</code></h3>
+<ul>
+<li>리눅스 배포판에 대한 정보를&nbsp;보여준다.</li>
+<li>여기에 키값으로 되어있는 것들이 메소드 명과 1:1&nbsp;매칭된다.</li>
+</ul>
+<p>다른 것도 많으니 <a href="http://distro.readthedocs.io/en/latest/">문서</a>&nbsp;확인하자.</p>
+      </div>
+      <p><i class="fa fa-hand-spock-o"></i></p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 17. 10. 22.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="https://ujuc.github.io/tag/python.html">python</a>
+,               <a href="https://ujuc.github.io/tag/linux.html">linux</a>
+,               <a href="https://ujuc.github.io/tag/distribution.html">distribution</a>
+,               <a href="https://ujuc.github.io/tag/lib.html">lib</a>
+          </i>
+        </p>
+      </div>
+    </div>
 
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
       </article>
     </div>
 
     <div class="container">
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <ul class="pagination center">
-            <li class="page-item">
-              <a href="https://ujuc.github.io/category/develop6.html"><i class="fa fa-arrow-circle-left"></i> Next</a>
-            </li>
-      <i class="fa fa-dot-circle-o text-danger"></i>
-          <li class="page-item">
-            <a href="/category/develop8.html">Prev <i class="fa fa-arrow-circle-right"></i></a>
-          </li>
-      </ul>
-    </div>
-  </div>
     </div>
 
     <!-- Title -->
