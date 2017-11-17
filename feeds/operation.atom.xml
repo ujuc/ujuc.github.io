@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-09-22T17:18:08+09:00</updated><entry><title>OpenStack에서 사용할 Windows imange 생성</title><link href="https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/" rel="alternate"></link><published>2017-09-22T17:18:08+09:00</published><updated>2017-09-22T17:18:08+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-09-22:/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/</id><summary type="html">&lt;p&gt;OpenStack에서 사용할 Windows 이미지를&amp;nbsp;생성해보자.&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;기본&amp;nbsp;준비사항&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-11-18T00:54:20+09:00</updated><entry><title>Ubuntu 17.10에서부터 기본으로 사용되는 Netplan</title><link href="https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/" rel="alternate"></link><published>2017-11-18T00:54:20+09:00</published><updated>2017-11-18T00:54:20+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-11-18:/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/</id><summary type="html">&lt;p&gt;Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은&amp;nbsp;뭘까?&lt;/p&gt;</summary><content type="html">&lt;p&gt;처음에는 리눅스에서 IP를 Static하게 구성하기위해 &lt;a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819"&gt;검색한 페이지&lt;/a&gt;에서 독특한 문법을&amp;nbsp;확인했다.&lt;/p&gt;
+&lt;p&gt;문의 내용은 17.10에서는 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;에 작성해둔 설정이 안먹힌다는 것이었다. 그러면서 답변으로 달린것이 &lt;a href="https://askubuntu.com/a/967819/126675"&gt;요내용&lt;/a&gt;이다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ifupdown&lt;/code&gt; 패키지를 더이상 사용하지 않고, Ubuntu 17.10 Server에서 부터는 &lt;code&gt;netplan&lt;/code&gt;이라는 것을 사용하여 &lt;code&gt;systemd-networkd&lt;/code&gt;를 제어한다고 명시하고&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;사용법이 묘하다. 혹시나해서 &lt;a href="https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes"&gt;Ubuntu 17.10 release note&lt;/a&gt;를 보러갔지. 그랬더니 &lt;strong&gt;Update Packages&lt;/strong&gt;에 당당히 Linux kernel 다음에 한 꼭지로 있다. 내용은 다음 과&amp;nbsp;같다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ifupdown&lt;/strong&gt; has been deprecated in favor of &lt;strong&gt;netplan&lt;/strong&gt; and is no longer present on new installs. The installer will generate a configuration file for &lt;strong&gt;netplan&lt;/strong&gt; in &lt;em&gt;/etc/netplan&lt;/em&gt;, which will set up the system to configure the network via systemd-networkd or NetworkManager. Desktop users will see their system fully managed via NetworkManager as it has been the case in previous releases, but Server users now have their network devices managed via systemd-networkd on new installs. This only applies to new&amp;nbsp;installations.&lt;/p&gt;
+&lt;p&gt;Given that ifupdown is no longer installed by default, its commands will not be present: &lt;code&gt;ifup&lt;/code&gt; and &lt;code&gt;ifdown&lt;/code&gt; are thus unavailable, replaced by &lt;code&gt;ip link set $device up&lt;/code&gt; and &lt;code&gt;ip link set $device down&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;networkctl&lt;/code&gt; command is also available for users to see a summary of the network devices. &lt;code&gt;networkctl&lt;/code&gt; status will display the current global state of &lt;span class="caps"&gt;IP&lt;/span&gt; addresses on the system; and &lt;code&gt;networkctl status $device&lt;/code&gt; can display the details specific to a network&amp;nbsp;device.&lt;/p&gt;
+&lt;p&gt;For more information about netplan, please refer to the manual page using the &lt;code&gt;man 5 netplan&lt;/code&gt; command.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그리고 찾다보니 이건 Ubuntu에서만 사용하는 프로젝트로 보이는데&amp;hellip; 다른 배포판에서는 사용될 확률이 높지는 않으니&amp;hellip;&amp;nbsp;이것참&amp;hellip;&lt;/p&gt;
+&lt;p&gt;아래 내용은 정리해둔거고, 나중에 man 페이지나 정리해서&amp;nbsp;올려둬야겠다.&lt;/p&gt;
+&lt;h2 id="netplan"&gt;Netplan&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Design overview" src="https://wiki.ubuntu.com/Netplan/Design?action=AttachFile&amp;amp;do=get&amp;amp;target=design_overview.png"&gt;&lt;/p&gt;
+&lt;h3 id="netplan_1"&gt;Netplan&amp;nbsp;소개&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;YAML&lt;/span&gt; 구성 파일을 사용하여 네트워크 구성을&amp;nbsp;한다.&lt;/li&gt;
+&lt;li&gt;초기 부팅시, “network renderer” 작동할때 &lt;em&gt;/{lib,etc,run}/netplan*.yaml&lt;/em&gt; 내용을 읽고, 지정된 네트워킹 daemon에 장치에 대한 &lt;em&gt;/run&lt;/em&gt; 에 구성을&amp;nbsp;쓴다.&lt;/li&gt;
+&lt;li&gt;systemd-networkd 를 renderer 기본 값으로 하여 장치를 핸들링하며, 다른 renderer (NetworkManger)를 지정할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;네트워크 구성에서 다루지 않는 장치는 전혀 건드리지&amp;nbsp;않는다.&lt;/li&gt;
+&lt;li&gt;initramfs에서 사용이&amp;nbsp;가능하다.&lt;/li&gt;
+&lt;li&gt;구성이 지속되지 않고, &lt;span class="caps"&gt;YAML&lt;/span&gt; 로만 구성을&amp;nbsp;작성한다.&lt;/li&gt;
+&lt;li&gt;파서는 어플리케이션 (libvert, lxd)에서 사용이 예상되는 네트워크 구성 (&lt;code&gt;virtbr0&lt;/code&gt;, &lt;code&gt;lxdvr0&lt;/code&gt;)를 패키지화 할 수 있도록 멀티 구성 파일에 대한 지원을 하거나, NetworkManager를 이용하여 모든 것을 사용하도록 글로벌 기본 정책을 변경할 수&amp;nbsp;있어야한다.&lt;/li&gt;
+&lt;li&gt;백엔드/정책을 변경하거나, &lt;code&gt;apt purge network-manager&lt;/code&gt;를 할 수 있는 유연성을&amp;nbsp;유지해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_1"&gt;명령어&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netplan generate&lt;/code&gt; : &lt;em&gt;/etc/netplan&lt;/em&gt;에 renderer에 대한 구성들을&amp;nbsp;생성한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netplan apply&lt;/code&gt; : renderer에 대한 구성들을 적용하고, 필요에따라&amp;nbsp;재시작한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netplan ifupdown-migrate&lt;/code&gt; : &lt;em&gt;/etc/network/interfaces&lt;/em&gt; 의 내용을 마이그레이션&amp;nbsp;한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_2"&gt;사용법&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;설정한 인터페이스&amp;nbsp;끄고키기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt;/span&gt; up
+$ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt;/span&gt; down
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;고정 아이피 설정 &lt;em&gt;/etc/netplan/a.yaml&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+    &lt;span class="n"&gt;renderer&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;networkd&lt;/span&gt;
+    &lt;span class="n"&gt;ethernets&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;enp3s0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;addresses&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+                &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mf"&gt;10.10&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;10.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;
+            &lt;span class="n"&gt;dhcp4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h3 id="netplan_2"&gt;Netplan을 사용하고 싶지 않을&amp;nbsp;경우&lt;/h3&gt;
+&lt;p&gt;Ubuntu 서버 설치 이미지로 부팅시 grub (&lt;code&gt;e&lt;/code&gt; 버튼을 클릭해서 수정하거나, F6을 눌러 bootspash로 들어가서)에서 preseeding 설정으로 &lt;code&gt;netcfg/do_not_use_netplan=true&lt;/code&gt; 명령을&amp;nbsp;추가해줍니다.&lt;/p&gt;
+&lt;h2 id="_3"&gt;참고&amp;nbsp;페이지&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Homepage : &lt;a href="https://launchpad.net/netplan"&gt;launchpad.net/netplan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Code : &lt;a href="https://git.launchpad.net/netplan"&gt;git.launchpad.net/netplan&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;첫 커밋 : &lt;a href="https://git.launchpad.net/netplan/commit/?id=b6256ca911ba9762e04a9c7614dc226f4753ffb8"&gt;b6256ca911ba9762e04a9c7614dc226f4753ffb8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Wiki : &lt;a href="https://wiki.ubuntu.com/Netplan"&gt;wiki.ubuntu.com/Netplan&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wiki.ubuntu.com/Netplan/Design"&gt;Netplan&amp;nbsp;Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ManPage : &lt;a href="http://people.canonical.com/~mtrudel/netplan/"&gt;netplan&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://git.launchpad.net/netplan/tree/doc/netplan.md"&gt;doc/netplan.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/"&gt;Netplan by default in&amp;nbsp;17.10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="network"></category><category term="config"></category><category term="networkd"></category><category term="netplan"></category><category term="ubuntu"></category></entry><entry><title>OpenStack에서 사용할 Windows imange 생성</title><link href="https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/" rel="alternate"></link><published>2017-09-22T17:18:08+09:00</published><updated>2017-09-22T17:18:08+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-09-22:/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/</id><summary type="html">&lt;p&gt;OpenStack에서 사용할 Windows 이미지를&amp;nbsp;생성해보자.&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;기본&amp;nbsp;준비사항&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ubuntu&amp;nbsp;16.04&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://fedoraproject.org/wiki/Windows_Virtio_Drivers"&gt;VirtIO&amp;nbsp;driver&lt;/a&gt;&lt;/li&gt;
