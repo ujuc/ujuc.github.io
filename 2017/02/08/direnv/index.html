@@ -11,7 +11,7 @@
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,27 +44,40 @@
 </script>
 </head>
   <body>
-    <div class="container" style="margin-top: 15px;">
-      <header>
-        <div class="navbar navbar-static-top">
-          <div class="container-fluid">
-            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-              <div class="row">
-                <nav class="nav nav-inline">
-                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-                </nav>
-              </div>
+  <header>
+    <div class="container" style="margin-top: 10px;">
+      <nav class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/archives.html">
+              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tags.html">
+              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/categories.html">
+              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Pages</a>
+            <div class="dropdown-menu">
             </div>
-          </div>
-        </div>
-      </header>
+          </li>
+      </nav>
     </div>
+  </header>
 
-    <div id="site_article" class="container">
-      <article>
+  <div id="site_article" class="container">
+    <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2017/02/08/direnv/" class="h1">direnv</a></h1>
@@ -79,20 +92,17 @@
 코드에는 넣지 못하는 환경변수들을 셸에 <code>.bashrc</code> 나 <code>.profile</code> 에 모든 곳에서 사용하는 경우가 생기는데, 이걸 쓰면 프로젝트마다 다른 내용을 생성하여 보안을 높힐 수 있는 기회가 된다. (모든 보안은 사람이 행하는 보안을 제외하고&hellip; 직접 OS에 들어와서 까는건 어쩔 수&nbsp;없잖아&hellip;)</p>
 <h4 id="_1">설치</h4>
 <h5 id="_2">빠지지 않는 메뉴얼&nbsp;설치!</h5>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ git clone https://github.com/direnv/direnv
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/direnv/direnv
 $ <span class="nb">cd</span> direnv
 $ make install
 <span class="c1"># or symlink ./direnv into the $PATH</span>
 </pre></div>
-</td></tr></table>
+
 
 <h5 id="brew">brew</h5>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ brew install direnv
+<div class="codehilite"><pre><span></span>$ brew install direnv
 </pre></div>
-</td></tr></table>
+
 
 <ul>
 <li>리눅스 패키지도 있다고 하니 사용하는 것에 있는지 검색해보고 설치하도록&nbsp;하자.</li>
@@ -102,45 +112,33 @@ $ make install
 <ul>
 <li><code>~/.bashrc</code></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>eval &quot;$(direnv hook bash)&quot;
+<div class="codehilite"><pre><span></span>eval &quot;$(direnv hook bash)&quot;
 </pre></div>
-</td></tr></table>
+
 
 <ul>
 <li><code>~/.zshrc</code></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>eval &quot;$(direnv hook zsh)&quot;
+<div class="codehilite"><pre><span></span>eval &quot;$(direnv hook zsh)&quot;
 </pre></div>
-</td></tr></table>
+
 
 <ul>
 <li><code>~/.config/fish/config.fish</code></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>eval (direnv hook fish)
+<div class="codehilite"><pre><span></span>eval (direnv hook fish)
 </pre></div>
-</td></tr></table>
+
 
 <ul>
 <li><code>~/.cshrc</code></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>eval `direnv hook tcsh`
+<div class="codehilite"><pre><span></span>eval `direnv hook tcsh`
 </pre></div>
-</td></tr></table>
+
 
 <p>다음으로는 다음과 같이 설정해주면&nbsp;된다.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> playground
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> playground
 $ <span class="nb">echo</span> <span class="nb">export</span> <span class="nv">FOO</span><span class="o">=</span>foo &gt; .envrc
 direnv: error .envrc is blocked. Run <span class="sb">`</span>direnv allow<span class="sb">`</span> to approve its content.
 $ direnv allow
@@ -154,7 +152,7 @@ direnv: <span class="nb">export</span> +FOO -PS2
 $ <span class="nb">echo</span> <span class="si">${</span><span class="nv">FOO</span><span class="si">}</span>
 foo
 </pre></div>
-</td></tr></table>
+
 
 <p>사용법은&nbsp;간단하다.</p>
 <p>그런데 이걸 쓰는 이유는 코드에 자동으로 생성하는 비번이나 아니면 Auth token 등을 넣으실껀데&hellip;<br>
@@ -195,41 +193,40 @@ foo
   </script>
 </div>      </div>
   </div>
-      </article>
-    </div>
+    </article>
+  </div>
 
-    <div class="container">
-    </div>
+  <div class="container">
+  </div>
 
-    <!-- Title -->
-    <div id="site_title" class="container">
-      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <div class="row">
-          <hr />
-          <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-        </div>
-        <div class="row">
-          <p>Anythink, Everythink!</p>
-        </div>
-        <div class="row">
-            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
-        </div>
+  <!-- Title -->
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
       </div>
     </div>
+  </div>
 
-    <div id="site_footer" class="container">
+  <div id="site_footer" class="container">
 <footer>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row">
       <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
     </div>
   </div>
-</footer>    </div>
+</footer>  </div>
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -11,7 +11,7 @@
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,27 +44,40 @@
 </script>
 </head>
   <body>
-    <div class="container" style="margin-top: 15px;">
-      <header>
-        <div class="navbar navbar-static-top">
-          <div class="container-fluid">
-            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-              <div class="row">
-                <nav class="nav nav-inline">
-                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-                </nav>
-              </div>
+  <header>
+    <div class="container" style="margin-top: 10px;">
+      <nav class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/archives.html">
+              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tags.html">
+              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/categories.html">
+              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Pages</a>
+            <div class="dropdown-menu">
             </div>
-          </div>
-        </div>
-      </header>
+          </li>
+      </nav>
     </div>
+  </header>
 
-    <div id="site_article" class="container">
-      <article>
+  <div id="site_article" class="container">
+    <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" class="h1">Stderr check in&nbsp;zshell</a></h1>
@@ -107,52 +120,46 @@
 </table>
 <p>간단히 하자.<br>
 go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올&nbsp;것이다.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ which go
+<div class="codehilite"><pre><span></span>$ which go
 </pre></div>
-</td></tr></table>
+
 
 <p><img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png"></p>
 <p>요놈을 안나오게&nbsp;해보자.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ which go <span class="m">1</span>&gt; /dev/null
+<div class="codehilite"><pre><span></span>$ which go <span class="m">1</span>&gt; /dev/null
 </pre></div>
-</td></tr></table>
+
 
 <p><img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png"></p>
 <p>오~~~</p>
 <p>stderr 값이 나오면 안나오게 할려고 보면&hellip; 이건 설치가 되어있으니&hellip;&nbsp;없는걸로&hellip;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ which rbenv
+<div class="codehilite"><pre><span></span>$ which rbenv
 </pre></div>
-</td></tr></table>
+
 
 <p><img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png"></p>
 <p>이걸 위와 같이 <code>1</code> 을&nbsp;사용하면&hellip;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ which rbenv <span class="m">1</span>&gt; /dev/null
+<div class="codehilite"><pre><span></span>$ which rbenv <span class="m">1</span>&gt; /dev/null
 </pre></div>
-</td></tr></table>
+
 
 <p><img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png"></p>
 <p>음&hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. <code>1</code>로 출력되는걸&nbsp;막으라했더니&hellip;</p>
 <p>그럼 Python에서는 어디로&nbsp;나올까?</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="kn">as</span> <span class="nn">sub</span>
+<div class="codehilite"><pre><span></span><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="kn">as</span> <span class="nn">sub</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">check_rbenv</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;which rbenv&#39;</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
                             <span class="n">stderr</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
 <span class="n">In</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">check_rbenv</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span> <span class="p">(</span><span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
-</td></tr></table>
+
 
 <p>음?? 암것도&nbsp;안나온다&hellip;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
+<div class="codehilite"><pre><span></span><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;which rbenv&#39;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span> <span class="mi">256</span>
 </pre></div>
-</td></tr></table>
+
 
 <p>출력값이 256이라니&hellip; 혹시나 해서 봤더니 8bit밀란다. 저걸 밀면 1이 떨어지는데&hellip;<br>
 리눅스에서 반환값이 1이면 비정상 종료일때로 알고 있다. 고로니 저넘은 제대로<br>
@@ -196,41 +203,40 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
   </script>
 </div>      </div>
   </div>
-      </article>
-    </div>
+    </article>
+  </div>
 
-    <div class="container">
-    </div>
+  <div class="container">
+  </div>
 
-    <!-- Title -->
-    <div id="site_title" class="container">
-      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <div class="row">
-          <hr />
-          <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-        </div>
-        <div class="row">
-          <p>Anythink, Everythink!</p>
-        </div>
-        <div class="row">
-            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
-        </div>
+  <!-- Title -->
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
       </div>
     </div>
+  </div>
 
-    <div id="site_footer" class="container">
+  <div id="site_footer" class="container">
 <footer>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row">
       <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
     </div>
   </div>
-</footer>    </div>
+</footer>  </div>
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

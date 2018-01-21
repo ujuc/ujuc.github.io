@@ -11,7 +11,7 @@
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,27 +44,40 @@
 </script>
 </head>
   <body>
-    <div class="container" style="margin-top: 15px;">
-      <header>
-        <div class="navbar navbar-static-top">
-          <div class="container-fluid">
-            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-              <div class="row">
-                <nav class="nav nav-inline">
-                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-                </nav>
-              </div>
+  <header>
+    <div class="container" style="margin-top: 10px;">
+      <nav class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/archives.html">
+              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tags.html">
+              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/categories.html">
+              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Pages</a>
+            <div class="dropdown-menu">
             </div>
-          </div>
-        </div>
-      </header>
+          </li>
+      </nav>
     </div>
+  </header>
 
-    <div id="site_article" class="container">
-      <article>
+  <div id="site_article" class="container">
+    <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" class="h1">Install wireless Qualcomm Atheros device driver on Lenovo&nbsp;Y700</a></h1>
@@ -75,17 +88,7 @@
         <p>새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가&nbsp;발생했다.</p>
 <p>Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&hellip; Ubuntu 16.04버전이 4.4.0&hellip; 그래서 백포트하고, 드라이버를 옮겨주는것으로&nbsp;해결.</p>
 <p><a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation">Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation</a> 에서 말하는 작업을&nbsp;설치해주면된다.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt install build-essential linux-headers-<span class="k">$(</span>uname -r<span class="k">)</span> git
+<div class="codehilite"><pre><span></span>sudo apt install build-essential linux-headers-<span class="k">$(</span>uname -r<span class="k">)</span> git
 <span class="nb">echo</span> <span class="s2">&quot;options ath10k_core skip_otp=y&quot;</span> <span class="p">|</span> sudo tee /etc/modprobe.d/ath10k_core.conf
 wget https://www.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/backports-4.4.2-1.tar.gz
 tar -zxvf backports-4.4.2-1.tar.gz
@@ -97,13 +100,12 @@ git clone https://github.com/kvalo/ath10k-firmware.git
 sudo cp -r ath10k-firmware/QCA9377 /lib/firmware/ath10k/
 sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin
 </pre></div>
-</td></tr></table>
+
 
 <p>그리고&nbsp;하나더&hellip;</p>
 <p>이건 위에껄 하고 안되면 추가해주도록&nbsp;하자.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> blacklist ideapad_laptop <span class="p">|</span> sudo tee /etc/modprobe.d/blacklist.conf
+<div class="codehilite"><pre><span></span><span class="nb">echo</span> blacklist ideapad_laptop <span class="p">|</span> sudo tee /etc/modprobe.d/blacklist.conf
 </pre></div>
-</td></tr></table>
       </div>
       <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
@@ -140,41 +142,40 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
   </script>
 </div>      </div>
   </div>
-      </article>
-    </div>
+    </article>
+  </div>
 
-    <div class="container">
-    </div>
+  <div class="container">
+  </div>
 
-    <!-- Title -->
-    <div id="site_title" class="container">
-      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <div class="row">
-          <hr />
-          <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-        </div>
-        <div class="row">
-          <p>Anythink, Everythink!</p>
-        </div>
-        <div class="row">
-            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
-        </div>
+  <!-- Title -->
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
       </div>
     </div>
+  </div>
 
-    <div id="site_footer" class="container">
+  <div id="site_footer" class="container">
 <footer>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row">
       <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
     </div>
   </div>
-</footer>    </div>
+</footer>  </div>
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

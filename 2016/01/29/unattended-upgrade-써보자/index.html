@@ -11,7 +11,7 @@
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,27 +44,40 @@
 </script>
 </head>
   <body>
-    <div class="container" style="margin-top: 15px;">
-      <header>
-        <div class="navbar navbar-static-top">
-          <div class="container-fluid">
-            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-              <div class="row">
-                <nav class="nav nav-inline">
-                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-                </nav>
-              </div>
+  <header>
+    <div class="container" style="margin-top: 10px;">
+      <nav class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/archives.html">
+              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tags.html">
+              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/categories.html">
+              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Pages</a>
+            <div class="dropdown-menu">
             </div>
-          </div>
-        </div>
-      </header>
+          </li>
+      </nav>
     </div>
+  </header>
 
-    <div id="site_article" class="container">
-      <article>
+  <div id="site_article" class="container">
+    <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2016/01/29/unattended-upgrade-써보자/" class="h1">unattended-upgrade&nbsp;써보자</a></h1>
@@ -82,15 +95,15 @@
 <li><a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html">Ubuntu manpage -&nbsp;unattended-upgrade</a></li>
 </ul>
 <h3 id="_1">사용법</h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ sudo unattended-upgrade
+<div class="codehilite"><pre><span></span>$ sudo unattended-upgrade
 </pre></div>
-</td></tr></table>
+
 
 <p>하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 <code>/var/log/unattended-upgrades.log</code>에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도&nbsp;있다.</p>
 <p>만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를&nbsp;하면된다.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ sudo unattended-upgrade --dry-run
+<div class="codehilite"><pre><span></span>$ sudo unattended-upgrade --dry-run
 </pre></div>
-</td></tr></table>
+
 
 <p>왠만해서는 <code>--dry-run</code> 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는&nbsp;않지&hellip;</p>
 <p>단점은 아직 1.0이 아니다. 그래서 그런지 외부로 출력되는게 없고, 전부 log파일로만&nbsp;나온다&hellip;</p>
@@ -129,41 +142,40 @@
   </script>
 </div>      </div>
   </div>
-      </article>
-    </div>
+    </article>
+  </div>
 
-    <div class="container">
-    </div>
+  <div class="container">
+  </div>
 
-    <!-- Title -->
-    <div id="site_title" class="container">
-      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <div class="row">
-          <hr />
-          <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-        </div>
-        <div class="row">
-          <p>Anythink, Everythink!</p>
-        </div>
-        <div class="row">
-            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
-        </div>
+  <!-- Title -->
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
       </div>
     </div>
+  </div>
 
-    <div id="site_footer" class="container">
+  <div id="site_footer" class="container">
 <footer>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row">
       <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
     </div>
   </div>
-</footer>    </div>
+</footer>  </div>
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

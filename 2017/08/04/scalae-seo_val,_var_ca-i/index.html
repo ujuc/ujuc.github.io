@@ -11,7 +11,7 @@
   <!-- Style sheet -->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,27 +44,40 @@
 </script>
 </head>
   <body>
-    <div class="container" style="margin-top: 15px;">
-      <header>
-        <div class="navbar navbar-static-top">
-          <div class="container-fluid">
-            <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-              <div class="row">
-                <nav class="nav nav-inline">
-                    <a class="nav-link" href="/"><i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span> </a>
-                    <a class="nav-link" href="/archives.html"><i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span> </a>
-                    <a class="nav-link" href="/tags.html"><i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span> </a>
-                    <a class="nav-link" href="/categories.html"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span> </a>
-                </nav>
-              </div>
+  <header>
+    <div class="container" style="margin-top: 10px;">
+      <nav class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/archives.html">
+              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tags.html">
+              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/categories.html">
+              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Pages</a>
+            <div class="dropdown-menu">
             </div>
-          </div>
-        </div>
-      </header>
+          </li>
+      </nav>
     </div>
+  </header>
 
-    <div id="site_article" class="container">
-      <article>
+  <div id="site_article" class="container">
+    <article>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2017/08/04/scalae-seo_val,_var_ca-i/" class="h1">Scala에서 val, var&nbsp;차이</a></h1>
@@ -74,19 +87,7 @@
       <div class="article_text">
         <p>요세 Java를 공부하기는 싫고 JVM에서 도는 걸 찾다가. Scala쪽으로 어떤분이 약을 파셔서&nbsp;약을먹었다.</p>
 <p>초기 공부는 역시 홈페이지에 있는 문서를 기반으로&hellip; <a href="http://docs.scala-lang.org/tour/tour-of-scala.html">Scala Tour</a> 를 보다 <a href="http://docs.scala-lang.org/tour/classes.html">Classes</a>에 갔더니 예제로 다음 과 같은 내용이&nbsp;있었다.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="o">(</span><span class="k">var</span> <span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="k">var</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="o">{</span>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="o">(</span><span class="k">var</span> <span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="k">var</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">def</span> <span class="n">move</span><span class="o">(</span><span class="n">dx</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">dy</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
         <span class="n">x</span> <span class="k">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span>
         <span class="n">y</span> <span class="k">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span>
@@ -100,7 +101,7 @@
 <span class="n">point1</span><span class="o">.</span><span class="n">x</span>    <span class="c1">// 2</span>
 <span class="n">println</span><span class="o">(</span><span class="n">point1</span><span class="o">)</span>     <span class="c1">// prints (x, y)</span>
 </pre></div>
-</td></tr></table>
+
 
 <p>변수를 초기화하는데 <code>var</code>랑 <code>val</code>이 같이 쓰였다. 느낌상으로는 <code>var</code>, <code>val</code>이나 동일할꺼같은데 같은걸 다른곳에서 다르게 사용할 필요가 없을꺼니&nbsp;구글검색.</p>
 <p><a href="https://stackoverflow.com/questions/4437373/use-of-def-val-and-var-in-scala">Use of def, val, and var in&nbsp;scala</a></p>
@@ -109,16 +110,7 @@
 <ul>
 <li><code>def</code>: 메소드, <em>immutable label</em>, <strong>lazily&nbsp;evaluated</strong></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">something</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+<div class="codehilite"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">something</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
 <span class="n">something</span><span class="k">:</span> <span class="kt">Int</span>
 
 <span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span>
@@ -129,18 +121,12 @@
        <span class="n">something</span> <span class="k">=</span> <span class="mi">10</span>
        <span class="o">^</span>
 </pre></div>
-</td></tr></table>
+
 
 <ul>
 <li><code>val</code>: 상수, <em>immutable label</em>, <strong>eagerly/immediately&nbsp;evaluated</strong></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">somethingelse</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span>
+<div class="codehilite"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">somethingelse</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span>
 <span class="n">somethingelse</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">17</span>
 
 <span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span> <span class="k">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">10</span>
@@ -148,22 +134,18 @@
        <span class="n">something</span> <span class="k">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">10</span>
        <span class="o">^</span>
 </pre></div>
-</td></tr></table>
+
 
 <ul>
 <li><code>var</code>: 변수, <em>mutable&nbsp;variable</em></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="k">var</span> <span class="n">aVariable</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
+<div class="codehilite"><pre><span></span><span class="n">scala</span><span class="o">&gt;</span> <span class="k">var</span> <span class="n">aVariable</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
 <span class="n">aVariable</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">6</span>
 
 <span class="n">scala</span><span class="o">&gt;</span> <span class="n">aVariable</span> <span class="k">=</span> <span class="mi">5</span>
 <span class="n">aVariable</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">5</span>
 </pre></div>
-</td></tr></table>
+
 
 <p>개인적으로는 <a href="https://stackoverflow.com/a/33066906/978762">두번째 답</a>이 마음에&nbsp;든다. </p>
       </div>
@@ -198,41 +180,40 @@
   </script>
 </div>      </div>
   </div>
-      </article>
-    </div>
+    </article>
+  </div>
 
-    <div class="container">
-    </div>
+  <div class="container">
+  </div>
 
-    <!-- Title -->
-    <div id="site_title" class="container">
-      <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <div class="row">
-          <hr />
-          <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-        </div>
-        <div class="row">
-          <p>Anythink, Everythink!</p>
-        </div>
-        <div class="row">
-            <span><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-            <span><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
-        </div>
+  <!-- Title -->
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
       </div>
     </div>
+  </div>
 
-    <div id="site_footer" class="container">
+  <div id="site_footer" class="container">
 <footer>
   <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
     <div class="row">
       <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
     </div>
   </div>
-</footer>    </div>
+</footer>  </div>
 
 <!-- Javascript -->
 <!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>  </body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
