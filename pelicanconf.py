@@ -80,9 +80,7 @@ MARKDOWN = {
         'markdown.extensions.tables': {},
         # 'markdown.extensions.start_strong': {},
         'markdown.extensions.admonition': {},
-        'markdown.extensions.codehilite': {
-            'linenums': True
-        },
+        'markdown.extensions.codehilite': {},
         'markdown.extensions.headerid': {},
         'markdown.extensions.meta': {},
         'markdown.extensions.nl2br': {},
@@ -96,7 +94,7 @@ MARKDOWN = {
 
 # Plugins
 PLUGIN_PATHS = [
-    './pelican-plugins'
+    './pelican-plugins/pelican-gist'
 ]
 
 PLUGINS = [
