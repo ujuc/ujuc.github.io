@@ -1,5 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-11-18T00:54:20+09:00</updated><entry><title>Ubuntu 17.10에서부터 기본으로 사용되는 Netplan</title><link href="https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/" rel="alternate"></link><published>2017-11-18T00:54:20+09:00</published><updated>2017-11-18T00:54:20+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-11-18:/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/</id><summary type="html">&lt;p&gt;Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은&amp;nbsp;뭘까?&lt;/p&gt;</summary><content type="html">&lt;p&gt;처음에는 리눅스에서 IP를 Static하게 구성하기위해 &lt;a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819"&gt;검색한 페이지&lt;/a&gt;에서 독특한 문법을&amp;nbsp;확인했다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-03-01T18:45:41+09:00</updated><entry><title>RSYSLOG - Templates</title><link href="https://ujuc.github.io/2018/03/01/rsyslog_-_templates/" rel="alternate"></link><published>2018-03-01T18:45:41+09:00</published><updated>2018-03-01T18:45:41+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-01:/2018/03/01/rsyslog_-_templates/</id><summary type="html">&lt;p&gt;Rsyslog 에서 사용되는 template 에 관련된 내용을&amp;nbsp;정리합시다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;/var/log/syslog&lt;/code&gt;로 모여드는 서비스들의 로그를 다른 곳으로 옮기고, 해당 내용을 확인하기 위해 파싱을 할 수 있도록 변경하는 작업이 필요했다.&lt;br&gt;
+그래서 내가 필요한 로그를 syslog에서 때어낸후 다른 파일로 옮기는 작업을 성공. 하지만 그 이상의 작업을 하기위해서는 rsyslog에서 template을 작성하여야 내가 필요한 메시지만 작성할 수 있는 것을 확인하였기에 해당 부분을 찾아&amp;nbsp;변경하였다.&lt;/p&gt;
+&lt;p&gt;그러면서 참고하려고 했던 문서들이 전부 영문이라. 한국어로 내가 정리해두고 나중에 또 찾아봐야겠다는 생각에서 글을&amp;nbsp;작성한다.&lt;/p&gt;
+&lt;h2 id="template"&gt;Template&lt;/h2&gt;
+&lt;p&gt;Rsyslog에서는 기본적인 포맷이 아닌 사용자가 필요한 내용으로 포맷을 변경할 수 있는 옵션을&amp;nbsp;제공한다.&lt;/p&gt;
+&lt;p&gt;작성하는 포맷은 두가지가 있으며, 검색해보면 전부 Legacy 포맷으로 적도록 되어있으니 두개는 보기 편한걸로 작성해두면 될것으로&amp;nbsp;보인다.&lt;/p&gt;
+&lt;h3 id="template-statement"&gt;&lt;code&gt;template()&lt;/code&gt; statement&lt;/h3&gt;
+&lt;p&gt;문서상으로는 7버전 이상에서 사용할 수 있는&amp;nbsp;포맷이다.&lt;/p&gt;
+&lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본&amp;nbsp;템플릿이다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;template(name=&amp;quot;FileFormat&amp;quot; type=&amp;quot;list&amp;quot;) {
+    property(name=&amp;quot;timestamp&amp;quot; dateFormat=&amp;quot;rfc3339&amp;quot;)
+    constant(value=&amp;quot; &amp;quot;)
+    property(name=&amp;quot;hostname&amp;quot;)
+    constant(value=&amp;quot; &amp;quot;)
+    property(name=&amp;quot;syslogtag&amp;quot;)
+    property(name=&amp;quot;msg&amp;quot; spifno1stsp=&amp;quot;on&amp;quot; )
+    property(name=&amp;quot;msg&amp;quot; droplastlf=&amp;quot;on&amp;quot; )
+    constant(value=&amp;quot;\n&amp;quot;)
+    }
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;작성된 템플릿을 이용해서&amp;nbsp;분석해보자.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;template(parameters) { list-descriptions }&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;이런 구조로&amp;nbsp;작성된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="parameters"&gt;&lt;code&gt;parameters&lt;/code&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;name&lt;/code&gt;: 해당 템플릿의&amp;nbsp;이름이다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type&lt;/code&gt;: 템플릿을 어떤 용도로 사용할 것인가에 대한 내용을 작성한다고&amp;nbsp;보면된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;option&lt;/code&gt;: 템플릿을 어떤 형식으로 출력할 것인지에대해서 추가로 정할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="type"&gt;&lt;code&gt;type&lt;/code&gt;&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#list"&gt;&lt;code&gt;list&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#constant-statement"&gt;&lt;code&gt;constant&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;상수 텍스트에 대한 내용들을&amp;nbsp;작성한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\n&lt;/code&gt;, &lt;code&gt;\ooo&lt;/code&gt;, &lt;code&gt;\xhh&lt;/code&gt;, &lt;code&gt;&lt;/code&gt; 와 같은 내용들을 작성해 둘 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;그리고 다음 파라미터를 입력하여 사용할 수도 있다.&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;value&lt;/code&gt; - 사용하는 상수&amp;nbsp;값&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;outname&lt;/code&gt; - 출력 필드&amp;nbsp;이름&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;format&lt;/code&gt; - &lt;code&gt;jsonf&lt;/code&gt;나 그냥&amp;nbsp;빈칸&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#property-statement"&gt;&lt;code&gt;property&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;속성에 대한 내용들을&amp;nbsp;작성한다.&lt;/li&gt;
+&lt;li&gt;해당 내용은 종류가 많아서&amp;nbsp;넘어간다.&lt;/li&gt;
+&lt;li&gt;Legacy format에서 &lt;code&gt;%property%&lt;/code&gt; 형식으로 들어가는 내용과 동일하다고 보면&amp;nbsp;될것같다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#subtree"&gt;&lt;code&gt;subtree&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;7.4.1 버전이후로 나온&amp;nbsp;타입이다.&lt;/li&gt;
+&lt;li&gt;예제를 보면 더 쉽게 알수 있을&amp;nbsp;것이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set $!usr!tpl2!msg = $msg;
+set $!usr!tpl2!dataflow = field($msg, 58, 2);
+template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=&amp;quot;$!usr!tpl2&amp;quot;)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#string"&gt;&lt;code&gt;string&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Lagacy format 형식으로 쭉&amp;nbsp;적는거다.&lt;/li&gt;
+&lt;li&gt;예제를&amp;nbsp;보자&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;template(name=&amp;quot;tpl3&amp;quot; type=&amp;quot;string&amp;quot;
+         string=&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;
+        )
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#plugin"&gt;&lt;code&gt;plugin&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;플러그인을 만들때 사용한다고 하는데&amp;hellip; 쓸일이&amp;nbsp;있을까??&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="option"&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#options"&gt;&lt;code&gt;option&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;예제로 이해하자. 필요하면 링크를 타고&amp;nbsp;보고.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;template(name=&amp;quot;outfmt&amp;quot; type=&amp;quot;list&amp;quot; option.jsonf=&amp;quot;on&amp;quot;) {
+         property(outname=&amp;quot;@timestamp&amp;quot; name=&amp;quot;timereported&amp;quot; dateFormat=&amp;quot;rfc3339&amp;quot; format=&amp;quot;jsonf&amp;quot;)
+         property(outname=&amp;quot;host&amp;quot; name=&amp;quot;hostname&amp;quot; format=&amp;quot;jsonf&amp;quot;)
+         property(outname=&amp;quot;severity&amp;quot; name=&amp;quot;syslogseverity-text&amp;quot; caseConversion=&amp;quot;upper&amp;quot; format=&amp;quot;jsonf&amp;quot;)
+         property(outname=&amp;quot;facility&amp;quot; name=&amp;quot;syslogfacility-text&amp;quot; format=&amp;quot;jsonf&amp;quot;)
+         property(outname=&amp;quot;syslog-tag&amp;quot; name=&amp;quot;syslogtag&amp;quot; format=&amp;quot;jsonf&amp;quot;)
+         property(outname=&amp;quot;source&amp;quot; name=&amp;quot;app-name&amp;quot; format=&amp;quot;jsonf&amp;quot;)
+         property(outname=&amp;quot;message&amp;quot; name=&amp;quot;msg&amp;quot; format=&amp;quot;jsonf&amp;quot;)
+
+ }
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이렇게&amp;nbsp;작성하면,&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
+  &amp;quot;@timestamp&amp;quot;: &amp;quot;2018-03-01T01:00:00+00:00&amp;quot;,
+  &amp;quot;host&amp;quot;: &amp;quot;172.20.245.8&amp;quot;,
+  &amp;quot;severity&amp;quot;: &amp;quot;DEBUG&amp;quot;,
+  &amp;quot;facility&amp;quot;: &amp;quot;local4&amp;quot;,
+  &amp;quot;syslog-tag&amp;quot;: &amp;quot;tag&amp;quot;,
+  &amp;quot;source&amp;quot;: &amp;quot;tag&amp;quot;,
+  &amp;quot;message&amp;quot;: &amp;quot; msgnum:00000000:&amp;quot;
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="legacy-format"&gt;Legacy&amp;nbsp;Format&lt;/h3&gt;
+&lt;p&gt;6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을&amp;nbsp;권고하고있다.&lt;/p&gt;
+&lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본&amp;nbsp;템플릿이다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$template FileFormat,&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;작성 요령은 &lt;code&gt;$template&lt;/code&gt; 변수, &lt;code&gt;template 이름&lt;/code&gt;, &lt;code&gt;"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"&lt;/code&gt;. 필요한 내용들을&amp;nbsp;작성하면된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Property&lt;/code&gt; 내용은 &lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/properties.html"&gt;도큐먼트&lt;/a&gt;에&amp;nbsp;작성되어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FROM_CHAR&lt;/code&gt;, &lt;code&gt;TO_CHAR&lt;/code&gt; 부분은 어디서 어디까지&amp;hellip; &lt;code&gt;%msg:1:2%&lt;/code&gt;라고 작성했다면 메시지에서 첫번째 문자에서 두번째 문자까지 보여달라고 하는것. &lt;code&gt;FROM_CHAR&lt;/code&gt; 을 작성하고 맨끝열까지 하고 싶다면, &lt;code&gt;TO_CHAR&lt;/code&gt;에다가 숫자가 아닌 &lt;code&gt;$&lt;/code&gt;를 입력하면 문자열의 맨마지막까지 보여주게 된다.&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;FROM_CHAR&lt;/code&gt; 부분에 &lt;code&gt;F&lt;/code&gt; 입력&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%msg:F:2%&lt;/code&gt; 라고 입력하면 &lt;code&gt;test\tchar&lt;/code&gt;라면 &lt;code&gt;[test, char]&lt;/code&gt;로 분리하고 &lt;code&gt;char&lt;/code&gt;만&amp;nbsp;보여주게된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F,ASCII_CODE&lt;/code&gt;로 입력하면, 해당 문자로 나누게&amp;nbsp;된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FROM_CHAR&lt;/code&gt; 부분에 &lt;code&gt;R&lt;/code&gt; 입력&lt;ul&gt;
+&lt;li&gt;정규식을 사용한다는&amp;nbsp;것.&lt;/li&gt;
+&lt;li&gt;해당 내용은 man&amp;nbsp;페이지를&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OPTION&lt;/code&gt;은 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/en/man5/rsyslog.conf.5.html"&gt;man 페이지&lt;/a&gt; Property Options 항목을&amp;nbsp;확인하자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_1"&gt;동적 파일 이름&amp;nbsp;생성&lt;/h3&gt;
+&lt;p&gt;두가지 방식이 있다만, 첫번째 방식으로 작성해서 템플릿 구성을 맞추는게 좋을것으로&amp;nbsp;보인다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;template (name=&amp;quot;DynFile&amp;quot; type=&amp;quot;string&amp;quot; string=&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;)
+
+$template DynFile,&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_2"&gt;결.&lt;/h2&gt;
+&lt;p&gt;Rsyslog는 지금 리눅스에서 기본적으로 사용되는 System logging 프로그램이다. 그렇기에 사용하기가 쉽고 쉽게 다가갈 수 있다.&lt;br&gt;
+이런 것으로 우선 1차 정리하고 더 설정할 수 없는 것들은 프로그램에서 정리를 하거나 다른 프로그램을 사용하거나 해도 될듯. 무작정 패키지를 추가할 수 없는 시스템에서는 어쩔 수 없는&amp;nbsp;선택이긴하다만&amp;hellip;&lt;/p&gt;
+&lt;p&gt;삽질한 내용을 작성해 두려고 한건데&amp;hellip; 글쓰는데 더 삽질을&amp;hellip;&amp;nbsp;ㅡ.ㅡa&lt;/p&gt;
+&lt;p&gt;다음번엔 원격 서버로 로컬 서버 로그를 넘기는 방법에 대해서 정리를 해볼까&amp;hellip; 이 내용은&amp;nbsp;많던데&amp;hellip;&lt;/p&gt;
+&lt;h2 id="_3"&gt;참고&amp;nbsp;페이지&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc"&gt;rsyslog doc&amp;nbsp;homepage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="syslog"></category><category term="rsyslog"></category><category term="log"></category><category term="system"></category><category term="linux"></category></entry><entry><title>Ubuntu 17.10에서부터 기본으로 사용되는 Netplan</title><link href="https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/" rel="alternate"></link><published>2017-11-18T00:54:20+09:00</published><updated>2017-11-18T00:54:20+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-11-18:/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/</id><summary type="html">&lt;p&gt;Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은&amp;nbsp;뭘까?&lt;/p&gt;</summary><content type="html">&lt;p&gt;처음에는 리눅스에서 IP를 Static하게 구성하기위해 &lt;a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819"&gt;검색한 페이지&lt;/a&gt;에서 독특한 문법을&amp;nbsp;확인했다.&lt;/p&gt;
 &lt;p&gt;문의 내용은 17.10에서는 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;에 작성해둔 설정이 안먹힌다는 것이었다. 그러면서 답변으로 달린것이 &lt;a href="https://askubuntu.com/a/967819/126675"&gt;요내용&lt;/a&gt;이다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ifupdown&lt;/code&gt; 패키지를 더이상 사용하지 않고, Ubuntu 17.10 Server에서 부터는 &lt;code&gt;netplan&lt;/code&gt;이라는 것을 사용하여 &lt;code&gt;systemd-networkd&lt;/code&gt;를 제어한다고 명시하고&amp;nbsp;있다.&lt;/p&gt;
 &lt;p&gt;사용법이 묘하다. 혹시나해서 &lt;a href="https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes"&gt;Ubuntu 17.10 release note&lt;/a&gt;를 보러갔지. 그랬더니 &lt;strong&gt;Update Packages&lt;/strong&gt;에 당당히 Linux kernel 다음에 한 꼭지로 있다. 내용은 다음 과&amp;nbsp;같다.&lt;/p&gt;
