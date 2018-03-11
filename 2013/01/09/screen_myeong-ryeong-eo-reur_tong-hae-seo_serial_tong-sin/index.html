@@ -78,64 +78,60 @@
 
   <div id="site_article" class="container">
     <article>
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/05/14/edison-pip-install-error/">Edison pip install&nbsp;error</a></h3>
-          <p><p class="first last">Edison으로 파이썬을 작업하기위해 패키지를 설치하려보면&#8230; 이넘이 안된
-다. 그것에 대한&nbsp;내용이다.</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 05. 14.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/03/16/xonsh/">xonsh?</a></h3>
-          <p><p class="first last">Python으로 만든&nbsp;Shell&#8230;</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 03. 16.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2014/04/07/python-paramiko/">[Python]&nbsp;Paramiko</a></h3>
-          <p><p>Python ssh 모듈인 paramiko에 대한 내용을&nbsp;작성함.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 14. 04. 07.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/">[Monitoring] SkwiSSH 설치 및&nbsp;구성</a></h3>
-          <p><p>Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무&nbsp;오래됐다.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 14. 02. 28.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2014/02/23/pylint/">pylint</a></h3>
-          <p><p>PyLint 간략 사용법에 대해서&nbsp;작성한다.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 14. 02. 23.</p>
-        </article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="https://ujuc.github.io/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/" class="h1">Screen 명령어를 통해서 Serial&nbsp;통신</a></h1>
     </div>
-  </div>
+    <div class="row article">
+      <p><i class="fa fa-flash"></i></p>
+      <div class="article_text">
+        <p>발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이&nbsp;발생하여…</p>
+<p>여기 저기 찾다가. <code>Screen</code>을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. <code>minicom</code>도&nbsp;필요없다.</p>
+<p>명령어 사용법 : <code>screen ‘디바이스 위치’ ‘전송속도’</code></p>
+<div class="codehilite"><pre><span></span># Mac
+screen /dev/tty.XXX 115200
+# Linux
+screen /dev/ttyXXX 115200
+</pre></div>
 
+
+<p>종료할때는 <Crtl>+<A> &lt;Crtl+&lt;>로 종료할 수&nbsp;있다.</p>
+      </div>
+      <p><i class="fa fa-hand-spock-o"></i></p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 13. 01. 09.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="https://ujuc.github.io/tag/screen.html">screen</a>
+,               <a href="https://ujuc.github.io/tag/serial.html">serial</a>
+          </i>
+        </p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
     </article>
   </div>
 
   <div class="container">
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <ul class="pagination">
-            <li class="align-middle">
-              <a href="https://ujuc.github.io/tag/python.html">
-                <i class="fa fa-arrow-circle-left"></i> Next
-              </a>
-            </li>
-        <a class="align-middle" style="margin: 0 0.2rem 0 0.2rem"><i class="fa fa-dot-circle-o text-danger"></i></a>
-          <li class="align-middle">
-            <a href="/tag/python3.html">
-              Prev <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </li>
-      </ul>
-    </div>
-  </div>
   </div>
 
   <!-- Title -->

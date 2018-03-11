@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2017-10-22T18:21:49+09:00</updated><entry><title>파이썬으로 리눅스 배포판 확인하기</title><link href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" rel="alternate"></link><published>2017-10-22T18:21:49+09:00</published><updated>2017-10-22T18:21:49+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-10-22:/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/</id><summary type="html">&lt;p&gt;파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가&amp;nbsp;발생했다!&lt;/p&gt;</summary><content type="html">&lt;p&gt;요즘 코딩을 안하니&amp;hellip; 머리가 멍해져가는지라.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-03-11T11:34:15+09:00</updated><entry><title>파이썬으로 리눅스 배포판 확인하기</title><link href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" rel="alternate"></link><published>2017-10-22T18:21:49+09:00</published><updated>2017-10-22T18:21:49+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-10-22:/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/</id><summary type="html">&lt;p&gt;파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가&amp;nbsp;발생했다!&lt;/p&gt;</summary><content type="html">&lt;p&gt;요즘 코딩을 안하니&amp;hellip; 머리가 멍해져가는지라.&lt;br&gt;
 컴퓨터를 밀고 나면 새롭게 설정하기위해서 만들어뒀던 셸  스크립트를 파이썬 cmd 라이버리를 가지고 변경하는중. (이건 따로 작성하자. 새로운 기능을&amp;nbsp;많이써서&amp;hellip;)&lt;/p&gt;
 &lt;p&gt;리눅스 배포판 별로 설치하는 프로그램 명령어가 다르니 배포판을 구분하여 명령어를 다르게 적용할수 있도록 구현이&amp;nbsp;필요했다.&lt;/p&gt;
 &lt;p&gt;찾다보니 &lt;a href="https://docs.python.org/3/library/platform.html"&gt;&lt;code&gt;platform&lt;/code&gt;&lt;/a&gt; 라이브러리가 내부에 존재하고 해당 라이브러리에서 Unix 환경에서 사용이 가능한 &lt;code&gt;dist&lt;/code&gt;, &lt;code&gt;linux_distribution&lt;/code&gt; 메소드가 존재를 한다. 그런데 이거 3.5때 방출에 대한 논의 (&lt;a href="https://bugs.python.org/issue1322"&gt;issue 1322&lt;/a&gt;)가 되었고, 3.7에서 삭제되는 걸로&amp;nbsp;끝&amp;hellip;&lt;/p&gt;
@@ -2961,4 +2961,60 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 &lt;li&gt;&lt;a href="http://docs.paramiko.org/en/latest/index.html"&gt;Docs&amp;nbsp;paramiko&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; Programming With Paramiko | Completely&amp;nbsp;Different&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://segfault.in/2010/03/paramiko-ssh-and-sftp-with-python/"&gt;Paramiko: &lt;span class="caps"&gt;SSH&lt;/span&gt; and &lt;span class="caps"&gt;SFTP&lt;/span&gt; With&amp;nbsp;Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="python"></category><category term="paramiko"></category><category term="ssh"></category><category term="lib"></category></entry></feed>
+&lt;/ul&gt;</content><category term="python"></category><category term="paramiko"></category><category term="ssh"></category><category term="lib"></category></entry><entry><title>pylint</title><link href="https://ujuc.github.io/2014/02/23/pylint/" rel="alternate"></link><published>2014-02-23T11:14:35+09:00</published><updated>2018-03-11T11:14:35+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-02-23:/2014/02/23/pylint/</id><summary type="html">&lt;p&gt;PyLint 간략 사용법에 대해서&amp;nbsp;작성한다.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.pylint.org"&gt;pylint&amp;nbsp;홈페이지&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_1"&gt;설치&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install pylint
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_2"&gt;사용&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pylint filename.py
+pylint-gui
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;GUI를 사용하게 되면 쉽게 확인이&amp;nbsp;가능하다.&lt;/li&gt;
+&lt;li&gt;콘솔에서 표기되는 내용들을 탭별로&amp;nbsp;보여준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_3"&gt;좋은점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;IDE를 사용해서 코드를 작성하면 Python PEP8에 작성된 내용과 비슷하게는 되는데 못잡아주는 것도 있어서 이걸&amp;nbsp;사용하면된다.&lt;/li&gt;
+&lt;li&gt;모듈 이름도&amp;nbsp;가이드해주더라.&lt;/li&gt;
+&lt;li&gt;함수내에 뭔짓을 이렇게 많이 하고 있느냐도&amp;nbsp;물어봐주고&lt;/li&gt;
+&lt;li&gt;코드를 작게 줄일 수 있도로 도와주는 역활도&amp;nbsp;함.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_4"&gt;단점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;귀찮다&amp;hellip;&lt;/li&gt;
+&lt;li&gt;자동화가&amp;nbsp;필요하다&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="python"></category><category term="lint"></category><category term="pylint"></category><category term="code convention"></category></entry><entry><title>Python setup.py unilnstall 방법</title><link href="https://ujuc.github.io/2013/11/22/python_setup.py_unilnstall_bang-beob/" rel="alternate"></link><published>2013-11-22T11:22:23+09:00</published><updated>2018-03-11T11:22:23+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-11-22:/2013/11/22/python_setup.py_unilnstall_bang-beob/</id><summary type="html">&lt;p&gt;setup.py를 이용하여 uninstall 하는 방법에 대해서 간략&amp;nbsp;정리.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/1550226/python-setup-py-uninstall"&gt;Python setup.py&amp;nbsp;uninstall&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;삭제하는 방법은 모든걸 지워 버려야된다는&amp;nbsp;것.&lt;/p&gt;
+&lt;p&gt;우선 &lt;code&gt;setup.py&lt;/code&gt;로 설치하는 경로를 파일로&amp;nbsp;받는다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python setup.,py install --record files.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;그러고 난 뒤 그 내용에 있는 것들을 모두 다 지워주면 되는데. 이때, 폴더 내부만 삭제할뿐 생성된 파일이 삭제되지 않으니 유의해서 삭제할 수 있도록 조정해주면&amp;nbsp;된다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ cat files.txt &lt;span class="p"&gt;|&lt;/span&gt; xargs rm -rf
+&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category><category term="setup.py"></category><category term="setup"></category><category term="tool"></category></entry><entry><title>Eclipse + AVR Plug-in Development Environment Setting</title><link href="https://ujuc.github.io/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting/" rel="alternate"></link><published>2012-10-24T11:34:15+09:00</published><updated>2018-03-11T11:34:15+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2012-10-24:/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting/</id><summary type="html">&lt;p&gt;Eclipse를 이용해서 &lt;span class="caps"&gt;AVR&lt;/span&gt; 코딩할 수 있는 환경&amp;nbsp;만들기.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Eclipse로 &lt;span class="caps"&gt;AVR&lt;/span&gt; 프로그램을 코딩할 수 있다는 소리를 듣고서 곧장 검색을 해서 필요한 것들을 깔았었다.&lt;br&gt;
+그런데 뭔가 프로젝트에 x표가 나타나서 신경쓰이게 하던것을 한 블로그에서&amp;nbsp;찾았다!!!!&lt;/p&gt;
+&lt;p&gt;그래서 이렇게 남긴다.&amp;nbsp;까먹을까봐서..&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_Eclipse_Plugin"&gt;공식&amp;nbsp;홈페이지&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;리눅스에서는 기본적으로 컴파일러는 gcc를 이용해서 작동을 시키게&amp;nbsp;된다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yaourt -S gcc-avr avr-libc avrdude binutils-avr
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;을 설치해줬다. Arch Linux에서는 이렇게 해주고 더 필요한 패키지들이&amp;nbsp;있으면,&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yaourt -Ss avr
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;로 해줘 찾을 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;Eclipse를 설치 해주는데 이때 Eclipse는 C/C++용으로 설치해준다.&lt;br&gt;
+그리고서 프로젝트 만드는&amp;nbsp;것은&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://hoyoung2.blogspot.com/2010/07/avr-developement-environment-setting.html"&gt;Don’t panic! WinAVR + Eclipse + &lt;span class="caps"&gt;AVR&lt;/span&gt; Plug-in Developement Environment&amp;nbsp;Setting&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;에서 확인하면&amp;nbsp;끝…&lt;/p&gt;</content><category term="avr"></category><category term="eclipse"></category><category term="development environment"></category><category term="environment"></category><category term="arch"></category></entry></feed>

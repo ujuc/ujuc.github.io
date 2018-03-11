@@ -78,64 +78,61 @@
 
   <div id="site_article" class="container">
     <article>
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/05/14/edison-pip-install-error/">Edison pip install&nbsp;error</a></h3>
-          <p><p class="first last">Edison으로 파이썬을 작업하기위해 패키지를 설치하려보면&#8230; 이넘이 안된
-다. 그것에 대한&nbsp;내용이다.</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 05. 14.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2015/03/16/xonsh/">xonsh?</a></h3>
-          <p><p class="first last">Python으로 만든&nbsp;Shell&#8230;</p>
-</p>
-          <p><i class="fa fa-calendar-plus-o"></i> 15. 03. 16.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2014/04/07/python-paramiko/">[Python]&nbsp;Paramiko</a></h3>
-          <p><p>Python ssh 모듈인 paramiko에 대한 내용을&nbsp;작성함.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 14. 04. 07.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/">[Monitoring] SkwiSSH 설치 및&nbsp;구성</a></h3>
-          <p><p>Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무&nbsp;오래됐다.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 14. 02. 28.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2014/02/23/pylint/">pylint</a></h3>
-          <p><p>PyLint 간략 사용법에 대해서&nbsp;작성한다.</p></p>
-          <p><i class="fa fa-calendar-plus-o"></i> 14. 02. 23.</p>
-        </article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="https://ujuc.github.io/2013/11/22/python_setup.py_unilnstall_bang-beob/" class="h1">Python setup.py unilnstall&nbsp;방법</a></h1>
     </div>
-  </div>
+    <div class="row article">
+      <p><i class="fa fa-flash"></i></p>
+      <div class="article_text">
+        <p><a href="http://stackoverflow.com/questions/1550226/python-setup-py-uninstall">Python setup.py&nbsp;uninstall</a></p>
+<p>삭제하는 방법은 모든걸 지워 버려야된다는&nbsp;것.</p>
+<p>우선 <code>setup.py</code>로 설치하는 경로를 파일로&nbsp;받는다.</p>
+<div class="codehilite"><pre><span></span>$ python setup.,py install --record files.txt
+</pre></div>
 
+
+<p>그러고 난 뒤 그 내용에 있는 것들을 모두 다 지워주면 되는데. 이때, 폴더 내부만 삭제할뿐 생성된 파일이 삭제되지 않으니 유의해서 삭제할 수 있도록 조정해주면&nbsp;된다.</p>
+<div class="codehilite"><pre><span></span>$ cat files.txt <span class="p">|</span> xargs rm -rf
+</pre></div>
+      </div>
+      <p><i class="fa fa-hand-spock-o"></i></p>
+    </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="fa fa-calendar-plus-o"></i> 13. 11. 22.
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fa fa-ellipsis-v"> </i>
+          <i class="fa fa-tags">
+              <a href="https://ujuc.github.io/tag/python.html">python</a>
+,               <a href="https://ujuc.github.io/tag/setuppy.html">setup.py</a>
+,               <a href="https://ujuc.github.io/tag/setup.html">setup</a>
+,               <a href="https://ujuc.github.io/tag/tool.html">tool</a>
+          </i>
+        </p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div class="row">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_identifier = "2013/11/22/python_setup.py_unilnstall_bang-beob/";
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>      </div>
+  </div>
     </article>
   </div>
 
   <div class="container">
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <ul class="pagination">
-            <li class="align-middle">
-              <a href="https://ujuc.github.io/tag/python.html">
-                <i class="fa fa-arrow-circle-left"></i> Next
-              </a>
-            </li>
-        <a class="align-middle" style="margin: 0 0.2rem 0 0.2rem"><i class="fa fa-dot-circle-o text-danger"></i></a>
-          <li class="align-middle">
-            <a href="/tag/python3.html">
-              Prev <i class="fa fa-arrow-circle-right"></i>
-            </a>
-          </li>
-      </ul>
-    </div>
-  </div>
   </div>
 
   <!-- Title -->
