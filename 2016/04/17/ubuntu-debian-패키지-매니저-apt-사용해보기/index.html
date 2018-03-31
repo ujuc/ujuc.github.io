@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
   <!-- Google web font -->
   <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
@@ -49,22 +49,22 @@
       <nav class="nav">
           <li class="nav-item">
             <a class="nav-link" href="/">
-              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+              <i class="fas fa-inbox"></i> <span class="hidden-xs">Blog</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/archives.html">
-              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+              <i class="fas fa-archive"></i> <span class="hidden-xs">Archive</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/tags.html">
-              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+              <i class="fas fa-tags"></i> <span class="hidden-xs">Tags</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/categories.html">
-              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+              <i class="fas fa-folder-open"></i> <span class="hidden-xs">Categories</span>
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -82,8 +82,10 @@
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/" class="h1">Ubuntu-Debian 패키지 매니저 apt&nbsp;사용해보기</a></h1>
     </div>
+    <div class="row">
+      <p><i class="fas fa-poo"></i></p>
+    </div>
     <div class="row article">
-      <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
         <p>기본적으로 <code>apt</code> 패키지가 설치되어있었지만&hellip; 사용하지 않았었다. 여기저기서 <code>apt-get</code> 같은 명령어를 알려줬기에&hellip; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&nbsp;한다.</p>
 <p>참고는 <a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/">15 Examples of How to Use New Advanced Package Tool (<span class="caps">APT</span>) in Ubuntu/Debian</a> 을 사용함. 기본적으로 되는 <a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html">Ubuntu man</a> 페이지는 끼고&nbsp;살자&hellip;</p>
@@ -187,16 +189,18 @@ sudo apt clean
 <p>동일한 명령어가 여러가지 존재하고 사용하는 방법에 따라 달라지는 것으로 보여지는데&hellip;<br>
 패키지 메니저가 <code>dpkg</code>, <code>aptitude</code>, <code>apt</code>로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될&nbsp;듯.</p>
       </div>
-      <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
+      <div class="row">
+        <p><i class="far fa-hand-spock"></i></p>
+      </div>
     <div class="row article_meta">
       <div>
         <p>
-          <i class="fa fa-calendar-plus-o"></i> 16. 04. 17.
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-tags">
+          <i class="far fa-calendar-plus"></i> 16. 04. 17.
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-tags">
               <a href="https://ujuc.github.io/tag/ubuntu.html">ubuntu</a>
 ,               <a href="https://ujuc.github.io/tag/debian.html">debian</a>
 ,               <a href="https://ujuc.github.io/tag/apt.html">apt</a>
@@ -210,14 +214,24 @@ sudo apt clean
 <div class="row">
   <div id="disqus_thread"></div>
   <script>
-    var disqus_identifier = "2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/";
-    (function() {
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
-      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.src = 'https://ujucgithub.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     })();
   </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>      </div>
   </div>
     </article>
@@ -237,8 +251,8 @@ sudo apt clean
         <p>Anythink, Everythink!</p>
       </div>
       <div class="row">
-          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+          <span id="social"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i> </a></span>
       </div>
     </div>
   </div>

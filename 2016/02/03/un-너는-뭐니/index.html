@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
   <!-- Google web font -->
   <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
@@ -49,22 +49,22 @@
       <nav class="nav">
           <li class="nav-item">
             <a class="nav-link" href="/">
-              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+              <i class="fas fa-inbox"></i> <span class="hidden-xs">Blog</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/archives.html">
-              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+              <i class="fas fa-archive"></i> <span class="hidden-xs">Archive</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/tags.html">
-              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+              <i class="fas fa-tags"></i> <span class="hidden-xs">Tags</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/categories.html">
-              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+              <i class="fas fa-folder-open"></i> <span class="hidden-xs">Categories</span>
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -82,24 +82,28 @@
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2016/02/03/un-너는-뭐니/" class="h1">un~ 너는&nbsp;뭐니?</a></h1>
     </div>
+    <div class="row">
+      <p><i class="fas fa-poo"></i></p>
+    </div>
     <div class="row article">
-      <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
         <p>모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. <code>.blabla.un~</code>이라는 파일이 생성되기 시작했다. 그래서&nbsp;찾았다.</p>
 <p><a href="http://vimhelp.appspot.com/vim_faq.txt.html#faq-7.2">Vimhelp -&nbsp;faq-7.2</a></p>
 <p>수정하고 저장할때마다 <code>un~</code> 접미사가 붙은 파일이 생간다는 이야기에 대한 내용이다. undo 기능을 사용하기위해서 vim에서 사용하는 파일이라고 한다. 그래서 열었더니 이상한 것들만&nbsp;보여줬구나&hellip;</p>
 <p>끄는 방법은 <code>:set noundofile</code>을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은&nbsp;지워야겠지만&hellip;</p>
       </div>
-      <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
+      <div class="row">
+        <p><i class="far fa-hand-spock"></i></p>
+      </div>
     <div class="row article_meta">
       <div>
         <p>
-          <i class="fa fa-calendar-plus-o"></i> 16. 02. 03.
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-tags">
+          <i class="far fa-calendar-plus"></i> 16. 02. 03.
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-tags">
               <a href="https://ujuc.github.io/tag/vi.html">vi</a>
 ,               <a href="https://ujuc.github.io/tag/undo.html">undo</a>
 ,               <a href="https://ujuc.github.io/tag/vimrc.html">vimrc</a>
@@ -112,14 +116,24 @@
 <div class="row">
   <div id="disqus_thread"></div>
   <script>
-    var disqus_identifier = "2016/02/03/un-너는-뭐니/";
-    (function() {
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
-      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.src = 'https://ujucgithub.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     })();
   </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>      </div>
   </div>
     </article>
@@ -139,8 +153,8 @@
         <p>Anythink, Everythink!</p>
       </div>
       <div class="row">
-          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+          <span id="social"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i> </a></span>
       </div>
     </div>
   </div>

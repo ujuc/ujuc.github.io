@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
   <!-- Google web font -->
   <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
@@ -49,22 +49,22 @@
       <nav class="nav">
           <li class="nav-item">
             <a class="nav-link" href="/">
-              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+              <i class="fas fa-inbox"></i> <span class="hidden-xs">Blog</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/archives.html">
-              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+              <i class="fas fa-archive"></i> <span class="hidden-xs">Archive</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/tags.html">
-              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+              <i class="fas fa-tags"></i> <span class="hidden-xs">Tags</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/categories.html">
-              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+              <i class="fas fa-folder-open"></i> <span class="hidden-xs">Categories</span>
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -82,8 +82,10 @@
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/drafts/tigrc(5)-manual-page.html" class="h1">tigrc(5) Manual&nbsp;Page</a></h1>
     </div>
+    <div class="row">
+      <p><i class="fas fa-poo"></i></p>
+    </div>
     <div class="row article">
-      <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
         <h2 id="name">Name</h2>
 <p>tigrc - Tig 구성&nbsp;파일</p>
@@ -274,16 +276,18 @@ source ~/.tig/keybindings.tigrc
 <h2 id="see-also"><span class="caps">SEE</span> <span class="caps">ALSO</span></h2>
 <p><a href="http://jonas.nitro.dk/tig/tig.1.html">tig(1)</a>, <a href="/2016/02/10/tig-manual/">the Tig manual</a>, <a href="https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html">git(7)</a>, <a href="https://www.kernel.org/pub/software/scm/git/docs/git-config.html">git-config(1)</a></p>
       </div>
-      <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
+      <div class="row">
+        <p><i class="far fa-hand-spock"></i></p>
+      </div>
     <div class="row article_meta">
       <div>
         <p>
-          <i class="fa fa-calendar-plus-o"></i> 16. 02. 17.
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-tags">
+          <i class="far fa-calendar-plus"></i> 16. 02. 17.
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-tags">
               <a href="https://ujuc.github.io/tag/tig.html">tig</a>
 ,               <a href="https://ujuc.github.io/tag/tigrc.html">tigrc</a>
 ,               <a href="https://ujuc.github.io/tag/git.html">git</a>
@@ -297,14 +301,24 @@ source ~/.tig/keybindings.tigrc
 <div class="row">
   <div id="disqus_thread"></div>
   <script>
-    var disqus_identifier = "drafts/tigrc(5)-manual-page.html";
-    (function() {
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
-      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.src = 'https://ujucgithub.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     })();
   </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>      </div>
   </div>
     </article>
@@ -324,8 +338,8 @@ source ~/.tig/keybindings.tigrc
         <p>Anythink, Everythink!</p>
       </div>
       <div class="row">
-          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+          <span id="social"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i> </a></span>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
   <!-- Google web font -->
   <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
@@ -49,22 +49,22 @@
       <nav class="nav">
           <li class="nav-item">
             <a class="nav-link" href="/">
-              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+              <i class="fas fa-inbox"></i> <span class="hidden-xs">Blog</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/archives.html">
-              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+              <i class="fas fa-archive"></i> <span class="hidden-xs">Archive</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/tags.html">
-              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+              <i class="fas fa-tags"></i> <span class="hidden-xs">Tags</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/categories.html">
-              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+              <i class="fas fa-folder-open"></i> <span class="hidden-xs">Categories</span>
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -82,8 +82,10 @@
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2015/02/26/oh-my-vim-error-osx/" class="h1">oh-my-vim 설치후 오류 (<span class="caps">OSX</span>)</a></h1>
     </div>
+    <div class="row">
+      <p><i class="fas fa-poo"></i></p>
+    </div>
     <div class="row article">
-      <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
         <p><a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim">oh-my-vim</a> 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
 변경하고 있긴하다만&#8230;). 달라진게 없다. 좀 더 화려해지고 플러그인들로 인해서
@@ -108,16 +110,18 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
 <p>설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이&nbsp;줄었다.!!!</p>
 
       </div>
-      <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
+      <div class="row">
+        <p><i class="far fa-hand-spock"></i></p>
+      </div>
     <div class="row article_meta">
       <div>
         <p>
-          <i class="fa fa-calendar-plus-o"></i> 15. 02. 26.
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-tags">
+          <i class="far fa-calendar-plus"></i> 15. 02. 26.
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-tags">
               <a href="https://ujuc.github.io/tag/vim.html">vim</a>
 ,               <a href="https://ujuc.github.io/tag/setting.html">setting</a>
           </i>
@@ -129,14 +133,24 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
 <div class="row">
   <div id="disqus_thread"></div>
   <script>
-    var disqus_identifier = "2015/02/26/oh-my-vim-error-osx/";
-    (function() {
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
-      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.src = 'https://ujucgithub.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     })();
   </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>      </div>
   </div>
     </article>
@@ -156,8 +170,8 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
         <p>Anythink, Everythink!</p>
       </div>
       <div class="row">
-          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+          <span id="social"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i> </a></span>
       </div>
     </div>
   </div>

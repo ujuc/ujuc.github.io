@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
   <!-- Google web font -->
   <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
@@ -49,22 +49,22 @@
       <nav class="nav">
           <li class="nav-item">
             <a class="nav-link" href="/">
-              <i class="fa fa-inbox"></i> <span class="hidden-xs">Blog</span>
+              <i class="fas fa-inbox"></i> <span class="hidden-xs">Blog</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/archives.html">
-              <i class="fa fa-archive"></i> <span class="hidden-xs">Archive</span>
+              <i class="fas fa-archive"></i> <span class="hidden-xs">Archive</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/tags.html">
-              <i class="fa fa-tag"></i> <span class="hidden-xs">Tags</span>
+              <i class="fas fa-tags"></i> <span class="hidden-xs">Tags</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/categories.html">
-              <i class="fa fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+              <i class="fas fa-folder-open"></i> <span class="hidden-xs">Categories</span>
             </a>
           </li>
           <li class="nav-item dropdown">
@@ -82,8 +82,10 @@
     <div class="row article_title">
       <h1><a href="https://ujuc.github.io/2015/07/25/vim-mouse-mode/" class="h1">Vim mouse&nbsp;mode</a></h1>
     </div>
+    <div class="row">
+      <p><i class="fas fa-poo"></i></p>
+    </div>
     <div class="row article">
-      <p><i class="fa fa-flash"></i></p>
       <div class="article_text">
         <p>나도 <a class="reference external" href="http://github.com/ujuc/dotrc">vimrc</a> 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는&nbsp;않았다.</p>
 <p>그런데 얼마전부터 <a class="reference external" href="http://neovim.io">NeoVim</a> 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지&#8230; 안그러면 또 안찾아볼 가능성이&nbsp;높으니&#8230;</p>
@@ -321,16 +323,18 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 </div>
 
       </div>
-      <p><i class="fa fa-hand-spock-o"></i></p>
     </div>
+      <div class="row">
+        <p><i class="far fa-hand-spock"></i></p>
+      </div>
     <div class="row article_meta">
       <div>
         <p>
-          <i class="fa fa-calendar-plus-o"></i> 15. 07. 25.
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-folder-open-o"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-        <i class="fa fa-ellipsis-v"> </i>
-          <i class="fa fa-tags">
+          <i class="far fa-calendar-plus"></i> 15. 07. 25.
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-tags">
               <a href="https://ujuc.github.io/tag/vim.html">vim</a>
 ,               <a href="https://ujuc.github.io/tag/vi.html">vi</a>
 ,               <a href="https://ujuc.github.io/tag/vimrc.html">vimrc</a>
@@ -345,14 +349,24 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 <div class="row">
   <div id="disqus_thread"></div>
   <script>
-    var disqus_identifier = "2015/07/25/vim-mouse-mode/";
-    (function() {
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
-      s.src = '//ujucgithub.disqus.com/embed.js';
+      s.src = 'https://ujucgithub.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     })();
   </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>      </div>
   </div>
     </article>
@@ -372,8 +386,8 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
         <p>Anythink, Everythink!</p>
       </div>
       <div class="row">
-          <span id="social"><a href="https://github.com/ujuc"><i class="fa fa-github-square"></i> </a></span>
-          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fa fa-linkedin-square"></i> </a></span>
+          <span id="social"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i> </a></span>
       </div>
     </div>
   </div>
