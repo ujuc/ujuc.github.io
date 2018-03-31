@@ -34,13 +34,13 @@ ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 MENUITEMS = (
     ('Blog', '/', 'fa-inbox'),
     ('Archive', '/archives.html', 'fa-archive'),
-    ('Tags', '/tags.html', 'fa-tag'),
+    ('Tags', '/tags.html', 'fa-tags'),
     ('Categories', '/categories.html', 'fa-folder-open'),
 )
 
 SOCIAL = (
-    ('Github', 'https://github.com/ujuc', 'fa-github-square'),
-    ('Linkin', 'https://kr.linkedin.com/in/sungjinkang', 'fa-linkedin-square')
+    ('Github', 'https://github.com/ujuc', 'fa-github-alt'),
+    ('Linkin', 'https://kr.linkedin.com/in/sungjinkang', 'fa-linkedin-in')
 )
 
 LINKS = (

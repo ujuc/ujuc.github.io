@@ -22,5 +22,5 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = "ujucgithub"
+DISQUS_SITENAME = True
 GOOGLE_ANALYTICS = "UA-58634276-1"
