@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-03-11T12:00:45+09:00</updated><entry><title>man page Section</title><link href="https://ujuc.github.io/2018/03/10/man_page_section/" rel="alternate"></link><published>2018-03-10T14:42:46+09:00</published><updated>2018-03-10T14:42:46+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-10:/2018/03/10/man_page_section/</id><summary type="html">&lt;p&gt;&lt;code&gt;man&lt;/code&gt; 페이지를 보다보면 숫자가 적혀있다. 그거 간략하게&amp;nbsp;본다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;항상  &lt;code&gt;man&lt;/code&gt; 페이지를 끼고 보는데&amp;hellip; &lt;code&gt;ls(1)&lt;/code&gt; 이라 적혀있는 페이지를 볼 수 있다.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-04-21T13:01:22+09:00</updated><entry><title>Custom Virtual Environment Location on piping</title><link href="https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/" rel="alternate"></link><published>2018-04-21T13:01:22+09:00</published><updated>2018-04-21T13:01:22+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-04-21:/2018/04/21/custom_virtual_environment_location_on_piping/</id><summary type="html">&lt;p&gt;pipevn를 사용하는데&amp;hellip; env가 안보인다. 보이는 곳으로&amp;nbsp;옮기자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt;를 사용하면 &lt;code&gt;.env&lt;/code&gt; 파일까지 생성해주고 그것을 사용할 수 있도록 해준다.&lt;br&gt;
+그런데&amp;hellip; 이거 참&amp;hellip; 저 깊숙한곳에 만들어주니&amp;hellip; Pycharm에서 &lt;code&gt;env&lt;/code&gt;를 쓰려고 찾기시작하니 귀찮다. 그리고 그냥 지워버리면 그&amp;nbsp;밑에있는건&amp;hellip;&lt;/p&gt;
+&lt;p&gt;물론 확인할 수 있는 방법이 없는건아니다. &lt;code&gt;pipenv shell&lt;/code&gt;로 하면 &lt;code&gt;.env&lt;/code&gt; 파일이 존재하는 곳을 찾아서 실행시켜주기도 하는데&amp;hellip;&lt;br&gt;
+내마음에&amp;nbsp;안드니&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt; 에서 사용하는 &lt;code&gt;.env&lt;/code&gt;를 내가 원하는 위치에&amp;nbsp;옮겨보자.&lt;/p&gt;
+&lt;h3 id="workon_home"&gt;&lt;code&gt;WORKON_HOME&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;저 깊이 들어가는 &lt;code&gt;.env&lt;/code&gt; 폴더를 내가 원하는 위치로&amp;nbsp;옮겨준다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;export WORKON_HOME=~/.venvs
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="pipenv_venv_in_project"&gt;&lt;code&gt;PIPENV_VENV_IN_PROJECT&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;프로젝트를 진행하고있는 곳에 &lt;code&gt;.env&lt;/code&gt; 파일을 만들어준다.&lt;br&gt;
+이럴때는 &lt;code&gt;.gitignore&lt;/code&gt;에서 &lt;code&gt;.env/&lt;/code&gt; 파일을 예외로 해주어야된다. 해주는게&amp;nbsp;좋을꺼다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;export PIPENV_VENV_IN_PROJECT=true
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4 id="_1"&gt;참고&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://docs.pipenv.org/advanced/#custom-virtual-environment-location"&gt;pipenv - Custom Virtual Environment&amp;nbsp;Location&lt;/a&gt;&lt;/p&gt;</content><category term="pip"></category><category term="pipenv"></category><category term="env"></category><category term="python"></category></entry><entry><title>man page Section</title><link href="https://ujuc.github.io/2018/03/10/man_page_section/" rel="alternate"></link><published>2018-03-10T14:42:46+09:00</published><updated>2018-03-10T14:42:46+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-10:/2018/03/10/man_page_section/</id><summary type="html">&lt;p&gt;&lt;code&gt;man&lt;/code&gt; 페이지를 보다보면 숫자가 적혀있다. 그거 간략하게&amp;nbsp;본다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;항상  &lt;code&gt;man&lt;/code&gt; 페이지를 끼고 보는데&amp;hellip; &lt;code&gt;ls(1)&lt;/code&gt; 이라 적혀있는 페이지를 볼 수 있다.&lt;br&gt;
 해당 내용을 매번 찾다가&amp;hellip; 찾는것도&amp;nbsp;힘들고해서&amp;hellip;&lt;/p&gt;
 &lt;p&gt;찾다보니 해당 숫자는 section 숫자라고..&lt;br&gt;
 해당되는&amp;nbsp;내용들은.&lt;/p&gt;

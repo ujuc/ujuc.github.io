@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-03-11T11:34:15+09:00</updated><entry><title>파이썬으로 리눅스 배포판 확인하기</title><link href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" rel="alternate"></link><published>2017-10-22T18:21:49+09:00</published><updated>2017-10-22T18:21:49+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-10-22:/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/</id><summary type="html">&lt;p&gt;파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가&amp;nbsp;발생했다!&lt;/p&gt;</summary><content type="html">&lt;p&gt;요즘 코딩을 안하니&amp;hellip; 머리가 멍해져가는지라.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-04-21T13:01:22+09:00</updated><entry><title>Custom Virtual Environment Location on piping</title><link href="https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/" rel="alternate"></link><published>2018-04-21T13:01:22+09:00</published><updated>2018-04-21T13:01:22+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-04-21:/2018/04/21/custom_virtual_environment_location_on_piping/</id><summary type="html">&lt;p&gt;pipevn를 사용하는데&amp;hellip; env가 안보인다. 보이는 곳으로&amp;nbsp;옮기자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt;를 사용하면 &lt;code&gt;.env&lt;/code&gt; 파일까지 생성해주고 그것을 사용할 수 있도록 해준다.&lt;br&gt;
+그런데&amp;hellip; 이거 참&amp;hellip; 저 깊숙한곳에 만들어주니&amp;hellip; Pycharm에서 &lt;code&gt;env&lt;/code&gt;를 쓰려고 찾기시작하니 귀찮다. 그리고 그냥 지워버리면 그&amp;nbsp;밑에있는건&amp;hellip;&lt;/p&gt;
+&lt;p&gt;물론 확인할 수 있는 방법이 없는건아니다. &lt;code&gt;pipenv shell&lt;/code&gt;로 하면 &lt;code&gt;.env&lt;/code&gt; 파일이 존재하는 곳을 찾아서 실행시켜주기도 하는데&amp;hellip;&lt;br&gt;
+내마음에&amp;nbsp;안드니&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt; 에서 사용하는 &lt;code&gt;.env&lt;/code&gt;를 내가 원하는 위치에&amp;nbsp;옮겨보자.&lt;/p&gt;
+&lt;h3 id="workon_home"&gt;&lt;code&gt;WORKON_HOME&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;저 깊이 들어가는 &lt;code&gt;.env&lt;/code&gt; 폴더를 내가 원하는 위치로&amp;nbsp;옮겨준다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;export WORKON_HOME=~/.venvs
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="pipenv_venv_in_project"&gt;&lt;code&gt;PIPENV_VENV_IN_PROJECT&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;프로젝트를 진행하고있는 곳에 &lt;code&gt;.env&lt;/code&gt; 파일을 만들어준다.&lt;br&gt;
+이럴때는 &lt;code&gt;.gitignore&lt;/code&gt;에서 &lt;code&gt;.env/&lt;/code&gt; 파일을 예외로 해주어야된다. 해주는게&amp;nbsp;좋을꺼다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;export PIPENV_VENV_IN_PROJECT=true
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4 id="_1"&gt;참고&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://docs.pipenv.org/advanced/#custom-virtual-environment-location"&gt;pipenv - Custom Virtual Environment&amp;nbsp;Location&lt;/a&gt;&lt;/p&gt;</content><category term="pip"></category><category term="pipenv"></category><category term="env"></category><category term="python"></category></entry><entry><title>파이썬으로 리눅스 배포판 확인하기</title><link href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" rel="alternate"></link><published>2017-10-22T18:21:49+09:00</published><updated>2017-10-22T18:21:49+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-10-22:/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/</id><summary type="html">&lt;p&gt;파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가&amp;nbsp;발생했다!&lt;/p&gt;</summary><content type="html">&lt;p&gt;요즘 코딩을 안하니&amp;hellip; 머리가 멍해져가는지라.&lt;br&gt;
 컴퓨터를 밀고 나면 새롭게 설정하기위해서 만들어뒀던 셸  스크립트를 파이썬 cmd 라이버리를 가지고 변경하는중. (이건 따로 작성하자. 새로운 기능을&amp;nbsp;많이써서&amp;hellip;)&lt;/p&gt;
 &lt;p&gt;리눅스 배포판 별로 설치하는 프로그램 명령어가 다르니 배포판을 구분하여 명령어를 다르게 적용할수 있도록 구현이&amp;nbsp;필요했다.&lt;/p&gt;
 &lt;p&gt;찾다보니 &lt;a href="https://docs.python.org/3/library/platform.html"&gt;&lt;code&gt;platform&lt;/code&gt;&lt;/a&gt; 라이브러리가 내부에 존재하고 해당 라이브러리에서 Unix 환경에서 사용이 가능한 &lt;code&gt;dist&lt;/code&gt;, &lt;code&gt;linux_distribution&lt;/code&gt; 메소드가 존재를 한다. 그런데 이거 3.5때 방출에 대한 논의 (&lt;a href="https://bugs.python.org/issue1322"&gt;issue 1322&lt;/a&gt;)가 되었고, 3.7에서 삭제되는 걸로&amp;nbsp;끝&amp;hellip;&lt;/p&gt;
