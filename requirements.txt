@@ -1,6 +1,0 @@
-docopt
-ghp-import
-kroman
-Markdown
-pelican
-pendulum
