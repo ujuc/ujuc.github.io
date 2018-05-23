@@ -1,5 +1,463 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-04-21T13:01:22+09:00</updated><entry><title>Custom Virtual Environment Location on piping</title><link href="https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/" rel="alternate"></link><published>2018-04-21T13:01:22+09:00</published><updated>2018-04-21T13:01:22+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-04-21:/2018/04/21/custom_virtual_environment_location_on_piping/</id><summary type="html">&lt;p&gt;pipevn를 사용하는데&amp;hellip; env가 안보인다. 보이는 곳으로&amp;nbsp;옮기자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt;를 사용하면 &lt;code&gt;.env&lt;/code&gt; 파일까지 생성해주고 그것을 사용할 수 있도록 해준다.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-05-24T00:00:02+09:00</updated><entry><title>Design of QL</title><link href="https://ujuc.github.io/2018/05/24/design_of_ql/" rel="alternate"></link><published>2018-05-24T00:00:02+09:00</published><updated>2018-05-24T00:00:02+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-05-24:/2018/05/24/design_of_ql/</id><summary type="html">&lt;p&gt;Go 임베디드 데이터베이스 패키지인 QL에 대한 디자인&amp;nbsp;문서이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;QL&lt;/code&gt; design&amp;nbsp;문서&lt;/p&gt;
+&lt;p&gt;이 문서는 &lt;a href="https://github.com/cznic/ql"&gt;&lt;code&gt;cznic/ql&lt;/code&gt;&lt;/a&gt; 프로젝트 설계 문서이다.&lt;br&gt;
+&lt;code&gt;QL&lt;/code&gt; 은 Go로 만들어진 embedded &lt;span class="caps"&gt;SQL&lt;/span&gt;&amp;nbsp;데이터베이스이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;원문&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;code: &lt;a href="https://github.com/cznic/ql/blob/v1.1.0/design/doc.go"&gt;doc.go -&amp;nbsp;v1.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;godoc: &lt;a href="https://godoc.org/github.com/cznic/ql/design"&gt;package&amp;nbsp;design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#handles"&gt;Handles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#scalar-encoding"&gt;Scalar&amp;nbsp;encoding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#database-root"&gt;Database&amp;nbsp;root&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#table-meta-data"&gt;Table meta&amp;nbsp;data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#indices"&gt;Indices&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#table-record"&gt;Table&amp;nbsp;record&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#non-unique-index"&gt;Non unique&amp;nbsp;index&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#unique-index"&gt;Unique&amp;nbsp;index&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#non-scalar-types"&gt;Non scalar&amp;nbsp;types&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#blob-encoding"&gt;Blob&amp;nbsp;encoding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#links"&gt;Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#rationale"&gt;Rationale&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;패키지 디자인은 QL에서 사용중인 일부 데이터 구조를&amp;nbsp;설명합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Package design describes some of the data structures used in &lt;span class="caps"&gt;QL&lt;/span&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="handles"&gt;Handles&lt;/h2&gt;
+&lt;p&gt;Handle은 DB에서 사용중인 블록에대한 7 바이트 “pointer” 입니다. &lt;a href="http://godoc.org/github.com/cznic/lldb#hdr-Block_handles"&gt;&lt;code&gt;lldb/hdr-Block_handles&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A handle is a 7 byte &amp;ldquo;pointer&amp;rdquo; to a block in the &lt;span class="caps"&gt;DB&lt;/span&gt; &lt;a href="http://godoc.org/github.com/cznic/lldb#hdr-Block_handles"&gt;0&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="scalar-encoding"&gt;Scalar&amp;nbsp;encoding&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"&gt;&lt;code&gt;lldb/EncodeScalars&lt;/code&gt;&lt;/a&gt;에서 제공하는 &amp;ldquo;scalars&amp;rdquo; 인코딩을 말합니다. 달리 명시하지 않는한 아래 설명된 모든 값은 scalars, 인코딩된 scalars, scalar 배열에 대한 인코딩&amp;nbsp;입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Encoding of so called &amp;ldquo;scalars&amp;rdquo; provided by &lt;a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"&gt;&lt;code&gt;lldb/EncodeScalars&lt;/code&gt;&lt;/a&gt;. Unless specified otherwise, all values discussed below are scalars, encoded scalars or encoding of scalar&amp;nbsp;arrays.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="database-root"&gt;Database&amp;nbsp;root&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;DB&lt;/span&gt; root는 고정된 핸들에서 발견되는 1-scalar 입니다&amp;nbsp;(#1).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;DB&lt;/span&gt; root is a 1-scalar found at a fixed handle&amp;nbsp;(#1).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;#&lt;/th&gt;
+&lt;th align="center"&gt;Name&lt;/th&gt;
+&lt;th align="center"&gt;Type&lt;/th&gt;
+&lt;th align="center"&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;0&lt;/td&gt;
+&lt;td align="center"&gt;head&lt;/td&gt;
+&lt;td align="center"&gt;handle&lt;/td&gt;
+&lt;td align="center"&gt;First table meta data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Head는 메타 데이터 테이블에서 싱클 링크 목록의 제목 행입니다. &lt;code&gt;0&lt;/code&gt;은 DB에 아무런 테이블이 없을 경우를&amp;nbsp;나타냅니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Head is the head of a single linked list of table of meta data. It&amp;rsquo;s zero if there are no tables in the &lt;span class="caps"&gt;DB&lt;/span&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="table-meta-data"&gt;Table meta&amp;nbsp;data&lt;/h2&gt;
+&lt;p&gt;테이블 메타 데이터는 6-scalar&amp;nbsp;입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Table meta data are a&amp;nbsp;6-scalar.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;#&lt;/th&gt;
+&lt;th align="left"&gt;Name&lt;/th&gt;
+&lt;th align="left"&gt;Type&lt;/th&gt;
+&lt;th align="left"&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;0&lt;/td&gt;
+&lt;td align="left"&gt;next&lt;/td&gt;
+&lt;td align="left"&gt;handle&lt;/td&gt;
+&lt;td align="left"&gt;Next table meta data.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;1&lt;/td&gt;
+&lt;td align="left"&gt;scols&lt;/td&gt;
+&lt;td align="left"&gt;string&lt;/td&gt;
+&lt;td align="left"&gt;Column defintitions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;2&lt;/td&gt;
+&lt;td align="left"&gt;hhead&lt;/td&gt;
+&lt;td align="left"&gt;handle&lt;/td&gt;
+&lt;td align="left"&gt;-&amp;gt; head -&amp;gt; first record&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;3&lt;/td&gt;
+&lt;td align="left"&gt;name&lt;/td&gt;
+&lt;td align="left"&gt;string&lt;/td&gt;
+&lt;td align="left"&gt;Table name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;4&lt;/td&gt;
+&lt;td align="left"&gt;indices&lt;/td&gt;
+&lt;td align="left"&gt;string&lt;/td&gt;
+&lt;td align="left"&gt;Index definitions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;5&lt;/td&gt;
+&lt;td align="left"&gt;hxroots&lt;/td&gt;
+&lt;td align="left"&gt;handle&lt;/td&gt;
+&lt;td align="left"&gt;Index B+Trees roots list&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;필드 #4와 #5는 기존 데이터베이스와 하위 호환성 (backward compatibility)을 위한 선택 사항입니다. 그러나 상위 호환성(forward compatibility)은 작동하지 않습니다. 최신 &lt;span class="caps"&gt;QL&lt;/span&gt; 버전에서 인덱스를 생성하면 메타 데이터에 4가지 필드만 있을 경우, 이 DB를 사용할 수 없습니다. 이전 버전 &lt;span class="caps"&gt;QL&lt;/span&gt; 인덱스를 업데이트 할 수 없기에 매번 &lt;code&gt;table-with-indeces&lt;/code&gt; 변화가 될때마다 새로운 &lt;span class="caps"&gt;QL&lt;/span&gt; 버전 쿼리가 실행이 안될 수 있어 의도된&amp;nbsp;구현입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fields #4 and #5 are optional for backward compatibility with existing databases. &lt;span class="caps"&gt;OTOH&lt;/span&gt;, forward compatibility will not work. Once any indices are created using a newer &lt;span class="caps"&gt;QL&lt;/span&gt; version the older versions of &lt;span class="caps"&gt;QL&lt;/span&gt;, expecting only 4 fields of meta data will not be able to use the &lt;span class="caps"&gt;DB&lt;/span&gt;. That&amp;rsquo;s the intended behavior because the older versions of &lt;span class="caps"&gt;QL&lt;/span&gt; cannot update the indexes, which can break queries runned by the newer &lt;span class="caps"&gt;QL&lt;/span&gt; version which expect indices to be always actualized on any table-with-indices&amp;nbsp;mutation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;다음 테이블 메타 데이터의 handle은 필드 #0 (&lt;code&gt;next&lt;/code&gt;)에 있습니다. 만약 다음 테이블 메타 데이터가 없다면, 이 필드 값은 &lt;code&gt;0&lt;/code&gt;입니다. 테이블 컬럼에대한 이름과 타입은 필드 #1 (&lt;code&gt;scols&lt;/code&gt;)에 있습니다. 단일 필드는 타입 태그와 컬럼 이름을 연결하여 설명합니다. 타입 태그는 다음과&amp;nbsp;같습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The handle of the next table meta data is in the field #0 (next). If there is no next table meta data, the field is zero. Names and types of table columns are stored in field #1 (scols). A single field is described by concatenating a type tag and the column name. The type tags&amp;nbsp;are&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bool       &amp;#39;b&amp;#39;
+complex64  &amp;#39;c&amp;#39;
+complex128 &amp;#39;d&amp;#39;
+float32    &amp;#39;f&amp;#39;
+float64    &amp;#39;g&amp;#39;, alias float
+int8       &amp;#39;i&amp;#39;
+int16      &amp;#39;j&amp;#39;
+int32      &amp;#39;k&amp;#39;
+int64      &amp;#39;l&amp;#39;, alias int
+string     &amp;#39;s&amp;#39;
+uint8      &amp;#39;u&amp;#39;, alias byte
+uint16     &amp;#39;v&amp;#39;
+uint32     &amp;#39;w&amp;#39;
+uint64     &amp;#39;x&amp;#39;, alias uint
+bigInt     &amp;#39;I&amp;#39;
+bigRat     &amp;#39;R&amp;#39;
+blob       &amp;#39;B&amp;#39;
+duration   &amp;#39;D&amp;#39;
+time       &amp;#39;T&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Scols 값은 위에서 설명한 인코딩된 필드를 &lt;code&gt;"|"&lt;/code&gt;로 결합하여 사용합니다. 예를&amp;nbsp;들어&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The scols value is the above described encoded fields joined using &amp;ldquo;|&amp;rdquo;. For&amp;nbsp;example&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Foo&lt;/span&gt; &lt;span class="n"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Bar&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Baz&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이 문구는 scols를 사용하여 테이블 메타 데이터를&amp;nbsp;추가합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This statement adds a table meta data with&amp;nbsp;scols&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;bFool|sBar|gBaz&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;테이블에서 컬럼을 삭제할 수&amp;nbsp;있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Columns can be dropped from a&amp;nbsp;table&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;ALTER&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="k"&gt;DROP&lt;/span&gt; &lt;span class="k"&gt;COLUMN&lt;/span&gt; &lt;span class="n"&gt;Bar&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이렇게 하면 scols에서 필드 정보가 &lt;strong&gt;지워&lt;/strong&gt;집니다. 값은 다음과 같이&amp;nbsp;보여집니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This &amp;ldquo;erases&amp;rdquo; the field info in scols, so the value&amp;nbsp;becomes&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;bFool||gBaz&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;테이블에 커럼을 추가할 수 있습니다.&lt;br&gt;
+Colums can be added to a&amp;nbsp;table&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;ALTER&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="k"&gt;ADD&lt;/span&gt; &lt;span class="k"&gt;Count&lt;/span&gt; &lt;span class="n"&gt;uint&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;새로운 필드는 scols 맨 끝에 항상&amp;nbsp;추가됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;New fields are always added to the end of&amp;nbsp;scols&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;”bFool||gBaz|xCount&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;strings.Split(scols, "|")&lt;/code&gt;에 있는 필드에 대한 인덱스는 테이블 레코드에 있는 필드에 대한 인덱스 입니다. 위에서 설명한 컬럼 삭제 및 추가 규칙은 기존 테이블 데이터를 다시 만들 필요없이 스키마를 변경시킬 수 있습니다. 삭제된 컬럼은 원래 위치에 그대로 두고 새로운 레코드는 해당 위치에 &lt;code&gt;nil&lt;/code&gt;을 삽입합니다. 인코딩된 &lt;code&gt;nil&lt;/code&gt; 값은 1 바이트입니다. 기존 레코드에 없는 경우, 추가된 열은  &lt;code&gt;nil&lt;/code&gt; 값을 반환합니다. 삭제된 컬럼의 오버해드가 문제가되고 테이블 레코드를 이동할 충분한 시간/공간과 메모리가&amp;nbsp;있다면:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Index of a field in &lt;code&gt;strings.Split(scols, "|")&lt;/code&gt; is the index of the field in a table record. The above discussed rules for column dropping and column adding allow for schema evolution without a need to reshape any existing table data. Dropped columns are left where they are and new records insert &lt;code&gt;nil&lt;/code&gt; in their place. The encoded &lt;code&gt;nil&lt;/code&gt; is one byte. Added columns, when not present in preexisting records are returned as &lt;code&gt;nil&lt;/code&gt; values. If the overhead of dropped columns becomes an issue and there&amp;rsquo;s time/space and memory enough to move the records of a table&amp;nbsp;around:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt; &lt;span class="n"&gt;TRANSACTION&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;column&lt;/span&gt; &lt;span class="n"&gt;definitions&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="k"&gt;INSERT&lt;/span&gt; &lt;span class="k"&gt;INTO&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="k"&gt;old&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;DROP&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="k"&gt;old&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="k"&gt;old&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;column&lt;/span&gt; &lt;span class="n"&gt;definitions&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="k"&gt;INSERT&lt;/span&gt; &lt;span class="k"&gt;INTO&lt;/span&gt; &lt;span class="k"&gt;old&lt;/span&gt; &lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;DROP&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;END&lt;/span&gt; &lt;span class="n"&gt;TRANSACTION&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이것은 시간적/공간적으로 효과적이지 못하며, Big Data일 경우, 트랜젝션이 프로세스에서 사용 가능한 메모리 리소스에 의해 제한되기에 &lt;span class="caps"&gt;OOM&lt;/span&gt; 이 발생할 수 있습니다. 어쩌면 이것을 수행하는 메소드나 &lt;span class="caps"&gt;QL&lt;/span&gt; 구문을 추가해야합니다.(MySQL &lt;span class="caps"&gt;OPTIMIZE&lt;/span&gt; &lt;span class="caps"&gt;TABLE&lt;/span&gt; 구문 채택을&amp;nbsp;고려해야합니다)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is not very time/space effective and for Big Data it can cause an &lt;span class="caps"&gt;OOM&lt;/span&gt; because transactions are limited by memory resources available to the process. Perhaps a method and/or &lt;span class="caps"&gt;QL&lt;/span&gt; statement to do this in-place should be added (&lt;span class="caps"&gt;MAYBE&lt;/span&gt; consider adopting MySQL&amp;rsquo;s &lt;span class="caps"&gt;OPTIMIZE&lt;/span&gt; &lt;span class="caps"&gt;TABLE&lt;/span&gt;&amp;nbsp;syntax).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;필드 #2(&lt;code&gt;hhead&lt;/code&gt;)는 테이블 레코드의 해드에 대한 handle 입니다. 테이블 첫 번째 레코드에 대한 handle이 아닙니다. 따라서 레코드가 없는 테이블의 경우라도 항상 &lt;code&gt;0&lt;/code&gt; 값을 가지고 있지 않습니다. 이 &lt;strong&gt;이중 포인터(double pointer&lt;/strong&gt; 스키마를 사용하는 이유는 (&lt;code&gt;hhead&lt;/code&gt; 포인트에 대한) head 단일 값을 업데이트하여 새 레코드를 추가 (연결) 할 수 있기&amp;nbsp;때문입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Field #2 (&lt;code&gt;hhead&lt;/code&gt;) is a handle to a head of table records, i.e. not a handle to the first record in the table. It is thus always non zero even for a table having no records. The reason for this &amp;ldquo;double pointer&amp;rdquo; schema is to enable adding (linking) a new record by updating a single value of the (&lt;code&gt;hhead&lt;/code&gt; pointing to)&amp;nbsp;head.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tableMeta.hhead -&amp;gt; head -&amp;gt; firstTableRecord
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;테이블 이름은 필드 #3 (&lt;code&gt;name&lt;/code&gt;)에&amp;nbsp;저장됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The table name is stored in field #3&amp;nbsp;(name).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="indices"&gt;Indices&lt;/h2&gt;
+&lt;p&gt;인덱스 이름은 &amp;lsquo;N&amp;rsquo;, 인덱스 컬럼 이름은 &amp;lsquo;C&amp;rsquo;으로 정합니다. 이 특정 인덱스 인코딩은 &lt;code&gt;&amp;lt;tag&amp;gt;N&lt;/code&gt; 문자열입니다. &lt;code&gt;&amp;lt;tag&amp;gt;&lt;/code&gt;는 고유하지 않은 인덱스는 &lt;code&gt;n&lt;/code&gt;이고 고유한 인덱스는 &lt;code&gt;u&lt;/code&gt; 입니다. 인덱스 &lt;code&gt;id()&lt;/code&gt;와 scols의 다른 모든 컬럼을 인덱싱 할 수 있는 인덱스에 대한 정보기 이 인덱스에 있습니다. 컬럼에 인덱스되지 않은 경우, 인덱스 정보는 빈 문자열입니다. 모든 인덱스에 대한 정보는 &lt;code&gt;"|"&lt;/code&gt; 으로 결합됩니다. 예를&amp;nbsp;들어:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Consider an index named N, indexing column named C. The encoding of this particular index is a string &amp;ldquo;&lt;tag&gt;N&amp;rdquo;. &lt;code&gt;&amp;lt;tag&amp;gt;&lt;/code&gt; is a string &amp;ldquo;n&amp;rdquo; for non unique indices and &amp;ldquo;u&amp;rdquo; for unique indices. There is this index information for the index possibly indexing the record id() and for all other columns of scols. Where the column is not indexed, the index info is an empty string. Infos for all indexes are joined with &amp;ldquo;|&amp;rdquo;. For&amp;nbsp;example&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt; &lt;span class="n"&gt;TRANSACTION&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;TABLE&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Foo&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Bar&lt;/span&gt; &lt;span class="n"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Baz&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;INDEX&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="k"&gt;ON&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Baz&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;UNIQUE&lt;/span&gt; &lt;span class="k"&gt;INDEX&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="k"&gt;ON&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Foo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;COMMIT&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;위의 필드 #1과 #4는 다음과&amp;nbsp;같습니다:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The values of fields #1 and #4 for the above&amp;nbsp;are&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;scols: &amp;quot;lFoo|bBar|sBaz&amp;quot;
+indices: &amp;quot;|uY||nX&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;"|"&lt;/code&gt; 값을 나눠서&amp;nbsp;보자면:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Aligning properly the &amp;ldquo;|&amp;rdquo; split&amp;nbsp;parts&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;             id    col#0    col#1    col#2
++----------+----+--------+--------+--------+
+|   scols: |    | &amp;quot;lFoo&amp;quot; | &amp;quot;bBar&amp;quot; | &amp;quot;sBaz&amp;quot; |
++----------+----+--------+--------+--------+
+| indices: | &amp;quot;&amp;quot; | &amp;quot;uY&amp;quot;   | &amp;quot;&amp;quot;     | &amp;quot;nX&amp;quot;   |
++----------+----+--------+--------+--------+
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;Foo&lt;/code&gt;와 &lt;code&gt;Baz&lt;/code&gt; 컬럼이 인덱스되는 동안 레코드 &lt;code&gt;id()&lt;/code&gt;가 이테이블에 대해 인덱싱되지 않는 것을&amp;nbsp;보여줍니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;shows that the record id() is not indexed for this table while the columns Foo and Baz&amp;nbsp;are.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;주의: 동일한 컬럼에 두개의 다른 이름을 가진 인덱스가 있을 수 없으며, 이것은 의도한 것입니다. 인덱스는 &lt;a href="http://godoc.org/github.com/cznic/lldb#BTree"&gt;B+Trees&lt;/a&gt;로 작성되었습니다. 그들의 루트에서 handle에 대한 목록은 인덱스가 없는 컬럼에 대해서 &lt;code&gt;0&lt;/code&gt;과 &lt;code&gt;hxroots&lt;/code&gt;에 의해 가리켜집니다. 이전 예제의&amp;nbsp;경우:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note that there cannot be two differently named indexes for the same column and it&amp;rsquo;s intended. The indices are &lt;a href="http://godoc.org/github.com/cznic/lldb#BTree"&gt;B+Trees&lt;/a&gt;. The list of handles to their roots is pointed to by &lt;code&gt;hxroots&lt;/code&gt; with zeros for non indexed columns. For the previous&amp;nbsp;example&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tableMeta.hxroots -&amp;gt; {0, y, 0, x}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;여기서 &lt;code&gt;x&lt;/code&gt;는 &lt;code&gt;X&lt;/code&gt; 인덱스의 B+Tree에 대한 루트이고, &lt;code&gt;y&lt;/code&gt;는 &lt;code&gt;Y&lt;/code&gt; 인덱스의 B+Tree에 대한 루트입니다. &lt;code&gt;id()&lt;/code&gt;에 대한 인덱스가 있다면, 첫번째 &lt;code&gt;0&lt;/code&gt;이 있는 곳에 B+Tree 루트가 있습니다. &lt;code&gt;hhead&lt;/code&gt;와 마찬가지로 &lt;code&gt;hxroots&lt;/code&gt;는 테이블에 대한 인덱스가 없는 경우라도 절대로 &lt;code&gt;0&lt;/code&gt;이&amp;nbsp;아닙니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;where x is the root of the B+Tree for the X index and y is the root of the B+Tree for the Y index. If there would be an index for id(), its B+Tree root will be present where the first zero is. Similarly to &lt;code&gt;hhead&lt;/code&gt;, &lt;code&gt;hxroots&lt;/code&gt; is never zero, even when there are no indices for a&amp;nbsp;table.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="table-record"&gt;Table&amp;nbsp;record&lt;/h2&gt;
+&lt;p&gt;테이블 레코드는 N-scalar&amp;nbsp;입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A table record is an&amp;nbsp;N-scalar.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;#&lt;/th&gt;
+&lt;th align="left"&gt;Name&lt;/th&gt;
+&lt;th align="left"&gt;Type&lt;/th&gt;
+&lt;th align="left"&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;0&lt;/td&gt;
+&lt;td align="left"&gt;next&lt;/td&gt;
+&lt;td align="left"&gt;handle&lt;/td&gt;
+&lt;td align="left"&gt;Next record or zero.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;1&lt;/td&gt;
+&lt;td align="left"&gt;id&lt;/td&gt;
+&lt;td align="left"&gt;int64&lt;/td&gt;
+&lt;td align="left"&gt;Automatically assigned unique&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="left"&gt;value obtainable by id().&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;2&lt;/td&gt;
+&lt;td align="left"&gt;field #0&lt;/td&gt;
+&lt;td align="left"&gt;scalar&lt;/td&gt;
+&lt;td align="left"&gt;First field of the record.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;3&lt;/td&gt;
+&lt;td align="left"&gt;field #1&lt;/td&gt;
+&lt;td align="left"&gt;scalar&lt;/td&gt;
+&lt;td align="left"&gt;Second field of the record.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&amp;hellip;&lt;/td&gt;
+&lt;td align="left"&gt;&amp;hellip;&lt;/td&gt;
+&lt;td align="left"&gt;&amp;hellip;&lt;/td&gt;
+&lt;td align="left"&gt;&amp;hellip;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;N-1&lt;/td&gt;
+&lt;td align="left"&gt;field #N-2&lt;/td&gt;
+&lt;td align="left"&gt;scalar&lt;/td&gt;
+&lt;td align="left"&gt;Last field of the record.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;테이블 레코도에 링크된 &lt;strong&gt;정렬&lt;/strong&gt;에는 의미가 없으므로 레코드가 테이블에 추가되는 순서와 상관이 없습니다. 실제로 효율적인 연결 방법은 &lt;strong&gt;정렬&lt;/strong&gt;을 유도하며, 추가된 순서에 관해서는 실지로 역순이&amp;nbsp;됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The linked &amp;ldquo;ordering&amp;rdquo; of table records has no semantics and it doesn&amp;rsquo;t have to correlate to the order of how the records were added to the table. In fact, an efficient way of the linking leads to &amp;ldquo;ordering&amp;rdquo; which is actually reversed wrt the insertion&amp;nbsp;order.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="non-unique-index"&gt;Non unique&amp;nbsp;index&lt;/h2&gt;
+&lt;p&gt;B+Tree에 대한 &lt;a href="https://en.wikipedia.org/wiki/Compound_key"&gt;복합키&lt;/a&gt;는 &lt;code&gt;{indexed valuse, record handle}&lt;/code&gt; 입니다. B+Tree 값은 사용하지&amp;nbsp;않습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The composite key of the B+Tree is &lt;code&gt;{indexed values, record handle}&lt;/code&gt;. The B+Tree value is not&amp;nbsp;used.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;            B+Tree key                    B+Tree value
++----------------+---------------+      +--------------+
+| Indexed Values | Record Handle |  -&amp;gt;  |   not used   |
++----------------+---------------+      +--------------+
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="unique-index"&gt;Unique&amp;nbsp;index&lt;/h2&gt;
+&lt;p&gt;인덱스된 값이 모두 &lt;code&gt;NULL&lt;/code&gt;이라면, 복합 B+Tree 키는 &lt;code&gt;{nil, record handle}&lt;/code&gt;이고 B+Tree 값은 사용하지&amp;nbsp;않습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If the indexed values are all &lt;span class="caps"&gt;NULL&lt;/span&gt; then the composite B+Tree key is &lt;code&gt;{nil, record handle}&lt;/code&gt; and the B+Tree value is not&amp;nbsp;used.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;        B+Tree key                B+Tree value
++------+-----------------+      +--------------+
+| NULL |  Record Handle  |  -&amp;gt;  |   not used   |
++------+-----------------+      +--------------+
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;인덱스된 값이 모두 &lt;code&gt;NULL&lt;/code&gt;이라면, B+Tree 키에 대한 키가 인덕싱된 값이고, B+Tree 값은 레코드 handle&amp;nbsp;입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If the indexed values are not all &lt;span class="caps"&gt;NULL&lt;/span&gt; then key of the B+Tree key are the indexed values and the B+Tree value is the record&amp;nbsp;handle.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    B+Tree key                B+Tree value
++----------------+      +---------------+
+| Indexed Values |  -&amp;gt;  | Record Handle |
++----------------+      +---------------+
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="non-scalar-types"&gt;Non scalar&amp;nbsp;types&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"&gt;&lt;code&gt;lldb/EncodeScalars&lt;/code&gt;&lt;/a&gt;에 대한 scalar 타입은 &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;complex*&lt;/code&gt;, &lt;code&gt;float*&lt;/code&gt;, &lt;code&gt;int*&lt;/code&gt;, &lt;code&gt;uint*&lt;/code&gt;, &lt;code&gt;string&lt;/code&gt;, &lt;code&gt;[]byte&lt;/code&gt; 타입입니다. 모든 다른 타입은 &lt;code&gt;blob-like&lt;/code&gt; 입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Scalar types of &lt;a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"&gt;&lt;code&gt;lldb/EncodeScalars&lt;/code&gt;&lt;/a&gt; are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;complex*&lt;/code&gt;, &lt;code&gt;float*&lt;/code&gt;, &lt;code&gt;int*&lt;/code&gt;, &lt;code&gt;uint*&lt;/code&gt;, &lt;code&gt;string&lt;/code&gt; and &lt;code&gt;[]byte&lt;/code&gt; types. All other types are&amp;nbsp;&amp;ldquo;blob-like&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;QL type         Go type
+-----------------------------
+blob            []byte
+bigint          big.Int
+bigrat          big.Rat
+time            time.Time
+duration        time.Duration
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;메모리 백엔드는 Go 타입으로 직접 저장합니다. 파일 백엔드는 lldb가 기본적으로 지원하는 유형이 더 적기에 (태그가 붙은) &lt;code&gt;[]byte&lt;/code&gt;를 이용하여 위 모든 내용을 인코딩 해야합니다. &lt;code&gt;Blob-like&lt;/code&gt;한 타입의 &lt;code&gt;NULL&lt;/code&gt; 값은 &lt;code&gt;nil&lt;/code&gt; (&lt;code&gt;lldb/db.go&lt;/code&gt;안의 &lt;code&gt;gbNull&lt;/code&gt;)으로 인코딩 됩니다. 이미 존재하는 &lt;span class="caps"&gt;QL&lt;/span&gt; 타입과 완전히&amp;nbsp;동일합니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Memory back-end stores the Go type directly. File back-end must resort to encode all of the above as (tagged) &lt;code&gt;[]byte&lt;/code&gt; due to the lack of more types supported natively by lldb. &lt;span class="caps"&gt;NULL&lt;/span&gt; values of blob-like types are encoded as &lt;code&gt;nil&lt;/code&gt; (&lt;code&gt;gbNull&lt;/code&gt; in &lt;code&gt;lldb/gb.go&lt;/code&gt;), exactly the same as the already existing &lt;span class="caps"&gt;QL&lt;/span&gt; types&amp;nbsp;are.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="blob-encoding"&gt;Blob&amp;nbsp;encoding&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Blob-like&lt;/code&gt;한 타입 값은 먼저 &lt;code&gt;[]byte&lt;/code&gt; 슬라이스로 인코딩&amp;nbsp;됩니다:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The values of the blob-like types are first encoded into a &lt;code&gt;[]byte&lt;/code&gt; slice:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;+-----------------------+-------------------+
+| blob                  | raw               |
+| bigint, bigrat, time  | gob encoded       |
+| duration              | gob encoded int64 |
++-----------------------+-------------------+
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;gob&lt;/code&gt; 인코딩은 &lt;code&gt;blob-like&lt;/code&gt;한 타입에 대한 모든 초기 인코딩과 관련하여 &lt;strong&gt;차별됩니다&lt;/strong&gt;. 다른 말로, &lt;code&gt;gob&lt;/code&gt; 인코딩이 반드시 써야되는 초기 타입 디스크립터는 제거되고 정직하게 디코딩될때 &lt;strong&gt;재 공급&lt;/strong&gt;됩니다. (참조, &lt;a href="https://github.com/cznic/ql/blob/v1.1.0/blob.go"&gt;&lt;code&gt;blob.go&lt;/code&gt;&lt;/a&gt;). 결과로 나온 슬라이스 길이가 &lt;code&gt;&amp;lt;= shortBolob&lt;/code&gt; 인 경우, 첫번째이자 유일한 청크는 다음과 같은 스칼라&amp;nbsp;인코딩입니다:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The gob encoding is &amp;ldquo;differential&amp;rdquo; wrt an initial encoding of all of the blob-like type. &lt;span class="caps"&gt;IOW&lt;/span&gt;, the initial type descriptors which gob encoding must write out are stripped off and &amp;ldquo;resupplied&amp;rdquo; on decoding transparently. See also blob.go. If the length of the resulting slice is &lt;code&gt;&amp;lt;= shortBlob&lt;/code&gt;, the first and only chunk is the scalar encoding&amp;nbsp;of&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]interface{}{typeTag, slice}.                  // initial (and last) chunk
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;슬라이스 길이가 &lt;code&gt;0&lt;/code&gt;일 수도 있습니다 (&lt;code&gt;blob("")&lt;/code&gt;인 경우). 결과로 나온 슬라이스 길이가 길다면 (&lt;code&gt;&amp;gt; shortBlob&lt;/code&gt;), 첫 번째 청크는 인코딩에서&amp;nbsp;옵니다:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The length of slice can be zero (for blob(&amp;ldquo;&amp;rdquo;)). If the resulting slice is long (&lt;code&gt;&amp;gt; shortBlob&lt;/code&gt;), the first chunk comes from&amp;nbsp;encoding&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이 경우 &lt;code&gt;len(firstPart) &amp;lt;= shortBlob&lt;/code&gt;입니다. 두번째와 다른 청크입니다. 만약 마지막 청크면 &lt;code&gt;src&lt;/code&gt;는 다음과&amp;nbsp;같습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In this case &lt;code&gt;len(firstPart) &amp;lt;= shortBlob&lt;/code&gt;. Second and other chunks: If the chunk is the last one, src&amp;nbsp;is&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]interface{lastPart}.                          // overflow chunk (last)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이 경우 &lt;code&gt;len(lastPart) &amp;lt;= 64kB&lt;/code&gt;입니다. 마지막 청크가 아닌 경우, &lt;code&gt;src&lt;/code&gt;는 다음과&amp;nbsp;같습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In this case &lt;code&gt;len(lastPart) &amp;lt;= 64kB&lt;/code&gt;. If the chunk is not the last one, src&amp;nbsp;is&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]interface{}{nextHandle, part}.                // overflow chunk (not last)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이 경우는 &lt;code&gt;len(part) == 64kB&lt;/code&gt; 입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In this case &lt;code&gt;len(part) == 64kB&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="links"&gt;Links&lt;/h2&gt;
+&lt;p&gt;참조&amp;nbsp;사항:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Referenced from&amp;nbsp;above:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[0]: http://godoc.org/github.com/cznic/lldb#hdr-Block_handles
+[1]: http://godoc.org/github.com/cznic/lldb#EncodeScalars
+[2]: http://godoc.org/github.com/cznic/lldb#BTree
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="rationale"&gt;Rationale&lt;/h2&gt;
+&lt;p&gt;이 노트는 &lt;span class="caps"&gt;QL&lt;/span&gt; 소스를 보든 사람에게 유용 할 수 있지만, 특별히 의도된 독자는 미래의 나&amp;nbsp;자신입니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;While these notes might be useful to anyone looking at &lt;span class="caps"&gt;QL&lt;/span&gt; sources, the specifically intended reader is my future&amp;nbsp;self.&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="go"></category><category term="database"></category></entry><entry><title>Custom Virtual Environment Location on piping</title><link href="https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/" rel="alternate"></link><published>2018-04-21T13:01:22+09:00</published><updated>2018-04-21T13:01:22+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-04-21:/2018/04/21/custom_virtual_environment_location_on_piping/</id><summary type="html">&lt;p&gt;pipevn를 사용하는데&amp;hellip; env가 안보인다. 보이는 곳으로&amp;nbsp;옮기자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt;를 사용하면 &lt;code&gt;.env&lt;/code&gt; 파일까지 생성해주고 그것을 사용할 수 있도록 해준다.&lt;br&gt;
 그런데&amp;hellip; 이거 참&amp;hellip; 저 깊숙한곳에 만들어주니&amp;hellip; Pycharm에서 &lt;code&gt;env&lt;/code&gt;를 쓰려고 찾기시작하니 귀찮다. 그리고 그냥 지워버리면 그&amp;nbsp;밑에있는건&amp;hellip;&lt;/p&gt;
 &lt;p&gt;물론 확인할 수 있는 방법이 없는건아니다. &lt;code&gt;pipenv shell&lt;/code&gt;로 하면 &lt;code&gt;.env&lt;/code&gt; 파일이 존재하는 곳을 찾아서 실행시켜주기도 하는데&amp;hellip;&lt;br&gt;
 내마음에&amp;nbsp;안드니&amp;hellip;&lt;/p&gt;

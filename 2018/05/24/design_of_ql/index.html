@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="author" content="ujuc">
+  <meta name="description" content="Posts and writings by ujuc">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Style sheet -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+  <!-- Google web font -->
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+  <!-- Feed -->
+    <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+    <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+
+  <title>
+    잘 밤에 쓸데없는 생각하기...
+  </title>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58634276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+  <body>
+  <header>
+    <div class="container" style="margin-top: 10px;">
+      <nav class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="fas fa-inbox"></i> <span class="hidden-xs">Blog</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/archives.html">
+              <i class="fas fa-archive"></i> <span class="hidden-xs">Archive</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tags.html">
+              <i class="fas fa-tags"></i> <span class="hidden-xs">Tags</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/categories.html">
+              <i class="fas fa-folder-open"></i> <span class="hidden-xs">Categories</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Pages</a>
+            <div class="dropdown-menu">
+            </div>
+          </li>
+      </nav>
+    </div>
+  </header>
+
+  <div id="site_article" class="container">
+    <article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="https://ujuc.github.io/2018/05/24/design_of_ql/" class="h1">Design of <span class="caps">QL</span></a></h1>
+    </div>
+    <div class="row">
+      <p><i class="fas fa-poo"></i></p>
+    </div>
+    <div class="row article">
+      <div class="article_text">
+        <p><code>QL</code> design&nbsp;문서</p>
+<p>이 문서는 <a href="https://github.com/cznic/ql"><code>cznic/ql</code></a> 프로젝트 설계 문서이다.<br>
+<code>QL</code> 은 Go로 만들어진 embedded <span class="caps">SQL</span>&nbsp;데이터베이스이다.</p>
+<p><strong>원문</strong></p>
+<ul>
+<li>code: <a href="https://github.com/cznic/ql/blob/v1.1.0/design/doc.go">doc.go -&nbsp;v1.1.0</a></li>
+<li>godoc: <a href="https://godoc.org/github.com/cznic/ql/design">package&nbsp;design</a></li>
+</ul>
+<hr>
+<div class="toc">
+<ul>
+<li><a href="#handles">Handles</a></li>
+<li><a href="#scalar-encoding">Scalar&nbsp;encoding</a></li>
+<li><a href="#database-root">Database&nbsp;root</a></li>
+<li><a href="#table-meta-data">Table meta&nbsp;data</a></li>
+<li><a href="#indices">Indices</a></li>
+<li><a href="#table-record">Table&nbsp;record</a></li>
+<li><a href="#non-unique-index">Non unique&nbsp;index</a></li>
+<li><a href="#unique-index">Unique&nbsp;index</a></li>
+<li><a href="#non-scalar-types">Non scalar&nbsp;types</a></li>
+<li><a href="#blob-encoding">Blob&nbsp;encoding</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#rationale">Rationale</a></li>
+</ul>
+</div>
+<p>패키지 디자인은 QL에서 사용중인 일부 데이터 구조를&nbsp;설명합니다.</p>
+<blockquote>
+<p>Package design describes some of the data structures used in <span class="caps">QL</span>.</p>
+</blockquote>
+<h2 id="handles">Handles</h2>
+<p>Handle은 DB에서 사용중인 블록에대한 7 바이트 “pointer” 입니다. <a href="http://godoc.org/github.com/cznic/lldb#hdr-Block_handles"><code>lldb/hdr-Block_handles</code></a></p>
+<blockquote>
+<p>A handle is a 7 byte &ldquo;pointer&rdquo; to a block in the <span class="caps">DB</span> <a href="http://godoc.org/github.com/cznic/lldb#hdr-Block_handles">0</a>.</p>
+</blockquote>
+<h2 id="scalar-encoding">Scalar&nbsp;encoding</h2>
+<p><a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a>에서 제공하는 &ldquo;scalars&rdquo; 인코딩을 말합니다. 달리 명시하지 않는한 아래 설명된 모든 값은 scalars, 인코딩된 scalars, scalar 배열에 대한 인코딩&nbsp;입니다.</p>
+<blockquote>
+<p>Encoding of so called &ldquo;scalars&rdquo; provided by <a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a>. Unless specified otherwise, all values discussed below are scalars, encoded scalars or encoding of scalar&nbsp;arrays.</p>
+</blockquote>
+<h2 id="database-root">Database&nbsp;root</h2>
+<p><span class="caps">DB</span> root는 고정된 핸들에서 발견되는 1-scalar 입니다&nbsp;(#1).</p>
+<blockquote>
+<p><span class="caps">DB</span> root is a 1-scalar found at a fixed handle&nbsp;(#1).</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">#</th>
+<th align="center">Name</th>
+<th align="center">Type</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">head</td>
+<td align="center">handle</td>
+<td align="center">First table meta data</td>
+</tr>
+</tbody>
+</table>
+<p>Head는 메타 데이터 테이블에서 싱클 링크 목록의 제목 행입니다. <code>0</code>은 DB에 아무런 테이블이 없을 경우를&nbsp;나타냅니다.</p>
+<blockquote>
+<p>Head is the head of a single linked list of table of meta data. It&rsquo;s zero if there are no tables in the <span class="caps">DB</span>.</p>
+</blockquote>
+<h2 id="table-meta-data">Table meta&nbsp;data</h2>
+<p>테이블 메타 데이터는 6-scalar&nbsp;입니다.</p>
+<blockquote>
+<p>Table meta data are a&nbsp;6-scalar.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">#</th>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="left">next</td>
+<td align="left">handle</td>
+<td align="left">Next table meta data.</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left">scols</td>
+<td align="left">string</td>
+<td align="left">Column defintitions</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">hhead</td>
+<td align="left">handle</td>
+<td align="left">-&gt; head -&gt; first record</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">name</td>
+<td align="left">string</td>
+<td align="left">Table name</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">indices</td>
+<td align="left">string</td>
+<td align="left">Index definitions</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="left">hxroots</td>
+<td align="left">handle</td>
+<td align="left">Index B+Trees roots list</td>
+</tr>
+</tbody>
+</table>
+<p>필드 #4와 #5는 기존 데이터베이스와 하위 호환성 (backward compatibility)을 위한 선택 사항입니다. 그러나 상위 호환성(forward compatibility)은 작동하지 않습니다. 최신 <span class="caps">QL</span> 버전에서 인덱스를 생성하면 메타 데이터에 4가지 필드만 있을 경우, 이 DB를 사용할 수 없습니다. 이전 버전 <span class="caps">QL</span> 인덱스를 업데이트 할 수 없기에 매번 <code>table-with-indeces</code> 변화가 될때마다 새로운 <span class="caps">QL</span> 버전 쿼리가 실행이 안될 수 있어 의도된&nbsp;구현입니다.</p>
+<blockquote>
+<p>Fields #4 and #5 are optional for backward compatibility with existing databases. <span class="caps">OTOH</span>, forward compatibility will not work. Once any indices are created using a newer <span class="caps">QL</span> version the older versions of <span class="caps">QL</span>, expecting only 4 fields of meta data will not be able to use the <span class="caps">DB</span>. That&rsquo;s the intended behavior because the older versions of <span class="caps">QL</span> cannot update the indexes, which can break queries runned by the newer <span class="caps">QL</span> version which expect indices to be always actualized on any table-with-indices&nbsp;mutation.</p>
+</blockquote>
+<p>다음 테이블 메타 데이터의 handle은 필드 #0 (<code>next</code>)에 있습니다. 만약 다음 테이블 메타 데이터가 없다면, 이 필드 값은 <code>0</code>입니다. 테이블 컬럼에대한 이름과 타입은 필드 #1 (<code>scols</code>)에 있습니다. 단일 필드는 타입 태그와 컬럼 이름을 연결하여 설명합니다. 타입 태그는 다음과&nbsp;같습니다.</p>
+<blockquote>
+<p>The handle of the next table meta data is in the field #0 (next). If there is no next table meta data, the field is zero. Names and types of table columns are stored in field #1 (scols). A single field is described by concatenating a type tag and the column name. The type tags&nbsp;are</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>bool       &#39;b&#39;
+complex64  &#39;c&#39;
+complex128 &#39;d&#39;
+float32    &#39;f&#39;
+float64    &#39;g&#39;, alias float
+int8       &#39;i&#39;
+int16      &#39;j&#39;
+int32      &#39;k&#39;
+int64      &#39;l&#39;, alias int
+string     &#39;s&#39;
+uint8      &#39;u&#39;, alias byte
+uint16     &#39;v&#39;
+uint32     &#39;w&#39;
+uint64     &#39;x&#39;, alias uint
+bigInt     &#39;I&#39;
+bigRat     &#39;R&#39;
+blob       &#39;B&#39;
+duration   &#39;D&#39;
+time       &#39;T&#39;
+</pre></div>
+
+
+<p>Scols 값은 위에서 설명한 인코딩된 필드를 <code>"|"</code>로 결합하여 사용합니다. 예를&nbsp;들어</p>
+<blockquote>
+<p>The scols value is the above described encoded fields joined using &ldquo;|&rdquo;. For&nbsp;example</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">t</span> <span class="p">(</span><span class="n">Foo</span> <span class="n">bool</span><span class="p">,</span> <span class="n">Bar</span> <span class="n">string</span><span class="p">,</span> <span class="n">Baz</span> <span class="nb">float</span><span class="p">);</span>
+</pre></div>
+
+
+<p>이 문구는 scols를 사용하여 테이블 메타 데이터를&nbsp;추가합니다.</p>
+<blockquote>
+<p>This statement adds a table meta data with&nbsp;scols</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>&quot;bFool|sBar|gBaz&quot;
+</pre></div>
+
+
+<p>테이블에서 컬럼을 삭제할 수&nbsp;있습니다.</p>
+<blockquote>
+<p>Columns can be dropped from a&nbsp;table</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">t</span> <span class="k">DROP</span> <span class="k">COLUMN</span> <span class="n">Bar</span><span class="p">;</span>
+</pre></div>
+
+
+<p>이렇게 하면 scols에서 필드 정보가 <strong>지워</strong>집니다. 값은 다음과 같이&nbsp;보여집니다.</p>
+<blockquote>
+<p>This &ldquo;erases&rdquo; the field info in scols, so the value&nbsp;becomes</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>&quot;bFool||gBaz&quot;
+</pre></div>
+
+
+<p>테이블에 커럼을 추가할 수 있습니다.<br>
+Colums can be added to a&nbsp;table</p>
+<div class="codehilite"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">t</span> <span class="k">ADD</span> <span class="k">Count</span> <span class="n">uint</span><span class="p">;</span>
+</pre></div>
+
+
+<p>새로운 필드는 scols 맨 끝에 항상&nbsp;추가됩니다.</p>
+<blockquote>
+<p>New fields are always added to the end of&nbsp;scols</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>”bFool||gBaz|xCount&quot;
+</pre></div>
+
+
+<p><code>strings.Split(scols, "|")</code>에 있는 필드에 대한 인덱스는 테이블 레코드에 있는 필드에 대한 인덱스 입니다. 위에서 설명한 컬럼 삭제 및 추가 규칙은 기존 테이블 데이터를 다시 만들 필요없이 스키마를 변경시킬 수 있습니다. 삭제된 컬럼은 원래 위치에 그대로 두고 새로운 레코드는 해당 위치에 <code>nil</code>을 삽입합니다. 인코딩된 <code>nil</code> 값은 1 바이트입니다. 기존 레코드에 없는 경우, 추가된 열은  <code>nil</code> 값을 반환합니다. 삭제된 컬럼의 오버해드가 문제가되고 테이블 레코드를 이동할 충분한 시간/공간과 메모리가&nbsp;있다면:</p>
+<blockquote>
+<p>Index of a field in <code>strings.Split(scols, "|")</code> is the index of the field in a table record. The above discussed rules for column dropping and column adding allow for schema evolution without a need to reshape any existing table data. Dropped columns are left where they are and new records insert <code>nil</code> in their place. The encoded <code>nil</code> is one byte. Added columns, when not present in preexisting records are returned as <code>nil</code> values. If the overhead of dropped columns becomes an issue and there&rsquo;s time/space and memory enough to move the records of a table&nbsp;around:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="k">BEGIN</span> <span class="n">TRANSACTION</span><span class="p">;</span>
+  <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">new</span> <span class="p">(</span><span class="k">column</span> <span class="n">definitions</span><span class="p">);</span>
+  <span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">new</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">old</span><span class="p">;</span>
+  <span class="k">DROP</span> <span class="k">TABLE</span> <span class="k">old</span><span class="p">;</span>
+  <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">old</span> <span class="p">(</span><span class="k">column</span> <span class="n">definitions</span><span class="p">);</span>
+  <span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">old</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">new</span><span class="p">;</span>
+  <span class="k">DROP</span> <span class="k">TABLE</span> <span class="k">new</span><span class="p">;</span>
+<span class="k">END</span> <span class="n">TRANSACTION</span><span class="p">;</span>
+</pre></div>
+
+
+<p>이것은 시간적/공간적으로 효과적이지 못하며, Big Data일 경우, 트랜젝션이 프로세스에서 사용 가능한 메모리 리소스에 의해 제한되기에 <span class="caps">OOM</span> 이 발생할 수 있습니다. 어쩌면 이것을 수행하는 메소드나 <span class="caps">QL</span> 구문을 추가해야합니다.(MySQL <span class="caps">OPTIMIZE</span> <span class="caps">TABLE</span> 구문 채택을&nbsp;고려해야합니다)</p>
+<blockquote>
+<p>This is not very time/space effective and for Big Data it can cause an <span class="caps">OOM</span> because transactions are limited by memory resources available to the process. Perhaps a method and/or <span class="caps">QL</span> statement to do this in-place should be added (<span class="caps">MAYBE</span> consider adopting MySQL&rsquo;s <span class="caps">OPTIMIZE</span> <span class="caps">TABLE</span>&nbsp;syntax).</p>
+</blockquote>
+<p>필드 #2(<code>hhead</code>)는 테이블 레코드의 해드에 대한 handle 입니다. 테이블 첫 번째 레코드에 대한 handle이 아닙니다. 따라서 레코드가 없는 테이블의 경우라도 항상 <code>0</code> 값을 가지고 있지 않습니다. 이 <strong>이중 포인터(double pointer</strong> 스키마를 사용하는 이유는 (<code>hhead</code> 포인트에 대한) head 단일 값을 업데이트하여 새 레코드를 추가 (연결) 할 수 있기&nbsp;때문입니다.</p>
+<blockquote>
+<p>Field #2 (<code>hhead</code>) is a handle to a head of table records, i.e. not a handle to the first record in the table. It is thus always non zero even for a table having no records. The reason for this &ldquo;double pointer&rdquo; schema is to enable adding (linking) a new record by updating a single value of the (<code>hhead</code> pointing to)&nbsp;head.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>tableMeta.hhead -&gt; head -&gt; firstTableRecord
+</pre></div>
+
+
+<p>테이블 이름은 필드 #3 (<code>name</code>)에&nbsp;저장됩니다.</p>
+<blockquote>
+<p>The table name is stored in field #3&nbsp;(name).</p>
+</blockquote>
+<h2 id="indices">Indices</h2>
+<p>인덱스 이름은 &lsquo;N&rsquo;, 인덱스 컬럼 이름은 &lsquo;C&rsquo;으로 정합니다. 이 특정 인덱스 인코딩은 <code>&lt;tag&gt;N</code> 문자열입니다. <code>&lt;tag&gt;</code>는 고유하지 않은 인덱스는 <code>n</code>이고 고유한 인덱스는 <code>u</code> 입니다. 인덱스 <code>id()</code>와 scols의 다른 모든 컬럼을 인덱싱 할 수 있는 인덱스에 대한 정보기 이 인덱스에 있습니다. 컬럼에 인덱스되지 않은 경우, 인덱스 정보는 빈 문자열입니다. 모든 인덱스에 대한 정보는 <code>"|"</code> 으로 결합됩니다. 예를&nbsp;들어:</p>
+<blockquote>
+<p>Consider an index named N, indexing column named C. The encoding of this particular index is a string &ldquo;<tag>N&rdquo;. <code>&lt;tag&gt;</code> is a string &ldquo;n&rdquo; for non unique indices and &ldquo;u&rdquo; for unique indices. There is this index information for the index possibly indexing the record id() and for all other columns of scols. Where the column is not indexed, the index info is an empty string. Infos for all indexes are joined with &ldquo;|&rdquo;. For&nbsp;example</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="k">BEGIN</span> <span class="n">TRANSACTION</span><span class="p">;</span>
+  <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">t</span> <span class="p">(</span><span class="n">Foo</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Bar</span> <span class="n">bool</span><span class="p">,</span> <span class="n">Baz</span> <span class="n">string</span><span class="p">);</span>
+  <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">X</span> <span class="k">ON</span> <span class="n">t</span> <span class="p">(</span><span class="n">Baz</span><span class="p">);</span>
+  <span class="k">CREATE</span> <span class="k">UNIQUE</span> <span class="k">INDEX</span> <span class="n">Y</span> <span class="k">ON</span> <span class="n">t</span> <span class="p">(</span><span class="n">Foo</span><span class="p">);</span>
+<span class="k">COMMIT</span><span class="p">;</span>
+</pre></div>
+
+
+<p>위의 필드 #1과 #4는 다음과&nbsp;같습니다:</p>
+<blockquote>
+<p>The values of fields #1 and #4 for the above&nbsp;are</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>scols: &quot;lFoo|bBar|sBaz&quot;
+indices: &quot;|uY||nX&quot;
+</pre></div>
+
+
+<p><code>"|"</code> 값을 나눠서&nbsp;보자면:</p>
+<blockquote>
+<p>Aligning properly the &ldquo;|&rdquo; split&nbsp;parts</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>             id    col#0    col#1    col#2
++----------+----+--------+--------+--------+
+|   scols: |    | &quot;lFoo&quot; | &quot;bBar&quot; | &quot;sBaz&quot; |
++----------+----+--------+--------+--------+
+| indices: | &quot;&quot; | &quot;uY&quot;   | &quot;&quot;     | &quot;nX&quot;   |
++----------+----+--------+--------+--------+
+</pre></div>
+
+
+<p><code>Foo</code>와 <code>Baz</code> 컬럼이 인덱스되는 동안 레코드 <code>id()</code>가 이테이블에 대해 인덱싱되지 않는 것을&nbsp;보여줍니다.</p>
+<blockquote>
+<p>shows that the record id() is not indexed for this table while the columns Foo and Baz&nbsp;are.</p>
+</blockquote>
+<p>주의: 동일한 컬럼에 두개의 다른 이름을 가진 인덱스가 있을 수 없으며, 이것은 의도한 것입니다. 인덱스는 <a href="http://godoc.org/github.com/cznic/lldb#BTree">B+Trees</a>로 작성되었습니다. 그들의 루트에서 handle에 대한 목록은 인덱스가 없는 컬럼에 대해서 <code>0</code>과 <code>hxroots</code>에 의해 가리켜집니다. 이전 예제의&nbsp;경우:</p>
+<blockquote>
+<p>Note that there cannot be two differently named indexes for the same column and it&rsquo;s intended. The indices are <a href="http://godoc.org/github.com/cznic/lldb#BTree">B+Trees</a>. The list of handles to their roots is pointed to by <code>hxroots</code> with zeros for non indexed columns. For the previous&nbsp;example</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>tableMeta.hxroots -&gt; {0, y, 0, x}
+</pre></div>
+
+
+<p>여기서 <code>x</code>는 <code>X</code> 인덱스의 B+Tree에 대한 루트이고, <code>y</code>는 <code>Y</code> 인덱스의 B+Tree에 대한 루트입니다. <code>id()</code>에 대한 인덱스가 있다면, 첫번째 <code>0</code>이 있는 곳에 B+Tree 루트가 있습니다. <code>hhead</code>와 마찬가지로 <code>hxroots</code>는 테이블에 대한 인덱스가 없는 경우라도 절대로 <code>0</code>이&nbsp;아닙니다.</p>
+<blockquote>
+<p>where x is the root of the B+Tree for the X index and y is the root of the B+Tree for the Y index. If there would be an index for id(), its B+Tree root will be present where the first zero is. Similarly to <code>hhead</code>, <code>hxroots</code> is never zero, even when there are no indices for a&nbsp;table.</p>
+</blockquote>
+<h2 id="table-record">Table&nbsp;record</h2>
+<p>테이블 레코드는 N-scalar&nbsp;입니다.</p>
+<blockquote>
+<p>A table record is an&nbsp;N-scalar.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">#</th>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="left">next</td>
+<td align="left">handle</td>
+<td align="left">Next record or zero.</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="left">id</td>
+<td align="left">int64</td>
+<td align="left">Automatically assigned unique</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">value obtainable by id().</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">field #0</td>
+<td align="left">scalar</td>
+<td align="left">First field of the record.</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">field #1</td>
+<td align="left">scalar</td>
+<td align="left">Second field of the record.</td>
+</tr>
+<tr>
+<td align="center">&hellip;</td>
+<td align="left">&hellip;</td>
+<td align="left">&hellip;</td>
+<td align="left">&hellip;</td>
+</tr>
+<tr>
+<td align="center">N-1</td>
+<td align="left">field #N-2</td>
+<td align="left">scalar</td>
+<td align="left">Last field of the record.</td>
+</tr>
+</tbody>
+</table>
+<p>테이블 레코도에 링크된 <strong>정렬</strong>에는 의미가 없으므로 레코드가 테이블에 추가되는 순서와 상관이 없습니다. 실제로 효율적인 연결 방법은 <strong>정렬</strong>을 유도하며, 추가된 순서에 관해서는 실지로 역순이&nbsp;됩니다.</p>
+<blockquote>
+<p>The linked &ldquo;ordering&rdquo; of table records has no semantics and it doesn&rsquo;t have to correlate to the order of how the records were added to the table. In fact, an efficient way of the linking leads to &ldquo;ordering&rdquo; which is actually reversed wrt the insertion&nbsp;order.</p>
+</blockquote>
+<h2 id="non-unique-index">Non unique&nbsp;index</h2>
+<p>B+Tree에 대한 <a href="https://en.wikipedia.org/wiki/Compound_key">복합키</a>는 <code>{indexed valuse, record handle}</code> 입니다. B+Tree 값은 사용하지&nbsp;않습니다.</p>
+<blockquote>
+<p>The composite key of the B+Tree is <code>{indexed values, record handle}</code>. The B+Tree value is not&nbsp;used.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>            B+Tree key                    B+Tree value
++----------------+---------------+      +--------------+
+| Indexed Values | Record Handle |  -&gt;  |   not used   |
++----------------+---------------+      +--------------+
+</pre></div>
+
+
+<h2 id="unique-index">Unique&nbsp;index</h2>
+<p>인덱스된 값이 모두 <code>NULL</code>이라면, 복합 B+Tree 키는 <code>{nil, record handle}</code>이고 B+Tree 값은 사용하지&nbsp;않습니다.</p>
+<blockquote>
+<p>If the indexed values are all <span class="caps">NULL</span> then the composite B+Tree key is <code>{nil, record handle}</code> and the B+Tree value is not&nbsp;used.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>        B+Tree key                B+Tree value
++------+-----------------+      +--------------+
+| NULL |  Record Handle  |  -&gt;  |   not used   |
++------+-----------------+      +--------------+
+</pre></div>
+
+
+<p>인덱스된 값이 모두 <code>NULL</code>이라면, B+Tree 키에 대한 키가 인덕싱된 값이고, B+Tree 값은 레코드 handle&nbsp;입니다.</p>
+<blockquote>
+<p>If the indexed values are not all <span class="caps">NULL</span> then key of the B+Tree key are the indexed values and the B+Tree value is the record&nbsp;handle.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>    B+Tree key                B+Tree value
++----------------+      +---------------+
+| Indexed Values |  -&gt;  | Record Handle |
++----------------+      +---------------+
+</pre></div>
+
+
+<h2 id="non-scalar-types">Non scalar&nbsp;types</h2>
+<p><a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a>에 대한 scalar 타입은 <code>bool</code>, <code>complex*</code>, <code>float*</code>, <code>int*</code>, <code>uint*</code>, <code>string</code>, <code>[]byte</code> 타입입니다. 모든 다른 타입은 <code>blob-like</code> 입니다.</p>
+<blockquote>
+<p>Scalar types of <a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a> are <code>bool</code>, <code>complex*</code>, <code>float*</code>, <code>int*</code>, <code>uint*</code>, <code>string</code> and <code>[]byte</code> types. All other types are&nbsp;&ldquo;blob-like&rdquo;.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>QL type         Go type
+-----------------------------
+blob            []byte
+bigint          big.Int
+bigrat          big.Rat
+time            time.Time
+duration        time.Duration
+</pre></div>
+
+
+<p>메모리 백엔드는 Go 타입으로 직접 저장합니다. 파일 백엔드는 lldb가 기본적으로 지원하는 유형이 더 적기에 (태그가 붙은) <code>[]byte</code>를 이용하여 위 모든 내용을 인코딩 해야합니다. <code>Blob-like</code>한 타입의 <code>NULL</code> 값은 <code>nil</code> (<code>lldb/db.go</code>안의 <code>gbNull</code>)으로 인코딩 됩니다. 이미 존재하는 <span class="caps">QL</span> 타입과 완전히&nbsp;동일합니다.</p>
+<blockquote>
+<p>Memory back-end stores the Go type directly. File back-end must resort to encode all of the above as (tagged) <code>[]byte</code> due to the lack of more types supported natively by lldb. <span class="caps">NULL</span> values of blob-like types are encoded as <code>nil</code> (<code>gbNull</code> in <code>lldb/gb.go</code>), exactly the same as the already existing <span class="caps">QL</span> types&nbsp;are.</p>
+</blockquote>
+<h2 id="blob-encoding">Blob&nbsp;encoding</h2>
+<p><code>Blob-like</code>한 타입 값은 먼저 <code>[]byte</code> 슬라이스로 인코딩&nbsp;됩니다:</p>
+<blockquote>
+<p>The values of the blob-like types are first encoded into a <code>[]byte</code> slice:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>+-----------------------+-------------------+
+| blob                  | raw               |
+| bigint, bigrat, time  | gob encoded       |
+| duration              | gob encoded int64 |
++-----------------------+-------------------+
+</pre></div>
+
+
+<p><code>gob</code> 인코딩은 <code>blob-like</code>한 타입에 대한 모든 초기 인코딩과 관련하여 <strong>차별됩니다</strong>. 다른 말로, <code>gob</code> 인코딩이 반드시 써야되는 초기 타입 디스크립터는 제거되고 정직하게 디코딩될때 <strong>재 공급</strong>됩니다. (참조, <a href="https://github.com/cznic/ql/blob/v1.1.0/blob.go"><code>blob.go</code></a>). 결과로 나온 슬라이스 길이가 <code>&lt;= shortBolob</code> 인 경우, 첫번째이자 유일한 청크는 다음과 같은 스칼라&nbsp;인코딩입니다:</p>
+<blockquote>
+<p>The gob encoding is &ldquo;differential&rdquo; wrt an initial encoding of all of the blob-like type. <span class="caps">IOW</span>, the initial type descriptors which gob encoding must write out are stripped off and &ldquo;resupplied&rdquo; on decoding transparently. See also blob.go. If the length of the resulting slice is <code>&lt;= shortBlob</code>, the first and only chunk is the scalar encoding&nbsp;of</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>[]interface{}{typeTag, slice}.                  // initial (and last) chunk
+</pre></div>
+
+
+<p>슬라이스 길이가 <code>0</code>일 수도 있습니다 (<code>blob("")</code>인 경우). 결과로 나온 슬라이스 길이가 길다면 (<code>&gt; shortBlob</code>), 첫 번째 청크는 인코딩에서&nbsp;옵니다:</p>
+<blockquote>
+<p>The length of slice can be zero (for blob(&ldquo;&rdquo;)). If the resulting slice is long (<code>&gt; shortBlob</code>), the first chunk comes from&nbsp;encoding</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk
+</pre></div>
+
+
+<p>이 경우 <code>len(firstPart) &lt;= shortBlob</code>입니다. 두번째와 다른 청크입니다. 만약 마지막 청크면 <code>src</code>는 다음과&nbsp;같습니다.</p>
+<blockquote>
+<p>In this case <code>len(firstPart) &lt;= shortBlob</code>. Second and other chunks: If the chunk is the last one, src&nbsp;is</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>[]interface{lastPart}.                          // overflow chunk (last)
+</pre></div>
+
+
+<p>이 경우 <code>len(lastPart) &lt;= 64kB</code>입니다. 마지막 청크가 아닌 경우, <code>src</code>는 다음과&nbsp;같습니다.</p>
+<blockquote>
+<p>In this case <code>len(lastPart) &lt;= 64kB</code>. If the chunk is not the last one, src&nbsp;is</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>[]interface{}{nextHandle, part}.                // overflow chunk (not last)
+</pre></div>
+
+
+<p>이 경우는 <code>len(part) == 64kB</code> 입니다.</p>
+<blockquote>
+<p>In this case <code>len(part) == 64kB</code>.</p>
+</blockquote>
+<h2 id="links">Links</h2>
+<p>참조&nbsp;사항:</p>
+<blockquote>
+<p>Referenced from&nbsp;above:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>[0]: http://godoc.org/github.com/cznic/lldb#hdr-Block_handles
+[1]: http://godoc.org/github.com/cznic/lldb#EncodeScalars
+[2]: http://godoc.org/github.com/cznic/lldb#BTree
+</pre></div>
+
+
+<h2 id="rationale">Rationale</h2>
+<p>이 노트는 <span class="caps">QL</span> 소스를 보든 사람에게 유용 할 수 있지만, 특별히 의도된 독자는 미래의 나&nbsp;자신입니다.</p>
+<blockquote>
+<p>While these notes might be useful to anyone looking at <span class="caps">QL</span> sources, the specifically intended reader is my future&nbsp;self.</p>
+</blockquote>
+      </div>
+    </div>
+      <div class="row">
+        <p><i class="far fa-hand-spock"></i></p>
+      </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="far fa-calendar-plus"></i> 18. 05. 24.
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/go.html">go</a>
+,               <a href="https://ujuc.github.io/tag/database.html">database</a>
+          </i>
+        </p>
+      </div>
+    </div>
+
+      <div class="article_comments">
+<div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      </div>
+      <div>
+        <p style="text-align: center">🎗️</p>
+      </div>
+  </div>
+    </article>
+  </div>
+
+  <div class="container">
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+      <div class="row">
+        <hr />
+        <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+      </div>
+      <div class="row">
+        <p>Anythink, Everythink!</p>
+      </div>
+      <div class="row">
+          <span id="social"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i> </a></span>
+          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i> </a></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="site_footer" class="container">
+<footer>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row">
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+    </div>
+  </div>
+</footer>  </div>
+
+<!-- Javascript -->
+<!-- Jquery -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
