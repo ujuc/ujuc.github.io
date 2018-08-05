@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
-# Oirign : http://nafiulis.me/making-a-static-blog-with-pelican.html
+# Origin : http://nafiulis.me/making-a-static-blog-with-pelican.html
 # edit: ujuc
 """write
 
@@ -25,34 +25,30 @@ PAGE_PATH = "content/pages"
 
 
 def make_entry(title, path, template):
-    today = pendulum.now(tz='Asia/Seoul')
+    today = pendulum.now()
 
     slug = kroman.parse(title).lower().strip().replace(' ', '_')
     date = today.to_datetime_string()
-    file_name = f'{path}/{today.to_date_string()}-{slug}'
+    file_name = f'{path}/{date}-{slug}'
 
     if template == 'rst':
-        file_create = f'{file_name}.rst'
+        file_name = f'{file_name}.rst'
         hashes = '#' * len(title) * 2
-        modified = ''
 
         article = (
             f'{title}\n'
             f'{hashes}\n\n'
             f':date: {date}\n'
-            f':modified: {modified}\n'
             f':category: \n'
             f':tags: \n'
             f':slug: {slug}\n\n'
         )
     elif template == 'md':
-        file_create = f'{file_name}.md'
-        modified = ''
+        file_name = f'{file_name}.md'
 
         article = (
             f'Title: {title}\n'
             f'Date: {date}\n'
-            f'Modified: {modified}\n'
             f'Category: \n'
             f'Tags: \n'
             f'Slug: {slug}\n'
@@ -62,10 +58,10 @@ def make_entry(title, path, template):
     if not os.path.isdir(path):
         os.mkdir(path)
 
-    with open(file_create, 'w') as w:
-        w.write(article)
+    with open(file_name, 'w') as article_file:
+        article_file.write(article)
 
-    print("File created -> " + file_create)
+    print(f'File created -> {file_name}')
 
 
 def edit_entry(title):
