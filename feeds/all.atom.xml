@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-05-24T00:00:02+09:00</updated><entry><title>Design of QL</title><link href="https://ujuc.github.io/2018/05/24/design_of_ql/" rel="alternate"></link><published>2018-05-24T00:00:02+09:00</published><updated>2018-05-24T00:00:02+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-05-24:/2018/05/24/design_of_ql/</id><summary type="html">&lt;p&gt;Go 임베디드 데이터베이스 패키지인 QL에 대한 디자인&amp;nbsp;문서이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;QL&lt;/code&gt; design&amp;nbsp;문서&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-09-23T23:27:51+09:00</updated><entry><title>Recoll - 리눅스에서 GUI로 문서 검색을 해보자</title><link href="https://ujuc.github.io/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/" rel="alternate"></link><published>2018-09-23T23:27:51+09:00</published><updated>2018-09-23T23:27:51+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-23:/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/</id><summary type="html">&lt;p&gt;페이스북에서 보았던 recoll이라는 프로그램에 대해서 정리만&amp;nbsp;해둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.facebook.com/groups/korelnxuser/permalink/1108262849348464/0"&gt;페이스북 우분투 유저 그룹에 올라온 글&lt;/a&gt;이&amp;nbsp;있었다.&lt;/p&gt;
+&lt;p&gt;이글은 나중에 혹시나 쓸까하여&amp;hellip; 리눅스를 메인을 사용할 일은 거의&amp;nbsp;없긴하다만&amp;hellip;&lt;/p&gt;
+&lt;p&gt;소개글은 다음과&amp;nbsp;같다. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.fossmint.com/recoll-file-text-search-tool-for-linux/"&gt;&lt;span class="caps"&gt;FOSS&lt;/span&gt; Mint - Recoll - A Full-Text &lt;span class="caps"&gt;GUI&lt;/span&gt; Search Tool for Linux&amp;nbsp;System&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;여기서는 그냥 간단한 소개정도만&amp;nbsp;&amp;hellip;&lt;/p&gt;
+&lt;h2 id="_1"&gt;특징&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://xapian.org/"&gt;Xapian 서치 엔진&lt;/a&gt;&amp;nbsp;기반&lt;/li&gt;
+&lt;li&gt;텍스트 추출할 수 있는 플러그인&amp;nbsp;지원&lt;/li&gt;
+&lt;li&gt;왠만한 문서 포멧&amp;nbsp;지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;더 눈에 띄는&amp;nbsp;것은 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Thunderbird에서 zip으로 압축되어있는 파일에 들어있는 문서 파일도&amp;nbsp;검색가능&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Recoll will index an &lt;span class="caps"&gt;MS&lt;/span&gt;-Word document stored as an attachment to an e-mail message inside a Thunderbird folder archived in a Zip file (and more&amp;hellip;). It will also help you search for it with a friendly and powerful interface, and let you open a copy of a &lt;span class="caps"&gt;PDF&lt;/span&gt; at the right page with two clicks. There is little that will remain hidden on your&amp;nbsp;disk.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;지금은 맥을 쓰고 있어서 딱히&amp;hellip; 내부 검색이 필요한 것들은 전부 구글에&amp;hellip; 음 언제&amp;nbsp;한번써볼까?&lt;/p&gt;</content><category term="recoll"></category><category term="document"></category><category term="search"></category><category term="gui"></category></entry><entry><title>Design of QL</title><link href="https://ujuc.github.io/2018/05/24/design_of_ql/" rel="alternate"></link><published>2018-05-24T00:00:02+09:00</published><updated>2018-05-24T00:00:02+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-05-24:/2018/05/24/design_of_ql/</id><summary type="html">&lt;p&gt;Go 임베디드 데이터베이스 패키지인 QL에 대한 디자인&amp;nbsp;문서이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;QL&lt;/code&gt; design&amp;nbsp;문서&lt;/p&gt;
 &lt;p&gt;이 문서는 &lt;a href="https://github.com/cznic/ql"&gt;&lt;code&gt;cznic/ql&lt;/code&gt;&lt;/a&gt; 프로젝트 설계 문서이다.&lt;br&gt;
 &lt;code&gt;QL&lt;/code&gt; 은 Go로 만들어진 embedded &lt;span class="caps"&gt;SQL&lt;/span&gt;&amp;nbsp;데이터베이스이다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;원문&lt;/strong&gt;&lt;/p&gt;
