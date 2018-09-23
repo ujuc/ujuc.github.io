@@ -84,39 +84,75 @@
 
   <div id="site_article" class="container">
     <article>
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-        <article>
-          <h3><a href="https://ujuc.github.io/2018/09/24/pycharme_pylint_cu-ga/">Pycharm에 pylint&nbsp;추가</a></h3>
-          <p><p>Pycharm 에 pylint를 외부 툴로 등록하는&nbsp;방법</p></p>
-          <p><i class="far fa-calendar-plus"></i> 18. 09. 24.</p>
-        </article>
-          <hr/>
-        <article>
-          <h3><a href="https://ujuc.github.io/2014/02/23/pylint/">pylint</a></h3>
-          <p><p>PyLint 간략 사용법에 대해서&nbsp;작성한다.</p></p>
-          <p><i class="far fa-calendar-plus"></i> 14. 02. 23.</p>
-        </article>
+  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
+    <div class="row article_title">
+      <h1><a href="https://ujuc.github.io/2018/09/24/pycharme_pylint_cu-ga/" class="h1">Pycharm에 pylint&nbsp;추가</a></h1>
     </div>
-  </div>
+    <div class="row">
+      <p><i class="fas fa-poo"></i></p>
+    </div>
+    <div class="row article">
+      <div class="article_text">
+        <p>나는 블로그를 사용할때 Python 스크립트를 사용해서 작업을 하고 있다. 그러다보니 매번 파일에 추가되는 내용이나 달라지는 것들이 있으면 수정을&nbsp;하는데&hellip;</p>
+<p>지금까지는 lint 작업은 하지않고서 pycharm에서 지적하는 부분만 가지고 작업을 하였다만&hellip; 이제 lint를 적용해서 작업을 공통으로 사용할 수 있게&nbsp;해놔야지&hellip;</p>
+<p>pylint만 있는건 아니지만, pep8이나 다른것들을 정리하려면&hellip; 너무 많은 것을 등록해야된&hellip;&nbsp;논외로..</p>
+<p><a href="https://stackoverflow.com/questions/38134086/how-to-run-pylint-with-pycharm">How to run Pylint with PyCharm -&nbsp;stackoverflow</a></p>
+<p>위의 글을 읽어보면 자세히&nbsp;되어있다.</p>
+<p>여기서 나와 다른 점에 대해서 기록하고 넘어가기로&nbsp;한다.</p>
+<p>나는 global로 pylint를 설치하지 않았다. 귀찮기도하고 많은 버전을 섞어쓰는 환경이다보니&hellip; <code>pipenv</code> 를 사용하고 있는데 이것에 대한 내용은 없다. global 하게 패키지까는 것도&nbsp;부담스럽고&hellip;</p>
+<p>다음 사진과 같이 나는 내용을 수정해서&nbsp;사용한다.</p>
+<p><img alt="My_settings" src="https://ujuc.github.io/img/2018-09-24_pycharm_export_tool_setting.png"></p>
+      </div>
+    </div>
+      <div class="row">
+        <p><i class="far fa-hand-spock"></i></p>
+      </div>
+    <div class="row article_meta">
+      <div>
+        <p>
+          <i class="far fa-calendar-plus"></i> 18. 09. 24.
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/software.html">Software</a>
+        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/pycharm.html">pycharm</a>
+,               <a href="https://ujuc.github.io/tag/pylint.html">pylint</a>
+,               <a href="https://ujuc.github.io/tag/python.html">python</a>
+,               <a href="https://ujuc.github.io/tag/lint.html">lint</a>
+          </i>
+        </p>
+      </div>
+    </div>
 
+      <div class="article_comments">
+<div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      </div>
+      <div>
+        <p style="text-align: center">🎗️</p>
+      </div>
+  </div>
     </article>
   </div>
 
   <div class="container">
-  <div class="row">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <ul class="pagination">
-          <li class="align-middle"><a rel="next"><i class="fa fa-times"></i> Next</a></li>
-        <a class="align-middle" style="margin: 0 0.2rem 0 0.2rem"><i class="fa fa-dot-circle-o text-danger"></i></a>
-          <li class="align-middle">
-            <a rel="prev">
-              Prev <i class="fa fa-times"></i>
-            </a>
-          </li>
-      </ul>
-    </div>
-  </div>
   </div>
 
   <!-- Title -->
