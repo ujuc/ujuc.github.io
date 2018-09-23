@@ -25,11 +25,22 @@ PAGE_PATH = "content/pages"
 
 
 def make_entry(title, path, template):
+    """
+    블로그 포스트를 생성한다.
+
+    :param title:
+    :param path:
+    :param template:
+    :return:
+    """
     today = pendulum.now()
 
     slug = kroman.parse(title).lower().strip().replace(' ', '_')
-    date = today.to_datetime_string()
+    date = today.to_date_string()
+    post_date = today.to_datetime_string()
     file_name = f'{path}/{date}-{slug}'
+
+    article = ()
 
     if template == 'rst':
         file_name = f'{file_name}.rst'
@@ -38,7 +49,7 @@ def make_entry(title, path, template):
         article = (
             f'{title}\n'
             f'{hashes}\n\n'
-            f':date: {date}\n'
+            f':date: {post_date}\n'
             f':category: \n'
             f':tags: \n'
             f':slug: {slug}\n\n'
@@ -48,7 +59,7 @@ def make_entry(title, path, template):
 
         article = (
             f'Title: {title}\n'
-            f'Date: {date}\n'
+            f'Date: {post_date}\n'
             f'Category: \n'
             f'Tags: \n'
             f'Slug: {slug}\n'
@@ -64,32 +75,31 @@ def make_entry(title, path, template):
     print(f'File created -> {file_name}')
 
 
-def edit_entry(title):
+def edit_entry():
     """
     title 을 가져오는데, file_path 는 동일하고 앞에 일자-제목이 붙으니
     그것까지 가져와서 변경해야되는 점이있음.
-    :param title:
     :return:
     """
     pass
 
 
 if __name__ == '__main__':
-    opt = docopt(__doc__, version='write 1.0')
+    OPT = docopt(__doc__, version='write 1.1')
 
-    if opt['new']:
-        if opt["-r"] or opt["--rst"]:
-            make_entry(opt["<title>"], POST_PATH, 'rst')
+    if OPT['new']:
+        if OPT["-r"] or OPT["--rst"]:
+            make_entry(OPT["<title>"], POST_PATH, 'rst')
         else:
-            make_entry(opt["<title>"], POST_PATH, 'md')
-    elif opt['page']:
-        if opt["-r"] or opt["--rst"]:
-            make_entry(opt["<title>"], PAGE_PATH, 'rst')
+            make_entry(OPT["<title>"], POST_PATH, 'md')
+    elif OPT['page']:
+        if OPT["-r"] or OPT["--rst"]:
+            make_entry(OPT["<title>"], PAGE_PATH, 'rst')
         else:
-            make_entry(opt["<title>"], PAGE_PATH, 'md')
-    elif opt['edit']:
+            make_entry(OPT["<title>"], PAGE_PATH, 'md')
+    elif OPT['edit']:
         print("edit")
-    elif opt["backup"]:
+    elif OPT["backup"]:
         print("backup")
     else:
-        print(opt)
+        print(OPT)
