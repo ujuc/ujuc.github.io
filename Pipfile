@@ -9,7 +9,7 @@ ghp-import = "*"
 kroman = "*"
 pelican = "*"
 pendulum = "*"
-Markdown = "*"
+Markdown = {version = "<3.0"}
 typogrify = "*"
 
 [dev-packages]
