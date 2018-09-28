@@ -1,6 +1,7 @@
 Title: Pelican에서 Markdown 문서 Attribute 에러
 Date: 2018-09-24 22:45:00
-Category: Develp
+Modified: 2018-09-28 18:58:00
+Category: Develop
 Tags: pelian, markdown, 
 Slug: pelicane-seo_markdown_mun-seo_attribute_e-reo
 Summary: Pelican을 새로 설치하였더니 markdown 문서들이 전부 컴파일이 안된다.
