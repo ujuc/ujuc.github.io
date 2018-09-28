@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-05-24T00:00:02+09:00</updated><entry><title>Design of QL</title><link href="https://ujuc.github.io/2018/05/24/design_of_ql/" rel="alternate"></link><published>2018-05-24T00:00:02+09:00</published><updated>2018-05-24T00:00:02+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-05-24:/2018/05/24/design_of_ql/</id><summary type="html">&lt;p&gt;Go 임베디드 데이터베이스 패키지인 QL에 대한 디자인&amp;nbsp;문서이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;QL&lt;/code&gt; design&amp;nbsp;문서&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-09-28T18:58:00+09:00</updated><entry><title>Pelican에서 Markdown 문서 Attribute 에러</title><link href="https://ujuc.github.io/2018/09/24/pelicane-seo_markdown_mun-seo_attribute_e-reo/" rel="alternate"></link><published>2018-09-24T22:45:00+09:00</published><updated>2018-09-28T18:58:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-24:/2018/09/24/pelicane-seo_markdown_mun-seo_attribute_e-reo/</id><summary type="html">&lt;p&gt;Pelican을 새로 설치하였더니 markdown 문서들이 전부 컴파일이&amp;nbsp;안된다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그를 python 3.7로 업그레이드로 진행하고 나서 다음과 같은 에러가&amp;nbsp;발생한다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pelican /Users/ujuc/repos/ujuc.github.io/content -o /Users/ujuc/repos/ujuc.github.io/output -s /Users/ujuc/repos/ujuc.github.io/pelicanconf.py 
+ERROR: Could not process blog/2017-10-22-pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi.md
+  &lt;span class="p"&gt;|&lt;/span&gt; AttributeError: &lt;span class="s1"&gt;&amp;#39;Registry&amp;#39;&lt;/span&gt; object has no attribute &lt;span class="s1"&gt;&amp;#39;keys&amp;#39;&lt;/span&gt;
+ERROR: Could not process blog/2014-02-23-pylint.md
+  &lt;span class="p"&gt;|&lt;/span&gt; AttributeError: &lt;span class="s1"&gt;&amp;#39;Registry&amp;#39;&lt;/span&gt; object has no attribute &lt;span class="s1"&gt;&amp;#39;keys&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;git으로 버전을 관리하고 있어 해당 변경점을 확인하였더니 확인했더니 Markdown 라이브러리 문제다. 그것도 메이저로 업그레이드되면서 무언가가 변경이 되었고, 그게 Pelican 에서 사용하는 어떤 키와 잘못 설정된 부분이 있어서 발생한 것으로&amp;nbsp;파악된다.&lt;/p&gt;
+&lt;p&gt;나는 pipenv 를 사용하니 &lt;code&gt;Pipfile&lt;/code&gt; 에서 &lt;code&gt;Markdown&lt;/code&gt; 라이브러리 버전을 다음과 같이 수정을&amp;nbsp;하였다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[packages]
+Markdown = {version = &amp;quot;&amp;lt;3.0&amp;quot;}
+&lt;/pre&gt;&lt;/div&gt;</content><category term="pelian"></category><category term="markdown"></category></entry><entry><title>Design of QL</title><link href="https://ujuc.github.io/2018/05/24/design_of_ql/" rel="alternate"></link><published>2018-05-24T00:00:02+09:00</published><updated>2018-05-24T00:00:02+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-05-24:/2018/05/24/design_of_ql/</id><summary type="html">&lt;p&gt;Go 임베디드 데이터베이스 패키지인 QL에 대한 디자인&amp;nbsp;문서이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;QL&lt;/code&gt; design&amp;nbsp;문서&lt;/p&gt;
 &lt;p&gt;이 문서는 &lt;a href="https://github.com/cznic/ql"&gt;&lt;code&gt;cznic/ql&lt;/code&gt;&lt;/a&gt; 프로젝트 설계 문서이다.&lt;br&gt;
 &lt;code&gt;QL&lt;/code&gt; 은 Go로 만들어진 embedded &lt;span class="caps"&gt;SQL&lt;/span&gt;&amp;nbsp;데이터베이스이다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;원문&lt;/strong&gt;&lt;/p&gt;
