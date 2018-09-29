@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-  <!-- Meta -->
-  <meta charset="UTF-8">
-  <meta name="author" content="ujuc">
-  <meta name="description" content="Posts and writings by ujuc">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Style sheet -->
+<!-- Style sheet -->
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-  <!-- Google web font -->
-  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
+<!-- Google web font -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Jua|Noto+Serif+KR|Roboto+Mono');
+</style>
 
-  <!-- Style -->
-  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
 
-  <!-- Feed -->
-    <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
-    <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
 
+    <!-- Article head -->
+  <meta name="keywords" content="python, linux, distribution, lib">
 
-  <title>
-    잘 밤에 쓸데없는 생각하기...
-  </title>
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   파이썬으로 리눅스 배포판&nbsp;확인하기
+    </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
@@ -48,52 +53,50 @@
       enable_page_level_ads: true
     });
   </script>
-</head>
+  </head>
+
   <body>
   <header>
-    <div class="container" style="margin-top: 10px;">
-      <nav class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/">
-              <i class="fas fa-inbox"></i> <span class="hidden-xs">Blog</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/archives.html">
-              <i class="fas fa-archive"></i> <span class="hidden-xs">Archive</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/tags.html">
-              <i class="fas fa-tags"></i> <span class="hidden-xs">Tags</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/categories.html">
-              <i class="fas fa-folder-open"></i> <span class="hidden-xs">Categories</span>
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Pages</a>
-            <div class="dropdown-menu">
-            </div>
-          </li>
-      </nav>
-    </div>
-  </header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
 
   <div id="site_article" class="container">
-    <article>
-  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-    <div class="row article_title">
-      <h1><a href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" class="h1">파이썬으로 리눅스 배포판&nbsp;확인하기</a></h1>
-    </div>
-    <div class="row">
-      <p><i class="fas fa-poo"></i></p>
-    </div>
-    <div class="row article">
-      <div class="article_text">
-        <p>요즘 코딩을 안하니&hellip; 머리가 멍해져가는지라.<br>
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>파이썬으로 리눅스 배포판&nbsp;확인하기</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>요즘 코딩을 안하니&hellip; 머리가 멍해져가는지라.<br>
 컴퓨터를 밀고 나면 새롭게 설정하기위해서 만들어뒀던 셸  스크립트를 파이썬 cmd 라이버리를 가지고 변경하는중. (이건 따로 작성하자. 새로운 기능을&nbsp;많이써서&hellip;)</p>
 <p>리눅스 배포판 별로 설치하는 프로그램 명령어가 다르니 배포판을 구분하여 명령어를 다르게 적용할수 있도록 구현이&nbsp;필요했다.</p>
 <p>찾다보니 <a href="https://docs.python.org/3/library/platform.html"><code>platform</code></a> 라이브러리가 내부에 존재하고 해당 라이브러리에서 Unix 환경에서 사용이 가능한 <code>dist</code>, <code>linux_distribution</code> 메소드가 존재를 한다. 그런데 이거 3.5때 방출에 대한 논의 (<a href="https://bugs.python.org/issue1322">issue 1322</a>)가 되었고, 3.7에서 삭제되는 걸로&nbsp;끝&hellip;</p>
@@ -129,31 +132,21 @@
 <li>리눅스 배포판에 대한 정보를&nbsp;보여준다.</li>
 <li>여기에 키값으로 되어있는 것들이 메소드 명과 1:1&nbsp;매칭된다.</li>
 </ul>
-<p>다른 것도 많으니 <a href="http://distro.readthedocs.io/en/latest/">문서</a>&nbsp;확인하자.</p>
-      </div>
-    </div>
-      <div class="row">
-        <p><i class="far fa-hand-spock"></i></p>
-      </div>
-    <div class="row article_meta">
-      <div>
-        <p>
+<p>다른 것도 많으니 <a href="http://distro.readthedocs.io/en/latest/">문서</a>&nbsp;확인하자.</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 17. 10. 22.
-        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/python.html">python</a>
-,               <a href="https://ujuc.github.io/tag/linux.html">linux</a>
-,               <a href="https://ujuc.github.io/tag/distribution.html">distribution</a>
-,               <a href="https://ujuc.github.io/tag/lib.html">lib</a>
+              <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
+              <a href="https://ujuc.github.io/tag/linux.html" class="article_tag">linux</a>
+              <a href="https://ujuc.github.io/tag/distribution.html" class="article_tag">distribution</a>
+              <a href="https://ujuc.github.io/tag/lib.html" class="article_tag">lib</a>
           </i>
-        </p>
-      </div>
-    </div>
-
-      <div class="article_comments">
-<div id="disqus_thread" style="width: 100%"></div>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
 <script>
 
   /**
@@ -172,45 +165,43 @@
     (d.head || d.body).appendChild(s);
   })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      </div>
-      <div>
-        <p style="text-align: center">🎗️</p>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
       </div>
+    </div>
   </div>
-    </article>
   </div>
 
-  <div class="container">
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
   </div>
 
   <!-- Title -->
   <div id="site_title" class="container">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <div class="row">
-        <hr />
-        <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-      </div>
-      <div class="row">
-        <p>Anythink, Everythink!</p>
-      </div>
-      <div class="row">
-          <span id="social"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i> </a></span>
-          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i> </a></span>
-      </div>
-    </div>
+<div class="row">
+  <div class="container">
+    <hr />
+    <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
   </div>
+</div>  </div>
 
+  <!-- Footer -->
   <div id="site_footer" class="container">
-<footer>
-  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-    <div class="row">
-      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
-    </div>
+<div class="row">
+  <div class="container">
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><i class="far fa-closed-captioning"></i> BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
   </div>
-</footer>  </div>
+</div>  </div>
 
-<!-- Javascript -->
+  <!-- Javascript -->
 <!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

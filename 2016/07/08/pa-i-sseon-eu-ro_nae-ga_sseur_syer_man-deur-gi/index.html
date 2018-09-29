@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-  <!-- Meta -->
-  <meta charset="UTF-8">
-  <meta name="author" content="ujuc">
-  <meta name="description" content="Posts and writings by ujuc">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Style sheet -->
+<!-- Style sheet -->
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-  <!-- Google web font -->
-  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/font_style.css">
+<!-- Google web font -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Jua|Noto+Serif+KR|Roboto+Mono');
+</style>
 
-  <!-- Style -->
-  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-  <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
 
-  <!-- Feed -->
-    <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
-    <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
 
+    <!-- Article head -->
+  <meta name="keywords" content="python, shell, yosh, Your Own SHell">
 
-  <title>
-    잘 밤에 쓸데없는 생각하기...
-  </title>
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   파이썬으로 내가 쓸 셸&nbsp;만들기
+    </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
@@ -48,52 +53,50 @@
       enable_page_level_ads: true
     });
   </script>
-</head>
+  </head>
+
   <body>
   <header>
-    <div class="container" style="margin-top: 10px;">
-      <nav class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/">
-              <i class="fas fa-inbox"></i> <span class="hidden-xs">Blog</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/archives.html">
-              <i class="fas fa-archive"></i> <span class="hidden-xs">Archive</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/tags.html">
-              <i class="fas fa-tags"></i> <span class="hidden-xs">Tags</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/categories.html">
-              <i class="fas fa-folder-open"></i> <span class="hidden-xs">Categories</span>
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">Pages</a>
-            <div class="dropdown-menu">
-            </div>
-          </li>
-      </nav>
-    </div>
-  </header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
 
   <div id="site_article" class="container">
-    <article>
-  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-    <div class="row article_title">
-      <h1><a href="https://ujuc.github.io/2016/07/08/pa-i-sseon-eu-ro_nae-ga_sseur_syer_man-deur-gi/" class="h1">파이썬으로 내가 쓸 셸&nbsp;만들기</a></h1>
-    </div>
-    <div class="row">
-      <p><i class="fas fa-poo"></i></p>
-    </div>
-    <div class="row article">
-      <div class="article_text">
-        <p>매주 python관련 뉴스들이 오는데 이번에는 흥미로운 것이 있어서 이렇게&nbsp;남긴다.</p>
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>파이썬으로 내가 쓸 셸&nbsp;만들기</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>매주 python관련 뉴스들이 오는데 이번에는 흥미로운 것이 있어서 이렇게&nbsp;남긴다.</p>
 <ul>
 <li><a href="https://hackercollider.com/articles/2016/07/05/create-your-own-shell-in-python-part-1/">Create Your Own Shell in Python: Part&nbsp;1</a></li>
 <li><a href="https://hackercollider.com/articles/2016/07/06/create-your-own-shell-in-python-part-2/">Create Your Own Shell in Python: Part&nbsp;2</a></li>
@@ -102,31 +105,21 @@
 <p><code>yosh</code> 프로젝트로 간단히 Python을 이용해서 셸을 구성할 수 있도록 도와준다. 그리고 이것을 이용해서 조금이나마 편하게 사용할 수 있음을 이야기해주고도 있다.<br>
 다른 것보다는 손쉽게 내가 원하는 셸을 만들어서 사용할 수 있다는 점과 내가 2014년에 PyconKR에서 봤던 것들로 구성만 하고 있엇던 <a href="https://docs.python.org/3.5/library/cmd.html"><code>cmd</code></a> 라이브러리가 아닌 <a href="https://docs.python.org/3.5/library/shlex.html"><code>shlex</code></a> 라이브러리를 사용해서 셸에서 입력하는 것과 유사하게 만들어주는 것으로&nbsp;보인다.</p>
 <p>첫번째로 부럽다. 생각만했지 실행으로 옮기지는 못했다. 내가 사용하는 셸 프로그램들을 묶어서 내가 원하는 생각대로 실행할 수 있도록 하는 것. 쉽지 않다고 생각만 했지. 언젠가 하려고만 했지. 이렇게까지 만들 수 있으리라 생각하지&nbsp;못했다.</p>
-<p>한번 도전해봐야겠다. 처음 생각했던 <a href="https://docs.python.org/3.5/library/cmd.html"><code>cmd</code></a> 라이브러리로 기본 라이브러리 구성을 남겨두고, 작업을 진행할 수&nbsp;있도록.</p>
-      </div>
-    </div>
-      <div class="row">
-        <p><i class="far fa-hand-spock"></i></p>
-      </div>
-    <div class="row article_meta">
-      <div>
-        <p>
+<p>한번 도전해봐야겠다. 처음 생각했던 <a href="https://docs.python.org/3.5/library/cmd.html"><code>cmd</code></a> 라이브러리로 기본 라이브러리 구성을 남겨두고, 작업을 진행할 수&nbsp;있도록.</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 16. 07. 08.
-        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-        <i class="fas fa-ellipsis-v"> </i>
+          <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/python.html">python</a>
-,               <a href="https://ujuc.github.io/tag/shell.html">shell</a>
-,               <a href="https://ujuc.github.io/tag/yosh.html">yosh</a>
-,               <a href="https://ujuc.github.io/tag/your-own-shell.html">Your Own SHell</a>
+              <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
+              <a href="https://ujuc.github.io/tag/shell.html" class="article_tag">shell</a>
+              <a href="https://ujuc.github.io/tag/yosh.html" class="article_tag">yosh</a>
+              <a href="https://ujuc.github.io/tag/your-own-shell.html" class="article_tag">Your Own SHell</a>
           </i>
-        </p>
-      </div>
-    </div>
-
-      <div class="article_comments">
-<div id="disqus_thread" style="width: 100%"></div>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
 <script>
 
   /**
@@ -145,45 +138,43 @@
     (d.head || d.body).appendChild(s);
   })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      </div>
-      <div>
-        <p style="text-align: center">🎗️</p>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
       </div>
+    </div>
   </div>
-    </article>
   </div>
 
-  <div class="container">
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
   </div>
 
   <!-- Title -->
   <div id="site_title" class="container">
-    <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-      <div class="row">
-        <hr />
-        <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
-      </div>
-      <div class="row">
-        <p>Anythink, Everythink!</p>
-      </div>
-      <div class="row">
-          <span id="social"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i> </a></span>
-          <span id="social"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i> </a></span>
-      </div>
-    </div>
+<div class="row">
+  <div class="container">
+    <hr />
+    <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
   </div>
+</div>  </div>
 
+  <!-- Footer -->
   <div id="site_footer" class="container">
-<footer>
-  <div class="col-xs-offset-1 col-md-offset-1 col-xs-10 col-md-10">
-    <div class="row">
-      <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">(CC) BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
-    </div>
+<div class="row">
+  <div class="container">
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><i class="far fa-closed-captioning"></i> BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
   </div>
-</footer>  </div>
+</div>  </div>
 
-<!-- Javascript -->
+  <!-- Javascript -->
 <!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
