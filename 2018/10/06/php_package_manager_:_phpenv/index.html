@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Style sheet -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!-- Google web font -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Jua|Noto+Serif+KR|Roboto+Mono');
+</style>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+    <!-- Article head -->
+  <meta name="keywords" content="php, phpenv, env">
+
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   <span class="caps">PHP</span> Package Manager :&nbsp;phpenv
+    </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1><span class="caps">PHP</span> Package Manager :&nbsp;phpenv</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><h2 id="_1">들어가는&nbsp;말</h2>
+<p>PHP로 개발을 해야되는 일이 생겼다. 버전을 7.x대로 써야되는데&hellip; 7.2는 아닌거같으니&hellip; 뭔가 버전을 따로 구성해서 진행하고&nbsp;싶다.!</p>
+<h2 id="php-package-manager"><span class="caps">PHP</span> Package&nbsp;Manager</h2>
+<p><a href="https://github.com/phpenv/phpenv">github.com/phpenv/phpemv</a></p>
+<p>버전 관리를 위한 부분.<br>
+사용법은 <code>rbenv</code>, <code>pyenv</code> 와 동일하다. (그렇다보니 shell script로만&nbsp;작성이되어있다.)</p>
+<h3 id="_2">설치</h3>
+<h4 id="github-checkout"><a href="https://github.com/phpenv/phpenv#installation">Github&nbsp;Checkout</a></h4>
+<div class="codehilite"><pre><span></span>$ git clone git://github.com/phpenv/phpenv.git ~/.phpenv
+$ <span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.phpenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+$ <span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(phpenv init -)&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+$ <span class="nb">exec</span> <span class="nv">$SHELL</span> -l
+</pre></div>
+
+
+<h4 id="phpenv-installer"><a href="https://github.com/phpenv/phpenv-installer">phpenv-installer</a></h4>
+<div class="codehilite"><pre><span></span>curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash
+</pre></div>
+
+
+<p>이걸 설치하면 <code>php-build/php-build</code>, <code>madumlao/phpenv-aliases</code>, <code>ngyuki/phpenv-composer</code>가 자동으로&nbsp;설치된다.</p>
+<h3 id="php"><span class="caps">PHP</span>&nbsp;설치</h3>
+<div class="codehilite"><pre><span></span>$ phpenv install --list
+$ phpenv install <span class="o">{</span>php_version<span class="o">}</span>
+</pre></div>
+
+
+<h3 id="php_1"><span class="caps">PHP</span> 설치시&nbsp;에러</h3>
+<ul>
+<li>Mac os error <a href="https://qiita.com/maosanhioro/items/82698a8bdf6b7694ad36">해결&nbsp;문서</a></li>
+</ul>
+<div class="codehilite"><pre><span></span>-----------------
+|  BUILD ERROR  |
+-----------------
+
+Here are the last 10 lines from the log:
+
+-----------------------------------------
+configure: WARNING: This bison version is not supported for regeneration of the Zend/PHP parsers (found: 2.3, min: 204, excluded: ).
+configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.
+configure: error: Cannot find OpenSSL&#39;s &lt;evp.h&gt;
+-----------------------------------------
+</pre></div>
+
+
+<ul>
+<li>추가 설치&nbsp;패키지</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">bison</span><span class="mf">@2.7</span>
+<span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="n">bison</span><span class="mf">@2.7</span> <span class="o">--</span><span class="n">force</span>
+
+<span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">re2c</span>
+
+<span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">openssl</span> <span class="n">libxml2</span>
+<span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">force</span> <span class="n">openssl</span> <span class="o">&amp;&amp;</span> <span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">force</span> <span class="n">libxml2</span>
+
+<span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">mcrypt</span>
+</pre></div>
+
+
+<ul>
+<li><code>libz</code> error</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="n">configure</span><span class="o">:</span> <span class="n">error</span><span class="o">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">libz</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>xcode-select --install
+</pre></div>
+
+
+<p>모하비에서는&nbsp;안된다.</p>
+<h2 id="_3">나오는&nbsp;말</h2>
+<p><code>phpenv</code>로는 설치가 안되서&hellip; <code>brew</code>로 그냥 설치&hellip;<br>
+<code>brew</code> 로 7.2 버전이랑 7.1 버전을 설치해두고 PhpStorm 에서 둘다 잡아두면 두개다 쓸수있지뭐&hellip; 마이너까지만&nbsp;신경쓰면되니.</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 18. 10. 06.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/php.html" class="article_tag">php</a>
+              <a href="https://ujuc.github.io/tag/phpenv.html" class="article_tag">phpenv</a>
+              <a href="https://ujuc.github.io/tag/env.html" class="article_tag">env</a>
+          </i>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row">
+  <div class="container">
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><i class="far fa-closed-captioning"></i> BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

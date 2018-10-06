@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-09-28T18:58:00+09:00</updated><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록&amp;nbsp;하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수&amp;nbsp;있다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-10-06T09:29:19+09:00</updated><entry><title>PHP Package Manager : phpenv</title><link href="https://ujuc.github.io/2018/10/06/php_package_manager_:_phpenv/" rel="alternate"></link><published>2018-10-06T09:29:19+09:00</published><updated>2018-10-06T09:29:19+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-10-06:/2018/10/06/php_package_manager_:_phpenv/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt; 패키지 매니저, phpenv를 확인해본다. 설치&amp;nbsp;실패기다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;들어가는&amp;nbsp;말&lt;/h2&gt;
+&lt;p&gt;PHP로 개발을 해야되는 일이 생겼다. 버전을 7.x대로 써야되는데&amp;hellip; 7.2는 아닌거같으니&amp;hellip; 뭔가 버전을 따로 구성해서 진행하고&amp;nbsp;싶다.!&lt;/p&gt;
+&lt;h2 id="php-package-manager"&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt; Package&amp;nbsp;Manager&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/phpenv/phpenv"&gt;github.com/phpenv/phpemv&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;버전 관리를 위한 부분.&lt;br&gt;
+사용법은 &lt;code&gt;rbenv&lt;/code&gt;, &lt;code&gt;pyenv&lt;/code&gt; 와 동일하다. (그렇다보니 shell script로만&amp;nbsp;작성이되어있다.)&lt;/p&gt;
+&lt;h3 id="_2"&gt;설치&lt;/h3&gt;
+&lt;h4 id="github-checkout"&gt;&lt;a href="https://github.com/phpenv/phpenv#installation"&gt;Github&amp;nbsp;Checkout&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git clone git://github.com/phpenv/phpenv.git ~/.phpenv
+$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;export PATH=&amp;quot;$HOME/.phpenv/bin:$PATH&amp;quot;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile
+$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eval &amp;quot;$(phpenv init -)&amp;quot;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile
+$ &lt;span class="nb"&gt;exec&lt;/span&gt; &lt;span class="nv"&gt;$SHELL&lt;/span&gt; -l
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4 id="phpenv-installer"&gt;&lt;a href="https://github.com/phpenv/phpenv-installer"&gt;phpenv-installer&lt;/a&gt;&lt;/h4&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이걸 설치하면 &lt;code&gt;php-build/php-build&lt;/code&gt;, &lt;code&gt;madumlao/phpenv-aliases&lt;/code&gt;, &lt;code&gt;ngyuki/phpenv-composer&lt;/code&gt;가 자동으로&amp;nbsp;설치된다.&lt;/p&gt;
+&lt;h3 id="php"&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt;&amp;nbsp;설치&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ phpenv install --list
+$ phpenv install &lt;span class="o"&gt;{&lt;/span&gt;php_version&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="php_1"&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt; 설치시&amp;nbsp;에러&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Mac os error &lt;a href="https://qiita.com/maosanhioro/items/82698a8bdf6b7694ad36"&gt;해결&amp;nbsp;문서&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;-----------------
+|  BUILD ERROR  |
+-----------------
+
+Here are the last 10 lines from the log:
+
+-----------------------------------------
+configure: WARNING: This bison version is not supported for regeneration of the Zend/PHP parsers (found: 2.3, min: 204, excluded: ).
+configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.
+configure: error: Cannot find OpenSSL&amp;#39;s &amp;lt;evp.h&amp;gt;
+-----------------------------------------
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;추가 설치&amp;nbsp;패키지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;re2c&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;openssl&lt;/span&gt; &lt;span class="n"&gt;libxml2&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;openssl&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;libxml2&lt;/span&gt;
+
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;mcrypt&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;libz&lt;/code&gt; error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;configure&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Cannot&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="n"&gt;libz&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;xcode-select --install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;모하비에서는&amp;nbsp;안된다.&lt;/p&gt;
+&lt;h2 id="_3"&gt;나오는&amp;nbsp;말&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;phpenv&lt;/code&gt;로는 설치가 안되서&amp;hellip; &lt;code&gt;brew&lt;/code&gt;로 그냥 설치&amp;hellip;&lt;br&gt;
+&lt;code&gt;brew&lt;/code&gt; 로 7.2 버전이랑 7.1 버전을 설치해두고 PhpStorm 에서 둘다 잡아두면 두개다 쓸수있지뭐&amp;hellip; 마이너까지만&amp;nbsp;신경쓰면되니.&lt;/p&gt;</content><category term="php"></category><category term="phpenv"></category><category term="env"></category></entry><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록&amp;nbsp;하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Priority (&lt;span class="caps"&gt;PR&lt;/span&gt;)&lt;br&gt;
 Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. &lt;code&gt;rt&lt;/code&gt; 항목은 리얼타임 항목에 대한 내용을&amp;nbsp;나타냄&lt;/li&gt;
