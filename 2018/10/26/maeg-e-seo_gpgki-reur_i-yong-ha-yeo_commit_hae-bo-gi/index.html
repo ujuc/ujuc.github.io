@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Style sheet -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!-- Google web font -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Jua|Noto+Serif+KR|Roboto+Mono');
+</style>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+    <!-- Article head -->
+  <meta name="keywords" content="gpg key, keybase.io, keybase">
+
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   맥에서 GPG키를 이용하여 Commit&nbsp;해보기
+    </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>맥에서 GPG키를 이용하여 Commit&nbsp;해보기</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p><a href="https://keybase.io/">keybase.io</a> 계정이 있다는 가정하에서 하니, 가입을&nbsp;하자.</p>
+<h3 id="_1">필요한&nbsp;것들</h3>
+<div class="codehilite"><pre><span></span>$ brew install gpg
+$ brew cask install keybase
+$ brew cask install gpg-suite
+</pre></div>
+
+
+<h3 id="gpg"><span class="caps">GPG</span> 키&nbsp;생성</h3>
+<div class="codehilite"><pre><span></span>$ keybase pgp gen --multi
+</pre></div>
+
+
+<h3 id="git">Git 구성에&nbsp;추가</h3>
+<div class="codehilite"><pre><span></span>$ gpg --list-secret-keys --keyid-format LONG
+/Users/<span class="o">{</span>username<span class="o">}</span>/.gnupg/pubring.kbx
+------------------------------
+sec   rsa4096/<span class="o">{</span>keyid<span class="o">}</span> <span class="m">2018</span>-10-18 <span class="o">[</span>SC<span class="o">]</span> <span class="o">[</span>expires: 20xx-10-01<span class="o">]</span>
+      ?????
+uid                 <span class="o">[</span> unknown<span class="o">]</span> Sungjin Kang &lt;example@example.com&gt;
+ssb   rsa4096/<span class="o">{</span>keyid<span class="o">}</span> <span class="m">2018</span>-10-18 <span class="o">[</span>E<span class="o">]</span> <span class="o">[</span>expires: 20xx-10-01<span class="o">]</span>
+
+$ git config --global user.signingkey <span class="o">{</span>keyid<span class="o">}</span>
+$ git config --global commit.gpgsign <span class="nb">true</span>
+</pre></div>
+
+
+<h3 id="github-public-gpg">Github 에 Public <span class="caps">GPG</span> 키&nbsp;등록</h3>
+<p><a href="https://github.com/settings/keys">https://github.com/settings/keys</a> 에 접속하여 <strong>New <span class="caps">GPG</span> key</strong> 메뉴&nbsp;선택</p>
+<p>아래 명령어로 GPG키 복사하여&nbsp;붙여넣기</p>
+<div class="codehilite"><pre><span></span>$ keybase pgp <span class="nb">export</span> -q <span class="o">{</span>keyid<span class="o">}</span> <span class="p">|</span> pbcopy
+</pre></div>
+
+
+<h3 id="git-gui">Git <span class="caps">GUI</span> 툴에서 커밋이 가능하게 옵션&nbsp;추가</h3>
+<div class="codehilite"><pre><span></span>$ <span class="nb">echo</span> no-tty &gt;&gt; ~/.gnupg/gpg.conf
+$ git config --global gpg.program <span class="si">${</span><span class="nv">which</span><span class="p"> gpg</span><span class="si">}</span>
+</pre></div>
+
+
+<h3 id="_2">회사 컴퓨터에도 가능하게&nbsp;해두자</h3>
+<p>위에서 말한 프로그램을 설치한 뒤 다음 명령을 이용해서 key를 저장한다. 하나의 키를 가지고 있을 경우에만 다음 명령이 먹힌다. 두개이상이면 다른 모습이&nbsp;보인다고&hellip;</p>
+<div class="codehilite"><pre><span></span>$ keybase pgp <span class="nb">export</span>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+<span class="c1"># Public key export</span>
+$ keybase pgp <span class="nb">export</span> <span class="p">|</span> gpg --import
+<span class="c1"># Private key export</span>
+$ keybase pgp <span class="nb">export</span> --secret <span class="p">|</span> gpg --allow-secret-key-import --import
+</pre></div>
+
+
+<h3 id="_3">참고&nbsp;사이트</h3>
+<ul>
+<li><a href="https://github.com/pstadler/keybase-gpg-github">Set up Keybase.io, <span class="caps">GPG</span> <span class="amp">&amp;</span> Git to sign commits on&nbsp;GitHub</a></li>
+<li><a href="https://aaronparecki.com/2016/07/29/10/git-tower">Signed git commits with&nbsp;Tower</a></li>
+<li><a href="https://www.notion.so/ujuc/GPG-commit-11c88ce0b00f4dc79713b4ce09f62714">simnalamburt/keybase-github.md</a></li>
+</ul></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 18. 10. 26.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/gpg-key.html" class="article_tag">gpg key</a>
+              <a href="https://ujuc.github.io/tag/keybaseio.html" class="article_tag">keybase.io</a>
+              <a href="https://ujuc.github.io/tag/keybase.html" class="article_tag">keybase</a>
+          </i>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row">
+  <div class="container">
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><i class="far fa-closed-captioning"></i> BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-10-06T09:29:19+09:00</updated><entry><title>PHP Package Manager : phpenv</title><link href="https://ujuc.github.io/2018/10/06/php_package_manager_:_phpenv/" rel="alternate"></link><published>2018-10-06T09:29:19+09:00</published><updated>2018-10-06T09:29:19+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-10-06:/2018/10/06/php_package_manager_:_phpenv/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt; 패키지 매니저, phpenv를 확인해본다. 설치&amp;nbsp;실패기다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;들어가는&amp;nbsp;말&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-10-26T23:24:58+09:00</updated><entry><title>맥에서 GPG키를 이용하여 Commit 해보기</title><link href="https://ujuc.github.io/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/" rel="alternate"></link><published>2018-10-26T23:24:58+09:00</published><updated>2018-10-26T23:24:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-10-26:/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;GPG&lt;/span&gt; 키를 이용해서 내 커밋이 정말 내가 올린 것이라 말하고&amp;nbsp;싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://keybase.io/"&gt;keybase.io&lt;/a&gt; 계정이 있다는 가정하에서 하니, 가입을&amp;nbsp;하자.&lt;/p&gt;
+&lt;h3 id="_1"&gt;필요한&amp;nbsp;것들&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install gpg
+$ brew cask install keybase
+$ brew cask install gpg-suite
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="gpg"&gt;&lt;span class="caps"&gt;GPG&lt;/span&gt; 키&amp;nbsp;생성&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ keybase pgp gen --multi
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="git"&gt;Git 구성에&amp;nbsp;추가&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ gpg --list-secret-keys --keyid-format LONG
+/Users/&lt;span class="o"&gt;{&lt;/span&gt;username&lt;span class="o"&gt;}&lt;/span&gt;/.gnupg/pubring.kbx
+------------------------------
+sec   rsa4096/&lt;span class="o"&gt;{&lt;/span&gt;keyid&lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="m"&gt;2018&lt;/span&gt;-10-18 &lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 20xx-10-01&lt;span class="o"&gt;]&lt;/span&gt;
+      ?????
+uid                 &lt;span class="o"&gt;[&lt;/span&gt; unknown&lt;span class="o"&gt;]&lt;/span&gt; Sungjin Kang &amp;lt;example@example.com&amp;gt;
+ssb   rsa4096/&lt;span class="o"&gt;{&lt;/span&gt;keyid&lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="m"&gt;2018&lt;/span&gt;-10-18 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: 20xx-10-01&lt;span class="o"&gt;]&lt;/span&gt;
+
+$ git config --global user.signingkey &lt;span class="o"&gt;{&lt;/span&gt;keyid&lt;span class="o"&gt;}&lt;/span&gt;
+$ git config --global commit.gpgsign &lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="github-public-gpg"&gt;Github 에 Public &lt;span class="caps"&gt;GPG&lt;/span&gt; 키&amp;nbsp;등록&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/settings/keys"&gt;https://github.com/settings/keys&lt;/a&gt; 에 접속하여 &lt;strong&gt;New &lt;span class="caps"&gt;GPG&lt;/span&gt; key&lt;/strong&gt; 메뉴&amp;nbsp;선택&lt;/p&gt;
+&lt;p&gt;아래 명령어로 GPG키 복사하여&amp;nbsp;붙여넣기&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ keybase pgp &lt;span class="nb"&gt;export&lt;/span&gt; -q &lt;span class="o"&gt;{&lt;/span&gt;keyid&lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; pbcopy
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="git-gui"&gt;Git &lt;span class="caps"&gt;GUI&lt;/span&gt; 툴에서 커밋이 가능하게 옵션&amp;nbsp;추가&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;echo&lt;/span&gt; no-tty &amp;gt;&amp;gt; ~/.gnupg/gpg.conf
+$ git config --global gpg.program &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;which&lt;/span&gt;&lt;span class="p"&gt; gpg&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="_2"&gt;회사 컴퓨터에도 가능하게&amp;nbsp;해두자&lt;/h3&gt;
+&lt;p&gt;위에서 말한 프로그램을 설치한 뒤 다음 명령을 이용해서 key를 저장한다. 하나의 키를 가지고 있을 경우에만 다음 명령이 먹힌다. 두개이상이면 다른 모습이&amp;nbsp;보인다고&amp;hellip;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ keybase pgp &lt;span class="nb"&gt;export&lt;/span&gt;
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+&lt;span class="c1"&gt;# Public key export&lt;/span&gt;
+$ keybase pgp &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; gpg --import
+&lt;span class="c1"&gt;# Private key export&lt;/span&gt;
+$ keybase pgp &lt;span class="nb"&gt;export&lt;/span&gt; --secret &lt;span class="p"&gt;|&lt;/span&gt; gpg --allow-secret-key-import --import
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="_3"&gt;참고&amp;nbsp;사이트&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/pstadler/keybase-gpg-github"&gt;Set up Keybase.io, &lt;span class="caps"&gt;GPG&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Git to sign commits on&amp;nbsp;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://aaronparecki.com/2016/07/29/10/git-tower"&gt;Signed git commits with&amp;nbsp;Tower&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.notion.so/ujuc/GPG-commit-11c88ce0b00f4dc79713b4ce09f62714"&gt;simnalamburt/keybase-github.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="gpg key"></category><category term="keybase.io"></category><category term="keybase"></category></entry><entry><title>PHP Package Manager : phpenv</title><link href="https://ujuc.github.io/2018/10/06/php_package_manager_:_phpenv/" rel="alternate"></link><published>2018-10-06T09:29:19+09:00</published><updated>2018-10-06T09:29:19+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-10-06:/2018/10/06/php_package_manager_:_phpenv/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt; 패키지 매니저, phpenv를 확인해본다. 설치&amp;nbsp;실패기다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;들어가는&amp;nbsp;말&lt;/h2&gt;
 &lt;p&gt;PHP로 개발을 해야되는 일이 생겼다. 버전을 7.x대로 써야되는데&amp;hellip; 7.2는 아닌거같으니&amp;hellip; 뭔가 버전을 따로 구성해서 진행하고&amp;nbsp;싶다.!&lt;/p&gt;
 &lt;h2 id="php-package-manager"&gt;&lt;span class="caps"&gt;PHP&lt;/span&gt; Package&amp;nbsp;Manager&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://github.com/phpenv/phpenv"&gt;github.com/phpenv/phpemv&lt;/a&gt;&lt;/p&gt;
