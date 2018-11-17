@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Style sheet -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!-- Google web font -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Jua|Noto+Serif+KR|Roboto+Mono');
+</style>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+    <!-- Article head -->
+  <meta name="keywords" content="php, psr-1, psr">
+
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   <span class="caps">PSR</span>-1: Basic Coding&nbsp;Standard
+    </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1><span class="caps">PSR</span>-1: Basic Coding&nbsp;Standard</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p><a href="https://www.php-fig.org/psr/psr-1/"><span class="caps">PSR</span>-1: Basic Coding Standard - <span class="caps">PHP</span>-<span class="caps">FIG</span></a></p>
+<hr>
+<p>이 표준에 대한 섹션은 공유하는 <span class="caps">PHP</span> 코드 간의 높은 수준의 기술적인 상호 운용성을 보장하기 위해 표준 코딩 요소로 간주되어야 하는 것에 대해서&nbsp;설명합니다.</p>
+<blockquote>
+<p>This section of the standard comprises what should be considered the standard coding elements that are required to ensure a high level of technical interoperability between shared <span class="caps">PHP</span>&nbsp;code.</p>
+</blockquote>
+<p>이 문서에서 사용하는 키워드 &ldquo;<span class="caps">MUST</span>&rdquo;, &ldquo;<span class="caps">MUST</span> <span class="caps">NOT</span>&rdquo;, &ldquo;<span class="caps">REQUIRED</span>&rdquo;, &ldquo;<span class="caps">SHALL</span>&rdquo;, &ldquo;<span class="caps">SHALL</span> <span class="caps">NOT</span>&rdquo;, &ldquo;<span class="caps">SHOULD</span>&rdquo;, &ldquo;<span class="caps">SHOULD</span> <span class="caps">NOT</span>&rdquo;, &ldquo;<span class="caps">RECOMMENDED</span>&rdquo;, &ldquo;<span class="caps">MAY</span>&rdquo;, &ldquo;<span class="caps">OPTIONAL</span>&rdquo;은 <a href="https://techhtml.github.io/rfc/RFC2119.html"><span class="caps">RFC</span> 2119</a>에서 설명하는 대로&nbsp;해석한다.</p>
+<blockquote>
+<p>The key words “<span class="caps">MUST</span>”, “<span class="caps">MUST</span> <span class="caps">NOT</span>”, “<span class="caps">REQUIRED</span>”, “<span class="caps">SHALL</span>”, “<span class="caps">SHALL</span> <span class="caps">NOT</span>”, “<span class="caps">SHOULD</span>”,“<span class="caps">SHOULD</span> <span class="caps">NOT</span>”, “<span class="caps">RECOMMENDED</span>”, “<span class="caps">MAY</span>”, and “<span class="caps">OPTIONAL</span>” in this document are to be interpreted as described in <a href="http://www.ietf.org/rfc/rfc2119.txt"><span class="caps">RFC</span> 2119</a>.</p>
+</blockquote>
+<h2 id="1">1.&nbsp;개요</h2>
+<ul>
+<li>
+<p>[<span class="caps">MUST</span>] 파일은 <code>&lt;?php</code> 와 <code>&lt;?=</code> 태그만 사용해야&nbsp;합니다.</p>
+<blockquote>
+<p>Files <span class="caps">MUST</span> use only <code>&lt;?php</code> and <code>&lt;?=</code> tags.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 파일은 <span class="caps">PHP</span> 코드에 <span class="caps">BOM</span> 없이 <span class="caps">UTF</span>-8만 사용해야&nbsp;합니다.</p>
+<blockquote>
+<p>Files <span class="caps">MUST</span> use only <span class="caps">UTF</span>-8 without <span class="caps">BOM</span> for <span class="caps">PHP</span>&nbsp;code.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">SHOULD</span>] 파일에는 심벌 (classes, functions, constants, 등)을 선언<em>하거나</em> 사이드 이펙트 (예, 출력 생성, .ini 설정 변경, 등)을 발생시키는 작업 중 하나만 하여야 합니다. [<span class="caps">SHOULD</span> <span class="caps">NOT</span>] 둘이 같이 선언되면&nbsp;안됩니다.</p>
+<blockquote>
+<p>Files <span class="caps">SHOULD</span> <em>either</em> declare symbols (classes, functions, constants, etc.) <em>or</em> cause side-effects (e.g. generate output, change .ini settings, etc.) but <span class="caps">SHOULD</span> <span class="caps">NOT</span> do&nbsp;both.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] Namespaces와 classes는 반드시 &ldquo;autoloading&rdquo; 해야 합니다. <span class="caps">PSR</span>: [<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md">~~<span class="caps">PSR</span>-0~~</a>, <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md"><span class="caps">PSR</span>-4</a>]</p>
+<blockquote>
+<p>Namespaces and classes <span class="caps">MUST</span> follow an “autoloading” <span class="caps">PSR</span>: [<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md"><span class="caps">PSR</span>-0</a>, <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md"><span class="caps">PSR</span>-4</a>].</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 클레스 이름은 반드시 <code>StudlyCaps</code> 로 선언되어야&nbsp;합니다.</p>
+<blockquote>
+<p>Class names <span class="caps">MUST</span> be declared in <code>StudlyCaps</code>.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 클래스 상수는 모두 대문자로 밑줄 구분 기호로 선언해야&nbsp;합니다.</p>
+<blockquote>
+<p>Class constants <span class="caps">MUST</span> be declared in all upper case with underscore&nbsp;separators.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 메소드 이름은 <code>camelCase</code> 로 선언되어야&nbsp;합니다.</p>
+<blockquote>
+<p>Method names <span class="caps">MUST</span> be declared in <code>camelCase</code>.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="2">2.&nbsp;파일</h2>
+<h3 id="21-php">2.1. <span class="caps">PHP</span>&nbsp;태그</h3>
+<p>[<span class="caps">MUST</span>] <span class="caps">PHP</span> 코드는 긴 태그인 <code>&lt;?php ?&gt;</code> 또는 짧은 에코 태그 <code>&lt;?= ?&gt;</code> 를 사용해야 합니다. 다른 태그 변형을 사용해서는&nbsp;안됩니다.</p>
+<blockquote>
+<p><span class="caps">PHP</span> code <span class="caps">MUST</span> use the long <code>&lt;?php ?&gt;</code> tags or the short-echo <code>&lt;?= ?&gt;</code> tags; it <span class="caps">MUST</span> <span class="caps">NOT</span> use the other tag&nbsp;variations.</p>
+</blockquote>
+<h3 id="22">2.2 문자&nbsp;인코딩</h3>
+<p>[<span class="caps">MUST</span>] <span class="caps">PHP</span> 코드는 <a href="https://ko.wikipedia.org/wiki/%EB%B0%94%EC%9D%B4%ED%8A%B8_%EC%88%9C%EC%84%9C_%ED%91%9C%EC%8B%9D"><span class="caps">BOM</span>(Byte Order Mark)</a> 없이 <span class="caps">UTF</span>-8 만 사용해야&nbsp;합니다.</p>
+<blockquote>
+<p><span class="caps">PHP</span> code <span class="caps">MUST</span> use only <span class="caps">UTF</span>-8 without <span class="caps">BOM</span>.</p>
+</blockquote>
+<h3 id="23-side-effects">2.3 부작용 (Side&nbsp;Effects)</h3>
+<p>[<span class="caps">SHOULD</span>] 파일은 새로운 심벌 (클래스, 함수, 상수 등)을 선언하고 다른 사이드 이펙트를 일으키지 않아야 합니다. [<span class="caps">SHOULD</span>] 또는 파일에서 사이트 이펙트를 줄 수 있는 로직이 포함될 수 있습니다. [<span class="caps">SHOULD</span> <span class="caps">NOT</span>] 그러나 이 두 가지가 모두 발생하지 않아야&nbsp;합니다.</p>
+<blockquote>
+<p>A file <span class="caps">SHOULD</span> declare new symbols (classes, functions, constants,etc.) and cause no other side effects, or it <span class="caps">SHOULD</span> execute logic with side effects, but <span class="caps">SHOULD</span> <span class="caps">NOT</span> do&nbsp;both.</p>
+</blockquote>
+<p><span class="dquo">&ldquo;</span>Side effects&rdquo; 라는 말은 클래스, 함수, 상수 등을 선언하는 것과 직접적으로 관련없는 로직 실행을 <em>단지 파일에 포함하는 것</em>을 의미&nbsp;합니다.</p>
+<blockquote>
+<p>The phrase “side effects” means execution of logic not directly related to declaring classes, functions, constants, etc., <em>merely from including the file</em>.</p>
+</blockquote>
+<p><span class="dquo">&ldquo;</span>Side effects&rdquo;에는 다음 내용들이 포함되지만 이것만 있는 것은 아닙니다: 출력 생성, <code>require</code> 또는 <code>include</code> 의 명시적 사용, 외부 서비스 연결, ini 설정 수정, 에러 출력 또는 예외, 전역 또는 정적 변수 수정, 파일 읽기나 쓰기&nbsp;등등&hellip;</p>
+<blockquote>
+<p>“Side effects” include but are not limited to: generating output, explicit use of <code>require</code> or <code>include</code>, connecting to external services, modifying ini settings, emitting errors or exceptions, modifying global or static variables,reading from or writing to a file, and so&nbsp;on.</p>
+</blockquote>
+<p>다음은 부작용이 모두 포함된 코드의 예입니다. 즉, 피해야 할&nbsp;예:</p>
+<blockquote>
+<p>The following is an example of a file with both declarations and side effects;i.e, an example of what to&nbsp;avoid:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// side effect: change ini settings</span>
+<span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;error_reporting&#39;</span><span class="p">,</span> <span class="k">E_ALL</span><span class="p">);</span>
+
+<span class="c1">// side effect: loads a file</span>
+<span class="k">include</span> <span class="s2">&quot;file.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// side effect: generates output</span>
+<span class="k">echo</span> <span class="s2">&quot;&lt;html&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+
+<span class="c1">// declaration</span>
+<span class="k">function</span> <span class="nf">foo</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// function body</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>다음 예제는 부작용이 없는 내용이 포함된 코드의 예입니다. 즉, 참고해야 할&nbsp;예:</p>
+<blockquote>
+<p>The following example is of a file that contains declarations without side effects; i.e., an example of what to&nbsp;emulate:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// declaration</span>
+<span class="k">function</span> <span class="nf">foo</span><span class="p">()</span>
+<span class="p">{</span> 
+    <span class="c1">// function body</span>
+<span class="p">}</span>
+
+<span class="c1">// conditional declaration is *not* a side effect</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nb">function_exists</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">function</span> <span class="nf">bar</span><span class="p">()</span>
+    <span class="p">{</span> 
+        <span class="c1">// function body</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="3-namespace">3. 네임스페이스(Namespace)와 클래스&nbsp;이름</h2>
+<p>[<span class="caps">MUST</span>] 네임스페이스와 클래스는 반드시 &ldquo;autoloading&rdquo; <span class="caps">PSR</span> 문서에 따라야 합니다: [<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md"><span class="caps">PSR</span>-0</a>, <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md"><span class="caps">PSR</span>-4</a>]</p>
+<blockquote>
+<p>Namespaces and classes <span class="caps">MUST</span> follow an “autoloading” <span class="caps">PSR</span>: [<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md"><span class="caps">PSR</span>-0</a>, <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md"><span class="caps">PSR</span>-4</a>].</p>
+</blockquote>
+<p>각 클래스는 하나의 파일에 있으며, 최상위 벤더 이름인 네임스페이스가 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>This means each class is in a file by itself, and is in a namespace of at least one level: a top-level vendor&nbsp;name.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 클래스 이름은 반드시 <code>StudlyCaps</code> 로 선언되어야&nbsp;합니다.</p>
+<blockquote>
+<p>Class names <span class="caps">MUST</span> be declared in <code>StudlyCaps</code>.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] <span class="caps">PHP</span> 5.3 이후 버전에서 사용될 코드는 정식 네임스페이스를 사용해야&nbsp;합니다.</p>
+<blockquote>
+<p>Code written for <span class="caps">PHP</span> 5.3 and after <span class="caps">MUST</span> use formal&nbsp;namespaces.</p>
+</blockquote>
+<p>For&nbsp;example:</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// PHP 5.3 and later:</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>[<span class="caps">SHOULD</span>] 5.2.x 이하에서 작성하는 코드에서는 클래스 이름에 <code>Vendor_</code> 접두사를 이용하는 네임스페이스 규칙을 사용해야&nbsp;합니다.</p>
+<blockquote>
+<p>Code written for 5.2.x and before <span class="caps">SHOULD</span> use the pseudo-namespacing convention of <code>Vendor_</code> prefixes on class&nbsp;names.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// PHP 5.2.x and earlier:</span>
+
+<span class="k">class</span> <span class="nc">Vendor_Model_Foo</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="4">4. 클래스 상수, 속성,&nbsp;메서드</h2>
+<p><span class="dquo">&ldquo;</span>Class&rdquo; 라는 용어는 모든 클래스, 인터페이스, 특성을&nbsp;나타냅니다.</p>
+<blockquote>
+<p>The term “class” refers to all classes, interfaces, and&nbsp;traits.</p>
+</blockquote>
+<h3 id="41-constants">4.1 상수&nbsp;(Constants)</h3>
+<p>[<span class="caps">MUST</span>] 클래스 상수는 모두 대문자로 밑줄 구분 기호를 사용하여 선언해야 합니다.&nbsp;예:</p>
+<blockquote>
+<p>Class constants <span class="caps">MUST</span> be declared in all upper case with underscore separators. For&nbsp;example:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="no">VERSION</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">DATE_APPROVED</span> <span class="o">=</span> <span class="s1">&#39;2012-06-01&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="42-properties">4.2 속성&nbsp;(Properties)</h3>
+<p>이 가이드에서는 <code>$StudlyCaps</code>, <code>$camelCase</code>, <code>$under_score</code> 와 같은 방식으로 속성 이름을 사용하는 것에 대해서 권장 사항을 지정하지&nbsp;않습니다.</p>
+<blockquote>
+<p>This guide intentionally avoids any recommendation regarding the use of <code>$StudlyCaps</code>, <code>$camelCase</code>, or <code>$under_score</code> property&nbsp;names.</p>
+</blockquote>
+<p>[<span class="caps">SHOULD</span>] 어떤 명명 규칙이 사용되든 합당한 범위 내에서 일관되게 적용되어야 합니다. 여기서 정의하는 범위는 벤더 레벨, 패키지 레벨, 클래스 레벨, 메서드 레벨을&nbsp;일컷습니다.</p>
+<blockquote>
+<p>Whatever naming convention is used <span class="caps">SHOULD</span> be applied consistently within areasonable scope. That scope may be vendor-level, package-level, class-level,or&nbsp;method-level.</p>
+</blockquote>
+<h3 id="43-methods">4.3 메서드&nbsp;(Methods)</h3>
+<p>[<span class="caps">MUST</span>] 메서드 이름은 <code>camleCase()</code> 방식으로 선언되어야&nbsp;합니다.</p>
+<blockquote>
+<p>Method names <span class="caps">MUST</span> be declared in <code>camelCase()</code>.</p>
+</blockquote></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 18. 11. 17.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/php.html" class="article_tag">php</a>
+              <a href="https://ujuc.github.io/tag/psr-1.html" class="article_tag">psr-1</a>
+              <a href="https://ujuc.github.io/tag/psr.html" class="article_tag">psr</a>
+          </i>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row">
+  <div class="container">
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><i class="far fa-closed-captioning"></i> BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
