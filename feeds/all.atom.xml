@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-11-27T01:31:32+09:00</updated><entry><title>I hate input gpgkey in JetBrains IDEAs</title><link href="https://ujuc.github.io/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/" rel="alternate"></link><published>2018-11-27T01:31:32+09:00</published><updated>2018-11-27T01:31:32+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-27:/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/</id><summary type="html">&lt;p&gt;JetBrains IDEA를 주력하여 사용 중인데. &lt;span class="caps"&gt;GPG&lt;/span&gt; 키가 계속 침범을 하네? 그래서 문제를&amp;nbsp;찾았다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;이모든 원흉은 나의&amp;nbsp;과욕이었음을&amp;hellip;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-12-16T00:31:14+09:00</updated><entry><title>Atom Git 커밋 메시지 Styleguides 속 Emoji</title><link href="https://ujuc.github.io/2018/12/16/atom_git_keo-mis_me-si-ji_styleguides_sog_emoji/" rel="alternate"></link><published>2018-12-16T00:31:14+09:00</published><updated>2018-12-16T00:31:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-12-16:/2018/12/16/atom_git_keo-mis_me-si-ji_styleguides_sog_emoji/</id><summary type="html">&lt;p&gt;블로그 글을 읽다가 커밋메시지에 이모지를 넣는 방법이 있다고 하여&amp;nbsp;정리해보았다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.weirdx.io/post/55244"&gt;블로그&lt;/a&gt; 에서 글을 읽다가 커밋 메시지에 Emoji를 사용했더니 구분이 되서 좋다고 하셔서 확인.&lt;br&gt;
+우선은 Atom에서 사용하는 것인데&amp;hellip; 여기다가 내가 필요한 내용들을 넣어서 사용하면&amp;nbsp;될것같아보인다.&lt;/p&gt;
+&lt;p&gt;역시 글보다는&amp;nbsp;그림인가?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🎨 &lt;code&gt;:art:&lt;/code&gt; 코드 형식이나 구조를 개선할&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;🐎 &lt;code&gt;:racehorse:&lt;/code&gt; 성능을 향상할&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;🚱 &lt;code&gt;:non-potable_water:&lt;/code&gt; 메모리 누수를 막았을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;📝 &lt;code&gt;:memo:&lt;/code&gt; 문서 작성했을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;🐧 &lt;code&gt;:penguin:&lt;/code&gt; 리눅스에서 뭔가를 고쳤을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;🍎 &lt;code&gt;:apple:&lt;/code&gt; macOS에서 뭔가를 고쳤을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;🏁 &lt;code&gt;:checkered_flag:&lt;/code&gt; 윈도우즈에서 무언가를 고쳤을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;🐛 &lt;code&gt;:bug:&lt;/code&gt; 버그를 고쳤을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;🔥 &lt;code&gt;:fire:&lt;/code&gt; 코드 또는 파일을 삭제했을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;💚 &lt;code&gt;:green_heart:&lt;/code&gt; &lt;span class="caps"&gt;CI&lt;/span&gt; 빌드를 고쳤을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;✅ &lt;code&gt;:white_check_mark:&lt;/code&gt; 테스트를 추가했을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;🔒 &lt;code&gt;:lock:&lt;/code&gt; 보안 사항을 수정했을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;code&gt;:arrow_up:&lt;/code&gt; 의존성에 대한 부분을 업그레이드했을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;⬇️ &lt;code&gt;:arrow_down:&lt;/code&gt; 의존성에 대한 부분을 다운그레이드했을&amp;nbsp;때&lt;/li&gt;
+&lt;li&gt;👕 &lt;code&gt;:shirt:&lt;/code&gt; 린터 경고를 없앴을&amp;nbsp;때&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;원본 : &lt;a href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#git-commit-messages"&gt;Atom - Git Commit&amp;nbsp;Message&lt;/a&gt;&lt;/p&gt;</content><category term="emoji"></category><category term="atom"></category><category term="git commit"></category><category term="git"></category><category term="styleguide"></category></entry><entry><title>I hate input gpgkey in JetBrains IDEAs</title><link href="https://ujuc.github.io/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/" rel="alternate"></link><published>2018-11-27T01:31:32+09:00</published><updated>2018-11-27T01:31:32+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-27:/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/</id><summary type="html">&lt;p&gt;JetBrains IDEA를 주력하여 사용 중인데. &lt;span class="caps"&gt;GPG&lt;/span&gt; 키가 계속 침범을 하네? 그래서 문제를&amp;nbsp;찾았다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;이모든 원흉은 나의&amp;nbsp;과욕이었음을&amp;hellip;&lt;/p&gt;
 &lt;p&gt;모든 코딩을 JetBrains의 IDEA에서 한다. 아직 vim이 익숙하지 않아서 그렇기도&amp;nbsp;하고&amp;hellip;&lt;/p&gt;
 &lt;p&gt;언젠가 GPG키를 이용해서 git sign을 위해서 &lt;span class="caps"&gt;GPG&lt;/span&gt; suite를 설치해놨는데. 이넘이&amp;nbsp;문제일줄이야..&lt;/p&gt;
 &lt;h2 id="_1"&gt;증상&lt;/h2&gt;
