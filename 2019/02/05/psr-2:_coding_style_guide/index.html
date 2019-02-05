@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Style sheet -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!-- Google web font -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Jua|Noto+Serif+KR|Roboto+Mono');
+</style>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+    <!-- Article head -->
+  <meta name="keywords" content="php, psr, prs-2">
+
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   <span class="caps">PSR</span>-2: Coding Style&nbsp;Guide
+    </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1><span class="caps">PSR</span>-2: Coding Style&nbsp;Guide</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p><a href="https://www.php-fig.org/psr/psr-2/"><span class="caps">PSR</span>-2: Coding Style Guide - <span class="caps">PHP</span>-<span class="caps">FIG</span></a></p>
+<hr>
+<p>이 가이드는 기본 코딩 표준인 <span class="caps">PSR</span>-1을 확장하여&nbsp;설명합니다.</p>
+<blockquote>
+<p>This guide extends and expands on <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md"><span class="caps">PSR</span>-1</a>, the basic coding&nbsp;standard.</p>
+</blockquote>
+<p>이 가이드의 목표는 다른 개발자가 코드를 읽을 때, 인지 마찰을 줄이는 것입니다. 그 방법으로 <span class="caps">PHP</span> 코드 형식을 지정하는 방법에 대한 규칙과 예외 사항을 열거하는&nbsp;것입니다.</p>
+<blockquote>
+<p>The intent of this guide is to reduce cognitive friction when scanning code from different authors. It does so by enumerating a shared set of rules and expectations about how to format <span class="caps">PHP</span>&nbsp;code.</p>
+</blockquote>
+<p>이 스타일 규칙들은 여러 커뮤니티 회원들의 프로젝트들 간의 공통점을 정리하였습니다. 다양한 개발자들이 여러 프로젝트에서 공통 작업을 할 때, 모든 프로젝트에서 사용하는 묶음 지침을 사용하는 것이 편합니다. 따라서 이 가이드의 좋은 점은 규칙 자체가 아니라 이 규칙들을 공유하는 것에 의의를&nbsp;둡니다.</p>
+<blockquote>
+<p>The style rules herein are derived from commonalities among the various member projects. When various authors collaborate across multiple projects, it helps to have one set of guidelines to be used among all those projects. Thus, the benefit of this guide is not in the rules themselves, but in the sharing of those&nbsp;rules.</p>
+</blockquote>
+<p>이 문서에서 사용하는 키워드 &ldquo;<span class="caps">MUST</span>&rdquo;, &ldquo;<span class="caps">MUST</span> <span class="caps">NOT</span>&rdquo;, &ldquo;<span class="caps">REQUIRED</span>&rdquo;, &ldquo;<span class="caps">SHALL</span>&rdquo;, &ldquo;<span class="caps">SHALL</span> <span class="caps">NOT</span>&rdquo;, &ldquo;<span class="caps">SHOULD</span>&rdquo;, &ldquo;<span class="caps">SHOULD</span> <span class="caps">NOT</span>&rdquo;, &ldquo;<span class="caps">RECOMMENDED</span>&rdquo;, &ldquo;<span class="caps">MAY</span>&rdquo;, &ldquo;<span class="caps">OPTIONAL</span>&rdquo;은 <a href="https://techhtml.github.io/rfc/RFC2119.html"><span class="caps">RFC</span> 2119</a>에서 설명하는 대로&nbsp;해석한다.</p>
+<blockquote>
+<p>The key words “<span class="caps">MUST</span>”, “<span class="caps">MUST</span> <span class="caps">NOT</span>”, “<span class="caps">REQUIRED</span>”, “<span class="caps">SHALL</span>”, “<span class="caps">SHALL</span> <span class="caps">NOT</span>”, “<span class="caps">SHOULD</span>”,“<span class="caps">SHOULD</span> <span class="caps">NOT</span>”, “<span class="caps">RECOMMENDED</span>”, “<span class="caps">MAY</span>”, and “<span class="caps">OPTIONAL</span>” in this document are to be interpreted as described in <a href="http://www.ietf.org/rfc/rfc2119.txt"><span class="caps">RFC</span> 2119</a>.</p>
+</blockquote>
+<h1 id="1">1.&nbsp;개요</h1>
+<ul>
+<li>
+<p>[<span class="caps">MUST</span>] 코드는 <span class="caps">PSR</span> &ldquo;코딩 스타일 가이드&rdquo; [<span class="caps">PSR</span>-1]에&nbsp;따릅니다.</p>
+<blockquote>
+<p>Code <span class="caps">MUST</span> follow a “coding style guide” <span class="caps">PSR</span> [<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md"><span class="caps">PSR</span>-1</a>].</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 코드는 인던트를 스페이스 4를 사용합니다. 탭을 사용하지&nbsp;않습니다.</p>
+<blockquote>
+<p>Code <span class="caps">MUST</span> use 4 spaces for indenting, not&nbsp;tabs.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 줄 길이에 대한 엄격한 제한이 있어서는 안 됩니다; [<span class="caps">MUST</span>] 가벼운 제한은 반드시 120자여야 합니다; [<span class="caps">SHOULD</span>] 라인의 길이는 80자 이하여야&nbsp;합니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> <span class="caps">NOT</span> be a hard limit on line length; the soft limit <span class="caps">MUST</span> be 120 characters; lines <span class="caps">SHOULD</span> be 80 characters or&nbsp;less.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] <code>namespace</code> 선언 다음에는 빈 줄이 하나 있어야 합니다; [<span class="caps">MUST</span>] <code>use</code> 선언한 블록 다음에는 빈 줄이 하나 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> be one blank line after the <code>namespace</code> declaration, and there <span class="caps">MUST</span> be one blank line after the block of <code>use</code> declarations.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 클래스 여는 중괄호는 반드시 다음 줄로 가야 합니다; [<span class="caps">MUST</span>] 닫는 중괄호는 본문 뒤에 오는 다음 줄로 가야&nbsp;합니다.</p>
+<blockquote>
+<p>Opening braces for classes <span class="caps">MUST</span> go on the next line, and closing braces <span class="caps">MUST</span> go on the next line after the&nbsp;body.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 메서드를 여는 중괄호는 반드시 다음 줄로 가야 합니다; [<span class="caps">MUST</span>] 닫는 중괄호는 반드시 본문 맨 끝에서 다음 줄로 가야&nbsp;합니다.</p>
+<blockquote>
+<p>Opening braces for methods <span class="caps">MUST</span> go on the next line, and closing braces <span class="caps">MUST</span> go on the next line after the&nbsp;body.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 가시성 (Visibility)는 모든 속성과 메서드에서 반드시 선언되어야 합니다; [<span class="caps">MUST</span>] <code>abstract</code> 와 <code>final</code> 은 가시성 이전에 반드시 선언되어야 합니다; [<span class="caps">MUST</span>] <code>static</code> 은 반드시 가시성 뒤에 선언되어야&nbsp;합니다.</p>
+<blockquote>
+<p>Visibility <span class="caps">MUST</span> be declared on all properties and methods; <code>abstract</code> and <code>final</code> <span class="caps">MUST</span> be declared before the visibility; <code>static</code> <span class="caps">MUST</span> be declared after the&nbsp;visibility.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 제어 구조 키워드 뒤에는 반드시 공백을 가져야 합니다; [<span class="caps">MUST</span> <span class="caps">NOT</span>] 메서드와 펑션 사용할 때는 공백을 추가해서는&nbsp;안됩니다.</p>
+<blockquote>
+<p>Control structure keywords <span class="caps">MUST</span> have one space after them; method and function calls <span class="caps">MUST</span> <span class="caps">NOT</span>.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 제어 구조에서 여는 중괄호는 반드시 같은 줄에 있어야 합니다. [<span class="caps">MUST</span>] 닫는 괄호는 반드시 본문 뒤의 다음 줄로 가야&nbsp;합니다.</p>
+<blockquote>
+<p>Opening braces for control structures <span class="caps">MUST</span> go on the same line, and closing braces <span class="caps">MUST</span> go on the next line after the&nbsp;body.</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 제어 구조에서 여는 괄호 뒤에는 공백이 없어야 합니다. [<span class="caps">MUST</span> <span class="caps">NOT</span>] 제어 구조에서 닫는 괄호 전에는 공백이 없어야&nbsp;합니다.</p>
+<blockquote>
+<p>Opening parentheses for control structures <span class="caps">MUST</span> <span class="caps">NOT</span> have a space after them, and closing parentheses for control structures <span class="caps">MUST</span> <span class="caps">NOT</span> have a space&nbsp;before.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="11">1.1&nbsp;예제</h2>
+<p>아래의 예는 위의 규칙 중 일부를 간략하게&nbsp;설명합니다:</p>
+<blockquote>
+<p>This example encompasses some of the rules below as a quick&nbsp;overview:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">FooInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">BarClass</span> <span class="k">as</span> <span class="nx">Bar</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">OtherVendor\OtherPackage\BazClass</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nx">Bar</span> <span class="k">implements</span> <span class="nx">FooInterface</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">sampleMethod</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">===</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">bar</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">&gt;</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">BazClass</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">final</span> <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">bar</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// method body</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h1 id="2">2. 일반적인&nbsp;것들</h1>
+<h2 id="21">2.1. 기본 코딩&nbsp;표준</h2>
+<p>[<span class="caps">MUST</span>] 코드는 반드시 <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md"><span class="caps">PSR</span>-1</a>에 표기된 모든 규칙을 따라야&nbsp;합니다.</p>
+<blockquote>
+<p>Code <span class="caps">MUST</span> follow all rules outlined in <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md"><span class="caps">PSR</span>-1</a>.</p>
+</blockquote>
+<h2 id="22">2.2.&nbsp;파일</h2>
+<p>[<span class="caps">MUST</span>] 모든 <span class="caps">PHP</span> 파일은 반드시 Unix <span class="caps">LF</span> (linefeed) 줄 끝 문자를 사용해야&nbsp;합니다.</p>
+<blockquote>
+<p>All <span class="caps">PHP</span> files <span class="caps">MUST</span> use the Unix <span class="caps">LF</span> (linefeed) line&nbsp;ending.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 모든 <span class="caps">PHP</span> 파일은 반드시 하나의 빈 줄로 끝나야&nbsp;합니다.</p>
+<blockquote>
+<p>All <span class="caps">PHP</span> files <span class="caps">MUST</span> end with a single blank&nbsp;line.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 닫는 태그인 <code>?&gt;</code> 태그는 PHP만 포함된 파일에서는 생각해야&nbsp;합니다.</p>
+<blockquote>
+<p>The closing <code>?&gt;</code> tag <span class="caps">MUST</span> be omitted from files containing only <span class="caps">PHP</span>.</p>
+</blockquote>
+<h2 id="23">2.3.&nbsp;줄</h2>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 라인 길이에는 엄격한 제한이 있어서는 안&nbsp;됩니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> <span class="caps">NOT</span> be a hard limit on line&nbsp;length.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 줄 길이에 대한 가벼운 제한은 120자입니다; [<span class="caps">MUST</span>] 자동화된 스타일 체커는 반드시 경고해야 합니다만 [<span class="caps">MUST</span> <span class="caps">NOT</span>] 가벼운 제한을 오류로 표현해서는&nbsp;안됩니다.</p>
+<blockquote>
+<p>The soft limit on line length <span class="caps">MUST</span> be 120 characters; automated style checkers <span class="caps">MUST</span> warn but <span class="caps">MUST</span> <span class="caps">NOT</span> error at the soft&nbsp;limit.</p>
+</blockquote>
+<p>[<span class="caps">SHOLD</span> <span class="caps">NOT</span>] 행은 80자를 넘지 않아야 합니다; [<span class="caps">SHOULD</span>] 그보다 긴 행은 각각 80자 이하의 여러 행으로 나눠야&nbsp;합니다.</p>
+<blockquote>
+<p>Lines <span class="caps">SHOULD</span> <span class="caps">NOT</span> be longer than 80 characters; lines longer than that <span class="caps">SHOULD</span> be split into multiple subsequent lines of no more than 80 characters&nbsp;each.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 비어 있지 않은 줄 끝에는 공백 문자가 없어야&nbsp;합니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> <span class="caps">NOT</span> be trailing whitespace at the end of non-blank&nbsp;lines.</p>
+</blockquote>
+<p>[<span class="caps">MAY</span>] 가독성을 높이고 관련 코드 블록을 나타내기 위해 빈 줄을 추가할 수&nbsp;있습니다.</p>
+<blockquote>
+<p>Blank lines <span class="caps">MAY</span> be added to improve readability and to indicate related blocks of&nbsp;code.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 한 줄에 하나 이상의 문장이 있어서는 안&nbsp;됩니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> <span class="caps">NOT</span> be more than one statement per&nbsp;line.</p>
+</blockquote>
+<h2 id="24">2.4.&nbsp;들여쓰기</h2>
+<p>[<span class="caps">MUST</span>] 코드는 반드시 4개의 스페이스로 들여 쓰기를 허용해야 하며, [<span class="caps">MUST</span> <span class="caps">NOT</span>] 들여 쓰기에 탭을 사용하지 않아야&nbsp;합니다.</p>
+<blockquote>
+<p>Code <span class="caps">MUST</span> use an indent of 4 spaces, and <span class="caps">MUST</span> <span class="caps">NOT</span> use tabs for&nbsp;indenting.</p>
+</blockquote>
+<p>주의하세요: 탭과 스페이스를 섞어 쓰지 않고 스페이스만 사용한다면, diff, 패치, 이력, 주석에서 발생하는 문제를 피할 수 있습니다. 스페이스를 이용하면 행간 정렬을 위해 세분화된 하위 들여 쓰기를 쉽게 추가할 수&nbsp;있습니다.</p>
+<blockquote>
+<p>N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid problems with diffs, patches, history, and annotations. The use of spaces also makes it easy to insert fine-grained sub-indentation for inter-line&nbsp;alignment.</p>
+</blockquote>
+<h2 id="25-truefalsenull">2.5. 키워드와&nbsp;True/False/Null</h2>
+<p>[<span class="caps">MUST</span>] <span class="caps">PHP</span> <a href="http://php.net/manual/en/reserved.keywords.php">키워드</a>는 반드시 소문자로&nbsp;표기합니다.</p>
+<blockquote>
+<p><span class="caps">PHP</span> <a href="http://php.net/manual/en/reserved.keywords.php">keywords</a> <span class="caps">MUST</span> be in lower&nbsp;case.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] <span class="caps">PHP</span> 상수인 <code>true</code>, <code>false</code>, <code>null</code> 은 반드시 소문자로&nbsp;표기합니다.</p>
+<blockquote>
+<p>The <span class="caps">PHP</span> constants <code>true</code>, <code>false</code>, and <code>null</code> <span class="caps">MUST</span> be in lower&nbsp;case.</p>
+</blockquote>
+<h1 id="3-namespace">3. Namespace와 사용&nbsp;선언</h1>
+<p>[<span class="caps">MUST</span>] Namespace가 존재하는 경우, <code>namespace</code> 정의된 다음에 한 줄은 비워 둬야&nbsp;합니다.</p>
+<blockquote>
+<p>When present, there <span class="caps">MUST</span> be one blank line after the <code>namespace</code> declaration.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] Namespace가 존재하는 경우, <code>namespace</code> 정의된 이후 라인에 모든 <code>use</code> 가 정의되어야&nbsp;합니다.</p>
+<blockquote>
+<p>When present, all <code>use</code> declarations <span class="caps">MUST</span> go after the <code>namespace</code> declaration.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] <code>use</code> 키워드는 정의마다 하나씩 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> be one <code>use</code> keyword per&nbsp;declaration.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] <code>use</code> 블록 다음에 한 줄을 비워 둬야&nbsp;합니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> be one blank line after the <code>use</code> block.</p>
+</blockquote>
+<p>예를&nbsp;들어:</p>
+<blockquote>
+<p>For&nbsp;example:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nx">namesapce</span> <span class="nx">Vender\Package</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">FooClass</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">BarClass</span> <span class="k">as</span> <span class="nx">Bar</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">OhterVender\OtherPackage\BazClass</span><span class="p">;</span>
+
+<span class="c1">// ... additinal PHP code ...</span>
+</pre></div>
+
+
+<h1 id="4">4. 클래스, 속성,&nbsp;메서드</h1>
+<p><span class="dquo">&ldquo;</span>class&rdquo;라는 용어는 모든 클래스, 인터페이스, 특성을&nbsp;나타냅니다.</p>
+<blockquote>
+<p>The term “class” refers to all classes, interfaces, and&nbsp;traits.</p>
+</blockquote>
+<h2 id="41">4.1. 확장과&nbsp;구현</h2>
+<p>[<span class="caps">MUST</span>] <code>extends</code> 와 <code>implements</code> 키워드는 클래스 이름과 같은 줄에서 선언되어야&nbsp;합니다.</p>
+<blockquote>
+<p>The <code>extends</code> and <code>implements</code> keywords <span class="caps">MUST</span> be declared on the same line as the class&nbsp;name.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 해당 클래스를 여는 중괄호는 홀로 다음 줄에 있어야 합니다; [<span class="caps">MUST</span>] 클래스 닫는 중괄호는 본문 끝 다음 줄에 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>The opening brace for the class <span class="caps">MUST</span> go on its own line; the closing brace for the class <span class="caps">MUST</span> go on the next line after the&nbsp;body.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">FooClass</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">BarClass</span> <span class="k">as</span> <span class="nx">Bar</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">OtherVendor\OtherPackage\BazClass</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">ClassName</span> <span class="k">extends</span> <span class="nx">ParentClass</span> <span class="k">implements</span> <span class="nx">\ArrayAccess</span><span class="p">,</span> <span class="nx">\Countable</span>
+<span class="p">{</span>
+    <span class="c1">// constants, properties, methods</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>[<span class="caps">MAY</span>] <code>implements</code> 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한 번만 들여 써질 수 있습니다. [<span class="caps">MUST</span>] 그렇게 표현할 때, 목록의 첫 번째 항목은 다음 줄에 있어야 하며, [<span class="caps">MUST</span>] 한 줄에 하나의 인터페이스만 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>Lists of <code>implements</code> <span class="caps">MAY</span> be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list <span class="caps">MUST</span> be on the next line, and there <span class="caps">MUST</span> be only one interface per&nbsp;line.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">FooClass</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">BarClass</span> <span class="k">as</span> <span class="nx">Bar</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">OtherVendor\OtherPackage\BazClass</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">ClassName</span> <span class="k">extends</span> <span class="nx">ParentClass</span> <span class="k">implements</span><span class="nx">\ArrayAccess</span><span class="p">,</span> <span class="nx">\Countable</span><span class="p">,</span> <span class="nx">\Serializable</span>
+<span class="p">{</span>
+    <span class="c1">// constants, properties, methods</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="42">4.2.&nbsp;속성</h2>
+<p>[<span class="caps">MUST</span>] 모든 속성에서 가시성을 반드시 선언해야&nbsp;합니다.</p>
+<blockquote>
+<p>Visibility <span class="caps">MUST</span> be declared on all&nbsp;properties.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 속성을 선언하는데 <code>var</code> 키워드를 사용하면 안&nbsp;됩니다.</p>
+<blockquote>
+<p>The <code>var</code> keyword <span class="caps">MUST</span> <span class="caps">NOT</span> be used to declare a&nbsp;property.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 명령문마다 하나 이상의 속성이 선언해서는 안&nbsp;됩니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> <span class="caps">NOT</span> be more than one property declared per&nbsp;statement.</p>
+</blockquote>
+<p>[<span class="caps">SHOULD</span> <span class="caps">NOT</span>] protected 나 private 가시성을 나타내기 위해 <code>_</code> 로 속성 이름을 시작하면 안&nbsp;됩니다.</p>
+<blockquote>
+<p>Property names <span class="caps">SHOULD</span> <span class="caps">NOT</span> be prefixed with a single underscore to indicate protected or private&nbsp;visibility.</p>
+</blockquote>
+<p>속성 선언은 다음과&nbsp;같습니다.</p>
+<blockquote>
+<p>A property declaration looks like the&nbsp;following.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">ClassName</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nv">$foo</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="43">4.3.&nbsp;메서드</h2>
+<p>[<span class="caps">MUST</span>] 모든 메서드는 가시성을 선언해야&nbsp;합니다.</p>
+<blockquote>
+<p>Visibility <span class="caps">MUST</span> be declared on all&nbsp;methods.</p>
+</blockquote>
+<p>[<span class="caps">SHOULD</span> <span class="caps">NOT</span>] protected 나 private 가시성을 나타내기 위해 <code>_</code> 로 메서드 이름을 시작하면 안&nbsp;됩니다.</p>
+<blockquote>
+<p>Method names <span class="caps">SHOULD</span> <span class="caps">NOT</span> be prefixed with a single underscore to indicate protected or private&nbsp;visibility.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 메서드 이름 뒤에 스페이스를 추가해서는 안 됩니다. [<span class="caps">MUST</span>] 여는 중괄호는 반드시 메서드 선언 다음 줄에 있어야 하고, [<span class="caps">MUST</span>] 닫는 중괄호는 그 다음 줄에 있어야 합니다. [<span class="caps">MUST</span> <span class="caps">NOT</span>] 여는 중괄호 뒤에 스페이스가 있어서 안되며, [<span class="caps">MUST</span> <span class="caps">NOT</span>] 닫는 괄호 앞에 스페이스가 있어서는&nbsp;안됩니다.</p>
+<blockquote>
+<p>Method names <span class="caps">MUST</span> <span class="caps">NOT</span> be declared with a space after the method name. The opening brace <span class="caps">MUST</span> go on its own line, and the closing brace <span class="caps">MUST</span> go on the next line following the body. There <span class="caps">MUST</span> <span class="caps">NOT</span> be a space after the opening parenthesis, and there <span class="caps">MUST</span> <span class="caps">NOT</span> be a space before the closing&nbsp;parenthesis.</p>
+</blockquote>
+<p>메서드 선언은 다음과 같습니다. 괄호, 쉼표, 스페이스, 중괄호의 배치에 조심해서&nbsp;사용합니다:</p>
+<blockquote>
+<p>A method declaration looks like the following. Note the placement of parentheses, commas, spaces, and&nbsp;braces:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">ClassName</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">fooBarBaz</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="o">&amp;</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span> <span class="o">=</span> <span class="p">[])</span>
+    <span class="p">{</span>
+        <span class="c1">// method body</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="44">4.4. 메서드&nbsp;인수</h2>
+<p>인수 목록에서는 [<span class="caps">MUST</span> <span class="caps">NOT</span>] 쉼표 앞에 공백이 있으면 됩니다. [<span class="caps">MUST</span>]  쉼표 뒤에 공백을 두어야&nbsp;합니다.</p>
+<blockquote>
+<p>In the argument list, there <span class="caps">MUST</span> <span class="caps">NOT</span> be a space before each comma, and there <span class="caps">MUST</span> be one space after each&nbsp;comma.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 기본 값을 가진 메서드 인수는 인수 목록의 마지막에 위치해야&nbsp;합니다.</p>
+<blockquote>
+<p>Method arguments with default values <span class="caps">MUST</span> go at the end of the argument&nbsp;list.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">ClassName</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="o">&amp;</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span> <span class="o">=</span> <span class="p">[])</span>
+    <span class="p">{</span>
+        <span class="c1">// method body</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>[<span class="caps">MAY</span>] 인수 목록은 여러 줄에 걸쳐 나눌 수 있으며, 각 줄은 한 번만 들여 쓰기 할 수 있습니다. [<span class="caps">MUST</span>] 여러 줄로 나눠 표기할 때는 첫 번째 항목은 다음 줄에 있어야 합니다. [<span class="caps">MUST</span>] 한 줄에 하나의 인수만 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>Argument lists <span class="caps">MAY</span> be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list <span class="caps">MUST</span> be on the next line, and there <span class="caps">MUST</span> be only one argument per&nbsp;line.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 인수 목록이 여러 줄에 걸쳐 분할되어 있으면, 닫는 괄호와 여는 괄호는 스페이스 하나로 하나의 라인에 같이 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>When the argument list is split across multiple lines, the closing parenthesis and opening brace <span class="caps">MUST</span> be placed together on their own line with one space between&nbsp;them.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">ClassName</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">aVeryLongMethodName</span><span class="p">(</span>
+        <span class="nx">ClassTypeHint</span> <span class="nv">$arg1</span><span class="p">,</span>
+        <span class="o">&amp;</span><span class="nv">$arg2</span><span class="p">,</span>
+        <span class="k">array</span> <span class="nv">$arg3</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// method body</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="45-abstract-final-static">4.5. abstract, final,&nbsp;static</h2>
+<p>[<span class="caps">MUST</span>] <code>abstract</code> 와 <code>final</code> 선언은 가시성 선언 앞에 와야&nbsp;합니다.</p>
+<blockquote>
+<p>When present, the <code>abstract</code> and <code>final</code> declarations <span class="caps">MUST</span> precede the visibility&nbsp;declaration.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] <code>static</code> 선언은 가시성 선언 뒤에 와야&nbsp;합니다.</p>
+<blockquote>
+<p>When present, the <code>static</code> declaration <span class="caps">MUST</span> come after the visibility&nbsp;declaration.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
+
+<span class="k">abstract</span> <span class="k">class</span> <span class="nc">ClassName</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="k">static</span> <span class="nv">$foo</span><span class="p">;</span>
+
+    <span class="k">abstract</span> <span class="k">protected</span> <span class="k">function</span> <span class="nf">zim</span><span class="p">();</span>
+
+    <span class="k">final</span> <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">bar</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// method body</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="46">4.6. 메서드와 펑션&nbsp;사용</h2>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 메서드나 함수 호출을 할 경우, 메서드 상에 공백이 없어야 합니다. 또는 [<span class="caps">MUST</span> <span class="caps">NOT</span>] 함수 이름과 여는 괄호 뒤에는 공백이 있어서는 안 됩니다. 그리고 [<span class="caps">MUST</span> <span class="caps">NOT</span>] 닫는 괄호 앞에는 공백이 없어야 합니다. [<span class="caps">MUST</span> <span class="caps">NOT</span>] 인수 목록에는 쉼표 앞에 공백이 있어서 안되며, [<span class="caps">MUST</span>] 쉼표 뒤에 공백이 와야&nbsp;합니다.</p>
+<blockquote>
+<p>When making a method or function call, there <span class="caps">MUST</span> <span class="caps">NOT</span> be a space between the method or function name and the opening parenthesis, there <span class="caps">MUST</span> <span class="caps">NOT</span> be a space after the opening parenthesis, and there <span class="caps">MUST</span> <span class="caps">NOT</span> be a space before the closing parenthesis. In the argument list, there <span class="caps">MUST</span> <span class="caps">NOT</span> be a space before each comma, and there <span class="caps">MUST</span> be one space after each&nbsp;comma.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nx">bar</span><span class="p">();</span>
+<span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
+<span class="nx">Foo</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
+</pre></div>
+
+
+<p>[<span class="caps">MAY</span>] 인수 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한번 들여 쓰일 수 있습니다. [<span class="caps">MUST</span>] 이렇게 할<br>
+ 때 목록의 첫 번째 항목은 다음 줄에 있어야 합니다. [<span class="caps">MUST</span>] 한 줄에 하나의 인수만 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>Argument lists <span class="caps">MAY</span> be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list <span class="caps">MUST</span> be on the next line, and there <span class="caps">MUST</span> be only one argument per&nbsp;line.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span>
+    <span class="nv">$longArgument</span><span class="p">,</span>
+    <span class="nv">$longerArgument</span><span class="p">,</span>
+    <span class="nv">$muchLongerArgument</span>
+<span class="p">);</span>
+</pre></div>
+
+
+<h1 id="5">5.&nbsp;제어문</h1>
+<p>제어문에 대한 일반적인 스타일 규칙은 다음과&nbsp;같습니다:</p>
+<blockquote>
+<p>The general style rules for control structures are as&nbsp;follows:</p>
+</blockquote>
+<ul>
+<li>
+<p>[<span class="caps">MUST</span>] 제어문 키워드 다음에 스페이스가 하나 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> be one space after the control structure&nbsp;keyword</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 여는 괄호 뒤에 스페이스가 있어서는 안&nbsp;됩니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> <span class="caps">NOT</span> be a space after the opening&nbsp;parenthesis</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 닫는 괄호 앞에 스페이스가 있어서는 안&nbsp;됩니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> <span class="caps">NOT</span> be a space before the closing&nbsp;parenthesis</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 닫는 괄호와 여는 중괄호 사이에 스페이스가 하나 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> be one space between the closing parenthesis and the opening&nbsp;brace</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 제어문 내부는 반드시 한번 들여 쓰기 해야&nbsp;합니다.</p>
+<blockquote>
+<p>The structure body <span class="caps">MUST</span> be indented&nbsp;once</p>
+</blockquote>
+</li>
+<li>
+<p>[<span class="caps">MUST</span>] 닫는 중괄호는 제어문이 끝나는 다음 줄에 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>The closing brace <span class="caps">MUST</span> be on the next line after the&nbsp;body</p>
+</blockquote>
+</li>
+</ul>
+<p>[<span class="caps">MUST</span>] 제어문 본체는 중괄호로 묶어야 합니다. 중괄호를 이용하여 제어문이 어떻게 보여줄지를 표준화하고, 개행이 되었을 때, 오류가 발생할 가능성을 줄여&nbsp;줍니다.</p>
+<blockquote>
+<p>The body of each structure <span class="caps">MUST</span> be enclosed by braces. This standardizes how the structures look, and reduces the likelihood of introducing errors as new lines get added to the&nbsp;body.</p>
+</blockquote>
+<h2 id="51-if-elseif-else">5.1. if, elseif,&nbsp;else</h2>
+<p><code>if</code> 문 구조는 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다. <code>else</code> 와 <code>elseif</code> 는 이전 문구의 닫는 중괄호와 같은 줄에&nbsp;있습니다.</p>
+<blockquote>
+<p>An <code>if</code> structure looks like the following. Note the placement of parentheses, spaces, and braces; and that <code>else</code> and <code>elseif</code> are on the same line as the closing brace from the earlier&nbsp;body.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$expr1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// if body</span>
+<span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$expr2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// elseif body</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// else body;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>[<span class="caps">SHOULD</span>] <code>else if</code> 대신 <code>elseif</code> 키워드를 사용하여 모든 제어 키워드가 단일 단어처럼 보이도록 해야&nbsp;합니다.</p>
+<blockquote>
+<p>The keyword <code>elseif</code> <span class="caps">SHOULD</span> be used instead of <code>else if</code> so that all control keywords look like single&nbsp;words.</p>
+</blockquote>
+<h2 id="52-switch-case">5.2. switch,&nbsp;case</h2>
+<p><code>switch</code> 문의 구조는 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다. [<span class="caps">MUST</span>] <code>case</code> 문은 <code>switch</code> 보다 한번 들여 쓰기가 되어야 합니다. [<span class="caps">MUST</span>] <code>break</code> 키워드 (또는 다른 종료 키워드)는 <code>case</code> 문과 같은 수준에서 들여 쓰기가 되어야 합니다. [<span class="caps">MUST</span>] 비어 있지 않은 <code>case</code> 문에서 다음 문으로 넘어가야 될 경우, <code>// no break</code> 와 같은 주석이 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>A <code>switch</code> structure looks like the following. Note the placement of parentheses, spaces, and braces. The <code>case</code> statement <span class="caps">MUST</span> be indented once from <code>switch</code>, and the <code>break</code> keyword (or other terminating keyword) <span class="caps">MUST</span> be indented at the same level as the <code>case</code> body. There <span class="caps">MUST</span> be a comment such as <code>// no break</code> when fall-through is intentional in a non-empty <code>case</code> body.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">switch</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+        <span class="k">echo</span> <span class="s1">&#39;First case, with a break&#39;</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="k">echo</span> <span class="s1">&#39;Second case, which falls through&#39;</span><span class="p">;</span>
+        <span class="c1">// no break</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+    <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+    <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+        <span class="k">echo</span> <span class="s1">&#39;Third case, return instead of break&#39;</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="k">echo</span> <span class="s1">&#39;Default case&#39;</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="53-while-do-while"><strong>5.3. while, do&nbsp;while</strong></h2>
+<p><code>while</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길&nbsp;바랍니다.</p>
+<blockquote>
+<p>A <code>while</code> statement looks like the following. Note the placement of parentheses, spaces, and&nbsp;braces.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// structure body</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>마찬가지로 <code>do while</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길&nbsp;바랍니다.</p>
+<blockquote>
+<p>Similarly, a <code>do while</code> statement looks like the following. Note the placement of parentheses, spaces, and&nbsp;braces.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="c1">// structure body;</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">);</span>
+</pre></div>
+
+
+<h2 id="54-for"><strong>5.4.&nbsp;for</strong></h2>
+<p><code>for</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길&nbsp;바랍니다.</p>
+<blockquote>
+<p>A <code>for</code> statement looks like the following. Note the placement of parentheses, spaces, and&nbsp;braces.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// for body</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="55-foreach"><strong>5.5.&nbsp;foreach</strong></h2>
+<p><code>foreach</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길&nbsp;바랍니다.</p>
+<blockquote>
+<p>A <code>foreach</code> statement looks like the following. Note the placement of parentheses, spaces, and&nbsp;braces.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$iterable</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// foreach body</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="56-try-catch"><strong>5.6. try,&nbsp;catch</strong></h2>
+<p><code>try catch</code> 블록은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길&nbsp;바랍니다.</p>
+<blockquote>
+<p>A <code>try catch</code> block looks like the following. Note the placement of parentheses, spaces, and&nbsp;braces.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="c1">// try body</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">FirstExceptionType</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// catch body</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">OtherExceptionType</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// catch body</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h1 id="6-closures">6.&nbsp;Closures</h1>
+<p>[<span class="caps">MUST</span>] 클로저는 <code>function</code> 키워드 뒤에 공백과 <code>use</code> 키워드 앞뒤 공백으로 선언해야&nbsp;합니다.</p>
+<blockquote>
+<p>Closures <span class="caps">MUST</span> be declared with a space after the <code>function</code> keyword, and a space before and after the <code>use</code> keyword.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 여는 중괄호는 반드시 같은 줄에 있어야 하며, [<span class="caps">MUST</span>] 닫는 중괄호는 반드시 그다음 줄에 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>The opening brace <span class="caps">MUST</span> go on the same line, and the closing brace <span class="caps">MUST</span> go on the next line following the&nbsp;body.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 인수 목록이나 변수 목록에서의 여는 괄호 뒤에는 공백이 있어서는 안 되며, [<span class="caps">MUST</span> <span class="caps">NOT</span>] 닫는 괄호 앞에서도 공백이 있어서는 안&nbsp;됩니다.</p>
+<blockquote>
+<p>There <span class="caps">MUST</span> <span class="caps">NOT</span> be a space after the opening parenthesis of the argument list or variable list, and there <span class="caps">MUST</span> <span class="caps">NOT</span> be a space before the closing parenthesis of the argument list or variable&nbsp;list.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span> <span class="caps">NOT</span>] 인수 목록과 변수 목록에 있는 쉼표 앞에는 스페이스가 있어서는 안되며, [<span class="caps">MUST</span>] 쉼표 뒤에 스페이스가 들어가야&nbsp;합니다.</p>
+<blockquote>
+<p>In the argument list and variable list, there <span class="caps">MUST</span> <span class="caps">NOT</span> be a space before each comma, and there <span class="caps">MUST</span> be one space after each&nbsp;comma.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] 기본 값을 가진 클로저 인수는 인수 목록의 끝에&nbsp;와야합니다.</p>
+<blockquote>
+<p>Closure arguments with default values <span class="caps">MUST</span> go at the end of the argument&nbsp;list.</p>
+</blockquote>
+<p>클로저는 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길&nbsp;바랍니다.</p>
+<blockquote>
+<p>A closure declaration looks like the following. Note the placement of parentheses, commas, spaces, and&nbsp;braces:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nv">$closureWithArgs</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$arg2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// body</span>
+<span class="p">};</span>
+
+<span class="nv">$closureWithArgsAndVars</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$arg2</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$var1</span><span class="p">,</span> <span class="nv">$var2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// body</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<p>[<span class="caps">MAY</span>] 인수 목록과 변수 목록은 여러 행에 걸쳐 나눠질 수 있습니다. (각 행은 한번 들여 쓰기가 들어가야 합니다.) 그렇게 할때, [<span class="caps">MUST</span>] 목록의 첫 번째 항목은 다음 줄에 있어야 하며, [<span class="caps">MUST</span>] 한 줄에 하나의 인수나 변수만 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>Argument lists and variable lists <span class="caps">MAY</span> be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list <span class="caps">MUST</span> be on the next line, and there <span class="caps">MUST</span> be only one argument or variable per&nbsp;line.</p>
+</blockquote>
+<p>[<span class="caps">MUST</span>] (인수이거나 변수일때) 마지막 리스트가 여러 줄로 나눠질 경우, 닫는 괄호와 여는 중괄호는 같은 줄에 공백으로 나눠져 있어야&nbsp;합니다.</p>
+<blockquote>
+<p>When the ending list (whether of arguments or variables) is split across multiple lines, the closing parenthesis and opening brace <span class="caps">MUST</span> be placed together on their own line with one space between&nbsp;them.</p>
+</blockquote>
+<p>다음은 인수 목록이 있거나 없는 클로저의 예와 여러 줄로 표현된 변수 목록에 대한&nbsp;예제입니다.</p>
+<blockquote>
+<p>The following are examples of closures with and without argument lists and variable lists split across multiple&nbsp;lines.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nv">$longArgs_noVars</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span>
+    <span class="nv">$longArgument</span><span class="p">,</span>
+    <span class="nv">$longerArgument</span><span class="p">,</span>
+    <span class="nv">$muchLongerArgument</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// body</span>
+<span class="p">};</span>
+
+<span class="nv">$noArgs_longVars</span> <span class="o">=</span> <span class="k">function</span> <span class="p">()</span> <span class="k">use</span> <span class="p">(</span>
+    <span class="nv">$longVar1</span><span class="p">,</span>
+    <span class="nv">$longerVar2</span><span class="p">,</span>
+    <span class="nv">$muchLongerVar3</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// body</span>
+<span class="p">};</span>
+
+<span class="nv">$longArgs_longVars</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span>
+    <span class="nv">$longArgument</span><span class="p">,</span>
+    <span class="nv">$longerArgument</span><span class="p">,</span>
+    <span class="nv">$muchLongerArgument</span>
+<span class="p">)</span> <span class="k">use</span> <span class="p">(</span>
+    <span class="nv">$longVar1</span><span class="p">,</span>
+    <span class="nv">$longerVar2</span><span class="p">,</span>
+    <span class="nv">$muchLongerVar3</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// body</span>
+<span class="p">};</span>
+
+<span class="nv">$longArgs_shortVars</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span>
+    <span class="nv">$longArgument</span><span class="p">,</span>
+    <span class="nv">$longerArgument</span><span class="p">,</span>
+    <span class="nv">$muchLongerArgument</span>
+<span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$var1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// body</span>
+<span class="p">};</span>
+
+<span class="nv">$shortArgs_longVars</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$arg</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span>
+    <span class="nv">$longVar1</span><span class="p">,</span>
+    <span class="nv">$longerVar2</span><span class="p">,</span>
+    <span class="nv">$muchLongerVar3</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// body</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<p>형식 지정 규칙은 함수 또는 메서드 호출에서 클로저가 직접 인수로 사용될 때에도&nbsp;적용됩니다.</p>
+<blockquote>
+<p>Note that the formatting rules also apply when the closure is used directly in a function or method call as an&nbsp;argument.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span>
+    <span class="nv">$arg1</span><span class="p">,</span>
+    <span class="k">function</span> <span class="p">(</span><span class="nv">$arg2</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$var1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// body</span>
+    <span class="p">},</span>
+    <span class="nv">$arg3</span>
+<span class="p">);</span>
+</pre></div>
+
+
+<h1 id="7-conclusion">7.&nbsp;Conclusion</h1>
+<p>이 가이드에서 의도적으로 생략한 스타일과 연습해야 될 많은 요소들이 있습니다. 다음 내용들이 포함되지만 이 내용에 국한되지&nbsp;않습니다:</p>
+<blockquote>
+<p>There are many elements of style and practice intentionally omitted by this guide. These include but are not limited&nbsp;to:</p>
+</blockquote>
+<ul>
+<li>
+<p>전역 변수, 전역 상수&nbsp;선언</p>
+<blockquote>
+<p>Declaration of global variables and global&nbsp;constants</p>
+</blockquote>
+</li>
+<li>
+<p>함수&nbsp;선언</p>
+<blockquote>
+<p>Declaration of&nbsp;functions</p>
+</blockquote>
+</li>
+<li>
+<p>연산자와&nbsp;할당자</p>
+<blockquote>
+<p>Operators and&nbsp;assignment</p>
+</blockquote>
+</li>
+<li>
+<p>라인간&nbsp;정렬</p>
+<blockquote>
+<p>Inter-line&nbsp;alignment</p>
+</blockquote>
+</li>
+<li>
+<p>주석과 문서&nbsp;블록</p>
+<blockquote>
+<p>Comments and documentation&nbsp;blocks</p>
+</blockquote>
+</li>
+<li>
+<p>클래스 이름 접두사와&nbsp;접미사</p>
+<blockquote>
+<p>Class name prefixes and&nbsp;suffixes</p>
+</blockquote>
+</li>
+<li>
+<p>모범&nbsp;사례</p>
+<blockquote>
+<p>Best&nbsp;practices</p>
+</blockquote>
+</li>
+</ul>
+<p>[<span class="caps">MAY</span>] 향후 권장 사항은 스타일이나 연습해야 될 많은 요소들을 다루기 위해 이 가이드를 수정하고 확장할 수&nbsp;있습니다.</p>
+<blockquote>
+<p>Future recommendations <span class="caps">MAY</span> revise and extend this guide to address those or other elements of style and&nbsp;practice.</p>
+</blockquote></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 19. 02. 05.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/php.html" class="article_tag">php</a>
+              <a href="https://ujuc.github.io/tag/psr.html" class="article_tag">psr</a>
+              <a href="https://ujuc.github.io/tag/prs-2.html" class="article_tag">prs-2</a>
+          </i>
+        </div>
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+        repo="ujuc/ujuc.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row">
+  <div class="container">
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><i class="far fa-closed-captioning"></i> BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
