@@ -7,7 +7,7 @@ Summary: zsh이 올라가고 난뒤에 vim도 같이 올라갔더니 에러를 �
 
 아... 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게 해야되지.
 
-![error!]({filename}/img/2016-01-16_error.png)
+![error!]({static}/img/2016-01-16_error.png)
 
 ### 원인
 `zcompdump` 때문이라고 하고, 이건 매번 문제가 있나보다.ㅡ.ㅡ;;

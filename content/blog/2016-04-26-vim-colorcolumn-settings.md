@@ -17,7 +17,7 @@ Summary: vim에서 코드의 길이를 줄을 그어 쉽게 확인하자.
 
 위와 같이 설정하면 아래와 같이 줄이 그어져있는 모습을 볼 수 있다.
 
-![vim_ex]({filename}/img/2016-04-26_vim.png)
+![vim_ex]({static}/img/2016-04-26_vim.png)
 
 이건 덤...
 

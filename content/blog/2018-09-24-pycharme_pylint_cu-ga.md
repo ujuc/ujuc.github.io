@@ -21,5 +21,5 @@ pylint만 있는건 아니지만, pep8이나 다른것들을 정리하려면... 
 
 다음 사진과 같이 나는 내용을 수정해서 사용한다.
 
-![My_settings]({filename}/img/2018-09-24_pycharm_export_tool_setting.png)
+![My_settings]({static}/img/2018-09-24_pycharm_export_tool_setting.png)
 
