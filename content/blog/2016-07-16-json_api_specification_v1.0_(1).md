@@ -1,7 +1,8 @@
-Title: JSON API Specification v1.0 (1)
+Title: [번역] JSON API Specification v1.0 (1)
 Date: 2016-07-16 12:08
+Modified: 2019-03-23 16:50
 Category: Develop
-Tags: json, api, specification, json api, 스펙 문서
+Tags: json, api, specification, json api, 스펙 문서, transelate
 Slug: json_api_specification_v1.0_(1)
 Summary: API 쪽 문서를 볼일 이있어서 JSON API를 확인하였다. 그것에 대한 기능 문서 번역본. 나중에 보고 해야지...
 

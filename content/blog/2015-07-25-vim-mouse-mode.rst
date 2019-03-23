@@ -1,10 +1,10 @@
-Vim mouse mode
+[번역] Vim mouse mode
 ############################
 
 :date: 2015-07-25 13:22
-:modified: 2015-08-15 16:00
+:modified: 2019-03-23 17:00
 :category: Develop
-:tags: vim, vi, vimrc, mouse, 기본 설정
+:tags: vim, vi, vimrc, mouse, 기본 설정, transelate
 :slug: vim-mouse-mode
 :summary: .vimrc 설정을 하는데 사용했던 "mouse" 명령어에 대한 내용.
 

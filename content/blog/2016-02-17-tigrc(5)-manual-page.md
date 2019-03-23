@@ -1,7 +1,8 @@
-Title: tigrc(5) Manual Page
+Title: [번역] tigrc(5) Manual Page
 Date: 2016-02-17 21:42
+Modified: 2019-03-23 16:50
 Category: Develop
-Tags: tig, tigrc, git, ncurses
+Tags: tig, tigrc, git, ncurses, transelate
 Slug: tigrc(5)-manual-page
 Summary: tigrc 파일에 대한 내용이다.
 Status: draft
