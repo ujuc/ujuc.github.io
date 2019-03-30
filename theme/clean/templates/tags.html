@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="container">
+      {% for tag, articles in tags|sort %}
+        <div class="article_text">
+          <i class="fas fa-tag"></i>
+          <a href="{{ STIEURL }}/{{ tag.url }}">{{ tag }}</a> / <i class="far fa-copy"></i> {{ articles|count }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
