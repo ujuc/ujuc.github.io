@@ -94,7 +94,6 @@ MARKDOWN = {
 
 # Plugins
 PLUGIN_PATHS = [
-    './pelican-plugins/pelican-gist'
 ]
 
 PLUGINS = [
