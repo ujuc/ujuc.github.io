@@ -97,5 +97,4 @@ PLUGIN_PATHS = [
 ]
 
 PLUGINS = [
-    'pelican_gist'
 ]
