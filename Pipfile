@@ -12,6 +12,9 @@ pendulum = "*"
 Markdown = {version = "<3.0"}
 typogrify = "*"
 
+[scripts]
+new = './write.py new'
+
 [dev-packages]
 pylint = "*"
 
