@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-09-28T18:47:14+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록&amp;nbsp;하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수&amp;nbsp;있다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-05-18T11:59:45+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Docker Image 옮기기 (without DockerHub)</title><link href="https://ujuc.github.io/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/" rel="alternate"></link><published>2019-05-18T11:59:45+09:00</published><updated>2019-05-18T11:59:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-18:/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/</id><summary type="html">&lt;p&gt;반강제 폐쇄망에 이미지를&amp;nbsp;올리자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 &lt;span class="caps"&gt;AWS&lt;/span&gt; ECR을 사용하는건&amp;nbsp;제외. &lt;/p&gt;
+&lt;p&gt;개발 과정에서 실제 OS에서 작동하는지 확인을 위한것이라 올리고 인증하고&amp;nbsp;귀찮다.&lt;/p&gt;
+&lt;p&gt;뭘로 검색했는지는 기억이 없지만 다음과 같은 글을 확인했고, 다음과 같은 명령을 사용하면 인터넷이나 Docker 레포없이 작업이&amp;nbsp;가능하다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;출처: &lt;a href="https://stackoverflow.com/questions/23935141/how-to-copy-docker-images-from-one-host-to-another-without-using-a-repository"&gt;How to copy Docker images from one host to another without using a&amp;nbsp;repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;우선 로컬에서 Docker 이미지를 빌드한다. 명령어는 알꺼니&amp;nbsp;넘어가자.&lt;/p&gt;
+&lt;p&gt;다름 명령을 이용해서 tar 파일을&amp;nbsp;만들자.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker save -o &amp;lt;path &lt;span class="k"&gt;for&lt;/span&gt; generated tar file&amp;gt; &amp;lt;imange name&amp;gt;:&amp;lt;tag&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;만들어진 tar 파일을 원하는 곳에 업로드&amp;nbsp;시킨다.&lt;/p&gt;
+&lt;p&gt;이제 올린 노드에서 사용할 수 있도록 이미지를 docker에 등록해주면&amp;nbsp;끝.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker load -i &amp;lt;path to image tar file&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="_1"&gt;참고&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/commandline/save/"&gt;docker&amp;nbsp;save&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/commandline/load/"&gt;docker&amp;nbsp;load&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="docker"></category><category term="docker image"></category></entry><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록&amp;nbsp;하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Priority (&lt;span class="caps"&gt;PR&lt;/span&gt;)&lt;br&gt;
 Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. &lt;code&gt;rt&lt;/code&gt; 항목은 리얼타임 항목에 대한 내용을&amp;nbsp;나타냄&lt;/li&gt;
