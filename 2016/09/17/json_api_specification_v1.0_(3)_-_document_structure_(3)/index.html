@@ -138,24 +138,24 @@
 <blockquote>
 <p>Here’s how an article (i.e. a resource of type “articles”) might appear in a&nbsp;document:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>// ...
-{
- &quot;type&quot;: &quot;articles&quot;,
-  &quot;id&quot;: &quot;1&quot;,
-  &quot;attributes&quot;: {
-    &quot;title&quot;: &quot;Rails is Omakase&quot;
-  },
-  &quot;relationships&quot;: {
-    &quot;author&quot;: {
-      &quot;links&quot;: {
-        &quot;self&quot;: &quot;/articles/1/relationships/author&quot;,
-        &quot;related&quot;: &quot;/articles/1/author&quot;
-      },
-      &quot;data&quot;: { &quot;type&quot;: &quot;people&quot;, &quot;id&quot;: &quot;9&quot; }
-    }
-  }
-}
-    // ...
+<div class="codehilite"><pre><span></span><span class="o">//</span> <span class="p">...</span>
+<span class="err">{</span>
+ <span class="ss">&quot;type&quot;</span><span class="p">:</span> <span class="ss">&quot;articles&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;id&quot;</span><span class="p">:</span> <span class="ss">&quot;1&quot;</span><span class="p">,</span>
+  <span class="ss">&quot;attributes&quot;</span><span class="p">:</span> <span class="err">{</span>
+    <span class="ss">&quot;title&quot;</span><span class="p">:</span> <span class="ss">&quot;Rails is Omakase&quot;</span>
+  <span class="err">}</span><span class="p">,</span>
+  <span class="ss">&quot;relationships&quot;</span><span class="p">:</span> <span class="err">{</span>
+    <span class="ss">&quot;author&quot;</span><span class="p">:</span> <span class="err">{</span>
+      <span class="ss">&quot;links&quot;</span><span class="p">:</span> <span class="err">{</span>
+        <span class="ss">&quot;self&quot;</span><span class="p">:</span> <span class="ss">&quot;/articles/1/relationships/author&quot;</span><span class="p">,</span>
+        <span class="ss">&quot;related&quot;</span><span class="p">:</span> <span class="ss">&quot;/articles/1/author&quot;</span>
+      <span class="err">}</span><span class="p">,</span>
+      <span class="ss">&quot;data&quot;</span><span class="p">:</span> <span class="err">{</span> <span class="ss">&quot;type&quot;</span><span class="p">:</span> <span class="ss">&quot;people&quot;</span><span class="p">,</span> <span class="ss">&quot;id&quot;</span><span class="p">:</span> <span class="ss">&quot;9&quot;</span> <span class="err">}</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+    <span class="o">//</span> <span class="p">...</span>
 </pre></div></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
         <div class="article_meta">

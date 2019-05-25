@@ -110,17 +110,17 @@
 <li>간단하다. 기본적으로 Bluez가 설치가되어 있으니 그냥 켜주기만하면&nbsp;된다.</li>
 <li>먼저 <code>bluetooth</code> 데몬을&nbsp;실행시켜준다.</li>
 </ul>
-<div class="codehilite"><pre><span></span># systemctl stop bluetooth
-# systemctl start bluetooth
-# systemctl status bluetooth
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">systemctl</span> <span class="n">stop</span> <span class="n">bluetooth</span>
+<span class="o">#</span> <span class="n">systemctl</span> <span class="k">start</span> <span class="n">bluetooth</span>
+<span class="o">#</span> <span class="n">systemctl</span> <span class="n">status</span> <span class="n">bluetooth</span>
 </pre></div>
 
 
 <ul>
 <li>블루투스를 사용할 수 있도록 모듈을&nbsp;활성화시켜준다.</li>
 </ul>
-<div class="codehilite"><pre><span></span># rfkill list
-# rfkill unblock bluetooth
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">rfkill</span> <span class="n">list</span>
+<span class="o">#</span> <span class="n">rfkill</span> <span class="n">unblock</span> <span class="n">bluetooth</span>
 </pre></div>
 
 

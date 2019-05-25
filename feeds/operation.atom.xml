@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-05-18T11:59:45+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Docker Image 옮기기 (without DockerHub)</title><link href="https://ujuc.github.io/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/" rel="alternate"></link><published>2019-05-18T11:59:45+09:00</published><updated>2019-05-18T11:59:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-18:/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/</id><summary type="html">&lt;p&gt;반강제 폐쇄망에 이미지를&amp;nbsp;올리자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 &lt;span class="caps"&gt;AWS&lt;/span&gt; ECR을 사용하는건&amp;nbsp;제외. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-05-25T12:38:45+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Docker container 사용자 설정</title><link href="https://ujuc.github.io/2019/05/25/docker_container_sa-yong-ja_seor-jeong/" rel="alternate"></link><published>2019-05-25T12:38:45+09:00</published><updated>2019-05-25T12:38:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-25:/2019/05/25/docker_container_sa-yong-ja_seor-jeong/</id><summary type="html">&lt;p&gt;Docker container를 사용할때 발생한 에러에 대해서&amp;nbsp;작성하였다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 개발한 소스들을 Docker 이미지를 만들어서 ubuntu 18.04에서 작업을 할 수 있도록 구성을&amp;nbsp;했다.&lt;/p&gt;
+&lt;p&gt;인프라 작업을 하고 있지만, OS나 인프라는 매번 내가 생각했던 대로 잘 안&amp;nbsp;해준다.&lt;/p&gt;
+&lt;p&gt;이번에도 에러가&amp;nbsp;났다&amp;hellip;&lt;/p&gt;
+&lt;h3 id="_1"&gt;문제&lt;/h3&gt;
+&lt;p&gt;실행중인 Docker container에 접속해서 그 폴더를 사용하는 스크립트를 만든 다음 실행하였더니 Docker container에서 mount 해서 사용하는 볼륨 권한&amp;nbsp;문제.&lt;/p&gt;
+&lt;p&gt;폴더에 접근할 방법이&amp;nbsp;없단다.&lt;/p&gt;
+&lt;p&gt;Docker container에서 사용하는 사용자는 root. 이 root는 패이크 루트라서 GID는 호스트의 root와 동일하지만, container에서만 root이지 실제로 호스트에서는 제대로 작동하지&amp;nbsp;않는다.&lt;/p&gt;
+&lt;p&gt;해당 내용을 다른 분들에게 물었더니 그 폴더 권한을 &lt;code&gt;0777&lt;/code&gt; 로 변경해서 작업을 하라고 해서&amp;nbsp;기각.&lt;/p&gt;
+&lt;p&gt;어떤 넘이 어떻게 들어올 줄 모르는데 모든 걸&amp;nbsp;열라니!!!&lt;/p&gt;
+&lt;h3 id="_2"&gt;해결&lt;/h3&gt;
+&lt;p&gt;그래서 딴짓을&amp;nbsp;했다.&lt;/p&gt;
+&lt;p&gt;우선 호스트에서 필요한 dir을 생성했다. → 그러면 해당 폴더의 &lt;code&gt;gid&lt;/code&gt;와 &lt;code&gt;uid&lt;/code&gt;는 호스트 사용자의 &lt;code&gt;uid/gid&lt;/code&gt;를 사용하게&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;그리고 Docker에게서 새로운 사용자를 만들고 그에게 호스트 사용자와 동일한 &lt;code&gt;gid/uid&lt;/code&gt; 를 가질 수 있도록&amp;nbsp;하였다.&lt;/p&gt;
+&lt;p&gt;이건 Ubuntu에 하나의 유저만 있는 상태에서 가능한 설정이다. 만약 호스트에서 여러 사용자를 만들어서 사용한다면, 이 설정은 힘들다. &lt;code&gt;gid/uid&lt;/code&gt;가 다를 수 있다. Container 에서의 사용자는 root이외에 &lt;code&gt;www-data&lt;/code&gt; 와 같은 시스템 User 등급만 있지 실제 User 등급은 없어서 &lt;code&gt;gid : 1000&lt;/code&gt;, &lt;code&gt;uid : 1000&lt;/code&gt;을&amp;nbsp;가져가게된다.&lt;/p&gt;
+&lt;p&gt;다른 사용자가 있다면&amp;hellip; 다른 작업을 하도록&amp;nbsp;하자.&lt;/p&gt;
+&lt;p&gt;뒤지다 뒤지다 발견한 하나의&amp;nbsp;글.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href="https://codeyarns.com/2017/07/21/how-to-set-user-of-docker-container/"&gt;How to set user of Docker&amp;nbsp;container&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이 글의 문제점은 Docker다. 난 Docker-compose를 사용하고 있어서 다른 작업이&amp;nbsp;필요했다.&lt;/li&gt;
+&lt;li&gt;내 생각에는 이 옵션에 대한 Docker-compose 옵션이 있을 꺼라 생각하는데. 나중에 다른 작업할때&amp;nbsp;찾아봐야겠다.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="docker"></category><category term="container"></category><category term="ubuntu"></category><category term="linux"></category></entry><entry><title>Docker Image 옮기기 (without DockerHub)</title><link href="https://ujuc.github.io/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/" rel="alternate"></link><published>2019-05-18T11:59:45+09:00</published><updated>2019-05-18T11:59:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-18:/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/</id><summary type="html">&lt;p&gt;반강제 폐쇄망에 이미지를&amp;nbsp;올리자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 &lt;span class="caps"&gt;AWS&lt;/span&gt; ECR을 사용하는건&amp;nbsp;제외. &lt;/p&gt;
 &lt;p&gt;개발 과정에서 실제 OS에서 작동하는지 확인을 위한것이라 올리고 인증하고&amp;nbsp;귀찮다.&lt;/p&gt;
 &lt;p&gt;뭘로 검색했는지는 기억이 없지만 다음과 같은 글을 확인했고, 다음과 같은 명령을 사용하면 인터넷이나 Docker 레포없이 작업이&amp;nbsp;가능하다.&lt;/p&gt;
 &lt;ul&gt;
@@ -29,7 +49,7 @@ Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. &lt;code
 Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능하다. -20 ~ +19 까지의 값을 가지고 있으며, -20값이 우선순위가 가장 높은 값이고 양수로 올라갈수록 낮은 값이다. 0은 &lt;code&gt;PR&lt;/code&gt; 값과 동일한 설정을&amp;nbsp;나타낸다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="rriority"&gt;Rriority&amp;nbsp;계산&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;PR = 20 + (-20 ~ +19)
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -80,7 +100,7 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;ul&gt;
 &lt;li&gt;특정 사용자에 대한 모든 프로세스에대한 값을 정할때&amp;nbsp;사용한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Username    hard/soft    priority    10
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Username&lt;/span&gt;    &lt;span class="n"&gt;hard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;soft&lt;/span&gt;    &lt;span class="n"&gt;priority&lt;/span&gt;    &lt;span class="mi"&gt;10&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -149,16 +169,16 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;h3 id="template-statement"&gt;&lt;code&gt;template()&lt;/code&gt; statement&lt;/h3&gt;
 &lt;p&gt;문서상으로는 7버전 이상에서 사용할 수 있는&amp;nbsp;포맷이다.&lt;/p&gt;
 &lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본&amp;nbsp;템플릿이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;template(name=&amp;quot;FileFormat&amp;quot; type=&amp;quot;list&amp;quot;) {
-    property(name=&amp;quot;timestamp&amp;quot; dateFormat=&amp;quot;rfc3339&amp;quot;)
-    constant(value=&amp;quot; &amp;quot;)
-    property(name=&amp;quot;hostname&amp;quot;)
-    constant(value=&amp;quot; &amp;quot;)
-    property(name=&amp;quot;syslogtag&amp;quot;)
-    property(name=&amp;quot;msg&amp;quot; spifno1stsp=&amp;quot;on&amp;quot; )
-    property(name=&amp;quot;msg&amp;quot; droplastlf=&amp;quot;on&amp;quot; )
-    constant(value=&amp;quot;\n&amp;quot;)
-    }
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;FileFormat&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslogtag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;spifno1stsp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;on&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;droplastlf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;on&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -203,9 +223,9 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set $!usr!tpl2!msg = $msg;
-set $!usr!tpl2!dataflow = field($msg, 58, 2);
-template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=&amp;quot;$!usr!tpl2&amp;quot;)
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;tpl2&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;tpl2&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;dataflow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;58&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;tpl2&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;subtree&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;subtree&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$!usr!tpl2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -216,9 +236,9 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;template(name=&amp;quot;tpl3&amp;quot; type=&amp;quot;string&amp;quot;
-         string=&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;
-        )
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;template&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;tpl3&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;string&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+         &lt;span class="nv"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+        &lt;span class="ss"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -230,36 +250,36 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;/ul&gt;
 &lt;h4 id="option"&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#options"&gt;&lt;code&gt;option&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;예제로 이해하자. 필요하면 링크를 타고&amp;nbsp;보고.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;template(name=&amp;quot;outfmt&amp;quot; type=&amp;quot;list&amp;quot; option.jsonf=&amp;quot;on&amp;quot;) {
-         property(outname=&amp;quot;@timestamp&amp;quot; name=&amp;quot;timereported&amp;quot; dateFormat=&amp;quot;rfc3339&amp;quot; format=&amp;quot;jsonf&amp;quot;)
-         property(outname=&amp;quot;host&amp;quot; name=&amp;quot;hostname&amp;quot; format=&amp;quot;jsonf&amp;quot;)
-         property(outname=&amp;quot;severity&amp;quot; name=&amp;quot;syslogseverity-text&amp;quot; caseConversion=&amp;quot;upper&amp;quot; format=&amp;quot;jsonf&amp;quot;)
-         property(outname=&amp;quot;facility&amp;quot; name=&amp;quot;syslogfacility-text&amp;quot; format=&amp;quot;jsonf&amp;quot;)
-         property(outname=&amp;quot;syslog-tag&amp;quot; name=&amp;quot;syslogtag&amp;quot; format=&amp;quot;jsonf&amp;quot;)
-         property(outname=&amp;quot;source&amp;quot; name=&amp;quot;app-name&amp;quot; format=&amp;quot;jsonf&amp;quot;)
-         property(outname=&amp;quot;message&amp;quot; name=&amp;quot;msg&amp;quot; format=&amp;quot;jsonf&amp;quot;)
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;outfmt&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;option&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jsonf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;@timestamp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;timereported&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;severity&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslogseverity-text&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;caseConversion&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;upper&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;facility&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslogfacility-text&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslog-tag&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslogtag&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;source&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;app-name&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
- }
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;이렇게&amp;nbsp;작성하면,&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
-  &amp;quot;@timestamp&amp;quot;: &amp;quot;2018-03-01T01:00:00+00:00&amp;quot;,
-  &amp;quot;host&amp;quot;: &amp;quot;172.20.245.8&amp;quot;,
-  &amp;quot;severity&amp;quot;: &amp;quot;DEBUG&amp;quot;,
-  &amp;quot;facility&amp;quot;: &amp;quot;local4&amp;quot;,
-  &amp;quot;syslog-tag&amp;quot;: &amp;quot;tag&amp;quot;,
-  &amp;quot;source&amp;quot;: &amp;quot;tag&amp;quot;,
-  &amp;quot;message&amp;quot;: &amp;quot; msgnum:00000000:&amp;quot;
-}
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;@timestamp&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;2018-03-01T01:00:00+00:00&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;172.20.245.8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;severity&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;DEBUG&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;facility&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;local4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslog-tag&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;tag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;source&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;tag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot; msgnum:00000000:&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3 id="legacy-format"&gt;Legacy&amp;nbsp;Format&lt;/h3&gt;
 &lt;p&gt;6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을&amp;nbsp;권고하고있다.&lt;/p&gt;
 &lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본&amp;nbsp;템플릿이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$template FileFormat,&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$&lt;span class="nv"&gt;template&lt;/span&gt; &lt;span class="nv"&gt;FileFormat&lt;/span&gt;,&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -283,9 +303,9 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;/ul&gt;
 &lt;h3 id="_1"&gt;동적 파일 이름&amp;nbsp;생성&lt;/h3&gt;
 &lt;p&gt;두가지 방식이 있다만, 첫번째 방식으로 작성해서 템플릿 구성을 맞추는게 좋을것으로&amp;nbsp;보인다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;template (name=&amp;quot;DynFile&amp;quot; type=&amp;quot;string&amp;quot; string=&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;)
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;DynFile&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;string&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-$template DynFile,&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;
+&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="n"&gt;DynFile&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -948,10 +968,10 @@ $ crontab -l
 &lt;/ul&gt;</content><category term="python"></category><category term="monitoring"></category><category term="ssh"></category><category term="django"></category></entry><entry><title>Screen 명령어를 통해서 Serial 통신</title><link href="https://ujuc.github.io/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/" rel="alternate"></link><published>2013-01-09T11:39:40+09:00</published><updated>2018-03-11T11:39:40+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-01-09:/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/</id><summary type="html">&lt;p&gt;screen으로 serial 통신을 하는 프로그램으로&amp;nbsp;사용하자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이&amp;nbsp;발생하여…&lt;/p&gt;
 &lt;p&gt;여기 저기 찾다가. &lt;code&gt;Screen&lt;/code&gt;을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. &lt;code&gt;minicom&lt;/code&gt;도&amp;nbsp;필요없다.&lt;/p&gt;
 &lt;p&gt;명령어 사용법 : &lt;code&gt;screen ‘디바이스 위치’ ‘전송속도’&lt;/code&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Mac
-screen /dev/tty.XXX 115200
-# Linux
-screen /dev/ttyXXX 115200
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Mac&lt;/span&gt;
+&lt;span class="n"&gt;screen&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tty&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt; &lt;span class="mi"&gt;115200&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Linux&lt;/span&gt;
+&lt;span class="n"&gt;screen&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ttyXXX&lt;/span&gt; &lt;span class="mi"&gt;115200&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

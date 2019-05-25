@@ -111,73 +111,73 @@
 <li>해당 구성은 <a href="https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source">Building Vim from source</a> 를 이용해서 구성하는 것으로&nbsp;했다.</li>
 </ul>
 <p>vim을 빌드하기 전에 dev 패키지를&nbsp;설치해준다.</p>
-<div class="codehilite"><pre><span></span>sudo apt install python3-dev ruby-dev
+<div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">ruby</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 
 
 <p>그리고 기존 패키지로 설치되어 있는 vim을&nbsp;삭제한다.</p>
-<div class="codehilite"><pre><span></span>sudo apt remove vim vim-runtime
+<div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">remove</span> <span class="n">vim</span> <span class="n">vim</span><span class="o">-</span><span class="n">runtime</span>
 </pre></div>
 
 
 <p>Vim 코드를 받고 컴파일을&nbsp;해주자.</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/vim/vim.git
-cd vim
-./configure --with-features=huge --enable-multibyte \
-            --enable-rubyinterp=yes \
-            --enable-python3interp=yes \
-            --enable-cscope
-sudo make install
+<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim</span><span class="p">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">vim</span>
+<span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="c1">--with-features=huge --enable-multibyte \</span>
+            <span class="c1">--enable-rubyinterp=yes \</span>
+            <span class="c1">--enable-python3interp=yes \</span>
+            <span class="c1">--enable-cscope</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
 </pre></div>
 
 
 <p>설치가 제대로 되었는지 확인하려면 <code>vim --version</code> 으로 확인하면&nbsp;된다.</p>
 <p>시스템 기본으로 구성하려면 아래 명령어를&nbsp;쳐주면된다.</p>
-<div class="codehilite"><pre><span></span>sudo update-alternatives --install /usr/bin/editer editer /usr/bin/vim 1
-sudo update-alternatives --set editer /usr/bin/vim
-sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
-sudo update-alternatives --set vi /usr/bin/vim
+<div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="k">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="c1">--install /usr/bin/editer editer /usr/bin/vim 1</span>
+<span class="n">sudo</span> <span class="k">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="c1">--set editer /usr/bin/vim</span>
+<span class="n">sudo</span> <span class="k">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="c1">--install /usr/bin/vi vi /usr/bin/vim 1</span>
+<span class="n">sudo</span> <span class="k">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="c1">--set vi /usr/bin/vim</span>
 </pre></div>
 
 
 <h2 id="mac">Mac</h2>
 <p>Mac OS에서는 brew를 사용해서 설치하면된다. 설치할때 옵션을 붙여주면 되는데 그 옵션은 다음에서 처럼 확인이&nbsp;가능하다.</p>
-<div class="codehilite"><pre><span></span>brew options vim
---with-client-server
-    Enable client/server mode
---with-custom-perl
-    Build with a custom Perl instead of the Homebrew version.
---with-custom-python
-    Build with a custom Python 2 instead of the Homebrew version.
---with-custom-ruby
-    Build with a custom Ruby instead of the Homebrew version.
---with-lua
-    Build vim with lua support
---with-luajit
-    Build with luajit support
---with-mzscheme
-    Build vim with mzscheme support
---with-override-system-vi
-    Override system vi
---with-python3
-    Build vim with python3 instead of python[2] support
---with-tcl
-    Build vim with tcl support
---without-nls
-    Build vim without National Language Support (translated messages, keymaps)
---without-perl
-    Build vim without perl support
---without-python
-    Build vim without python support
---without-ruby
-    Build vim without ruby support
---HEAD
-    Install HEAD version
+<div class="codehilite"><pre><span></span><span class="n">brew</span> <span class="k">options</span> <span class="n">vim</span>
+<span class="c1">--with-client-server</span>
+    <span class="n">Enable</span> <span class="n">client</span><span class="o">/</span><span class="n">server</span> <span class="k">mode</span>
+<span class="c1">--with-custom-perl</span>
+    <span class="n">Build</span> <span class="k">with</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">Perl</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">the</span> <span class="n">Homebrew</span> <span class="k">version</span><span class="p">.</span>
+<span class="c1">--with-custom-python</span>
+    <span class="n">Build</span> <span class="k">with</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">Python</span> <span class="mi">2</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">the</span> <span class="n">Homebrew</span> <span class="k">version</span><span class="p">.</span>
+<span class="c1">--with-custom-ruby</span>
+    <span class="n">Build</span> <span class="k">with</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">Ruby</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">the</span> <span class="n">Homebrew</span> <span class="k">version</span><span class="p">.</span>
+<span class="c1">--with-lua</span>
+    <span class="n">Build</span> <span class="n">vim</span> <span class="k">with</span> <span class="n">lua</span> <span class="n">support</span>
+<span class="c1">--with-luajit</span>
+    <span class="n">Build</span> <span class="k">with</span> <span class="n">luajit</span> <span class="n">support</span>
+<span class="c1">--with-mzscheme</span>
+    <span class="n">Build</span> <span class="n">vim</span> <span class="k">with</span> <span class="n">mzscheme</span> <span class="n">support</span>
+<span class="c1">--with-override-system-vi</span>
+    <span class="n">Override</span> <span class="k">system</span> <span class="n">vi</span>
+<span class="c1">--with-python3</span>
+    <span class="n">Build</span> <span class="n">vim</span> <span class="k">with</span> <span class="n">python3</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">python</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">support</span>
+<span class="c1">--with-tcl</span>
+    <span class="n">Build</span> <span class="n">vim</span> <span class="k">with</span> <span class="n">tcl</span> <span class="n">support</span>
+<span class="c1">--without-nls</span>
+    <span class="n">Build</span> <span class="n">vim</span> <span class="k">without</span> <span class="k">National</span> <span class="k">Language</span> <span class="n">Support</span> <span class="p">(</span><span class="n">translated</span> <span class="n">messages</span><span class="p">,</span> <span class="n">keymaps</span><span class="p">)</span>
+<span class="c1">--without-perl</span>
+    <span class="n">Build</span> <span class="n">vim</span> <span class="k">without</span> <span class="n">perl</span> <span class="n">support</span>
+<span class="c1">--without-python</span>
+    <span class="n">Build</span> <span class="n">vim</span> <span class="k">without</span> <span class="n">python</span> <span class="n">support</span>
+<span class="c1">--without-ruby</span>
+    <span class="n">Build</span> <span class="n">vim</span> <span class="k">without</span> <span class="n">ruby</span> <span class="n">support</span>
+<span class="c1">--HEAD</span>
+    <span class="n">Install</span> <span class="n">HEAD</span> <span class="k">version</span>
 </pre></div>
 
 
 <p>이후 설치할때 필요한 옵션에 대해서&nbsp;추가해주면된다.</p>
-<div class="codehilite"><pre><span></span>brew install vim --with-client-server --with-override-system-vi --with-python3
+<div class="codehilite"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">vim</span> <span class="c1">--with-client-server --with-override-system-vi --with-python3</span>
 </pre></div>
 
 

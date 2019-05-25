@@ -1003,15 +1003,15 @@ $ keybase pgp &lt;span class="nb"&gt;export&lt;/span&gt; --secret &lt;span class
 사용법은 &lt;code&gt;rbenv&lt;/code&gt;, &lt;code&gt;pyenv&lt;/code&gt; 와 동일하다. (그렇다보니 shell script로만&amp;nbsp;작성이되어있다.)&lt;/p&gt;
 &lt;h3 id="_2"&gt;설치&lt;/h3&gt;
 &lt;h4 id="github-checkout"&gt;&lt;a href="https://github.com/phpenv/phpenv#installation"&gt;Github&amp;nbsp;Checkout&lt;/a&gt;&lt;/h4&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git clone git://github.com/phpenv/phpenv.git ~/.phpenv
-$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;export PATH=&amp;quot;$HOME/.phpenv/bin:$PATH&amp;quot;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile
-$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;eval &amp;quot;$(phpenv init -)&amp;quot;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bash_profile
-$ &lt;span class="nb"&gt;exec&lt;/span&gt; &lt;span class="nv"&gt;$SHELL&lt;/span&gt; -l
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;clone&lt;/span&gt; &lt;span class="nv"&gt;git&lt;/span&gt;:&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="nv"&gt;github&lt;/span&gt;.&lt;span class="nv"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;phpenv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;phpenv&lt;/span&gt;.&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;.&lt;span class="nv"&gt;phpenv&lt;/span&gt;
+$ &lt;span class="nv"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;export PATH=&amp;quot;$HOME/.phpenv/bin:$PATH&amp;quot;&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;.&lt;span class="nv"&gt;bash_profile&lt;/span&gt;
+$ &lt;span class="nv"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;eval &amp;quot;$(phpenv init -)&amp;quot;&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;.&lt;span class="nv"&gt;bash_profile&lt;/span&gt;
+$ &lt;span class="k"&gt;exec&lt;/span&gt; $&lt;span class="nv"&gt;SHELL&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;l&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h4 id="phpenv-installer"&gt;&lt;a href="https://github.com/phpenv/phpenv-installer"&gt;phpenv-installer&lt;/a&gt;&lt;/h4&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;curl&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;githubusercontent&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;phpenv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;phpenv&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;installer&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;phpenv&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;installer&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;bash&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1026,17 +1026,17 @@ $ phpenv install &lt;span class="o"&gt;{&lt;/span&gt;php_version&lt;span class="
 &lt;ul&gt;
 &lt;li&gt;Mac os error &lt;a href="https://qiita.com/maosanhioro/items/82698a8bdf6b7694ad36"&gt;해결&amp;nbsp;문서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;-----------------
-|  BUILD ERROR  |
------------------
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;-----------------&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;  &lt;span class="nv"&gt;BUILD&lt;/span&gt; &lt;span class="nv"&gt;ERROR&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;-----------------&lt;/span&gt;
 
-Here are the last 10 lines from the log:
+&lt;span class="nv"&gt;Here&lt;/span&gt; &lt;span class="nv"&gt;are&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;last&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="nv"&gt;lines&lt;/span&gt; &lt;span class="nv"&gt;from&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;log&lt;/span&gt;:
 
------------------------------------------
-configure: WARNING: This bison version is not supported for regeneration of the Zend/PHP parsers (found: 2.3, min: 204, excluded: ).
-configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.
-configure: error: Cannot find OpenSSL&amp;#39;s &amp;lt;evp.h&amp;gt;
------------------------------------------
+&lt;span class="o"&gt;-----------------------------------------&lt;/span&gt;
+&lt;span class="nv"&gt;configure&lt;/span&gt;: &lt;span class="nv"&gt;WARNING&lt;/span&gt;: &lt;span class="nv"&gt;This&lt;/span&gt; &lt;span class="nv"&gt;bison&lt;/span&gt; &lt;span class="nv"&gt;version&lt;/span&gt; &lt;span class="nv"&gt;is&lt;/span&gt; &lt;span class="nv"&gt;not&lt;/span&gt; &lt;span class="nv"&gt;supported&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;regeneration&lt;/span&gt; &lt;span class="nv"&gt;of&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;Zend&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;PHP&lt;/span&gt; &lt;span class="nv"&gt;parsers&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;found&lt;/span&gt;: &lt;span class="mi"&gt;2&lt;/span&gt;.&lt;span class="mi"&gt;3&lt;/span&gt;, &lt;span class="nv"&gt;min&lt;/span&gt;: &lt;span class="mi"&gt;204&lt;/span&gt;, &lt;span class="nv"&gt;excluded&lt;/span&gt;: &lt;span class="ss"&gt;)&lt;/span&gt;.
+&lt;span class="nv"&gt;configure&lt;/span&gt;: &lt;span class="nv"&gt;WARNING&lt;/span&gt;: &lt;span class="nv"&gt;You&lt;/span&gt; &lt;span class="nv"&gt;will&lt;/span&gt; &lt;span class="nv"&gt;need&lt;/span&gt; &lt;span class="nv"&gt;re2c&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;.&lt;span class="mi"&gt;13&lt;/span&gt;.&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="nv"&gt;or&lt;/span&gt; &lt;span class="nv"&gt;later&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nv"&gt;you&lt;/span&gt; &lt;span class="nv"&gt;want&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;regenerate&lt;/span&gt; &lt;span class="nv"&gt;PHP&lt;/span&gt; &lt;span class="nv"&gt;parsers&lt;/span&gt;.
+&lt;span class="nv"&gt;configure&lt;/span&gt;: &lt;span class="nv"&gt;error&lt;/span&gt;: &lt;span class="nv"&gt;Cannot&lt;/span&gt; &lt;span class="nv"&gt;find&lt;/span&gt; &lt;span class="nv"&gt;OpenSSL&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;s &amp;lt;evp.h&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;-----------------------------------------&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1062,7 +1062,7 @@ configure: error: Cannot find OpenSSL&amp;#39;s &amp;lt;evp.h&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;xcode-select --install
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;xcode&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;select&lt;/span&gt; &lt;span class="c1"&gt;--install&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1209,25 +1209,25 @@ Markdown = {version = &amp;quot;&amp;lt;3.0&amp;quot;}
 &lt;blockquote&gt;
 &lt;p&gt;The handle of the next table meta data is in the field #0 (next). If there is no next table meta data, the field is zero. Names and types of table columns are stored in field #1 (scols). A single field is described by concatenating a type tag and the column name. The type tags&amp;nbsp;are&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bool       &amp;#39;b&amp;#39;
-complex64  &amp;#39;c&amp;#39;
-complex128 &amp;#39;d&amp;#39;
-float32    &amp;#39;f&amp;#39;
-float64    &amp;#39;g&amp;#39;, alias float
-int8       &amp;#39;i&amp;#39;
-int16      &amp;#39;j&amp;#39;
-int32      &amp;#39;k&amp;#39;
-int64      &amp;#39;l&amp;#39;, alias int
-string     &amp;#39;s&amp;#39;
-uint8      &amp;#39;u&amp;#39;, alias byte
-uint16     &amp;#39;v&amp;#39;
-uint32     &amp;#39;w&amp;#39;
-uint64     &amp;#39;x&amp;#39;, alias uint
-bigInt     &amp;#39;I&amp;#39;
-bigRat     &amp;#39;R&amp;#39;
-blob       &amp;#39;B&amp;#39;
-duration   &amp;#39;D&amp;#39;
-time       &amp;#39;T&amp;#39;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;bool&lt;/span&gt;       &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;complex64&lt;/span&gt;  &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;complex128&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;float32&lt;/span&gt;    &lt;span class="s1"&gt;&amp;#39;f&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;float64&lt;/span&gt;    &lt;span class="s1"&gt;&amp;#39;g&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;alias&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;
+&lt;span class="nb"&gt;int8&lt;/span&gt;       &lt;span class="s1"&gt;&amp;#39;i&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;int16&lt;/span&gt;      &lt;span class="s1"&gt;&amp;#39;j&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;int32&lt;/span&gt;      &lt;span class="s1"&gt;&amp;#39;k&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;int64&lt;/span&gt;      &lt;span class="s1"&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;alias&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;
+&lt;span class="n"&gt;string&lt;/span&gt;     &lt;span class="s1"&gt;&amp;#39;s&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;uint8&lt;/span&gt;      &lt;span class="s1"&gt;&amp;#39;u&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;alias&lt;/span&gt; &lt;span class="n"&gt;byte&lt;/span&gt;
+&lt;span class="n"&gt;uint16&lt;/span&gt;     &lt;span class="s1"&gt;&amp;#39;v&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;uint32&lt;/span&gt;     &lt;span class="s1"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;uint64&lt;/span&gt;     &lt;span class="s1"&gt;&amp;#39;x&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;alias&lt;/span&gt; &lt;span class="n"&gt;uint&lt;/span&gt;
+&lt;span class="nb"&gt;bigInt&lt;/span&gt;     &lt;span class="s1"&gt;&amp;#39;I&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;bigRat&lt;/span&gt;     &lt;span class="s1"&gt;&amp;#39;R&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;blob&lt;/span&gt;       &lt;span class="s1"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;duration&lt;/span&gt;   &lt;span class="s1"&gt;&amp;#39;D&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;time&lt;/span&gt;       &lt;span class="s1"&gt;&amp;#39;T&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1243,7 +1243,7 @@ time       &amp;#39;T&amp;#39;
 &lt;blockquote&gt;
 &lt;p&gt;This statement adds a table meta data with&amp;nbsp;scols&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;bFool|sBar|gBaz&amp;quot;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;bFool|sBar|gBaz&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1259,7 +1259,7 @@ time       &amp;#39;T&amp;#39;
 &lt;blockquote&gt;
 &lt;p&gt;This &amp;ldquo;erases&amp;rdquo; the field info in scols, so the value&amp;nbsp;becomes&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;bFool||gBaz&amp;quot;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;bFool||gBaz&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1273,7 +1273,7 @@ Colums can be added to a&amp;nbsp;table&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;New fields are always added to the end of&amp;nbsp;scols&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;”bFool||gBaz|xCount&amp;quot;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="n"&gt;bFool&lt;/span&gt;&lt;span class="o"&gt;||&lt;/span&gt;&lt;span class="n"&gt;gBaz&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;xCount&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1300,7 +1300,7 @@ Colums can be added to a&amp;nbsp;table&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Field #2 (&lt;code&gt;hhead&lt;/code&gt;) is a handle to a head of table records, i.e. not a handle to the first record in the table. It is thus always non zero even for a table having no records. The reason for this &amp;ldquo;double pointer&amp;rdquo; schema is to enable adding (linking) a new record by updating a single value of the (&lt;code&gt;hhead&lt;/code&gt; pointing to)&amp;nbsp;head.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tableMeta.hhead -&amp;gt; head -&amp;gt; firstTableRecord
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;tableMeta&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hhead&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;firstTableRecord&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1325,8 +1325,8 @@ Colums can be added to a&amp;nbsp;table&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The values of fields #1 and #4 for the above&amp;nbsp;are&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;scols: &amp;quot;lFoo|bBar|sBaz&amp;quot;
-indices: &amp;quot;|uY||nX&amp;quot;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;scols&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;lFoo|bBar|sBaz&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;indices&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;|uY||nX&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1334,12 +1334,12 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;Aligning properly the &amp;ldquo;|&amp;rdquo; split&amp;nbsp;parts&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;             id    col#0    col#1    col#2
-+----------+----+--------+--------+--------+
-|   scols: |    | &amp;quot;lFoo&amp;quot; | &amp;quot;bBar&amp;quot; | &amp;quot;sBaz&amp;quot; |
-+----------+----+--------+--------+--------+
-| indices: | &amp;quot;&amp;quot; | &amp;quot;uY&amp;quot;   | &amp;quot;&amp;quot;     | &amp;quot;nX&amp;quot;   |
-+----------+----+--------+--------+--------+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;             &lt;span class="n"&gt;id&lt;/span&gt;    &lt;span class="n"&gt;col&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;    &lt;span class="n"&gt;col&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;    &lt;span class="n"&gt;col&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;----------+----+--------+--------+--------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="n"&gt;scols&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;    &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;lFoo&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;bBar&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;sBaz&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;----------+----+--------+--------+--------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;indices&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;uY&amp;quot;&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;&amp;quot;&lt;/span&gt;     &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;nX&amp;quot;&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;----------+----+--------+--------+--------+&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1351,7 +1351,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;Note that there cannot be two differently named indexes for the same column and it&amp;rsquo;s intended. The indices are &lt;a href="http://godoc.org/github.com/cznic/lldb#BTree"&gt;B+Trees&lt;/a&gt;. The list of handles to their roots is pointed to by &lt;code&gt;hxroots&lt;/code&gt; with zeros for non indexed columns. For the previous&amp;nbsp;example&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;tableMeta.hxroots -&amp;gt; {0, y, 0, x}
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;tableMeta&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hxroots&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1427,10 +1427,10 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;The composite key of the B+Tree is &lt;code&gt;{indexed values, record handle}&lt;/code&gt;. The B+Tree value is not&amp;nbsp;used.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;            B+Tree key                    B+Tree value
-+----------------+---------------+      +--------------+
-| Indexed Values | Record Handle |  -&amp;gt;  |   not used   |
-+----------------+---------------+      +--------------+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;            &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Tree&lt;/span&gt; &lt;span class="k"&gt;key&lt;/span&gt;                    &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Tree&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;----------------+---------------+      +--------------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Indexed&lt;/span&gt; &lt;span class="k"&gt;Values&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Record&lt;/span&gt; &lt;span class="n"&gt;Handle&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;----------------+---------------+      +--------------+&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1439,10 +1439,10 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;If the indexed values are all &lt;span class="caps"&gt;NULL&lt;/span&gt; then the composite B+Tree key is &lt;code&gt;{nil, record handle}&lt;/code&gt; and the B+Tree value is not&amp;nbsp;used.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;        B+Tree key                B+Tree value
-+------+-----------------+      +--------------+
-| NULL |  Record Handle  |  -&amp;gt;  |   not used   |
-+------+-----------------+      +--------------+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;        &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Tree&lt;/span&gt; &lt;span class="k"&gt;key&lt;/span&gt;                &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Tree&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;------+-----------------+      +--------------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="k"&gt;NULL&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;  &lt;span class="n"&gt;Record&lt;/span&gt; &lt;span class="n"&gt;Handle&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="n"&gt;used&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;------+-----------------+      +--------------+&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1450,10 +1450,10 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;If the indexed values are not all &lt;span class="caps"&gt;NULL&lt;/span&gt; then key of the B+Tree key are the indexed values and the B+Tree value is the record&amp;nbsp;handle.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    B+Tree key                B+Tree value
-+----------------+      +---------------+
-| Indexed Values |  -&amp;gt;  | Record Handle |
-+----------------+      +---------------+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Tree&lt;/span&gt; &lt;span class="k"&gt;key&lt;/span&gt;                &lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Tree&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;----------------+      +---------------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Indexed&lt;/span&gt; &lt;span class="k"&gt;Values&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;  &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;Record&lt;/span&gt; &lt;span class="n"&gt;Handle&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;----------------+      +---------------+&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1462,13 +1462,13 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;Scalar types of &lt;a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"&gt;&lt;code&gt;lldb/EncodeScalars&lt;/code&gt;&lt;/a&gt; are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;complex*&lt;/code&gt;, &lt;code&gt;float*&lt;/code&gt;, &lt;code&gt;int*&lt;/code&gt;, &lt;code&gt;uint*&lt;/code&gt;, &lt;code&gt;string&lt;/code&gt; and &lt;code&gt;[]byte&lt;/code&gt; types. All other types are&amp;nbsp;&amp;ldquo;blob-like&amp;rdquo;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;QL type         Go type
------------------------------
-blob            []byte
-bigint          big.Int
-bigrat          big.Rat
-time            time.Time
-duration        time.Duration
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;QL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="k"&gt;Go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="c1"&gt;-----------------------------&lt;/span&gt;
+&lt;span class="k"&gt;blob&lt;/span&gt;&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="err"&gt;[]&lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nc"&gt;bigint&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="n"&gt;big&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;bigrat&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="n"&gt;big&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Rat&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nc"&gt;time&lt;/span&gt;&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nc"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;Time&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;duration&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nc"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Duration&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1481,11 +1481,11 @@ duration        time.Duration
 &lt;blockquote&gt;
 &lt;p&gt;The values of the blob-like types are first encoded into a &lt;code&gt;[]byte&lt;/code&gt; slice:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;+-----------------------+-------------------+
-| blob                  | raw               |
-| bigint, bigrat, time  | gob encoded       |
-| duration              | gob encoded int64 |
-+-----------------------+-------------------+
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;-----------------------+-------------------+&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;blob&lt;/span&gt;                  &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;raw&lt;/span&gt;               &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;bigint&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bigrat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;gob&lt;/span&gt; &lt;span class="n"&gt;encoded&lt;/span&gt;       &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;duration&lt;/span&gt;              &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;gob&lt;/span&gt; &lt;span class="n"&gt;encoded&lt;/span&gt; &lt;span class="n"&gt;int64&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="c1"&gt;-----------------------+-------------------+&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1493,7 +1493,7 @@ duration        time.Duration
 &lt;blockquote&gt;
 &lt;p&gt;The gob encoding is &amp;ldquo;differential&amp;rdquo; wrt an initial encoding of all of the blob-like type. &lt;span class="caps"&gt;IOW&lt;/span&gt;, the initial type descriptors which gob encoding must write out are stripped off and &amp;ldquo;resupplied&amp;rdquo; on decoding transparently. See also blob.go. If the length of the resulting slice is &lt;code&gt;&amp;lt;= shortBlob&lt;/code&gt;, the first and only chunk is the scalar encoding&amp;nbsp;of&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]interface{}{typeTag, slice}.                  // initial (and last) chunk
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="n"&gt;interface&lt;/span&gt;&lt;span class="err"&gt;{}{&lt;/span&gt;&lt;span class="n"&gt;typeTag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;slice&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;                  &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;initial&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="k"&gt;last&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1501,7 +1501,7 @@ duration        time.Duration
 &lt;blockquote&gt;
 &lt;p&gt;The length of slice can be zero (for blob(&amp;ldquo;&amp;rdquo;)). If the resulting slice is long (&lt;code&gt;&amp;gt; shortBlob&lt;/code&gt;), the first chunk comes from&amp;nbsp;encoding&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="n"&gt;interface&lt;/span&gt;&lt;span class="err"&gt;{}{&lt;/span&gt;&lt;span class="n"&gt;typeTag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nextHandle&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;firstPart&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;  &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;initial&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;but&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="k"&gt;final&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1509,7 +1509,7 @@ duration        time.Duration
 &lt;blockquote&gt;
 &lt;p&gt;In this case &lt;code&gt;len(firstPart) &amp;lt;= shortBlob&lt;/code&gt;. Second and other chunks: If the chunk is the last one, src&amp;nbsp;is&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]interface{lastPart}.                          // overflow chunk (last)
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="n"&gt;interface&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="n"&gt;lastPart&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;                          &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;overflow&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;last&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1517,7 +1517,7 @@ duration        time.Duration
 &lt;blockquote&gt;
 &lt;p&gt;In this case &lt;code&gt;len(lastPart) &amp;lt;= 64kB&lt;/code&gt;. If the chunk is not the last one, src&amp;nbsp;is&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]interface{}{nextHandle, part}.                // overflow chunk (not last)
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="n"&gt;interface&lt;/span&gt;&lt;span class="err"&gt;{}{&lt;/span&gt;&lt;span class="n"&gt;nextHandle&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;part&lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;                &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="n"&gt;overflow&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="k"&gt;last&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1530,9 +1530,9 @@ duration        time.Duration
 &lt;blockquote&gt;
 &lt;p&gt;Referenced from&amp;nbsp;above:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[0]: http://godoc.org/github.com/cznic/lldb#hdr-Block_handles
-[1]: http://godoc.org/github.com/cznic/lldb#EncodeScalars
-[2]: http://godoc.org/github.com/cznic/lldb#BTree
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;godoc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cznic&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lldb&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="n"&gt;hdr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Block_handles&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;godoc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cznic&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lldb&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="n"&gt;EncodeScalars&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;godoc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cznic&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lldb&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="n"&gt;BTree&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1547,14 +1547,14 @@ duration        time.Duration
 &lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt; 에서 사용하는 &lt;code&gt;.env&lt;/code&gt;를 내가 원하는 위치에&amp;nbsp;옮겨보자.&lt;/p&gt;
 &lt;h3 id="workon_home"&gt;&lt;code&gt;WORKON_HOME&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;저 깊이 들어가는 &lt;code&gt;.env&lt;/code&gt; 폴더를 내가 원하는 위치로&amp;nbsp;옮겨준다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;export WORKON_HOME=~/.venvs
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;venvs&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3 id="pipenv_venv_in_project"&gt;&lt;code&gt;PIPENV_VENV_IN_PROJECT&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;프로젝트를 진행하고있는 곳에 &lt;code&gt;.env&lt;/code&gt; 파일을 만들어준다.&lt;br&gt;
 이럴때는 &lt;code&gt;.gitignore&lt;/code&gt;에서 &lt;code&gt;.env/&lt;/code&gt; 파일을 예외로 해주어야된다. 해주는게&amp;nbsp;좋을꺼다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;export PIPENV_VENV_IN_PROJECT=true
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;PIPENV_VENV_IN_PROJECT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;true&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1694,28 +1694,28 @@ $ make install
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;eval &amp;quot;$(direnv hook bash)&amp;quot;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;eval&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;$(direnv hook bash)&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~/.zshrc&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;eval &amp;quot;$(direnv hook zsh)&amp;quot;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;eval&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;$(direnv hook zsh)&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~/.config/fish/config.fish&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;eval (direnv hook fish)
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;eval&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;direnv&lt;/span&gt; &lt;span class="n"&gt;hook&lt;/span&gt; &lt;span class="n"&gt;fish&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~/.cshrc&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;eval `direnv hook tcsh`
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;eval&lt;/span&gt; &lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;direnv&lt;/span&gt; &lt;span class="n"&gt;hook&lt;/span&gt; &lt;span class="n"&gt;tcsh&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1756,73 +1756,73 @@ foo
 &lt;li&gt;해당 구성은 &lt;a href="https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source"&gt;Building Vim from source&lt;/a&gt; 를 이용해서 구성하는 것으로&amp;nbsp;했다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;vim을 빌드하기 전에 dev 패키지를&amp;nbsp;설치해준다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install python3-dev ruby-dev
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt; &lt;span class="n"&gt;ruby&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;그리고 기존 패키지로 설치되어 있는 vim을&amp;nbsp;삭제한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt remove vim vim-runtime
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;runtime&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Vim 코드를 받고 컴파일을&amp;nbsp;해주자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/vim/vim.git
-cd vim
-./configure --with-features=huge --enable-multibyte \
-            --enable-rubyinterp=yes \
-            --enable-python3interp=yes \
-            --enable-cscope
-sudo make install
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;
+&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="c1"&gt;--with-features=huge --enable-multibyte \&lt;/span&gt;
+            &lt;span class="c1"&gt;--enable-rubyinterp=yes \&lt;/span&gt;
+            &lt;span class="c1"&gt;--enable-python3interp=yes \&lt;/span&gt;
+            &lt;span class="c1"&gt;--enable-cscope&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;설치가 제대로 되었는지 확인하려면 &lt;code&gt;vim --version&lt;/code&gt; 으로 확인하면&amp;nbsp;된다.&lt;/p&gt;
 &lt;p&gt;시스템 기본으로 구성하려면 아래 명령어를&amp;nbsp;쳐주면된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo update-alternatives --install /usr/bin/editer editer /usr/bin/vim 1
-sudo update-alternatives --set editer /usr/bin/vim
-sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
-sudo update-alternatives --set vi /usr/bin/vim
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="k"&gt;update&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/editer editer /usr/bin/vim 1&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="k"&gt;update&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--set editer /usr/bin/vim&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="k"&gt;update&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--install /usr/bin/vi vi /usr/bin/vim 1&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="k"&gt;update&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="c1"&gt;--set vi /usr/bin/vim&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2 id="mac"&gt;Mac&lt;/h2&gt;
 &lt;p&gt;Mac OS에서는 brew를 사용해서 설치하면된다. 설치할때 옵션을 붙여주면 되는데 그 옵션은 다음에서 처럼 확인이&amp;nbsp;가능하다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;brew options vim
---with-client-server
-    Enable client/server mode
---with-custom-perl
-    Build with a custom Perl instead of the Homebrew version.
---with-custom-python
-    Build with a custom Python 2 instead of the Homebrew version.
---with-custom-ruby
-    Build with a custom Ruby instead of the Homebrew version.
---with-lua
-    Build vim with lua support
---with-luajit
-    Build with luajit support
---with-mzscheme
-    Build vim with mzscheme support
---with-override-system-vi
-    Override system vi
---with-python3
-    Build vim with python3 instead of python[2] support
---with-tcl
-    Build vim with tcl support
---without-nls
-    Build vim without National Language Support (translated messages, keymaps)
---without-perl
-    Build vim without perl support
---without-python
-    Build vim without python support
---without-ruby
-    Build vim without ruby support
---HEAD
-    Install HEAD version
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="k"&gt;options&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;
+&lt;span class="c1"&gt;--with-client-server&lt;/span&gt;
+    &lt;span class="n"&gt;Enable&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="k"&gt;mode&lt;/span&gt;
+&lt;span class="c1"&gt;--with-custom-perl&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;custom&lt;/span&gt; &lt;span class="n"&gt;Perl&lt;/span&gt; &lt;span class="k"&gt;instead&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;Homebrew&lt;/span&gt; &lt;span class="k"&gt;version&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="c1"&gt;--with-custom-python&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;custom&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="k"&gt;instead&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;Homebrew&lt;/span&gt; &lt;span class="k"&gt;version&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="c1"&gt;--with-custom-ruby&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;custom&lt;/span&gt; &lt;span class="n"&gt;Ruby&lt;/span&gt; &lt;span class="k"&gt;instead&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;Homebrew&lt;/span&gt; &lt;span class="k"&gt;version&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="c1"&gt;--with-lua&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;lua&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;
+&lt;span class="c1"&gt;--with-luajit&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;luajit&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;
+&lt;span class="c1"&gt;--with-mzscheme&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;mzscheme&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;
+&lt;span class="c1"&gt;--with-override-system-vi&lt;/span&gt;
+    &lt;span class="n"&gt;Override&lt;/span&gt; &lt;span class="k"&gt;system&lt;/span&gt; &lt;span class="n"&gt;vi&lt;/span&gt;
+&lt;span class="c1"&gt;--with-python3&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="k"&gt;instead&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;
+&lt;span class="c1"&gt;--with-tcl&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;tcl&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;
+&lt;span class="c1"&gt;--without-nls&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="k"&gt;without&lt;/span&gt; &lt;span class="k"&gt;National&lt;/span&gt; &lt;span class="k"&gt;Language&lt;/span&gt; &lt;span class="n"&gt;Support&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;translated&lt;/span&gt; &lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;keymaps&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;--without-perl&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="k"&gt;without&lt;/span&gt; &lt;span class="n"&gt;perl&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;
+&lt;span class="c1"&gt;--without-python&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="k"&gt;without&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;
+&lt;span class="c1"&gt;--without-ruby&lt;/span&gt;
+    &lt;span class="n"&gt;Build&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="k"&gt;without&lt;/span&gt; &lt;span class="n"&gt;ruby&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt;
+&lt;span class="c1"&gt;--HEAD&lt;/span&gt;
+    &lt;span class="n"&gt;Install&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt; &lt;span class="k"&gt;version&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;이후 설치할때 필요한 옵션에 대해서&amp;nbsp;추가해주면된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;brew install vim --with-client-server --with-override-system-vi --with-python3
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt; &lt;span class="c1"&gt;--with-client-server --with-override-system-vi --with-python3&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1839,18 +1839,18 @@ linux-brew 에서는 어떻게 될련지 모르겠지만 그것까지는 사용�
 셸에도 넣어주자. &lt;code&gt;zsh&lt;/code&gt; 를 사용하니 &lt;code&gt;~/.zshrc&lt;/code&gt; 에 &lt;code&gt;source $(brew --prefix autoenv)/activate.sh&lt;/code&gt; 를 넣어두게 되면&amp;nbsp;쉽다.&lt;/p&gt;
 &lt;h2 id="_1"&gt;설정&lt;/h2&gt;
 &lt;p&gt;블로그를 &lt;code&gt;pelican&lt;/code&gt; 으로 구성해서 작성하다보니 &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;venv&lt;/code&gt; 설정해서 패키지 설치 파일이 필요해서&amp;nbsp;구성했다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# ujuc.github.io
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;ujuc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
 
-source ../env/blog/bin/activate
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;다 좋은데 다른 폴더로 가거나 다른 프로젝트로 갔을때&amp;hellip; 문제가 생길 수 있어서 끄는 방법을 찾았다. 상위 폴더에 다음 &lt;code&gt;.evn&lt;/code&gt;를 만들어서 넣어주면 된다. 개발하면서 자주가는 곳에다가는 꼭 박아두자. (&lt;a href="https://github.com/kennethreitz/autoenv/issues/30#issuecomment-26832177"&gt;원문&lt;/a&gt;)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# .env
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# .&lt;span class="nv"&gt;env&lt;/span&gt;
 
-if [ -n &amp;quot;$VIRTUAL_ENV&amp;quot; ] ; then
-    deactivate
-fi
+&lt;span class="k"&gt;if&lt;/span&gt; [ &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;$VIRTUAL_ENV&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; ] &lt;span class="c1"&gt;; then&lt;/span&gt;
+    &lt;span class="nv"&gt;deactivate&lt;/span&gt;
+&lt;span class="nv"&gt;fi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="autoenv"></category><category term="env"></category><category term="setup"></category></entry><entry><title>Pendulum 버전업</title><link href="https://ujuc.github.io/2016/12/28/pendulum_beo-jeon-eob/" rel="alternate"></link><published>2016-12-28T23:36:13+09:00</published><updated>2016-12-28T23:36:13+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-12-28:/2016/12/28/pendulum_beo-jeon-eob/</id><summary type="html">&lt;p&gt;datetime 패키지중 하나인 Pendulum이 업그래이드 했다. 그래서&amp;hellip; 에러가&amp;nbsp;발생했다&lt;/p&gt;</summary><content type="html">&lt;p&gt;기본 패키지 인 datetime 이 영 불편해서 회사 프로젝트에서 사용중이던 date 파일을 &lt;a href="https://pendulum.eustace.io"&gt;Pendulum&lt;/a&gt;으로 변경하여 구성하고 잘 쓰고 있었는데&amp;hellip; 패키지 업그레이드로 사용하던 기능이 deprecate 되어버렸다.&lt;br&gt;
 아직 정식 1.0 버전이 나오지 않았기에 내용들이 계속 바뀌고 있다보니&amp;hellip;&amp;nbsp;속이&amp;hellip;&lt;/p&gt;
 &lt;hr&gt;
@@ -1983,24 +1983,24 @@ fi
 &lt;blockquote&gt;
 &lt;p&gt;Here’s how an article (i.e. a resource of type “articles”) might appear in a&amp;nbsp;document:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;// ...
-{
- &amp;quot;type&amp;quot;: &amp;quot;articles&amp;quot;,
-  &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;,
-  &amp;quot;attributes&amp;quot;: {
-    &amp;quot;title&amp;quot;: &amp;quot;Rails is Omakase&amp;quot;
-  },
-  &amp;quot;relationships&amp;quot;: {
-    &amp;quot;author&amp;quot;: {
-      &amp;quot;links&amp;quot;: {
-        &amp;quot;self&amp;quot;: &amp;quot;/articles/1/relationships/author&amp;quot;,
-        &amp;quot;related&amp;quot;: &amp;quot;/articles/1/author&amp;quot;
-      },
-      &amp;quot;data&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;people&amp;quot;, &amp;quot;id&amp;quot;: &amp;quot;9&amp;quot; }
-    }
-  }
-}
-    // ...
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
+&lt;span class="err"&gt;{&lt;/span&gt;
+ &lt;span class="ss"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="ss"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="ss"&gt;&amp;quot;attributes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="ss"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;Rails is Omakase&amp;quot;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="ss"&gt;&amp;quot;relationships&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="ss"&gt;&amp;quot;author&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+      &lt;span class="ss"&gt;&amp;quot;links&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+        &lt;span class="ss"&gt;&amp;quot;self&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;/articles/1/relationships/author&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="ss"&gt;&amp;quot;related&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;/articles/1/author&amp;quot;&lt;/span&gt;
+      &lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="ss"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;people&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;9&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</content><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category><category term="transelate"></category></entry><entry><title>[번역] JSON API Specification v1.0 (3) - Document Structure (2)</title><link href="https://ujuc.github.io/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/" rel="alternate"></link><published>2016-08-06T14:40:00+09:00</published><updated>2019-03-23T16:50:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-08-06:/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/</id><summary type="html">&lt;p&gt;문서 구조에서 Top level에 대한 내용을&amp;nbsp;정리한다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="51-top-level"&gt;5.1. 최상위 (Top&amp;nbsp;Level)&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; 오브젝트는 데이터를 포함한 &lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 요청과 응답에 대한 근본(root) 입니다. &amp;lt;&lt;strong&gt;&lt;span class="caps"&gt;MUST&lt;/span&gt;&lt;/strong&gt;&amp;gt; 이 오브젝트를 문서의 “최상위”라&amp;nbsp;정의합니다.&lt;/p&gt;
@@ -2077,18 +2077,18 @@ fi
 &lt;blockquote&gt;
 &lt;p&gt;For example, the following primary data is a single resource&amp;nbsp;object:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
- &amp;quot;data&amp;quot;: {
-    &amp;quot;type&amp;quot;: &amp;quot;articles&amp;quot;,
-    &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;,
-    &amp;quot;attributes&amp;quot;: {
-      // ... this article&amp;#39;s attributes
-    },
-    &amp;quot;relationships&amp;quot;: {
-      // ... this article&amp;#39;s relationships
-    }
-  }
-}
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
+ &lt;span class="ss"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="ss"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="ss"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="ss"&gt;&amp;quot;attributes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+      &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="p"&gt;...&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;s attributes&lt;/span&gt;
+&lt;span class="s1"&gt;    },&lt;/span&gt;
+&lt;span class="s1"&gt;    &amp;quot;relationships&amp;quot;: {&lt;/span&gt;
+&lt;span class="s1"&gt;      // ... this article&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;relationships&lt;/span&gt;
+    &lt;span class="err"&gt;}&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2096,12 +2096,12 @@ fi
 &lt;blockquote&gt;
 &lt;p&gt;The following primary data is a single &lt;a href="http://jsonapi.org/format/#document-resource-identifier-objects"&gt;resource identifier object&lt;/a&gt; that references the same&amp;nbsp;resource:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{
- &amp;quot;data&amp;quot;: {
-    &amp;quot;type&amp;quot;: &amp;quot;articles&amp;quot;,
-    &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;
-  }
-}
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
+ &lt;span class="ss"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+    &lt;span class="ss"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="ss"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;
+  &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2199,8 +2199,8 @@ fi
 그러다보니 가끔 길이를 확인해서 커밋을 해야되는 경우가&amp;nbsp;발생하는데&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그나마 기본적으로 설정해놓은 80줄은 쉽게 찾으나&amp;hellip; 커밋 제목인 50자, 커밋 메시지&lt;br&gt;
 제한인 72자를 확인하는게 쉽지가 않아서 줄을 그어놓고 사용하기위해 설정을&amp;nbsp;한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set cc=51,73,81,121
-highlight ColorColumn ctermbg=17 guibg=navyblue
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;51&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;73&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;81&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;121&lt;/span&gt;
+&lt;span class="n"&gt;highlight&lt;/span&gt; &lt;span class="n"&gt;ColorColumn&lt;/span&gt; &lt;span class="n"&gt;ctermbg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt; &lt;span class="n"&gt;guibg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;navyblue&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -4527,13 +4527,13 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0 Saved
 &lt;li&gt;&lt;a href="http://www.pylint.org"&gt;pylint&amp;nbsp;홈페이지&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;설치&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install pylint
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pylint&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2 id="_2"&gt;사용&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pylint filename.py
-pylint-gui
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pylint&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;pylint&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;gui&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -4566,12 +4566,12 @@ pylint-gui
 &lt;p&gt;그래서 이렇게 남긴다.&amp;nbsp;까먹을까봐서..&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_Eclipse_Plugin"&gt;공식&amp;nbsp;홈페이지&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;리눅스에서는 기본적으로 컴파일러는 gcc를 이용해서 작동을 시키게&amp;nbsp;된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yaourt -S gcc-avr avr-libc avrdude binutils-avr
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;yaourt&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;S&lt;/span&gt; &lt;span class="n"&gt;gcc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;avr&lt;/span&gt; &lt;span class="n"&gt;avr&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;libc&lt;/span&gt; &lt;span class="n"&gt;avrdude&lt;/span&gt; &lt;span class="n"&gt;binutils&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;avr&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;을 설치해줬다. Arch Linux에서는 이렇게 해주고 더 필요한 패키지들이&amp;nbsp;있으면,&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yaourt -Ss avr
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;yaourt&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Ss&lt;/span&gt; &lt;span class="n"&gt;avr&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

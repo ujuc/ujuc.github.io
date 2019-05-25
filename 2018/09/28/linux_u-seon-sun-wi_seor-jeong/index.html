@@ -104,7 +104,7 @@ Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. <code>rt
 Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능하다. -20 ~ +19 까지의 값을 가지고 있으며, -20값이 우선순위가 가장 높은 값이고 양수로 올라갈수록 낮은 값이다. 0은 <code>PR</code> 값과 동일한 설정을&nbsp;나타낸다.</li>
 </ol>
 <h3 id="rriority">Rriority&nbsp;계산</h3>
-<div class="codehilite"><pre><span></span>PR = 20 + (-20 ~ +19)
+<div class="codehilite"><pre><span></span><span class="n">PR</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">20</span> <span class="o">~</span> <span class="o">+</span><span class="mi">19</span><span class="p">)</span>
 </pre></div>
 
 
@@ -155,7 +155,7 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 <ul>
 <li>특정 사용자에 대한 모든 프로세스에대한 값을 정할때&nbsp;사용한다.</li>
 </ul>
-<div class="codehilite"><pre><span></span>Username    hard/soft    priority    10
+<div class="codehilite"><pre><span></span><span class="n">Username</span>    <span class="n">hard</span><span class="o">/</span><span class="n">soft</span>    <span class="n">priority</span>    <span class="mi">10</span>
 </pre></div>
 
 

@@ -223,25 +223,25 @@
 <blockquote>
 <p>The handle of the next table meta data is in the field #0 (next). If there is no next table meta data, the field is zero. Names and types of table columns are stored in field #1 (scols). A single field is described by concatenating a type tag and the column name. The type tags&nbsp;are</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>bool       &#39;b&#39;
-complex64  &#39;c&#39;
-complex128 &#39;d&#39;
-float32    &#39;f&#39;
-float64    &#39;g&#39;, alias float
-int8       &#39;i&#39;
-int16      &#39;j&#39;
-int32      &#39;k&#39;
-int64      &#39;l&#39;, alias int
-string     &#39;s&#39;
-uint8      &#39;u&#39;, alias byte
-uint16     &#39;v&#39;
-uint32     &#39;w&#39;
-uint64     &#39;x&#39;, alias uint
-bigInt     &#39;I&#39;
-bigRat     &#39;R&#39;
-blob       &#39;B&#39;
-duration   &#39;D&#39;
-time       &#39;T&#39;
+<div class="codehilite"><pre><span></span><span class="n">bool</span>       <span class="s1">&#39;b&#39;</span>
+<span class="n">complex64</span>  <span class="s1">&#39;c&#39;</span>
+<span class="n">complex128</span> <span class="s1">&#39;d&#39;</span>
+<span class="n">float32</span>    <span class="s1">&#39;f&#39;</span>
+<span class="n">float64</span>    <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="k">alias</span> <span class="nb">float</span>
+<span class="nb">int8</span>       <span class="s1">&#39;i&#39;</span>
+<span class="n">int16</span>      <span class="s1">&#39;j&#39;</span>
+<span class="n">int32</span>      <span class="s1">&#39;k&#39;</span>
+<span class="n">int64</span>      <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="k">alias</span> <span class="nb">int</span>
+<span class="n">string</span>     <span class="s1">&#39;s&#39;</span>
+<span class="n">uint8</span>      <span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="k">alias</span> <span class="n">byte</span>
+<span class="n">uint16</span>     <span class="s1">&#39;v&#39;</span>
+<span class="n">uint32</span>     <span class="s1">&#39;w&#39;</span>
+<span class="n">uint64</span>     <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="k">alias</span> <span class="n">uint</span>
+<span class="nb">bigInt</span>     <span class="s1">&#39;I&#39;</span>
+<span class="n">bigRat</span>     <span class="s1">&#39;R&#39;</span>
+<span class="nb">blob</span>       <span class="s1">&#39;B&#39;</span>
+<span class="n">duration</span>   <span class="s1">&#39;D&#39;</span>
+<span class="n">time</span>       <span class="s1">&#39;T&#39;</span>
 </pre></div>
 
 
@@ -257,7 +257,7 @@ time       &#39;T&#39;
 <blockquote>
 <p>This statement adds a table meta data with&nbsp;scols</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>&quot;bFool|sBar|gBaz&quot;
+<div class="codehilite"><pre><span></span><span class="ss">&quot;bFool|sBar|gBaz&quot;</span>
 </pre></div>
 
 
@@ -273,7 +273,7 @@ time       &#39;T&#39;
 <blockquote>
 <p>This &ldquo;erases&rdquo; the field info in scols, so the value&nbsp;becomes</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>&quot;bFool||gBaz&quot;
+<div class="codehilite"><pre><span></span><span class="ss">&quot;bFool||gBaz&quot;</span>
 </pre></div>
 
 
@@ -287,7 +287,7 @@ Colums can be added to a&nbsp;table</p>
 <blockquote>
 <p>New fields are always added to the end of&nbsp;scols</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>”bFool||gBaz|xCount&quot;
+<div class="codehilite"><pre><span></span><span class="err">”</span><span class="n">bFool</span><span class="o">||</span><span class="n">gBaz</span><span class="o">|</span><span class="n">xCount</span><span class="err">&quot;</span>
 </pre></div>
 
 
@@ -314,7 +314,7 @@ Colums can be added to a&nbsp;table</p>
 <blockquote>
 <p>Field #2 (<code>hhead</code>) is a handle to a head of table records, i.e. not a handle to the first record in the table. It is thus always non zero even for a table having no records. The reason for this &ldquo;double pointer&rdquo; schema is to enable adding (linking) a new record by updating a single value of the (<code>hhead</code> pointing to)&nbsp;head.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>tableMeta.hhead -&gt; head -&gt; firstTableRecord
+<div class="codehilite"><pre><span></span><span class="n">tableMeta</span><span class="p">.</span><span class="n">hhead</span> <span class="o">-&gt;</span> <span class="n">head</span> <span class="o">-&gt;</span> <span class="n">firstTableRecord</span>
 </pre></div>
 
 
@@ -339,8 +339,8 @@ Colums can be added to a&nbsp;table</p>
 <blockquote>
 <p>The values of fields #1 and #4 for the above&nbsp;are</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>scols: &quot;lFoo|bBar|sBaz&quot;
-indices: &quot;|uY||nX&quot;
+<div class="codehilite"><pre><span></span><span class="n">scols</span><span class="p">:</span> <span class="ss">&quot;lFoo|bBar|sBaz&quot;</span>
+<span class="n">indices</span><span class="p">:</span> <span class="ss">&quot;|uY||nX&quot;</span>
 </pre></div>
 
 
@@ -348,12 +348,12 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>Aligning properly the &ldquo;|&rdquo; split&nbsp;parts</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>             id    col#0    col#1    col#2
-+----------+----+--------+--------+--------+
-|   scols: |    | &quot;lFoo&quot; | &quot;bBar&quot; | &quot;sBaz&quot; |
-+----------+----+--------+--------+--------+
-| indices: | &quot;&quot; | &quot;uY&quot;   | &quot;&quot;     | &quot;nX&quot;   |
-+----------+----+--------+--------+--------+
+<div class="codehilite"><pre><span></span>             <span class="n">id</span>    <span class="n">col</span><span class="o">#</span><span class="mi">0</span>    <span class="n">col</span><span class="o">#</span><span class="mi">1</span>    <span class="n">col</span><span class="o">#</span><span class="mi">2</span>
+<span class="o">+</span><span class="c1">----------+----+--------+--------+--------+</span>
+<span class="o">|</span>   <span class="n">scols</span><span class="p">:</span> <span class="o">|</span>    <span class="o">|</span> <span class="ss">&quot;lFoo&quot;</span> <span class="o">|</span> <span class="ss">&quot;bBar&quot;</span> <span class="o">|</span> <span class="ss">&quot;sBaz&quot;</span> <span class="o">|</span>
+<span class="o">+</span><span class="c1">----------+----+--------+--------+--------+</span>
+<span class="o">|</span> <span class="n">indices</span><span class="p">:</span> <span class="o">|</span> <span class="ss">&quot;&quot;</span> <span class="o">|</span> <span class="ss">&quot;uY&quot;</span>   <span class="o">|</span> <span class="ss">&quot;&quot;</span>     <span class="o">|</span> <span class="ss">&quot;nX&quot;</span>   <span class="o">|</span>
+<span class="o">+</span><span class="c1">----------+----+--------+--------+--------+</span>
 </pre></div>
 
 
@@ -365,7 +365,7 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>Note that there cannot be two differently named indexes for the same column and it&rsquo;s intended. The indices are <a href="http://godoc.org/github.com/cznic/lldb#BTree">B+Trees</a>. The list of handles to their roots is pointed to by <code>hxroots</code> with zeros for non indexed columns. For the previous&nbsp;example</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>tableMeta.hxroots -&gt; {0, y, 0, x}
+<div class="codehilite"><pre><span></span><span class="n">tableMeta</span><span class="p">.</span><span class="n">hxroots</span> <span class="o">-&gt;</span> <span class="err">{</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="err">}</span>
 </pre></div>
 
 
@@ -441,10 +441,10 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>The composite key of the B+Tree is <code>{indexed values, record handle}</code>. The B+Tree value is not&nbsp;used.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>            B+Tree key                    B+Tree value
-+----------------+---------------+      +--------------+
-| Indexed Values | Record Handle |  -&gt;  |   not used   |
-+----------------+---------------+      +--------------+
+<div class="codehilite"><pre><span></span>            <span class="n">B</span><span class="o">+</span><span class="n">Tree</span> <span class="k">key</span>                    <span class="n">B</span><span class="o">+</span><span class="n">Tree</span> <span class="n">value</span>
+<span class="o">+</span><span class="c1">----------------+---------------+      +--------------+</span>
+<span class="o">|</span> <span class="n">Indexed</span> <span class="k">Values</span> <span class="o">|</span> <span class="n">Record</span> <span class="n">Handle</span> <span class="o">|</span>  <span class="o">-&gt;</span>  <span class="o">|</span>   <span class="k">not</span> <span class="n">used</span>   <span class="o">|</span>
+<span class="o">+</span><span class="c1">----------------+---------------+      +--------------+</span>
 </pre></div>
 
 
@@ -453,10 +453,10 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>If the indexed values are all <span class="caps">NULL</span> then the composite B+Tree key is <code>{nil, record handle}</code> and the B+Tree value is not&nbsp;used.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>        B+Tree key                B+Tree value
-+------+-----------------+      +--------------+
-| NULL |  Record Handle  |  -&gt;  |   not used   |
-+------+-----------------+      +--------------+
+<div class="codehilite"><pre><span></span>        <span class="n">B</span><span class="o">+</span><span class="n">Tree</span> <span class="k">key</span>                <span class="n">B</span><span class="o">+</span><span class="n">Tree</span> <span class="n">value</span>
+<span class="o">+</span><span class="c1">------+-----------------+      +--------------+</span>
+<span class="o">|</span> <span class="k">NULL</span> <span class="o">|</span>  <span class="n">Record</span> <span class="n">Handle</span>  <span class="o">|</span>  <span class="o">-&gt;</span>  <span class="o">|</span>   <span class="k">not</span> <span class="n">used</span>   <span class="o">|</span>
+<span class="o">+</span><span class="c1">------+-----------------+      +--------------+</span>
 </pre></div>
 
 
@@ -464,10 +464,10 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>If the indexed values are not all <span class="caps">NULL</span> then key of the B+Tree key are the indexed values and the B+Tree value is the record&nbsp;handle.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>    B+Tree key                B+Tree value
-+----------------+      +---------------+
-| Indexed Values |  -&gt;  | Record Handle |
-+----------------+      +---------------+
+<div class="codehilite"><pre><span></span>    <span class="n">B</span><span class="o">+</span><span class="n">Tree</span> <span class="k">key</span>                <span class="n">B</span><span class="o">+</span><span class="n">Tree</span> <span class="n">value</span>
+<span class="o">+</span><span class="c1">----------------+      +---------------+</span>
+<span class="o">|</span> <span class="n">Indexed</span> <span class="k">Values</span> <span class="o">|</span>  <span class="o">-&gt;</span>  <span class="o">|</span> <span class="n">Record</span> <span class="n">Handle</span> <span class="o">|</span>
+<span class="o">+</span><span class="c1">----------------+      +---------------+</span>
 </pre></div>
 
 
@@ -476,13 +476,13 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>Scalar types of <a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a> are <code>bool</code>, <code>complex*</code>, <code>float*</code>, <code>int*</code>, <code>uint*</code>, <code>string</code> and <code>[]byte</code> types. All other types are&nbsp;&ldquo;blob-like&rdquo;.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>QL type         Go type
------------------------------
-blob            []byte
-bigint          big.Int
-bigrat          big.Rat
-time            time.Time
-duration        time.Duration
+<div class="codehilite"><pre><span></span><span class="n">QL</span><span class="w"> </span><span class="n">type</span><span class="w">         </span><span class="k">Go</span><span class="w"> </span><span class="n">type</span><span class="w"></span>
+<span class="c1">-----------------------------</span>
+<span class="k">blob</span><span class="w">            </span><span class="err">[]</span><span class="n">byte</span><span class="w"></span>
+<span class="nc">bigint</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="nc">Int</span><span class="w"></span>
+<span class="n">bigrat</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="n">Rat</span><span class="w"></span>
+<span class="nc">time</span><span class="w">            </span><span class="nc">time</span><span class="p">.</span><span class="nc">Time</span><span class="w"></span>
+<span class="n">duration</span><span class="w">        </span><span class="nc">time</span><span class="p">.</span><span class="n">Duration</span><span class="w"></span>
 </pre></div>
 
 
@@ -495,11 +495,11 @@ duration        time.Duration
 <blockquote>
 <p>The values of the blob-like types are first encoded into a <code>[]byte</code> slice:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>+-----------------------+-------------------+
-| blob                  | raw               |
-| bigint, bigrat, time  | gob encoded       |
-| duration              | gob encoded int64 |
-+-----------------------+-------------------+
+<div class="codehilite"><pre><span></span><span class="o">+</span><span class="c1">-----------------------+-------------------+</span>
+<span class="o">|</span> <span class="nb">blob</span>                  <span class="o">|</span> <span class="n">raw</span>               <span class="o">|</span>
+<span class="o">|</span> <span class="nb">bigint</span><span class="p">,</span> <span class="n">bigrat</span><span class="p">,</span> <span class="n">time</span>  <span class="o">|</span> <span class="n">gob</span> <span class="n">encoded</span>       <span class="o">|</span>
+<span class="o">|</span> <span class="n">duration</span>              <span class="o">|</span> <span class="n">gob</span> <span class="n">encoded</span> <span class="n">int64</span> <span class="o">|</span>
+<span class="o">+</span><span class="c1">-----------------------+-------------------+</span>
 </pre></div>
 
 
@@ -507,7 +507,7 @@ duration        time.Duration
 <blockquote>
 <p>The gob encoding is &ldquo;differential&rdquo; wrt an initial encoding of all of the blob-like type. <span class="caps">IOW</span>, the initial type descriptors which gob encoding must write out are stripped off and &ldquo;resupplied&rdquo; on decoding transparently. See also blob.go. If the length of the resulting slice is <code>&lt;= shortBlob</code>, the first and only chunk is the scalar encoding&nbsp;of</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>[]interface{}{typeTag, slice}.                  // initial (and last) chunk
+<div class="codehilite"><pre><span></span><span class="p">[]</span><span class="n">interface</span><span class="err">{}{</span><span class="n">typeTag</span><span class="p">,</span> <span class="n">slice</span><span class="err">}</span><span class="p">.</span>                  <span class="o">//</span> <span class="n">initial</span> <span class="p">(</span><span class="k">and</span> <span class="k">last</span><span class="p">)</span> <span class="n">chunk</span>
 </pre></div>
 
 
@@ -515,7 +515,7 @@ duration        time.Duration
 <blockquote>
 <p>The length of slice can be zero (for blob(&ldquo;&rdquo;)). If the resulting slice is long (<code>&gt; shortBlob</code>), the first chunk comes from&nbsp;encoding</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk
+<div class="codehilite"><pre><span></span><span class="p">[]</span><span class="n">interface</span><span class="err">{}{</span><span class="n">typeTag</span><span class="p">,</span> <span class="n">nextHandle</span><span class="p">,</span> <span class="n">firstPart</span><span class="err">}</span><span class="p">.</span>  <span class="o">//</span> <span class="n">initial</span><span class="p">,</span> <span class="n">but</span> <span class="k">not</span> <span class="k">final</span> <span class="n">chunk</span>
 </pre></div>
 
 
@@ -523,7 +523,7 @@ duration        time.Duration
 <blockquote>
 <p>In this case <code>len(firstPart) &lt;= shortBlob</code>. Second and other chunks: If the chunk is the last one, src&nbsp;is</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>[]interface{lastPart}.                          // overflow chunk (last)
+<div class="codehilite"><pre><span></span><span class="p">[]</span><span class="n">interface</span><span class="err">{</span><span class="n">lastPart</span><span class="err">}</span><span class="p">.</span>                          <span class="o">//</span> <span class="n">overflow</span> <span class="n">chunk</span> <span class="p">(</span><span class="k">last</span><span class="p">)</span>
 </pre></div>
 
 
@@ -531,7 +531,7 @@ duration        time.Duration
 <blockquote>
 <p>In this case <code>len(lastPart) &lt;= 64kB</code>. If the chunk is not the last one, src&nbsp;is</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>[]interface{}{nextHandle, part}.                // overflow chunk (not last)
+<div class="codehilite"><pre><span></span><span class="p">[]</span><span class="n">interface</span><span class="err">{}{</span><span class="n">nextHandle</span><span class="p">,</span> <span class="n">part</span><span class="err">}</span><span class="p">.</span>                <span class="o">//</span> <span class="n">overflow</span> <span class="n">chunk</span> <span class="p">(</span><span class="k">not</span> <span class="k">last</span><span class="p">)</span>
 </pre></div>
 
 
@@ -544,9 +544,9 @@ duration        time.Duration
 <blockquote>
 <p>Referenced from&nbsp;above:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>[0]: http://godoc.org/github.com/cznic/lldb#hdr-Block_handles
-[1]: http://godoc.org/github.com/cznic/lldb#EncodeScalars
-[2]: http://godoc.org/github.com/cznic/lldb#BTree
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">godoc</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">cznic</span><span class="o">/</span><span class="n">lldb</span><span class="o">#</span><span class="n">hdr</span><span class="o">-</span><span class="n">Block_handles</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">godoc</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">cznic</span><span class="o">/</span><span class="n">lldb</span><span class="o">#</span><span class="n">EncodeScalars</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">godoc</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">cznic</span><span class="o">/</span><span class="n">lldb</span><span class="o">#</span><span class="n">BTree</span>
 </pre></div>
 
 

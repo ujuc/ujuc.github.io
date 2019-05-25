@@ -100,11 +100,11 @@ sh build.sh
 &lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고&amp;nbsp;설치&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016-05-21_installing_shell_integration.png"&gt;&lt;/p&gt;
 &lt;p&gt;음.! 뭔가&amp;nbsp;이상하다&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;You will also have these commands:
-imgcat filename
-  Displays the image inline.
-it2dl filename
-  Downloads the specified file, saving it in your Downloads folder.
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="n"&gt;have&lt;/span&gt; &lt;span class="n"&gt;these&lt;/span&gt; &lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="n"&gt;imgcat&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;
+  &lt;span class="n"&gt;Displays&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;it2dl&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;
+  &lt;span class="n"&gt;Downloads&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;specified&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;saving&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Downloads&lt;/span&gt; &lt;span class="n"&gt;folder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

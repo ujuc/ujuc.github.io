@@ -13,17 +13,17 @@
 &lt;li&gt;간단하다. 기본적으로 Bluez가 설치가되어 있으니 그냥 켜주기만하면&amp;nbsp;된다.&lt;/li&gt;
 &lt;li&gt;먼저 &lt;code&gt;bluetooth&lt;/code&gt; 데몬을&amp;nbsp;실행시켜준다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# systemctl stop bluetooth
-# systemctl start bluetooth
-# systemctl status bluetooth
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;stop&lt;/span&gt; &lt;span class="n"&gt;bluetooth&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="k"&gt;start&lt;/span&gt; &lt;span class="n"&gt;bluetooth&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="n"&gt;bluetooth&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;블루투스를 사용할 수 있도록 모듈을&amp;nbsp;활성화시켜준다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# rfkill list
-# rfkill unblock bluetooth
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;rfkill&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;rfkill&lt;/span&gt; &lt;span class="n"&gt;unblock&lt;/span&gt; &lt;span class="n"&gt;bluetooth&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
