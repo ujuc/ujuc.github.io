@@ -7,16 +7,17 @@ from __future__ import unicode_literals
 
 import os
 import sys
+
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://ujuc.github.io'
+SITEURL = "https://ujuc.github.io"
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
-FEED_ALL_RSS = 'feeds/rss.xml'
-CATEGORY_FEED_RSS = 'feeds/{slug}.rss.xml'
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
+FEED_ALL_RSS = "feeds/rss.xml"
+CATEGORY_FEED_RSS = "feeds/{slug}.rss.xml"
 
 DELETE_OUTPUT_DIRECTORY = True
 

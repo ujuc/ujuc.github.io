@@ -11,9 +11,12 @@ pelican = "*"
 pendulum = "*"
 Markdown = {version = "<3.0"}
 typogrify = "*"
+click = "*"
+black = "==19.3b0"
 
 [scripts]
 new = './write.py new'
+fix = 'black -l 80 .'
 
 [dev-packages]
 pylint = "*"
