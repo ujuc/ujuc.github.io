@@ -150,14 +150,14 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;li&gt;시스템 어드민 툴과&amp;nbsp;데몬&lt;/li&gt;
 &lt;li&gt;커널&amp;nbsp;루틴&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;그런데 이 섹션은&amp;hellip; 1971년 11월 3일에 작성된(?) &lt;a href="https://www.bell-labs.com/usr/dmr/www/manintro.html"&gt;&lt;span class="caps"&gt;UNIX&lt;/span&gt; programmer&amp;rsquo;s manual&lt;/a&gt; 섹션이라고&amp;hellip;&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;그런데 이 섹션은&amp;hellip; 1971년 11월 3일에 작성된(?) &lt;a href="https://www.bell-labs.com/usr/dmr/www/manintro.html"&gt;&lt;span class="caps"&gt;UNIX&lt;/span&gt; programmer&amp;rsquo;s manual&lt;/a&gt; 섹션이라고&amp;hellip;&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;h3 id="_1"&gt;참고&amp;nbsp;자료&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://unix.stackexchange.com/questions/3586/what-do-the-numbers-in-a-man-page-mean"&gt;What do the numbers in a man page&amp;nbsp;mean?&lt;/a&gt;&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id="fn-1"&gt;
-&lt;p&gt;잼나다잉, https://unix.stackexchange.com/a/3607&amp;#160;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;잼나다잉, https://unix.stackexchange.com/a/3607&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</content><category term="man"></category><category term="manual"></category><category term="linux"></category></entry><entry><title>RSYSLOG - Templates</title><link href="https://ujuc.github.io/2018/03/01/rsyslog_-_templates/" rel="alternate"></link><published>2018-03-01T18:45:41+09:00</published><updated>2018-03-01T18:45:41+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-01:/2018/03/01/rsyslog_-_templates/</id><summary type="html">&lt;p&gt;Rsyslog 에서 사용되는 template 에 관련된 내용을&amp;nbsp;정리합시다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;/var/log/syslog&lt;/code&gt;로 모여드는 서비스들의 로그를 다른 곳으로 옮기고, 해당 내용을 확인하기 위해 파싱을 할 수 있도록 변경하는 작업이 필요했다.&lt;br&gt;

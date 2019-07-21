@@ -81,8 +81,8 @@ sh build.sh
 &lt;h2 id="_3"&gt;실행&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;MongoDB, etcd3&amp;nbsp;설치&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;conf&lt;/code&gt; 폴더에 있는 config&amp;nbsp;수정&lt;/li&gt;
-&lt;li&gt;샘플은 &lt;code&gt;conf/files&lt;/code&gt; 에 항목별로 존재한다. 확인이&amp;nbsp;필요.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;conf&lt;/code&gt; 폴더에 있는 config 수정&lt;br&gt;
+  * 샘플은 &lt;code&gt;conf/files&lt;/code&gt; 에 항목별로 존재한다. 확인이&amp;nbsp;필요.&lt;/li&gt;
 &lt;li&gt;Node 실행: &lt;code&gt;./cronnode -conf conf/base.json&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;웹서버 실행: &lt;code&gt;./cronweb -conf conf/base.json&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;접속은 &lt;code&gt;http://127.0.0.1:7079/ui/&lt;/code&gt;&lt;/li&gt;

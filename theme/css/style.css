@@ -98,7 +98,7 @@ h6 {
 }
 
 .article_text {
-  font-family: 'Song Myung', sans-serif;
+  font-family: 'Noto Serif KR', sans-serif;
 }
 
 .toc {
@@ -107,10 +107,10 @@ h6 {
 }
 
 .codehilitetable {
-  font-family: 'IBM Plex Mono', monospace;
-  padding: .8rem;
-  border-left: solid 3px #FF8000;
-  border-radius: 2px;
+    font-family: 'IBM Plex Mono', monospace;
+    padding: .8rem;
+    border-left: solid 3px #FF8000;
+    border-radius: 2px;
 }
 
 .pagination {
