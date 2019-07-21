@@ -54,7 +54,7 @@ DISPALY_PAGES_ON_MENU = True
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 TYPOGRIFY = True
-THEME = "theme/clean/"
+THEME = "clean/"
 
 # Address
 EMAIL_ADDRESS = 'ujuc@ujuc.kr'
