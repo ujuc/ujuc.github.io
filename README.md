@@ -1,3 +1,19 @@
-# 블로그 설정
+## Blog 글 생성 
 
-* `Pipfile` 에 있음.
+```shell script
+./cmd.sh new post <TITLE>
+```
+
+## Pelican 명령어
+
+### blog preview
+
+```shell script
+inv preview
+```
+
+### github publish
+
+```shell script
+inv pub
+```

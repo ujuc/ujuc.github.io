@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import subprocess
 from pathlib import Path
 
 import click
@@ -8,9 +7,6 @@ import pendulum
 
 BASE_PATH = Path.cwd()
 CONTENT_PATH = BASE_PATH / "content"
-OUTPUT_PATH = BASE_PATH / "output"
-CONF_FILE = BASE_PATH / "pelicanconf.py"
-PUBLISH_CONF_FILE = BASE_PATH / "publishconf.py"
 
 
 @click.group()
@@ -77,50 +73,6 @@ def post(title, rst):
 def page():
     """Make new page."""
     print("Page command feature~~~~~~~~~~. Next year?")
-
-
-def serve():
-    subprocess.run(["pelican", "-l"])
-
-
-@cli.command()
-def preview():
-    """Preview web page using Pelican server"""
-    subprocess.run(
-        ["pelican", CONTENT_PATH, "-o", OUTPUT_PATH, "-s", CONF_FILE]
-    )
-    serve()
-
-
-@cli.command()
-def pub():
-    subprocess.run(
-        ["pelican", CONTENT_PATH, "-o", OUTPUT_PATH, "-s", PUBLISH_CONF_FILE]
-    )
-    subprocess.run(
-        [
-            "ghp-import",
-            "-m",
-            "Generate Pelican site",
-            "-b",
-            "master",
-            OUTPUT_PATH,
-        ]
-    )
-    subprocess.run(["git", "push", "origin", "master"])
-
-
-@cli.command()
-def clean():
-    subprocess.run(
-        [
-            "rm",
-            "-rf",
-            OUTPUT_PATH,
-            BASE_PATH / "__pycache__",
-            BASE_PATH / "cache",
-        ]
-    )
 
 
 if __name__ == "__main__":
