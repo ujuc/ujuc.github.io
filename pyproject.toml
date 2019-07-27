@@ -6,15 +6,16 @@ authors = ["Thomas SJ Kang <ujuc@ujuc.kr>"]
 
 [tool.poetry.dependencies]
 python = ">=3.7"
-ghp-import = "^0.5.5"
-kroman = "^1.1"
-pelican = "^4.1"
-pendulum = "^2.0"
-Markdown = "^3.1"
-typogrify = "^2.0"
-click = "^7.0"
-invoke = "^1.2"
-black = "==19.03b0"
+ghp-import = "*"
+kroman = "*"
+pelican = "*"
+pendulum = "*"
+Markdown = "*"
+typogrify = "*"
+click = "*"
+invoke = "*"
+black = "==19.3b0"
+docutils = "==0.15.0"
 
 [tool.poetry.dev-dependencies]
 
