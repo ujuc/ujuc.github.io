@@ -1,6 +1,6 @@
-from invoke import Collection, task
-
 from pathlib import Path
+
+from invoke import Collection, Program, task
 
 BASE_PATH = Path.cwd()
 OUTPUT_PATH = BASE_PATH / "output"
@@ -35,8 +35,13 @@ def fix(ctx):
     ctx.run("black -l 80 .")
 
 
-ns = Collection()
-ns.add_task(clean)
-ns.add_task(preview)
-ns.add_task(pub)
-ns.add_task(fix)
+def main():
+    ns = Collection()
+    ns.add_task(clean)
+    ns.add_task(preview)
+    ns.add_task(pub)
+    ns.add_task(fix)
+
+    program = Program()
+    program.namespace = ns
+    program.run()
