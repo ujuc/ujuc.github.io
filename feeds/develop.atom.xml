@@ -3108,7 +3108,7 @@ forge@v0.1.7:
 &lt;li&gt;&lt;a href="https://ohgyun.com/402"&gt;git 브랜칭 전략과 git flow -&amp;nbsp;꿀벌개발일지&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="github-flow"&gt;GitHub&amp;nbsp;Flow&lt;/h2&gt;
-&lt;p&gt;Scott chacon은 &lt;a href="http://scottchacon.com/2011/08/31/github-flow.html"&gt;GitHub Flow&lt;/a&gt;에서 Git flow가 좋은 방식이긴 하지만 GitHub에서 사용하기에는 복잡하다 여겨 사용하지 않고 &lt;code&gt;GitHub Flow&lt;/code&gt;라는 내용으로 사용을 하고 있다고 한다. 그리고 &lt;strong&gt;자동화의 계념이 들어가 있다는 점&lt;/strong&gt;. 자동화가 안되어있는 곳에서는 수동으로 관련 작업을 진행하면&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;Scott chacon은 &lt;a href="http://scottchacon.com/2011/08/31/github-flow.html"&gt;GitHub Flow&lt;/a&gt;에서 Git flow가 좋은 방식이긴 하지만 GitHub에서 사용하기에는 복잡하다 여겨 사용하지 않고 &lt;code&gt;GitHub Flow&lt;/code&gt;라는 내용으로 사용을 하고 있다고 한다. 그리고 &lt;strong&gt;자동화의 개념이 들어가 있다는 점&lt;/strong&gt;. 자동화가 안되어있는 곳에서는 수동으로 관련 작업을 진행하면&amp;nbsp;된다.&lt;/p&gt;
 &lt;p&gt;흐름이 단순한 만큼 룰도 단순하다. &lt;code&gt;master&lt;/code&gt; 브런치에 대한 &lt;code&gt;role&lt;/code&gt;만 정확하다면 나머지 브런치들에는 관여를 하지 않는다. 그리고 &lt;code&gt;pull request&lt;/code&gt; 기능을 사용하도록 권장을&amp;nbsp;한다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="GitHub Flow Model" src="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shoma2da/20151104/20151104223339.png"&gt;&lt;/p&gt;
 &lt;h3 id="_5"&gt;특징&lt;/h3&gt;
@@ -3173,7 +3173,7 @@ forge@v0.1.7:
 &lt;p&gt;Issue 트러커와 연결하여 사용하는 것을 말한다. 긴~~ 시간 동안 작업을 할 경우, 이슈를 생성하여 작업을 진행하는 것으로&amp;hellip;&lt;br&gt;
 브런치 이름에는 이슈번호를 적어 작업 중인 이슈가 어떤 것인지를 명확하게 해주는 것이 필요하다.&lt;br&gt;
 작업이 끝나거나 코드 공유가 필요한 시점이면 Merge/pull requsts를&amp;nbsp;보낸다.&lt;/p&gt;
-&lt;p&gt;다 적을려고 봤더니 그냥 GitLab 사용법에 대해서만 추가적으로 말하고 있어서 이쯤적고 영어로 읽자. 영어가 어렯다면&amp;hellip; 일본어를 번역해서 읽으면 좀 더 쉽게 읽을 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;다 적을려고 봤더니 그냥 GitLab 사용법에 대해서만 추가적으로 말하고 있어서 이쯤적고 영어로 읽자. 영어가 어렵다면&amp;hellip; 일본어를 번역해서 읽으면 좀 더 쉽게 읽을 수&amp;nbsp;있다.&lt;/p&gt;
 &lt;h3 id="_10"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://about.gitlab.com/2014/09/29/gitlab-flow/"&gt;GitLab&amp;nbsp;Flow&lt;/a&gt;&lt;/li&gt;
