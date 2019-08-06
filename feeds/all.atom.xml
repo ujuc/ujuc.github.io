@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-07-21T16:20:49+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Task 실행 라이브러리 - Invoke</title><link href="https://ujuc.github.io/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/" rel="alternate"></link><published>2019-07-21T16:20:49+09:00</published><updated>2019-07-21T16:20:49+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-07-21:/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/</id><summary type="html">&lt;p&gt;Task 실행 라이브러리인 &lt;code&gt;Invoke&lt;/code&gt;를&amp;nbsp;확인한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Pelican 에서 Makefile를 이용해서 빌드하고 있었는데.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-08-06T08:58:16+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Rust 개발 환경 구성</title><link href="https://ujuc.github.io/2019/08/06/rust_gae-bar_hwan-gyeong_gu-seong/" rel="alternate"></link><published>2019-08-06T08:58:16+09:00</published><updated>2019-08-06T08:58:16+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-08-06:/2019/08/06/rust_gae-bar_hwan-gyeong_gu-seong/</id><summary type="html">&lt;p&gt;Rust 개발을&amp;nbsp;해볼까나~&lt;/p&gt;</summary><content type="html">&lt;p&gt;그냥 공부할 목적으로 Rust를 하기로 하였다.&lt;br&gt;
+요즘에 참 잘 나간다고도&amp;nbsp;했고&amp;hellip;&lt;/p&gt;
+&lt;h2 id="rustup-rust"&gt;Rustup으로 Rust&amp;nbsp;설치&lt;/h2&gt;
+&lt;p&gt;처음에는 rustup을 이용해서 설치한게 아니라 brow를 이용해서 설치를 했었다.&lt;br&gt;
+coc.nvim에서 rust 플러그인을 쓸려고하니&amp;hellip; 안된다고 해서&amp;nbsp;설치.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl --proto &lt;span class="s1"&gt;&amp;#39;=https&amp;#39;&lt;/span&gt; --tlsv1.2 -sSf https://sh.rustup.rs &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;명령어를 확인했는데 이거 괜찮은 툴이다.&lt;br&gt;
+나중에 따로&amp;nbsp;정리해야지.&lt;/p&gt;
+&lt;h2 id="vim"&gt;Vim&amp;nbsp;환경&lt;/h2&gt;
+&lt;h3 id="cocnvim"&gt;coc.nvim 플러그인&amp;nbsp;설치&lt;/h3&gt;
+&lt;p&gt;원래 목적인 coc.nvim 플러그인을 설치하자.&lt;br&gt;
+vim에서 명령을&amp;nbsp;날린다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;CocInstall&lt;/span&gt; &lt;span class="n"&gt;coc&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;rls&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;환경&amp;nbsp;끝.&lt;/p&gt;
+&lt;h2 id="idea"&gt;&lt;span class="caps"&gt;IDEA&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 id="clion"&gt;CLion&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;CLion을&amp;nbsp;설치한다.&lt;/li&gt;
+&lt;li&gt;Rust 플러그인을&amp;nbsp;설치한다.&lt;/li&gt;
+&lt;li&gt;Rust를 가지고서&amp;nbsp;개발한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;환경&amp;nbsp;끝.&lt;/p&gt;</content><category term="rust"></category><category term="rustup"></category><category term="develop"></category><category term="env"></category></entry><entry><title>Task 실행 라이브러리 - Invoke</title><link href="https://ujuc.github.io/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/" rel="alternate"></link><published>2019-07-21T16:20:49+09:00</published><updated>2019-07-21T16:20:49+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-07-21:/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/</id><summary type="html">&lt;p&gt;Task 실행 라이브러리인 &lt;code&gt;Invoke&lt;/code&gt;를&amp;nbsp;확인한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Pelican 에서 Makefile를 이용해서 빌드하고 있었는데.&lt;br&gt;
 4.0.0 버전으로 올라오면서 &lt;code&gt;Invoke&lt;/code&gt; 라이브러리를 사용하게 되었음을 확인.&lt;br&gt;
 그러니&amp;nbsp;사용해봐야징&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.pyinvoke.org/"&gt;Home&lt;/a&gt;&lt;/p&gt;
