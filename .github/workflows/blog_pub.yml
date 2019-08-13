@@ -26,5 +26,4 @@ jobs:
         poetry install -n
     - name: buid & publish
       run: |
-      poetry run inv pub
-      
+        poetry run inv pub
