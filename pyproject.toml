@@ -4,6 +4,10 @@ version = "1.0"
 description = "blog"
 authors = ["Thomas SJ Kang <ujuc@ujuc.kr>"]
 
+packages = [
+    { include='cli', from='.' }
+]
+
 [tool.poetry.dependencies]
 python = ">=3.7"
 ghp-import = "*"
@@ -18,6 +22,9 @@ black = "==19.3b0"
 docutils = "==0.15.0"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+cli = 'cli.main:run'
 
 [build-system]
 requires = ["poetry>=0.12"]

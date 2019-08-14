@@ -2,7 +2,7 @@ from pathlib import Path
 
 import kroman
 import pendulum
-from invoke import Collection, task
+from invoke import Collection, Program, task
 
 BASE_PATH = Path.cwd()
 CONTENT_PATH = BASE_PATH / 'content'
@@ -60,5 +60,8 @@ def post(ctx, title, rst=False):
     print(f'File created -> {post_path}')
 
 
-ns = Collection()
-ns.add_task(post)
+def run():
+    program = Program(version='1.0.0')
+    program.namespace = Collection()
+    program.namespace.add_task(post)
+    program.run()
