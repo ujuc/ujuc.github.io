@@ -2,6 +2,8 @@ from pathlib import Path
 
 from invoke import Collection, Program, task
 
+import cli
+
 BASE_PATH = Path.cwd()
 OUTPUT_PATH = BASE_PATH / "output"
 CONF_FILE = BASE_PATH / "pelicanconf.py"
@@ -36,12 +38,14 @@ def fix(ctx):
 
 
 def main():
-    ns = Collection()
-    ns.add_task(clean)
-    ns.add_task(preview)
-    ns.add_task(pub)
-    ns.add_task(fix)
-
     program = Program()
     program.namespace = ns
     program.run()
+
+
+ns = Collection()
+ns.add_task(clean)
+ns.add_task(preview)
+ns.add_task(pub)
+ns.add_task(fix)
+ns.add_collection(Collection.from_module(cli))
