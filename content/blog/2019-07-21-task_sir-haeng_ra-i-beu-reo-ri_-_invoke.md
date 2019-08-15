@@ -1,7 +1,7 @@
 Title: Task 실행 라이브러리 - Invoke
 Date: 2019-07-21 16:20:49
-Category: 
-Tags: 
+Category: Develop
+Tags: invoke, devops, paramiko, command, cli, task
 Slug: task_sir-haeng_ra-i-beu-reo-ri_-_invoke
 Summary: Task 실행 라이브러리인 `Invoke`를 확인한다.
 
