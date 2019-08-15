@@ -6,7 +6,9 @@ from invoke import Collection, Program, task
 
 BASE_PATH = Path.cwd()
 CONTENT_PATH = BASE_PATH / 'content'
-
+OUTPUT_PATH = BASE_PATH / "output"
+CONF_FILE = BASE_PATH / "pelicanconf.py"
+PUBLISH_CONF_FILE = BASE_PATH / "publishconf.py"
 
 @task(
     help={
@@ -60,8 +62,32 @@ def post(ctx, title, rst=False):
     print(f'File created -> {post_path}')
 
 
+@task()
+def preview(ctx):
+    """Start preview web page server"""
+    ctx.run(f"pelican -s {CONF_FILE}")
+    ctx.run(f"pelican -l")
+
+
+@task()
+def clean(ctx):
+    """Clean up this dir"""
+    ctx.run(f"rm -rf {OUTPUT_PATH} {BASE_PATH}/__pycache__ {BASE_PATH}/cache")
+
+
+@task(post=[clean])
+def pub(ctx):
+    """Publish to github main page"""
+    ctx.run(f"pelican -s {PUBLISH_CONF_FILE}")
+    ctx.run(f"ghp-import -m 'Generate Pelican site' -b master {OUTPUT_PATH}")
+    ctx.run(f"git push origin master")
+
+
 def run():
     program = Program(version='1.0.0')
     program.namespace = Collection()
     program.namespace.add_task(post)
+    program.namespace.add_task(preview)
+    program.namespace.add_task(pub)
+    program.namespace.add_task(clean)
     program.run()
