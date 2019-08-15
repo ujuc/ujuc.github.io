@@ -1,5 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-08-06T08:58:16+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Rust 개발 환경 구성</title><link href="https://ujuc.github.io/2019/08/06/rust_gae-bar_hwan-gyeong_gu-seong/" rel="alternate"></link><published>2019-08-06T08:58:16+09:00</published><updated>2019-08-06T08:58:16+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-08-06:/2019/08/06/rust_gae-bar_hwan-gyeong_gu-seong/</id><summary type="html">&lt;p&gt;Rust 개발을&amp;nbsp;해볼까나~&lt;/p&gt;</summary><content type="html">&lt;p&gt;그냥 공부할 목적으로 Rust를 하기로 하였다.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-08-15T08:51:09+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Writing poetry script</title><link href="https://ujuc.github.io/2019/08/15/writing_poetry_script/" rel="alternate"></link><published>2019-08-15T08:51:09+09:00</published><updated>2019-08-15T08:51:09+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-08-15:/2019/08/15/writing_poetry_script/</id><summary type="html">&lt;p&gt;&lt;code&gt;poetry&lt;/code&gt;를 사용하면서 사용하고 싶었던 &lt;code&gt;[tool.poetry.scripts]&lt;/code&gt; 사용법을&amp;nbsp;남긴다.&lt;/p&gt;</summary><content type="html">&lt;ol&gt;
+&lt;li&gt;이 문서에서 &lt;code&gt;invoke&lt;/code&gt; 라이브러리를&amp;nbsp;사용한다.&lt;/li&gt;
+&lt;li&gt;실제 코드는 &lt;a href="https://github.com/ujuc/ujuc.github.io"&gt;https://github.com/ujuc/ujuc.github.io&lt;/a&gt; 에서 확인이&amp;nbsp;가능하다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_1"&gt;명령어&amp;nbsp;작성&lt;/h2&gt;
+&lt;p&gt;블로그 새 글을 만들 수 있는 명령어를&amp;nbsp;작성한다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cli.py&lt;/code&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;kroman&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pendulum&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;invoke&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;
+
+&lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cwd&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;CONTENT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;content&amp;#39;&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Post title&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;rst&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Post format. if false, make markdown format&amp;#39;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Make post template&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;today&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pendulum&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="n"&gt;slug&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;kroman&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;_&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;date&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_date_string&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;post_date&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_datetime_string&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;file_title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{date}-{slug}&amp;#39;&lt;/span&gt;
+
+    &lt;span class="n"&gt;file_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{file_title}.md&amp;#39;&lt;/span&gt;
+
+    &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Title: {title}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Date: {post_date}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;Category: &lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;Tags: &lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Slug: {slug}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+        &lt;span class="s1"&gt;&amp;#39;Summary: &lt;/span&gt;&lt;span class="se"&gt;\n\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;rst&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;file_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{file_title}.rst&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;hashes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;#&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+
+        &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{title}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+            &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{hashes}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+            &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;:date: {post_date}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+            &lt;span class="s1"&gt;&amp;#39;:category: &lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+            &lt;span class="s1"&gt;&amp;#39;:tags: &lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+            &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;:slug: {slug}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+            &lt;span class="s1"&gt;&amp;#39;:summary: &lt;/span&gt;&lt;span class="se"&gt;\n\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+        &lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;blog_path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CONTENT_PATH&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;blog&amp;#39;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;blog_path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_dir&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;blog_path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parents&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;post_path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;blog_path&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;file_name&lt;/span&gt;
+
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;post_path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;post_file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;post_file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;File created -&amp;gt; {post_path}&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="n"&gt;ns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;task를 등록해 주고 명령을 확인하면 다음 같이&amp;nbsp;보인다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ inv --list
+
+Available tasks:
+
+  clean      Clean up this dir
+  fix        Execute black
+  preview    Start preview web page server
+  pub        Publish to github main page
+  cli.post   Make post template
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;명령어를 실행해&amp;nbsp;보자.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ inv --help cli.post
+Usage: inv&lt;span class="o"&gt;[&lt;/span&gt;oke&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;--core-opts&lt;span class="o"&gt;]&lt;/span&gt; cli.post &lt;span class="o"&gt;[&lt;/span&gt;--options&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;other tasks here ...&lt;span class="o"&gt;]&lt;/span&gt;
+
+Docstring:
+  Make post template
+
+Options:
+  -r, --rst                   Post format. &lt;span class="k"&gt;if&lt;/span&gt; false, make markdown format
+  -t STRING, --title&lt;span class="o"&gt;=&lt;/span&gt;STRING   Post title
+
+&lt;span class="c1"&gt;# Test create post&lt;/span&gt;
+$ inv cli.post -t &lt;span class="s2"&gt;&amp;quot;포스트 테스트&amp;quot;&lt;/span&gt;
+File created -&amp;gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
+
+&lt;span class="c1"&gt;# Cat post file&lt;/span&gt;
+$ cat content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
+Title: 포스트 테스트
+Date: &lt;span class="m"&gt;2019&lt;/span&gt;-08-14 &lt;span class="m"&gt;23&lt;/span&gt;:49:02
+Category: 
+Tags: 
+Slug: po-seu-teu_te-seu-teu
+Summary:
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;여기까지 &lt;a href="https://github.com/ujuc/ujuc.github.io/commit/8e4fa75978c249192c203658dace4949a7956936"&gt;code commit&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;이제 만들어지는 걸 확인했으니&amp;hellip; &lt;code&gt;poetry run cli&lt;/code&gt;  명령을 이용해서도 만들 수 있게 코드를&amp;nbsp;수정하자.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cli/main.py&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Package로 추가해야 되어 &lt;code&gt;cli&lt;/code&gt; 폴더를&amp;nbsp;만들었다.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/sdispater/poetry/issues/577"&gt;Poetry run: ModuleOrPackageNotFound with implicit namespace packages (&lt;span class="caps"&gt;PEP420&lt;/span&gt;)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Import Program class&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;invoke&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;
+
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;run&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;program&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1.0.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;namespace&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;namespace&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;pyproject.toml&lt;/code&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[tool.poetry]&lt;/span&gt;
+&lt;span class="p"&gt;...&lt;/span&gt;
+
+&lt;span class="n"&gt;packages&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cli&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;.&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="p"&gt;...&lt;/span&gt;
+
+&lt;span class="k"&gt;[tool.poetry.scripts]&lt;/span&gt;
+&lt;span class="n"&gt;cli&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;cli.main:run&amp;#39;&lt;/span&gt;
+
+&lt;span class="p"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이제 실행해&amp;nbsp;보자.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ poetry run cli --list
+Subcommands:
+
+  post   Make post template
+
+&lt;span class="c1"&gt;# Test create post&lt;/span&gt;
+$ poetry run cli post -t &lt;span class="s2"&gt;&amp;quot;포스트 테스트&amp;quot;&lt;/span&gt;
+File created -&amp;gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-seu-teu_te-seu-teu.md
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;잘된다.&lt;/p&gt;
+&lt;p&gt;여기까지 &lt;a href="https://github.com/ujuc/ujuc.github.io/commit/ded484d94cec63e684d1f8fab2ea0b8006ceab63"&gt;code commit&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;이렇게 하면 간단한 cli 툴을 실행할 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;p&gt;문제는 build를 하게되면 해당 명령 셋이 등록이 되니&amp;hellip; build용이 아닌 상태로&amp;nbsp;사용하자.&lt;/p&gt;
+&lt;p&gt;build일때는&amp;nbsp;고민을&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/sdispater/poetry/blob/master/pyproject.toml#L69"&gt;poetry 레포&lt;/a&gt;를 보면 해당 &lt;code&gt;pyproject.toml&lt;/code&gt;에 실행하는 코드가 들어가있는 것을 확인할 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;이제 나머지 명령어&amp;nbsp;옮기러가야겠다.&lt;/p&gt;</content><category term="poetry"></category><category term="script"></category><category term="invoke"></category></entry><entry><title>Rust 개발 환경 구성</title><link href="https://ujuc.github.io/2019/08/06/rust_gae-bar_hwan-gyeong_gu-seong/" rel="alternate"></link><published>2019-08-06T08:58:16+09:00</published><updated>2019-08-06T08:58:16+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-08-06:/2019/08/06/rust_gae-bar_hwan-gyeong_gu-seong/</id><summary type="html">&lt;p&gt;Rust 개발을&amp;nbsp;해볼까나~&lt;/p&gt;</summary><content type="html">&lt;p&gt;그냥 공부할 목적으로 Rust를 하기로 하였다.&lt;br&gt;
 요즘에 참 잘 나간다고도&amp;nbsp;했고&amp;hellip;&lt;/p&gt;
 &lt;h2 id="rustup-rust"&gt;Rustup으로 Rust&amp;nbsp;설치&lt;/h2&gt;
 &lt;p&gt;처음에는 rustup을 이용해서 설치한게 아니라 brow를 이용해서 설치를 했었다.&lt;br&gt;

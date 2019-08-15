@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Style sheet -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!-- Google web font -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Song+Myung|Sunflower:300&display=swap');
+</style>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+    <!-- Article head -->
+  <meta name="keywords" content="poetry, script, invoke">
+
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   Writing poetry&nbsp;script
+    </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>Writing poetry&nbsp;script</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><ol>
+<li>이 문서에서 <code>invoke</code> 라이브러리를&nbsp;사용한다.</li>
+<li>실제 코드는 <a href="https://github.com/ujuc/ujuc.github.io">https://github.com/ujuc/ujuc.github.io</a> 에서 확인이&nbsp;가능하다.</li>
+</ol>
+<h2 id="_1">명령어&nbsp;작성</h2>
+<p>블로그 새 글을 만들 수 있는 명령어를&nbsp;작성한다.</p>
+<p><code>cli.py</code></p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span> <span class="nn">kroman</span>
+<span class="kn">import</span> <span class="nn">pendulum</span>
+<span class="kn">from</span> <span class="nn">invoke</span> <span class="kn">import</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">task</span>
+
+<span class="n">BASE_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
+<span class="n">CONTENT_PATH</span> <span class="o">=</span> <span class="n">BASE_PATH</span> <span class="o">/</span> <span class="s1">&#39;content&#39;</span>
+
+
+<span class="nd">@task</span><span class="p">(</span>
+    <span class="n">help</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Post title&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;rst&#39;</span><span class="p">:</span> <span class="s1">&#39;Post format. if false, make markdown format&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">rst</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Make post template&quot;&quot;&quot;</span>
+    <span class="n">today</span> <span class="o">=</span> <span class="n">pendulum</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+
+    <span class="n">slug</span> <span class="o">=</span> <span class="n">kroman</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+    <span class="n">date</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">to_date_string</span><span class="p">()</span>
+    <span class="n">post_date</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">to_datetime_string</span><span class="p">()</span>
+    <span class="n">file_title</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;{date}-{slug}&#39;</span>
+
+    <span class="n">file_name</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;{file_title}.md&#39;</span>
+
+    <span class="n">article</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">f</span><span class="s1">&#39;Title: {title}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">f</span><span class="s1">&#39;Date: {post_date}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Category: </span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Tags: </span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">f</span><span class="s1">&#39;Slug: {slug}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Summary: </span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">rst</span><span class="p">:</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;{file_title}.rst&#39;</span>
+        <span class="n">hashes</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
+
+        <span class="n">article</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">f</span><span class="s1">&#39;{title}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">f</span><span class="s1">&#39;{hashes}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">f</span><span class="s1">&#39;:date: {post_date}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="s1">&#39;:category: </span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="s1">&#39;:tags: </span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="n">f</span><span class="s1">&#39;:slug: {slug}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="s1">&#39;:summary: </span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="p">)</span>
+
+    <span class="n">blog_path</span> <span class="o">=</span> <span class="n">CONTENT_PATH</span> <span class="o">/</span> <span class="s1">&#39;blog&#39;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">blog_path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="n">blog_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">post_path</span> <span class="o">=</span> <span class="n">blog_path</span> <span class="o">/</span> <span class="n">file_name</span>
+
+    <span class="k">with</span> <span class="n">post_path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">post_file</span><span class="p">:</span>
+        <span class="n">post_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;File created -&gt; {post_path}&#39;</span><span class="p">)</span>
+
+
+<span class="n">ns</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">()</span>
+<span class="n">ns</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
+</pre></div>
+
+
+<p>task를 등록해 주고 명령을 확인하면 다음 같이&nbsp;보인다.</p>
+<div class="codehilite"><pre><span></span>$ inv --list
+
+Available tasks:
+
+  clean      Clean up this dir
+  fix        Execute black
+  preview    Start preview web page server
+  pub        Publish to github main page
+  cli.post   Make post template
+</pre></div>
+
+
+<p>명령어를 실행해&nbsp;보자.</p>
+<div class="codehilite"><pre><span></span>$ inv --help cli.post
+Usage: inv<span class="o">[</span>oke<span class="o">]</span> <span class="o">[</span>--core-opts<span class="o">]</span> cli.post <span class="o">[</span>--options<span class="o">]</span> <span class="o">[</span>other tasks here ...<span class="o">]</span>
+
+Docstring:
+  Make post template
+
+Options:
+  -r, --rst                   Post format. <span class="k">if</span> false, make markdown format
+  -t STRING, --title<span class="o">=</span>STRING   Post title
+
+<span class="c1"># Test create post</span>
+$ inv cli.post -t <span class="s2">&quot;포스트 테스트&quot;</span>
+File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
+
+<span class="c1"># Cat post file</span>
+$ cat content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
+Title: 포스트 테스트
+Date: <span class="m">2019</span>-08-14 <span class="m">23</span>:49:02
+Category: 
+Tags: 
+Slug: po-seu-teu_te-seu-teu
+Summary:
+</pre></div>
+
+
+<p>여기까지 <a href="https://github.com/ujuc/ujuc.github.io/commit/8e4fa75978c249192c203658dace4949a7956936">code commit</a>.</p>
+<hr>
+<p>이제 만들어지는 걸 확인했으니&hellip; <code>poetry run cli</code>  명령을 이용해서도 만들 수 있게 코드를&nbsp;수정하자.</p>
+<p><code>cli/main.py</code></p>
+<ul>
+<li>Package로 추가해야 되어 <code>cli</code> 폴더를&nbsp;만들었다.</li>
+<li><a href="https://github.com/sdispater/poetry/issues/577">Poetry run: ModuleOrPackageNotFound with implicit namespace packages (<span class="caps">PEP420</span>)</a></li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1"># Import Program class</span>
+<span class="kn">from</span> <span class="nn">invoke</span> <span class="kn">import</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">Program</span><span class="p">,</span> <span class="n">task</span>
+
+<span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="n">program</span> <span class="o">=</span> <span class="n">Program</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0.0&#39;</span><span class="p">)</span>
+    <span class="n">program</span><span class="o">.</span><span class="n">namespace</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">()</span>
+    <span class="n">program</span><span class="o">.</span><span class="n">namespace</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
+
+    <span class="n">program</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
+
+<p><code>pyproject.toml</code></p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
+<span class="p">...</span>
+
+<span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="n">include</span><span class="o">=</span><span class="s">&#39;cli&#39;</span><span class="p">,</span> <span class="n">from</span><span class="o">=</span><span class="s">&#39;.&#39;</span> <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="p">...</span>
+
+<span class="k">[tool.poetry.scripts]</span>
+<span class="n">cli</span> <span class="o">=</span> <span class="s">&#39;cli.main:run&#39;</span>
+
+<span class="p">...</span>
+</pre></div>
+
+
+<p>이제 실행해&nbsp;보자.</p>
+<div class="codehilite"><pre><span></span>$ poetry run cli --list
+Subcommands:
+
+  post   Make post template
+
+<span class="c1"># Test create post</span>
+$ poetry run cli post -t <span class="s2">&quot;포스트 테스트&quot;</span>
+File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-seu-teu_te-seu-teu.md
+</pre></div>
+
+
+<p>잘된다.</p>
+<p>여기까지 <a href="https://github.com/ujuc/ujuc.github.io/commit/ded484d94cec63e684d1f8fab2ea0b8006ceab63">code commit</a>.</p>
+<hr>
+<p>이렇게 하면 간단한 cli 툴을 실행할 수&nbsp;있다.</p>
+<p>문제는 build를 하게되면 해당 명령 셋이 등록이 되니&hellip; build용이 아닌 상태로&nbsp;사용하자.</p>
+<p>build일때는&nbsp;고민을&hellip;</p>
+<p><a href="https://github.com/sdispater/poetry/blob/master/pyproject.toml#L69">poetry 레포</a>를 보면 해당 <code>pyproject.toml</code>에 실행하는 코드가 들어가있는 것을 확인할 수&nbsp;있다.</p>
+<hr>
+<p>이제 나머지 명령어&nbsp;옮기러가야겠다.</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 19. 08. 15.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/poetry.html" class="article_tag">poetry</a>
+              <a href="https://ujuc.github.io/tag/script.html" class="article_tag">script</a>
+              <a href="https://ujuc.github.io/tag/invoke.html" class="article_tag">invoke</a>
+          </i>
+        </div>
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+        repo="ujuc/ujuc.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row">
+  <div class="container">
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><i class="far fa-closed-captioning"></i> BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  <div id="js" class="contents">
+  </div>
+
+  </body>
+</html>
