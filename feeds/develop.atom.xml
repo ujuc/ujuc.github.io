@@ -198,7 +198,113 @@ vim에서 명령을&amp;nbsp;날린다.&lt;/p&gt;
 &lt;li&gt;Rust 플러그인을&amp;nbsp;설치한다.&lt;/li&gt;
 &lt;li&gt;Rust를 가지고서&amp;nbsp;개발한다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;환경&amp;nbsp;끝.&lt;/p&gt;</content><category term="rust"></category><category term="rustup"></category><category term="develop"></category><category term="env"></category></entry><entry><title>Boilerplate shell scripts template 글 소개</title><link href="https://ujuc.github.io/2019/03/19/boilerplate_shell_scripts_template_geur_so-gae/" rel="alternate"></link><published>2019-03-19T06:59:31+09:00</published><updated>2019-03-19T06:59:31+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-03-19:/2019/03/19/boilerplate_shell_scripts_template_geur_so-gae/</id><summary type="html">&lt;p&gt;간단한 shell 스크립트를 template으로 만들어둔 것이 있어&amp;nbsp;소개한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://natelandau.com/boilerplate-shell-script-template/"&gt;Boilerplate Shell Script&amp;nbsp;Template&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;환경&amp;nbsp;끝.&lt;/p&gt;</content><category term="rust"></category><category term="rustup"></category><category term="develop"></category><category term="env"></category></entry><entry><title>Task 실행 라이브러리 - Invoke</title><link href="https://ujuc.github.io/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/" rel="alternate"></link><published>2019-07-21T16:20:49+09:00</published><updated>2019-07-21T16:20:49+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-07-21:/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/</id><summary type="html">&lt;p&gt;Task 실행 라이브러리인 &lt;code&gt;Invoke&lt;/code&gt;를&amp;nbsp;확인한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Pelican 에서 Makefile를 이용해서 빌드하고 있었는데.&lt;br&gt;
+4.0.0 버전으로 올라오면서 &lt;code&gt;Invoke&lt;/code&gt; 라이브러리를 사용하게 되었음을 확인.&lt;br&gt;
+그러니&amp;nbsp;사용해봐야징&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.pyinvoke.org/"&gt;Home&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="what-is-invoke"&gt;What is&amp;nbsp;Invoke?&lt;/h2&gt;
+&lt;p&gt;Python (2.7, 3.4+) 태스크 실행 툴이자&amp;nbsp;라이브러리&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[tasks.py](http://tasks.py)&lt;/code&gt; 파일에 태스크를 명시하여 진행&lt;ul&gt;
+&lt;li&gt;물론 &lt;code&gt;tasks/*.py&lt;/code&gt; 형식으로 만들어서 정의할 수도&amp;nbsp;있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;GNU&lt;/span&gt; Make 처럼, 명령을 나열할 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ invoke clean build
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class="caps"&gt;REPL&lt;/span&gt; 쪽에서 사용이&amp;nbsp;가능하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Unix &lt;span class="caps"&gt;CLI&lt;/span&gt; 와 같이 flag-based style 명령어를 만들 수 있다.&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--ab&lt;/code&gt; , &lt;code&gt;-d&lt;/code&gt; 이런거&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_1"&gt;사용?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tasks.py&lt;/code&gt; - &lt;a href="https://github.com/ujuc/ujuc.github.io/blob/develop/tasks.py"&gt;ujuc.github.io -&amp;nbsp;tasks.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;invoke&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
+
+&lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cwd&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;OUTPUT_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;output&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;CONF_FILE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;pelicanconf.py&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;PUBLISH_CONF_FILE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BASE_PATH&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;publishconf.py&amp;quot;&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@task&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;preview&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Start preview web page server&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pelican -s {CONF_FILE}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pelican -l&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@task&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Clean up this dir&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rm -rf {OUTPUT_PATH} {BASE_PATH}/__pycache__ {BASE_PATH}/cache&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;clean&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Publish to github main page&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pelican -s {PUBLISH_CONF_FILE}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ghp-import -m &amp;#39;Generate Pelican site&amp;#39; -b master {OUTPUT_PATH}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git push origin master&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@task&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Execute black&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;ctx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;black -l 80 .&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="n"&gt;ns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;clean&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;preview&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pub&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_task&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fix&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="_2"&gt;실행&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;목록은&amp;nbsp;이렇게&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ inv --list
+
+Available tasks:
+
+  clean     Clean up this dir
+  fix       Execute black
+  preview   Start preview web page server
+  pub       Publish to github main page
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;help는&amp;nbsp;이렇게&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ inv pub -h
+
+Usage: inv&lt;span class="o"&gt;[&lt;/span&gt;oke&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;--core-opts&lt;span class="o"&gt;]&lt;/span&gt; pub &lt;span class="o"&gt;[&lt;/span&gt;other tasks here ...&lt;span class="o"&gt;]&lt;/span&gt;
+
+Docstring:
+  Publish to github main page
+
+Options:
+  none
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;자세한건 &lt;a href="http://docs.pyinvoke.org/en/stable"&gt;Docs&lt;/a&gt; 에서 읽어가면서&amp;nbsp;확인&lt;/p&gt;</content><category term="invoke"></category><category term="devops"></category><category term="paramiko"></category><category term="command"></category><category term="cli"></category><category term="task"></category></entry><entry><title>Boilerplate shell scripts template 글 소개</title><link href="https://ujuc.github.io/2019/03/19/boilerplate_shell_scripts_template_geur_so-gae/" rel="alternate"></link><published>2019-03-19T06:59:31+09:00</published><updated>2019-03-19T06:59:31+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-03-19:/2019/03/19/boilerplate_shell_scripts_template_geur_so-gae/</id><summary type="html">&lt;p&gt;간단한 shell 스크립트를 template으로 만들어둔 것이 있어&amp;nbsp;소개한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://natelandau.com/boilerplate-shell-script-template/"&gt;Boilerplate Shell Script&amp;nbsp;Template&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;번역을 하려고 5개월전에 리플을 달아뒀었는데. 번역은 안된다는 답변이&amp;nbsp;왔다.&lt;/p&gt;
 &lt;p&gt;그래서 그냥 소개 하는 것으로&amp;nbsp;대체한다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/natelandau/shell-scripts"&gt;natelandau/shell-scripts&lt;/a&gt;&lt;/p&gt;
