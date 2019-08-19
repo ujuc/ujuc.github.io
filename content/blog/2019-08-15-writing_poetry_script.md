@@ -1,5 +1,6 @@
 Title: Writing poetry script
 Date: 2019-08-15 08:51:09
+Modified: 2019-08-19 20:52:00
 Category: Develop
 Tags: poetry, script, invoke
 Slug: writing_poetry_script
@@ -190,6 +191,24 @@ File created -> /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-seu-
 build일때는 고민을...
 
 [poetry 레포](https://github.com/sdispater/poetry/blob/master/pyproject.toml#L69)를 보면 해당 `pyproject.toml`에 실행하는 코드가 들어가있는 것을 확인할 수 있다.
+
+
+---
+
+ps. 파일 단위로도 가능하다.
+
+`tasks.py`
+
+```
+위에꺼 갔다 쓰자.. 귀찮다...
+```
+
+`pyproject.toml`
+
+```
+[tool.poetry.scripts]
+cli = "tasks:run"
+```
 
 ---
 
