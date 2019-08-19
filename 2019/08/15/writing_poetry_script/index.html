@@ -268,6 +268,19 @@ File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-s
 <p>build일때는&nbsp;고민을&hellip;</p>
 <p><a href="https://github.com/sdispater/poetry/blob/master/pyproject.toml#L69">poetry 레포</a>를 보면 해당 <code>pyproject.toml</code>에 실행하는 코드가 들어가있는 것을 확인할 수&nbsp;있다.</p>
 <hr>
+<p>ps. 파일 단위로도&nbsp;가능하다.</p>
+<p><code>tasks.py</code></p>
+<div class="codehilite"><pre><span></span><span class="err">위에꺼</span> <span class="err">갔다</span> <span class="err">쓰자</span><span class="p">..</span> <span class="err">귀찮다</span><span class="p">...</span>
+</pre></div>
+
+
+<p><code>pyproject.toml</code></p>
+<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
+<span class="na">cli</span> <span class="o">=</span> <span class="s">&quot;tasks:run&quot;</span>
+</pre></div>
+
+
+<hr>
 <p>이제 나머지 명령어&nbsp;옮기러가야겠다.</p></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
         <div class="article_meta">
