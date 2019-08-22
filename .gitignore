@@ -13,3 +13,5 @@ __pycache__/
 *.pid
 /.env
 .venv/
+
+*.egg-*
