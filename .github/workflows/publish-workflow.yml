@@ -13,14 +13,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
+      with:
+        submodules: true
     - name: Set python3
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
-    - name: Install theme
-      run: |
-        git submodule init
-        git submodule update
     - name: Install packages
       run: |
         pip install -U pip
