@@ -19,8 +19,8 @@ jobs:
         python-version: 3.7
     - name: Install packages
       run: |
-        python -U pip3
-        python install poetry
+        pip install -U pip
+        pip install poetry
         poetry config settings.virtualenvs.create false
         poetry install
     - name: Publish blog
