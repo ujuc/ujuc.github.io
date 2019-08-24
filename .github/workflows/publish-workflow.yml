@@ -11,12 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Fix up git RULs
+      run: echo -e '[url "https://github.com/"]\n insteadOf = "git@github.com"' >> ~/.gitconfig
+    - name: Checkout datas
       uses: actions/checkout@master
       with:
         submodules: true
-    - name: Set python3
-      uses: actions/setup-python@v1
+    - name: Setup python
+      uses: actions/setup-python@master
       with:
         python-version: 3.7
     - name: Install packages
