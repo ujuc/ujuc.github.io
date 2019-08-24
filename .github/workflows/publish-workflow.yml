@@ -1,0 +1,29 @@
+name: Publish
+
+on:
+  push:
+    branches:
+    - develop
+
+jobs:
+  build:
+    name: Build Blog
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@develop
+    - name: Set python3
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install packages
+      run: |
+        python -U pip3
+        python install poetry
+        poetry config settings.virtualenvs.create false
+        poetry install
+    - name: Publish blog
+      run: |
+        poetry run cli pub
+
