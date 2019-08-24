@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Fix up git RULs
-      run: echo -e '[url "https://github.com/"]\n insteadOf = "git@github.com"' >> ~/.gitconfig
     - name: Checkout datas
       uses: actions/checkout@master
       with:
@@ -25,7 +23,6 @@ jobs:
       run: |
         pip install -U pip
         pip install poetry
-        poetry config settings.virtualenvs.create false
         poetry install
     - name: Publish blog
       run: |
