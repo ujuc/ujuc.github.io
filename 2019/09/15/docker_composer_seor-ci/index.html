@@ -30,10 +30,11 @@
   <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
 
     <!-- Article head -->
+  <meta name="keywords" content="php, composer, package manager, docker">
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   | Category: Develop
+    잘 밤에 쓸데없는 생각하기... -   Docker composer&nbsp;설치
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -90,58 +91,70 @@
 </div>  </header>
 
   <div id="site_article" class="container">
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title"><a href="https://ujuc.github.io/2018/05/24/design_of_ql/">[번역] Design of <span class="caps">QL</span></a></h3>
-        <div class="article_text"><p>Go 임베디드 데이터베이스 패키지인 QL에 대한 디자인&nbsp;문서이다.</p></div>
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>Docker composer&nbsp;설치</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>회사에서 PHP를 사용하다보니 composer를 사용하는 일이 많아졌다.<br>
+설치하는 방법들이 찾는데마다 달라서 우선 찾은 것들을 정리해서&nbsp;둔다.</p>
+<ul>
+<li>shell를 이용하는 방법은 이전 composer의 기본 설치방식이었던걸로 기억하고, 많은 사람들이 이렇게 설치하도록&nbsp;알려준다.</li>
+<li><span class="caps">PHP</span> 인터프리터를 이용해서 설치하는 방법은 composer 공식 페이지에 적혀있는&nbsp;방법이다.</li>
+<li>Composer docker 이미지에서 multi-builder 방식으로 구성하고 composer 파일만 땡겨오도록 하는&nbsp;방법이다.</li>
+</ul>
+<script src="https://gist.github.com/ujuc/4d795e11b571c4c84b60851ff369b1a6.js"></script></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 19. 09. 15.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/php.html" class="article_tag">php</a>
+              <a href="https://ujuc.github.io/tag/composer.html" class="article_tag">composer</a>
+              <a href="https://ujuc.github.io/tag/package-manager.html" class="article_tag">package manager</a>
+              <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
+          </i>
+        </div>
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+        repo="ujuc/ujuc.github.io"
+        issue-term="url"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
       </div>
-    </article>
-      <hr/>
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title"><a href="https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/">Custom Virtual Environment Location on&nbsp;piping</a></h3>
-        <div class="article_text"><p>pipevn를 사용하는데&hellip; env가 안보인다. 보이는 곳으로&nbsp;옮기자!</p></div>
-      </div>
-    </article>
-      <hr/>
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title"><a href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/">파이썬으로 리눅스 배포판&nbsp;확인하기</a></h3>
-        <div class="article_text"><p>파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가&nbsp;발생했다!</p></div>
-      </div>
-    </article>
-      <hr/>
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title"><a href="https://ujuc.github.io/2017/08/04/scalae-seo_val,_var_ca-i/">Scala에서 val, var&nbsp;차이</a></h3>
-        <div class="article_text"><p>Scala에서 <code>var</code>, <code>val</code>의 차이가&nbsp;궁금해졌다.</p></div>
-      </div>
-    </article>
-      <hr/>
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title"><a href="https://ujuc.github.io/2017/07/21/pyup/">Pyup</a></h3>
-        <div class="article_text"><p>찾았다. Python 패키지 업그레이드 <span class="caps">PR</span> 날리는&nbsp;서비스.</p></div>
-      </div>
-    </article>
+    </div>
+  </div>
   </div>
 
   <!-- body foot -->
   <div class="row">
     <div class="container">
-  <ul class="pagination">
-        <li class="align-middle">
-          <a href="https://ujuc.github.io/category/develop2.html">
-            <i class="fas fa-arrow-circle-left"></i> Next
-          </a>
-        </li>
-    <a class="align-middle" style="margin: 0 .5rem 0 .5rem"><i class="fas fa-sun" style="color:orangered"></i></a>
-      <li class="align-middle">
-        <a href="/category/develop4.html">
-          Prev <i class="fas fa-arrow-circle-right"></i>
-        </a>
-      </li>
-  </ul>
     </div>
   </div>
 
