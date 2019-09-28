@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Style sheet -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/687641d3e8.js"></script>
+
+<!-- Google web font -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Song+Myung|Sunflower:300&display=swap');
+</style>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+    <!-- Article head -->
+  <meta name="keywords" content="toml">
+
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   <span class="caps">TOML</span> 0.5.0&nbsp;Release
+    </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1><span class="caps">TOML</span> 0.5.0&nbsp;Release</h1></div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p><span class="caps">TOML</span> 0.4.0 문서를 2017년에 번역해서 반영해두고 잊고 있었다가 오랜만에 들어갔더니 저번 7월달에 0.5.0 버전으로 업그레이드를&nbsp;했다.</p>
+<p><span class="caps">TOML</span> 레포에서 릴리즈를 6번 했는데. 0.4.0에서 0.5.0으로 업그레이드하는데. 장장 3년이나 걸렸다. 0.5.0 으로 업글될때 나온 커밋수도 10개밖에&nbsp;안되는데&hellip;</p>
+<p>Go때문에 많은 이슈들이 쌓였고, 어떻게 하면 좋을련지에 대한 내용들이 많이&nbsp;오고간듯.</p>
+<p>이슈를 보야될꺼같긴한데&hellip;&nbsp;~~귀찮아~~</p>
+<p><a href="https://github.com/toml-lang/toml/releases/tag/v0.5.0">릴리즈 노트</a>를&nbsp;보면</p>
+<ul>
+<li>
+<p><code>.(dot)</code>으로 표기하는 키&nbsp;추가</p>
+<blockquote>
+<p>Add dotted&nbsp;keys.</p>
+</blockquote>
+</li>
+<li>
+<p>16진수, 8진수, 2진수로 표기하는 정수 포맷&nbsp;추가</p>
+<blockquote>
+<p>Add hex, octal, and binary integer&nbsp;formats.</p>
+</blockquote>
+</li>
+<li>
+<p>특별한 float 값(inf, nan)&nbsp;추가</p>
+<blockquote>
+<p>Add special float values (inf,&nbsp;nan)</p>
+</blockquote>
+</li>
+<li>
+<p>Offset Date-Time에서 Datetime으로 이름&nbsp;변경</p>
+<blockquote>
+<p>Rename Datetime to Offset&nbsp;Date-Time.</p>
+</blockquote>
+</li>
+<li>
+<p>로컬 Date-Time&nbsp;추가</p>
+<blockquote>
+<p>Add Local&nbsp;Date-Time.</p>
+</blockquote>
+</li>
+<li>
+<p>로컬 날짜&nbsp;추가</p>
+<blockquote>
+<p>Add Local&nbsp;Date.</p>
+</blockquote>
+</li>
+<li>
+<p>로컬 시간&nbsp;추가</p>
+<blockquote>
+<p>Add Local&nbsp;Time.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="https://zetawiki.com/wiki/ABNF"><span class="caps">ABNF</span></a> 스팩&nbsp;추가</p>
+<blockquote>
+<p>Add <span class="caps">ABNF</span>&nbsp;specification.</p>
+</blockquote>
+</li>
+<li>
+<p>(T 대신) 날짜와 시간을 Date-Time으로 구분할 수 있도록&nbsp;허용</p>
+<blockquote>
+<p>Allow space (instead of T) to separate date and time in&nbsp;Date-Time.</p>
+</blockquote>
+</li>
+<li>
+<p>여러 줄 기본 문자열에서 <code>\</code>와  <code>n</code> (newline) 사이의 우발적인 빈칸을&nbsp;허용한다.</p>
+<blockquote>
+<p>(역주) <code>\ n</code> 형식으로 사용하는 것을&nbsp;허용한다.</p>
+<p>Allow accidental whitespace between backslash and newline in the line<br>
+continuation operator in multi-line basic&nbsp;strings.</p>
+</blockquote>
+</li>
+<li>
+<p>표준 파일 확장자 <code>.toml</code> 로&nbsp;지정</p>
+<blockquote>
+<p>Specify that the standard file extension is <code>.toml</code>.</p>
+</blockquote>
+</li>
+<li>
+<p><span class="caps">MIME</span> 형식은  <code>application/toml</code> 로&nbsp;지정</p>
+<blockquote>
+<p>Specify that <span class="caps">MIME</span> type is <code>application/toml</code></p>
+</blockquote>
+</li>
+<li>
+<p><code>U+007F</code>  문자는 escape 문자로&nbsp;특정합니다.</p>
+<blockquote>
+<p>Clarify that U+007F is an escape&nbsp;character.</p>
+</blockquote>
+</li>
+<li>
+<p><code>keys</code> 는 문자열만&nbsp;사용합니다.</p>
+<blockquote>
+<p>Clarify that keys are always&nbsp;strings.</p>
+</blockquote>
+</li>
+<li>
+<p>정적 배열에 추가할 경우, 테이블의 배열은 사용할 수&nbsp;없다.</p>
+<blockquote>
+<p>Clarify that you cannot use array-of-table to append to a static&nbsp;array.</p>
+</blockquote>
+</li>
+<li>
+<p><span class="caps">TOML</span> 파일이 유효한 <span class="caps">UTF</span>-8 문서여야&nbsp;한다.</p>
+<blockquote>
+<p>Clarify that a <span class="caps">TOML</span> file must be a valid <span class="caps">UTF</span>-8&nbsp;document.</p>
+</blockquote>
+</li>
+<li>
+<p>유요한 배열 값을 명확히&nbsp;한다.</p>
+<blockquote>
+<p>Clarify valid Array&nbsp;values.</p>
+</blockquote>
+</li>
+<li>
+<p>Literal 문자열이 테이블 키가 될 수&nbsp;있다.</p>
+<blockquote>
+<p>Clarify that literal strings can be table&nbsp;keys.</p>
+</blockquote>
+</li>
+<li>
+<p>Date-Time 과 Time 에서 최소 milllisecond 이상의 정밀도를 가질 수&nbsp;있다.</p>
+<blockquote>
+<p>Clarify that at least millisecond precision expected for Date-Time and&nbsp;Time.</p>
+</blockquote>
+</li>
+<li>
+<p>여러줄 배열 타입에서 주석을&nbsp;허용합니다.</p>
+<blockquote>
+<p>Clarify that comments are <span class="caps">OK</span> in multiline&nbsp;arrays.</p>
+</blockquote>
+</li>
+<li>
+<p><code>+0</code>, <code>-0</code>, <code>+0.0</code>, <code>-0.0</code> 값이 유효하며 명확히&nbsp;정의한다.</p>
+<blockquote>
+<p>Clarify that +0, -0, +0.0, and -0.0 are valid and what they&nbsp;mean.</p>
+</blockquote>
+</li>
+<li>
+<p><span class="caps">TOML</span> 로고가&nbsp;생겼다!!!</p>
+<blockquote>
+<p><span class="caps">TOML</span> has a&nbsp;logo!</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>그리고 머지가&nbsp;되었다!</p>
+<p><a href="https://github.com/toml-lang/toml/pull/575">Append the korean translation of v0.5.0 by ujuc · Pull Request #575 ·&nbsp;toml-lang/toml</a></p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 19. 09. 28.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+              <a href="https://ujuc.github.io/tag/toml.html" class="article_tag">toml</a>
+          </i>
+        </div>
+        <!-- Comment -->
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+                  repo="ujuc/ujuc.github.io"
+                  issue-term="url"
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+          </script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <h3><a href="https://ujuc.github.io" class="h3">잘 밤에 쓸데없는 생각하기...</a></h3>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row">
+  <div class="container">
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><i class="far fa-closed-captioning"></i> BY-SA</a> ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.</p>
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  <div id="js" class="contents">
+  </div>
+
+  </body>
+</html>
