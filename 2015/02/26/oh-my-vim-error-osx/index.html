@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   oh-my-vim 설치후 오류 (<span class="caps">OSX</span>)
+    잘 밤에 쓸데없는 생각하기... -   oh-my-vim 설치후 오류 (OSX)
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,41 +94,42 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>oh-my-vim 설치후 오류 (<span class="caps">OSX</span>)</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p><a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim">oh-my-vim</a> 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
-변경하고 있긴하다만&#8230;). 달라진게 없다. 좀 더 화려해지고 플러그인들로 인해서
-IDE급으로 에디터가 변경됐을 뿐이다. 단지 80라인 와랩이&nbsp;필요했을뿐인데&#8230;</p>
-<p>암튼 그렇게 쓰다보니 실행할때마다 에러가&nbsp;뜬다.</p>
-<pre class="literal-block">
-neocomplete does work this version of Vim.
-It requires &quot;if_lua&quot; enabled Vim(7.3.885 or above).
-</pre>
-<p>혹시나 해서 검색을 해봤다. 매번 실행할 때마다 엔터 3번은 너무&nbsp;오래걸려서&#8230;</p>
-<p><a class="reference external" href="https://github.com/Shougo/neocomplete.vim/issues/237">neocomplete.vim - Vim version and lua</a> 에서는 실행후 <tt class="docutils literal">:version</tt> 으로 <tt class="docutils literal">lua</tt> 가
-<tt class="docutils literal">-</tt> 인지 <tt class="docutils literal">+</tt> 인지 확인을 하라고 말을&nbsp;한다.</p>
-<p>여기서는 <tt class="docutils literal"><span class="pre">-lua</span></tt> 면 <tt class="docutils literal">lua</tt> 사용 옵션이 빠져있는 것이 되기에 vim 설치시 그에 대한
-옵션을 설정해줘야된다는&nbsp;말을&#8230;</p>
-<p><span class="caps">OSX</span> 사용자들에게만 나온는 것같은데&#8230; Linux에 대한 오류가 없는&nbsp;걸보면&#8230;</p>
-<p>암튼 그것을 수정하는 방법은 <tt class="docutils literal">brew</tt> 로 설치할때 옵션을 걸어주고 설치하면 된다.
-물론 설치했다면, 다시 설치하면된다. 난 삭제하고 다시 설치&#8230; (적다보니&#8230; 자동화
-스크립트에 작성해둔거 변경을&nbsp;해줘야겠다&#8230;)</p>
-<pre class="code bash literal-block">
-$ brew install vim --with-cscope --with-lua --override-system-vim
-</pre>
-<p>설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이&nbsp;줄었다.!!!</p>
-</div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>oh-my-vim 설치후 오류 (OSX)</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 15. 02. 26.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/vim.html" class="article_tag">vim</a>
-              <a href="https://ujuc.github.io/tag/setting.html" class="article_tag">setting</a>
+            <a href="https://ujuc.github.io/tag/vim.html" class="article_tag">vim</a>
+            <a href="https://ujuc.github.io/tag/setting.html" class="article_tag">setting</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p><a class="reference external" href="https://github.com/liangxianzhe/oh-my-vim">oh-my-vim</a> 으로 vim 플러그인 설정에 관련된 기본 프로그램을 바꿨다 (이것저것
+변경하고 있긴하다만...). 달라진게 없다. 좀 더 화려해지고 플러그인들로 인해서
+IDE급으로 에디터가 변경됐을 뿐이다. 단지 80라인 와랩이 필요했을뿐인데...</p>
+<p>암튼 그렇게 쓰다보니 실행할때마다 에러가 뜬다.</p>
+<pre class="literal-block">
+neocomplete does work this version of Vim.
+It requires &quot;if_lua&quot; enabled Vim(7.3.885 or above).
+</pre>
+<p>혹시나 해서 검색을 해봤다. 매번 실행할 때마다 엔터 3번은 너무 오래걸려서...</p>
+<p><a class="reference external" href="https://github.com/Shougo/neocomplete.vim/issues/237">neocomplete.vim - Vim version and lua</a> 에서는 실행후 <tt class="docutils literal">:version</tt> 으로 <tt class="docutils literal">lua</tt> 가
+<tt class="docutils literal">-</tt> 인지 <tt class="docutils literal">+</tt> 인지 확인을 하라고 말을 한다.</p>
+<p>여기서는 <tt class="docutils literal"><span class="pre">-lua</span></tt> 면 <tt class="docutils literal">lua</tt> 사용 옵션이 빠져있는 것이 되기에 vim 설치시 그에 대한
+옵션을 설정해줘야된다는 말을...</p>
+<p>OSX 사용자들에게만 나온는 것같은데... Linux에 대한 오류가 없는 걸보면...</p>
+<p>암튼 그것을 수정하는 방법은 <tt class="docutils literal">brew</tt> 로 설치할때 옵션을 걸어주고 설치하면 된다.
+물론 설치했다면, 다시 설치하면된다. 난 삭제하고 다시 설치... (적다보니... 자동화
+스크립트에 작성해둔거 변경을 해줘야겠다...)</p>
+<pre class="code bash literal-block">
+$ brew install vim --with-cscope --with-lua --override-system-vim
+</pre>
+<p>설치해주면된다. 그러면 자연스럽게 넘어가고 에러는 밑으로 나올꺼니 엔터칠 일이
+줄었다.!!!</p>
+</div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

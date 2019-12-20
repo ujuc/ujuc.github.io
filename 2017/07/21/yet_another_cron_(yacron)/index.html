@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Yet Another Cron&nbsp;(yacron)
+    잘 밤에 쓸데없는 생각하기... -   Yet Another Cron (yacron)
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,37 +94,50 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Yet Another Cron&nbsp;(yacron)</h1></div>
+        <div class="article_title"><h1>Yet Another Cron (yacron)</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 17. 07. 21.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/cron.html" class="article_tag">cron</a>
+            <a href="https://ujuc.github.io/tag/yaml.html" class="article_tag">yaml</a>
+            <a href="https://ujuc.github.io/tag/scadule.html" class="article_tag">scadule</a>
+            <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
+            <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><ul>
 <li><a href="https://github.com/gjcarneiro/yacron">Github</a></li>
 </ul>
-<p>해당 프로젝트는 지금은 alpha 버전이라고 한다. 제대로된 기능들이 들어가기 시작하면 좋아질듯. 그리고 그때쯤되면 간단한 소개가 아닌 사용법에 대해서&nbsp;작성해둬야겠다.</p>
-<p>우선은 Readme 파일 번역&nbsp;수준</p>
+<p>해당 프로젝트는 지금은 alpha 버전이라고 한다. 제대로된 기능들이 들어가기 시작하면 좋아질듯. 그리고 그때쯤되면 간단한 소개가 아닌 사용법에 대해서 작성해둬야겠다.</p>
+<p>우선은 Readme 파일 번역 수준</p>
 <h2 id="_1">기능</h2>
-<p>가장 중요하다.&nbsp;기능!</p>
+<p>가장 중요하다. 기능!</p>
 <ul>
-<li><span class="dquo">&ldquo;</span>Crontab&rdquo; 을 YAML로 작성이&nbsp;가능하다.</li>
-<li>솔직히 YAML이 편한지는&nbsp;모르겠다.</li>
-<li>cron job이 실패에 대한 부분을 제어할 수 있게&nbsp;되어있다.</li>
-<li>실패시 해당 값을 재시도 할 수&nbsp;있다.</li>
-<li>유연하게 구성&nbsp;가능</li>
-<li>Docker, Kubernetes, 12 factor environments에 맞게 디자인이&nbsp;되었다며&hellip;</li>
+<li>&ldquo;Crontab&rdquo; 을 YAML로 작성이 가능하다.</li>
+<li>솔직히 YAML이 편한지는 모르겠다.</li>
+<li>cron job이 실패에 대한 부분을 제어할 수 있게 되어있다.</li>
+<li>실패시 해당 값을 재시도 할 수 있다.</li>
+<li>유연하게 구성 가능</li>
+<li>Docker, Kubernetes, 12 factor environments에 맞게 디자인이 되었다며&hellip;</li>
 </ul>
 <h2 id="_2">설치</h2>
 <ul>
-<li>python &gt;=&nbsp;3.5</li>
-<li>pip install&nbsp;yacron</li>
+<li>python &gt;= 3.5</li>
+<li>pip install yacron</li>
 </ul>
 <h2 id="_3">사용</h2>
 <div class="codehilite"><pre><span></span>yacron -c my-crontab.yaml
 </pre></div>
 
 
-<p><code>-c</code>를 사용해서 구성파일이 있는 곳을&nbsp;가리킨다.</p>
-<h3 id="_4">기본&nbsp;구성</h3>
+<p><code>-c</code>를 사용해서 구성파일이 있는 곳을 가리킨다.</p>
+<h3 id="_4">기본 구성</h3>
 <ul>
-<li>매 5분마다 <code>echo "foobar"</code>를 실행하는&nbsp;job.</li>
+<li>매 5분마다 <code>echo "foobar"</code>를 실행하는 job.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
@@ -135,7 +148,7 @@
 
 
 <ul>
-<li>특정일 (2017/7/19)에만 5분마다 <code>echo "foobar"</code>를 실행하는&nbsp;job.</li>
+<li>특정일 (2017/7/19)에만 5분마다 <code>echo "foobar"</code>를 실행하는 job.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
@@ -150,7 +163,7 @@
 
 
 <ul>
-<li>특정 환경변수 값&nbsp;설정</li>
+<li>특정 환경변수 값 설정</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
@@ -163,7 +176,7 @@
 </pre></div>
 
 
-<h3 id="_5">기본 값&nbsp;지정</h3>
+<h3 id="_5">기본 값 지정</h3>
 <div class="codehilite"><pre><span></span><span class="nt">defaults</span><span class="p">:</span>
     <span class="nt">environment</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PATH</span>
@@ -182,7 +195,7 @@
 
 <h3 id="_6">리포트</h3>
 <ul>
-<li>job 이 실패했을때 알려준다. Sentry는 나중에 추가될&nbsp;꺼임.</li>
+<li>job 이 실패했을때 알려준다. Sentry는 나중에 추가될 꺼임.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
   <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
@@ -205,9 +218,9 @@
 
 
 <p><code>onFailure</code> 부분이 job 실패시 작어하는 부분임.<br>
-<code>captureStderr: true</code> 부분은 stderr로 출력되는 데이터를 잡겠다는거 반대로는 <code>captureStdout: true</code> 가&nbsp;있다.</p>
+<code>captureStderr: true</code> 부분은 stderr로 출력되는 데이터를 잡겠다는거 반대로는 <code>captureStdout: true</code> 가 있다.</p>
 <ul>
-<li>job 이 성공했을 경우, 알림은 <code>onSuccess</code> 옵션을&nbsp;추가한다.</li>
+<li>job 이 성공했을 경우, 알림은 <code>onSuccess</code> 옵션을 추가한다.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
   <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;hello world&quot;</span>
@@ -223,22 +236,22 @@
 </pre></div>
 
 
-<h3 id="failure">failure&nbsp;제어</h3>
+<h3 id="failure">failure 제어</h3>
 <ul>
-<li>실패&nbsp;조건</li>
+<li>실패 조건</li>
 <li><code>producesStdout</code><ul>
 <li>default: <code>false</code></li>
-<li>stdout 출력이 있을&nbsp;경우</li>
+<li>stdout 출력이 있을 경우</li>
 </ul>
 </li>
 <li><code>producesStderr</code><ul>
 <li>default: <code>true</code></li>
-<li>stderr 출력이 있을&nbsp;경우</li>
+<li>stderr 출력이 있을 경우</li>
 </ul>
 </li>
 <li><code>nonzeroReturn</code><ul>
 <li>default: <code>true</code></li>
-<li>반환값이 0이&nbsp;아닌경우</li>
+<li>반환값이 0이 아닌경우</li>
 </ul>
 </li>
 </ul>
@@ -252,7 +265,7 @@
 <ul>
 <li><code>retry</code></li>
 </ul>
-<p><code>onFailure</code> 안에다가 추가한다. 그리고 job 재시도도 완전히 실패했다면, <code>onPermanentFailure</code> 옵션을 사용하여 리포트를&nbsp;받는다.</p>
+<p><code>onFailure</code> 안에다가 추가한다. 그리고 job 재시도도 완전히 실패했다면, <code>onPermanentFailure</code> 옵션을 사용하여 리포트를 받는다.</p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
   <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
     <span class="no">echo &quot;hello&quot; 1&gt;&amp;2</span>
@@ -280,19 +293,6 @@
         <span class="nt">smtp_host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
 </pre></div></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 17. 07. 21.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/cron.html" class="article_tag">cron</a>
-              <a href="https://ujuc.github.io/tag/yaml.html" class="article_tag">yaml</a>
-              <a href="https://ujuc.github.io/tag/scadule.html" class="article_tag">scadule</a>
-              <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
-              <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

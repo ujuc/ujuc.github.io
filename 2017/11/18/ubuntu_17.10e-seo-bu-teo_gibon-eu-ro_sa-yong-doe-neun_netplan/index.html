@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Ubuntu 17.10에서부터 기본으로 사용되는&nbsp;Netplan
+    잘 밤에 쓸데없는 생각하기... -   Ubuntu 17.10에서부터 기본으로 사용되는 Netplan
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,42 +94,55 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Ubuntu 17.10에서부터 기본으로 사용되는&nbsp;Netplan</h1></div>
+        <div class="article_title"><h1>Ubuntu 17.10에서부터 기본으로 사용되는 Netplan</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 17. 11. 18.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/network.html" class="article_tag">network</a>
+            <a href="https://ujuc.github.io/tag/config.html" class="article_tag">config</a>
+            <a href="https://ujuc.github.io/tag/networkd.html" class="article_tag">networkd</a>
+            <a href="https://ujuc.github.io/tag/netplan.html" class="article_tag">netplan</a>
+            <a href="https://ujuc.github.io/tag/ubuntu.html" class="article_tag">ubuntu</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>처음에는 리눅스에서 IP를 Static하게 구성하기위해 <a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819">검색한 페이지</a>에서 독특한 문법을&nbsp;확인했다.</p>
+        <div class="article_text"><p>처음에는 리눅스에서 IP를 Static하게 구성하기위해 <a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819">검색한 페이지</a>에서 독특한 문법을 확인했다.</p>
 <p>문의 내용은 17.10에서는 <code>/etc/network/interfaces</code>에 작성해둔 설정이 안먹힌다는 것이었다. 그러면서 답변으로 달린것이 <a href="https://askubuntu.com/a/967819/126675">요내용</a>이다.</p>
-<p><code>ifupdown</code> 패키지를 더이상 사용하지 않고, Ubuntu 17.10 Server에서 부터는 <code>netplan</code>이라는 것을 사용하여 <code>systemd-networkd</code>를 제어한다고 명시하고&nbsp;있다.</p>
-<p>사용법이 묘하다. 혹시나해서 <a href="https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes">Ubuntu 17.10 release note</a>를 보러갔지. 그랬더니 <strong>Update Packages</strong>에 당당히 Linux kernel 다음에 한 꼭지로 있다. 내용은 다음 과&nbsp;같다.</p>
+<p><code>ifupdown</code> 패키지를 더이상 사용하지 않고, Ubuntu 17.10 Server에서 부터는 <code>netplan</code>이라는 것을 사용하여 <code>systemd-networkd</code>를 제어한다고 명시하고 있다.</p>
+<p>사용법이 묘하다. 혹시나해서 <a href="https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes">Ubuntu 17.10 release note</a>를 보러갔지. 그랬더니 <strong>Update Packages</strong>에 당당히 Linux kernel 다음에 한 꼭지로 있다. 내용은 다음 과 같다.</p>
 <blockquote>
-<p><strong>ifupdown</strong> has been deprecated in favor of <strong>netplan</strong> and is no longer present on new installs. The installer will generate a configuration file for <strong>netplan</strong> in <em>/etc/netplan</em>, which will set up the system to configure the network via systemd-networkd or NetworkManager. Desktop users will see their system fully managed via NetworkManager as it has been the case in previous releases, but Server users now have their network devices managed via systemd-networkd on new installs. This only applies to new&nbsp;installations.</p>
+<p><strong>ifupdown</strong> has been deprecated in favor of <strong>netplan</strong> and is no longer present on new installs. The installer will generate a configuration file for <strong>netplan</strong> in <em>/etc/netplan</em>, which will set up the system to configure the network via systemd-networkd or NetworkManager. Desktop users will see their system fully managed via NetworkManager as it has been the case in previous releases, but Server users now have their network devices managed via systemd-networkd on new installs. This only applies to new installations.</p>
 <p>Given that ifupdown is no longer installed by default, its commands will not be present: <code>ifup</code> and <code>ifdown</code> are thus unavailable, replaced by <code>ip link set $device up</code> and <code>ip link set $device down</code>.</p>
-<p>The <code>networkctl</code> command is also available for users to see a summary of the network devices. <code>networkctl</code> status will display the current global state of <span class="caps">IP</span> addresses on the system; and <code>networkctl status $device</code> can display the details specific to a network&nbsp;device.</p>
+<p>The <code>networkctl</code> command is also available for users to see a summary of the network devices. <code>networkctl</code> status will display the current global state of IP addresses on the system; and <code>networkctl status $device</code> can display the details specific to a network device.</p>
 <p>For more information about netplan, please refer to the manual page using the <code>man 5 netplan</code> command.</p>
 </blockquote>
-<p>그리고 찾다보니 이건 Ubuntu에서만 사용하는 프로젝트로 보이는데&hellip; 다른 배포판에서는 사용될 확률이 높지는 않으니&hellip;&nbsp;이것참&hellip;</p>
-<p>아래 내용은 정리해둔거고, 나중에 man 페이지나 정리해서&nbsp;올려둬야겠다.</p>
+<p>그리고 찾다보니 이건 Ubuntu에서만 사용하는 프로젝트로 보이는데&hellip; 다른 배포판에서는 사용될 확률이 높지는 않으니&hellip; 이것참&hellip;</p>
+<p>아래 내용은 정리해둔거고, 나중에 man 페이지나 정리해서 올려둬야겠다.</p>
 <h2 id="netplan">Netplan</h2>
 <p><img alt="Design overview" src="https://wiki.ubuntu.com/Netplan/Design?action=AttachFile&amp;do=get&amp;target=design_overview.png"></p>
-<h3 id="netplan_1">Netplan&nbsp;소개</h3>
+<h3 id="netplan_1">Netplan 소개</h3>
 <ul>
-<li><span class="caps">YAML</span> 구성 파일을 사용하여 네트워크 구성을&nbsp;한다.</li>
-<li>초기 부팅시, “network renderer” 작동할때 <em>/{lib,etc,run}/netplan*.yaml</em> 내용을 읽고, 지정된 네트워킹 daemon에 장치에 대한 <em>/run</em> 에 구성을&nbsp;쓴다.</li>
-<li>systemd-networkd 를 renderer 기본 값으로 하여 장치를 핸들링하며, 다른 renderer (NetworkManger)를 지정할 수&nbsp;있다.</li>
-<li>네트워크 구성에서 다루지 않는 장치는 전혀 건드리지&nbsp;않는다.</li>
-<li>initramfs에서 사용이&nbsp;가능하다.</li>
-<li>구성이 지속되지 않고, <span class="caps">YAML</span> 로만 구성을&nbsp;작성한다.</li>
-<li>파서는 어플리케이션 (libvert, lxd)에서 사용이 예상되는 네트워크 구성 (<code>virtbr0</code>, <code>lxdvr0</code>)를 패키지화 할 수 있도록 멀티 구성 파일에 대한 지원을 하거나, NetworkManager를 이용하여 모든 것을 사용하도록 글로벌 기본 정책을 변경할 수&nbsp;있어야한다.</li>
-<li>백엔드/정책을 변경하거나, <code>apt purge network-manager</code>를 할 수 있는 유연성을&nbsp;유지해야한다.</li>
+<li>YAML 구성 파일을 사용하여 네트워크 구성을 한다.</li>
+<li>초기 부팅시, “network renderer” 작동할때 <em>/{lib,etc,run}/netplan*.yaml</em> 내용을 읽고, 지정된 네트워킹 daemon에 장치에 대한 <em>/run</em> 에 구성을 쓴다.</li>
+<li>systemd-networkd 를 renderer 기본 값으로 하여 장치를 핸들링하며, 다른 renderer (NetworkManger)를 지정할 수 있다.</li>
+<li>네트워크 구성에서 다루지 않는 장치는 전혀 건드리지 않는다.</li>
+<li>initramfs에서 사용이 가능하다.</li>
+<li>구성이 지속되지 않고, YAML 로만 구성을 작성한다.</li>
+<li>파서는 어플리케이션 (libvert, lxd)에서 사용이 예상되는 네트워크 구성 (<code>virtbr0</code>, <code>lxdvr0</code>)를 패키지화 할 수 있도록 멀티 구성 파일에 대한 지원을 하거나, NetworkManager를 이용하여 모든 것을 사용하도록 글로벌 기본 정책을 변경할 수 있어야한다.</li>
+<li>백엔드/정책을 변경하거나, <code>apt purge network-manager</code>를 할 수 있는 유연성을 유지해야한다.</li>
 </ul>
 <h3 id="_1">명령어</h3>
 <ul>
-<li><code>netplan generate</code> : <em>/etc/netplan</em>에 renderer에 대한 구성들을&nbsp;생성한다.</li>
-<li><code>netplan apply</code> : renderer에 대한 구성들을 적용하고, 필요에따라&nbsp;재시작한다.</li>
-<li><code>netplan ifupdown-migrate</code> : <em>/etc/network/interfaces</em> 의 내용을 마이그레이션&nbsp;한다.</li>
+<li><code>netplan generate</code> : <em>/etc/netplan</em>에 renderer에 대한 구성들을 생성한다.</li>
+<li><code>netplan apply</code> : renderer에 대한 구성들을 적용하고, 필요에따라 재시작한다.</li>
+<li><code>netplan ifupdown-migrate</code> : <em>/etc/network/interfaces</em> 의 내용을 마이그레이션 한다.</li>
 </ul>
 <h3 id="_2">사용법</h3>
 <ul>
-<li>설정한 인터페이스&nbsp;끄고키기</li>
+<li>설정한 인터페이스 끄고키기</li>
 </ul>
 <div class="codehilite"><pre><span></span>$ ip link <span class="nb">set</span> <span class="nv">$dev</span> up
 $ ip link <span class="nb">set</span> <span class="nv">$dev</span> down
@@ -150,9 +163,9 @@ $ ip link <span class="nb">set</span> <span class="nv">$dev</span> down
 </pre></div>
 
 
-<h3 id="netplan_2">Netplan을 사용하고 싶지 않을&nbsp;경우</h3>
-<p>Ubuntu 서버 설치 이미지로 부팅시 grub (<code>e</code> 버튼을 클릭해서 수정하거나, F6을 눌러 bootspash로 들어가서)에서 preseeding 설정으로 <code>netcfg/do_not_use_netplan=true</code> 명령을&nbsp;추가해줍니다.</p>
-<h2 id="_3">참고&nbsp;페이지</h2>
+<h3 id="netplan_2">Netplan을 사용하고 싶지 않을 경우</h3>
+<p>Ubuntu 서버 설치 이미지로 부팅시 grub (<code>e</code> 버튼을 클릭해서 수정하거나, F6을 눌러 bootspash로 들어가서)에서 preseeding 설정으로 <code>netcfg/do_not_use_netplan=true</code> 명령을 추가해줍니다.</p>
+<h2 id="_3">참고 페이지</h2>
 <ul>
 <li>Homepage : <a href="https://launchpad.net/netplan">launchpad.net/netplan</a></li>
 <li>Code : <a href="https://git.launchpad.net/netplan">git.launchpad.net/netplan</a><ul>
@@ -160,29 +173,16 @@ $ ip link <span class="nb">set</span> <span class="nv">$dev</span> down
 </ul>
 </li>
 <li>Wiki : <a href="https://wiki.ubuntu.com/Netplan">wiki.ubuntu.com/Netplan</a><ul>
-<li><a href="https://wiki.ubuntu.com/Netplan/Design">Netplan&nbsp;Design</a></li>
+<li><a href="https://wiki.ubuntu.com/Netplan/Design">Netplan Design</a></li>
 </ul>
 </li>
 <li>ManPage : <a href="http://people.canonical.com/~mtrudel/netplan/">netplan</a><ul>
 <li><a href="https://git.launchpad.net/netplan/tree/doc/netplan.md">doc/netplan.md</a></li>
 </ul>
 </li>
-<li><a href="https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/">Netplan by default in&nbsp;17.10</a></li>
+<li><a href="https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/">Netplan by default in 17.10</a></li>
 </ul></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 17. 11. 18.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/network.html" class="article_tag">network</a>
-              <a href="https://ujuc.github.io/tag/config.html" class="article_tag">config</a>
-              <a href="https://ujuc.github.io/tag/networkd.html" class="article_tag">networkd</a>
-              <a href="https://ujuc.github.io/tag/netplan.html" class="article_tag">netplan</a>
-              <a href="https://ujuc.github.io/tag/ubuntu.html" class="article_tag">ubuntu</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

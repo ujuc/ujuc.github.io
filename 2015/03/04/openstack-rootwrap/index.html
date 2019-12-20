@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   OpenStack&nbsp;rootwrap
+    잘 밤에 쓸데없는 생각하기... -   OpenStack rootwrap
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,89 +94,89 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>OpenStack&nbsp;rootwrap</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>OpenStack 프로젝트들에서 사용되는 것들 중&#8230; <strong>root</strong> 와 관련된 작업을
-진행해야하는 경우가 있다. 그럴때 사용하려고 만들어둔 <a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap">rootwrap</a></p>
-<p>Wiki에서는 이 <a class="reference external" href="https://fnords.wordpress.com/2011/11/23/improving-nova-privilege-escalation-model-part-1/">블로그</a> 에 작성된 문제를 해결하기 위해서 만들어졌다고&nbsp;한다.</p>
-<p>짧은 내기억으로는 간단한 팡리로만 존재했던 것같은데. (아닐 가능성 100%라논
-소리&#8230;), 지금은 oslo 패키지로 관리되고 있다. <a class="reference external" href="https://github.com/openstack/oslo.rootwrap">github&nbsp;repo</a></p>
-<div class="section" id="id2">
-<h2>사용자용</h2>
-<p><tt class="docutils literal">nova.conf</tt> 에 다음 문구&nbsp;추가하도록&#8230;</p>
-<pre class="literal-block">
-rootwrap_config=/etc/nova/rootwrap.conf
-</pre>
-</div>
-<div class="section" id="id3">
-<h2>배포용 패키지를 만드는&nbsp;사람용</h2>
-<div class="section" id="suduers">
-<h3>Suduers&nbsp;설정</h3>
-<p><tt class="docutils literal">sudoers</tt> 에 다음 문구를&nbsp;추가하도록&#8230;</p>
-<pre class="literal-block">
-nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
-</pre>
-</div>
-<div class="section" id="id4">
-<h3>필터 위치&nbsp;설정</h3>
-<p><tt class="docutils literal">rootwrap</tt> 으로 <tt class="docutils literal"><span class="pre">Nova-provided</span></tt> 필터 파일을 로드하고, <tt class="docutils literal">rootwrap.d</tt> 로 확장
-사용자의 필터 파일을 로드하도록 설정해&nbsp;줄것.</p>
-<pre class="literal-block">
-[DEFAULT]
-filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
-</pre>
-</div>
-<div class="section" id="id5">
-<h3>필터&nbsp;정의</h3>
-<p>각 노드마다 설치를&#8230;&nbsp;해줘야된다고.</p>
-</div>
-</div>
-<div class="section" id="id6">
-<h2>플러그인&nbsp;작성자용</h2>
-<div class="section" id="run-as-root">
-<h3>새로운 <tt class="docutils literal"><span class="pre">run-as-root</span></tt> 명령을&nbsp;추가</h3>
-<p>root로 동작시킬 것이 있을&nbsp;경우.</p>
-<ul class="simple">
-<li><tt class="docutils literal">nova.utils.execute(run_as_root=True)</tt> 를 사용할&nbsp;것.</li>
-<li>관련 필터 내용은 <tt class="docutils literal">/etc/nova/rootwrap.d/foobar.filters</tt> 에 추가해둘&nbsp;것.</li>
-</ul>
-</div>
-</div>
-<div class="section" id="id7">
-<h2>프로젝트&nbsp;개발자용</h2>
-<div class="section" id="id8">
-<h3>새로운 <tt class="docutils literal"><span class="pre">run-as-root</span></tt> 명령을&nbsp;추가</h3>
-<ul class="simple">
-<li><tt class="docutils literal">nova.utils.execute(run_as_root=True)</tt> 를 사용할&nbsp;것.</li>
-<li>Nova 코드에서 <tt class="docutils literal"><span class="pre">/etc/nova/rootwrap.d/{filter_name}.ilters</span></tt> 파일에 관련된 내용을
-추가해줄 것.<ul>
-<li>예로 Compute 노드에서 작동하는 소스라면
-<tt class="docutils literal">/etc/nova/rootwrap.d/compute.filters</tt> 에다가&nbsp;추가하도록.</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div class="section" id="id9">
-<h2>상위 필터 타입&nbsp;추가</h2>
-<ul class="simple">
-<li>기본 필터 타입은 <tt class="docutils literal">CommandFilter</tt> 임.</li>
-<li>새로운 타입을 만들거나 지금 존재하는 타입을 확인하고 싶다면 <a class="reference external" href="https://github.com/openstack/oslo.rootwrap/blob/master/oslo_rootwrap/filters.py">filters.py</a> 를
-보면 된다. - <a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes">Available Filter Classes</a> 가 아닌걸로도 볼 수&nbsp;있다.</li>
-</ul>
-</div>
-</div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>OpenStack rootwrap</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 15. 03. 04.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
-              <a href="https://ujuc.github.io/tag/oslo.html" class="article_tag">oslo</a>
+            <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
+            <a href="https://ujuc.github.io/tag/oslo.html" class="article_tag">oslo</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>OpenStack 프로젝트들에서 사용되는 것들 중... <strong>root</strong> 와 관련된 작업을
+진행해야하는 경우가 있다. 그럴때 사용하려고 만들어둔 <a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap">rootwrap</a></p>
+<p>Wiki에서는 이 <a class="reference external" href="https://fnords.wordpress.com/2011/11/23/improving-nova-privilege-escalation-model-part-1/">블로그</a> 에 작성된 문제를 해결하기 위해서 만들어졌다고 한다.</p>
+<p>짧은 내기억으로는 간단한 팡리로만 존재했던 것같은데. (아닐 가능성 100%라논
+소리...), 지금은 oslo 패키지로 관리되고 있다. <a class="reference external" href="https://github.com/openstack/oslo.rootwrap">github repo</a></p>
+<div class="section" id="id2">
+<h2>사용자용</h2>
+<p><tt class="docutils literal">nova.conf</tt> 에 다음 문구 추가하도록...</p>
+<pre class="literal-block">
+rootwrap_config=/etc/nova/rootwrap.conf
+</pre>
+</div>
+<div class="section" id="id3">
+<h2>배포용 패키지를 만드는 사람용</h2>
+<div class="section" id="suduers">
+<h3>Suduers 설정</h3>
+<p><tt class="docutils literal">sudoers</tt> 에 다음 문구를 추가하도록...</p>
+<pre class="literal-block">
+nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
+</pre>
+</div>
+<div class="section" id="id4">
+<h3>필터 위치 설정</h3>
+<p><tt class="docutils literal">rootwrap</tt> 으로 <tt class="docutils literal"><span class="pre">Nova-provided</span></tt> 필터 파일을 로드하고, <tt class="docutils literal">rootwrap.d</tt> 로 확장
+사용자의 필터 파일을 로드하도록 설정해 줄것.</p>
+<pre class="literal-block">
+[DEFAULT]
+filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
+</pre>
+</div>
+<div class="section" id="id5">
+<h3>필터 정의</h3>
+<p>각 노드마다 설치를... 해줘야된다고.</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>플러그인 작성자용</h2>
+<div class="section" id="run-as-root">
+<h3>새로운 <tt class="docutils literal"><span class="pre">run-as-root</span></tt> 명령을 추가</h3>
+<p>root로 동작시킬 것이 있을 경우.</p>
+<ul class="simple">
+<li><tt class="docutils literal">nova.utils.execute(run_as_root=True)</tt> 를 사용할 것.</li>
+<li>관련 필터 내용은 <tt class="docutils literal">/etc/nova/rootwrap.d/foobar.filters</tt> 에 추가해둘 것.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>프로젝트 개발자용</h2>
+<div class="section" id="id8">
+<h3>새로운 <tt class="docutils literal"><span class="pre">run-as-root</span></tt> 명령을 추가</h3>
+<ul class="simple">
+<li><tt class="docutils literal">nova.utils.execute(run_as_root=True)</tt> 를 사용할 것.</li>
+<li>Nova 코드에서 <tt class="docutils literal"><span class="pre">/etc/nova/rootwrap.d/{filter_name}.ilters</span></tt> 파일에 관련된 내용을
+추가해줄 것.<ul>
+<li>예로 Compute 노드에서 작동하는 소스라면
+<tt class="docutils literal">/etc/nova/rootwrap.d/compute.filters</tt> 에다가 추가하도록.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>상위 필터 타입 추가</h2>
+<ul class="simple">
+<li>기본 필터 타입은 <tt class="docutils literal">CommandFilter</tt> 임.</li>
+<li>새로운 타입을 만들거나 지금 존재하는 타입을 확인하고 싶다면 <a class="reference external" href="https://github.com/openstack/oslo.rootwrap/blob/master/oslo_rootwrap/filters.py">filters.py</a> 를
+보면 된다. - <a class="reference external" href="https://wiki.openstack.org/wiki/Rootwrap#Available_Filter_classes">Available Filter Classes</a> 가 아닌걸로도 볼 수 있다.</li>
+</ul>
+</div>
+</div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

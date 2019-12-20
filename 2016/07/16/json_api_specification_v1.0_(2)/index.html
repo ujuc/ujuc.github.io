@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   [번역] <span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0&nbsp;(2)
+    잘 밤에 쓸데없는 생각하기... -   [번역] JSON API Specification v1.0 (2)
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,56 +94,56 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>[번역] <span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0&nbsp;(2)</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p><span class="caps">JSON</span> API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서&nbsp;이야기한다.</p>
-<hr>
-<h1 id="4-content-negotiation">4. 컨텐츠 처리 (Content&nbsp;Negotiation)</h1>
-<hr>
-<h2 id="client-responsibilities">클라이언트 의무 사항 (Client&nbsp;Responsibilities)</h2>
-<p>클라이언트는 해더에 <code>Content-Type: application/vnd.api+json</code>를 포함하고 다른 미디어 타입 매개변수를 포함하지 않는 요청 문서를 생성하여 모든 <span class="caps">JSON</span> <span class="caps">API</span> 데이터를 보내야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Clients <strong><span class="caps">MUST</span></strong> send all <span class="caps">JSON</span> <span class="caps">API</span> data in request documents with the header <code>Content-Type: application/vnd.api+json</code> without any media type&nbsp;parameters.</p>
-</blockquote>
-<p>클라이언트는 <code>Accept</code> 해더에 작성된 미디어 타입 매개변수 중 맨마지막 하나를 지정하여 <span class="caps">JSON</span> <span class="caps">API</span> 미디어 타입을 포함해야 합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Clients that include the <span class="caps">JSON</span> <span class="caps">API</span> media type in their <code>Accept</code> header <strong><span class="caps">MUST</span></strong> specify the media type there at least once without any media type&nbsp;parameters.</p>
-</blockquote>
-<p>클라이언트는 응답 문서에 대한 <code>Content-Type</code> 해더에서 받은 <code>application/vnd.api+json</code> 미디어 타입에대해 어떠한 매개변수라도 무시합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Clients <strong><span class="caps">MUST</span></strong> ignore any parameters for the <code>application/vnd.api+json</code> media type received in the <code>Content-Type</code> header of response&nbsp;documents.</p>
-</blockquote>
-<hr>
-<h2 id="server-responsibilities">서버 의무 사항 (Server&nbsp;Responsibilities)</h2>
-<p>서버는 모든 미디어 타입 매개 변수를 지정하지 않고서 해더 <code>Content-Type: application/vnd.api+json</code>​와 함께 응답 문서에 모든 <span class="caps">JSON</span> <span class="caps">API</span> 데이터를 전송합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Servers <strong><span class="caps">MUST</span></strong> send all <span class="caps">JSON</span> <span class="caps">API</span> data in response documents with the header <code>Content-Type: application/vnd.api+json</code> without any media type&nbsp;parameters.</p>
-</blockquote>
-<p>서버는 요청이 임의의 미디어 타입 매개변수를 가지는 헤더 <code>Content-Type: application/vnd.api+json</code>로 지정하면 <code>415 Unsupported Media Type</code> 상태 코드로 응답합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Servers <strong><span class="caps">MUST</span></strong> respond with a <code>415 Unsupported Media Type</code> status code if a request specifies the header <code>Content-Type: application/vnd.api+json</code> with any media type&nbsp;parameters.</p>
-</blockquote>
-<p>서버는 요청한 <code>Accept</code> 해더에 <span class="caps">JSON</span> <span class="caps">API</span> 미디어 타입을 포함하고 있으며 해당 미디어 타입에대한 모든 인스턴스에서 미디어 타입 매개변수가 수정된 경우, <code>406 Not Acceptable</code> 상태 코드로 응답합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Servers <strong><span class="caps">MUST</span></strong> respond with a <code>406 Not Acceptable</code> status code if a request’s <code>Accept</code> header contains the <span class="caps">JSON</span> <span class="caps">API</span> media type and all instances of that media type are modified with media type&nbsp;parameters.</p>
-<p>Note: 컨텐츠 처리 요구사항은 향후 버전에서 확장된 처리 방법과 버전 관리를 위한 미디어 타입 매개 변수를 사용할 수 있도록&nbsp;존재합니다.</p>
-<p>Note: The content negotiation requirements exist to allow future versions of this specification to use media type parameters for extension negotiation and&nbsp;versioning.</p>
-</blockquote></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>[번역] JSON API Specification v1.0 (2)</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 16. 07. 16.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/json.html" class="article_tag">json</a>
-              <a href="https://ujuc.github.io/tag/api.html" class="article_tag">api</a>
-              <a href="https://ujuc.github.io/tag/specification.html" class="article_tag">specification</a>
-              <a href="https://ujuc.github.io/tag/json-api.html" class="article_tag">json api</a>
-              <a href="https://ujuc.github.io/tag/seupeg-munseo.html" class="article_tag">스펙 문서</a>
-              <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
+            <a href="https://ujuc.github.io/tag/json.html" class="article_tag">json</a>
+            <a href="https://ujuc.github.io/tag/api.html" class="article_tag">api</a>
+            <a href="https://ujuc.github.io/tag/specification.html" class="article_tag">specification</a>
+            <a href="https://ujuc.github.io/tag/json-api.html" class="article_tag">json api</a>
+            <a href="https://ujuc.github.io/tag/seupeg-munseo.html" class="article_tag">스펙 문서</a>
+            <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>JSON API를 사용하는 서버와 클르이언트에서 처리를 해야되는 것들에 대해서 이야기한다.</p>
+<hr>
+<h1 id="4-content-negotiation">4. 컨텐츠 처리 (Content Negotiation)</h1>
+<hr>
+<h2 id="client-responsibilities">클라이언트 의무 사항 (Client Responsibilities)</h2>
+<p>클라이언트는 해더에 <code>Content-Type: application/vnd.api+json</code>를 포함하고 다른 미디어 타입 매개변수를 포함하지 않는 요청 문서를 생성하여 모든 JSON API 데이터를 보내야 합니다. &lt;<strong>MUST</strong>&gt;</p>
+<blockquote>
+<p>Clients <strong>MUST</strong> send all JSON API data in request documents with the header <code>Content-Type: application/vnd.api+json</code> without any media type parameters.</p>
+</blockquote>
+<p>클라이언트는 <code>Accept</code> 해더에 작성된 미디어 타입 매개변수 중 맨마지막 하나를 지정하여 JSON API 미디어 타입을 포함해야 합니다. &lt;<strong>MUST</strong>&gt;</p>
+<blockquote>
+<p>Clients that include the JSON API media type in their <code>Accept</code> header <strong>MUST</strong> specify the media type there at least once without any media type parameters.</p>
+</blockquote>
+<p>클라이언트는 응답 문서에 대한 <code>Content-Type</code> 해더에서 받은 <code>application/vnd.api+json</code> 미디어 타입에대해 어떠한 매개변수라도 무시합니다. &lt;<strong>MUST</strong>&gt;</p>
+<blockquote>
+<p>Clients <strong>MUST</strong> ignore any parameters for the <code>application/vnd.api+json</code> media type received in the <code>Content-Type</code> header of response documents.</p>
+</blockquote>
+<hr>
+<h2 id="server-responsibilities">서버 의무 사항 (Server Responsibilities)</h2>
+<p>서버는 모든 미디어 타입 매개 변수를 지정하지 않고서 해더 <code>Content-Type: application/vnd.api+json</code>​와 함께 응답 문서에 모든 JSON API 데이터를 전송합니다. &lt;<strong>MUST</strong>&gt;</p>
+<blockquote>
+<p>Servers <strong>MUST</strong> send all JSON API data in response documents with the header <code>Content-Type: application/vnd.api+json</code> without any media type parameters.</p>
+</blockquote>
+<p>서버는 요청이 임의의 미디어 타입 매개변수를 가지는 헤더 <code>Content-Type: application/vnd.api+json</code>로 지정하면 <code>415 Unsupported Media Type</code> 상태 코드로 응답합니다. &lt;<strong>MUST</strong>&gt;</p>
+<blockquote>
+<p>Servers <strong>MUST</strong> respond with a <code>415 Unsupported Media Type</code> status code if a request specifies the header <code>Content-Type: application/vnd.api+json</code> with any media type parameters.</p>
+</blockquote>
+<p>서버는 요청한 <code>Accept</code> 해더에 JSON API 미디어 타입을 포함하고 있으며 해당 미디어 타입에대한 모든 인스턴스에서 미디어 타입 매개변수가 수정된 경우, <code>406 Not Acceptable</code> 상태 코드로 응답합니다. &lt;<strong>MUST</strong>&gt;</p>
+<blockquote>
+<p>Servers <strong>MUST</strong> respond with a <code>406 Not Acceptable</code> status code if a request’s <code>Accept</code> header contains the JSON API media type and all instances of that media type are modified with media type parameters.</p>
+<p>Note: 컨텐츠 처리 요구사항은 향후 버전에서 확장된 처리 방법과 버전 관리를 위한 미디어 타입 매개 변수를 사용할 수 있도록 존재합니다.</p>
+<p>Note: The content negotiation requirements exist to allow future versions of this specification to use media type parameters for extension negotiation and versioning.</p>
+</blockquote></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Cron-Style Job System -&nbsp;cronsun
+    잘 밤에 쓸데없는 생각하기... -   Cron-Style Job System - cronsun
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,13 +94,24 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Cron-Style Job System -&nbsp;cronsun</h1></div>
+        <div class="article_title"><h1>Cron-Style Job System - cronsun</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 17. 07. 19.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/software.html">Software</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/go.html" class="article_tag">go</a>
+            <a href="https://ujuc.github.io/tag/cron.html" class="article_tag">cron</a>
+            <a href="https://ujuc.github.io/tag/job-system.html" class="article_tag">job system</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><ul>
 <li><a href="https://github.com/shunfei/cronsun">Github</a></li>
-<li>Lang:&nbsp;Golang</li>
+<li>Lang: Golang</li>
 </ul>
-<p>분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나&nbsp;적어야겠다.</p>
+<p>분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나 적어야겠다.</p>
 <h2 id="_1">아키텍쳐</h2>
 <div class="codehilite"><pre><span></span>                                         <span class="p">[</span><span class="n">web</span><span class="p">]</span>
                                            <span class="o">+</span>
@@ -125,7 +136,7 @@
 
 
 <p>Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.<br>
-노드는 여러개를 사용할 수 있는 것인지&hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이&nbsp;봐야될듯함.</p>
+노드는 여러개를 사용할 수 있는 것인지&hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이 봐야될듯함.</p>
 <h2 id="_2">빌드</h2>
 <div class="codehilite"><pre><span></span>go get -u github.com/shunfei/cronsun
 <span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/shunfei/cronsun
@@ -135,25 +146,14 @@ sh build.sh
 
 <h2 id="_3">실행</h2>
 <ol>
-<li>MongoDB, etcd3&nbsp;설치</li>
+<li>MongoDB, etcd3 설치</li>
 <li><code>conf</code> 폴더에 있는 config 수정<br>
-  * 샘플은 <code>conf/files</code> 에 항목별로 존재한다. 확인이&nbsp;필요.</li>
+  * 샘플은 <code>conf/files</code> 에 항목별로 존재한다. 확인이 필요.</li>
 <li>Node 실행: <code>./cronnode -conf conf/base.json</code></li>
 <li>웹서버 실행: <code>./cronweb -conf conf/base.json</code></li>
 <li>접속은 <code>http://127.0.0.1:7079/ui/</code></li>
 </ol></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 17. 07. 19.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/software.html">Software</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/go.html" class="article_tag">go</a>
-              <a href="https://ujuc.github.io/tag/cron.html" class="article_tag">cron</a>
-              <a href="https://ujuc.github.io/tag/job-system.html" class="article_tag">job system</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Writing poetry&nbsp;script
+    잘 밤에 쓸데없는 생각하기... -   Writing poetry script
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,14 +94,25 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Writing poetry&nbsp;script</h1></div>
+        <div class="article_title"><h1>Writing poetry script</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 19. 08. 15.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/poetry.html" class="article_tag">poetry</a>
+            <a href="https://ujuc.github.io/tag/script.html" class="article_tag">script</a>
+            <a href="https://ujuc.github.io/tag/invoke.html" class="article_tag">invoke</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><ol>
-<li>이 문서에서 <code>invoke</code> 라이브러리를&nbsp;사용한다.</li>
-<li>실제 코드는 <a href="https://github.com/ujuc/ujuc.github.io">https://github.com/ujuc/ujuc.github.io</a> 에서 확인이&nbsp;가능하다.</li>
+<li>이 문서에서 <code>invoke</code> 라이브러리를 사용한다.</li>
+<li>실제 코드는 <a href="https://github.com/ujuc/ujuc.github.io">https://github.com/ujuc/ujuc.github.io</a> 에서 확인이 가능하다.</li>
 </ol>
-<h2 id="_1">명령어&nbsp;작성</h2>
-<p>블로그 새 글을 만들 수 있는 명령어를&nbsp;작성한다.</p>
+<h2 id="_1">명령어 작성</h2>
+<p>블로그 새 글을 만들 수 있는 명령어를 작성한다.</p>
 <p><code>cli.py</code></p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
@@ -119,50 +130,50 @@
         <span class="s1">&#39;rst&#39;</span><span class="p">:</span> <span class="s1">&#39;Post format. if false, make markdown format&#39;</span>
     <span class="p">}</span>
 <span class="p">)</span>
-<span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">rst</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">rst</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Make post template&quot;&quot;&quot;</span>
     <span class="n">today</span> <span class="o">=</span> <span class="n">pendulum</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
 
     <span class="n">slug</span> <span class="o">=</span> <span class="n">kroman</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
     <span class="n">date</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">to_date_string</span><span class="p">()</span>
     <span class="n">post_date</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">to_datetime_string</span><span class="p">()</span>
-    <span class="n">file_title</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;{date}-{slug}&#39;</span>
+    <span class="n">file_title</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{date}</span><span class="s1">-</span><span class="si">{slug}</span><span class="s1">&#39;</span>
 
-    <span class="n">file_name</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;{file_title}.md&#39;</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{file_title}</span><span class="s1">.md&#39;</span>
 
     <span class="n">article</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">f</span><span class="s1">&#39;Title: {title}</span><span class="se">\n</span><span class="s1">&#39;</span>
-        <span class="n">f</span><span class="s1">&#39;Date: {post_date}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;Title: </span><span class="si">{title}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;Date: </span><span class="si">{post_date}</span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="s1">&#39;Category: </span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="s1">&#39;Tags: </span><span class="se">\n</span><span class="s1">&#39;</span>
-        <span class="n">f</span><span class="s1">&#39;Slug: {slug}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;Slug: </span><span class="si">{slug}</span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="s1">&#39;Summary: </span><span class="se">\n\n</span><span class="s1">&#39;</span>
     <span class="p">)</span>
 
     <span class="k">if</span> <span class="n">rst</span><span class="p">:</span>
-        <span class="n">file_name</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;{file_title}.rst&#39;</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{file_title}</span><span class="s1">.rst&#39;</span>
         <span class="n">hashes</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
 
         <span class="n">article</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="n">f</span><span class="s1">&#39;{title}</span><span class="se">\n</span><span class="s1">&#39;</span>
-            <span class="n">f</span><span class="s1">&#39;{hashes}</span><span class="se">\n</span><span class="s1">&#39;</span>
-            <span class="n">f</span><span class="s1">&#39;:date: {post_date}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{title}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{hashes}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;:date: </span><span class="si">{post_date}</span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="s1">&#39;:category: </span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="s1">&#39;:tags: </span><span class="se">\n</span><span class="s1">&#39;</span>
-            <span class="n">f</span><span class="s1">&#39;:slug: {slug}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;:slug: </span><span class="si">{slug}</span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="s1">&#39;:summary: </span><span class="se">\n\n</span><span class="s1">&#39;</span>
         <span class="p">)</span>
 
     <span class="n">blog_path</span> <span class="o">=</span> <span class="n">CONTENT_PATH</span> <span class="o">/</span> <span class="s1">&#39;blog&#39;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">blog_path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
-        <span class="n">blog_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">blog_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="n">post_path</span> <span class="o">=</span> <span class="n">blog_path</span> <span class="o">/</span> <span class="n">file_name</span>
 
     <span class="k">with</span> <span class="n">post_path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">post_file</span><span class="p">:</span>
         <span class="n">post_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;File created -&gt; {post_path}&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;File created -&gt; </span><span class="si">{post_path}</span><span class="s1">&#39;</span><span class="p">)</span>
 
 
 <span class="n">ns</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">()</span>
@@ -170,7 +181,7 @@
 </pre></div>
 
 
-<p>task를 등록해 주고 명령을 확인하면 다음 같이&nbsp;보인다.</p>
+<p>task를 등록해 주고 명령을 확인하면 다음 같이 보인다.</p>
 <div class="codehilite"><pre><span></span>$ inv --list
 
 Available tasks:
@@ -183,7 +194,7 @@ Available tasks:
 </pre></div>
 
 
-<p>명령어를 실행해&nbsp;보자.</p>
+<p>명령어를 실행해 보자.</p>
 <div class="codehilite"><pre><span></span>$ inv --help cli.post
 Usage: inv<span class="o">[</span>oke<span class="o">]</span> <span class="o">[</span>--core-opts<span class="o">]</span> cli.post <span class="o">[</span>--options<span class="o">]</span> <span class="o">[</span>other tasks here ...<span class="o">]</span>
 
@@ -211,11 +222,11 @@ Summary:
 
 <p>여기까지 <a href="https://github.com/ujuc/ujuc.github.io/commit/8e4fa75978c249192c203658dace4949a7956936">code commit</a>.</p>
 <hr>
-<p>이제 만들어지는 걸 확인했으니&hellip; <code>poetry run cli</code>  명령을 이용해서도 만들 수 있게 코드를&nbsp;수정하자.</p>
+<p>이제 만들어지는 걸 확인했으니&hellip; <code>poetry run cli</code>  명령을 이용해서도 만들 수 있게 코드를 수정하자.</p>
 <p><code>cli/main.py</code></p>
 <ul>
-<li>Package로 추가해야 되어 <code>cli</code> 폴더를&nbsp;만들었다.</li>
-<li><a href="https://github.com/sdispater/poetry/issues/577">Poetry run: ModuleOrPackageNotFound with implicit namespace packages (<span class="caps">PEP420</span>)</a></li>
+<li>Package로 추가해야 되어 <code>cli</code> 폴더를 만들었다.</li>
+<li><a href="https://github.com/sdispater/poetry/issues/577">Poetry run: ModuleOrPackageNotFound with implicit namespace packages (PEP420)</a></li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="c1"># Import Program class</span>
 <span class="kn">from</span> <span class="nn">invoke</span> <span class="kn">import</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">Program</span><span class="p">,</span> <span class="n">task</span>
@@ -248,7 +259,7 @@ Summary:
 </pre></div>
 
 
-<p>이제 실행해&nbsp;보자.</p>
+<p>이제 실행해 보자.</p>
 <div class="codehilite"><pre><span></span>$ poetry run cli --list
 Subcommands:
 
@@ -263,14 +274,14 @@ File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-s
 <p>잘된다.</p>
 <p>여기까지 <a href="https://github.com/ujuc/ujuc.github.io/commit/ded484d94cec63e684d1f8fab2ea0b8006ceab63">code commit</a>.</p>
 <hr>
-<p>이렇게 하면 간단한 cli 툴을 실행할 수&nbsp;있다.</p>
-<p>문제는 build를 하게되면 해당 명령 셋이 등록이 되니&hellip; build용이 아닌 상태로&nbsp;사용하자.</p>
-<p>build일때는&nbsp;고민을&hellip;</p>
-<p><a href="https://github.com/sdispater/poetry/blob/master/pyproject.toml#L69">poetry 레포</a>를 보면 해당 <code>pyproject.toml</code>에 실행하는 코드가 들어가있는 것을 확인할 수&nbsp;있다.</p>
+<p>이렇게 하면 간단한 cli 툴을 실행할 수 있다.</p>
+<p>문제는 build를 하게되면 해당 명령 셋이 등록이 되니&hellip; build용이 아닌 상태로 사용하자.</p>
+<p>build일때는 고민을&hellip;</p>
+<p><a href="https://github.com/sdispater/poetry/blob/master/pyproject.toml#L69">poetry 레포</a>를 보면 해당 <code>pyproject.toml</code>에 실행하는 코드가 들어가있는 것을 확인할 수 있다.</p>
 <hr>
-<p>ps. 파일 단위로도&nbsp;가능하다.</p>
+<p>ps. 파일 단위로도 가능하다.</p>
 <p><code>tasks.py</code></p>
-<div class="codehilite"><pre><span></span><span class="err">위에꺼</span> <span class="err">갔다</span> <span class="err">쓰자</span><span class="p">..</span> <span class="err">귀찮다</span><span class="p">...</span>
+<div class="codehilite"><pre><span></span><span class="err">위에꺼 갔다 쓰자.. 귀찮다...</span>
 </pre></div>
 
 
@@ -281,19 +292,8 @@ File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-s
 
 
 <hr>
-<p>이제 나머지 명령어&nbsp;옮기러가야겠다.</p></div>
+<p>이제 나머지 명령어 옮기러가야겠다.</p></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 19. 08. 15.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/poetry.html" class="article_tag">poetry</a>
-              <a href="https://ujuc.github.io/tag/script.html" class="article_tag">script</a>
-              <a href="https://ujuc.github.io/tag/invoke.html" class="article_tag">invoke</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

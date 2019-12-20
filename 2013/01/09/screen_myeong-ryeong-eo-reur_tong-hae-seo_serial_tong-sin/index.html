@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Screen 명령어를 통해서 Serial&nbsp;통신
+    잘 밤에 쓸데없는 생각하기... -   Screen 명령어를 통해서 Serial 통신
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,30 +94,30 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Screen 명령어를 통해서 Serial&nbsp;통신</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이&nbsp;발생하여…</p>
-<p>여기 저기 찾다가. <code>Screen</code>을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. <code>minicom</code>도&nbsp;필요없다.</p>
-<p>명령어 사용법 : <code>screen ‘디바이스 위치’ ‘전송속도’</code></p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">Mac</span>
-<span class="n">screen</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty</span><span class="p">.</span><span class="n">XXX</span> <span class="mi">115200</span>
-<span class="o">#</span> <span class="n">Linux</span>
-<span class="n">screen</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">ttyXXX</span> <span class="mi">115200</span>
-</pre></div>
-
-
-<p>종료할때는 <Crtl>+<A> &lt;Crtl+&lt;>로 종료할 수&nbsp;있다.</p></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>Screen 명령어를 통해서 Serial 통신</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 13. 01. 09.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/screen.html" class="article_tag">screen</a>
-              <a href="https://ujuc.github.io/tag/serial.html" class="article_tag">serial</a>
+            <a href="https://ujuc.github.io/tag/screen.html" class="article_tag">screen</a>
+            <a href="https://ujuc.github.io/tag/serial.html" class="article_tag">serial</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이 발생하여…</p>
+<p>여기 저기 찾다가. <code>Screen</code>을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. <code>minicom</code>도 필요없다.</p>
+<p>명령어 사용법 : <code>screen ‘디바이스 위치’ ‘전송속도’</code></p>
+<div class="codehilite"><pre><span></span><span class="err"># Mac</span>
+<span class="err">screen /dev/tty.XXX 115200</span>
+<span class="err"># Linux</span>
+<span class="err">screen /dev/ttyXXX 115200</span>
+</pre></div>
+
+
+<p>종료할때는 <Crtl>+<A> &lt;Crtl+&lt;>로 종료할 수 있다.</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

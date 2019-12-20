@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   mysql 복제&nbsp;오류
+    잘 밤에 쓸데없는 생각하기... -   mysql 복제 오류
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,33 +94,34 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>mysql 복제&nbsp;오류</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>오랜만에 설정할 일이 있어서 RDS로 접속했더니&hellip; <span class="caps">RDS</span> 인스턴스에서 error 이벤트가<br>
-발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&hellip; 여기서<br>&nbsp;문제가&hellip;</p>
-<p>RDS를 제외하고 관련 내용을 찾았더니, <code>my.cnf</code> 파일에다가 뭘 넣고 수정하라고<br>
-한다. 이렇게 할려면 RDS는 안된다. 명령어를 입력하라는 말도 있었다. 그런데&hellip;<br>
-이넘의 RDS에서 사용자는 말그대로 사용자일 뿐이다. 어떠한 database에 대한 수정을<br>
-가할 수 있는 권한 자체가 없다. 그 사용자 이름을 <code>root</code>로 했다고 해도&nbsp;말이다.</p>
-<p>결국.. 찾다 돌아온 곳은.<br>
-<a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html">Amazon Relational Database Service - mysql_rds_skip_repl_error</a><br>
-부분. 그냥 접근해서 <code>CALL mysql.rds_skip_repl_error</code> 입력하면&nbsp;된단다.</p>
-<p>그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.<br>
-mariadb를 사용하는게 정신 건강에&nbsp;좋은&hellip;</p></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>mysql 복제 오류</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 16. 01. 28.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/aws.html" class="article_tag">aws</a>
-              <a href="https://ujuc.github.io/tag/rds.html" class="article_tag">rds</a>
-              <a href="https://ujuc.github.io/tag/mysql.html" class="article_tag">mysql</a>
-              <a href="https://ujuc.github.io/tag/mariadb.html" class="article_tag">mariadb</a>
-              <a href="https://ujuc.github.io/tag/replication.html" class="article_tag">replication</a>
+            <a href="https://ujuc.github.io/tag/aws.html" class="article_tag">aws</a>
+            <a href="https://ujuc.github.io/tag/rds.html" class="article_tag">rds</a>
+            <a href="https://ujuc.github.io/tag/mysql.html" class="article_tag">mysql</a>
+            <a href="https://ujuc.github.io/tag/mariadb.html" class="article_tag">mariadb</a>
+            <a href="https://ujuc.github.io/tag/replication.html" class="article_tag">replication</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>오랜만에 설정할 일이 있어서 RDS로 접속했더니&hellip; RDS 인스턴스에서 error 이벤트가<br>
+발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&hellip; 여기서<br>
+문제가&hellip;</p>
+<p>RDS를 제외하고 관련 내용을 찾았더니, <code>my.cnf</code> 파일에다가 뭘 넣고 수정하라고<br>
+한다. 이렇게 할려면 RDS는 안된다. 명령어를 입력하라는 말도 있었다. 그런데&hellip;<br>
+이넘의 RDS에서 사용자는 말그대로 사용자일 뿐이다. 어떠한 database에 대한 수정을<br>
+가할 수 있는 권한 자체가 없다. 그 사용자 이름을 <code>root</code>로 했다고 해도 말이다.</p>
+<p>결국.. 찾다 돌아온 곳은.<br>
+<a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html">Amazon Relational Database Service - mysql_rds_skip_repl_error</a><br>
+부분. 그냥 접근해서 <code>CALL mysql.rds_skip_repl_error</code> 입력하면 된단다.</p>
+<p>그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.<br>
+mariadb를 사용하는게 정신 건강에 좋은&hellip;</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

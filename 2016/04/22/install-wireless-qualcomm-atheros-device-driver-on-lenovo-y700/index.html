@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Install wireless Qualcomm Atheros device driver on Lenovo&nbsp;Y700
+    잘 밤에 쓸데없는 생각하기... -   Install wireless Qualcomm Atheros device driver on Lenovo Y700
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,11 +94,25 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Install wireless Qualcomm Atheros device driver on Lenovo&nbsp;Y700</h1></div>
+        <div class="article_title"><h1>Install wireless Qualcomm Atheros device driver on Lenovo Y700</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 16. 04. 22.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/lenovo.html" class="article_tag">lenovo</a>
+            <a href="https://ujuc.github.io/tag/ubuntu.html" class="article_tag">ubuntu</a>
+            <a href="https://ujuc.github.io/tag/qualcomm.html" class="article_tag">qualcomm</a>
+            <a href="https://ujuc.github.io/tag/driver.html" class="article_tag">driver</a>
+            <a href="https://ujuc.github.io/tag/wireless.html" class="article_tag">wireless</a>
+            <a href="https://ujuc.github.io/tag/1604.html" class="article_tag">16.04</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가&nbsp;발생했다.</p>
-<p>Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&hellip; Ubuntu 16.04버전이 4.4.0&hellip; 그래서 백포트하고, 드라이버를 옮겨주는것으로&nbsp;해결.</p>
-<p><a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation">Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation</a> 에서 말하는 작업을&nbsp;설치해주면된다.</p>
+        <div class="article_text"><p>새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가 발생했다.</p>
+<p>Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&hellip; Ubuntu 16.04버전이 4.4.0&hellip; 그래서 백포트하고, 드라이버를 옮겨주는것으로 해결.</p>
+<p><a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation">Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation</a> 에서 말하는 작업을 설치해주면된다.</p>
 <div class="codehilite"><pre><span></span>sudo apt install build-essential linux-headers-<span class="k">$(</span>uname -r<span class="k">)</span> git
 <span class="nb">echo</span> <span class="s2">&quot;options ath10k_core skip_otp=y&quot;</span> <span class="p">|</span> sudo tee /etc/modprobe.d/ath10k_core.conf
 wget https://www.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/backports-4.4.2-1.tar.gz
@@ -113,25 +127,11 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
 </pre></div>
 
 
-<p>그리고&nbsp;하나더&hellip;</p>
-<p>이건 위에껄 하고 안되면 추가해주도록&nbsp;하자.</p>
+<p>그리고 하나더&hellip;</p>
+<p>이건 위에껄 하고 안되면 추가해주도록 하자.</p>
 <div class="codehilite"><pre><span></span><span class="nb">echo</span> blacklist ideapad_laptop <span class="p">|</span> sudo tee /etc/modprobe.d/blacklist.conf
 </pre></div></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 16. 04. 22.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/lenovo.html" class="article_tag">lenovo</a>
-              <a href="https://ujuc.github.io/tag/ubuntu.html" class="article_tag">ubuntu</a>
-              <a href="https://ujuc.github.io/tag/qualcomm.html" class="article_tag">qualcomm</a>
-              <a href="https://ujuc.github.io/tag/driver.html" class="article_tag">driver</a>
-              <a href="https://ujuc.github.io/tag/wireless.html" class="article_tag">wireless</a>
-              <a href="https://ujuc.github.io/tag/1604.html" class="article_tag">16.04</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   [번역] <span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0&nbsp;(1)
+    잘 밤에 쓸데없는 생각하기... -   [번역] JSON API Specification v1.0 (1)
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,52 +94,52 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>[번역] <span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0&nbsp;(1)</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p><span class="caps">JSON</span> <span class="caps">API</span> 문서이다. 해당 문서는 <a href="http://jsonapi.org/format/">여기서</a> 확인이 가능하다. 라이센스는<a href="https://creativecommons.org/publicdomain/zero/1.0/">퍼블릭 도메인 라이센스</a>.</p>
-<p>나중에 번역한 것이 도움이 되길&nbsp;바라며&hellip;</p>
-<hr>
-<h1 id="1-status">1. 문서 상태&nbsp;(Status)</h1>
-<p>이 페이지는 <span class="caps">JSON</span> <span class="caps">API</span> 마지막으로 공개된 버전 내용을 담고 있습니다. 현재버전은 1.0 입니다. <span class="caps">JSON</span> <span class="caps">API</span> 새로운 버전에서는 <strong>이전 문서와 호환을 위해</strong> 삭제하지 않고, 오로지 추가만 됩니다. 추가 사항들은 우리 <a href="http://discuss.jsonapi.org/">discussion forum</a>에서 확인할수&nbsp;있습니다.</p>
-<blockquote>
-<p>This page represents the latest published version of <span class="caps">JSON</span> <span class="caps">API</span>, which is currently version 1.0. New versions of <span class="caps">JSON</span> <span class="caps">API</span> <strong>will always be backwards compatible</strong> using a never remove, only add strategy. Additions can be proposed in our <a href="http://discuss.jsonapi.org/">discussion forum</a>.</p>
-</blockquote>
-<p>스펙 문서상 에러를 발견하거나, 구현한다면 이슈를 등록하거나 PR을 <a href="https://github.com/json-api/json-api">GitHub repository</a>로 해주면&nbsp;됩니다.</p>
-<blockquote>
-<p>If you catch an error in the specification’s text, or if you write an implementation, please let us know by opening an issue or pull request at our <a href="https://github.com/json-api/json-api">GitHub repository</a>.</p>
-</blockquote>
-<hr>
-<h1 id="2-introduction">2. 소개&nbsp;(Introduction)</h1>
-<p><span class="caps">JSON</span> API는 클라이언트에서 요구하는 리소스를 제공하거나 수정하는 것에 대해 서버가 어떻게 대응 할 것인지에 대한&nbsp;사양입니다.</p>
-<blockquote>
-<p><span class="caps">JSON</span> <span class="caps">API</span> is a specification for how a client should request that resources be fetched or modified, and how a server should respond to those&nbsp;requests.</p>
-</blockquote>
-<p><span class="caps">JSON</span> API는 클라이언트와 서버사이에서 전송되는 데이터 총량과 요청 수에대해 최소화하도록 설계되었습니다. 가독성, 유연성, 검색 기능을 잃지 않고 효율성을 높일수&nbsp;있습니다.</p>
-<blockquote>
-<p><span class="caps">JSON</span> <span class="caps">API</span> is designed to minimize both the number of requests and the amount of data transmitted between clients and servers. This efficiency is achieved without compromising readability, flexibility, or&nbsp;discoverability.</p>
-</blockquote>
-<p><span class="caps">JSON</span> API는 데이터를 변경하여 <span class="caps">JSON</span> <span class="caps">API</span> 미디어 타입 (application/vnd.api+json) 을 사용하게 하는것이&nbsp;필요합니다.</p>
-<blockquote>
-<p><span class="caps">JSON</span> <span class="caps">API</span> requires use of the <span class="caps">JSON</span> <span class="caps">API</span> media type (<a href="http://www.iana.org/assignments/media-types/application/vnd.api+json">application/vnd.api+json</a>) for exchanging&nbsp;data.</p>
-</blockquote>
-<hr>
-<h1 id="3-conventions">3. 규칙&nbsp;(Conventions)</h1>
-<p>The key words “<span class="caps">MUST</span>”, “<span class="caps">MUST</span> <span class="caps">NOT</span>”, “<span class="caps">REQUIRED</span>”, “<span class="caps">SHALL</span>”, “<span class="caps">SHALL</span> <span class="caps">NOT</span>”, “<span class="caps">SHOULD</span>”, “<span class="caps">SHOULD</span> <span class="caps">NOT</span>”, “<span class="caps">RECOMMENDED</span>”, “<span class="caps">MAY</span>”, and “<span class="caps">OPTIONAL</span>” in this document are to be interpreted as described in <a href="http://tools.ietf.org/html/rfc2119"><span class="caps">RFC</span> 2119</a> (<a href="http://techhtml.github.io/rfc/RFC2119.html"><span class="caps">RFC</span> 2119 한국어 번역</a>).</p></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>[번역] JSON API Specification v1.0 (1)</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 16. 07. 16.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/json.html" class="article_tag">json</a>
-              <a href="https://ujuc.github.io/tag/api.html" class="article_tag">api</a>
-              <a href="https://ujuc.github.io/tag/specification.html" class="article_tag">specification</a>
-              <a href="https://ujuc.github.io/tag/json-api.html" class="article_tag">json api</a>
-              <a href="https://ujuc.github.io/tag/seupeg-munseo.html" class="article_tag">스펙 문서</a>
-              <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
+            <a href="https://ujuc.github.io/tag/json.html" class="article_tag">json</a>
+            <a href="https://ujuc.github.io/tag/api.html" class="article_tag">api</a>
+            <a href="https://ujuc.github.io/tag/specification.html" class="article_tag">specification</a>
+            <a href="https://ujuc.github.io/tag/json-api.html" class="article_tag">json api</a>
+            <a href="https://ujuc.github.io/tag/seupeg-munseo.html" class="article_tag">스펙 문서</a>
+            <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>JSON API 문서이다. 해당 문서는 <a href="http://jsonapi.org/format/">여기서</a> 확인이 가능하다. 라이센스는<a href="https://creativecommons.org/publicdomain/zero/1.0/">퍼블릭 도메인 라이센스</a>.</p>
+<p>나중에 번역한 것이 도움이 되길 바라며&hellip;</p>
+<hr>
+<h1 id="1-status">1. 문서 상태 (Status)</h1>
+<p>이 페이지는 JSON API 마지막으로 공개된 버전 내용을 담고 있습니다. 현재버전은 1.0 입니다. JSON API 새로운 버전에서는 <strong>이전 문서와 호환을 위해</strong> 삭제하지 않고, 오로지 추가만 됩니다. 추가 사항들은 우리 <a href="http://discuss.jsonapi.org/">discussion forum</a>에서 확인할수 있습니다.</p>
+<blockquote>
+<p>This page represents the latest published version of JSON API, which is currently version 1.0. New versions of JSON API <strong>will always be backwards compatible</strong> using a never remove, only add strategy. Additions can be proposed in our <a href="http://discuss.jsonapi.org/">discussion forum</a>.</p>
+</blockquote>
+<p>스펙 문서상 에러를 발견하거나, 구현한다면 이슈를 등록하거나 PR을 <a href="https://github.com/json-api/json-api">GitHub repository</a>로 해주면 됩니다.</p>
+<blockquote>
+<p>If you catch an error in the specification’s text, or if you write an implementation, please let us know by opening an issue or pull request at our <a href="https://github.com/json-api/json-api">GitHub repository</a>.</p>
+</blockquote>
+<hr>
+<h1 id="2-introduction">2. 소개 (Introduction)</h1>
+<p>JSON API는 클라이언트에서 요구하는 리소스를 제공하거나 수정하는 것에 대해 서버가 어떻게 대응 할 것인지에 대한 사양입니다.</p>
+<blockquote>
+<p>JSON API is a specification for how a client should request that resources be fetched or modified, and how a server should respond to those requests.</p>
+</blockquote>
+<p>JSON API는 클라이언트와 서버사이에서 전송되는 데이터 총량과 요청 수에대해 최소화하도록 설계되었습니다. 가독성, 유연성, 검색 기능을 잃지 않고 효율성을 높일수 있습니다.</p>
+<blockquote>
+<p>JSON API is designed to minimize both the number of requests and the amount of data transmitted between clients and servers. This efficiency is achieved without compromising readability, flexibility, or discoverability.</p>
+</blockquote>
+<p>JSON API는 데이터를 변경하여 JSON API 미디어 타입 (application/vnd.api+json) 을 사용하게 하는것이 필요합니다.</p>
+<blockquote>
+<p>JSON API requires use of the JSON API media type (<a href="http://www.iana.org/assignments/media-types/application/vnd.api+json">application/vnd.api+json</a>) for exchanging data.</p>
+</blockquote>
+<hr>
+<h1 id="3-conventions">3. 규칙 (Conventions)</h1>
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in <a href="http://tools.ietf.org/html/rfc2119">RFC 2119</a> (<a href="http://techhtml.github.io/rfc/RFC2119.html">RFC 2119 한국어 번역</a>).</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Software</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/software.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-07-21T15:23:10+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Pelican 4.1.0 Release Note</title><link href="https://ujuc.github.io/2019/07/21/pelican_4.1.0_release_note/" rel="alternate"></link><published>2019-07-21T15:23:10+09:00</published><updated>2019-07-21T15:23:10+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-07-21:/2019/07/21/pelican_4.1.0_release_note/</id><summary type="html">&lt;p&gt;pelican 4.1.0 이 업글이&amp;nbsp;되었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 정리하다가 업그레이드가 된 걸&amp;nbsp;알았다.&lt;/p&gt;
-&lt;h3 id="410-2019-07-14"&gt;&lt;a href="https://docs.getpelican.com/en/stable/changelog.html#id1"&gt;4.1.0 -&amp;nbsp;2019-07-14&lt;/a&gt;&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Software</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/software.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-07-21T15:23:10+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Pelican 4.1.0 Release Note</title><link href="https://ujuc.github.io/2019/07/21/pelican_4.1.0_release_note/" rel="alternate"></link><published>2019-07-21T15:23:10+09:00</published><updated>2019-07-21T15:23:10+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-07-21:/2019/07/21/pelican_4.1.0_release_note/</id><summary type="html">&lt;p&gt;pelican 4.1.0 이 업글이 되었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 정리하다가 업그레이드가 된 걸 알았다.&lt;/p&gt;
+&lt;h3 id="410-2019-07-14"&gt;&lt;a href="https://docs.getpelican.com/en/stable/changelog.html#id1"&gt;4.1.0 - 2019-07-14&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;변경된 파일이 있으면 reload 가능 (Invoke 태스크를 통해 제공됨)&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican/blob/master/pelican/tools/templates/tasks.py.jinja2#L93"&gt;github - &lt;code&gt;task.py.jinja2&lt;/code&gt;&lt;/a&gt; 에서 확인하면 &lt;code&gt;livereload&lt;/code&gt; 패키지를 사용하여 새롭게 띄울 수 있도록 작업을&amp;nbsp;해뒀다.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican/blob/master/pelican/tools/templates/tasks.py.jinja2#L93"&gt;github - &lt;code&gt;task.py.jinja2&lt;/code&gt;&lt;/a&gt; 에서 확인하면 &lt;code&gt;livereload&lt;/code&gt; 패키지를 사용하여 새롭게 띄울 수 있도록 작업을 해뒀다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Poetry를 사용하여 패키지 관리&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pyproject.toml&lt;/code&gt; 를 이용하게&amp;nbsp;됨.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pyproject.toml&lt;/code&gt; 를 이용하게 됨.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;python -m pelican&lt;/code&gt; 형태로 호출 가능&lt;ul&gt;
-&lt;li&gt;env 환경에서&amp;nbsp;굳이&amp;hellip;&lt;/li&gt;
+&lt;li&gt;env 환경에서 굳이&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;콘텐츠 상대 소스 경로 속성&amp;nbsp;추가&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;EXTRA_PATH_METADATA&lt;/code&gt; 디렉토리&amp;nbsp;허용&lt;/li&gt;
+&lt;li&gt;콘텐츠 상대 소스 경로 속성 추가&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;EXTRA_PATH_METADATA&lt;/code&gt; 디렉토리 허용&lt;/li&gt;
 &lt;li&gt;템플릿에서 사용 가능한 &lt;code&gt;all_articles&lt;/code&gt; 변수가 추가됨.&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/themes.html?highlight=all_articles#common-variables"&gt;Common variables&lt;/a&gt; 항목 확인&amp;nbsp;가능&lt;/li&gt;
-&lt;li&gt;최근 소식 전달을 위한 기능&amp;nbsp;용&amp;hellip;?&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/themes.html?highlight=all_articles#common-variables"&gt;Common variables&lt;/a&gt; 항목 확인 가능&lt;/li&gt;
+&lt;li&gt;최근 소식 전달을 위한 기능 용&amp;hellip;?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;디버그 모드에서 출력 화면&amp;nbsp;향상&lt;/li&gt;
-&lt;li&gt;Atom 피드에서 비었거나 중복된 summary 항목&amp;nbsp;삭제&lt;/li&gt;
-&lt;li&gt;페이지네이션, pelican-import, pelican-quickstart, 피드 임포터 버그&amp;nbsp;수정&lt;/li&gt;
-&lt;/ul&gt;</content><category term="pelican"></category><category term="static blogging tools"></category><category term="python"></category></entry><entry><title>I hate input gpgkey in JetBrains IDEAs</title><link href="https://ujuc.github.io/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/" rel="alternate"></link><published>2018-11-27T01:31:32+09:00</published><updated>2018-11-27T01:31:32+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-27:/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/</id><summary type="html">&lt;p&gt;JetBrains IDEA를 주력하여 사용 중인데. &lt;span class="caps"&gt;GPG&lt;/span&gt; 키가 계속 침범을 하네? 그래서 문제를&amp;nbsp;찾았다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;이모든 원흉은 나의&amp;nbsp;과욕이었음을&amp;hellip;&lt;/p&gt;
-&lt;p&gt;모든 코딩을 JetBrains의 IDEA에서 한다. 아직 vim이 익숙하지 않아서 그렇기도&amp;nbsp;하고&amp;hellip;&lt;/p&gt;
-&lt;p&gt;언젠가 GPG키를 이용해서 git sign을 위해서 &lt;span class="caps"&gt;GPG&lt;/span&gt; suite를 설치해놨는데. 이넘이&amp;nbsp;문제일줄이야..&lt;/p&gt;
+&lt;li&gt;디버그 모드에서 출력 화면 향상&lt;/li&gt;
+&lt;li&gt;Atom 피드에서 비었거나 중복된 summary 항목 삭제&lt;/li&gt;
+&lt;li&gt;페이지네이션, pelican-import, pelican-quickstart, 피드 임포터 버그 수정&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Software"></category><category term="pelican"></category><category term="static blogging tools"></category><category term="python"></category></entry><entry><title>I hate input gpgkey in JetBrains IDEAs</title><link href="https://ujuc.github.io/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/" rel="alternate"></link><published>2018-11-27T01:31:32+09:00</published><updated>2018-11-27T01:31:32+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-27:/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/</id><summary type="html">&lt;p&gt;JetBrains IDEA를 주력하여 사용 중인데. GPG 키가 계속 침범을 하네? 그래서 문제를 찾았다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;이모든 원흉은 나의 과욕이었음을&amp;hellip;&lt;/p&gt;
+&lt;p&gt;모든 코딩을 JetBrains의 IDEA에서 한다. 아직 vim이 익숙하지 않아서 그렇기도 하고&amp;hellip;&lt;/p&gt;
+&lt;p&gt;언젠가 GPG키를 이용해서 git sign을 위해서 GPG suite를 설치해놨는데. 이넘이 문제일줄이야..&lt;/p&gt;
 &lt;h2 id="_1"&gt;증상&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;shift + cmd +r&lt;/code&gt; , &lt;code&gt;shift + cmd + f&lt;/code&gt; 키를 누르면 아래 모습처럼 &lt;span class="caps"&gt;GPG&lt;/span&gt; 키가&amp;hellip; 계속 복사가&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;shift + cmd +r&lt;/code&gt; , &lt;code&gt;shift + cmd + f&lt;/code&gt; 키를 누르면 아래 모습처럼 GPG 키가&amp;hellip; 계속 복사가 된다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="shift_cmd_r" src="https://ujuc.github.io/img/2018-11-27_shift_cmd_r.png"&gt; &lt;/p&gt;
 &lt;p&gt;&lt;img alt="shift_cmd_f" src="https://ujuc.github.io/img/2018-11-27_shift_cmd_f.png"&gt;&lt;/p&gt;
 &lt;h2 id="_2"&gt;해결&lt;/h2&gt;
-&lt;p&gt;간단하다. System Preferences 가서 키보드 단축키에서 &lt;span class="caps"&gt;GPG&lt;/span&gt; suite에 관련된 것들을 unchecked&amp;nbsp;한다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="system_preferences" src="https://ujuc.github.io/img/2018-11-27_system_preferences.png"&gt; &lt;/p&gt;</content><category term="jetbrains idea"></category><category term="gpg suite"></category><category term="key mapping"></category></entry><entry><title>MacOS Mojave에서 Google Drive Stream 오류</title><link href="https://ujuc.github.io/2018/11/17/macos_mojavee-seo_google_drive_stream_o-ryu/" rel="alternate"></link><published>2018-11-17T10:35:17+09:00</published><updated>2018-11-17T10:35:17+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-17:/2018/11/17/macos_mojavee-seo_google_drive_stream_o-ryu/</id><summary type="html">&lt;p&gt;Google Drive Stream이 실행은 커녕&amp;nbsp;죽어버린다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Google Drive Stream을 사용하고 있다. 그런데 Mojave로 OS를 업로드한 뒤부터는 실행이 안되고 어느 정도 작동하다가 죽어버리는 현상을&amp;nbsp;확인하였다.&lt;/p&gt;
-&lt;p&gt;사진도 못 옮기고 이것저것 텍스트들도 제대로 작업을 못하던 중에 혹시나 그냥 앱만 지우면 안 되는 건가라는 생각에서 매뉴얼을 찾아서 보고 작동이 되는 것을&amp;nbsp;확인하였다.&lt;/p&gt;
-&lt;p&gt;그냥 이렇게 하면 된다고 말 한마디면 되는 건데&amp;hellip; G Suite 쪽은 제대로 알려주는 것이&amp;nbsp;없으니&amp;hellip;&lt;/p&gt;
-&lt;p&gt;터미널이 편하다면 터미널로 아니라면 해당 위치에 있는 파일들을 삭제하면&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;간단하다. System Preferences 가서 키보드 단축키에서 GPG suite에 관련된 것들을 unchecked 한다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="system_preferences" src="https://ujuc.github.io/img/2018-11-27_system_preferences.png"&gt; &lt;/p&gt;</content><category term="Software"></category><category term="jetbrains idea"></category><category term="gpg suite"></category><category term="key mapping"></category></entry><entry><title>MacOS Mojave에서 Google Drive Stream 오류</title><link href="https://ujuc.github.io/2018/11/17/macos_mojavee-seo_google_drive_stream_o-ryu/" rel="alternate"></link><published>2018-11-17T10:35:17+09:00</published><updated>2018-11-17T10:35:17+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-17:/2018/11/17/macos_mojavee-seo_google_drive_stream_o-ryu/</id><summary type="html">&lt;p&gt;Google Drive Stream이 실행은 커녕 죽어버린다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Google Drive Stream을 사용하고 있다. 그런데 Mojave로 OS를 업로드한 뒤부터는 실행이 안되고 어느 정도 작동하다가 죽어버리는 현상을 확인하였다.&lt;/p&gt;
+&lt;p&gt;사진도 못 옮기고 이것저것 텍스트들도 제대로 작업을 못하던 중에 혹시나 그냥 앱만 지우면 안 되는 건가라는 생각에서 매뉴얼을 찾아서 보고 작동이 되는 것을 확인하였다.&lt;/p&gt;
+&lt;p&gt;그냥 이렇게 하면 된다고 말 한마디면 되는 건데&amp;hellip; G Suite 쪽은 제대로 알려주는 것이 없으니&amp;hellip;&lt;/p&gt;
+&lt;p&gt;터미널이 편하다면 터미널로 아니라면 해당 위치에 있는 파일들을 삭제하면 된다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo rm -rf /Applications/Google&lt;span class="se"&gt;\ &lt;/span&gt;Drive&lt;span class="se"&gt;\ &lt;/span&gt;File&lt;span class="se"&gt;\ &lt;/span&gt;Stream.app/
 $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;위의 내용처럼 작업하고 재시작하면 잘&amp;nbsp;실행된다.&lt;/p&gt;</content><category term="google drive stream"></category><category term="macos"></category><category term="mojave"></category></entry><entry><title>Pycharm에 pylint 추가</title><link href="https://ujuc.github.io/2018/09/24/pycharme_pylint_cu-ga/" rel="alternate"></link><published>2018-09-24T00:49:24+09:00</published><updated>2018-09-24T00:49:24+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-24:/2018/09/24/pycharme_pylint_cu-ga/</id><summary type="html">&lt;p&gt;Pycharm 에 pylint를 외부 툴로 등록하는&amp;nbsp;방법&lt;/p&gt;</summary><content type="html">&lt;p&gt;나는 블로그를 사용할때 Python 스크립트를 사용해서 작업을 하고 있다. 그러다보니 매번 파일에 추가되는 내용이나 달라지는 것들이 있으면 수정을&amp;nbsp;하는데&amp;hellip;&lt;/p&gt;
-&lt;p&gt;지금까지는 lint 작업은 하지않고서 pycharm에서 지적하는 부분만 가지고 작업을 하였다만&amp;hellip; 이제 lint를 적용해서 작업을 공통으로 사용할 수 있게&amp;nbsp;해놔야지&amp;hellip;&lt;/p&gt;
-&lt;p&gt;pylint만 있는건 아니지만, pep8이나 다른것들을 정리하려면&amp;hellip; 너무 많은 것을 등록해야된&amp;hellip;&amp;nbsp;논외로..&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/38134086/how-to-run-pylint-with-pycharm"&gt;How to run Pylint with PyCharm -&amp;nbsp;stackoverflow&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;위의 글을 읽어보면 자세히&amp;nbsp;되어있다.&lt;/p&gt;
-&lt;p&gt;여기서 나와 다른 점에 대해서 기록하고 넘어가기로&amp;nbsp;한다.&lt;/p&gt;
-&lt;p&gt;나는 global로 pylint를 설치하지 않았다. 귀찮기도하고 많은 버전을 섞어쓰는 환경이다보니&amp;hellip; &lt;code&gt;pipenv&lt;/code&gt; 를 사용하고 있는데 이것에 대한 내용은 없다. global 하게 패키지까는 것도&amp;nbsp;부담스럽고&amp;hellip;&lt;/p&gt;
-&lt;p&gt;다음 사진과 같이 나는 내용을 수정해서&amp;nbsp;사용한다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="My_settings" src="https://ujuc.github.io/img/2018-09-24_pycharm_export_tool_setting.png"&gt;&lt;/p&gt;</content><category term="pycharm"></category><category term="pylint"></category><category term="python"></category><category term="lint"></category></entry><entry><title>Recoll - 리눅스에서 GUI로 문서 검색을 해보자</title><link href="https://ujuc.github.io/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/" rel="alternate"></link><published>2018-09-23T23:27:51+09:00</published><updated>2018-09-23T23:27:51+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-23:/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/</id><summary type="html">&lt;p&gt;페이스북에서 보았던 recoll이라는 프로그램에 대해서 정리만&amp;nbsp;해둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.facebook.com/groups/korelnxuser/permalink/1108262849348464/0"&gt;페이스북 우분투 유저 그룹에 올라온 글&lt;/a&gt;이&amp;nbsp;있었다.&lt;/p&gt;
-&lt;p&gt;이글은 나중에 혹시나 쓸까하여&amp;hellip; 리눅스를 메인을 사용할 일은 거의&amp;nbsp;없긴하다만&amp;hellip;&lt;/p&gt;
-&lt;p&gt;소개글은 다음과&amp;nbsp;같다. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.fossmint.com/recoll-file-text-search-tool-for-linux/"&gt;&lt;span class="caps"&gt;FOSS&lt;/span&gt; Mint - Recoll - A Full-Text &lt;span class="caps"&gt;GUI&lt;/span&gt; Search Tool for Linux&amp;nbsp;System&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;여기서는 그냥 간단한 소개정도만&amp;nbsp;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;위의 내용처럼 작업하고 재시작하면 잘 실행된다.&lt;/p&gt;</content><category term="Software"></category><category term="google drive stream"></category><category term="macos"></category><category term="mojave"></category></entry><entry><title>Pycharm에 pylint 추가</title><link href="https://ujuc.github.io/2018/09/24/pycharme_pylint_cu-ga/" rel="alternate"></link><published>2018-09-24T00:49:24+09:00</published><updated>2018-09-24T00:49:24+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-24:/2018/09/24/pycharme_pylint_cu-ga/</id><summary type="html">&lt;p&gt;Pycharm 에 pylint를 외부 툴로 등록하는 방법&lt;/p&gt;</summary><content type="html">&lt;p&gt;나는 블로그를 사용할때 Python 스크립트를 사용해서 작업을 하고 있다. 그러다보니 매번 파일에 추가되는 내용이나 달라지는 것들이 있으면 수정을 하는데&amp;hellip;&lt;/p&gt;
+&lt;p&gt;지금까지는 lint 작업은 하지않고서 pycharm에서 지적하는 부분만 가지고 작업을 하였다만&amp;hellip; 이제 lint를 적용해서 작업을 공통으로 사용할 수 있게 해놔야지&amp;hellip;&lt;/p&gt;
+&lt;p&gt;pylint만 있는건 아니지만, pep8이나 다른것들을 정리하려면&amp;hellip; 너무 많은 것을 등록해야된&amp;hellip; 논외로..&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/38134086/how-to-run-pylint-with-pycharm"&gt;How to run Pylint with PyCharm - stackoverflow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;위의 글을 읽어보면 자세히 되어있다.&lt;/p&gt;
+&lt;p&gt;여기서 나와 다른 점에 대해서 기록하고 넘어가기로 한다.&lt;/p&gt;
+&lt;p&gt;나는 global로 pylint를 설치하지 않았다. 귀찮기도하고 많은 버전을 섞어쓰는 환경이다보니&amp;hellip; &lt;code&gt;pipenv&lt;/code&gt; 를 사용하고 있는데 이것에 대한 내용은 없다. global 하게 패키지까는 것도 부담스럽고&amp;hellip;&lt;/p&gt;
+&lt;p&gt;다음 사진과 같이 나는 내용을 수정해서 사용한다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My_settings" src="https://ujuc.github.io/img/2018-09-24_pycharm_export_tool_setting.png"&gt;&lt;/p&gt;</content><category term="Software"></category><category term="pycharm"></category><category term="pylint"></category><category term="python"></category><category term="lint"></category></entry><entry><title>Recoll - 리눅스에서 GUI로 문서 검색을 해보자</title><link href="https://ujuc.github.io/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/" rel="alternate"></link><published>2018-09-23T23:27:51+09:00</published><updated>2018-09-23T23:27:51+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-23:/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/</id><summary type="html">&lt;p&gt;페이스북에서 보았던 recoll이라는 프로그램에 대해서 정리만 해둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.facebook.com/groups/korelnxuser/permalink/1108262849348464/0"&gt;페이스북 우분투 유저 그룹에 올라온 글&lt;/a&gt;이 있었다.&lt;/p&gt;
+&lt;p&gt;이글은 나중에 혹시나 쓸까하여&amp;hellip; 리눅스를 메인을 사용할 일은 거의 없긴하다만&amp;hellip;&lt;/p&gt;
+&lt;p&gt;소개글은 다음과 같다. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.fossmint.com/recoll-file-text-search-tool-for-linux/"&gt;FOSS Mint - Recoll - A Full-Text GUI Search Tool for Linux System&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;여기서는 그냥 간단한 소개정도만 &amp;hellip;&lt;/p&gt;
 &lt;h2 id="_1"&gt;특징&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://xapian.org/"&gt;Xapian 서치 엔진&lt;/a&gt;&amp;nbsp;기반&lt;/li&gt;
-&lt;li&gt;텍스트 추출할 수 있는 플러그인&amp;nbsp;지원&lt;/li&gt;
-&lt;li&gt;왠만한 문서 포멧&amp;nbsp;지원&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://xapian.org/"&gt;Xapian 서치 엔진&lt;/a&gt; 기반&lt;/li&gt;
+&lt;li&gt;텍스트 추출할 수 있는 플러그인 지원&lt;/li&gt;
+&lt;li&gt;왠만한 문서 포멧 지원&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;더 눈에 띄는&amp;nbsp;것은 &lt;/p&gt;
+&lt;p&gt;더 눈에 띄는 것은 &lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Thunderbird에서 zip으로 압축되어있는 파일에 들어있는 문서 파일도&amp;nbsp;검색가능&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Recoll will index an &lt;span class="caps"&gt;MS&lt;/span&gt;-Word document stored as an attachment to an e-mail message inside a Thunderbird folder archived in a Zip file (and more&amp;hellip;). It will also help you search for it with a friendly and powerful interface, and let you open a copy of a &lt;span class="caps"&gt;PDF&lt;/span&gt; at the right page with two clicks. There is little that will remain hidden on your&amp;nbsp;disk.&lt;/p&gt;
+&lt;p&gt;Thunderbird에서 zip으로 압축되어있는 파일에 들어있는 문서 파일도 검색가능&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Recoll will index an MS-Word document stored as an attachment to an e-mail message inside a Thunderbird folder archived in a Zip file (and more&amp;hellip;). It will also help you search for it with a friendly and powerful interface, and let you open a copy of a PDF at the right page with two clicks. There is little that will remain hidden on your disk.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;지금은 맥을 쓰고 있어서 딱히&amp;hellip; 내부 검색이 필요한 것들은 전부 구글에&amp;hellip; 음 언제&amp;nbsp;한번써볼까?&lt;/p&gt;</content><category term="recoll"></category><category term="document"></category><category term="search"></category><category term="gui"></category></entry><entry><title>Cron-Style Job System - cronsun</title><link href="https://ujuc.github.io/2017/07/19/cron-style_job_system_-_cronsun/" rel="alternate"></link><published>2017-07-19T17:08:01+09:00</published><updated>2017-07-19T17:08:01+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-19:/2017/07/19/cron-style_job_system_-_cronsun/</id><summary type="html">&lt;p&gt;Go 메일링을 보다가 cron과 비슷한 서비스라 말하기에&amp;nbsp;확인.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;p&gt;지금은 맥을 쓰고 있어서 딱히&amp;hellip; 내부 검색이 필요한 것들은 전부 구글에&amp;hellip; 음 언제 한번써볼까?&lt;/p&gt;</content><category term="Software"></category><category term="recoll"></category><category term="document"></category><category term="search"></category><category term="gui"></category></entry><entry><title>Cron-Style Job System - cronsun</title><link href="https://ujuc.github.io/2017/07/19/cron-style_job_system_-_cronsun/" rel="alternate"></link><published>2017-07-19T17:08:01+09:00</published><updated>2017-07-19T17:08:01+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-19:/2017/07/19/cron-style_job_system_-_cronsun/</id><summary type="html">&lt;p&gt;Go 메일링을 보다가 cron과 비슷한 서비스라 말하기에 확인.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/shunfei/cronsun"&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Lang:&amp;nbsp;Golang&lt;/li&gt;
+&lt;li&gt;Lang: Golang&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&amp;hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나&amp;nbsp;적어야겠다.&lt;/p&gt;
+&lt;p&gt;분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&amp;hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나 적어야겠다.&lt;/p&gt;
 &lt;h2 id="_1"&gt;아키텍쳐&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;                                         &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
                                            &lt;span class="o"&gt;+&lt;/span&gt;
@@ -95,7 +95,7 @@ $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
 
 
 &lt;p&gt;Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.&lt;br&gt;
-노드는 여러개를 사용할 수 있는 것인지&amp;hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이&amp;nbsp;봐야될듯함.&lt;/p&gt;
+노드는 여러개를 사용할 수 있는 것인지&amp;hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이 봐야될듯함.&lt;/p&gt;
 &lt;h2 id="_2"&gt;빌드&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;go get -u github.com/shunfei/cronsun
 &lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$GOPATH&lt;/span&gt;/src/github.com/shunfei/cronsun
@@ -105,68 +105,68 @@ sh build.sh
 
 &lt;h2 id="_3"&gt;실행&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;MongoDB, etcd3&amp;nbsp;설치&lt;/li&gt;
+&lt;li&gt;MongoDB, etcd3 설치&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;conf&lt;/code&gt; 폴더에 있는 config 수정&lt;br&gt;
-  * 샘플은 &lt;code&gt;conf/files&lt;/code&gt; 에 항목별로 존재한다. 확인이&amp;nbsp;필요.&lt;/li&gt;
+  * 샘플은 &lt;code&gt;conf/files&lt;/code&gt; 에 항목별로 존재한다. 확인이 필요.&lt;/li&gt;
 &lt;li&gt;Node 실행: &lt;code&gt;./cronnode -conf conf/base.json&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;웹서버 실행: &lt;code&gt;./cronweb -conf conf/base.json&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;접속은 &lt;code&gt;http://127.0.0.1:7079/ui/&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="go"></category><category term="cron"></category><category term="job system"></category></entry><entry><title>독특하다. Onshape</title><link href="https://ujuc.github.io/2016/06/18/dog-teug-ha-da_onshape/" rel="alternate"></link><published>2016-06-18T11:41:00+09:00</published><updated>2016-06-18T11:41:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-06-18:/2016/06/18/dog-teug-ha-da_onshape/</id><summary type="html">&lt;p&gt;독특하다. 정말 독특하다. 웹서비스에서 3D 캐드를 구현하여 작업할 수&amp;nbsp;있다니.&lt;/p&gt;</summary><content type="html">&lt;p&gt;페이스북에서 로봇 그룹에 웹 서비스 3D &lt;span class="caps"&gt;CAD&lt;/span&gt; 서비스인 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt;가&amp;nbsp;올라왔다.&lt;/p&gt;
-&lt;p&gt;처음에는 그냥 CAD계에서 사용하는 Github로 봤는데. 이건 Github가 아니라 3D &lt;span class="caps"&gt;CAD&lt;/span&gt; 프로그램을 할 수 있는 사이트이다.&lt;br&gt;
-그것도 정말&amp;nbsp;괜찮은&amp;hellip;&lt;/p&gt;
-&lt;p&gt;내가 마지막으로 기억했던 것은. CATIA6에서 중앙에 서버를 두고 작업을 할 수 있도록 하였었는데. 이건 그것보다 더 많은것을 하고&amp;nbsp;있구나&amp;hellip;&lt;/p&gt;
+&lt;/ol&gt;</content><category term="Software"></category><category term="go"></category><category term="cron"></category><category term="job system"></category></entry><entry><title>독특하다. Onshape</title><link href="https://ujuc.github.io/2016/06/18/dog-teug-ha-da_onshape/" rel="alternate"></link><published>2016-06-18T11:41:00+09:00</published><updated>2016-06-18T11:41:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-06-18:/2016/06/18/dog-teug-ha-da_onshape/</id><summary type="html">&lt;p&gt;독특하다. 정말 독특하다. 웹서비스에서 3D 캐드를 구현하여 작업할 수 있다니.&lt;/p&gt;</summary><content type="html">&lt;p&gt;페이스북에서 로봇 그룹에 웹 서비스 3D CAD 서비스인 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt;가 올라왔다.&lt;/p&gt;
+&lt;p&gt;처음에는 그냥 CAD계에서 사용하는 Github로 봤는데. 이건 Github가 아니라 3D CAD 프로그램을 할 수 있는 사이트이다.&lt;br&gt;
+그것도 정말 괜찮은&amp;hellip;&lt;/p&gt;
+&lt;p&gt;내가 마지막으로 기억했던 것은. CATIA6에서 중앙에 서버를 두고 작업을 할 수 있도록 하였었는데. 이건 그것보다 더 많은것을 하고 있구나&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그리고 학교 같은데서 아이들이 쓰면 좋겠구나. 50G까지는 무료로 주는 서비스이니 개인적으로 가입해서 작업을 하고 해당 프로그램으로 출력도가능할 것같은데&amp;hellip;&lt;br&gt;
-써봐야.. 아는&amp;nbsp;부분이고&amp;hellip;&lt;/p&gt;
-&lt;p&gt;좋다. 부럽다. 그리고 저들은 저만치간다. 우리나라에서는 이 서비스를 쓸 업체는 없을 것이다. 그들은 이런것에 돈을 내는 것보다 자기들이 투자하지않고 돈을 버는데 더 많은 신경을&amp;nbsp;쓸것이기에&amp;hellip;&lt;/p&gt;
-&lt;p&gt;자세한건 &lt;a href="https://www.onshape.com/3d-cad"&gt;여기&lt;/a&gt;서&amp;nbsp;확인하자.&lt;/p&gt;</content><category term="cad"></category><category term="cloud"></category><category term="engineering"></category><category term="3d cad"></category></entry><entry><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link href="https://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/" rel="alternate"></link><published>2016-05-21T00:06:00+09:00</published><updated>2016-05-21T00:06:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-05-21:/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</id><summary type="html">&lt;p&gt;오랜만에 iTerm2 nightly 버전을 받았다. 새로운 기능을 보았다.!&amp;nbsp;남긴다.!&lt;/p&gt;</summary><content type="html">&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로&amp;nbsp;넘어갔다가&amp;hellip;&lt;/p&gt;
-&lt;p&gt;아&amp;hellip; 이건 아니다 싶어서 다시 nightly 버전으로 점프하여 설치를&amp;nbsp;하였더니&amp;hellip;&lt;/p&gt;
-&lt;p&gt;뜨는&amp;nbsp;무언가.&lt;/p&gt;
+써봐야.. 아는 부분이고&amp;hellip;&lt;/p&gt;
+&lt;p&gt;좋다. 부럽다. 그리고 저들은 저만치간다. 우리나라에서는 이 서비스를 쓸 업체는 없을 것이다. 그들은 이런것에 돈을 내는 것보다 자기들이 투자하지않고 돈을 버는데 더 많은 신경을 쓸것이기에&amp;hellip;&lt;/p&gt;
+&lt;p&gt;자세한건 &lt;a href="https://www.onshape.com/3d-cad"&gt;여기&lt;/a&gt;서 확인하자.&lt;/p&gt;</content><category term="Software"></category><category term="cad"></category><category term="cloud"></category><category term="engineering"></category><category term="3d cad"></category></entry><entry><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link href="https://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/" rel="alternate"></link><published>2016-05-21T00:06:00+09:00</published><updated>2016-05-21T00:06:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-05-21:/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</id><summary type="html">&lt;p&gt;오랜만에 iTerm2 nightly 버전을 받았다. 새로운 기능을 보았다.! 남긴다.!&lt;/p&gt;</summary><content type="html">&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로 넘어갔다가&amp;hellip;&lt;/p&gt;
+&lt;p&gt;아&amp;hellip; 이건 아니다 싶어서 다시 nightly 버전으로 점프하여 설치를 하였더니&amp;hellip;&lt;/p&gt;
+&lt;p&gt;뜨는 무언가.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="install shell integration" src="https://ujuc.github.io/img/2016-05-21_warning_shell_integration.png"&gt;&lt;/p&gt;
-&lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고&amp;nbsp;설치&amp;hellip;&lt;/p&gt;
+&lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고 설치&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016-05-21_installing_shell_integration.png"&gt;&lt;/p&gt;
-&lt;p&gt;음.! 뭔가&amp;nbsp;이상하다&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="n"&gt;have&lt;/span&gt; &lt;span class="n"&gt;these&lt;/span&gt; &lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;span class="n"&gt;imgcat&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;
-  &lt;span class="n"&gt;Displays&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;it2dl&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;
-  &lt;span class="n"&gt;Downloads&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;specified&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;saving&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Downloads&lt;/span&gt; &lt;span class="n"&gt;folder&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;p&gt;음.! 뭔가 이상하다&amp;hellip;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;You will also have these commands:&lt;/span&gt;
+&lt;span class="err"&gt;imgcat filename&lt;/span&gt;
+&lt;span class="err"&gt;  Displays the image inline.&lt;/span&gt;
+&lt;span class="err"&gt;it2dl filename&lt;/span&gt;
+&lt;span class="err"&gt;  Downloads the specified file, saving it in your Downloads folder.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;????&lt;/p&gt;
-&lt;p&gt;그래서&amp;nbsp;실행해봤다.!&lt;/p&gt;
+&lt;p&gt;그래서 실행해봤다.!&lt;/p&gt;
 &lt;h3 id="imgcat"&gt;imgcat&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="imgcat image!" src="https://ujuc.github.io/img/2016-05-21_imgcat_image.png"&gt;&lt;/p&gt;
-&lt;p&gt;용량이 크면 여는데 오래걸린다. Raw 파일은 정말 오래걸린다. tif 파일은 정말&amp;hellip; (70MB가 넘어가니 엄청&amp;nbsp;걸린다.)&lt;/p&gt;
+&lt;p&gt;용량이 크면 여는데 오래걸린다. Raw 파일은 정말 오래걸린다. tif 파일은 정말&amp;hellip; (70MB가 넘어가니 엄청 걸린다.)&lt;/p&gt;
 &lt;h3 id="it2dl"&gt;it2dl&lt;/h3&gt;
-&lt;p&gt;모르겠다&amp;nbsp;관심없다.&lt;/p&gt;
-&lt;h3 id="_1"&gt;설치를 못했다나.. 다시 해보고&amp;nbsp;싶다면&amp;hellip;&lt;/h3&gt;
+&lt;p&gt;모르겠다 관심없다.&lt;/p&gt;
+&lt;h3 id="_1"&gt;설치를 못했다나.. 다시 해보고 싶다면&amp;hellip;&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="menu" src="https://ujuc.github.io/img/2016-05-21_menu.png"&gt;&lt;/p&gt;
 &lt;h3 id="_2"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities.md"&gt;iterm2 -&amp;nbsp;utilites&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="iTerm2"></category><category term="terminal"></category><category term="Mac OS X"></category></entry><entry><title>Select text of vim with set mouse=a enabled</title><link href="https://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/" rel="alternate"></link><published>2016-05-02T23:27:00+09:00</published><updated>2016-05-02T23:27:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-05-02:/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</id><summary type="html">&lt;p&gt;Vim사용에 있어서 마우스로 블록을 선택할 수 있도록 하였다. 그랬더니 다른&amp;nbsp;부분에서&lt;/p&gt;</summary><content type="html">&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을&amp;nbsp;찾아보았다.&lt;/p&gt;
-&lt;p&gt;조금 쉽게 사용하려고 vim에 &lt;code&gt;mouse=a&lt;/code&gt; 설정을 하였다. 그것이 원흉이 었지만. 결국&amp;nbsp;찾았다!&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/4608161/copy-text-out-of-vim-with-set-mouse-a-enabled"&gt;Copy text out of vim with set mouse=a&amp;nbsp;enabled&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;리눅스에서는 &lt;code&gt;shift&lt;/code&gt;를 누르고 선택하는것이고, Mac에서는 &lt;code&gt;alt/option&lt;/code&gt;을 누르고 선택하면&amp;nbsp;된다.&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities.md"&gt;iterm2 - utilites&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Software"></category><category term="iTerm2"></category><category term="terminal"></category><category term="Mac OS X"></category></entry><entry><title>Select text of vim with set mouse=a enabled</title><link href="https://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/" rel="alternate"></link><published>2016-05-02T23:27:00+09:00</published><updated>2016-05-02T23:27:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-05-02:/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</id><summary type="html">&lt;p&gt;Vim사용에 있어서 마우스로 블록을 선택할 수 있도록 하였다. 그랬더니 다른 부분에서&lt;/p&gt;</summary><content type="html">&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을 찾아보았다.&lt;/p&gt;
+&lt;p&gt;조금 쉽게 사용하려고 vim에 &lt;code&gt;mouse=a&lt;/code&gt; 설정을 하였다. 그것이 원흉이 었지만. 결국 찾았다!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/4608161/copy-text-out-of-vim-with-set-mouse-a-enabled"&gt;Copy text out of vim with set mouse=a enabled&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;리눅스에서는 &lt;code&gt;shift&lt;/code&gt;를 누르고 선택하는것이고, Mac에서는 &lt;code&gt;alt/option&lt;/code&gt;을 누르고 선택하면 된다.&lt;/p&gt;
 &lt;p&gt;설정하나때문에 많은 삽질을 하는 사람들에게 남겨둠..&lt;br&gt;
-그런데 설정은 tmux에서도&amp;nbsp;사용이가능하다.&lt;/p&gt;</content><category term="vim"></category><category term="mouse"></category><category term="copy"></category></entry><entry><title>xonsh?</title><link href="https://ujuc.github.io/2015/03/16/xonsh/" rel="alternate"></link><published>2015-03-16T23:50:00+09:00</published><updated>2015-04-03T00:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:/2015/03/16/xonsh/</id><summary type="html">&lt;p class="first last"&gt;Python으로 만든&amp;nbsp;Shell&amp;#8230;&lt;/p&gt;
+그런데 설정은 tmux에서도 사용이가능하다.&lt;/p&gt;</content><category term="Software"></category><category term="vim"></category><category term="mouse"></category><category term="copy"></category></entry><entry><title>xonsh?</title><link href="https://ujuc.github.io/2015/03/16/xonsh/" rel="alternate"></link><published>2015-03-16T23:50:00+09:00</published><updated>2015-04-03T00:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:/2015/03/16/xonsh/</id><summary type="html">&lt;p class="first last"&gt;Python으로 만든 Shell...&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://xonsh.org/index.html"&gt;xonsh&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Python-ish, BASHwards-compatible shell language and command&amp;nbsp;prompt.라고&amp;#8230;&lt;/p&gt;
-&lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이&amp;#8230;
-그리고 기본이 3.4라&amp;#8230; 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
-기본으로 장착한 배포판의 경우엔&amp;nbsp;다르겠지만.&lt;/p&gt;
-</content><category term="python"></category><category term="shell"></category></entry><entry><title>git-ftp로 ftp 클라이언트를!</title><link href="https://ujuc.github.io/2015/03/04/git-ftp/" rel="alternate"></link><published>2015-03-04T00:00:00+09:00</published><updated>2015-04-02T00:48:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-04:/2015/03/04/git-ftp/</id><summary type="html">&lt;p class="first last"&gt;ftp만 열려있고 ssh가 안되는 웹 호스팅에서 작업하는 개발자를&amp;nbsp;위해&amp;#8230;&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중&amp;#8230; 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
-이용해서 &lt;span class="caps"&gt;FTP&lt;/span&gt; 클라잉너트를&amp;nbsp;만들었다.&lt;/p&gt;
-&lt;p&gt;뭔짓이지&amp;#8230;&lt;/p&gt;
-&lt;p&gt;암튼&amp;#8230; 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;&amp;#8230; 역시 다른
-구멍을 파는 사람들이&amp;nbsp;있구나&amp;#8230;&lt;/p&gt;
-&lt;p&gt;변화점까지 확인할 수 있다는건 git의 장점을&amp;nbsp;가져왔구나.&lt;/p&gt;
+&lt;p&gt;Python-ish, BASHwards-compatible shell language and command prompt.라고...&lt;/p&gt;
+&lt;p&gt;저장용. Zsh을 쓰고 있어서 이것을 사용할 일이...
+그리고 기본이 3.4라... 실질적으로 사용하기에는 쉽지 않을듯. 몇몇 3.x 버전을
+기본으로 장착한 배포판의 경우엔 다르겠지만.&lt;/p&gt;
+</content><category term="Software"></category><category term="python"></category><category term="shell"></category></entry><entry><title>git-ftp로 ftp 클라이언트를!</title><link href="https://ujuc.github.io/2015/03/04/git-ftp/" rel="alternate"></link><published>2015-03-04T00:00:00+09:00</published><updated>2015-04-02T00:48:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-04:/2015/03/04/git-ftp/</id><summary type="html">&lt;p class="first last"&gt;ftp만 열려있고 ssh가 안되는 웹 호스팅에서 작업하는 개발자를 위해...&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중... 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
+이용해서 FTP 클라잉너트를 만들었다.&lt;/p&gt;
+&lt;p&gt;뭔짓이지...&lt;/p&gt;
+&lt;p&gt;암튼... 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;... 역시 다른
+구멍을 파는 사람들이 있구나...&lt;/p&gt;
+&lt;p&gt;변화점까지 확인할 수 있다는건 git의 장점을 가져왔구나.&lt;/p&gt;
 &lt;div class="section" id="id3"&gt;
 &lt;h2&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md"&gt;설치&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;기본&amp;nbsp;설치&lt;/li&gt;
+&lt;li&gt;기본 설치&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
 $ git clone https://github.com/git-ftp/git-ftp.git
@@ -176,7 +176,7 @@ $ git checkout &amp;lt;tag&amp;gt;
 $ sudo make install
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;업그레이드의&amp;nbsp;경우&lt;/li&gt;
+&lt;li&gt;업그레이드의 경우&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
 $ git pull
@@ -185,7 +185,7 @@ $ git checkout &amp;lt;tag&amp;gt;
 $ sudo make install
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Mac &lt;span class="caps"&gt;OS&lt;/span&gt;&amp;nbsp;X&lt;/li&gt;
+&lt;li&gt;Mac OS X&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
 $ brew install git
@@ -194,8 +194,8 @@ $ brew install git-ftp
 &lt;/pre&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;curl&lt;/tt&gt; 을 기본으로 설치했는데 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;libssh2&lt;/tt&gt; 를 사용할 수 있도록 설정이
-필요한&amp;nbsp;갑다.&lt;/li&gt;
-&lt;li&gt;git이 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt; 을 사용하긴&amp;nbsp;한다만&amp;#8230;&lt;/li&gt;
+필요한 갑다.&lt;/li&gt;
+&lt;li&gt;git이 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt; 을 사용하긴 한다만...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id4"&gt;
@@ -212,43 +212,44 @@ $ brew install git-ftp
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="id5"&gt;
-&lt;h2&gt;제한&amp;nbsp;사항&lt;/h2&gt;
+&lt;h2&gt;제한 사항&lt;/h2&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;윈도우와 &lt;span class="caps"&gt;OS&lt;/span&gt; X에서는 테스트를 많이 안했으니 관련된 버그가 있으면 말해 줄&amp;nbsp;것.&lt;/li&gt;
-&lt;li&gt;배포 도구로 만들어지지 않아서&amp;#8230; 커밋이나 체크 아웃 같은건 알아서&amp;#8230;&amp;nbsp;조심히&amp;#8230;&lt;/li&gt;
+&lt;li&gt;윈도우와 OS X에서는 테스트를 많이 안했으니 관련된 버그가 있으면 말해 줄 것.&lt;/li&gt;
+&lt;li&gt;배포 도구로 만들어지지 않아서... 커밋이나 체크 아웃 같은건 알아서... 조심히...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/README.md#about"&gt;https://github.com/git-ftp/git-ftp/blob/develop/&lt;span class="caps"&gt;README&lt;/span&gt;.md#about&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/README.md#about"&gt;https://github.com/git-ftp/git-ftp/blob/develop/README.md#about&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</content><category term="git"></category><category term="ftp"></category><category term="shell"></category><category term="cli"></category><category term="bash"></category></entry><entry><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link href="https://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/" rel="alternate"></link><published>2014-11-09T00:44:00+09:00</published><updated>2015-04-12T14:12:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-09:/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</id><summary type="html">&lt;p class="first last"&gt;Ubuntu에서 nabi를 입력기로 사용한다. 그런데 언제부터인가. tray로
+</content><category term="Software"></category><category term="git"></category><category term="ftp"></category><category term="shell"></category><category term="cli"></category><category term="bash"></category></entry><entry><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link href="https://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/" rel="alternate"></link><published>2014-11-09T00:44:00+09:00</published><updated>2015-04-12T14:12:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-09:/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</id><summary type="html">&lt;p class="first last"&gt;Ubuntu에서 nabi를 입력기로 사용한다. 그런데 언제부터인가. tray로
 들어가지 않는 문제가 발생했다. 거의 업데이트가 안되고 있어서
-그런것같기도 하지만, 그것에 대한&amp;nbsp;내용이다.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가&amp;#8230;
-쓰던거 쓰자해서 &lt;tt class="docutils literal"&gt;nabi&lt;/tt&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지&amp;nbsp;않는다.&lt;/p&gt;
-&lt;p&gt;그래서 조금 검색을 했더니&amp;#8230;
+그런것같기도 하지만, 그것에 대한 내용이다.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가...
+쓰던거 쓰자해서 &lt;tt class="docutils literal"&gt;nabi&lt;/tt&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지 않는다.&lt;/p&gt;
+&lt;p&gt;그래서 조금 검색을 했더니...
 &lt;tt class="docutils literal"&gt;gsettings get com.canonical.Unity.Panel &lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 라는 걸로 추가를
-해줘야한다고 하는데&amp;#8230; 이넘은 14.10에는 없다. 조금더 찾아보니, 13.04부터는 아예&amp;nbsp;빠져있었다.&lt;/p&gt;
-&lt;p&gt;다시 검색어를 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 로 검색중 &lt;strong&gt;Web &lt;span class="caps"&gt;UPD8&lt;/span&gt;&lt;/strong&gt; 에 올라온 글을&amp;nbsp;확인.&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html"&gt;How to whitelist systray apps in ubuntu 14.04 or&amp;nbsp;14.10(W/unity)&lt;/a&gt;&lt;/p&gt;
+해줘야한다고 하는데... 이넘은 14.10에는 없다. 조금더 찾아보니, 13.04부터는 아예
+빠져있었다.&lt;/p&gt;
+&lt;p&gt;다시 검색어를 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 로 검색중 &lt;strong&gt;Web UPD8&lt;/strong&gt; 에 올라온 글을 확인.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html"&gt;How to whitelist systray apps in ubuntu 14.04 or 14.10(W/unity)&lt;/a&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;나같은 경우에는  14.10을&amp;nbsp;설치했으니.&lt;/li&gt;
+&lt;li&gt;나같은 경우에는  14.10을 설치했으니.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
 sudo apt-add-repository ppa:guran/systray-utopic
 sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get upgrade
 &lt;/pre&gt;
 &lt;p&gt;그리고 &lt;tt class="docutils literal"&gt;Alt + F2&lt;/tt&gt; 를 눌러 &lt;tt class="docutils literal"&gt;unity&lt;/tt&gt; 를 찾아 클릭해주면 알아서 unity가 재시작되면서
-nabi가 트레이에 들어가게&amp;nbsp;된다.&lt;/p&gt;
+nabi가 트레이에 들어가게 된다.&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;덧. 아래에보면 관련 ppa를 삭제하는 방법이 나오는데 따로 패키지를 설치할
-필요없이 아래의 명령어로 삭제가&amp;nbsp;가능하다.&lt;/li&gt;
+필요없이 아래의 명령어로 삭제가 가능하다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code bash literal-block"&gt;
 sudo apt-add-repository -r ppa:guran/systray-utopic
 sudo apt-get update&lt;span class="p"&gt;;&lt;/span&gt; sudo apt-get autoremove
 &lt;/pre&gt;
-</content><category term="linux"></category><category term="ubuntu"></category><category term="nabi"></category><category term="setting"></category></entry></feed>
+</content><category term="Software"></category><category term="linux"></category><category term="ubuntu"></category><category term="nabi"></category><category term="setting"></category></entry></feed>

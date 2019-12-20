@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   OpenStack&nbsp;Commit
+    잘 밤에 쓸데없는 생각하기... -   OpenStack Commit
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,87 +94,98 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>OpenStack&nbsp;Commit</h1></div>
+        <div class="article_title"><h1>OpenStack Commit</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 15. 02. 13.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
+            <a href="https://ujuc.github.io/tag/commit.html" class="article_tag">commit</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>기본적인 흐름은 <a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html">Developer&#8217;s Guide</a> 를 보고서 따라하면 쉽게 작업을 할 수 있다.
-그런데&#8230;. 왜이리&nbsp;어려운거지&#8230;.</p>
-<p>신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런&#8230; 어렵지 않을
-것같아&nbsp;시작&#8230;</p>
+        <div class="article_text"><p>기본적인 흐름은 <a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html">Developer's Guide</a> 를 보고서 따라하면 쉽게 작업을 할 수 있다.
+그런데.... 왜이리 어려운거지....</p>
+<p>신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런... 어렵지 않을
+것같아 시작...</p>
 <div class="section" id="id1">
-<h2>준비 해야될&nbsp;것</h2>
+<h2>준비 해야될 것</h2>
 <ol class="arabic simple">
 <li><a class="reference external" href="https://launchpad.net/+login">Launchpad</a> 계정<ul>
-<li>버그리포팅을 위해서는 Launchpad 계정이&nbsp;있어야한다.</li>
-<li>그리고 왠만한 OpenID를 이걸로 다 할 수&nbsp;있다.</li>
+<li>버그리포팅을 위해서는 Launchpad 계정이 있어야한다.</li>
+<li>그리고 왠만한 OpenID를 이걸로 다 할 수 있다.</li>
 </ul>
 </li>
 <li><a class="reference external" href="https://review.openstack.org">OpenStack Review</a> 가입<ul>
-<li>리뷰를 무조건&nbsp;타야된다&#8230;</li>
-<li>그러니&nbsp;만들어야&#8230;.</li>
-<li>그리고 ssh key등록을&nbsp;해두는게&#8230;</li>
-<li>그리고 메일링은 꺼두는게&#8230; 너무&nbsp;많이와&#8230;</li>
+<li>리뷰를 무조건 타야된다...</li>
+<li>그러니 만들어야....</li>
+<li>그리고 ssh key등록을 해두는게...</li>
+<li>그리고 메일링은 꺼두는게... 너무 많이와...</li>
 </ul>
 </li>
 </ol>
 </div>
 <div class="section" id="individual-contributor-license-agreement">
-<h2>Individual Contributor License Agreement&nbsp;결재</h2>
+<h2>Individual Contributor License Agreement 결재</h2>
 <ol class="arabic simple">
-<li><a class="reference external" href="https://review.openstack.org/#/settings/agreements">Individual Contributor License Agreement</a> 간단하게&nbsp;작성하고..</li>
+<li><a class="reference external" href="https://review.openstack.org/#/settings/agreements">Individual Contributor License Agreement</a> 간단하게 작성하고..</li>
 <li>회사 대신 기여하거나 단체로 한다면 <a class="reference external" href="https://secure.echosign.com/public/hostedForm?formid=56JUVGT95E78X5">Corporate Contributor License Agreement</a>
-도 한장&#8230; 작성하고 보니 난 이걸&nbsp;왜했지&#8230;</li>
+도 한장... 작성하고 보니 난 이걸 왜했지...</li>
 </ol>
 </div>
 <div class="section" id="git-review">
 <h2><tt class="docutils literal"><span class="pre">git-review</span></tt> 설치</h2>
 <ul class="simple">
-<li>맥은 그냥 <tt class="docutils literal">brew</tt> 로 통일시켜서 설치하는게&nbsp;편한듯&#8230;</li>
-<li>문서상으로는 <tt class="docutils literal">pip</tt> 로 설치하라고&nbsp;했지만&#8230;</li>
+<li>맥은 그냥 <tt class="docutils literal">brew</tt> 로 통일시켜서 설치하는게 편한듯...</li>
+<li>문서상으로는 <tt class="docutils literal">pip</tt> 로 설치하라고 했지만...</li>
 <li>설치하고 제대로 됐는지 확인을 하기위해서는<ul>
-<li>하나를&nbsp;클론하고</li>
-<li><tt class="docutils literal">git review <span class="pre">-s</span></tt> 를 해서 <tt class="docutils literal">review.openstack.org</tt> 에 제대로 접속했는지를 체크를&nbsp;해준다.</li>
+<li>하나를 클론하고</li>
+<li><tt class="docutils literal">git review <span class="pre">-s</span></tt> 를 해서 <tt class="docutils literal">review.openstack.org</tt> 에 제대로 접속했는지를 체크를
+해준다.</li>
 <li>이때 <tt class="docutils literal">gitreview.username</tt> 을 <tt class="docutils literal">.gitconfig</tt> 파일에 작성해두지 않았다면
-설정하라고&nbsp;뜸.</li>
+설정하라고 뜸.</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="id3">
-<h2>작업&nbsp;플로워</h2>
+<h2>작업 플로워</h2>
 <div class="section" id="id4">
-<h3>버그일&nbsp;경우</h3>
+<h3>버그일 경우</h3>
 <ul class="simple">
 <li>우선 <tt class="docutils literal"><span class="pre">bugs.launchpad.net/&lt;projectname&gt;</span></tt> 으로 접속하여 버그 리포팅.<ul>
 <li>이때 4가지로 테스크가 나뉘는데,<ol class="arabic">
-<li>새로운 버그 확인: &#8220;New&#8221;로 표기된 버그를 &#8220;Confirmed&#8221;로 변경 가능한 상태.
-거의 초기를 말한다고&nbsp;보면됨.</li>
-<li>버그 수정 : 버그를 할당하고, &#8220;In Progress&#8221;로&nbsp;등록.</li>
-<li>리뷰중 : &#8220;Incomplete&#8221;로 표기되고 리뷰가 진행되는 상태를 말함. 최대
-4주까지 걸린다고&nbsp;함.</li>
-<li>버그가 또다시 발견된 경우 : 그렇다고함&#8230; (뭐라말하기가&#8230; 그냥 나같은
-경우엔 리오픈으로 적고 프로세스&nbsp;해버림&#8230;)</li>
+<li>새로운 버그 확인: &quot;New&quot;로 표기된 버그를 &quot;Confirmed&quot;로 변경 가능한 상태.
+거의 초기를 말한다고 보면됨.</li>
+<li>버그 수정 : 버그를 할당하고, &quot;In Progress&quot;로 등록.</li>
+<li>리뷰중 : &quot;Incomplete&quot;로 표기되고 리뷰가 진행되는 상태를 말함. 최대
+4주까지 걸린다고 함.</li>
+<li>버그가 또다시 발견된 경우 : 그렇다고함... (뭐라말하기가... 그냥 나같은
+경우엔 리오픈으로 적고 프로세스 해버림...)</li>
 </ol>
 </li>
 </ul>
 </li>
 <li>커밋할때 버그 진행상태를 남겨둘 수 있음. 자세한건 <a class="reference external" href="https://wiki.openstack.org/wiki/GitCommitMessages#Including_external_references">Including external
-references</a> 를&nbsp;보면됨.</li>
+references</a> 를 보면됨.</li>
 </ul>
 </div>
 <div class="section" id="id5">
-<h3>청사진으로 새로운 기능을 붙일&nbsp;경우</h3>
+<h3>청사진으로 새로운 기능을 붙일 경우</h3>
 <ul class="simple">
-<li>이건 그냥 <a class="reference external" href="https://wiki.openstack.org/wiki/Blueprints">Blueprints - wiki</a> 를&nbsp;보자.</li>
-<li>관심 없고, 내가 딱히 추가할 내용도 별로 없어서&#8230; 우선은..&nbsp;빈칸&#8230;</li>
+<li>이건 그냥 <a class="reference external" href="https://wiki.openstack.org/wiki/Blueprints">Blueprints - wiki</a> 를 보자.</li>
+<li>관심 없고, 내가 딱히 추가할 내용도 별로 없어서... 우선은.. 빈칸...</li>
 </ul>
 </div>
 <div class="section" id="id6">
-<h3>변경을&nbsp;시작해볼까~~~</h3>
+<h3>변경을 시작해볼까~~~</h3>
 <ul class="simple">
-<li>첫 클론을 떠온거라면 상관없지만&#8230; 뜬지 꽤됐으면 업스트림이랑 코드를 맞춰줘야
+<li>첫 클론을 떠온거라면 상관없지만... 뜬지 꽤됐으면 업스트림이랑 코드를 맞춰줘야
 된다.<ul>
-<li>안하면 일 두번하는 생긴다&#8230; <span class="caps">OTL</span></li>
-<li>내가 이글을 쓰고 있는 이유기도&nbsp;하다&#8230;</li>
+<li>안하면 일 두번하는 생긴다... OTL</li>
+<li>내가 이글을 쓰고 있는 이유기도 하다...</li>
 </ul>
 </li>
 </ul>
@@ -185,17 +196,17 @@ $ git pull --ff-only origin master
 </pre>
 <ul class="simple">
 <li>그리고 브런치를 따는데, Blueprint는 <tt class="docutils literal"><span class="pre">bp/&lt;blueprint_name&gt;</span></tt>, Bug는
-<tt class="docutils literal"><span class="pre">bug/&lt;bug-number&gt;</span></tt> 로&nbsp;따주면된다.</li>
+<tt class="docutils literal"><span class="pre">bug/&lt;bug-number&gt;</span></tt> 로 따주면된다.</li>
 </ul>
 <pre class="code bash literal-block">
 git checkout -b TOPIC-BRANCH
 </pre>
 </div>
 <div class="section" id="id7">
-<h3>변경 사항&nbsp;커밋</h3>
+<h3>변경 사항 커밋</h3>
 <ul class="simple">
-<li>제목은 50자 이내로 작성하고, 한줄 띄우고 내용을&nbsp;작성해줘야된다.</li>
-<li>자세한 내용은 <a class="reference external" href="https://wiki.openstack.org/wiki/GitCommitMessages">Git commit messages</a>&nbsp;참고.</li>
+<li>제목은 50자 이내로 작성하고, 한줄 띄우고 내용을 작성해줘야된다.</li>
+<li>자세한 내용은 <a class="reference external" href="https://wiki.openstack.org/wiki/GitCommitMessages">Git commit messages</a> 참고.</li>
 </ul>
 <pre class="code text literal-block">
 summary
@@ -208,38 +219,30 @@ Implements: blueprint &lt;blueprint_name&gt;
 Closes-Bug: #&lt;bug_number&gt;
 </pre>
 <ul class="simple">
-<li><tt class="docutils literal"><span class="pre">Change-id</span></tt> 는 <tt class="docutils literal">git review</tt> 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는&nbsp;없다.</li>
+<li><tt class="docutils literal"><span class="pre">Change-id</span></tt> 는 <tt class="docutils literal">git review</tt> 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는
+없다.</li>
 <li>리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 <tt class="docutils literal">git commit <span class="pre">--amend</span></tt>
-오셤으로&nbsp;해주면된다.</li>
+오셤으로 해주면된다.</li>
 </ul>
 </div>
 <div class="section" id="id8">
-<h3>리뷰&nbsp;등록</h3>
+<h3>리뷰 등록</h3>
 <ul class="simple">
-<li><tt class="docutils literal">git reivew</tt> 로 하면 <tt class="docutils literal">review.openstack.org</tt> 에 올라가 있는 것을 확인할 수&nbsp;있다.</li>
+<li><tt class="docutils literal">git reivew</tt> 로 하면 <tt class="docutils literal">review.openstack.org</tt> 에 올라가 있는 것을 확인할 수
+있다.</li>
 </ul>
 </div>
 <div class="section" id="id9">
-<h3>변경사항이&nbsp;있을때</h3>
+<h3>변경사항이 있을때</h3>
 <ul class="simple">
-<li>커밋 메시지에 <tt class="docutils literal"><span class="pre">Change-Id</span></tt> 가없을때는 붙여넣기 해준 다음 <tt class="docutils literal"><span class="pre">--amend</span></tt> 로&nbsp;커밋.</li>
+<li>커밋 메시지에 <tt class="docutils literal"><span class="pre">Change-Id</span></tt> 가없을때는 붙여넣기 해준 다음 <tt class="docutils literal"><span class="pre">--amend</span></tt> 로 커밋.</li>
 </ul>
-<p>나머지 자세한 것들은 <a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html">Developer&#8217;s Guide</a> 를 확인하도록하자. 이것도 뭐&#8230; 내가
-까먹으니까 작성한&nbsp;것이기도하지만&#8230;</p>
+<p>나머지 자세한 것들은 <a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html">Developer's Guide</a> 를 확인하도록하자. 이것도 뭐... 내가
+까먹으니까 작성한 것이기도하지만...</p>
 </div>
 </div>
 </div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 15. 02. 13.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
-              <a href="https://ujuc.github.io/tag/commit.html" class="article_tag">commit</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Spec Architecture Design Guide Restructure&nbsp;(번역)
+    잘 밤에 쓸데없는 생각하기... -   Spec Architecture Design Guide Restructure (번역)
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,57 +94,69 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Spec Architecture Design Guide Restructure&nbsp;(번역)</h1></div>
+        <div class="article_title"><h1>Spec Architecture Design Guide Restructure (번역)</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 16. 05. 29.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/cloud.html">Cloud</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
+            <a href="https://ujuc.github.io/tag/documents.html" class="article_tag">documents</a>
+            <a href="https://ujuc.github.io/tag/spec.html" class="article_tag">spec</a>
+            <a href="https://ujuc.github.io/tag/architecture-design-guide.html" class="article_tag">architecture design guide</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p><a href="http://docs.openstack.org/arch-design/">Architecture Design Guide</a>가 새롭게 작성이되려나보다. 그것에 대한 스펙문서&nbsp;번역이다.</p>
-<p>원문: <a href="http://specs.openstack.org/openstack/docs-specs/specs/newton/arch-guide-restructure.html">Architecture Design Guide&nbsp;Restructure</a></p>
+        <div class="article_text"><p><a href="http://docs.openstack.org/arch-design/">Architecture Design Guide</a>가 새롭게 작성이되려나보다. 그것에 대한 스펙문서 번역이다.</p>
+<p>원문: <a href="http://specs.openstack.org/openstack/docs-specs/specs/newton/arch-guide-restructure.html">Architecture Design Guide Restructure</a></p>
 <hr>
-<h2 id="_1">문제점&nbsp;설명</h2>
-<p>지금의 Architecture Design Giude는 주로 사용 사례를 중심으로 구성되어 있습니다. 그러나 OpenStack 클라우드를 설계함에 있어 여러 사용 사례에서 기능들이 조합되어 사용되는 경우가&nbsp;있습니다.</p>
-<p>사용자가 모든 요구 사항을 고려할 수 있는 OpenStack 클라우드 아키텍처를 결정하는 것을 돕기위한 정보로 재구성하는 것이 필요합니다. 개발중이거나 단계적으로 반영을 하거나, 실제 서비스하고 있는 환경에서 OpenStack을 설계할때 필요한 정보를 추가해야합니다. 이번 제안은 클라우드에대한 아키텍처 컨셉과 다양한 OpenStack 프로젝트 추상화에 대한 더 상세한 구조를 개발하는 것입니다. 이것을 통해서 쉽게 가이드를 유지하고 업데이트 할 수&nbsp;있습니다.</p>
-<h2 id="_2">변경사항&nbsp;제안</h2>
-<p>이번 가이드에서 제안되는 구조는 일반적인 클라우드 사용사례, 일반적인 아키텍처 컨셉, 주요 클라우드 아키텍처 구성요소에서 장애가 발생하였을때에 대한 자세한 설명과 그것에 대한 설계 방법 등을&nbsp;설명합니다.</p>
-<p>각 장은 다음과 같이&nbsp;설계됩니다:</p>
+<h2 id="_1">문제점 설명</h2>
+<p>지금의 Architecture Design Giude는 주로 사용 사례를 중심으로 구성되어 있습니다. 그러나 OpenStack 클라우드를 설계함에 있어 여러 사용 사례에서 기능들이 조합되어 사용되는 경우가 있습니다.</p>
+<p>사용자가 모든 요구 사항을 고려할 수 있는 OpenStack 클라우드 아키텍처를 결정하는 것을 돕기위한 정보로 재구성하는 것이 필요합니다. 개발중이거나 단계적으로 반영을 하거나, 실제 서비스하고 있는 환경에서 OpenStack을 설계할때 필요한 정보를 추가해야합니다. 이번 제안은 클라우드에대한 아키텍처 컨셉과 다양한 OpenStack 프로젝트 추상화에 대한 더 상세한 구조를 개발하는 것입니다. 이것을 통해서 쉽게 가이드를 유지하고 업데이트 할 수 있습니다.</p>
+<h2 id="_2">변경사항 제안</h2>
+<p>이번 가이드에서 제안되는 구조는 일반적인 클라우드 사용사례, 일반적인 아키텍처 컨셉, 주요 클라우드 아키텍처 구성요소에서 장애가 발생하였을때에 대한 자세한 설명과 그것에 대한 설계 방법 등을 설명합니다.</p>
+<p>각 장은 다음과 같이 설계됩니다:</p>
 <ol>
-<li>Technical&nbsp;Detail</li>
-<li>Capacity and&nbsp;Scale</li>
-<li>High&nbsp;Availablility</li>
-<li>Operator&nbsp;Requirements</li>
-<li>Deployment&nbsp;Considerations</li>
-<li>Maintenance&nbsp;Considerations</li>
+<li>Technical Detail</li>
+<li>Capacity and Scale</li>
+<li>High Availablility</li>
+<li>Operator Requirements</li>
+<li>Deployment Considerations</li>
+<li>Maintenance Considerations</li>
 </ol>
-<p>표제에서 제공될 정보에 대한 형식은 따로 가이드라인을 제공할 예정입니다. 이것을 이용하여 정보를 호출하기위해 특정한 필요학 있는 경우에만&nbsp;사용됩니다.</p>
-<h2 id="_3">목차&nbsp;제안</h2>
-<p>새로운 Architecture Design Guide는 다음과 같이 새롭게&nbsp;구성됩니다:</p>
+<p>표제에서 제공될 정보에 대한 형식은 따로 가이드라인을 제공할 예정입니다. 이것을 이용하여 정보를 호출하기위해 특정한 필요학 있는 경우에만 사용됩니다.</p>
+<h2 id="_3">목차 제안</h2>
+<p>새로운 Architecture Design Guide는 다음과 같이 새롭게 구성됩니다:</p>
 <ol>
-<li>General&nbsp;Overview</li>
+<li>General Overview</li>
 <li>Use Cases<ol>
 <li>Development Cloud<ol>
 <li>Stackeholder</li>
-<li>User&nbsp;Stories</li>
-<li>Designe&nbsp;Model</li>
-<li>Component Block&nbsp;Diagram</li>
+<li>User Stories</li>
+<li>Designe Model</li>
+<li>Component Block Diagram</li>
 </ol>
 </li>
 <li>General Compute Cloud<ol>
 <li>Stakeholders</li>
-<li>User&nbsp;Stories</li>
-<li>Design&nbsp;Model</li>
-<li>Component Block&nbsp;Diagram</li>
+<li>User Stories</li>
+<li>Design Model</li>
+<li>Component Block Diagram</li>
 </ol>
 </li>
 <li>Web Scale Cloud<ol>
 <li>Stakeholders</li>
-<li>User&nbsp;Stories</li>
-<li>Design&nbsp;Model</li>
-<li>Component Block&nbsp;Diagram</li>
+<li>User Stories</li>
+<li>Design Model</li>
+<li>Component Block Diagram</li>
 </ol>
 </li>
 <li>Public Cloud<ol>
 <li>Stakeholders</li>
-<li>User&nbsp;Stories</li>
-<li>Design&nbsp;Model</li>
-<li>Component Block&nbsp;Diagram</li>
+<li>User Stories</li>
+<li>Design Model</li>
+<li>Component Block Diagram</li>
 </ol>
 </li>
 </ol>
@@ -163,26 +175,14 @@
 <li>Networking</li>
 <li>Identity</li>
 <li>Iamge</li>
-<li>Control&nbsp;Plane</li>
-<li>Dashboard and&nbsp;APIs</li>
+<li>Control Plane</li>
+<li>Dashboard and APIs</li>
 </ol>
 </li>
 </ol>
 <hr>
-<p>뭐 이정도까지&hellip; 더해봤자&hellip; 의미가&nbsp;없다&hellip;</p></div>
+<p>뭐 이정도까지&hellip; 더해봤자&hellip; 의미가 없다&hellip;</p></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 16. 05. 29.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/cloud.html">Cloud</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
-              <a href="https://ujuc.github.io/tag/documents.html" class="article_tag">documents</a>
-              <a href="https://ujuc.github.io/tag/spec.html" class="article_tag">spec</a>
-              <a href="https://ujuc.github.io/tag/architecture-design-guide.html" class="article_tag">architecture design guide</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

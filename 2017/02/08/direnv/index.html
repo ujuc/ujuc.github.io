@@ -95,14 +95,25 @@
     <div class="container">
       <div class="article">
         <div class="article_title"><h1>direnv</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 17. 02. 08.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/env.html" class="article_tag">env</a>
+            <a href="https://ujuc.github.io/tag/shell.html" class="article_tag">shell</a>
+            <a href="https://ujuc.github.io/tag/environment.html" class="article_tag">environment</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>이번에 소개할 direnv 는 이상한 모임에서 autoenv 를 올리고 난뒤 <a href="http://raccoonyy.github.io/">@raccoony</a>님께서 알려주셨다. 오홍 신기한거&nbsp;많다.</p>
+        <div class="article_text"><p>이번에 소개할 direnv 는 이상한 모임에서 autoenv 를 올리고 난뒤 <a href="http://raccoonyy.github.io/">@raccoony</a>님께서 알려주셨다. 오홍 신기한거 많다.</p>
 <h3 id="direnv"><a href="https://direnv.net/">direnv</a></h3>
-<p>홈페이지는 제목을 누르면 연결이되고 깃허브 주소는 <a href="https://github.com/direnv/direnv">direnv/direnv</a> 이다. 신기한건 go로 작성이 되었네&hellip; 마지막 커밋이 이글 쓰는 날 기준으로&nbsp;10일전!</p>
+<p>홈페이지는 제목을 누르면 연결이되고 깃허브 주소는 <a href="https://github.com/direnv/direnv">direnv/direnv</a> 이다. 신기한건 go로 작성이 되었네&hellip; 마지막 커밋이 이글 쓰는 날 기준으로 10일전!</p>
 <p>다른 env 프로그램들과 비슷하게 이건 셸에서 사용하는 환경변수를 변경할 수 있도록 도와준다.<br>
-코드에는 넣지 못하는 환경변수들을 셸에 <code>.bashrc</code> 나 <code>.profile</code> 에 모든 곳에서 사용하는 경우가 생기는데, 이걸 쓰면 프로젝트마다 다른 내용을 생성하여 보안을 높힐 수 있는 기회가 된다. (모든 보안은 사람이 행하는 보안을 제외하고&hellip; 직접 OS에 들어와서 까는건 어쩔 수&nbsp;없잖아&hellip;)</p>
+코드에는 넣지 못하는 환경변수들을 셸에 <code>.bashrc</code> 나 <code>.profile</code> 에 모든 곳에서 사용하는 경우가 생기는데, 이걸 쓰면 프로젝트마다 다른 내용을 생성하여 보안을 높힐 수 있는 기회가 된다. (모든 보안은 사람이 행하는 보안을 제외하고&hellip; 직접 OS에 들어와서 까는건 어쩔 수 없잖아&hellip;)</p>
 <h4 id="_1">설치</h4>
-<h5 id="_2">빠지지 않는 메뉴얼&nbsp;설치!</h5>
+<h5 id="_2">빠지지 않는 메뉴얼 설치!</h5>
 <div class="codehilite"><pre><span></span>$ git clone https://github.com/direnv/direnv
 $ <span class="nb">cd</span> direnv
 $ make install
@@ -116,39 +127,39 @@ $ make install
 
 
 <ul>
-<li>리눅스 패키지도 있다고 하니 사용하는 것에 있는지 검색해보고 설치하도록&nbsp;하자.</li>
+<li>리눅스 패키지도 있다고 하니 사용하는 것에 있는지 검색해보고 설치하도록 하자.</li>
 </ul>
 <h4 id="_3">사용</h4>
-<p>우선 사용한 셸 구성 파일에 다음 내용들을&nbsp;넣어준다.</p>
+<p>우선 사용한 셸 구성 파일에 다음 내용들을 넣어준다.</p>
 <ul>
 <li><code>~/.bashrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">eval</span> <span class="ss">&quot;$(direnv hook bash)&quot;</span>
+<div class="codehilite"><pre><span></span><span class="err">eval &quot;$(direnv hook bash)&quot;</span>
 </pre></div>
 
 
 <ul>
 <li><code>~/.zshrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">eval</span> <span class="ss">&quot;$(direnv hook zsh)&quot;</span>
+<div class="codehilite"><pre><span></span><span class="err">eval &quot;$(direnv hook zsh)&quot;</span>
 </pre></div>
 
 
 <ul>
 <li><code>~/.config/fish/config.fish</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">eval</span> <span class="p">(</span><span class="n">direnv</span> <span class="n">hook</span> <span class="n">fish</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="err">eval (direnv hook fish)</span>
 </pre></div>
 
 
 <ul>
 <li><code>~/.cshrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">eval</span> <span class="o">`</span><span class="n">direnv</span> <span class="n">hook</span> <span class="n">tcsh</span><span class="o">`</span>
+<div class="codehilite"><pre><span></span><span class="err">eval `direnv hook tcsh`</span>
 </pre></div>
 
 
-<p>다음으로는 다음과 같이 설정해주면&nbsp;된다.</p>
+<p>다음으로는 다음과 같이 설정해주면 된다.</p>
 <div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> playground
 $ <span class="nb">echo</span> <span class="nb">export</span> <span class="nv">FOO</span><span class="o">=</span>foo &gt; .envrc
 direnv: error .envrc is blocked. Run <span class="sb">`</span>direnv allow<span class="sb">`</span> to approve its content.
@@ -165,24 +176,13 @@ foo
 </pre></div>
 
 
-<p>사용법은&nbsp;간단하다.</p>
+<p>사용법은 간단하다.</p>
 <p>그런데 이걸 쓰는 이유는 코드에 자동으로 생성하는 비번이나 아니면 Auth token 등을 넣으실껀데&hellip;<br>
-절대로 git 에는 올리지 말길&hellip; 꼭 <code>.gitignore</code> 설정해서 사용하도록&nbsp;하자.</p>
+절대로 git 에는 올리지 말길&hellip; 꼭 <code>.gitignore</code> 설정해서 사용하도록 하자.</p>
 <p>더 자세한건 홈페이지에서!!<br>
 그런데 이거 참 좋당.<br>
-이제 어디서&nbsp;쓰써볼까나&hellip;</p></div>
+이제 어디서 쓰써볼까나&hellip;</p></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 17. 02. 08.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/env.html" class="article_tag">env</a>
-              <a href="https://ujuc.github.io/tag/shell.html" class="article_tag">shell</a>
-              <a href="https://ujuc.github.io/tag/environment.html" class="article_tag">environment</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

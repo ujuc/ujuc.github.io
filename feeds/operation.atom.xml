@@ -1,167 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-11-29T15:44:29+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>pyenv 설치 스크립트 변경됨</title><link href="https://ujuc.github.io/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/" rel="alternate"></link><published>2019-11-29T15:44:29+09:00</published><updated>2019-11-29T15:44:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-11-29:/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/</id><summary type="html">&lt;p&gt;pyenv 설치 방법이 변경되어 간략하게&amp;nbsp;남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;dotrc를 작성할때 만들었던 스크립트에서는 다음의 URL로 Pyenv를&amp;nbsp;설치했다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-11-29T15:44:29+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>pyenv 설치 스크립트 변경됨</title><link href="https://ujuc.github.io/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/" rel="alternate"></link><published>2019-11-29T15:44:29+09:00</published><updated>2019-11-29T15:44:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-11-29:/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/</id><summary type="html">&lt;p&gt;pyenv 설치 방법이 변경되어 간략하게 남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;dotrc를 작성할때 만들었던 스크립트에서는 다음의 URL로 Pyenv를 설치했다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install pyenv
 
 $ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer &lt;span class="p"&gt;|&lt;/span&gt; bash
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;이번 수정하면서, 확인하니 이분들이 &lt;code&gt;pyenv.run&lt;/code&gt; 도메인을 구매하셨나보다. 스크립트가&amp;nbsp;변경되었다.&lt;/p&gt;
+&lt;p&gt;이번 수정하면서, 확인하니 이분들이 &lt;code&gt;pyenv.run&lt;/code&gt; 도메인을 구매하셨나보다. 스크립트가 변경되었다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ curl https://pyenv.run &lt;span class="p"&gt;|&lt;/span&gt; bash
-&lt;/pre&gt;&lt;/div&gt;</content><category term="python"></category><category term="pyenv"></category><category term="python version management"></category><category term="version management"></category></entry><entry><title>Docker container 사용자 설정</title><link href="https://ujuc.github.io/2019/05/25/docker_container_sa-yong-ja_seor-jeong/" rel="alternate"></link><published>2019-05-25T12:38:45+09:00</published><updated>2019-05-25T12:38:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-25:/2019/05/25/docker_container_sa-yong-ja_seor-jeong/</id><summary type="html">&lt;p&gt;Docker container를 사용할때 발생한 에러에 대해서&amp;nbsp;작성하였다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 개발한 소스들을 Docker 이미지를 만들어서 ubuntu 18.04에서 작업을 할 수 있도록 구성을&amp;nbsp;했다.&lt;/p&gt;
-&lt;p&gt;인프라 작업을 하고 있지만, OS나 인프라는 매번 내가 생각했던 대로 잘 안&amp;nbsp;해준다.&lt;/p&gt;
-&lt;p&gt;이번에도 에러가&amp;nbsp;났다&amp;hellip;&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="python"></category><category term="pyenv"></category><category term="python version management"></category><category term="version management"></category></entry><entry><title>Docker container 사용자 설정</title><link href="https://ujuc.github.io/2019/05/25/docker_container_sa-yong-ja_seor-jeong/" rel="alternate"></link><published>2019-05-25T12:38:45+09:00</published><updated>2019-05-25T12:38:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-25:/2019/05/25/docker_container_sa-yong-ja_seor-jeong/</id><summary type="html">&lt;p&gt;Docker container를 사용할때 발생한 에러에 대해서 작성하였다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 개발한 소스들을 Docker 이미지를 만들어서 ubuntu 18.04에서 작업을 할 수 있도록 구성을 했다.&lt;/p&gt;
+&lt;p&gt;인프라 작업을 하고 있지만, OS나 인프라는 매번 내가 생각했던 대로 잘 안 해준다.&lt;/p&gt;
+&lt;p&gt;이번에도 에러가 났다&amp;hellip;&lt;/p&gt;
 &lt;h3 id="_1"&gt;문제&lt;/h3&gt;
-&lt;p&gt;실행중인 Docker container에 접속해서 그 폴더를 사용하는 스크립트를 만든 다음 실행하였더니 Docker container에서 mount 해서 사용하는 볼륨 권한&amp;nbsp;문제.&lt;/p&gt;
-&lt;p&gt;폴더에 접근할 방법이&amp;nbsp;없단다.&lt;/p&gt;
-&lt;p&gt;Docker container에서 사용하는 사용자는 root. 이 root는 패이크 루트라서 GID는 호스트의 root와 동일하지만, container에서만 root이지 실제로 호스트에서는 제대로 작동하지&amp;nbsp;않는다.&lt;/p&gt;
-&lt;p&gt;해당 내용을 다른 분들에게 물었더니 그 폴더 권한을 &lt;code&gt;0777&lt;/code&gt; 로 변경해서 작업을 하라고 해서&amp;nbsp;기각.&lt;/p&gt;
-&lt;p&gt;어떤 넘이 어떻게 들어올 줄 모르는데 모든 걸&amp;nbsp;열라니!!!&lt;/p&gt;
+&lt;p&gt;실행중인 Docker container에 접속해서 그 폴더를 사용하는 스크립트를 만든 다음 실행하였더니 Docker container에서 mount 해서 사용하는 볼륨 권한 문제.&lt;/p&gt;
+&lt;p&gt;폴더에 접근할 방법이 없단다.&lt;/p&gt;
+&lt;p&gt;Docker container에서 사용하는 사용자는 root. 이 root는 패이크 루트라서 GID는 호스트의 root와 동일하지만, container에서만 root이지 실제로 호스트에서는 제대로 작동하지 않는다.&lt;/p&gt;
+&lt;p&gt;해당 내용을 다른 분들에게 물었더니 그 폴더 권한을 &lt;code&gt;0777&lt;/code&gt; 로 변경해서 작업을 하라고 해서 기각.&lt;/p&gt;
+&lt;p&gt;어떤 넘이 어떻게 들어올 줄 모르는데 모든 걸 열라니!!!&lt;/p&gt;
 &lt;h3 id="_2"&gt;해결&lt;/h3&gt;
-&lt;p&gt;그래서 딴짓을&amp;nbsp;했다.&lt;/p&gt;
-&lt;p&gt;우선 호스트에서 필요한 dir을 생성했다. → 그러면 해당 폴더의 &lt;code&gt;gid&lt;/code&gt;와 &lt;code&gt;uid&lt;/code&gt;는 호스트 사용자의 &lt;code&gt;uid/gid&lt;/code&gt;를 사용하게&amp;nbsp;된다.&lt;/p&gt;
-&lt;p&gt;그리고 Docker에게서 새로운 사용자를 만들고 그에게 호스트 사용자와 동일한 &lt;code&gt;gid/uid&lt;/code&gt; 를 가질 수 있도록&amp;nbsp;하였다.&lt;/p&gt;
-&lt;p&gt;이건 Ubuntu에 하나의 유저만 있는 상태에서 가능한 설정이다. 만약 호스트에서 여러 사용자를 만들어서 사용한다면, 이 설정은 힘들다. &lt;code&gt;gid/uid&lt;/code&gt;가 다를 수 있다. Container 에서의 사용자는 root이외에 &lt;code&gt;www-data&lt;/code&gt; 와 같은 시스템 User 등급만 있지 실제 User 등급은 없어서 &lt;code&gt;gid : 1000&lt;/code&gt;, &lt;code&gt;uid : 1000&lt;/code&gt;을&amp;nbsp;가져가게된다.&lt;/p&gt;
-&lt;p&gt;다른 사용자가 있다면&amp;hellip; 다른 작업을 하도록&amp;nbsp;하자.&lt;/p&gt;
-&lt;p&gt;뒤지다 뒤지다 발견한 하나의&amp;nbsp;글.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;a href="https://codeyarns.com/2017/07/21/how-to-set-user-of-docker-container/"&gt;How to set user of Docker&amp;nbsp;container&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;그래서 딴짓을 했다.&lt;/p&gt;
+&lt;p&gt;우선 호스트에서 필요한 dir을 생성했다. → 그러면 해당 폴더의 &lt;code&gt;gid&lt;/code&gt;와 &lt;code&gt;uid&lt;/code&gt;는 호스트 사용자의 &lt;code&gt;uid/gid&lt;/code&gt;를 사용하게 된다.&lt;/p&gt;
+&lt;p&gt;그리고 Docker에게서 새로운 사용자를 만들고 그에게 호스트 사용자와 동일한 &lt;code&gt;gid/uid&lt;/code&gt; 를 가질 수 있도록 하였다.&lt;/p&gt;
+&lt;p&gt;이건 Ubuntu에 하나의 유저만 있는 상태에서 가능한 설정이다. 만약 호스트에서 여러 사용자를 만들어서 사용한다면, 이 설정은 힘들다. &lt;code&gt;gid/uid&lt;/code&gt;가 다를 수 있다. Container 에서의 사용자는 root이외에 &lt;code&gt;www-data&lt;/code&gt; 와 같은 시스템 User 등급만 있지 실제 User 등급은 없어서 &lt;code&gt;gid : 1000&lt;/code&gt;, &lt;code&gt;uid : 1000&lt;/code&gt;을 가져가게된다.&lt;/p&gt;
+&lt;p&gt;다른 사용자가 있다면&amp;hellip; 다른 작업을 하도록 하자.&lt;/p&gt;
+&lt;p&gt;뒤지다 뒤지다 발견한 하나의 글.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href="https://codeyarns.com/2017/07/21/how-to-set-user-of-docker-container/"&gt;How to set user of Docker container&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;이 글의 문제점은 Docker다. 난 Docker-compose를 사용하고 있어서 다른 작업이&amp;nbsp;필요했다.&lt;/li&gt;
-&lt;li&gt;내 생각에는 이 옵션에 대한 Docker-compose 옵션이 있을 꺼라 생각하는데. 나중에 다른 작업할때&amp;nbsp;찾아봐야겠다.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="docker"></category><category term="container"></category><category term="ubuntu"></category><category term="linux"></category></entry><entry><title>Docker Image 옮기기 (without DockerHub)</title><link href="https://ujuc.github.io/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/" rel="alternate"></link><published>2019-05-18T11:59:45+09:00</published><updated>2019-05-18T11:59:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-18:/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/</id><summary type="html">&lt;p&gt;반강제 폐쇄망에 이미지를&amp;nbsp;올리자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 &lt;span class="caps"&gt;AWS&lt;/span&gt; ECR을 사용하는건&amp;nbsp;제외. &lt;/p&gt;
-&lt;p&gt;개발 과정에서 실제 OS에서 작동하는지 확인을 위한것이라 올리고 인증하고&amp;nbsp;귀찮다.&lt;/p&gt;
-&lt;p&gt;뭘로 검색했는지는 기억이 없지만 다음과 같은 글을 확인했고, 다음과 같은 명령을 사용하면 인터넷이나 Docker 레포없이 작업이&amp;nbsp;가능하다.&lt;/p&gt;
+&lt;li&gt;이 글의 문제점은 Docker다. 난 Docker-compose를 사용하고 있어서 다른 작업이 필요했다.&lt;/li&gt;
+&lt;li&gt;내 생각에는 이 옵션에 대한 Docker-compose 옵션이 있을 꺼라 생각하는데. 나중에 다른 작업할때 찾아봐야겠다.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="docker"></category><category term="container"></category><category term="ubuntu"></category><category term="linux"></category></entry><entry><title>Docker Image 옮기기 (without DockerHub)</title><link href="https://ujuc.github.io/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/" rel="alternate"></link><published>2019-05-18T11:59:45+09:00</published><updated>2019-05-18T11:59:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-18:/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/</id><summary type="html">&lt;p&gt;반강제 폐쇄망에 이미지를 올리자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 AWS ECR을 사용하는건 제외. &lt;/p&gt;
+&lt;p&gt;개발 과정에서 실제 OS에서 작동하는지 확인을 위한것이라 올리고 인증하고 귀찮다.&lt;/p&gt;
+&lt;p&gt;뭘로 검색했는지는 기억이 없지만 다음과 같은 글을 확인했고, 다음과 같은 명령을 사용하면 인터넷이나 Docker 레포없이 작업이 가능하다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;출처: &lt;a href="https://stackoverflow.com/questions/23935141/how-to-copy-docker-images-from-one-host-to-another-without-using-a-repository"&gt;How to copy Docker images from one host to another without using a&amp;nbsp;repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;출처: &lt;a href="https://stackoverflow.com/questions/23935141/how-to-copy-docker-images-from-one-host-to-another-without-using-a-repository"&gt;How to copy Docker images from one host to another without using a repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;우선 로컬에서 Docker 이미지를 빌드한다. 명령어는 알꺼니&amp;nbsp;넘어가자.&lt;/p&gt;
-&lt;p&gt;다름 명령을 이용해서 tar 파일을&amp;nbsp;만들자.&lt;/p&gt;
+&lt;p&gt;우선 로컬에서 Docker 이미지를 빌드한다. 명령어는 알꺼니 넘어가자.&lt;/p&gt;
+&lt;p&gt;다름 명령을 이용해서 tar 파일을 만들자.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker save -o &amp;lt;path &lt;span class="k"&gt;for&lt;/span&gt; generated tar file&amp;gt; &amp;lt;imange name&amp;gt;:&amp;lt;tag&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;만들어진 tar 파일을 원하는 곳에 업로드&amp;nbsp;시킨다.&lt;/p&gt;
-&lt;p&gt;이제 올린 노드에서 사용할 수 있도록 이미지를 docker에 등록해주면&amp;nbsp;끝.&lt;/p&gt;
+&lt;p&gt;만들어진 tar 파일을 원하는 곳에 업로드 시킨다.&lt;/p&gt;
+&lt;p&gt;이제 올린 노드에서 사용할 수 있도록 이미지를 docker에 등록해주면 끝.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker load -i &amp;lt;path to image tar file&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3 id="_1"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/commandline/save/"&gt;docker&amp;nbsp;save&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/commandline/load/"&gt;docker&amp;nbsp;load&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="docker"></category><category term="docker image"></category></entry><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록&amp;nbsp;하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수&amp;nbsp;있다.&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/commandline/save/"&gt;docker save&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/commandline/load/"&gt;docker load&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="docker"></category><category term="docker image"></category></entry><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록 하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수 있다.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Priority (&lt;span class="caps"&gt;PR&lt;/span&gt;)&lt;br&gt;
-Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. &lt;code&gt;rt&lt;/code&gt; 항목은 리얼타임 항목에 대한 내용을&amp;nbsp;나타냄&lt;/li&gt;
-&lt;li&gt;Nice (&lt;span class="caps"&gt;NI&lt;/span&gt;)&lt;br&gt;
-Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능하다. -20 ~ +19 까지의 값을 가지고 있으며, -20값이 우선순위가 가장 높은 값이고 양수로 올라갈수록 낮은 값이다. 0은 &lt;code&gt;PR&lt;/code&gt; 값과 동일한 설정을&amp;nbsp;나타낸다.&lt;/li&gt;
+&lt;li&gt;Priority (PR)&lt;br&gt;
+Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. &lt;code&gt;rt&lt;/code&gt; 항목은 리얼타임 항목에 대한 내용을 나타냄&lt;/li&gt;
+&lt;li&gt;Nice (NI)&lt;br&gt;
+Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능하다. -20 ~ +19 까지의 값을 가지고 있으며, -20값이 우선순위가 가장 높은 값이고 양수로 올라갈수록 낮은 값이다. 0은 &lt;code&gt;PR&lt;/code&gt; 값과 동일한 설정을 나타낸다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id="rriority"&gt;Rriority&amp;nbsp;계산&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;h3 id="rriority"&gt;Rriority 계산&lt;/h3&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;PR = 20 + (-20 ~ +19)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;해당 계산식을 이용하면 0 ~ 39 사이의 값이 되는데 이것은 Priority 값의 100 ~ 139 사이 값에&amp;nbsp;대응된다.&lt;/p&gt;
+&lt;p&gt;해당 계산식을 이용하면 0 ~ 39 사이의 값이 되는데 이것은 Priority 값의 100 ~ 139 사이 값에 대응된다.&lt;/p&gt;
 &lt;h2 id="rriority_1"&gt;Rriority&lt;/h2&gt;
-&lt;p&gt;Linux에서는 Task에 대한 우선 순위를 정할 수 있다. 물론 User task priority 만 가능하다. &lt;span class="caps"&gt;RT&lt;/span&gt; task priority 부분은 사용자 권한으로 접근이&amp;nbsp;안된다.&lt;/p&gt;
-&lt;p&gt;자세한 내용을 확인하려면 다음 URL에서 확인을&amp;nbsp;하도록하자.&lt;/p&gt;
+&lt;p&gt;Linux에서는 Task에 대한 우선 순위를 정할 수 있다. 물론 User task priority 만 가능하다. RT task priority 부분은 사용자 권한으로 접근이 안된다.&lt;/p&gt;
+&lt;p&gt;자세한 내용을 확인하려면 다음 URL에서 확인을 하도록하자.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.ibm.com/developerworks/linux/library/l-scheduler/"&gt;&lt;span class="caps"&gt;IBM&lt;/span&gt; - Inside the Linux&amp;nbsp;scheduler&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.ibm.com/developerworks/linux/library/l-scheduler/"&gt;IBM - Inside the Linux scheduler&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;리눅스 커널 2.6 버전이상에서 사용하는 스케쥴러에 대한 내용이&amp;nbsp;정리되어있다.&lt;/li&gt;
-&lt;li&gt;여기서는 다음 그림을&amp;nbsp;참조하면된다.&lt;/li&gt;
+&lt;li&gt;리눅스 커널 2.6 버전이상에서 사용하는 스케쥴러에 대한 내용이 정리되어있다.&lt;/li&gt;
+&lt;li&gt;여기서는 다음 그림을 참조하면된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="The Linux 2.6 scheduler runqueue structure
 " src="https://www.ibm.com/developerworks/linux/library/l-scheduler/figure1.gif"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.suse.com/documentation/sles11/book_sle_tuning/data/cha_tuning_taskscheduler.html"&gt;&lt;span class="caps"&gt;SUSE&lt;/span&gt; - Tuning the Task&amp;nbsp;Scheduler&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.suse.com/documentation/sles11/book_sle_tuning/data/cha_tuning_taskscheduler.html"&gt;SUSE - Tuning the Task Scheduler&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class="caps"&gt;SUSE&lt;/span&gt; 11 버전에서 튜닝하는 것에 대한 내용 중 하나이다. 12 버전에 대한건 딴문서가 있으니&amp;nbsp;확인.&lt;/li&gt;
+&lt;li&gt;SUSE 11 버전에서 튜닝하는 것에 대한 내용 중 하나이다. 12 버전에 대한건 딴문서가 있으니 확인.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="_1"&gt;우선순위&amp;nbsp;설정&lt;/h2&gt;
-&lt;h3 id="daemon"&gt;Daemon 구성 파일에서&amp;nbsp;설정&lt;/h3&gt;
+&lt;h2 id="_1"&gt;우선순위 설정&lt;/h2&gt;
+&lt;h3 id="daemon"&gt;Daemon 구성 파일에서 설정&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일을 이용하여 &lt;code&gt;--nicelevel&lt;/code&gt; 옵션&amp;nbsp;추가&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일을 이용하여 &lt;code&gt;--nicelevel&lt;/code&gt; 옵션 추가&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://unix.stackexchange.com/a/123926"&gt;Setting up init.d service daemon priority (with or without&amp;nbsp;monit)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://unix.stackexchange.com/a/123926"&gt;Setting up init.d service daemon priority (with or without monit)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일에 주석으로 &lt;code&gt;# chkconfig:&lt;/code&gt; 옵션&amp;nbsp;추가&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일에 주석으로 &lt;code&gt;# chkconfig:&lt;/code&gt; 옵션 추가&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://serverfault.com/questions/754676/how-to-change-the-startup-order-of-linux-init-scripts-in-redhat-centos"&gt;how to change the startup order of linux init scripts in Redhat,&amp;nbsp;Centos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://serverfault.com/questions/754676/how-to-change-the-startup-order-of-linux-init-scripts-in-redhat-centos"&gt;how to change the startup order of linux init scripts in Redhat, Centos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Systemd 에서 설정하는&amp;nbsp;방법&lt;/p&gt;
+&lt;p&gt;Systemd 에서 설정하는 방법&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Scheduling"&gt;systemd.exec&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="limitsconf"&gt;&lt;code&gt;limits.conf&lt;/code&gt; 파일에서&amp;nbsp;지정&lt;/h3&gt;
+&lt;h3 id="limitsconf"&gt;&lt;code&gt;limits.conf&lt;/code&gt; 파일에서 지정&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;특정 사용자에 대한 모든 프로세스에대한 값을 정할때&amp;nbsp;사용한다.&lt;/li&gt;
+&lt;li&gt;특정 사용자에 대한 모든 프로세스에대한 값을 정할때 사용한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Username&lt;/span&gt;    &lt;span class="n"&gt;hard&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;soft&lt;/span&gt;    &lt;span class="n"&gt;priority&lt;/span&gt;    &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;Username    hard/soft    priority    10&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;다음 링크에서 자세하게 확인하도록&amp;nbsp;하자.&lt;/p&gt;
+&lt;p&gt;다음 링크에서 자세하게 확인하도록 하자.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://unix.stackexchange.com/questions/8983/set-default-nice-value-for-a-given-user-limits-conf"&gt;Set default nice value for a given user&amp;nbsp;(limits.conf)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.mankier.com/5/limits.conf"&gt;limits.conf man page - pam |&amp;nbsp;ManKier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://unix.stackexchange.com/questions/8983/set-default-nice-value-for-a-given-user-limits-conf"&gt;Set default nice value for a given user (limits.conf)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.mankier.com/5/limits.conf"&gt;limits.conf man page - pam | ManKier&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="nice"&gt;&lt;code&gt;nice&lt;/code&gt; 명령을 이용하여 동적으로 할당하는&amp;nbsp;방법&lt;/h3&gt;
+&lt;h3 id="nice"&gt;&lt;code&gt;nice&lt;/code&gt; 명령을 이용하여 동적으로 할당하는 방법&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;일반적인 사용법&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;nice -n {nice_value} {program_name}&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://askubuntu.com/questions/656771/process-niceness-vs-priority"&gt;Process &amp;lsquo;niceness&amp;rsquo; vs.&amp;nbsp;&amp;lsquo;priority&amp;rsquo;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://bencane.com/2013/09/09/setting-process-cpu-priority-with-nice-and-renice/"&gt;Setting process &lt;span class="caps"&gt;CPU&lt;/span&gt; priority with nice and renice | Benjamin&amp;nbsp;Cane&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://unix.stackexchange.com/questions/72934/how-do-i-start-a-process-with-a-nice-value-of-20-and-not-give-it-root-privilege"&gt;How do I start a process with a nice value of -20 and not give it root&amp;nbsp;privilege?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://askubuntu.com/questions/656771/process-niceness-vs-priority"&gt;Process &amp;lsquo;niceness&amp;rsquo; vs. &amp;lsquo;priority&amp;rsquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bencane.com/2013/09/09/setting-process-cpu-priority-with-nice-and-renice/"&gt;Setting process CPU priority with nice and renice | Benjamin Cane&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://unix.stackexchange.com/questions/72934/how-do-i-start-a-process-with-a-nice-value-of-20-and-not-give-it-root-privilege"&gt;How do I start a process with a nice value of -20 and not give it root privilege?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="daemon_1"&gt;특정 프로그램으로 Daemon을 이용하여 관리하는&amp;nbsp;방법&lt;/h3&gt;
+&lt;h3 id="daemon_1"&gt;특정 프로그램으로 Daemon을 이용하여 관리하는 방법&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://and.sourceforge.net/"&gt;Auto nice daemon&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;업그레이드가 2005년 이후로 안되고&amp;nbsp;있다.&lt;/li&gt;
-&lt;li&gt;그러니 사용하기&amp;nbsp;꺼림직&amp;hellip;&lt;/li&gt;
-&lt;li&gt;찾다가 나왔으니&amp;nbsp;뭐&amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.reddit.com/r/linuxquestions/comments/4ctr5c/is_the_autonice_daemon_and_safe_to_use/"&gt;Reddit 글&lt;/a&gt; 에서는 사용하기가 불안하다는&amp;nbsp;내용도&amp;hellip;&lt;/li&gt;
+&lt;li&gt;업그레이드가 2005년 이후로 안되고 있다.&lt;/li&gt;
+&lt;li&gt;그러니 사용하기 꺼림직&amp;hellip;&lt;/li&gt;
+&lt;li&gt;찾다가 나왔으니 뭐&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/linuxquestions/comments/4ctr5c/is_the_autonice_daemon_and_safe_to_use/"&gt;Reddit 글&lt;/a&gt; 에서는 사용하기가 불안하다는 내용도&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/Nefelim4ag/Ananicy"&gt;Ananicy&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;Another Auto nice&amp;nbsp;daemon&lt;/li&gt;
-&lt;li&gt;지금까지&amp;nbsp;개발중이다.&lt;/li&gt;
-&lt;li&gt;Role 값을 &lt;span class="caps"&gt;JSON&lt;/span&gt; 형식으로 작업이&amp;nbsp;가능하다.&lt;/li&gt;
+&lt;li&gt;Another Auto nice daemon&lt;/li&gt;
+&lt;li&gt;지금까지 개발중이다.&lt;/li&gt;
+&lt;li&gt;Role 값을 JSON 형식으로 작업이 가능하다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;span class="caps"&gt;PS&lt;/span&gt;. &lt;span class="caps"&gt;IO&lt;/span&gt; Priority를 변경하고 싶다면 &lt;code&gt;ionice&lt;/code&gt;를 확인하도록 하자. (&lt;a href="https://linux.die.net/man/1/ionice"&gt;manpage&lt;/a&gt;)&lt;/p&gt;</content><category term="linux"></category><category term="priority"></category><category term="scheduler"></category></entry><entry><title>man page Section</title><link href="https://ujuc.github.io/2018/03/10/man_page_section/" rel="alternate"></link><published>2018-03-10T14:42:46+09:00</published><updated>2018-03-10T14:42:46+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-10:/2018/03/10/man_page_section/</id><summary type="html">&lt;p&gt;&lt;code&gt;man&lt;/code&gt; 페이지를 보다보면 숫자가 적혀있다. 그거 간략하게&amp;nbsp;본다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;항상  &lt;code&gt;man&lt;/code&gt; 페이지를 끼고 보는데&amp;hellip; &lt;code&gt;ls(1)&lt;/code&gt; 이라 적혀있는 페이지를 볼 수 있다.&lt;br&gt;
-해당 내용을 매번 찾다가&amp;hellip; 찾는것도&amp;nbsp;힘들고해서&amp;hellip;&lt;/p&gt;
+&lt;p&gt;PS. IO Priority를 변경하고 싶다면 &lt;code&gt;ionice&lt;/code&gt;를 확인하도록 하자. (&lt;a href="https://linux.die.net/man/1/ionice"&gt;manpage&lt;/a&gt;)&lt;/p&gt;</content><category term="Operation"></category><category term="linux"></category><category term="priority"></category><category term="scheduler"></category></entry><entry><title>man page Section</title><link href="https://ujuc.github.io/2018/03/10/man_page_section/" rel="alternate"></link><published>2018-03-10T14:42:46+09:00</published><updated>2018-03-10T14:42:46+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-10:/2018/03/10/man_page_section/</id><summary type="html">&lt;p&gt;&lt;code&gt;man&lt;/code&gt; 페이지를 보다보면 숫자가 적혀있다. 그거 간략하게 본다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;항상  &lt;code&gt;man&lt;/code&gt; 페이지를 끼고 보는데&amp;hellip; &lt;code&gt;ls(1)&lt;/code&gt; 이라 적혀있는 페이지를 볼 수 있다.&lt;br&gt;
+해당 내용을 매번 찾다가&amp;hellip; 찾는것도 힘들고해서&amp;hellip;&lt;/p&gt;
 &lt;p&gt;찾다보니 해당 숫자는 section 숫자라고..&lt;br&gt;
-해당되는&amp;nbsp;내용들은.&lt;/p&gt;
+해당되는 내용들은.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;사용자&amp;nbsp;명령어&lt;/li&gt;
-&lt;li&gt;시스템&amp;nbsp;콜&lt;/li&gt;
-&lt;li&gt;C 라이브러리&amp;nbsp;함수&lt;/li&gt;
-&lt;li&gt;디바이스와 특수&amp;nbsp;파일&lt;/li&gt;
-&lt;li&gt;파일 포맷과&amp;nbsp;컨밴션&lt;/li&gt;
-&lt;li&gt;게임 외&amp;hellip; (Games et.&amp;nbsp;al.)&lt;/li&gt;
-&lt;li&gt;여러 등등&amp;nbsp;(Miscellanea)&lt;/li&gt;
-&lt;li&gt;시스템 어드민 툴과&amp;nbsp;데몬&lt;/li&gt;
-&lt;li&gt;커널&amp;nbsp;루틴&lt;/li&gt;
+&lt;li&gt;사용자 명령어&lt;/li&gt;
+&lt;li&gt;시스템 콜&lt;/li&gt;
+&lt;li&gt;C 라이브러리 함수&lt;/li&gt;
+&lt;li&gt;디바이스와 특수 파일&lt;/li&gt;
+&lt;li&gt;파일 포맷과 컨밴션&lt;/li&gt;
+&lt;li&gt;게임 외&amp;hellip; (Games et. al.)&lt;/li&gt;
+&lt;li&gt;여러 등등 (Miscellanea)&lt;/li&gt;
+&lt;li&gt;시스템 어드민 툴과 데몬&lt;/li&gt;
+&lt;li&gt;커널 루틴&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;그런데 이 섹션은&amp;hellip; 1971년 11월 3일에 작성된(?) &lt;a href="https://www.bell-labs.com/usr/dmr/www/manintro.html"&gt;&lt;span class="caps"&gt;UNIX&lt;/span&gt; programmer&amp;rsquo;s manual&lt;/a&gt; 섹션이라고&amp;hellip;&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;h3 id="_1"&gt;참고&amp;nbsp;자료&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://unix.stackexchange.com/questions/3586/what-do-the-numbers-in-a-man-page-mean"&gt;What do the numbers in a man page&amp;nbsp;mean?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;그런데 이 섹션은&amp;hellip; 1971년 11월 3일에 작성된(?) &lt;a href="https://www.bell-labs.com/usr/dmr/www/manintro.html"&gt;UNIX programmer&amp;rsquo;s manual&lt;/a&gt; 섹션이라고&amp;hellip;&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id="_1"&gt;참고 자료&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://unix.stackexchange.com/questions/3586/what-do-the-numbers-in-a-man-page-mean"&gt;What do the numbers in a man page mean?&lt;/a&gt;&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -169,96 +169,96 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;p&gt;잼나다잉, https://unix.stackexchange.com/a/3607&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="man"></category><category term="manual"></category><category term="linux"></category></entry><entry><title>RSYSLOG - Templates</title><link href="https://ujuc.github.io/2018/03/01/rsyslog_-_templates/" rel="alternate"></link><published>2018-03-01T18:45:41+09:00</published><updated>2018-03-01T18:45:41+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-01:/2018/03/01/rsyslog_-_templates/</id><summary type="html">&lt;p&gt;Rsyslog 에서 사용되는 template 에 관련된 내용을&amp;nbsp;정리합시다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;/var/log/syslog&lt;/code&gt;로 모여드는 서비스들의 로그를 다른 곳으로 옮기고, 해당 내용을 확인하기 위해 파싱을 할 수 있도록 변경하는 작업이 필요했다.&lt;br&gt;
-그래서 내가 필요한 로그를 syslog에서 때어낸후 다른 파일로 옮기는 작업을 성공. 하지만 그 이상의 작업을 하기위해서는 rsyslog에서 template을 작성하여야 내가 필요한 메시지만 작성할 수 있는 것을 확인하였기에 해당 부분을 찾아&amp;nbsp;변경하였다.&lt;/p&gt;
-&lt;p&gt;그러면서 참고하려고 했던 문서들이 전부 영문이라. 한국어로 내가 정리해두고 나중에 또 찾아봐야겠다는 생각에서 글을&amp;nbsp;작성한다.&lt;/p&gt;
+&lt;/div&gt;</content><category term="Operation"></category><category term="man"></category><category term="manual"></category><category term="linux"></category></entry><entry><title>RSYSLOG - Templates</title><link href="https://ujuc.github.io/2018/03/01/rsyslog_-_templates/" rel="alternate"></link><published>2018-03-01T18:45:41+09:00</published><updated>2018-03-01T18:45:41+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-01:/2018/03/01/rsyslog_-_templates/</id><summary type="html">&lt;p&gt;Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;/var/log/syslog&lt;/code&gt;로 모여드는 서비스들의 로그를 다른 곳으로 옮기고, 해당 내용을 확인하기 위해 파싱을 할 수 있도록 변경하는 작업이 필요했다.&lt;br&gt;
+그래서 내가 필요한 로그를 syslog에서 때어낸후 다른 파일로 옮기는 작업을 성공. 하지만 그 이상의 작업을 하기위해서는 rsyslog에서 template을 작성하여야 내가 필요한 메시지만 작성할 수 있는 것을 확인하였기에 해당 부분을 찾아 변경하였다.&lt;/p&gt;
+&lt;p&gt;그러면서 참고하려고 했던 문서들이 전부 영문이라. 한국어로 내가 정리해두고 나중에 또 찾아봐야겠다는 생각에서 글을 작성한다.&lt;/p&gt;
 &lt;h2 id="template"&gt;Template&lt;/h2&gt;
-&lt;p&gt;Rsyslog에서는 기본적인 포맷이 아닌 사용자가 필요한 내용으로 포맷을 변경할 수 있는 옵션을&amp;nbsp;제공한다.&lt;/p&gt;
-&lt;p&gt;작성하는 포맷은 두가지가 있으며, 검색해보면 전부 Legacy 포맷으로 적도록 되어있으니 두개는 보기 편한걸로 작성해두면 될것으로&amp;nbsp;보인다.&lt;/p&gt;
+&lt;p&gt;Rsyslog에서는 기본적인 포맷이 아닌 사용자가 필요한 내용으로 포맷을 변경할 수 있는 옵션을 제공한다.&lt;/p&gt;
+&lt;p&gt;작성하는 포맷은 두가지가 있으며, 검색해보면 전부 Legacy 포맷으로 적도록 되어있으니 두개는 보기 편한걸로 작성해두면 될것으로 보인다.&lt;/p&gt;
 &lt;h3 id="template-statement"&gt;&lt;code&gt;template()&lt;/code&gt; statement&lt;/h3&gt;
-&lt;p&gt;문서상으로는 7버전 이상에서 사용할 수 있는&amp;nbsp;포맷이다.&lt;/p&gt;
-&lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본&amp;nbsp;템플릿이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;FileFormat&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslogtag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;spifno1stsp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;on&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;droplastlf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;on&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="err"&gt;}&lt;/span&gt;
+&lt;p&gt;문서상으로는 7버전 이상에서 사용할 수 있는 포맷이다.&lt;/p&gt;
+&lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;template(name=&amp;quot;FileFormat&amp;quot; type=&amp;quot;list&amp;quot;) {&lt;/span&gt;
+&lt;span class="err"&gt;    property(name=&amp;quot;timestamp&amp;quot; dateFormat=&amp;quot;rfc3339&amp;quot;)&lt;/span&gt;
+&lt;span class="err"&gt;    constant(value=&amp;quot; &amp;quot;)&lt;/span&gt;
+&lt;span class="err"&gt;    property(name=&amp;quot;hostname&amp;quot;)&lt;/span&gt;
+&lt;span class="err"&gt;    constant(value=&amp;quot; &amp;quot;)&lt;/span&gt;
+&lt;span class="err"&gt;    property(name=&amp;quot;syslogtag&amp;quot;)&lt;/span&gt;
+&lt;span class="err"&gt;    property(name=&amp;quot;msg&amp;quot; spifno1stsp=&amp;quot;on&amp;quot; )&lt;/span&gt;
+&lt;span class="err"&gt;    property(name=&amp;quot;msg&amp;quot; droplastlf=&amp;quot;on&amp;quot; )&lt;/span&gt;
+&lt;span class="err"&gt;    constant(value=&amp;quot;\n&amp;quot;)&lt;/span&gt;
+&lt;span class="err"&gt;    }&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;작성된 템플릿을 이용해서&amp;nbsp;분석해보자.&lt;/p&gt;
+&lt;p&gt;작성된 템플릿을 이용해서 분석해보자.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;template(parameters) { list-descriptions }&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;이런 구조로&amp;nbsp;작성된다.&lt;/li&gt;
+&lt;li&gt;이런 구조로 작성된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="parameters"&gt;&lt;code&gt;parameters&lt;/code&gt;&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;name&lt;/code&gt;: 해당 템플릿의&amp;nbsp;이름이다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;type&lt;/code&gt;: 템플릿을 어떤 용도로 사용할 것인가에 대한 내용을 작성한다고&amp;nbsp;보면된다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;option&lt;/code&gt;: 템플릿을 어떤 형식으로 출력할 것인지에대해서 추가로 정할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;name&lt;/code&gt;: 해당 템플릿의 이름이다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type&lt;/code&gt;: 템플릿을 어떤 용도로 사용할 것인가에 대한 내용을 작성한다고 보면된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;option&lt;/code&gt;: 템플릿을 어떤 형식으로 출력할 것인지에대해서 추가로 정할 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id="type"&gt;&lt;code&gt;type&lt;/code&gt;&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#list"&gt;&lt;code&gt;list&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#constant-statement"&gt;&lt;code&gt;constant&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;상수 텍스트에 대한 내용들을&amp;nbsp;작성한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\n&lt;/code&gt;, &lt;code&gt;\ooo&lt;/code&gt;, &lt;code&gt;\xhh&lt;/code&gt;, &lt;code&gt;&lt;/code&gt; 와 같은 내용들을 작성해 둘 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;상수 텍스트에 대한 내용들을 작성한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\n&lt;/code&gt;, &lt;code&gt;\ooo&lt;/code&gt;, &lt;code&gt;\xhh&lt;/code&gt;, &lt;code&gt;&lt;/code&gt; 와 같은 내용들을 작성해 둘 수 있다.&lt;/li&gt;
 &lt;li&gt;그리고 다음 파라미터를 입력하여 사용할 수도 있다.&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;value&lt;/code&gt; - 사용하는 상수&amp;nbsp;값&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;outname&lt;/code&gt; - 출력 필드&amp;nbsp;이름&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;format&lt;/code&gt; - &lt;code&gt;jsonf&lt;/code&gt;나 그냥&amp;nbsp;빈칸&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;value&lt;/code&gt; - 사용하는 상수 값&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;outname&lt;/code&gt; - 출력 필드 이름&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;format&lt;/code&gt; - &lt;code&gt;jsonf&lt;/code&gt;나 그냥 빈칸&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#property-statement"&gt;&lt;code&gt;property&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;속성에 대한 내용들을&amp;nbsp;작성한다.&lt;/li&gt;
-&lt;li&gt;해당 내용은 종류가 많아서&amp;nbsp;넘어간다.&lt;/li&gt;
-&lt;li&gt;Legacy format에서 &lt;code&gt;%property%&lt;/code&gt; 형식으로 들어가는 내용과 동일하다고 보면&amp;nbsp;될것같다.&lt;/li&gt;
+&lt;li&gt;속성에 대한 내용들을 작성한다.&lt;/li&gt;
+&lt;li&gt;해당 내용은 종류가 많아서 넘어간다.&lt;/li&gt;
+&lt;li&gt;Legacy format에서 &lt;code&gt;%property%&lt;/code&gt; 형식으로 들어가는 내용과 동일하다고 보면 될것같다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#subtree"&gt;&lt;code&gt;subtree&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;7.4.1 버전이후로 나온&amp;nbsp;타입이다.&lt;/li&gt;
-&lt;li&gt;예제를 보면 더 쉽게 알수 있을&amp;nbsp;것이다.&lt;/li&gt;
+&lt;li&gt;7.4.1 버전이후로 나온 타입이다.&lt;/li&gt;
+&lt;li&gt;예제를 보면 더 쉽게 알수 있을 것이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;tpl2&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;tpl2&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;dataflow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;58&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="k"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;tpl2&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;subtree&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;subtree&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;$!usr!tpl2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;set $!usr!tpl2!msg = $msg;&lt;/span&gt;
+&lt;span class="err"&gt;set $!usr!tpl2!dataflow = field($msg, 58, 2);&lt;/span&gt;
+&lt;span class="err"&gt;template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=&amp;quot;$!usr!tpl2&amp;quot;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#string"&gt;&lt;code&gt;string&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;Lagacy format 형식으로 쭉&amp;nbsp;적는거다.&lt;/li&gt;
-&lt;li&gt;예제를&amp;nbsp;보자&lt;/li&gt;
+&lt;li&gt;Lagacy format 형식으로 쭉 적는거다.&lt;/li&gt;
+&lt;li&gt;예제를 보자&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;template&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;tpl3&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;string&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
-         &lt;span class="nv"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
-        &lt;span class="ss"&gt;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;template(name=&amp;quot;tpl3&amp;quot; type=&amp;quot;string&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;         string=&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;        )&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#plugin"&gt;&lt;code&gt;plugin&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;플러그인을 만들때 사용한다고 하는데&amp;hellip; 쓸일이&amp;nbsp;있을까??&lt;/li&gt;
+&lt;li&gt;플러그인을 만들때 사용한다고 하는데&amp;hellip; 쓸일이 있을까??&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="option"&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#options"&gt;&lt;code&gt;option&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;예제로 이해하자. 필요하면 링크를 타고&amp;nbsp;보고.&lt;/p&gt;
+&lt;p&gt;예제로 이해하자. 필요하면 링크를 타고 보고.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;outfmt&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;option&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jsonf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;@timestamp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;timereported&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -272,46 +272,46 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;이렇게&amp;nbsp;작성하면,&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;@timestamp&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;2018-03-01T01:00:00+00:00&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;172.20.245.8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;severity&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;DEBUG&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;facility&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;local4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslog-tag&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;tag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;source&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;tag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot; msgnum:00000000:&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;p&gt;이렇게 작성하면,&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
+&lt;span class="err"&gt;  &amp;quot;@timestamp&amp;quot;: &amp;quot;2018-03-01T01:00:00+00:00&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;  &amp;quot;host&amp;quot;: &amp;quot;172.20.245.8&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;  &amp;quot;severity&amp;quot;: &amp;quot;DEBUG&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;  &amp;quot;facility&amp;quot;: &amp;quot;local4&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;  &amp;quot;syslog-tag&amp;quot;: &amp;quot;tag&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;  &amp;quot;source&amp;quot;: &amp;quot;tag&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;  &amp;quot;message&amp;quot;: &amp;quot; msgnum:00000000:&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3 id="legacy-format"&gt;Legacy&amp;nbsp;Format&lt;/h3&gt;
-&lt;p&gt;6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을&amp;nbsp;권고하고있다.&lt;/p&gt;
-&lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본&amp;nbsp;템플릿이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$&lt;span class="nv"&gt;template&lt;/span&gt; &lt;span class="nv"&gt;FileFormat&lt;/span&gt;,&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;h3 id="legacy-format"&gt;Legacy Format&lt;/h3&gt;
+&lt;p&gt;6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을 권고하고있다.&lt;/p&gt;
+&lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;$template FileFormat,&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;작성 요령은 &lt;code&gt;$template&lt;/code&gt; 변수, &lt;code&gt;template 이름&lt;/code&gt;, &lt;code&gt;"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"&lt;/code&gt;. 필요한 내용들을&amp;nbsp;작성하면된다.&lt;/p&gt;
+&lt;p&gt;작성 요령은 &lt;code&gt;$template&lt;/code&gt; 변수, &lt;code&gt;template 이름&lt;/code&gt;, &lt;code&gt;"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"&lt;/code&gt;. 필요한 내용들을 작성하면된다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Property&lt;/code&gt; 내용은 &lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/properties.html"&gt;도큐먼트&lt;/a&gt;에&amp;nbsp;작성되어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Property&lt;/code&gt; 내용은 &lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/properties.html"&gt;도큐먼트&lt;/a&gt;에 작성되어있다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;FROM_CHAR&lt;/code&gt;, &lt;code&gt;TO_CHAR&lt;/code&gt; 부분은 어디서 어디까지&amp;hellip; &lt;code&gt;%msg:1:2%&lt;/code&gt;라고 작성했다면 메시지에서 첫번째 문자에서 두번째 문자까지 보여달라고 하는것. &lt;code&gt;FROM_CHAR&lt;/code&gt; 을 작성하고 맨끝열까지 하고 싶다면, &lt;code&gt;TO_CHAR&lt;/code&gt;에다가 숫자가 아닌 &lt;code&gt;$&lt;/code&gt;를 입력하면 문자열의 맨마지막까지 보여주게 된다.&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;FROM_CHAR&lt;/code&gt; 부분에 &lt;code&gt;F&lt;/code&gt; 입력&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;%msg:F:2%&lt;/code&gt; 라고 입력하면 &lt;code&gt;test\tchar&lt;/code&gt;라면 &lt;code&gt;[test, char]&lt;/code&gt;로 분리하고 &lt;code&gt;char&lt;/code&gt;만&amp;nbsp;보여주게된다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;F,ASCII_CODE&lt;/code&gt;로 입력하면, 해당 문자로 나누게&amp;nbsp;된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%msg:F:2%&lt;/code&gt; 라고 입력하면 &lt;code&gt;test\tchar&lt;/code&gt;라면 &lt;code&gt;[test, char]&lt;/code&gt;로 분리하고 &lt;code&gt;char&lt;/code&gt;만 보여주게된다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F,ASCII_CODE&lt;/code&gt;로 입력하면, 해당 문자로 나누게 된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;FROM_CHAR&lt;/code&gt; 부분에 &lt;code&gt;R&lt;/code&gt; 입력&lt;ul&gt;
-&lt;li&gt;정규식을 사용한다는&amp;nbsp;것.&lt;/li&gt;
-&lt;li&gt;해당 내용은 man&amp;nbsp;페이지를&amp;hellip;&lt;/li&gt;
+&lt;li&gt;정규식을 사용한다는 것.&lt;/li&gt;
+&lt;li&gt;해당 내용은 man 페이지를&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;OPTION&lt;/code&gt;은 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/en/man5/rsyslog.conf.5.html"&gt;man 페이지&lt;/a&gt; Property Options 항목을&amp;nbsp;확인하자.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OPTION&lt;/code&gt;은 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/en/man5/rsyslog.conf.5.html"&gt;man 페이지&lt;/a&gt; Property Options 항목을 확인하자.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="_1"&gt;동적 파일 이름&amp;nbsp;생성&lt;/h3&gt;
-&lt;p&gt;두가지 방식이 있다만, 첫번째 방식으로 작성해서 템플릿 구성을 맞추는게 좋을것으로&amp;nbsp;보인다.&lt;/p&gt;
+&lt;h3 id="_1"&gt;동적 파일 이름 생성&lt;/h3&gt;
+&lt;p&gt;두가지 방식이 있다만, 첫번째 방식으로 작성해서 템플릿 구성을 맞추는게 좋을것으로 보인다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;DynFile&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;string&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="k"&gt;template&lt;/span&gt; &lt;span class="n"&gt;DynFile&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;&lt;/span&gt;
@@ -320,46 +320,46 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 
 &lt;h2 id="_2"&gt;결.&lt;/h2&gt;
 &lt;p&gt;Rsyslog는 지금 리눅스에서 기본적으로 사용되는 System logging 프로그램이다. 그렇기에 사용하기가 쉽고 쉽게 다가갈 수 있다.&lt;br&gt;
-이런 것으로 우선 1차 정리하고 더 설정할 수 없는 것들은 프로그램에서 정리를 하거나 다른 프로그램을 사용하거나 해도 될듯. 무작정 패키지를 추가할 수 없는 시스템에서는 어쩔 수 없는&amp;nbsp;선택이긴하다만&amp;hellip;&lt;/p&gt;
-&lt;p&gt;삽질한 내용을 작성해 두려고 한건데&amp;hellip; 글쓰는데 더 삽질을&amp;hellip;&amp;nbsp;ㅡ.ㅡa&lt;/p&gt;
-&lt;p&gt;다음번엔 원격 서버로 로컬 서버 로그를 넘기는 방법에 대해서 정리를 해볼까&amp;hellip; 이 내용은&amp;nbsp;많던데&amp;hellip;&lt;/p&gt;
-&lt;h2 id="_3"&gt;참고&amp;nbsp;페이지&lt;/h2&gt;
+이런 것으로 우선 1차 정리하고 더 설정할 수 없는 것들은 프로그램에서 정리를 하거나 다른 프로그램을 사용하거나 해도 될듯. 무작정 패키지를 추가할 수 없는 시스템에서는 어쩔 수 없는 선택이긴하다만&amp;hellip;&lt;/p&gt;
+&lt;p&gt;삽질한 내용을 작성해 두려고 한건데&amp;hellip; 글쓰는데 더 삽질을&amp;hellip; ㅡ.ㅡa&lt;/p&gt;
+&lt;p&gt;다음번엔 원격 서버로 로컬 서버 로그를 넘기는 방법에 대해서 정리를 해볼까&amp;hellip; 이 내용은 많던데&amp;hellip;&lt;/p&gt;
+&lt;h2 id="_3"&gt;참고 페이지&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc"&gt;rsyslog doc&amp;nbsp;homepage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="syslog"></category><category term="rsyslog"></category><category term="log"></category><category term="system"></category><category term="linux"></category></entry><entry><title>Ubuntu 17.10에서부터 기본으로 사용되는 Netplan</title><link href="https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/" rel="alternate"></link><published>2017-11-18T00:54:20+09:00</published><updated>2017-11-18T00:54:20+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-11-18:/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/</id><summary type="html">&lt;p&gt;Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은&amp;nbsp;뭘까?&lt;/p&gt;</summary><content type="html">&lt;p&gt;처음에는 리눅스에서 IP를 Static하게 구성하기위해 &lt;a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819"&gt;검색한 페이지&lt;/a&gt;에서 독특한 문법을&amp;nbsp;확인했다.&lt;/p&gt;
+&lt;li&gt;&lt;a href="http://www.rsyslog.com/doc"&gt;rsyslog doc homepage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="syslog"></category><category term="rsyslog"></category><category term="log"></category><category term="system"></category><category term="linux"></category></entry><entry><title>Ubuntu 17.10에서부터 기본으로 사용되는 Netplan</title><link href="https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/" rel="alternate"></link><published>2017-11-18T00:54:20+09:00</published><updated>2017-11-18T00:54:20+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-11-18:/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/</id><summary type="html">&lt;p&gt;Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?&lt;/p&gt;</summary><content type="html">&lt;p&gt;처음에는 리눅스에서 IP를 Static하게 구성하기위해 &lt;a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819"&gt;검색한 페이지&lt;/a&gt;에서 독특한 문법을 확인했다.&lt;/p&gt;
 &lt;p&gt;문의 내용은 17.10에서는 &lt;code&gt;/etc/network/interfaces&lt;/code&gt;에 작성해둔 설정이 안먹힌다는 것이었다. 그러면서 답변으로 달린것이 &lt;a href="https://askubuntu.com/a/967819/126675"&gt;요내용&lt;/a&gt;이다.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ifupdown&lt;/code&gt; 패키지를 더이상 사용하지 않고, Ubuntu 17.10 Server에서 부터는 &lt;code&gt;netplan&lt;/code&gt;이라는 것을 사용하여 &lt;code&gt;systemd-networkd&lt;/code&gt;를 제어한다고 명시하고&amp;nbsp;있다.&lt;/p&gt;
-&lt;p&gt;사용법이 묘하다. 혹시나해서 &lt;a href="https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes"&gt;Ubuntu 17.10 release note&lt;/a&gt;를 보러갔지. 그랬더니 &lt;strong&gt;Update Packages&lt;/strong&gt;에 당당히 Linux kernel 다음에 한 꼭지로 있다. 내용은 다음 과&amp;nbsp;같다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ifupdown&lt;/code&gt; 패키지를 더이상 사용하지 않고, Ubuntu 17.10 Server에서 부터는 &lt;code&gt;netplan&lt;/code&gt;이라는 것을 사용하여 &lt;code&gt;systemd-networkd&lt;/code&gt;를 제어한다고 명시하고 있다.&lt;/p&gt;
+&lt;p&gt;사용법이 묘하다. 혹시나해서 &lt;a href="https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes"&gt;Ubuntu 17.10 release note&lt;/a&gt;를 보러갔지. 그랬더니 &lt;strong&gt;Update Packages&lt;/strong&gt;에 당당히 Linux kernel 다음에 한 꼭지로 있다. 내용은 다음 과 같다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;ifupdown&lt;/strong&gt; has been deprecated in favor of &lt;strong&gt;netplan&lt;/strong&gt; and is no longer present on new installs. The installer will generate a configuration file for &lt;strong&gt;netplan&lt;/strong&gt; in &lt;em&gt;/etc/netplan&lt;/em&gt;, which will set up the system to configure the network via systemd-networkd or NetworkManager. Desktop users will see their system fully managed via NetworkManager as it has been the case in previous releases, but Server users now have their network devices managed via systemd-networkd on new installs. This only applies to new&amp;nbsp;installations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ifupdown&lt;/strong&gt; has been deprecated in favor of &lt;strong&gt;netplan&lt;/strong&gt; and is no longer present on new installs. The installer will generate a configuration file for &lt;strong&gt;netplan&lt;/strong&gt; in &lt;em&gt;/etc/netplan&lt;/em&gt;, which will set up the system to configure the network via systemd-networkd or NetworkManager. Desktop users will see their system fully managed via NetworkManager as it has been the case in previous releases, but Server users now have their network devices managed via systemd-networkd on new installs. This only applies to new installations.&lt;/p&gt;
 &lt;p&gt;Given that ifupdown is no longer installed by default, its commands will not be present: &lt;code&gt;ifup&lt;/code&gt; and &lt;code&gt;ifdown&lt;/code&gt; are thus unavailable, replaced by &lt;code&gt;ip link set $device up&lt;/code&gt; and &lt;code&gt;ip link set $device down&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;networkctl&lt;/code&gt; command is also available for users to see a summary of the network devices. &lt;code&gt;networkctl&lt;/code&gt; status will display the current global state of &lt;span class="caps"&gt;IP&lt;/span&gt; addresses on the system; and &lt;code&gt;networkctl status $device&lt;/code&gt; can display the details specific to a network&amp;nbsp;device.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;networkctl&lt;/code&gt; command is also available for users to see a summary of the network devices. &lt;code&gt;networkctl&lt;/code&gt; status will display the current global state of IP addresses on the system; and &lt;code&gt;networkctl status $device&lt;/code&gt; can display the details specific to a network device.&lt;/p&gt;
 &lt;p&gt;For more information about netplan, please refer to the manual page using the &lt;code&gt;man 5 netplan&lt;/code&gt; command.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;그리고 찾다보니 이건 Ubuntu에서만 사용하는 프로젝트로 보이는데&amp;hellip; 다른 배포판에서는 사용될 확률이 높지는 않으니&amp;hellip;&amp;nbsp;이것참&amp;hellip;&lt;/p&gt;
-&lt;p&gt;아래 내용은 정리해둔거고, 나중에 man 페이지나 정리해서&amp;nbsp;올려둬야겠다.&lt;/p&gt;
+&lt;p&gt;그리고 찾다보니 이건 Ubuntu에서만 사용하는 프로젝트로 보이는데&amp;hellip; 다른 배포판에서는 사용될 확률이 높지는 않으니&amp;hellip; 이것참&amp;hellip;&lt;/p&gt;
+&lt;p&gt;아래 내용은 정리해둔거고, 나중에 man 페이지나 정리해서 올려둬야겠다.&lt;/p&gt;
 &lt;h2 id="netplan"&gt;Netplan&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="Design overview" src="https://wiki.ubuntu.com/Netplan/Design?action=AttachFile&amp;amp;do=get&amp;amp;target=design_overview.png"&gt;&lt;/p&gt;
-&lt;h3 id="netplan_1"&gt;Netplan&amp;nbsp;소개&lt;/h3&gt;
+&lt;h3 id="netplan_1"&gt;Netplan 소개&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class="caps"&gt;YAML&lt;/span&gt; 구성 파일을 사용하여 네트워크 구성을&amp;nbsp;한다.&lt;/li&gt;
-&lt;li&gt;초기 부팅시, “network renderer” 작동할때 &lt;em&gt;/{lib,etc,run}/netplan*.yaml&lt;/em&gt; 내용을 읽고, 지정된 네트워킹 daemon에 장치에 대한 &lt;em&gt;/run&lt;/em&gt; 에 구성을&amp;nbsp;쓴다.&lt;/li&gt;
-&lt;li&gt;systemd-networkd 를 renderer 기본 값으로 하여 장치를 핸들링하며, 다른 renderer (NetworkManger)를 지정할 수&amp;nbsp;있다.&lt;/li&gt;
-&lt;li&gt;네트워크 구성에서 다루지 않는 장치는 전혀 건드리지&amp;nbsp;않는다.&lt;/li&gt;
-&lt;li&gt;initramfs에서 사용이&amp;nbsp;가능하다.&lt;/li&gt;
-&lt;li&gt;구성이 지속되지 않고, &lt;span class="caps"&gt;YAML&lt;/span&gt; 로만 구성을&amp;nbsp;작성한다.&lt;/li&gt;
-&lt;li&gt;파서는 어플리케이션 (libvert, lxd)에서 사용이 예상되는 네트워크 구성 (&lt;code&gt;virtbr0&lt;/code&gt;, &lt;code&gt;lxdvr0&lt;/code&gt;)를 패키지화 할 수 있도록 멀티 구성 파일에 대한 지원을 하거나, NetworkManager를 이용하여 모든 것을 사용하도록 글로벌 기본 정책을 변경할 수&amp;nbsp;있어야한다.&lt;/li&gt;
-&lt;li&gt;백엔드/정책을 변경하거나, &lt;code&gt;apt purge network-manager&lt;/code&gt;를 할 수 있는 유연성을&amp;nbsp;유지해야한다.&lt;/li&gt;
+&lt;li&gt;YAML 구성 파일을 사용하여 네트워크 구성을 한다.&lt;/li&gt;
+&lt;li&gt;초기 부팅시, “network renderer” 작동할때 &lt;em&gt;/{lib,etc,run}/netplan*.yaml&lt;/em&gt; 내용을 읽고, 지정된 네트워킹 daemon에 장치에 대한 &lt;em&gt;/run&lt;/em&gt; 에 구성을 쓴다.&lt;/li&gt;
+&lt;li&gt;systemd-networkd 를 renderer 기본 값으로 하여 장치를 핸들링하며, 다른 renderer (NetworkManger)를 지정할 수 있다.&lt;/li&gt;
+&lt;li&gt;네트워크 구성에서 다루지 않는 장치는 전혀 건드리지 않는다.&lt;/li&gt;
+&lt;li&gt;initramfs에서 사용이 가능하다.&lt;/li&gt;
+&lt;li&gt;구성이 지속되지 않고, YAML 로만 구성을 작성한다.&lt;/li&gt;
+&lt;li&gt;파서는 어플리케이션 (libvert, lxd)에서 사용이 예상되는 네트워크 구성 (&lt;code&gt;virtbr0&lt;/code&gt;, &lt;code&gt;lxdvr0&lt;/code&gt;)를 패키지화 할 수 있도록 멀티 구성 파일에 대한 지원을 하거나, NetworkManager를 이용하여 모든 것을 사용하도록 글로벌 기본 정책을 변경할 수 있어야한다.&lt;/li&gt;
+&lt;li&gt;백엔드/정책을 변경하거나, &lt;code&gt;apt purge network-manager&lt;/code&gt;를 할 수 있는 유연성을 유지해야한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_1"&gt;명령어&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;netplan generate&lt;/code&gt; : &lt;em&gt;/etc/netplan&lt;/em&gt;에 renderer에 대한 구성들을&amp;nbsp;생성한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;netplan apply&lt;/code&gt; : renderer에 대한 구성들을 적용하고, 필요에따라&amp;nbsp;재시작한다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;netplan ifupdown-migrate&lt;/code&gt; : &lt;em&gt;/etc/network/interfaces&lt;/em&gt; 의 내용을 마이그레이션&amp;nbsp;한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netplan generate&lt;/code&gt; : &lt;em&gt;/etc/netplan&lt;/em&gt;에 renderer에 대한 구성들을 생성한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netplan apply&lt;/code&gt; : renderer에 대한 구성들을 적용하고, 필요에따라 재시작한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;netplan ifupdown-migrate&lt;/code&gt; : &lt;em&gt;/etc/network/interfaces&lt;/em&gt; 의 내용을 마이그레이션 한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_2"&gt;사용법&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;설정한 인터페이스&amp;nbsp;끄고키기&lt;/li&gt;
+&lt;li&gt;설정한 인터페이스 끄고키기&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt;/span&gt; up
 $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt;/span&gt; down
@@ -380,9 +380,9 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3 id="netplan_2"&gt;Netplan을 사용하고 싶지 않을&amp;nbsp;경우&lt;/h3&gt;
-&lt;p&gt;Ubuntu 서버 설치 이미지로 부팅시 grub (&lt;code&gt;e&lt;/code&gt; 버튼을 클릭해서 수정하거나, F6을 눌러 bootspash로 들어가서)에서 preseeding 설정으로 &lt;code&gt;netcfg/do_not_use_netplan=true&lt;/code&gt; 명령을&amp;nbsp;추가해줍니다.&lt;/p&gt;
-&lt;h2 id="_3"&gt;참고&amp;nbsp;페이지&lt;/h2&gt;
+&lt;h3 id="netplan_2"&gt;Netplan을 사용하고 싶지 않을 경우&lt;/h3&gt;
+&lt;p&gt;Ubuntu 서버 설치 이미지로 부팅시 grub (&lt;code&gt;e&lt;/code&gt; 버튼을 클릭해서 수정하거나, F6을 눌러 bootspash로 들어가서)에서 preseeding 설정으로 &lt;code&gt;netcfg/do_not_use_netplan=true&lt;/code&gt; 명령을 추가해줍니다.&lt;/p&gt;
+&lt;h2 id="_3"&gt;참고 페이지&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Homepage : &lt;a href="https://launchpad.net/netplan"&gt;launchpad.net/netplan&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Code : &lt;a href="https://git.launchpad.net/netplan"&gt;git.launchpad.net/netplan&lt;/a&gt;&lt;ul&gt;
@@ -390,59 +390,59 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Wiki : &lt;a href="https://wiki.ubuntu.com/Netplan"&gt;wiki.ubuntu.com/Netplan&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://wiki.ubuntu.com/Netplan/Design"&gt;Netplan&amp;nbsp;Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.ubuntu.com/Netplan/Design"&gt;Netplan Design&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;ManPage : &lt;a href="http://people.canonical.com/~mtrudel/netplan/"&gt;netplan&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://git.launchpad.net/netplan/tree/doc/netplan.md"&gt;doc/netplan.md&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/"&gt;Netplan by default in&amp;nbsp;17.10&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="network"></category><category term="config"></category><category term="networkd"></category><category term="netplan"></category><category term="ubuntu"></category></entry><entry><title>OpenStack에서 사용할 Windows imange 생성</title><link href="https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/" rel="alternate"></link><published>2017-09-22T17:18:08+09:00</published><updated>2017-09-22T17:18:08+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-09-22:/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/</id><summary type="html">&lt;p&gt;OpenStack에서 사용할 Windows 이미지를&amp;nbsp;생성해보자.&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;기본&amp;nbsp;준비사항&lt;/h2&gt;
+&lt;li&gt;&lt;a href="https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/"&gt;Netplan by default in 17.10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="network"></category><category term="config"></category><category term="networkd"></category><category term="netplan"></category><category term="ubuntu"></category></entry><entry><title>OpenStack에서 사용할 Windows imange 생성</title><link href="https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/" rel="alternate"></link><published>2017-09-22T17:18:08+09:00</published><updated>2017-09-22T17:18:08+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-09-22:/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/</id><summary type="html">&lt;p&gt;OpenStack에서 사용할 Windows 이미지를 생성해보자.&lt;/p&gt;</summary><content type="html">&lt;h2 id="_1"&gt;기본 준비사항&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Ubuntu&amp;nbsp;16.04&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://fedoraproject.org/wiki/Windows_Virtio_Drivers"&gt;VirtIO&amp;nbsp;driver&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://cloudbase.it/cloudbase-init"&gt;CloudBase&amp;nbsp;init&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Windows &lt;span class="caps"&gt;CD&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Ubuntu 16.04&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://fedoraproject.org/wiki/Windows_Virtio_Drivers"&gt;VirtIO driver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://cloudbase.it/cloudbase-init"&gt;CloudBase init&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows CD&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="virt-manager"&gt;virt-manager&amp;nbsp;설치&lt;/h2&gt;
+&lt;h2 id="virt-manager"&gt;virt-manager 설치&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt install -y kvm virt-manager
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
-&lt;li&gt;virt-manager 설치 후에 VM을&amp;nbsp;생성한다.&lt;/li&gt;
-&lt;li&gt;이미지는 &lt;code&gt;qcow2&lt;/code&gt;로&amp;nbsp;만들어야된다.&lt;/li&gt;
+&lt;li&gt;virt-manager 설치 후에 VM을 생성한다.&lt;/li&gt;
+&lt;li&gt;이미지는 &lt;code&gt;qcow2&lt;/code&gt;로 만들어야된다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="virtio"&gt;VirtIO 드라이버&amp;nbsp;설치&lt;/h2&gt;
+&lt;h2 id="virtio"&gt;VirtIO 드라이버 설치&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;가장&amp;nbsp;중요하다.&lt;/li&gt;
-&lt;li&gt;이 작업을 하지 않으면, &lt;span class="caps"&gt;OS&lt;/span&gt; 부팅할때 에러가&amp;nbsp;뜬다.&lt;/li&gt;
+&lt;li&gt;가장 중요하다.&lt;/li&gt;
+&lt;li&gt;이 작업을 하지 않으면, OS 부팅할때 에러가 뜬다.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지&amp;nbsp;않는다.&lt;/li&gt;
-&lt;li&gt;이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록&amp;nbsp;한다.&lt;/li&gt;
+&lt;li&gt;하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.&lt;/li&gt;
+&lt;li&gt;이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="cloudbase-init"&gt;CloudBase init&amp;nbsp;설치&lt;/h2&gt;
+&lt;h2 id="cloudbase-init"&gt;CloudBase init 설치&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Cloud init 파일을 만들어주는&amp;nbsp;프로그램이다.&lt;/li&gt;
-&lt;li&gt;그냥 받아서 설치해주면 되는데 맨마지막 &lt;strong&gt;일반화&lt;/strong&gt; 라는 항목이&amp;nbsp;있는데.&lt;/li&gt;
-&lt;li&gt;이것을 하게되면, Windows 첫 설치시 새로운 계정을 만들 수 있도록 이전 설정을 다날리는 작업을 해주기에 필요하다면 하고 아니라면 체크하지말고 설치를 하도록&amp;nbsp;하자.&lt;/li&gt;
+&lt;li&gt;Cloud init 파일을 만들어주는 프로그램이다.&lt;/li&gt;
+&lt;li&gt;그냥 받아서 설치해주면 되는데 맨마지막 &lt;strong&gt;일반화&lt;/strong&gt; 라는 항목이 있는데.&lt;/li&gt;
+&lt;li&gt;이것을 하게되면, Windows 첫 설치시 새로운 계정을 만들 수 있도록 이전 설정을 다날리는 작업을 해주기에 필요하다면 하고 아니라면 체크하지말고 설치를 하도록 하자.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="_2"&gt;디바이스 드라이버&amp;nbsp;확인&lt;/h2&gt;
+&lt;h2 id="_2"&gt;디바이스 드라이버 확인&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;혹시나 없는 드라이버가 있는지 확인하고 하도록&amp;nbsp;하자.&lt;/li&gt;
+&lt;li&gt;혹시나 없는 드라이버가 있는지 확인하고 하도록 하자.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="glance-imange"&gt;Glance에 Imange&amp;nbsp;업로드&lt;/h2&gt;
+&lt;h2 id="glance-imange"&gt;Glance에 Imange 업로드&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Hoizon&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt; : &lt;code&gt;/var/tmp&lt;/code&gt; 에다가 올린다. 그러니 &lt;code&gt;/var&lt;/code&gt; 폴더에 용량이 있는지 확인하고&amp;nbsp;올리도록.&lt;/li&gt;
-&lt;li&gt;편하게&amp;nbsp;올리자.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt; : &lt;code&gt;/var/tmp&lt;/code&gt; 에다가 올린다. 그러니 &lt;code&gt;/var&lt;/code&gt; 폴더에 용량이 있는지 확인하고 올리도록.&lt;/li&gt;
+&lt;li&gt;편하게 올리자.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;CLI&lt;/span&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--disk-format&lt;/code&gt;은 기본값이 &lt;code&gt;raw&lt;/code&gt;이다. 그렇기에 &lt;code&gt;qcow2&lt;/code&gt;로 변경해주고&amp;nbsp;올려야된다.&lt;/li&gt;
+&lt;li&gt;CLI&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--disk-format&lt;/code&gt;은 기본값이 &lt;code&gt;raw&lt;/code&gt;이다. 그렇기에 &lt;code&gt;qcow2&lt;/code&gt;로 변경해주고 올려야된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -455,35 +455,35 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;li&gt;http://gotocloud.co.kr/?p=1575&lt;/li&gt;
 &lt;li&gt;http://heavenkong.blogspot.kr/2014/04/create-windows7-virtual-machine-image.html&lt;/li&gt;
 &lt;li&gt;https://fedoraproject.org/wiki/Windows_Virtio_Drivers&lt;/li&gt;
-&lt;/ul&gt;</content><category term="openstack"></category><category term="nova"></category><category term="image"></category><category term="windows"></category></entry><entry><title>Yet Another Cron (yacron)</title><link href="https://ujuc.github.io/2017/07/21/yet_another_cron_(yacron)/" rel="alternate"></link><published>2017-07-21T13:17:58+09:00</published><updated>2017-07-21T13:17:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-21:/2017/07/21/yet_another_cron_(yacron)/</id><summary type="html">&lt;p&gt;Docker에서 쓰기 편하게 작성한 crontab&amp;nbsp;이란다.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="openstack"></category><category term="nova"></category><category term="image"></category><category term="windows"></category></entry><entry><title>Yet Another Cron (yacron)</title><link href="https://ujuc.github.io/2017/07/21/yet_another_cron_(yacron)/" rel="alternate"></link><published>2017-07-21T13:17:58+09:00</published><updated>2017-07-21T13:17:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-21:/2017/07/21/yet_another_cron_(yacron)/</id><summary type="html">&lt;p&gt;Docker에서 쓰기 편하게 작성한 crontab 이란다.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/gjcarneiro/yacron"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;해당 프로젝트는 지금은 alpha 버전이라고 한다. 제대로된 기능들이 들어가기 시작하면 좋아질듯. 그리고 그때쯤되면 간단한 소개가 아닌 사용법에 대해서&amp;nbsp;작성해둬야겠다.&lt;/p&gt;
-&lt;p&gt;우선은 Readme 파일 번역&amp;nbsp;수준&lt;/p&gt;
+&lt;p&gt;해당 프로젝트는 지금은 alpha 버전이라고 한다. 제대로된 기능들이 들어가기 시작하면 좋아질듯. 그리고 그때쯤되면 간단한 소개가 아닌 사용법에 대해서 작성해둬야겠다.&lt;/p&gt;
+&lt;p&gt;우선은 Readme 파일 번역 수준&lt;/p&gt;
 &lt;h2 id="_1"&gt;기능&lt;/h2&gt;
-&lt;p&gt;가장 중요하다.&amp;nbsp;기능!&lt;/p&gt;
+&lt;p&gt;가장 중요하다. 기능!&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class="dquo"&gt;&amp;ldquo;&lt;/span&gt;Crontab&amp;rdquo; 을 YAML로 작성이&amp;nbsp;가능하다.&lt;/li&gt;
-&lt;li&gt;솔직히 YAML이 편한지는&amp;nbsp;모르겠다.&lt;/li&gt;
-&lt;li&gt;cron job이 실패에 대한 부분을 제어할 수 있게&amp;nbsp;되어있다.&lt;/li&gt;
-&lt;li&gt;실패시 해당 값을 재시도 할 수&amp;nbsp;있다.&lt;/li&gt;
-&lt;li&gt;유연하게 구성&amp;nbsp;가능&lt;/li&gt;
-&lt;li&gt;Docker, Kubernetes, 12 factor environments에 맞게 디자인이&amp;nbsp;되었다며&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Crontab&amp;rdquo; 을 YAML로 작성이 가능하다.&lt;/li&gt;
+&lt;li&gt;솔직히 YAML이 편한지는 모르겠다.&lt;/li&gt;
+&lt;li&gt;cron job이 실패에 대한 부분을 제어할 수 있게 되어있다.&lt;/li&gt;
+&lt;li&gt;실패시 해당 값을 재시도 할 수 있다.&lt;/li&gt;
+&lt;li&gt;유연하게 구성 가능&lt;/li&gt;
+&lt;li&gt;Docker, Kubernetes, 12 factor environments에 맞게 디자인이 되었다며&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_2"&gt;설치&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;python &amp;gt;=&amp;nbsp;3.5&lt;/li&gt;
-&lt;li&gt;pip install&amp;nbsp;yacron&lt;/li&gt;
+&lt;li&gt;python &amp;gt;= 3.5&lt;/li&gt;
+&lt;li&gt;pip install yacron&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_3"&gt;사용&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yacron -c my-crontab.yaml
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;code&gt;-c&lt;/code&gt;를 사용해서 구성파일이 있는 곳을&amp;nbsp;가리킨다.&lt;/p&gt;
-&lt;h3 id="_4"&gt;기본&amp;nbsp;구성&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;-c&lt;/code&gt;를 사용해서 구성파일이 있는 곳을 가리킨다.&lt;/p&gt;
+&lt;h3 id="_4"&gt;기본 구성&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;매 5분마다 &lt;code&gt;echo "foobar"&lt;/code&gt;를 실행하는&amp;nbsp;job.&lt;/li&gt;
+&lt;li&gt;매 5분마다 &lt;code&gt;echo "foobar"&lt;/code&gt;를 실행하는 job.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
   &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
@@ -494,7 +494,7 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 
 
 &lt;ul&gt;
-&lt;li&gt;특정일 (2017/7/19)에만 5분마다 &lt;code&gt;echo "foobar"&lt;/code&gt;를 실행하는&amp;nbsp;job.&lt;/li&gt;
+&lt;li&gt;특정일 (2017/7/19)에만 5분마다 &lt;code&gt;echo "foobar"&lt;/code&gt;를 실행하는 job.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
   &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
@@ -509,7 +509,7 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 
 
 &lt;ul&gt;
-&lt;li&gt;특정 환경변수 값&amp;nbsp;설정&lt;/li&gt;
+&lt;li&gt;특정 환경변수 값 설정&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
   &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
@@ -522,7 +522,7 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3 id="_5"&gt;기본 값&amp;nbsp;지정&lt;/h3&gt;
+&lt;h3 id="_5"&gt;기본 값 지정&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;defaults&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
       &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;key&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;PATH&lt;/span&gt;
@@ -541,7 +541,7 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 
 &lt;h3 id="_6"&gt;리포트&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;job 이 실패했을때 알려준다. Sentry는 나중에 추가될&amp;nbsp;꺼임.&lt;/li&gt;
+&lt;li&gt;job 이 실패했을때 알려준다. Sentry는 나중에 추가될 꺼임.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
   &lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
@@ -564,9 +564,9 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 
 
 &lt;p&gt;&lt;code&gt;onFailure&lt;/code&gt; 부분이 job 실패시 작어하는 부분임.&lt;br&gt;
-&lt;code&gt;captureStderr: true&lt;/code&gt; 부분은 stderr로 출력되는 데이터를 잡겠다는거 반대로는 &lt;code&gt;captureStdout: true&lt;/code&gt; 가&amp;nbsp;있다.&lt;/p&gt;
+&lt;code&gt;captureStderr: true&lt;/code&gt; 부분은 stderr로 출력되는 데이터를 잡겠다는거 반대로는 &lt;code&gt;captureStdout: true&lt;/code&gt; 가 있다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;job 이 성공했을 경우, 알림은 &lt;code&gt;onSuccess&lt;/code&gt; 옵션을&amp;nbsp;추가한다.&lt;/li&gt;
+&lt;li&gt;job 이 성공했을 경우, 알림은 &lt;code&gt;onSuccess&lt;/code&gt; 옵션을 추가한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
   &lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;echo &amp;quot;hello world&amp;quot;&lt;/span&gt;
@@ -582,22 +582,22 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3 id="failure"&gt;failure&amp;nbsp;제어&lt;/h3&gt;
+&lt;h3 id="failure"&gt;failure 제어&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;실패&amp;nbsp;조건&lt;/li&gt;
+&lt;li&gt;실패 조건&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;producesStdout&lt;/code&gt;&lt;ul&gt;
 &lt;li&gt;default: &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;stdout 출력이 있을&amp;nbsp;경우&lt;/li&gt;
+&lt;li&gt;stdout 출력이 있을 경우&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;producesStderr&lt;/code&gt;&lt;ul&gt;
 &lt;li&gt;default: &lt;code&gt;true&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;stderr 출력이 있을&amp;nbsp;경우&lt;/li&gt;
+&lt;li&gt;stderr 출력이 있을 경우&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;nonzeroReturn&lt;/code&gt;&lt;ul&gt;
 &lt;li&gt;default: &lt;code&gt;true&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;반환값이 0이&amp;nbsp;아닌경우&lt;/li&gt;
+&lt;li&gt;반환값이 0이 아닌경우&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -611,7 +611,7 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;retry&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;onFailure&lt;/code&gt; 안에다가 추가한다. 그리고 job 재시도도 완전히 실패했다면, &lt;code&gt;onPermanentFailure&lt;/code&gt; 옵션을 사용하여 리포트를&amp;nbsp;받는다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;onFailure&lt;/code&gt; 안에다가 추가한다. 그리고 job 재시도도 완전히 실패했다면, &lt;code&gt;onPermanentFailure&lt;/code&gt; 옵션을 사용하여 리포트를 받는다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
   &lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
     &lt;span class="no"&gt;echo &amp;quot;hello&amp;quot; 1&amp;gt;&amp;amp;2&lt;/span&gt;
@@ -637,23 +637,23 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
         &lt;span class="nt"&gt;from&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;a@foo.com&lt;/span&gt;
         &lt;span class="nt"&gt;to&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;a@bar.com&lt;/span&gt;
         &lt;span class="nt"&gt;smtp_host&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;127.0.0.1&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="cron"></category><category term="yaml"></category><category term="scadule"></category><category term="docker"></category><category term="python"></category></entry><entry><title>Qualcomm Atheros 드라이버 설치 - 업글</title><link href="https://ujuc.github.io/2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/" rel="alternate"></link><published>2016-06-18T02:13:00+09:00</published><updated>2016-06-18T02:13:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-06-18:/2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/</id><summary type="html">&lt;p&gt;이전 글에서 설치한건 너무 느렸다. 그러나 정식 버전이 패키지로 들어가면서 조금&amp;nbsp;나아졌다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/"&gt;이전글&lt;/a&gt;로 글로 설치를 하고 썼으나 제대로된 펌웨어가 아닌지 설정을 해주고 설치했어야 했는데 그렇지 않아서 인지 1Mbps 로만 작동을&amp;nbsp;하였다.&lt;/p&gt;
-&lt;p&gt;몇번 재설치 끝에 귀찮아서 다시 우분투를 설치중. &lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;스택오프플로 글&lt;/a&gt;이 업데이트가 되어있어 설치를 하였더니 원 속도까지&amp;nbsp;나오더라.&lt;/p&gt;
-&lt;p&gt;그런데 이게 좀&amp;nbsp;그런게&amp;hellip;&lt;/p&gt;
-&lt;p&gt;커널은 4.2이상. 16.04가 버전업되면서 커널도 업글이되어서 이건&amp;nbsp;넘어갔다.&lt;/p&gt;
-&lt;p&gt;Qualcomm atheros 10k 드라이버가 들어있는 패키지는 &lt;code&gt;linux-firmware 1.158&lt;/code&gt;. 16.04에서 공식 지원하는 버전은 &lt;code&gt;1.157&lt;/code&gt;. 아마 6개월쯤 지나면 이것도 올라가겠지만 지금은 올라가지 않았으니. &lt;code&gt;1.158&lt;/code&gt;은 16.10에 추가될 패키지로 지금은 테스팅 버전이다. 이것을 가져다가 설치하면&amp;nbsp;된다.&lt;/p&gt;
-&lt;p&gt;어짜피 기본 내용만 맞으면되니 &lt;code&gt;dpkg&lt;/code&gt;를 이용해서&amp;nbsp;설치해주면된다.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="cron"></category><category term="yaml"></category><category term="scadule"></category><category term="docker"></category><category term="python"></category></entry><entry><title>Qualcomm Atheros 드라이버 설치 - 업글</title><link href="https://ujuc.github.io/2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/" rel="alternate"></link><published>2016-06-18T02:13:00+09:00</published><updated>2016-06-18T02:13:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-06-18:/2016/06/18/qualcomm_atheros_deu-ra-i-beo_seor-ci_-_eob-geur/</id><summary type="html">&lt;p&gt;이전 글에서 설치한건 너무 느렸다. 그러나 정식 버전이 패키지로 들어가면서 조금 나아졌다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/"&gt;이전글&lt;/a&gt;로 글로 설치를 하고 썼으나 제대로된 펌웨어가 아닌지 설정을 해주고 설치했어야 했는데 그렇지 않아서 인지 1Mbps 로만 작동을 하였다.&lt;/p&gt;
+&lt;p&gt;몇번 재설치 끝에 귀찮아서 다시 우분투를 설치중. &lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;스택오프플로 글&lt;/a&gt;이 업데이트가 되어있어 설치를 하였더니 원 속도까지 나오더라.&lt;/p&gt;
+&lt;p&gt;그런데 이게 좀 그런게&amp;hellip;&lt;/p&gt;
+&lt;p&gt;커널은 4.2이상. 16.04가 버전업되면서 커널도 업글이되어서 이건 넘어갔다.&lt;/p&gt;
+&lt;p&gt;Qualcomm atheros 10k 드라이버가 들어있는 패키지는 &lt;code&gt;linux-firmware 1.158&lt;/code&gt;. 16.04에서 공식 지원하는 버전은 &lt;code&gt;1.157&lt;/code&gt;. 아마 6개월쯤 지나면 이것도 올라가겠지만 지금은 올라가지 않았으니. &lt;code&gt;1.158&lt;/code&gt;은 16.10에 추가될 패키지로 지금은 테스팅 버전이다. 이것을 가져다가 설치하면 된다.&lt;/p&gt;
+&lt;p&gt;어짜피 기본 내용만 맞으면되니 &lt;code&gt;dpkg&lt;/code&gt;를 이용해서 설치해주면된다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://mirrors.kernel.org/ubuntu/pool/main/l/linux-firmware/linux-firmware_1.158_all.deb
 sudo dpkg -i linux-firmware_1.158_all.deb
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;그리고 리붓해주면 손쉽게&amp;hellip; 설치가&amp;nbsp;가능하다.&lt;/p&gt;
+&lt;p&gt;그리고 리붓해주면 손쉽게&amp;hellip; 설치가 가능하다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;참고: &lt;a href="http://packages.ubuntu.com/search?keywords=linux-firmware"&gt;Ubuntu&amp;nbsp;package&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link href="https://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" rel="alternate"></link><published>2016-04-22T22:59:00+09:00</published><updated>2016-04-22T22:59:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-22:/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</id><summary type="html">&lt;p&gt;Qualcomm Atheros device driver on Lenovo&amp;nbsp;Y700&lt;/p&gt;</summary><content type="html">&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가&amp;nbsp;발생했다.&lt;/p&gt;
-&lt;p&gt;Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&amp;hellip; Ubuntu 16.04버전이 4.4.0&amp;hellip; 그래서 백포트하고, 드라이버를 옮겨주는것으로&amp;nbsp;해결.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation&lt;/a&gt; 에서 말하는 작업을&amp;nbsp;설치해주면된다.&lt;/p&gt;
+&lt;li&gt;참고: &lt;a href="http://packages.ubuntu.com/search?keywords=linux-firmware"&gt;Ubuntu package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link href="https://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" rel="alternate"></link><published>2016-04-22T22:59:00+09:00</published><updated>2016-04-22T22:59:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-22:/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</id><summary type="html">&lt;p&gt;Qualcomm Atheros device driver on Lenovo Y700&lt;/p&gt;</summary><content type="html">&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가 발생했다.&lt;/p&gt;
+&lt;p&gt;Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&amp;hellip; Ubuntu 16.04버전이 4.4.0&amp;hellip; 그래서 백포트하고, 드라이버를 옮겨주는것으로 해결.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation&lt;/a&gt; 에서 말하는 작업을 설치해주면된다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install build-essential linux-headers-&lt;span class="k"&gt;$(&lt;/span&gt;uname -r&lt;span class="k"&gt;)&lt;/span&gt; git
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;options ath10k_core skip_otp=y&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; sudo tee /etc/modprobe.d/ath10k_core.conf
 wget https://www.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/backports-4.4.2-1.tar.gz
@@ -668,150 +668,152 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;그리고&amp;nbsp;하나더&amp;hellip;&lt;/p&gt;
-&lt;p&gt;이건 위에껄 하고 안되면 추가해주도록&amp;nbsp;하자.&lt;/p&gt;
+&lt;p&gt;그리고 하나더&amp;hellip;&lt;/p&gt;
+&lt;p&gt;이건 위에껄 하고 안되면 추가해주도록 하자.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; blacklist ideapad_laptop &lt;span class="p"&gt;|&lt;/span&gt; sudo tee /etc/modprobe.d/blacklist.conf
-&lt;/pre&gt;&lt;/div&gt;</content><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link href="https://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" rel="alternate"></link><published>2016-04-17T12:23:00+09:00</published><updated>2016-04-17T12:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-17:/2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</id><summary type="html">&lt;p&gt;하위 명령어 &lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;apt-cache&lt;/code&gt;를 사용하지 않고 패키지 매너저 &lt;code&gt;apt&lt;/code&gt;를 사용하는&amp;nbsp;방법.&lt;/p&gt;</summary><content type="html">&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;hellip; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;hellip; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고&amp;nbsp;한다.&lt;/p&gt;
-&lt;p&gt;참고는 &lt;a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/"&gt;15 Examples of How to Use New Advanced Package Tool (&lt;span class="caps"&gt;APT&lt;/span&gt;) in Ubuntu/Debian&lt;/a&gt; 을 사용함. 기본적으로 되는 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html"&gt;Ubuntu man&lt;/a&gt; 페이지는 끼고&amp;nbsp;살자&amp;hellip;&lt;/p&gt;
-&lt;h2 id="1"&gt;1. 패키지&amp;nbsp;설치&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link href="https://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" rel="alternate"></link><published>2016-04-17T12:23:00+09:00</published><updated>2016-04-17T12:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-17:/2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</id><summary type="html">&lt;p&gt;하위 명령어 &lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;apt-cache&lt;/code&gt;를 사용하지 않고 패키지 매너저 &lt;code&gt;apt&lt;/code&gt;를 사용하는 방법.&lt;/p&gt;</summary><content type="html">&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;hellip; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;hellip; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고 한다.&lt;/p&gt;
+&lt;p&gt;참고는 &lt;a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/"&gt;15 Examples of How to Use New Advanced Package Tool (APT) in Ubuntu/Debian&lt;/a&gt; 을 사용함. 기본적으로 되는 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html"&gt;Ubuntu man&lt;/a&gt; 페이지는 끼고 살자&amp;hellip;&lt;/p&gt;
+&lt;h2 id="1"&gt;1. 패키지 설치&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt install glances
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;항상 사용하던건 &lt;code&gt;apt-get&lt;/code&gt; 명령어로 설치를 하는거였는데 4글자 줄엇다!&lt;br&gt;
-&lt;code&gt;sudo aptitude install&lt;/code&gt; 로도 가능하다만&amp;hellip; 이렇게 하는 사람들&amp;nbsp;잘못봤다.&lt;/p&gt;
-&lt;h2 id="2"&gt;2. 패키지가 설치된 위치&amp;nbsp;확인&lt;/h2&gt;
+&lt;code&gt;sudo aptitude install&lt;/code&gt; 로도 가능하다만&amp;hellip; 이렇게 하는 사람들 잘못봤다.&lt;/p&gt;
+&lt;h2 id="2"&gt;2. 패키지가 설치된 위치 확인&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt content glances
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는 명령어는 &lt;code&gt;dpkg -L&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="3"&gt;3. 패키지 디펜던시&amp;nbsp;확인&lt;/h2&gt;
+&lt;h2 id="3"&gt;3. 패키지 디펜던시 확인&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt depends glances
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는 명령어가 &lt;code&gt;apt-get check&lt;/code&gt;, &lt;code&gt;dpkg -C&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="4"&gt;4. 패키지&amp;nbsp;찾기&lt;/h2&gt;
+&lt;h2 id="4"&gt;4. 패키지 찾기&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt search openstack
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는 명령어는 &lt;code&gt;apt-cache search&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="5"&gt;5. 패키지 정보&amp;nbsp;확인&lt;/h2&gt;
+&lt;h2 id="5"&gt;5. 패키지 정보 확인&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt show firefox
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는 명령어 &lt;code&gt;apt-cache show&lt;/code&gt;, &lt;code&gt;dpkg -p&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="6"&gt;6. 깨진 디펜던시가 있는지&amp;nbsp;확인&lt;/h2&gt;
+&lt;h2 id="6"&gt;6. 깨진 디펜던시가 있는지 확인&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt check firefox
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;이거와 대응되는게 있는지&amp;nbsp;잘모르겠다.&lt;/p&gt;
-&lt;h2 id="7"&gt;7. 제공된 패키지에서 빠진 패키지에 대한 목록&amp;nbsp;보여주기&lt;/h2&gt;
+&lt;p&gt;이거와 대응되는게 있는지 잘모르겠다.&lt;/p&gt;
+&lt;h2 id="7"&gt;7. 제공된 패키지에서 빠진 패키지에 대한 목록 보여주기&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt recommends apache2
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2 id="8"&gt;8. 패키지 버전&amp;nbsp;체크&lt;/h2&gt;
+&lt;h2 id="8"&gt;8. 패키지 버전 체크&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt version firefox
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2 id="9"&gt;9. 시스템 패키지&amp;nbsp;업데이트&lt;/h2&gt;
+&lt;h2 id="9"&gt;9. 시스템 패키지 업데이트&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt update
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get update&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="10"&gt;10. 시스템&amp;nbsp;업그레이드&lt;/h2&gt;
+&lt;h2 id="10"&gt;10. 시스템 업그레이드&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get upgrade&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="11"&gt;11. 커널 버전까지 시스템&amp;nbsp;업그레이드&lt;/h2&gt;
+&lt;h2 id="11"&gt;11. 커널 버전까지 시스템 업그레이드&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt full-upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get dist-upgrade&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="12"&gt;12. 사용하지 않는 페키지&amp;nbsp;삭제&lt;/h2&gt;
+&lt;h2 id="12"&gt;12. 사용하지 않는 페키지 삭제&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt autoremove
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get autoremove&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="13"&gt;13. 다운로드된 페키지에서 오래된 저장소&amp;nbsp;삭제&lt;/h2&gt;
+&lt;h2 id="13"&gt;13. 다운로드된 페키지에서 오래된 저장소 삭제&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt autoclean
 sudo apt clean
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get clean&lt;/code&gt;, &lt;code&gt;apt-get autoclean&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="14"&gt;14. 패키지 구성파일까지&amp;nbsp;삭제&lt;/h2&gt;
+&lt;h2 id="14"&gt;14. 패키지 구성파일까지 삭제&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt purge glance
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-purge&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="15-deb-160502"&gt;15. deb 패키지 설치 (작동이 안된다&amp;hellip;&amp;nbsp;-160502)&lt;/h2&gt;
+&lt;h2 id="15-deb-160502"&gt;15. deb 패키지 설치 (작동이 안된다&amp;hellip; -160502)&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt deb atom-amd64.deb
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;대응되는건 &lt;code&gt;dpkg&lt;/code&gt; 에서&amp;nbsp;찾으면될듯..&lt;/p&gt;
-&lt;h2 id="16"&gt;16.&amp;nbsp;사용법은&lt;/h2&gt;
+&lt;p&gt;대응되는건 &lt;code&gt;dpkg&lt;/code&gt; 에서 찾으면될듯..&lt;/p&gt;
+&lt;h2 id="16"&gt;16. 사용법은&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;apt &lt;span class="nb"&gt;help&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;code&gt;apt&lt;/code&gt; 사용법을 찾아서 작업하면 될것으로&amp;nbsp;보여짐.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;apt&lt;/code&gt; 사용법을 찾아서 작업하면 될것으로 보여짐.&lt;/p&gt;
 &lt;h2 id="_1"&gt;맺음&lt;/h2&gt;
 &lt;p&gt;동일한 명령어가 여러가지 존재하고 사용하는 방법에 따라 달라지는 것으로 보여지는데&amp;hellip;&lt;br&gt;
-패키지 메니저가 &lt;code&gt;dpkg&lt;/code&gt;, &lt;code&gt;aptitude&lt;/code&gt;, &lt;code&gt;apt&lt;/code&gt;로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될&amp;nbsp;듯.&lt;/p&gt;</content><category term="ubuntu"></category><category term="debian"></category><category term="apt"></category><category term="system"></category></entry><entry><title>un~ 너는 뭐니?</title><link href="https://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/" rel="alternate"></link><published>2016-02-03T00:02:00+09:00</published><updated>2016-02-03T00:02:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-03:/2016/02/03/un-너는-뭐니/</id><summary type="html">&lt;p&gt;언제부터인가 &lt;code&gt;un~&lt;/code&gt;으로 끝나는 파일이 생성되기&amp;nbsp;시작했다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서&amp;nbsp;찾았다.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://vimhelp.appspot.com/vim_faq.txt.html#faq-7.2"&gt;Vimhelp -&amp;nbsp;faq-7.2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;수정하고 저장할때마다 &lt;code&gt;un~&lt;/code&gt; 접미사가 붙은 파일이 생간다는 이야기에 대한 내용이다. undo 기능을 사용하기위해서 vim에서 사용하는 파일이라고 한다. 그래서 열었더니 이상한 것들만&amp;nbsp;보여줬구나&amp;hellip;&lt;/p&gt;
-&lt;p&gt;끄는 방법은 &lt;code&gt;:set noundofile&lt;/code&gt;을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은&amp;nbsp;지워야겠지만&amp;hellip;&lt;/p&gt;</content><category term="vi"></category><category term="undo"></category><category term="vimrc"></category></entry><entry><title>unattended-upgrade 써보자</title><link href="https://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/" rel="alternate"></link><published>2016-01-29T22:35:00+09:00</published><updated>2016-01-29T22:35:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-29:/2016/01/29/unattended-upgrade-써보자/</id><summary type="html">&lt;p&gt;Ubuntu에서 보안 업데이트만&amp;nbsp;해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,&lt;br&gt;
+패키지 메니저가 &lt;code&gt;dpkg&lt;/code&gt;, &lt;code&gt;aptitude&lt;/code&gt;, &lt;code&gt;apt&lt;/code&gt;로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될 듯.&lt;/p&gt;</content><category term="Operation"></category><category term="ubuntu"></category><category term="debian"></category><category term="apt"></category><category term="system"></category></entry><entry><title>un~ 너는 뭐니?</title><link href="https://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/" rel="alternate"></link><published>2016-02-03T00:02:00+09:00</published><updated>2016-02-03T00:02:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-03:/2016/02/03/un-너는-뭐니/</id><summary type="html">&lt;p&gt;언제부터인가 &lt;code&gt;un~&lt;/code&gt;으로 끝나는 파일이 생성되기 시작했다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서 찾았다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://vimhelp.appspot.com/vim_faq.txt.html#faq-7.2"&gt;Vimhelp - faq-7.2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;수정하고 저장할때마다 &lt;code&gt;un~&lt;/code&gt; 접미사가 붙은 파일이 생간다는 이야기에 대한 내용이다. undo 기능을 사용하기위해서 vim에서 사용하는 파일이라고 한다. 그래서 열었더니 이상한 것들만 보여줬구나&amp;hellip;&lt;/p&gt;
+&lt;p&gt;끄는 방법은 &lt;code&gt;:set noundofile&lt;/code&gt;을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은 지워야겠지만&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="vi"></category><category term="undo"></category><category term="vimrc"></category></entry><entry><title>unattended-upgrade 써보자</title><link href="https://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/" rel="alternate"></link><published>2016-01-29T22:35:00+09:00</published><updated>2016-01-29T22:35:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-29:/2016/01/29/unattended-upgrade-써보자/</id><summary type="html">&lt;p&gt;Ubuntu에서 보안 업데이트만 해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,&lt;br&gt;
 그것에 대한 패치들도 많이 올라오고 있다. 사용하다가 서비스를 하고 있는 패키지들&lt;br&gt;
 을 업데이트를 할 수는 없고 (서비스에서 사용하는 패키지의 경우엔.. 답이 없다. &lt;br&gt;
 했다가 무슨 소릴 들을지 모르기도하고 어디서 문제가 발생했는지 모르기도 하고)&lt;br&gt;
-보안 패치만큼은 하고&amp;nbsp;싶은데&amp;hellip;&lt;/p&gt;
-&lt;p&gt;찾다보니 &lt;code&gt;unattended-upgrade&lt;/code&gt;를 사용해서 할 수가&amp;nbsp;있다.&lt;/p&gt;
+보안 패치만큼은 하고 싶은데&amp;hellip;&lt;/p&gt;
+&lt;p&gt;찾다보니 &lt;code&gt;unattended-upgrade&lt;/code&gt;를 사용해서 할 수가 있다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html"&gt;Ubuntu manpage -&amp;nbsp;unattended-upgrade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html"&gt;Ubuntu manpage - unattended-upgrade&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_1"&gt;사용법&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo unattended-upgrade
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도&amp;nbsp;있다.&lt;/p&gt;
-&lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를&amp;nbsp;하면된다.&lt;/p&gt;
+&lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도 있다.&lt;/p&gt;
+&lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를 하면된다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo unattended-upgrade --dry-run
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;왠만해서는 &lt;code&gt;--dry-run&lt;/code&gt; 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는&amp;nbsp;않지&amp;hellip;&lt;/p&gt;
-&lt;p&gt;단점은 아직 1.0이 아니다. 그래서 그런지 외부로 출력되는게 없고, 전부 log파일로만&amp;nbsp;나온다&amp;hellip;&lt;/p&gt;</content><category term="ubuntu"></category><category term="manage"></category><category term="upgrade"></category><category term="security"></category><category term="command"></category></entry><entry><title>mysql 복제 오류</title><link href="https://ujuc.github.io/2016/01/28/mysql-%EB%B3%B5%EC%A0%9C-%EC%98%A4%EB%A5%98/" rel="alternate"></link><published>2016-01-28T01:10:00+09:00</published><updated>2016-01-28T01:10:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-28:/2016/01/28/mysql-복제-오류/</id><summary type="html">&lt;p&gt;오랜만에 RDS를 확인하러 들어갔더니&amp;hellip; error 이벤트가&amp;hellip;&amp;nbsp;딱!&lt;/p&gt;</summary><content type="html">&lt;p&gt;오랜만에 설정할 일이 있어서 RDS로 접속했더니&amp;hellip; &lt;span class="caps"&gt;RDS&lt;/span&gt; 인스턴스에서 error 이벤트가&lt;br&gt;
-발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&amp;hellip; 여기서&lt;br&gt;&amp;nbsp;문제가&amp;hellip;&lt;/p&gt;
+&lt;p&gt;왠만해서는 &lt;code&gt;--dry-run&lt;/code&gt; 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는 않지&amp;hellip;&lt;/p&gt;
+&lt;p&gt;단점은 아직 1.0이 아니다. 그래서 그런지 외부로 출력되는게 없고, 전부 log파일로만 나온다&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="ubuntu"></category><category term="manage"></category><category term="upgrade"></category><category term="security"></category><category term="command"></category></entry><entry><title>mysql 복제 오류</title><link href="https://ujuc.github.io/2016/01/28/mysql-%EB%B3%B5%EC%A0%9C-%EC%98%A4%EB%A5%98/" rel="alternate"></link><published>2016-01-28T01:10:00+09:00</published><updated>2016-01-28T01:10:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-28:/2016/01/28/mysql-복제-오류/</id><summary type="html">&lt;p&gt;오랜만에 RDS를 확인하러 들어갔더니&amp;hellip; error 이벤트가&amp;hellip; 딱!&lt;/p&gt;</summary><content type="html">&lt;p&gt;오랜만에 설정할 일이 있어서 RDS로 접속했더니&amp;hellip; RDS 인스턴스에서 error 이벤트가&lt;br&gt;
+발생하고 있었다. 복제 기능을 사용하면서 신경안 쓸려고 하고 있었는데&amp;hellip; 여기서&lt;br&gt;
+문제가&amp;hellip;&lt;/p&gt;
 &lt;p&gt;RDS를 제외하고 관련 내용을 찾았더니, &lt;code&gt;my.cnf&lt;/code&gt; 파일에다가 뭘 넣고 수정하라고&lt;br&gt;
 한다. 이렇게 할려면 RDS는 안된다. 명령어를 입력하라는 말도 있었다. 그런데&amp;hellip;&lt;br&gt;
 이넘의 RDS에서 사용자는 말그대로 사용자일 뿐이다. 어떠한 database에 대한 수정을&lt;br&gt;
-가할 수 있는 권한 자체가 없다. 그 사용자 이름을 &lt;code&gt;root&lt;/code&gt;로 했다고 해도&amp;nbsp;말이다.&lt;/p&gt;
+가할 수 있는 권한 자체가 없다. 그 사용자 이름을 &lt;code&gt;root&lt;/code&gt;로 했다고 해도 말이다.&lt;/p&gt;
 &lt;p&gt;결국.. 찾다 돌아온 곳은.&lt;br&gt;
 &lt;a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html"&gt;Amazon Relational Database Service - mysql_rds_skip_repl_error&lt;/a&gt;&lt;br&gt;
-부분. 그냥 접근해서 &lt;code&gt;CALL mysql.rds_skip_repl_error&lt;/code&gt; 입력하면&amp;nbsp;된단다.&lt;/p&gt;
+부분. 그냥 접근해서 &lt;code&gt;CALL mysql.rds_skip_repl_error&lt;/code&gt; 입력하면 된단다.&lt;/p&gt;
 &lt;p&gt;그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.&lt;br&gt;
-mariadb를 사용하는게 정신 건강에&amp;nbsp;좋은&amp;hellip;&lt;/p&gt;</content><category term="aws"></category><category term="rds"></category><category term="mysql"></category><category term="mariadb"></category><category term="replication"></category></entry><entry><title>Stderr check in zshell</title><link href="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" rel="alternate"></link><published>2016-01-27T00:57:00+09:00</published><updated>2016-01-27T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-27:/2016/01/27/stderr-check-in-zshell/</id><summary type="html">&lt;p&gt;zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고&lt;br&gt;&amp;nbsp;싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서&lt;br&gt;
-쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가&amp;nbsp;출력된다.&lt;/p&gt;
+mariadb를 사용하는게 정신 건강에 좋은&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="aws"></category><category term="rds"></category><category term="mysql"></category><category term="mariadb"></category><category term="replication"></category></entry><entry><title>Stderr check in zshell</title><link href="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" rel="alternate"></link><published>2016-01-27T00:57:00+09:00</published><updated>2016-01-27T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-27:/2016/01/27/stderr-check-in-zshell/</id><summary type="html">&lt;p&gt;zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고&lt;br&gt;
+싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서&lt;br&gt;
+쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가 출력된다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="stderr" src="https://ujuc.github.io/img/2016-01-26_shell_error.png"&gt;&lt;/p&gt;
-&lt;p&gt;은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로&amp;nbsp;늘어난다.&lt;/p&gt;
-&lt;p&gt;그래서 찾았다. 찾다보니 내가 무심코 사용했던 내용에대해 조금더 볼 기회가&amp;nbsp;생긴듯.&lt;/p&gt;
+&lt;p&gt;은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로 늘어난다.&lt;/p&gt;
+&lt;p&gt;그래서 찾았다. 찾다보니 내가 무심코 사용했던 내용에대해 조금더 볼 기회가 생긴듯.&lt;/p&gt;
 &lt;p&gt;우선 Shell에서 기본 I/O 스트림을 통해서 나오는 값들에대해서 다음 숫자로 제어할&lt;br&gt;
-수&amp;nbsp;있다.&lt;/p&gt;
+수 있다.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -839,42 +841,42 @@ mariadb를 사용하는게 정신 건강에&amp;nbsp;좋은&amp;hellip;&lt;/p&gt
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;간단히 하자.&lt;br&gt;
-go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올&amp;nbsp;것이다.&lt;/p&gt;
+go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올 것이다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which go
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png"&gt;&lt;/p&gt;
-&lt;p&gt;요놈을 안나오게&amp;nbsp;해보자.&lt;/p&gt;
+&lt;p&gt;요놈을 안나오게 해보자.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which go &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;오~~~&lt;/p&gt;
-&lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;hellip; 이건 설치가 되어있으니&amp;hellip;&amp;nbsp;없는걸로&amp;hellip;&lt;/p&gt;
+&lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;hellip; 이건 설치가 되어있으니&amp;hellip; 없는걸로&amp;hellip;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which rbenv
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png"&gt;&lt;/p&gt;
-&lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을&amp;nbsp;사용하면&amp;hellip;&lt;/p&gt;
+&lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을 사용하면&amp;hellip;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ which rbenv &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png"&gt;&lt;/p&gt;
-&lt;p&gt;음&amp;hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸&amp;nbsp;막으라했더니&amp;hellip;&lt;/p&gt;
-&lt;p&gt;그럼 Python에서는 어디로&amp;nbsp;나올까?&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
+&lt;p&gt;음&amp;hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸 막으라했더니&amp;hellip;&lt;/p&gt;
+&lt;p&gt;그럼 Python에서는 어디로 나올까?&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;check_rbenv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                            &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;check_rbenv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;음?? 암것도&amp;nbsp;안나온다&amp;hellip;&lt;/p&gt;
+&lt;p&gt;음?? 암것도 안나온다&amp;hellip;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;256&lt;/span&gt;
@@ -883,45 +885,45 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 
 &lt;p&gt;출력값이 256이라니&amp;hellip; 혹시나 해서 봤더니 8bit밀란다. 저걸 밀면 1이 떨어지는데&amp;hellip;&lt;br&gt;
 리눅스에서 반환값이 1이면 비정상 종료일때로 알고 있다. 고로니 저넘은 제대로&lt;br&gt;
-실행된 아이가 아니라는&amp;nbsp;말씀&amp;hellip;&lt;/p&gt;
+실행된 아이가 아니라는 말씀&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그럼 &lt;code&gt;which&lt;/code&gt; 명령어를 사용하여 명령어를 실행하게 되면, 정상종료면 위치를&lt;br&gt;
 말해줄꺼고 비정상 종료면 stdout으로 없다는 메시지를 남기고 비정상 종료를&lt;br&gt;
-시킨다고 해석하면&amp;nbsp;될듯.&lt;/p&gt;
-&lt;p&gt;결국 내가 하고 싶은데로 안되는거네&amp;hellip;&amp;nbsp;이런!&lt;/p&gt;
+시킨다고 해석하면 될듯.&lt;/p&gt;
+&lt;p&gt;결국 내가 하고 싶은데로 안되는거네&amp;hellip; 이런!&lt;/p&gt;
 &lt;p&gt;다른 방법으로 찾아야지 뭐 별수 있나&amp;hellip; 그래도 이번에 건진건 저렇게 숫자를&lt;br&gt;
 사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;hellip; 그정도면 1시간동안&lt;br&gt;
-작업한 것에 대한 내용은&amp;nbsp;될듯.&lt;/p&gt;</content><category term="zsh"></category><category term="operation"></category></entry><entry><title>[Monitoring] SkwiSSH 설치 및 구성</title><link href="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/" rel="alternate"></link><published>2014-02-28T21:46:00+09:00</published><updated>2016-03-03T22:08:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-02-28:/2014/02/28/skwissh-install-n-config/</id><summary type="html">&lt;p&gt;Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무&amp;nbsp;오래됐다.&lt;/p&gt;</summary><content type="html">&lt;h1 id="skwissh"&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;SkwiSSH&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여&amp;nbsp;구성해봤다.&lt;/p&gt;
-&lt;p&gt;코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 &lt;code&gt;setup.py&lt;/code&gt;를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가&amp;nbsp;발생한다.&lt;/p&gt;
-&lt;p&gt;그리고 외부 서버를 추가하기 위해서 &lt;code&gt;server_ip:22&lt;/code&gt;를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게&amp;nbsp;된다.&lt;/p&gt;
-&lt;p&gt;아직은 부족한 점이&amp;nbsp;많다.&lt;/p&gt;
+작업한 것에 대한 내용은 될듯.&lt;/p&gt;</content><category term="Operation"></category><category term="zsh"></category><category term="operation"></category></entry><entry><title>[Monitoring] SkwiSSH 설치 및 구성</title><link href="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/" rel="alternate"></link><published>2014-02-28T21:46:00+09:00</published><updated>2016-03-03T22:08:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-02-28:/2014/02/28/skwissh-install-n-config/</id><summary type="html">&lt;p&gt;Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다.&lt;/p&gt;</summary><content type="html">&lt;h1 id="skwissh"&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;SkwiSSH&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여 구성해봤다.&lt;/p&gt;
+&lt;p&gt;코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 &lt;code&gt;setup.py&lt;/code&gt;를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가 발생한다.&lt;/p&gt;
+&lt;p&gt;그리고 외부 서버를 추가하기 위해서 &lt;code&gt;server_ip:22&lt;/code&gt;를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게 된다.&lt;/p&gt;
+&lt;p&gt;아직은 부족한 점이 많다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Sensor(명령어를 날려서 값을 받아오는 worker를 의미한다.) 추가하고 변경하려면 변경사항이 적용이 안되는&amp;nbsp;현상.&lt;/li&gt;
-&lt;li&gt;Sensor들의 정렬을 임의로 할 수 없다는 것. (오름차순으로&amp;nbsp;구성되어있다.)&lt;/li&gt;
-&lt;li&gt;기본 명령어 날리는게 1분간격으로 수정할만한 탭이&amp;nbsp;안보인다.&lt;/li&gt;
-&lt;li&gt;기본 DB로 SQLite3 파일을 사용하는데 점점 커지는 모습을 확인 할 수&amp;nbsp;있다.&lt;/li&gt;
+&lt;li&gt;Sensor(명령어를 날려서 값을 받아오는 worker를 의미한다.) 추가하고 변경하려면 변경사항이 적용이 안되는 현상.&lt;/li&gt;
+&lt;li&gt;Sensor들의 정렬을 임의로 할 수 없다는 것. (오름차순으로 구성되어있다.)&lt;/li&gt;
+&lt;li&gt;기본 명령어 날리는게 1분간격으로 수정할만한 탭이 안보인다.&lt;/li&gt;
+&lt;li&gt;기본 DB로 SQLite3 파일을 사용하는데 점점 커지는 모습을 확인 할 수 있다.&lt;/li&gt;
 &lt;li&gt;bash를 사용할 줄 안다면 정말 쉽게 사용이 가능하다.&lt;ul&gt;
-&lt;li&gt;명령을 SSH로 날리기에 그쪽 서버 콘솔로 리턴값을 넘길 수 있는 프로그램이라면 어떻게든&amp;nbsp;사용하면된다.&lt;/li&gt;
+&lt;li&gt;명령을 SSH로 날리기에 그쪽 서버 콘솔로 리턴값을 넘길 수 있는 프로그램이라면 어떻게든 사용하면된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;이 글에서는 Sensor에 명령어와 파셔 세팅은 작성하지&amp;nbsp;않았다.&lt;/p&gt;
-&lt;h2 id="_1"&gt;기본&amp;nbsp;구성&lt;/h2&gt;
+&lt;p&gt;이 글에서는 Sensor에 명령어와 파셔 세팅은 작성하지 않았다.&lt;/p&gt;
+&lt;h2 id="_1"&gt;기본 구성&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class="caps"&gt;OS&lt;/span&gt;: Ubuntu 12.04.4&amp;nbsp;server&lt;/li&gt;
-&lt;li&gt;Install&amp;nbsp;Package&lt;/li&gt;
+&lt;li&gt;OS: Ubuntu 12.04.4 server&lt;/li&gt;
+&lt;li&gt;Install Package&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install python-pip
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3 id="_2"&gt;패키지&amp;nbsp;설치&lt;/h3&gt;
-&lt;h4 id="django"&gt;Django&amp;nbsp;설치&lt;/h4&gt;
+&lt;h3 id="_2"&gt;패키지 설치&lt;/h3&gt;
+&lt;h4 id="django"&gt;Django 설치&lt;/h4&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo pip isntall Django
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4 id="django-skwissh"&gt;Django-skwissh&amp;nbsp;설치&lt;/h4&gt;
+&lt;h4 id="django-skwissh"&gt;Django-skwissh 설치&lt;/h4&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install buid-essential python-dev
 $ git clone https://github.com/rsaikali/django-skwissh.git
 $ &lt;span class="nb"&gt;cd&lt;/span&gt; django-skwissh
@@ -929,7 +931,7 @@ $ sudo python setup.py install
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3 id="django_1"&gt;Django&amp;nbsp;설정&lt;/h3&gt;
+&lt;h3 id="django_1"&gt;Django 설정&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ django-admin.py startproject mysite
 $ &lt;span class="nb"&gt;cd&lt;/span&gt; mysite
 $ vi mysql/settings.py
@@ -947,15 +949,15 @@ url&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh&a
 
 
 &lt;ul&gt;
-&lt;li&gt;데이터 베이스&amp;nbsp;설정&lt;/li&gt;
+&lt;li&gt;데이터 베이스 설정&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.p syncdb
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
-&lt;li&gt;Skwissh 테스트&amp;nbsp;설치&lt;/li&gt;
-&lt;li&gt;이작업을 하면 crontab에 테스크가&amp;nbsp;등록된다.&lt;/li&gt;
+&lt;li&gt;Skwissh 테스트 설치&lt;/li&gt;
+&lt;li&gt;이작업을 하면 crontab에 테스크가 등록된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py installtask
 &lt;span class="c1"&gt;# crontab에 등록되었는지 확인&lt;/span&gt;
@@ -964,24 +966,24 @@ $ crontab -l
 
 
 &lt;ul&gt;
-&lt;li&gt;Django 서버&amp;nbsp;작동&lt;/li&gt;
+&lt;li&gt;Django 서버 작동&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ python mange.py runserver &lt;span class="m"&gt;0&lt;/span&gt;.0.0.0:8000
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2 id="_3"&gt;참고&amp;nbsp;페이지&lt;/h2&gt;
+&lt;h2 id="_3"&gt;참고 페이지&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://rsaikali.github.io/django-skwissh/"&gt;Gitpage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="python"></category><category term="monitoring"></category><category term="ssh"></category><category term="django"></category></entry><entry><title>Screen 명령어를 통해서 Serial 통신</title><link href="https://ujuc.github.io/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/" rel="alternate"></link><published>2013-01-09T11:39:40+09:00</published><updated>2018-03-11T11:39:40+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-01-09:/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/</id><summary type="html">&lt;p&gt;screen으로 serial 통신을 하는 프로그램으로&amp;nbsp;사용하자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이&amp;nbsp;발생하여…&lt;/p&gt;
-&lt;p&gt;여기 저기 찾다가. &lt;code&gt;Screen&lt;/code&gt;을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. &lt;code&gt;minicom&lt;/code&gt;도&amp;nbsp;필요없다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="python"></category><category term="monitoring"></category><category term="ssh"></category><category term="django"></category></entry><entry><title>Screen 명령어를 통해서 Serial 통신</title><link href="https://ujuc.github.io/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/" rel="alternate"></link><published>2013-01-09T11:39:40+09:00</published><updated>2018-03-11T11:39:40+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-01-09:/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/</id><summary type="html">&lt;p&gt;screen으로 serial 통신을 하는 프로그램으로 사용하자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이 발생하여…&lt;/p&gt;
+&lt;p&gt;여기 저기 찾다가. &lt;code&gt;Screen&lt;/code&gt;을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. &lt;code&gt;minicom&lt;/code&gt;도 필요없다.&lt;/p&gt;
 &lt;p&gt;명령어 사용법 : &lt;code&gt;screen ‘디바이스 위치’ ‘전송속도’&lt;/code&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Mac&lt;/span&gt;
-&lt;span class="n"&gt;screen&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tty&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt; &lt;span class="mi"&gt;115200&lt;/span&gt;
-&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Linux&lt;/span&gt;
-&lt;span class="n"&gt;screen&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ttyXXX&lt;/span&gt; &lt;span class="mi"&gt;115200&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;# Mac&lt;/span&gt;
+&lt;span class="err"&gt;screen /dev/tty.XXX 115200&lt;/span&gt;
+&lt;span class="err"&gt;# Linux&lt;/span&gt;
+&lt;span class="err"&gt;screen /dev/ttyXXX 115200&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;종료할때는 &lt;Crtl&gt;+&lt;A&gt; &amp;lt;Crtl+&amp;lt;&gt;로 종료할 수&amp;nbsp;있다.&lt;/p&gt;</content><category term="screen"></category><category term="serial"></category></entry></feed>
+&lt;p&gt;종료할때는 &lt;Crtl&gt;+&lt;A&gt; &amp;lt;Crtl+&amp;lt;&gt;로 종료할 수 있다.&lt;/p&gt;</content><category term="Operation"></category><category term="screen"></category><category term="serial"></category></entry></feed>

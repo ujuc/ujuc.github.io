@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   1월 23일부터 2월 5일까지 OpenStack에서 나온&nbsp;이야기들
+    잘 밤에 쓸데없는 생각하기... -   1월 23일부터 2월 5일까지 OpenStack에서 나온 이야기들
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,146 +94,146 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>1월 23일부터 2월 5일까지 OpenStack에서 나온&nbsp;이야기들</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p><a href="http://www.openstack.org/blog/2016/02/openstack-developer-mailing-list-digest-20160205/">원&nbsp;페이지</a></p>
-<p>철지난 소식이긴하지만 읽을 거리가 많아서&nbsp;번역해둔다.</p>
-<h2 id="successbot-says">SuccessBot&nbsp;Says</h2>
-<p>역: 해당 파트는 무언가 릴리즈가되면 메일링으로 메일을 쏘아주는 사람들의 글들을 모아둔&nbsp;것.</p>
-<ul>
-<li>odyssey4me: OpenStack Ansible Liberty 12.0.5&nbsp;릴리즈.</li>
-<li>stevemar: Devstack에서 Keystone <span class="caps">API</span> v3로 구성을&nbsp;바꿈.</li>
-<li>boris-42: osprofiler 기능 잡 통과<a href="https://review.openstack.org/#/c/269908/">^1</a>.</li>
-<li>odyssey4me: OpenStack Ansible Kilo 11.2.9 릴리즈<a href="https://launchpad.net/openstack-ansible/+milestone/11.2.9">^2</a>.</li>
-<li>odyssey4me: OpenStack Ansible Liberty 12.0.6&nbsp;릴리즈[^3[(https://launchpad.net/openstack-ansible/+milestone/12.0.6).</li>
-<li>전체보기: <a href="https://wiki.openstack.org/wiki/Successes">Successes -&nbsp;wiki</a></li>
-</ul>
-<h2 id="cross-project-specs">Cross-Project&nbsp;Specs</h2>
-<ul>
-<li>모든 프로젝트에 접근할 수 있는 공통 정책 시나리오<a href="https://review.openstack.org/#/c/245629/">^4</a></li>
-<li>Web UI에서의 쿼리 구성<a href="https://review.openstack.org/#/c/242852/">^5</a></li>
-</ul>
-<h2 id="api-guidelines"><span class="caps">API</span>&nbsp;Guidelines</h2>
-<ul>
-<li>더이상 서버 쪽의 traceback을 리턴하지 않습니다<a href="https://review.openstack.org/#/c/183599">^6</a>.</li>
-<li>더 이상 서버쪽으로 tracebacks/stacktraces에 대한 반환값을 사용자에게 반환하지 않도록 안내&nbsp;추가.</li>
-</ul>
-<h2 id="service-type-vs-project-name-for-use-in-headers">Service Type vs. Project Name For Use In&nbsp;Headers</h2>
-<ul>
-<li>Header를 서비스 타입으로 할지, 프로젝트 이름으로 할지에 대한 논의가&nbsp;있었습니다.</li>
-<li><span class="caps">API</span> 마이크로버전에 대한 버전 추가에 대한 가이드라인 추가<a href="https://review.openstack.org/#/c/243429">^7</a></li>
-<li>실험 단계의 API에 대한 가이드라인 추가<a href="https://review.openstack.org/#/c/273158">^8</a></li>
-<li><span class="caps">API</span> 마이크로버전에 대한 클라이언트 상호작용 가이드라인 추가<a href="https://review.openstack.org/#/c/243414">^9</a></li>
-<li>텀에 대한 각 프로젝트의 일반 이름 추가<a href="https://review.openstack.org/#/c/243414">^10</a></li>
-<li><span class="caps">API</span> 사용자에게 더 좋게 제공할 수 있으며, <a href="https://www.openstack.org/community/members/profile/1346">Dean Troyer</a>에 의하면 <span class="caps">API</span> 워킹 그룹과 같이 올바른 방향으로 갈 수 있도록&nbsp;선택해야합니다.</li>
-<li>엔트포인트와 <span class="caps">API</span> 서비스에 대한 기본 식별자(identifier)로서 서비스 타입은 잘 확립되어있고, 서비스 카탈로그가 제대로 작동하는 방법입니다. 서비스 타입에 따라 이동하는 방법이&nbsp;있어야합니다.</li>
-<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/085145.html">service type vs. project name for use in&nbsp;headers</a></li>
-<li>역: 뭔가 짧게 줄인게 더 이해가&nbsp;안되네&hellip;</li>
-</ul>
-<h2 id="openstack-ansible-without-containers">OpenStack Ansible Without&nbsp;Containers</h2>
-<ul>
-<li>Gyorgy가 새로운 OpenStack installer로 GPLv3 라이센스로 Ansible을 사용해서 발표했으며 여기에는 컨테이너는&nbsp;빠져있다.</li>
-<li>이미 OpenStack에는 Ansible 프로젝트와 <a href="https://wiki.openstack.org/wiki/Kolla">Kolla</a> 가 있는데 왜 새로운 installer를 만들었을까?:<ul>
-<li>컨테이너에 불필요한 복잡성&nbsp;추가.</li>
-<li>패키지: pip 패키지와 배포판 패키지를 섞어 사용하고 있지 않음. 배포판 패키지는 init 스크립트, 적당한 시스템 사용자, 업그레이드 가능한 것들&hellip;이 포함되어있는 것을&nbsp;말함.</li>
-<li>Kevin Carter의 답장에서는 이 내용은 OpenStack Ansible 프로젝트에 포함되어있는 내용이라고&nbsp;발혔다고&hellip;</li>
-</ul>
-</li>
-<li>컨테이너를 사용하지 않고 동시에 모든 서비스를 업그레이드를 한뒤 하나의 컨트롤러를 업데이트 하는건 까다롭고 깨질수도 있습니다. 롤백도&nbsp;쉽구요.</li>
-<li>역: 제대로 번역을 못하겠어서 원본을 같이&nbsp;첨부</li>
-<li>원: Without containers, upgrading a single controller can be tricky and disruptive since you have to upgrade every service at the same time. Rollbacks are also&nbsp;easier.</li>
-<li>OpenStack Ansible 프로젝트에서 오늘(?) <code>is_metal=true</code> 값을 이용해서 컨테이너 없이 배포가&nbsp;가능합니다.</li>
-<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084963.html">OpensTack&nbsp;installer</a></li>
-</ul>
-<h2 id="release-countdown-for-week-r-8-feb-8-12">Release Countdown for Week R-8, Feb&nbsp;8-12</h2>
-<ul>
-<li>집중:</li>
-<li>2주정도 전에 이번 사이클에서 non-client 라이브러리에 대한 릴리즈&nbsp;완료</li>
-<li>3주정도 전에 클라이언트 라이브러리 릴리즈&nbsp;완료</li>
-<li>프로젝트들은 모든 라이브러리 기능 작업 마무리에&nbsp;집중.</li>
-<li>릴리즈&nbsp;작업:</li>
-<li>릴리즈팀에서 업격하게 3주에서 M3전에 라이버리를 릴리즈 프리징을 할&nbsp;것입니다.</li>
-<li>주요&nbsp;일정:</li>
-<li>Non-client 라이브러리 릴리즈 완료: 2월&nbsp;24일</li>
-<li>클라이언트 라이브러리 릴리즈 완료: 3월&nbsp;2일</li>
-<li>Mitaka 3: 2월 29일 - 3월 4일 ( 기능 프리징과 소프트 문자 프리징&nbsp;포함해서)</li>
-<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085705.html">Release countdown for week R-8, Feb&nbsp;8-12</a></li>
-</ul>
-<h2 id="no-open-core-in-2016"><span class="dquo">&ldquo;</span>No Open Core&rdquo; in&nbsp;2016</h2>
-<ul>
-<li>OpenStack은 이름을 가지기 전, &ldquo;four opens&rdquo;라는 신념은 우리가 커뮤니티를 운영하는 방법을 정의하는데&nbsp;만들어졌습니다.</li>
-<li>OpenStack이 시작하였던 2010년, 우리는 제품 코어를 오픈소스화하는 방법으로 불편한 커뮤니티 에디션과 &ldquo;엔터프라이즈 버전&rdquo;으로 내놓는 다른 오픈소스 클라우드 플랫폼(Eucalyptus)과는&nbsp;달랐습니다.</li>
-<li>오늘날 우리는 &ldquo;엔터프라이즈 에디션&rdquo;을 할 수 없는 비영리 독립&nbsp;재단입니다.</li>
-<li>현재 화원사들은 아파치 라이센스인 업스트림 프로젝트 위에 &ldquo;기업 제품&rdquo;을 만들 수 있습니다. 일부는 고유 구성요소에서 기능들을 보여줘야되는 드라이버로&nbsp;되어있습니다.</li>
-<li>그럼 2016년 &ldquo;not do open core&rdquo;는 뭔가요? 어떤것은 가능하고 어떤것은 안되는&nbsp;것인가요?</li>
-<li>Thierry Carrez는 OpenStack 공식 프로젝트들이 새롭게 변화하는 시간으로 받아 들일 것이라&nbsp;믿습니다.</li>
-<li>그것은 제품에 대한 모든 기능들을 오픈 소스로&nbsp;구현해야합니다.</li>
-<li>여러분이 모든 프로젝트를 사용하는 상용 기업의 독점 소프트웨어가 필요하다면, OpenStack 공식 프로젝트로 허용되지 않을 것입니다.<ul>
-<li>하지만 이 프로젝트는 비공식 프로젝트로는 허용되며, 여전히 OpenStack 인프라에서 호스팅이&nbsp;가능합니다.</li>
-</ul>
-</li>
-<li>Doug Hellmann은 공식 OpenStack 프로젝트로 적용되는 <a href="https://review.openstack.org/#/c/273756/">Poppy</a>를 제출&nbsp;하였습니다.</li>
-<li>컨텐트 제공 네트워크의 렙퍼인데, 오픈소스 솔루션이&nbsp;없었스니다.</li>
-<li>공식 프로젝트가 될 수 있을까? 그럼 이게 오픈&nbsp;코어인가?</li>
-<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085855.html">&ldquo;No Open Core&rdquo; in&nbsp;2016</a></li>
-</ul>
-<h2 id="the-trouble-with-names">The Trouble with&nbsp;Names</h2>
-<ul>
-<li>A few issues have crept up recently with the service catalog, <span class="caps">API</span> headers, <span class="caps">API</span> end points, and even similarly named resources in different resources (e.g. backup), that are all circling around a key problem. Distributed teams and naming&nbsp;collision.</li>
-<li>각 프로젝트는 OpenStack 네임스페이스에 git 저장소에의해 보장되는 고유 이름이&nbsp;있습니다.</li>
-<li>Nova/Compute 와 같은 일반적인 이름을 가진 프로젝트 이름을 대체하려는 움직임이&nbsp;있습니다:</li>
-<li>Service&nbsp;catalog</li>
-<li><span class="caps">API</span>&nbsp;headrs</li>
-<li>우리가 가질 수 있는&nbsp;선택사항들:</li>
-<li>코드 이름을 사용하는 것: nova, glance, swift 과 같은.<ul>
-<li>장점:  충돌 문제는&nbsp;해결</li>
-<li>프로젝트에서 알고 있는 비밀 디코더 링이&nbsp;필요합니다.</li>
-</ul>
-</li>
-<li>공통된 이름에 대한 저장소.<ul>
-<li>장점: 공통된 이름을 사용해서 어디서든 안전하게 사용할 수 있으며, 충돌에 대한 공포를 줄일 수&nbsp;있습니다.</li>
-<li>단점: 다른 논쟁점이 있을&nbsp;수도&hellip;</li>
-</ul>
-</li>
-<li>커뮤니티의 사람들은 공통 이름을 가지고서 저장소를 만들기를 바라고 있다. 어쩌면 가버넌트 <a href="https://git.openstack.org/cgit/openstack/governance/tree/reference/projects.yaml">projects.yaml</a>에 있지&nbsp;않을까?</li>
-<li>이 목록은 기술 커밋들이 공식 프로젝트들에서 사용되는 것들만 포함하고 있습니다. 따라서 프로젝트에서만 공통 이름을 예약할 수&nbsp;있습니다.</li>
-<li>OpenStack 클라이언트들은 이미 프로젝트에서 공통 이름으로&nbsp;인코드했습니다.</li>
-<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085748.html">the trouble with&nbsp;names</a></li>
-</ul>
-<h2 id="annuncing-ekko-scalable-block-based-backup-for-openstack">Annuncing Ekko - Scalable Block-Based Backup for&nbsp;OpenStack</h2>
-<ul>
-<li>Ekko의 목적은 Nova 인스턴스의 증분 블록 레벨 백업과 복원을&nbsp;제공합니다.</li>
-<li>중복되는 목표가&nbsp;있습니다:</li>
-<li>증분 백업에 의존하지 않는 Cinder&nbsp;볼륨</li>
-<li>Nova 인스턴스<ul>
-<li>OpenStack Freezer 에서는 노바 스냅샷 기능을&nbsp;사용합니다.</li>
-<li>Ekko는 Nova 인스턴스의 실시간 증분 블록 레벨 백업을 활용하는&nbsp;것.</li>
-</ul>
-</li>
-<li>Jay Pipes는 <span class="caps">REST</span> <span class="caps">API</span> 엔드포인트가 중복되는지 확인하기위한 것과 두개의 프로젝트(Freezer와 Ekko)에 대해서 논의를 시작함. 거의 동일한 백업을 수행하기위해 두개의 API를 가지는 것은 좋지&nbsp;않다고&hellip;</li>
-<li>Ekko 젝작자는 다른 백업 프로젝트와 동일한 API를 호출할 경우에도 &ldquo;실제 구현체와 최종 결과물은 완전히다르다&rdquo;고&nbsp;밝혔다.</li>
-<li>Jay는 다음 엔트포인트가 존재하는 지금을 이해할 수&nbsp;없다고:</li>
-<li>Freezer <code>/backups</code></li>
-<li>Cinder <code>/{tenant_id}/backups</code></li>
-<li>이 엔드포인트로 나쁜 사용자 경험을 만들어 혼란을 마들고&nbsp;있다고&hellip;</li>
-<li>현재 거버넌스 모델에서는 프로젝트간 경쟁을 하길 바라지 않습니다. 두 프로젝트는 <span class="caps">API</span> 엔트포인트가 겹치는 경우, 논의를 하여 협력하는 방법으로&nbsp;나가야한다.</li>
-<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084739.html">Announcing Ekko &ndash; Scalable block-based backup for&nbsp;OpenStack</a></li>
-</ul>
-<hr>
-<p>먼가 번역을 하다보니 2주가 지났다&hellip; 이런 내용들이 매주 업데이트가 되고있으니.. 언제 다 보나.ㅡ.ㅡ;; 따라가는 것도 힘들고. 몇몇 내용은 봐도&nbsp;모르겠고.</p>
-<p>그래도 봐야지 흐름이라도&nbsp;알지&hellip;</p></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>1월 23일부터 2월 5일까지 OpenStack에서 나온 이야기들</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 16. 02. 16.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/community.html">Community</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
-              <a href="https://ujuc.github.io/tag/mailling.html" class="article_tag">mailling</a>
-              <a href="https://ujuc.github.io/tag/digest.html" class="article_tag">digest</a>
+            <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
+            <a href="https://ujuc.github.io/tag/mailling.html" class="article_tag">mailling</a>
+            <a href="https://ujuc.github.io/tag/digest.html" class="article_tag">digest</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p><a href="http://www.openstack.org/blog/2016/02/openstack-developer-mailing-list-digest-20160205/">원 페이지</a></p>
+<p>철지난 소식이긴하지만 읽을 거리가 많아서 번역해둔다.</p>
+<h2 id="successbot-says">SuccessBot Says</h2>
+<p>역: 해당 파트는 무언가 릴리즈가되면 메일링으로 메일을 쏘아주는 사람들의 글들을 모아둔 것.</p>
+<ul>
+<li>odyssey4me: OpenStack Ansible Liberty 12.0.5 릴리즈.</li>
+<li>stevemar: Devstack에서 Keystone API v3로 구성을 바꿈.</li>
+<li>boris-42: osprofiler 기능 잡 통과<a href="https://review.openstack.org/#/c/269908/">^1</a>.</li>
+<li>odyssey4me: OpenStack Ansible Kilo 11.2.9 릴리즈<a href="https://launchpad.net/openstack-ansible/+milestone/11.2.9">^2</a>.</li>
+<li>odyssey4me: OpenStack Ansible Liberty 12.0.6 릴리즈[^3[(https://launchpad.net/openstack-ansible/+milestone/12.0.6).</li>
+<li>전체보기: <a href="https://wiki.openstack.org/wiki/Successes">Successes - wiki</a></li>
+</ul>
+<h2 id="cross-project-specs">Cross-Project Specs</h2>
+<ul>
+<li>모든 프로젝트에 접근할 수 있는 공통 정책 시나리오<a href="https://review.openstack.org/#/c/245629/">^4</a></li>
+<li>Web UI에서의 쿼리 구성<a href="https://review.openstack.org/#/c/242852/">^5</a></li>
+</ul>
+<h2 id="api-guidelines">API Guidelines</h2>
+<ul>
+<li>더이상 서버 쪽의 traceback을 리턴하지 않습니다<a href="https://review.openstack.org/#/c/183599">^6</a>.</li>
+<li>더 이상 서버쪽으로 tracebacks/stacktraces에 대한 반환값을 사용자에게 반환하지 않도록 안내 추가.</li>
+</ul>
+<h2 id="service-type-vs-project-name-for-use-in-headers">Service Type vs. Project Name For Use In Headers</h2>
+<ul>
+<li>Header를 서비스 타입으로 할지, 프로젝트 이름으로 할지에 대한 논의가 있었습니다.</li>
+<li>API 마이크로버전에 대한 버전 추가에 대한 가이드라인 추가<a href="https://review.openstack.org/#/c/243429">^7</a></li>
+<li>실험 단계의 API에 대한 가이드라인 추가<a href="https://review.openstack.org/#/c/273158">^8</a></li>
+<li>API 마이크로버전에 대한 클라이언트 상호작용 가이드라인 추가<a href="https://review.openstack.org/#/c/243414">^9</a></li>
+<li>텀에 대한 각 프로젝트의 일반 이름 추가<a href="https://review.openstack.org/#/c/243414">^10</a></li>
+<li>API 사용자에게 더 좋게 제공할 수 있으며, <a href="https://www.openstack.org/community/members/profile/1346">Dean Troyer</a>에 의하면 API 워킹 그룹과 같이 올바른 방향으로 갈 수 있도록 선택해야합니다.</li>
+<li>엔트포인트와 API 서비스에 대한 기본 식별자(identifier)로서 서비스 타입은 잘 확립되어있고, 서비스 카탈로그가 제대로 작동하는 방법입니다. 서비스 타입에 따라 이동하는 방법이 있어야합니다.</li>
+<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/085145.html">service type vs. project name for use in headers</a></li>
+<li>역: 뭔가 짧게 줄인게 더 이해가 안되네&hellip;</li>
+</ul>
+<h2 id="openstack-ansible-without-containers">OpenStack Ansible Without Containers</h2>
+<ul>
+<li>Gyorgy가 새로운 OpenStack installer로 GPLv3 라이센스로 Ansible을 사용해서 발표했으며 여기에는 컨테이너는 빠져있다.</li>
+<li>이미 OpenStack에는 Ansible 프로젝트와 <a href="https://wiki.openstack.org/wiki/Kolla">Kolla</a> 가 있는데 왜 새로운 installer를 만들었을까?:<ul>
+<li>컨테이너에 불필요한 복잡성 추가.</li>
+<li>패키지: pip 패키지와 배포판 패키지를 섞어 사용하고 있지 않음. 배포판 패키지는 init 스크립트, 적당한 시스템 사용자, 업그레이드 가능한 것들&hellip;이 포함되어있는 것을 말함.</li>
+<li>Kevin Carter의 답장에서는 이 내용은 OpenStack Ansible 프로젝트에 포함되어있는 내용이라고 발혔다고&hellip;</li>
+</ul>
+</li>
+<li>컨테이너를 사용하지 않고 동시에 모든 서비스를 업그레이드를 한뒤 하나의 컨트롤러를 업데이트 하는건 까다롭고 깨질수도 있습니다. 롤백도 쉽구요.</li>
+<li>역: 제대로 번역을 못하겠어서 원본을 같이 첨부</li>
+<li>원: Without containers, upgrading a single controller can be tricky and disruptive since you have to upgrade every service at the same time. Rollbacks are also easier.</li>
+<li>OpenStack Ansible 프로젝트에서 오늘(?) <code>is_metal=true</code> 값을 이용해서 컨테이너 없이 배포가 가능합니다.</li>
+<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084963.html">OpensTack installer</a></li>
+</ul>
+<h2 id="release-countdown-for-week-r-8-feb-8-12">Release Countdown for Week R-8, Feb 8-12</h2>
+<ul>
+<li>집중:</li>
+<li>2주정도 전에 이번 사이클에서 non-client 라이브러리에 대한 릴리즈 완료</li>
+<li>3주정도 전에 클라이언트 라이브러리 릴리즈 완료</li>
+<li>프로젝트들은 모든 라이브러리 기능 작업 마무리에 집중.</li>
+<li>릴리즈 작업:</li>
+<li>릴리즈팀에서 업격하게 3주에서 M3전에 라이버리를 릴리즈 프리징을 할 것입니다.</li>
+<li>주요 일정:</li>
+<li>Non-client 라이브러리 릴리즈 완료: 2월 24일</li>
+<li>클라이언트 라이브러리 릴리즈 완료: 3월 2일</li>
+<li>Mitaka 3: 2월 29일 - 3월 4일 ( 기능 프리징과 소프트 문자 프리징 포함해서)</li>
+<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085705.html">Release countdown for week R-8, Feb 8-12</a></li>
+</ul>
+<h2 id="no-open-core-in-2016">&ldquo;No Open Core&rdquo; in 2016</h2>
+<ul>
+<li>OpenStack은 이름을 가지기 전, &ldquo;four opens&rdquo;라는 신념은 우리가 커뮤니티를 운영하는 방법을 정의하는데 만들어졌습니다.</li>
+<li>OpenStack이 시작하였던 2010년, 우리는 제품 코어를 오픈소스화하는 방법으로 불편한 커뮤니티 에디션과 &ldquo;엔터프라이즈 버전&rdquo;으로 내놓는 다른 오픈소스 클라우드 플랫폼(Eucalyptus)과는 달랐습니다.</li>
+<li>오늘날 우리는 &ldquo;엔터프라이즈 에디션&rdquo;을 할 수 없는 비영리 독립 재단입니다.</li>
+<li>현재 화원사들은 아파치 라이센스인 업스트림 프로젝트 위에 &ldquo;기업 제품&rdquo;을 만들 수 있습니다. 일부는 고유 구성요소에서 기능들을 보여줘야되는 드라이버로 되어있습니다.</li>
+<li>그럼 2016년 &ldquo;not do open core&rdquo;는 뭔가요? 어떤것은 가능하고 어떤것은 안되는 것인가요?</li>
+<li>Thierry Carrez는 OpenStack 공식 프로젝트들이 새롭게 변화하는 시간으로 받아 들일 것이라 믿습니다.</li>
+<li>그것은 제품에 대한 모든 기능들을 오픈 소스로 구현해야합니다.</li>
+<li>여러분이 모든 프로젝트를 사용하는 상용 기업의 독점 소프트웨어가 필요하다면, OpenStack 공식 프로젝트로 허용되지 않을 것입니다.<ul>
+<li>하지만 이 프로젝트는 비공식 프로젝트로는 허용되며, 여전히 OpenStack 인프라에서 호스팅이 가능합니다.</li>
+</ul>
+</li>
+<li>Doug Hellmann은 공식 OpenStack 프로젝트로 적용되는 <a href="https://review.openstack.org/#/c/273756/">Poppy</a>를 제출 하였습니다.</li>
+<li>컨텐트 제공 네트워크의 렙퍼인데, 오픈소스 솔루션이 없었스니다.</li>
+<li>공식 프로젝트가 될 수 있을까? 그럼 이게 오픈 코어인가?</li>
+<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085855.html">&ldquo;No Open Core&rdquo; in 2016</a></li>
+</ul>
+<h2 id="the-trouble-with-names">The Trouble with Names</h2>
+<ul>
+<li>A few issues have crept up recently with the service catalog, API headers, API end points, and even similarly named resources in different resources (e.g. backup), that are all circling around a key problem. Distributed teams and naming collision.</li>
+<li>각 프로젝트는 OpenStack 네임스페이스에 git 저장소에의해 보장되는 고유 이름이 있습니다.</li>
+<li>Nova/Compute 와 같은 일반적인 이름을 가진 프로젝트 이름을 대체하려는 움직임이 있습니다:</li>
+<li>Service catalog</li>
+<li>API headrs</li>
+<li>우리가 가질 수 있는 선택사항들:</li>
+<li>코드 이름을 사용하는 것: nova, glance, swift 과 같은.<ul>
+<li>장점:  충돌 문제는 해결</li>
+<li>프로젝트에서 알고 있는 비밀 디코더 링이 필요합니다.</li>
+</ul>
+</li>
+<li>공통된 이름에 대한 저장소.<ul>
+<li>장점: 공통된 이름을 사용해서 어디서든 안전하게 사용할 수 있으며, 충돌에 대한 공포를 줄일 수 있습니다.</li>
+<li>단점: 다른 논쟁점이 있을 수도&hellip;</li>
+</ul>
+</li>
+<li>커뮤니티의 사람들은 공통 이름을 가지고서 저장소를 만들기를 바라고 있다. 어쩌면 가버넌트 <a href="https://git.openstack.org/cgit/openstack/governance/tree/reference/projects.yaml">projects.yaml</a>에 있지 않을까?</li>
+<li>이 목록은 기술 커밋들이 공식 프로젝트들에서 사용되는 것들만 포함하고 있습니다. 따라서 프로젝트에서만 공통 이름을 예약할 수 있습니다.</li>
+<li>OpenStack 클라이언트들은 이미 프로젝트에서 공통 이름으로 인코드했습니다.</li>
+<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085748.html">the trouble with names</a></li>
+</ul>
+<h2 id="annuncing-ekko-scalable-block-based-backup-for-openstack">Annuncing Ekko - Scalable Block-Based Backup for OpenStack</h2>
+<ul>
+<li>Ekko의 목적은 Nova 인스턴스의 증분 블록 레벨 백업과 복원을 제공합니다.</li>
+<li>중복되는 목표가 있습니다:</li>
+<li>증분 백업에 의존하지 않는 Cinder 볼륨</li>
+<li>Nova 인스턴스<ul>
+<li>OpenStack Freezer 에서는 노바 스냅샷 기능을 사용합니다.</li>
+<li>Ekko는 Nova 인스턴스의 실시간 증분 블록 레벨 백업을 활용하는 것.</li>
+</ul>
+</li>
+<li>Jay Pipes는 REST API 엔드포인트가 중복되는지 확인하기위한 것과 두개의 프로젝트(Freezer와 Ekko)에 대해서 논의를 시작함. 거의 동일한 백업을 수행하기위해 두개의 API를 가지는 것은 좋지 않다고&hellip;</li>
+<li>Ekko 젝작자는 다른 백업 프로젝트와 동일한 API를 호출할 경우에도 &ldquo;실제 구현체와 최종 결과물은 완전히다르다&rdquo;고 밝혔다.</li>
+<li>Jay는 다음 엔트포인트가 존재하는 지금을 이해할 수 없다고:</li>
+<li>Freezer <code>/backups</code></li>
+<li>Cinder <code>/{tenant_id}/backups</code></li>
+<li>이 엔드포인트로 나쁜 사용자 경험을 만들어 혼란을 마들고 있다고&hellip;</li>
+<li>현재 거버넌스 모델에서는 프로젝트간 경쟁을 하길 바라지 않습니다. 두 프로젝트는 API 엔트포인트가 겹치는 경우, 논의를 하여 협력하는 방법으로 나가야한다.</li>
+<li>메일 쓰레드: <a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084739.html">Announcing Ekko &ndash; Scalable block-based backup for OpenStack</a></li>
+</ul>
+<hr>
+<p>먼가 번역을 하다보니 2주가 지났다&hellip; 이런 내용들이 매주 업데이트가 되고있으니.. 언제 다 보나.ㅡ.ㅡ;; 따라가는 것도 힘들고. 몇몇 내용은 봐도 모르겠고.</p>
+<p>그래도 봐야지 흐름이라도 알지&hellip;</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

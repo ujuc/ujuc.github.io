@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   [번역] tigrc(5) Manual&nbsp;Page
+    잘 밤에 쓸데없는 생각하기... -   [번역] tigrc(5) Manual Page
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,49 +94,62 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>[번역] tigrc(5) Manual&nbsp;Page</h1></div>
+        <div class="article_title"><h1>[번역] tigrc(5) Manual Page</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 16. 02. 17.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/tig.html" class="article_tag">tig</a>
+            <a href="https://ujuc.github.io/tag/tigrc.html" class="article_tag">tigrc</a>
+            <a href="https://ujuc.github.io/tag/git.html" class="article_tag">git</a>
+            <a href="https://ujuc.github.io/tag/ncurses.html" class="article_tag">ncurses</a>
+            <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><h2 id="name">Name</h2>
-<p>tigrc - Tig 구성&nbsp;파일</p>
-<h2 id="synopsis"><span class="caps">SYNOPSIS</span></h2>
+<p>tigrc - Tig 구성 파일</p>
+<h2 id="synopsis">SYNOPSIS</h2>
 <blockquote>
 <p>set variable = value<br>
 bind keymap key action<br>
 color area fgcolor bgcolor [attributes]<br>
-source&nbsp;path</p>
+source path</p>
 </blockquote>
-<h2 id="description"><span class="caps">DESCRIPTION</span></h2>
-<p><code>~/.tigrc</code> 파일에 옵션을 넣어 영구적으로 설정할 수 있습니다. 파일은 <em>commands</em> 나열로 구성됩니다. 파일의 각 행은 명령 하나입니다. 각 라인 끝에 백슬래시(<code>\</code>)를 넣어 여러줄로 구성할 수&nbsp;있습니다.</p>
-<p>해쉬 마크(<code>#</code>)는 <em>주석(commant)</em> 문자로 사용합니다. 주석 문자 이후로오는 모든 문자는 무시됩니다. 주석 문자를 이용해 초기 파일에 주석을 달 수&nbsp;있습니다.</p>
-<p>이부 옵션은 옵션 메뉴를 통해서 작동중 조작 할 수 있습니다. 추가적으로 <code>:toggle</code> 프롬프트 명령을 이용하여 옵션을 변경하거나 프롬프트 구성 명령을 입력할 수&nbsp;있습니다.</p>
-<h2 id="git-configuration">Git&nbsp;configuration</h2>
-<p><code>~/.tigrc</code>를 사용하거나, Git 구성 파일에 Tig 옵션을 설정하여 사용할 수 있습니다. 이 내용들은 Tig가 시작하면서 읽어 사용합니다. 다음 예제와 같이 기본 구문 강조, 바인딩, 색들을 설정할 수&nbsp;있습니다.</p>
+<h2 id="description">DESCRIPTION</h2>
+<p><code>~/.tigrc</code> 파일에 옵션을 넣어 영구적으로 설정할 수 있습니다. 파일은 <em>commands</em> 나열로 구성됩니다. 파일의 각 행은 명령 하나입니다. 각 라인 끝에 백슬래시(<code>\</code>)를 넣어 여러줄로 구성할 수 있습니다.</p>
+<p>해쉬 마크(<code>#</code>)는 <em>주석(commant)</em> 문자로 사용합니다. 주석 문자 이후로오는 모든 문자는 무시됩니다. 주석 문자를 이용해 초기 파일에 주석을 달 수 있습니다.</p>
+<p>이부 옵션은 옵션 메뉴를 통해서 작동중 조작 할 수 있습니다. 추가적으로 <code>:toggle</code> 프롬프트 명령을 이용하여 옵션을 변경하거나 프롬프트 구성 명령을 입력할 수 있습니다.</p>
+<h2 id="git-configuration">Git configuration</h2>
+<p><code>~/.tigrc</code>를 사용하거나, Git 구성 파일에 Tig 옵션을 설정하여 사용할 수 있습니다. 이 내용들은 Tig가 시작하면서 읽어 사용합니다. 다음 예제와 같이 기본 구문 강조, 바인딩, 색들을 설정할 수 있습니다.</p>
 <div class="codehilite"><pre><span></span>[tig] show-changes = true
 [tig &quot;color&quot;] cursor = yellow red bold
 [tig &quot;bind&quot;] generic = P parent
 </pre></div>
 
 
-<p>Tig-specific 옵션을 추가하여 Git 옵션에 따라 Git 구성에서&nbsp;읽어옵니다:</p>
+<p>Tig-specific 옵션을 추가하여 Git 옵션에 따라 Git 구성에서 읽어옵니다:</p>
 <dl>
 <dt><code>coror.*</code></dt>
 <dd>
 <dl>
-<dt>다양한 <span class="caps">UI</span> 타입에대한 색. <code>git-color</code> 설정을 통해 구성할 수&nbsp;있습니다.</dt>
+<dt>다양한 UI 타입에대한 색. <code>git-color</code> 설정을 통해 구성할 수 있습니다.</dt>
 <dt><code>core.abbrev</code></dt>
 <dd>
 <dl>
-<dt>커밋 ID의 넓이(width). <code>id-width</code> 옵션을&nbsp;확인합니다.</dt>
+<dt>커밋 ID의 넓이(width). <code>id-width</code> 옵션을 확인합니다.</dt>
 <dt>`core.worktree</dt>
 <dd>
 <dl>
-<dt>편집기 명령. GIT_EDITER 설정을 덮어쓸수&nbsp;있습니다.</dt>
+<dt>편집기 명령. GIT_EDITER 설정을 덮어쓸수 있습니다.</dt>
 <dt><code>gui.encoding</code></dt>
 <dd>
 <dl>
-<dt>파일 내용을 보여주는데 사용되는&nbsp;인코딩.</dt>
+<dt>파일 내용을 보여주는데 사용되는 인코딩.</dt>
 <dt><code>i18n.commitencoding</code></dt>
-<dd>커밋에서 사용하는 인코딩. 기본값은 <span class="caps">UTF</span>-8</dd>
+<dd>커밋에서 사용하는 인코딩. 기본값은 UTF-8</dd>
 </dl>
 </dd>
 </dl>
@@ -146,10 +159,10 @@ source&nbsp;path</p>
 </dl>
 </dd>
 </dl>
-<h2 id="set-command">Set&nbsp;command</h2>
-<p>일부 선택할 수 있는 값들은 set 명령어를 통해서 구성할 수 있습니다. 구문은 다음과&nbsp;같다는:</p>
+<h2 id="set-command">Set command</h2>
+<p>일부 선택할 수 있는 값들은 set 명령어를 통해서 구성할 수 있습니다. 구문은 다음과 같다는:</p>
 <blockquote>
-<p>set variables =&nbsp;value</p>
+<p>set variables = value</p>
 </blockquote>
 <p>예제:</p>
 <div class="codehilite"><pre><span></span>set commit-order = topo         # Order commits topologically
@@ -170,29 +183,29 @@ set blame-view = \
 </pre></div>
 
 
-<p>Git 구성&nbsp;파일에서:</p>
+<p>Git 구성 파일에서:</p>
 <div class="codehilite"><pre><span></span>[tig]
     line-graphics = no      # Disable graphics characters
     tab-size = 8            # Number of spaces per tab
 </pre></div>
 
 
-<p>변수 형식은 bool, int, string,&nbsp;mixed.</p>
+<p>변수 형식은 bool, int, string, mixed.</p>
 <dl>
-<dt>bool 변수&nbsp;값</dt>
+<dt>bool 변수 값</dt>
 <dd>
 <dl>
-<dt><span class="dquo">&ldquo;</span>1&rdquo;, &ldquo;true&rdquo;, &ldquo;yes&rdquo; 값은 ture 값로 설정됩니다. 다른 값들은 false 값으로&nbsp;설정됩니다.</dt>
-<dt>int 변수&nbsp;값</dt>
+<dt>&ldquo;1&rdquo;, &ldquo;true&rdquo;, &ldquo;yes&rdquo; 값은 ture 값로 설정됩니다. 다른 값들은 false 값으로 설정됩니다.</dt>
+<dt>int 변수 값</dt>
 <dd>
 <dl>
-<dt>양의&nbsp;정수</dt>
-<dt>string 변수&nbsp;값</dt>
+<dt>양의 정수</dt>
+<dt>string 변수 값</dt>
 <dd>
 <dl>
-<dt>문자열. 추가적으로 <code>'</code>나 <code>"</code> 값으로 경계를 나타낼 수&nbsp;있습니다.</dt>
-<dt>mixed 변수&nbsp;값</dt>
-<dd>이 값은 여러 타입을 같이 사용합니다. 유요한 값은 다음 설명에서&nbsp;확인합니다.</dd>
+<dt>문자열. 추가적으로 <code>'</code>나 <code>"</code> 값으로 경계를 나타낼 수 있습니다.</dt>
+<dt>mixed 변수 값</dt>
+<dd>이 값은 여러 타입을 같이 사용합니다. 유요한 값은 다음 설명에서 확인합니다.</dd>
 </dl>
 </dd>
 </dl>
@@ -201,29 +214,29 @@ set blame-view = \
 </dd>
 </dl>
 <h3 id="_1">변수</h3>
-<p>다음 변수를 이용하여 설정할 수&nbsp;있습니다.</p>
+<p>다음 변수를 이용하여 설정할 수 있습니다.</p>
 <dl>
 <dt><code>diff-options</code>(string)</dt>
 <dd>diff 뷰에서 사용하며, diff 옵션에 대한 공간을 나눠 보여줍니다. <code>git-show(1)</code>은 포멧팅을 사용하고 항상 <code>--patch-with-stat</code>을 통과합니다. 이 옵션은 (<a href="http://jonas.nitro.dk/tig/tig.1.html">tig(1)</a>에 포함되어 있는) <code>TIG_DIFF_OPTS</code> 환경 변수에 지정된 값을 덮어쓰지만, 커멘드 라인에서 호출된 diff 플래그로 덮어쓰일 수 있습니다.<br>
 <code>blame-options</code>(string)</dd>
 </dl>
-<h3 id="_2">뷰&nbsp;설정</h3>
-<h2 id="_3">바인드&nbsp;명령어</h2>
-<h3 id="_4">외부 사용자 정의&nbsp;명령어</h3>
-<h4 id="browsing">Browsing 상태&nbsp;변수</h4>
-<h4 id="_5">고급 셸같은&nbsp;명령어</h4>
-<h3 id="_6">내부 사용자 정의&nbsp;명령어</h3>
-<h3 id="_7">동작&nbsp;이름</h3>
-<h4 id="_8">뷰&nbsp;전환</h4>
-<h4 id="_9">뷰&nbsp;조작</h4>
-<h4 id="_10">커서&nbsp;네비게이션</h4>
+<h3 id="_2">뷰 설정</h3>
+<h2 id="_3">바인드 명령어</h2>
+<h3 id="_4">외부 사용자 정의 명령어</h3>
+<h4 id="browsing">Browsing 상태 변수</h4>
+<h4 id="_5">고급 셸같은 명령어</h4>
+<h3 id="_6">내부 사용자 정의 명령어</h3>
+<h3 id="_7">동작 이름</h3>
+<h4 id="_8">뷰 전환</h4>
+<h4 id="_9">뷰 조작</h4>
+<h4 id="_10">커서 네비게이션</h4>
 <h4 id="_11">스크롤링</h4>
 <h4 id="_12">검색</h4>
 <h4 id="misc">Misc</h4>
-<h2 id="_13">색&nbsp;명령어</h2>
-<h3 id="ui"><span class="caps">UI</span>&nbsp;색</h3>
-<p>강조 표시시되거나 기본 터미널 색상 사용을 지정하지 않은 텍스트와 색상의 속성은 <strong>기본</strong> 색상 옵션을 제어하여 설정할 수&nbsp;있습니다.</p>
-<p>Table 1.&nbsp;일반</p>
+<h2 id="_13">색 명령어</h2>
+<h3 id="ui">UI 색</h3>
+<p>강조 표시시되거나 기본 터미널 색상 사용을 지정하지 않은 텍스트와 색상의 속성은 <strong>기본</strong> 색상 옵션을 제어하여 설정할 수 있습니다.</p>
+<p>Table 1. 일반</p>
 <p>| default | 기본 터미널 색상을 덮어씁니다. |<br>
 | cursor | 커서 라인 |<br>
 | status | 상태 윈도우에서 보여주는 정보 메시지 |<br>
@@ -232,46 +245,46 @@ set blame-view = \
 | delimiter | 구문 문자는 짤린 라인을 보여줍니다 |<br>
 | header | 뷰 헤더 라인. 상태 뷰에서 <code>status.header</code>를 이용하여 staged, unstaged, untracked 의 색을 변경하여 사용합니다. 도움말 뷰에서 <code>help.header</code> 키맵 섹션의 색을 변경하는데 사용합니다. |<br>
 | line-number | 라인 넘버 |<br>
-| id | 커밋 <span class="caps">ID</span> |<br>
+| id | 커밋 ID |<br>
 | date | 작성 일자 |<br>
 | author | 커밋 작성자 |<br>
 | mode | 권한과 유형을 유지하는 파일 모드 |<br>
 | overflow | 텍스트 넘침 |<br>
 | directory | 디렉토리 이름 |<br>
 | file | 파일 이름 |<br>
-| file-size | 파일 크기&nbsp;|</p>
-<h3 id="_14">구문&nbsp;강조</h3>
+| file-size | 파일 크기 |</p>
+<h3 id="_14">구문 강조</h3>
 <dl>
 <dt>Diff을마크업</dt>
-<dd>diff 시작, 청크, 라인 추가, 삭제를&nbsp;합니다.</dd>
+<dd>diff 시작, 청크, 라인 추가, 삭제를 합니다.</dd>
 </dl>
-<p><strong>diff-header, diff-chunk, diff-add, diff-add2, diff-del,&nbsp;diff-del2</strong></p>
+<p><strong>diff-header, diff-chunk, diff-add, diff-add2, diff-del, diff-del2</strong></p>
 <dl>
-<dt>향상된 Git diff&nbsp;마크업</dt>
-<dd>Git diff 매커니즘에대한 확장 diff 정보를 출력합니다. 모드 변경, 이름 변경 확인, 유사성에 대해&nbsp;확인합니다.</dd>
+<dt>향상된 Git diff 마크업</dt>
+<dd>Git diff 매커니즘에대한 확장 diff 정보를 출력합니다. 모드 변경, 이름 변경 확인, 유사성에 대해 확인합니다.</dd>
 </dl>
-<p><strong>diff-oldmode, diff-newmode, diff-copy-from, diff-copy-to, diff-similarity,&nbsp;diff-index</strong></p>
+<p><strong>diff-oldmode, diff-newmode, diff-copy-from, diff-copy-to, diff-similarity, diff-index</strong></p>
 <dl>
-<dt>Pretty print commit&nbsp;headers</dt>
-<dd>커밋 diff와 리버전 로그는 <code>--pretty=raw</code>로 설정하지 않으면, pretty printed 해더 포멧을 설정합니다. 여기에는 머지 정보, 커밋 <span class="caps">ID</span>, 커밋 저자, 커밋 날짜 등의 라인이&nbsp;포함됩니다.</dd>
+<dt>Pretty print commit headers</dt>
+<dd>커밋 diff와 리버전 로그는 <code>--pretty=raw</code>로 설정하지 않으면, pretty printed 해더 포멧을 설정합니다. 여기에는 머지 정보, 커밋 ID, 커밋 저자, 커밋 날짜 등의 라인이 포함됩니다.</dd>
 </dl>
-<p><strong>pp-refs, pp-reflog, pp-reflogmsg,&nbsp;pp-merge</strong></p>
+<p><strong>pp-refs, pp-reflog, pp-reflogmsg, pp-merge</strong></p>
 <dl>
-<dt>Raw commit&nbsp;headers</dt>
-<dd><code>--pretty=raw</code>값을 사용하는 것과 동일합니다. 그러나 <em>commit</em>은 어디서든 꽤 괜찮게&nbsp;나옵니다.</dd>
+<dt>Raw commit headers</dt>
+<dd><code>--pretty=raw</code>값을 사용하는 것과 동일합니다. 그러나 <em>commit</em>은 어디서든 꽤 괜찮게 나옵니다.</dd>
 </dl>
-<p><strong>commit, parent, tree, author,&nbsp;committer</strong></p>
+<p><strong>commit, parent, tree, author, committer</strong></p>
 <dl>
-<dt>커밋&nbsp;메시지</dt>
-<dd><code>Signed-off-by</code>, <code>Acked-by</code>, <code>Reviewed-by</code>, <code>Tested-by</code> 라인에 색을 더합니다. 미리 정의된 너비를 넘어간 커밋 제목 문자를 강조 표시할 수&nbsp;있습니다.</dd>
-<dt>Tree&nbsp;마크업</dt>
-<dd>Tree 뷰에대한 정보에 색을&nbsp;더합니다.</dd>
+<dt>커밋 메시지</dt>
+<dd><code>Signed-off-by</code>, <code>Acked-by</code>, <code>Reviewed-by</code>, <code>Tested-by</code> 라인에 색을 더합니다. 미리 정의된 너비를 넘어간 커밋 제목 문자를 강조 표시할 수 있습니다.</dd>
+<dt>Tree 마크업</dt>
+<dd>Tree 뷰에대한 정보에 색을 더합니다.</dd>
 </dl>
-<p><strong>tree-dir,&nbsp;tree-file</strong></p>
-<h2 id="_15">소스&nbsp;명령</h2>
-<p>소스 명령은 추가 설정 파일을 불러올 수 있도록 합니다. 소스로 구성된 파일은 해당 자리에 포함되고 소스 명령과 만났을때 해당 파일을 읽어오게 됩니다. 현재 구성 파일에 있는 명령 이후에 해당 명령을 먼저 실행합니다. 구문은 다음과&nbsp;같습니다:</p>
+<p><strong>tree-dir, tree-file</strong></p>
+<h2 id="_15">소스 명령</h2>
+<p>소스 명령은 추가 설정 파일을 불러올 수 있도록 합니다. 소스로 구성된 파일은 해당 자리에 포함되고 소스 명령과 만났을때 해당 파일을 읽어오게 됩니다. 현재 구성 파일에 있는 명령 이후에 해당 명령을 먼저 실행합니다. 구문은 다음과 같습니다:</p>
 <blockquote>
-<p>source&nbsp;path</p>
+<p>source path</p>
 </blockquote>
 <p>예제:</p>
 <div class="codehilite"><pre><span></span>source ~/.tig/colorscheme.tigrc
@@ -279,25 +292,12 @@ source ~/.tig/keybindings.tigrc
 </pre></div>
 
 
-<h2 id="copyright"><span class="caps">COPYRIGHT</span></h2>
+<h2 id="copyright">COPYRIGHT</h2>
 <p>Copyright (c) 2006-2014 Jonas Fonseca <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#110;&#97;&#115;&#46;&#102;&#111;&#110;&#115;&#101;&#99;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#106;&#111;&#110;&#97;&#115;&#46;&#102;&#111;&#110;&#115;&#101;&#99;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
-<p>This program is free software; you can redistribute it and/or modify it under the terms of the <span class="caps">GNU</span> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later&nbsp;version.</p>
-<h2 id="see-also"><span class="caps">SEE</span> <span class="caps">ALSO</span></h2>
+<p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+<h2 id="see-also">SEE ALSO</h2>
 <p><a href="http://jonas.nitro.dk/tig/tig.1.html">tig(1)</a>, <a href="/2016/02/10/tig-manual/">the Tig manual</a>, <a href="https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html">git(7)</a>, <a href="https://www.kernel.org/pub/software/scm/git/docs/git-config.html">git-config(1)</a></p></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 16. 02. 17.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/tig.html" class="article_tag">tig</a>
-              <a href="https://ujuc.github.io/tag/tigrc.html" class="article_tag">tigrc</a>
-              <a href="https://ujuc.github.io/tag/git.html" class="article_tag">git</a>
-              <a href="https://ujuc.github.io/tag/ncurses.html" class="article_tag">ncurses</a>
-              <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

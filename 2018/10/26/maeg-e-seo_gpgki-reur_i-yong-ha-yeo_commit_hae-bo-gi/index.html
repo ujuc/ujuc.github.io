@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   맥에서 GPG키를 이용하여 Commit&nbsp;해보기
+    잘 밤에 쓸데없는 생각하기... -   맥에서 GPG키를 이용하여 Commit 해보기
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,22 +94,33 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>맥에서 GPG키를 이용하여 Commit&nbsp;해보기</h1></div>
+        <div class="article_title"><h1>맥에서 GPG키를 이용하여 Commit 해보기</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 18. 10. 26.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/gpg-key.html" class="article_tag">gpg key</a>
+            <a href="https://ujuc.github.io/tag/keybaseio.html" class="article_tag">keybase.io</a>
+            <a href="https://ujuc.github.io/tag/keybase.html" class="article_tag">keybase</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p><a href="https://keybase.io/">keybase.io</a> 계정이 있다는 가정하에서 하니, 가입을&nbsp;하자.</p>
-<h3 id="_1">필요한&nbsp;것들</h3>
+        <div class="article_text"><p><a href="https://keybase.io/">keybase.io</a> 계정이 있다는 가정하에서 하니, 가입을 하자.</p>
+<h3 id="_1">필요한 것들</h3>
 <div class="codehilite"><pre><span></span>$ brew install gpg
 $ brew cask install keybase
 $ brew cask install gpg-suite
 </pre></div>
 
 
-<h3 id="gpg"><span class="caps">GPG</span> 키&nbsp;생성</h3>
+<h3 id="gpg">GPG 키 생성</h3>
 <div class="codehilite"><pre><span></span>$ keybase pgp gen --multi
 </pre></div>
 
 
-<h3 id="git">Git 구성에&nbsp;추가</h3>
+<h3 id="git">Git 구성에 추가</h3>
 <div class="codehilite"><pre><span></span>$ gpg --list-secret-keys --keyid-format LONG
 /Users/<span class="o">{</span>username<span class="o">}</span>/.gnupg/pubring.kbx
 ------------------------------
@@ -123,21 +134,21 @@ $ git config --global commit.gpgsign <span class="nb">true</span>
 </pre></div>
 
 
-<h3 id="github-public-gpg">Github 에 Public <span class="caps">GPG</span> 키&nbsp;등록</h3>
-<p><a href="https://github.com/settings/keys">https://github.com/settings/keys</a> 에 접속하여 <strong>New <span class="caps">GPG</span> key</strong> 메뉴&nbsp;선택</p>
-<p>아래 명령어로 GPG키 복사하여&nbsp;붙여넣기</p>
+<h3 id="github-public-gpg">Github 에 Public GPG 키 등록</h3>
+<p><a href="https://github.com/settings/keys">https://github.com/settings/keys</a> 에 접속하여 <strong>New GPG key</strong> 메뉴 선택</p>
+<p>아래 명령어로 GPG키 복사하여 붙여넣기</p>
 <div class="codehilite"><pre><span></span>$ keybase pgp <span class="nb">export</span> -q <span class="o">{</span>keyid<span class="o">}</span> <span class="p">|</span> pbcopy
 </pre></div>
 
 
-<h3 id="git-gui">Git <span class="caps">GUI</span> 툴에서 커밋이 가능하게 옵션&nbsp;추가</h3>
+<h3 id="git-gui">Git GUI 툴에서 커밋이 가능하게 옵션 추가</h3>
 <div class="codehilite"><pre><span></span>$ <span class="nb">echo</span> no-tty &gt;&gt; ~/.gnupg/gpg.conf
 $ git config --global gpg.program <span class="si">${</span><span class="nv">which</span><span class="p"> gpg</span><span class="si">}</span>
 </pre></div>
 
 
-<h3 id="_2">회사 컴퓨터에도 가능하게&nbsp;해두자</h3>
-<p>위에서 말한 프로그램을 설치한 뒤 다음 명령을 이용해서 key를 저장한다. 하나의 키를 가지고 있을 경우에만 다음 명령이 먹힌다. 두개이상이면 다른 모습이&nbsp;보인다고&hellip;</p>
+<h3 id="_2">회사 컴퓨터에도 가능하게 해두자</h3>
+<p>위에서 말한 프로그램을 설치한 뒤 다음 명령을 이용해서 key를 저장한다. 하나의 키를 가지고 있을 경우에만 다음 명령이 먹힌다. 두개이상이면 다른 모습이 보인다고&hellip;</p>
 <div class="codehilite"><pre><span></span>$ keybase pgp <span class="nb">export</span>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -148,24 +159,13 @@ $ keybase pgp <span class="nb">export</span> --secret <span class="p">|</span> g
 </pre></div>
 
 
-<h3 id="_3">참고&nbsp;사이트</h3>
+<h3 id="_3">참고 사이트</h3>
 <ul>
-<li><a href="https://github.com/pstadler/keybase-gpg-github">Set up Keybase.io, <span class="caps">GPG</span> <span class="amp">&amp;</span> Git to sign commits on&nbsp;GitHub</a></li>
-<li><a href="https://aaronparecki.com/2016/07/29/10/git-tower">Signed git commits with&nbsp;Tower</a></li>
+<li><a href="https://github.com/pstadler/keybase-gpg-github">Set up Keybase.io, GPG &amp; Git to sign commits on GitHub</a></li>
+<li><a href="https://aaronparecki.com/2016/07/29/10/git-tower">Signed git commits with Tower</a></li>
 <li><a href="https://www.notion.so/ujuc/GPG-commit-11c88ce0b00f4dc79713b4ce09f62714">simnalamburt/keybase-github.md</a></li>
 </ul></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 18. 10. 26.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/gpg-key.html" class="article_tag">gpg key</a>
-              <a href="https://ujuc.github.io/tag/keybaseio.html" class="article_tag">keybase.io</a>
-              <a href="https://ujuc.github.io/tag/keybase.html" class="article_tag">keybase</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

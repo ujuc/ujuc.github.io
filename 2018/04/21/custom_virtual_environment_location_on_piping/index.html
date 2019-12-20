@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Custom Virtual Environment Location on&nbsp;piping
+    잘 밤에 쓸데없는 생각하기... -   Custom Virtual Environment Location on piping
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,41 +94,41 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Custom Virtual Environment Location on&nbsp;piping</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p><code>pipenv</code>를 사용하면 <code>.env</code> 파일까지 생성해주고 그것을 사용할 수 있도록 해준다.<br>
-그런데&hellip; 이거 참&hellip; 저 깊숙한곳에 만들어주니&hellip; Pycharm에서 <code>env</code>를 쓰려고 찾기시작하니 귀찮다. 그리고 그냥 지워버리면 그&nbsp;밑에있는건&hellip;</p>
-<p>물론 확인할 수 있는 방법이 없는건아니다. <code>pipenv shell</code>로 하면 <code>.env</code> 파일이 존재하는 곳을 찾아서 실행시켜주기도 하는데&hellip;<br>
-내마음에&nbsp;안드니&hellip;</p>
-<p><code>pipenv</code> 에서 사용하는 <code>.env</code>를 내가 원하는 위치에&nbsp;옮겨보자.</p>
-<h3 id="workon_home"><code>WORKON_HOME</code></h3>
-<p>저 깊이 들어가는 <code>.env</code> 폴더를 내가 원하는 위치로&nbsp;옮겨준다.</p>
-<div class="codehilite"><pre><span></span><span class="n">export</span> <span class="n">WORKON_HOME</span><span class="o">=~/</span><span class="p">.</span><span class="n">venvs</span>
-</pre></div>
-
-
-<h3 id="pipenv_venv_in_project"><code>PIPENV_VENV_IN_PROJECT</code></h3>
-<p>프로젝트를 진행하고있는 곳에 <code>.env</code> 파일을 만들어준다.<br>
-이럴때는 <code>.gitignore</code>에서 <code>.env/</code> 파일을 예외로 해주어야된다. 해주는게&nbsp;좋을꺼다.</p>
-<div class="codehilite"><pre><span></span><span class="n">export</span> <span class="n">PIPENV_VENV_IN_PROJECT</span><span class="o">=</span><span class="k">true</span>
-</pre></div>
-
-
-<h4 id="_1">참고</h4>
-<p><a href="https://docs.pipenv.org/advanced/#custom-virtual-environment-location">pipenv - Custom Virtual Environment&nbsp;Location</a></p></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>Custom Virtual Environment Location on piping</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 18. 04. 21.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/pip.html" class="article_tag">pip</a>
-              <a href="https://ujuc.github.io/tag/pipenv.html" class="article_tag">pipenv</a>
-              <a href="https://ujuc.github.io/tag/env.html" class="article_tag">env</a>
-              <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
+            <a href="https://ujuc.github.io/tag/pip.html" class="article_tag">pip</a>
+            <a href="https://ujuc.github.io/tag/pipenv.html" class="article_tag">pipenv</a>
+            <a href="https://ujuc.github.io/tag/env.html" class="article_tag">env</a>
+            <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p><code>pipenv</code>를 사용하면 <code>.env</code> 파일까지 생성해주고 그것을 사용할 수 있도록 해준다.<br>
+그런데&hellip; 이거 참&hellip; 저 깊숙한곳에 만들어주니&hellip; Pycharm에서 <code>env</code>를 쓰려고 찾기시작하니 귀찮다. 그리고 그냥 지워버리면 그 밑에있는건&hellip;</p>
+<p>물론 확인할 수 있는 방법이 없는건아니다. <code>pipenv shell</code>로 하면 <code>.env</code> 파일이 존재하는 곳을 찾아서 실행시켜주기도 하는데&hellip;<br>
+내마음에 안드니&hellip;</p>
+<p><code>pipenv</code> 에서 사용하는 <code>.env</code>를 내가 원하는 위치에 옮겨보자.</p>
+<h3 id="workon_home"><code>WORKON_HOME</code></h3>
+<p>저 깊이 들어가는 <code>.env</code> 폴더를 내가 원하는 위치로 옮겨준다.</p>
+<div class="codehilite"><pre><span></span><span class="err">export WORKON_HOME=~/.venvs</span>
+</pre></div>
+
+
+<h3 id="pipenv_venv_in_project"><code>PIPENV_VENV_IN_PROJECT</code></h3>
+<p>프로젝트를 진행하고있는 곳에 <code>.env</code> 파일을 만들어준다.<br>
+이럴때는 <code>.gitignore</code>에서 <code>.env/</code> 파일을 예외로 해주어야된다. 해주는게 좋을꺼다.</p>
+<div class="codehilite"><pre><span></span><span class="err">export PIPENV_VENV_IN_PROJECT=true</span>
+</pre></div>
+
+
+<h4 id="_1">참고</h4>
+<p><a href="https://docs.pipenv.org/advanced/#custom-virtual-environment-location">pipenv - Custom Virtual Environment Location</a></p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

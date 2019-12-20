@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   [Monitoring] SkwiSSH 설치 및&nbsp;구성
+    잘 밤에 쓸데없는 생각하기... -   [Monitoring] SkwiSSH 설치 및 구성
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,40 +94,52 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>[Monitoring] SkwiSSH 설치 및&nbsp;구성</h1></div>
+        <div class="article_title"><h1>[Monitoring] SkwiSSH 설치 및 구성</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 14. 02. 28.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
+            <a href="https://ujuc.github.io/tag/monitoring.html" class="article_tag">monitoring</a>
+            <a href="https://ujuc.github.io/tag/ssh.html" class="article_tag">ssh</a>
+            <a href="https://ujuc.github.io/tag/django.html" class="article_tag">django</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><h1 id="skwissh"><a href="https://github.com/rsaikali/django-skwissh">SkwiSSH</a></h1>
-<p>오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여&nbsp;구성해봤다.</p>
-<p>코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 <code>setup.py</code>를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가&nbsp;발생한다.</p>
-<p>그리고 외부 서버를 추가하기 위해서 <code>server_ip:22</code>를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게&nbsp;된다.</p>
-<p>아직은 부족한 점이&nbsp;많다.</p>
+<p>오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여 구성해봤다.</p>
+<p>코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 <code>setup.py</code>를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가 발생한다.</p>
+<p>그리고 외부 서버를 추가하기 위해서 <code>server_ip:22</code>를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게 된다.</p>
+<p>아직은 부족한 점이 많다.</p>
 <ul>
-<li>Sensor(명령어를 날려서 값을 받아오는 worker를 의미한다.) 추가하고 변경하려면 변경사항이 적용이 안되는&nbsp;현상.</li>
-<li>Sensor들의 정렬을 임의로 할 수 없다는 것. (오름차순으로&nbsp;구성되어있다.)</li>
-<li>기본 명령어 날리는게 1분간격으로 수정할만한 탭이&nbsp;안보인다.</li>
-<li>기본 DB로 SQLite3 파일을 사용하는데 점점 커지는 모습을 확인 할 수&nbsp;있다.</li>
+<li>Sensor(명령어를 날려서 값을 받아오는 worker를 의미한다.) 추가하고 변경하려면 변경사항이 적용이 안되는 현상.</li>
+<li>Sensor들의 정렬을 임의로 할 수 없다는 것. (오름차순으로 구성되어있다.)</li>
+<li>기본 명령어 날리는게 1분간격으로 수정할만한 탭이 안보인다.</li>
+<li>기본 DB로 SQLite3 파일을 사용하는데 점점 커지는 모습을 확인 할 수 있다.</li>
 <li>bash를 사용할 줄 안다면 정말 쉽게 사용이 가능하다.<ul>
-<li>명령을 SSH로 날리기에 그쪽 서버 콘솔로 리턴값을 넘길 수 있는 프로그램이라면 어떻게든&nbsp;사용하면된다.</li>
+<li>명령을 SSH로 날리기에 그쪽 서버 콘솔로 리턴값을 넘길 수 있는 프로그램이라면 어떻게든 사용하면된다.</li>
 </ul>
 </li>
 </ul>
-<p>이 글에서는 Sensor에 명령어와 파셔 세팅은 작성하지&nbsp;않았다.</p>
-<h2 id="_1">기본&nbsp;구성</h2>
+<p>이 글에서는 Sensor에 명령어와 파셔 세팅은 작성하지 않았다.</p>
+<h2 id="_1">기본 구성</h2>
 <ul>
-<li><span class="caps">OS</span>: Ubuntu 12.04.4&nbsp;server</li>
-<li>Install&nbsp;Package</li>
+<li>OS: Ubuntu 12.04.4 server</li>
+<li>Install Package</li>
 </ul>
 <div class="codehilite"><pre><span></span>$ sudo apt-get install python-pip
 </pre></div>
 
 
-<h3 id="_2">패키지&nbsp;설치</h3>
-<h4 id="django">Django&nbsp;설치</h4>
+<h3 id="_2">패키지 설치</h3>
+<h4 id="django">Django 설치</h4>
 <div class="codehilite"><pre><span></span>$ sudo pip isntall Django
 </pre></div>
 
 
-<h4 id="django-skwissh">Django-skwissh&nbsp;설치</h4>
+<h4 id="django-skwissh">Django-skwissh 설치</h4>
 <div class="codehilite"><pre><span></span>$ sudo apt-get install buid-essential python-dev
 $ git clone https://github.com/rsaikali/django-skwissh.git
 $ <span class="nb">cd</span> django-skwissh
@@ -135,7 +147,7 @@ $ sudo python setup.py install
 </pre></div>
 
 
-<h3 id="django_1">Django&nbsp;설정</h3>
+<h3 id="django_1">Django 설정</h3>
 <div class="codehilite"><pre><span></span>$ django-admin.py startproject mysite
 $ <span class="nb">cd</span> mysite
 $ vi mysql/settings.py
@@ -153,15 +165,15 @@ url<span class="o">(</span><span class="s1">&#39;skwissh&#39;</span>, include<sp
 
 
 <ul>
-<li>데이터 베이스&nbsp;설정</li>
+<li>데이터 베이스 설정</li>
 </ul>
 <div class="codehilite"><pre><span></span>$ python manage.p syncdb
 </pre></div>
 
 
 <ul>
-<li>Skwissh 테스트&nbsp;설치</li>
-<li>이작업을 하면 crontab에 테스크가&nbsp;등록된다.</li>
+<li>Skwissh 테스트 설치</li>
+<li>이작업을 하면 crontab에 테스크가 등록된다.</li>
 </ul>
 <div class="codehilite"><pre><span></span>$ python manage.py installtask
 <span class="c1"># crontab에 등록되었는지 확인</span>
@@ -170,30 +182,18 @@ $ crontab -l
 
 
 <ul>
-<li>Django 서버&nbsp;작동</li>
+<li>Django 서버 작동</li>
 </ul>
 <div class="codehilite"><pre><span></span>$ python mange.py runserver <span class="m">0</span>.0.0.0:8000
 </pre></div>
 
 
-<h2 id="_3">참고&nbsp;페이지</h2>
+<h2 id="_3">참고 페이지</h2>
 <ul>
 <li><a href="https://github.com/rsaikali/django-skwissh">Github</a></li>
 <li><a href="http://rsaikali.github.io/django-skwissh/">Gitpage</a></li>
 </ul></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 14. 02. 28.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
-              <a href="https://ujuc.github.io/tag/monitoring.html" class="article_tag">monitoring</a>
-              <a href="https://ujuc.github.io/tag/ssh.html" class="article_tag">ssh</a>
-              <a href="https://ujuc.github.io/tag/django.html" class="article_tag">django</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

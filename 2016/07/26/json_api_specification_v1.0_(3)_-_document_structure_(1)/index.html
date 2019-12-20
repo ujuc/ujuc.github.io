@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   [번역] <span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0 (3) - Document Structure&nbsp;(1)
+    잘 밤에 쓸데없는 생각하기... -   [번역] JSON API Specification v1.0 (3) - Document Structure (1)
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,42 +94,42 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>[번역] <span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0 (3) - Document Structure&nbsp;(1)</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><h1 id="5-document-structure">5. 문서 구조 (Document&nbsp;Structure)</h1>
-<hr>
-<p>이 세션에서는 미디어 타입 <a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"><code>application/vnd.api+json</code></a>에서 확인가능한 <span class="caps">JSON</span> <span class="caps">API</span> 문서 구조에 대해 설명합니다. <span class="caps">JSON</span> <span class="caps">API</span> 문서는 JavaScript Object Notation (<span class="caps">JSON</span>) <a href="http://tools.ietf.org/html/rfc7159"><span class="caps">RFC7159</span></a>에 정의&nbsp;되어있습니다.</p>
-<blockquote>
-<p>This section describes the structure of a <span class="caps">JSON</span> <span class="caps">API</span> document, which is identified by the media type <a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"><code>application/vnd.api+json</code></a>. <span class="caps">JSON</span> <span class="caps">API</span> documents are defined in JavaScript Object Notation (<span class="caps">JSON</span>) <a href="http://tools.ietf.org/html/rfc7159"><span class="caps">RFC7159</span></a>.</p>
-</blockquote>
-<p>동일한 미디어 타입은 요청과 응답 문서에서 모두 사용되지만, 특정 상황에서는 한 곳에서나 다른 곳에 적용이 가능합니다. 이런 차이를 다음 내용으로&nbsp;부릅니다.</p>
-<blockquote>
-<p>Although the same media type is used for both request and response documents, certain aspects are only applicable to one or the other. These differences are called out&nbsp;below.</p>
-</blockquote>
-<p>별도로 명시하지 않는한, 사양에 정의된 객체는 임의의 추가 멤버를 포함할 수 없습니다. &lt;<strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong>&gt; 클라이언트와 서버 구현시 이 사양에서 인식되지 않는 멤버는 무시합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>Unless otherwise noted, objects defined by this specification <strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong> contain any additional members. Client and server implementations <strong><span class="caps">MUST</span></strong> ignore members not recognized by this&nbsp;specification.</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>Note: 이러한 조건은 사양에 이것저것 더하고 변경을 통한 진화를&nbsp;허용합니다.</p>
-<p>Note: These conditions allow this specification to evolve through additive&nbsp;changes.</p>
-</blockquote></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>[번역] JSON API Specification v1.0 (3) - Document Structure (1)</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 16. 07. 26.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/json.html" class="article_tag">json</a>
-              <a href="https://ujuc.github.io/tag/api.html" class="article_tag">api</a>
-              <a href="https://ujuc.github.io/tag/specification.html" class="article_tag">specification</a>
-              <a href="https://ujuc.github.io/tag/json-api.html" class="article_tag">json api</a>
-              <a href="https://ujuc.github.io/tag/seupeg-munseo.html" class="article_tag">스펙 문서</a>
-              <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
+            <a href="https://ujuc.github.io/tag/json.html" class="article_tag">json</a>
+            <a href="https://ujuc.github.io/tag/api.html" class="article_tag">api</a>
+            <a href="https://ujuc.github.io/tag/specification.html" class="article_tag">specification</a>
+            <a href="https://ujuc.github.io/tag/json-api.html" class="article_tag">json api</a>
+            <a href="https://ujuc.github.io/tag/seupeg-munseo.html" class="article_tag">스펙 문서</a>
+            <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><h1 id="5-document-structure">5. 문서 구조 (Document Structure)</h1>
+<hr>
+<p>이 세션에서는 미디어 타입 <a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"><code>application/vnd.api+json</code></a>에서 확인가능한 JSON API 문서 구조에 대해 설명합니다. JSON API 문서는 JavaScript Object Notation (JSON) <a href="http://tools.ietf.org/html/rfc7159">RFC7159</a>에 정의 되어있습니다.</p>
+<blockquote>
+<p>This section describes the structure of a JSON API document, which is identified by the media type <a href="http://www.iana.org/assignments/media-types/application/vnd.api+json"><code>application/vnd.api+json</code></a>. JSON API documents are defined in JavaScript Object Notation (JSON) <a href="http://tools.ietf.org/html/rfc7159">RFC7159</a>.</p>
+</blockquote>
+<p>동일한 미디어 타입은 요청과 응답 문서에서 모두 사용되지만, 특정 상황에서는 한 곳에서나 다른 곳에 적용이 가능합니다. 이런 차이를 다음 내용으로 부릅니다.</p>
+<blockquote>
+<p>Although the same media type is used for both request and response documents, certain aspects are only applicable to one or the other. These differences are called out below.</p>
+</blockquote>
+<p>별도로 명시하지 않는한, 사양에 정의된 객체는 임의의 추가 멤버를 포함할 수 없습니다. &lt;<strong>MUST NOT</strong>&gt; 클라이언트와 서버 구현시 이 사양에서 인식되지 않는 멤버는 무시합니다. &lt;<strong>MUST</strong>&gt;</p>
+<blockquote>
+<p>Unless otherwise noted, objects defined by this specification <strong>MUST NOT</strong> contain any additional members. Client and server implementations <strong>MUST</strong> ignore members not recognized by this specification.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>Note: 이러한 조건은 사양에 이것저것 더하고 변경을 통한 진화를 허용합니다.</p>
+<p>Note: These conditions allow this specification to evolve through additive changes.</p>
+</blockquote></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

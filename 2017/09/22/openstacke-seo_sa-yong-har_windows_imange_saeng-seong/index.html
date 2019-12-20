@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   OpenStack에서 사용할 Windows imange&nbsp;생성
+    잘 밤에 쓸데없는 생각하기... -   OpenStack에서 사용할 Windows imange 생성
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,53 +94,65 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>OpenStack에서 사용할 Windows imange&nbsp;생성</h1></div>
+        <div class="article_title"><h1>OpenStack에서 사용할 Windows imange 생성</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 17. 09. 22.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
+            <a href="https://ujuc.github.io/tag/nova.html" class="article_tag">nova</a>
+            <a href="https://ujuc.github.io/tag/image.html" class="article_tag">image</a>
+            <a href="https://ujuc.github.io/tag/windows.html" class="article_tag">windows</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><h2 id="_1">기본&nbsp;준비사항</h2>
+        <div class="article_text"><h2 id="_1">기본 준비사항</h2>
 <ul>
-<li>Ubuntu&nbsp;16.04</li>
-<li><a href="https://fedoraproject.org/wiki/Windows_Virtio_Drivers">VirtIO&nbsp;driver</a></li>
-<li><a href="https://cloudbase.it/cloudbase-init">CloudBase&nbsp;init</a></li>
-<li>Windows <span class="caps">CD</span></li>
+<li>Ubuntu 16.04</li>
+<li><a href="https://fedoraproject.org/wiki/Windows_Virtio_Drivers">VirtIO driver</a></li>
+<li><a href="https://cloudbase.it/cloudbase-init">CloudBase init</a></li>
+<li>Windows CD</li>
 </ul>
-<h2 id="virt-manager">virt-manager&nbsp;설치</h2>
+<h2 id="virt-manager">virt-manager 설치</h2>
 <div class="codehilite"><pre><span></span>$ sudo apt install -y kvm virt-manager
 </pre></div>
 
 
 <ul>
-<li>virt-manager 설치 후에 VM을&nbsp;생성한다.</li>
-<li>이미지는 <code>qcow2</code>로&nbsp;만들어야된다.</li>
+<li>virt-manager 설치 후에 VM을 생성한다.</li>
+<li>이미지는 <code>qcow2</code>로 만들어야된다.</li>
 </ul>
-<h2 id="virtio">VirtIO 드라이버&nbsp;설치</h2>
+<h2 id="virtio">VirtIO 드라이버 설치</h2>
 <ul>
-<li>가장&nbsp;중요하다.</li>
-<li>이 작업을 하지 않으면, <span class="caps">OS</span> 부팅할때 에러가&nbsp;뜬다.</li>
+<li>가장 중요하다.</li>
+<li>이 작업을 하지 않으면, OS 부팅할때 에러가 뜬다.</li>
 <li><strong>주의</strong><ul>
-<li>하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지&nbsp;않는다.</li>
-<li>이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록&nbsp;한다.</li>
+<li>하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.</li>
+<li>이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.</li>
 </ul>
 </li>
 </ul>
-<h2 id="cloudbase-init">CloudBase init&nbsp;설치</h2>
+<h2 id="cloudbase-init">CloudBase init 설치</h2>
 <ul>
-<li>Cloud init 파일을 만들어주는&nbsp;프로그램이다.</li>
-<li>그냥 받아서 설치해주면 되는데 맨마지막 <strong>일반화</strong> 라는 항목이&nbsp;있는데.</li>
-<li>이것을 하게되면, Windows 첫 설치시 새로운 계정을 만들 수 있도록 이전 설정을 다날리는 작업을 해주기에 필요하다면 하고 아니라면 체크하지말고 설치를 하도록&nbsp;하자.</li>
+<li>Cloud init 파일을 만들어주는 프로그램이다.</li>
+<li>그냥 받아서 설치해주면 되는데 맨마지막 <strong>일반화</strong> 라는 항목이 있는데.</li>
+<li>이것을 하게되면, Windows 첫 설치시 새로운 계정을 만들 수 있도록 이전 설정을 다날리는 작업을 해주기에 필요하다면 하고 아니라면 체크하지말고 설치를 하도록 하자.</li>
 </ul>
-<h2 id="_2">디바이스 드라이버&nbsp;확인</h2>
+<h2 id="_2">디바이스 드라이버 확인</h2>
 <ul>
-<li>혹시나 없는 드라이버가 있는지 확인하고 하도록&nbsp;하자.</li>
+<li>혹시나 없는 드라이버가 있는지 확인하고 하도록 하자.</li>
 </ul>
-<h2 id="glance-imange">Glance에 Imange&nbsp;업로드</h2>
+<h2 id="glance-imange">Glance에 Imange 업로드</h2>
 <ul>
 <li>Hoizon<ul>
-<li><strong>주의</strong> : <code>/var/tmp</code> 에다가 올린다. 그러니 <code>/var</code> 폴더에 용량이 있는지 확인하고&nbsp;올리도록.</li>
-<li>편하게&nbsp;올리자.</li>
+<li><strong>주의</strong> : <code>/var/tmp</code> 에다가 올린다. 그러니 <code>/var</code> 폴더에 용량이 있는지 확인하고 올리도록.</li>
+<li>편하게 올리자.</li>
 </ul>
 </li>
-<li><span class="caps">CLI</span><ul>
-<li><code>--disk-format</code>은 기본값이 <code>raw</code>이다. 그렇기에 <code>qcow2</code>로 변경해주고&nbsp;올려야된다.</li>
+<li>CLI<ul>
+<li><code>--disk-format</code>은 기본값이 <code>raw</code>이다. 그렇기에 <code>qcow2</code>로 변경해주고 올려야된다.</li>
 </ul>
 </li>
 </ul>
@@ -155,18 +167,6 @@
 <li>https://fedoraproject.org/wiki/Windows_Virtio_Drivers</li>
 </ul></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 17. 09. 22.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
-              <a href="https://ujuc.github.io/tag/nova.html" class="article_tag">nova</a>
-              <a href="https://ujuc.github.io/tag/image.html" class="article_tag">image</a>
-              <a href="https://ujuc.github.io/tag/windows.html" class="article_tag">windows</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

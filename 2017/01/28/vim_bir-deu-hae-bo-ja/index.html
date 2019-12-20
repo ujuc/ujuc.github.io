@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   vim&nbsp;빌드해보자
+    잘 밤에 쓸데없는 생각하기... -   vim 빌드해보자
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,9 +94,22 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>vim&nbsp;빌드해보자</h1></div>
+        <div class="article_title"><h1>vim 빌드해보자</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 17. 01. 28.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/dev.html" class="article_tag">dev</a>
+            <a href="https://ujuc.github.io/tag/vim.html" class="article_tag">vim</a>
+            <a href="https://ujuc.github.io/tag/build.html" class="article_tag">build</a>
+            <a href="https://ujuc.github.io/tag/ubuntu.html" class="article_tag">ubuntu</a>
+            <a href="https://ujuc.github.io/tag/mac.html" class="article_tag">mac</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>vim 플러그인중 jedi-vim 을 사용하는데. 설치된 vim 에서 python 플러그가 켜있지 않아 관련되서 플러그인을 사용하지 않는다는 아래와 같은 에러 메시지를 뿜고&nbsp;있었다.</p>
+        <div class="article_text"><p>vim 플러그인중 jedi-vim 을 사용하는데. 설치된 vim 에서 python 플러그가 켜있지 않아 관련되서 플러그인을 사용하지 않는다는 아래와 같은 에러 메시지를 뿜고 있었다.</p>
 <div class="codehilite"><pre><span></span><span class="n">Error</span><span class="o">:</span> <span class="n">jedi</span><span class="o">-</span><span class="n">vim</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">initialize</span> <span class="n">Python</span><span class="o">:</span> <span class="n">jedi</span><span class="err">#</span><span class="n">setup_py_version</span><span class="o">:</span> <span class="o">\</span>
         <span class="n">Vim</span><span class="o">(</span><span class="n">py3file</span><span class="o">):</span><span class="n">Traceback</span> <span class="o">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="o">):</span> <span class="o">\</span>
         <span class="o">(</span><span class="k">in</span> <span class="kd">function</span> <span class="n">jedi</span><span class="err">#</span><span class="n">init_python</span><span class="o">[</span><span class="mi">3</span><span class="o">]..&lt;</span><span class="n">SNR</span><span class="o">&gt;</span><span class="mi">72</span><span class="n">_init_python</span><span class="o">[</span><span class="mi">50</span><span class="o">]..</span><span class="n">jedi</span>
@@ -106,101 +119,88 @@
 
 <h2 id="ubuntu">Ubuntu</h2>
 <p>회사에서는 ubuntu에서 개발 중이라 vim에 관련된 설정을 추가해주고 해야됐다.<br>
-가끔 열어보는 vim이지만 그래도 정말 급할때는 이거라도 설치해서 사용하니 구성을&nbsp;해놓는걸로..</p>
+가끔 열어보는 vim이지만 그래도 정말 급할때는 이거라도 설치해서 사용하니 구성을 해놓는걸로..</p>
 <ul>
-<li>해당 구성은 <a href="https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source">Building Vim from source</a> 를 이용해서 구성하는 것으로&nbsp;했다.</li>
+<li>해당 구성은 <a href="https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source">Building Vim from source</a> 를 이용해서 구성하는 것으로 했다.</li>
 </ul>
-<p>vim을 빌드하기 전에 dev 패키지를&nbsp;설치해준다.</p>
-<div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">ruby</span><span class="o">-</span><span class="n">dev</span>
+<p>vim을 빌드하기 전에 dev 패키지를 설치해준다.</p>
+<div class="codehilite"><pre><span></span><span class="err">sudo apt install python3-dev ruby-dev</span>
 </pre></div>
 
 
-<p>그리고 기존 패키지로 설치되어 있는 vim을&nbsp;삭제한다.</p>
-<div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">remove</span> <span class="n">vim</span> <span class="n">vim</span><span class="o">-</span><span class="n">runtime</span>
+<p>그리고 기존 패키지로 설치되어 있는 vim을 삭제한다.</p>
+<div class="codehilite"><pre><span></span><span class="err">sudo apt remove vim vim-runtime</span>
 </pre></div>
 
 
-<p>Vim 코드를 받고 컴파일을&nbsp;해주자.</p>
-<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim</span><span class="p">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">vim</span>
-<span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="c1">--with-features=huge --enable-multibyte \</span>
-            <span class="c1">--enable-rubyinterp=yes \</span>
-            <span class="c1">--enable-python3interp=yes \</span>
-            <span class="c1">--enable-cscope</span>
-<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+<p>Vim 코드를 받고 컴파일을 해주자.</p>
+<div class="codehilite"><pre><span></span><span class="err">git clone https://github.com/vim/vim.git</span>
+<span class="err">cd vim</span>
+<span class="err">./configure --with-features=huge --enable-multibyte \</span>
+<span class="err">            --enable-rubyinterp=yes \</span>
+<span class="err">            --enable-python3interp=yes \</span>
+<span class="err">            --enable-cscope</span>
+<span class="err">sudo make install</span>
 </pre></div>
 
 
-<p>설치가 제대로 되었는지 확인하려면 <code>vim --version</code> 으로 확인하면&nbsp;된다.</p>
-<p>시스템 기본으로 구성하려면 아래 명령어를&nbsp;쳐주면된다.</p>
-<div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="k">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="c1">--install /usr/bin/editer editer /usr/bin/vim 1</span>
-<span class="n">sudo</span> <span class="k">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="c1">--set editer /usr/bin/vim</span>
-<span class="n">sudo</span> <span class="k">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="c1">--install /usr/bin/vi vi /usr/bin/vim 1</span>
-<span class="n">sudo</span> <span class="k">update</span><span class="o">-</span><span class="n">alternatives</span> <span class="c1">--set vi /usr/bin/vim</span>
+<p>설치가 제대로 되었는지 확인하려면 <code>vim --version</code> 으로 확인하면 된다.</p>
+<p>시스템 기본으로 구성하려면 아래 명령어를 쳐주면된다.</p>
+<div class="codehilite"><pre><span></span><span class="err">sudo update-alternatives --install /usr/bin/editer editer /usr/bin/vim 1</span>
+<span class="err">sudo update-alternatives --set editer /usr/bin/vim</span>
+<span class="err">sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1</span>
+<span class="err">sudo update-alternatives --set vi /usr/bin/vim</span>
 </pre></div>
 
 
 <h2 id="mac">Mac</h2>
-<p>Mac OS에서는 brew를 사용해서 설치하면된다. 설치할때 옵션을 붙여주면 되는데 그 옵션은 다음에서 처럼 확인이&nbsp;가능하다.</p>
-<div class="codehilite"><pre><span></span><span class="n">brew</span> <span class="k">options</span> <span class="n">vim</span>
-<span class="c1">--with-client-server</span>
-    <span class="n">Enable</span> <span class="n">client</span><span class="o">/</span><span class="n">server</span> <span class="k">mode</span>
-<span class="c1">--with-custom-perl</span>
-    <span class="n">Build</span> <span class="k">with</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">Perl</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">the</span> <span class="n">Homebrew</span> <span class="k">version</span><span class="p">.</span>
-<span class="c1">--with-custom-python</span>
-    <span class="n">Build</span> <span class="k">with</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">Python</span> <span class="mi">2</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">the</span> <span class="n">Homebrew</span> <span class="k">version</span><span class="p">.</span>
-<span class="c1">--with-custom-ruby</span>
-    <span class="n">Build</span> <span class="k">with</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">Ruby</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">the</span> <span class="n">Homebrew</span> <span class="k">version</span><span class="p">.</span>
-<span class="c1">--with-lua</span>
-    <span class="n">Build</span> <span class="n">vim</span> <span class="k">with</span> <span class="n">lua</span> <span class="n">support</span>
-<span class="c1">--with-luajit</span>
-    <span class="n">Build</span> <span class="k">with</span> <span class="n">luajit</span> <span class="n">support</span>
-<span class="c1">--with-mzscheme</span>
-    <span class="n">Build</span> <span class="n">vim</span> <span class="k">with</span> <span class="n">mzscheme</span> <span class="n">support</span>
-<span class="c1">--with-override-system-vi</span>
-    <span class="n">Override</span> <span class="k">system</span> <span class="n">vi</span>
-<span class="c1">--with-python3</span>
-    <span class="n">Build</span> <span class="n">vim</span> <span class="k">with</span> <span class="n">python3</span> <span class="k">instead</span> <span class="k">of</span> <span class="n">python</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">support</span>
-<span class="c1">--with-tcl</span>
-    <span class="n">Build</span> <span class="n">vim</span> <span class="k">with</span> <span class="n">tcl</span> <span class="n">support</span>
-<span class="c1">--without-nls</span>
-    <span class="n">Build</span> <span class="n">vim</span> <span class="k">without</span> <span class="k">National</span> <span class="k">Language</span> <span class="n">Support</span> <span class="p">(</span><span class="n">translated</span> <span class="n">messages</span><span class="p">,</span> <span class="n">keymaps</span><span class="p">)</span>
-<span class="c1">--without-perl</span>
-    <span class="n">Build</span> <span class="n">vim</span> <span class="k">without</span> <span class="n">perl</span> <span class="n">support</span>
-<span class="c1">--without-python</span>
-    <span class="n">Build</span> <span class="n">vim</span> <span class="k">without</span> <span class="n">python</span> <span class="n">support</span>
-<span class="c1">--without-ruby</span>
-    <span class="n">Build</span> <span class="n">vim</span> <span class="k">without</span> <span class="n">ruby</span> <span class="n">support</span>
-<span class="c1">--HEAD</span>
-    <span class="n">Install</span> <span class="n">HEAD</span> <span class="k">version</span>
+<p>Mac OS에서는 brew를 사용해서 설치하면된다. 설치할때 옵션을 붙여주면 되는데 그 옵션은 다음에서 처럼 확인이 가능하다.</p>
+<div class="codehilite"><pre><span></span><span class="err">brew options vim</span>
+<span class="err">--with-client-server</span>
+<span class="err">    Enable client/server mode</span>
+<span class="err">--with-custom-perl</span>
+<span class="err">    Build with a custom Perl instead of the Homebrew version.</span>
+<span class="err">--with-custom-python</span>
+<span class="err">    Build with a custom Python 2 instead of the Homebrew version.</span>
+<span class="err">--with-custom-ruby</span>
+<span class="err">    Build with a custom Ruby instead of the Homebrew version.</span>
+<span class="err">--with-lua</span>
+<span class="err">    Build vim with lua support</span>
+<span class="err">--with-luajit</span>
+<span class="err">    Build with luajit support</span>
+<span class="err">--with-mzscheme</span>
+<span class="err">    Build vim with mzscheme support</span>
+<span class="err">--with-override-system-vi</span>
+<span class="err">    Override system vi</span>
+<span class="err">--with-python3</span>
+<span class="err">    Build vim with python3 instead of python[2] support</span>
+<span class="err">--with-tcl</span>
+<span class="err">    Build vim with tcl support</span>
+<span class="err">--without-nls</span>
+<span class="err">    Build vim without National Language Support (translated messages, keymaps)</span>
+<span class="err">--without-perl</span>
+<span class="err">    Build vim without perl support</span>
+<span class="err">--without-python</span>
+<span class="err">    Build vim without python support</span>
+<span class="err">--without-ruby</span>
+<span class="err">    Build vim without ruby support</span>
+<span class="err">--HEAD</span>
+<span class="err">    Install HEAD version</span>
 </pre></div>
 
 
-<p>이후 설치할때 필요한 옵션에 대해서&nbsp;추가해주면된다.</p>
-<div class="codehilite"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">vim</span> <span class="c1">--with-client-server --with-override-system-vi --with-python3</span>
+<p>이후 설치할때 필요한 옵션에 대해서 추가해주면된다.</p>
+<div class="codehilite"><pre><span></span><span class="err">brew install vim --with-client-server --with-override-system-vi --with-python3</span>
 </pre></div>
 
 
-<p>그리고 이 옵션은 다음번 vim 업데이트에도 반영이 되는 사안이니 한번만 설정해서 설치해주기만&nbsp;하면된다.</p>
+<p>그리고 이 옵션은 다음번 vim 업데이트에도 반영이 되는 사안이니 한번만 설정해서 설치해주기만 하면된다.</p>
 <hr>
 <p>솔직히 리눅스에서는 내가 빌드를 할일이 없다. 빌드를 한다는건 내가 그 프로그램에 대해서 깊게 알고 있어야되고 그것들을 하나씩 변경을가하는 것이라 생각했었고, 몇몇 프로그램은 그정도까지 손을 안되더라도 구성에서 변경이 가능했으니까&hellip;<br>
 이번에 vim 빌드하면서 어쩔 수 없구나를 느끼게되고&hellip;<br>
 brew 참 편한데 옵션이 많지는 않구나라는&hellip; 그리고 저것말고는 딱히 추가할 이유가 없긴해서&hellip;<br>
-linux-brew 에서는 어떻게 될련지 모르겠지만 그것까지는 사용하지 않고 있어서 작성하지&nbsp;않았다.</p></div>
+linux-brew 에서는 어떻게 될련지 모르겠지만 그것까지는 사용하지 않고 있어서 작성하지 않았다.</p></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 17. 01. 28.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/dev.html" class="article_tag">dev</a>
-              <a href="https://ujuc.github.io/tag/vim.html" class="article_tag">vim</a>
-              <a href="https://ujuc.github.io/tag/build.html" class="article_tag">build</a>
-              <a href="https://ujuc.github.io/tag/ubuntu.html" class="article_tag">ubuntu</a>
-              <a href="https://ujuc.github.io/tag/mac.html" class="article_tag">mac</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

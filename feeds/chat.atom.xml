@@ -1,139 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Chat</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/chat.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-12-28T07:47:47+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Adieu 2018, Bienvenue 2019</title><link href="https://ujuc.github.io/2018/12/28/adieu_2018,_bienvenue_2019/" rel="alternate"></link><published>2018-12-28T07:47:47+09:00</published><updated>2018-12-28T07:47:47+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-12-28:/2018/12/28/adieu_2018,_bienvenue_2019/</id><summary type="html">&lt;p&gt;2018년이&amp;nbsp;끝나감&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2017년 작성했던&amp;nbsp;글&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://ujuc.kr/adieu-2017-bienvenue-2018-2cb5ef44c708"&gt;Adieu 2017, Bienvenue 2018 - ujuc&amp;nbsp;thinks&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;벌써 2019년이 다가오고 있어서&amp;nbsp;정리하자.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Chat</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/chat.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2018-12-28T07:47:47+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Adieu 2018, Bienvenue 2019</title><link href="https://ujuc.github.io/2018/12/28/adieu_2018,_bienvenue_2019/" rel="alternate"></link><published>2018-12-28T07:47:47+09:00</published><updated>2018-12-28T07:47:47+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-12-28:/2018/12/28/adieu_2018,_bienvenue_2019/</id><summary type="html">&lt;p&gt;2018년이 끝나감&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2017년 작성했던 글&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ujuc.kr/adieu-2017-bienvenue-2018-2cb5ef44c708"&gt;Adieu 2017, Bienvenue 2018 - ujuc thinks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;벌써 2019년이 다가오고 있어서 정리하자.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="_1"&gt;하려고 했던&amp;nbsp;것&lt;/h2&gt;
+&lt;h2 id="_1"&gt;하려고 했던 것&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;리눅스&amp;nbsp;자격증&lt;/li&gt;
+&lt;li&gt;리눅스 자격증&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;진행을 하지 않았다. 그냥 하고 싶지 않았다고&amp;nbsp;할까&amp;hellip;&lt;/p&gt;
+&lt;p&gt;진행을 하지 않았다. 그냥 하고 싶지 않았다고 할까&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;span class="caps"&gt;SRE&lt;/span&gt; or&amp;nbsp;DevOps&lt;/li&gt;
+&lt;li&gt;SRE or DevOps&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;커리어 방향에 대한 부분이다. 지금은 DevOps&amp;nbsp;쪽인&amp;hellip;&lt;/p&gt;
+&lt;p&gt;커리어 방향에 대한 부분이다. 지금은 DevOps 쪽인&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;일본&amp;nbsp;여행&lt;/li&gt;
+&lt;li&gt;일본 여행&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;제대로 먹지 못했다. 이게 가장 큰&amp;nbsp;이유&amp;hellip;&lt;/p&gt;
+&lt;p&gt;제대로 먹지 못했다. 이게 가장 큰 이유&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;여유 있는&amp;nbsp;삶&lt;/li&gt;
+&lt;li&gt;여유 있는 삶&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;최대한 저녁에 시간을 내어 작업을 진행했었으나, 이제는 아침으로 바꾸려고 한다. 저녁에 시간을 만들면 새벽 늦게 자서 그다음 날 아침에 빌빌대고&amp;nbsp;있었다.&lt;/p&gt;
+&lt;p&gt;최대한 저녁에 시간을 내어 작업을 진행했었으나, 이제는 아침으로 바꾸려고 한다. 저녁에 시간을 만들면 새벽 늦게 자서 그다음 날 아침에 빌빌대고 있었다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;기록&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;기록을 그렇게 꼼꼼하게 하지 못하였다. 추가로 &lt;a href="https://www.notion.so/"&gt;Notion&lt;/a&gt;을 사용하면서 일정이나 내가 보는 것들을 꾸준히 써가고 있다. 온라인 메모와 같이 오프라인 메모도 같이 작성&amp;nbsp;중이다.&lt;/p&gt;
+&lt;p&gt;기록을 그렇게 꼼꼼하게 하지 못하였다. 추가로 &lt;a href="https://www.notion.so/"&gt;Notion&lt;/a&gt;을 사용하면서 일정이나 내가 보는 것들을 꾸준히 써가고 있다. 온라인 메모와 같이 오프라인 메모도 같이 작성 중이다.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="blog_list" src="https://ujuc.github.io/img/2018-12-28/blog_list.png"&gt;&lt;/p&gt;
-&lt;p&gt;블로그 글은 14개의 글&amp;nbsp;작성.&lt;/p&gt;
+&lt;p&gt;블로그 글은 14개의 글 작성.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="2018"&gt;2018년 하였던&amp;nbsp;일&lt;/h2&gt;
+&lt;h2 id="2018"&gt;2018년 하였던 일&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;오사카&amp;nbsp;여행&lt;/li&gt;
+&lt;li&gt;오사카 여행&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;이번엔 여름에 오사카를 갔다 왔다. 뭔가 많이 보려고 노력했었는데도 그렇게 많은 곳을 돌아보고 오지&amp;nbsp;못했다.&lt;/p&gt;
-&lt;p&gt;가장 좋았던 건 오사카 &lt;a href="https://www.kaiyukan.com/language/korean/"&gt;가이유칸 수족관&lt;/a&gt; 가장 큰 태평양 수족에서 두 시간은 멍하게 바라보고 있었던&amp;nbsp;듯&amp;hellip;&lt;/p&gt;
+&lt;p&gt;이번엔 여름에 오사카를 갔다 왔다. 뭔가 많이 보려고 노력했었는데도 그렇게 많은 곳을 돌아보고 오지 못했다.&lt;/p&gt;
+&lt;p&gt;가장 좋았던 건 오사카 &lt;a href="https://www.kaiyukan.com/language/korean/"&gt;가이유칸 수족관&lt;/a&gt; 가장 큰 태평양 수족에서 두 시간은 멍하게 바라보고 있었던 듯&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;운영체제&amp;nbsp;스터디&lt;/li&gt;
+&lt;li&gt;운영체제 스터디&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;운영체제 책을 읽다가 혼자서는 도저히 힘들어서 같이 읽자고 말했으나&amp;hellip; 멤버 참여가 저조하여 흐지부지~ 내년에는 나 혼자라도&amp;nbsp;읽어야겠다.&lt;/p&gt;
+&lt;p&gt;운영체제 책을 읽다가 혼자서는 도저히 힘들어서 같이 읽자고 말했으나&amp;hellip; 멤버 참여가 저조하여 흐지부지~ 내년에는 나 혼자라도 읽어야겠다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;오픈 인프라&amp;nbsp;데이&lt;/li&gt;
+&lt;li&gt;오픈 인프라 데이&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;올해부터 OpenStack Days가 오픈 인프라 데이로 이름을 변경하고 OpenStack 관련은 하루만으로 줄였다. 나머지 하루는 인프라 관련 발표들이었는데. 전부 Kube. OpenStack은 인프라 단으로 내려가 더 이상 새로운 기술이 아닌 걸로 되고 그위에서 작동하는 애플리케이션을 어떤 것들을 사용해서 구축, 운영할 것인가가 나온&amp;nbsp;듯.&lt;/p&gt;
-&lt;p&gt;Kube의 다음번은&amp;nbsp;어디로?&lt;/p&gt;
+&lt;p&gt;올해부터 OpenStack Days가 오픈 인프라 데이로 이름을 변경하고 OpenStack 관련은 하루만으로 줄였다. 나머지 하루는 인프라 관련 발표들이었는데. 전부 Kube. OpenStack은 인프라 단으로 내려가 더 이상 새로운 기술이 아닌 걸로 되고 그위에서 작동하는 애플리케이션을 어떤 것들을 사용해서 구축, 운영할 것인가가 나온 듯.&lt;/p&gt;
+&lt;p&gt;Kube의 다음번은 어디로?&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Go lang&amp;nbsp;공부&lt;/li&gt;
+&lt;li&gt;Go lang 공부&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Go lang을 공부하고 싶었는데. 거금 들여 지른 &lt;a href="https://www.safaribooksonline.com"&gt;safaribooks&lt;/a&gt; 에서 가장 최근 책을 하나 잡아서 예제와 문재를 한장씩 풀어나가고 있다. 중간에 일에 치여서 제대로 못한 것도 있지만 한번 끝까지 읽어나가 보려고&amp;nbsp;한다.&lt;/p&gt;
+&lt;p&gt;Go lang을 공부하고 싶었는데. 거금 들여 지른 &lt;a href="https://www.safaribooksonline.com"&gt;safaribooks&lt;/a&gt; 에서 가장 최근 책을 하나 잡아서 예제와 문재를 한장씩 풀어나가고 있다. 중간에 일에 치여서 제대로 못한 것도 있지만 한번 끝까지 읽어나가 보려고 한다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/ujuc/get-programming-with-go"&gt;ujuc/get-programming-with-go&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;번역&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;정작 OpenStack 번역은 얼마 못한&amp;nbsp;듯.&lt;/p&gt;
+&lt;p&gt;정작 OpenStack 번역은 얼마 못한 듯.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="zanata_activity" src="https://ujuc.github.io/img/2018-12-28/zanata_activity.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://translate.openstack.org/profile/view/ujuc?dswid=5951"&gt;Zanata:&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;다른 번역한&amp;nbsp;것들&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/iamkun/dayjs/pull/206"&gt;Add Korean locale by ujuc · Pull Request #206 ·&amp;nbsp;iamkun/dayjs&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/toml-lang/toml/pull/575"&gt;Append the korean translation of v0.5.0 by ujuc · Pull Request #575 ·&amp;nbsp;toml-lang/toml&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://ujuc.github.io/2018/05/24/design_of_ql/"&gt;잘 밤에 쓸데없는 생각하기&amp;hellip; - Design&amp;nbsp;of&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://ujuc.github.io/2018/11/17/psr-1:_basic_coding_standard/"&gt;잘 밤에 쓸데없는 생각하기&amp;hellip;&amp;nbsp;-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;다른 번역한 것들&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/iamkun/dayjs/pull/206"&gt;Add Korean locale by ujuc · Pull Request #206 · iamkun/dayjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/toml-lang/toml/pull/575"&gt;Append the korean translation of v0.5.0 by ujuc · Pull Request #575 · toml-lang/toml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ujuc.github.io/2018/05/24/design_of_ql/"&gt;잘 밤에 쓸데없는 생각하기&amp;hellip; - Design of&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ujuc.github.io/2018/11/17/psr-1:_basic_coding_standard/"&gt;잘 밤에 쓸데없는 생각하기&amp;hellip; -&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;이직&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;9월까지 작년에 다녔던 회사를 그만두고, 10월에 새로운 회사로&amp;nbsp;이직.&lt;/p&gt;
-&lt;p&gt;인프라를 담당하지만 모든 잡무를 담당하는 잡부&amp;nbsp;2로&amp;hellip;&lt;/p&gt;
+&lt;p&gt;9월까지 작년에 다녔던 회사를 그만두고, 10월에 새로운 회사로 이직.&lt;/p&gt;
+&lt;p&gt;인프라를 담당하지만 모든 잡무를 담당하는 잡부 2로&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Vim!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;처음 리눅스를 배울때 사용했었던 Vim. 좀더 많은 사용을 위해서 그리고 많이 사용하려고 기부를 하였다. 내년에도&amp;nbsp;해야지&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.facebook.com/ujuckr/posts/10205404571549671"&gt;Thomas Sungjin&amp;nbsp;Kang&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;처음 리눅스를 배울때 사용했었던 Vim. 좀더 많은 사용을 위해서 그리고 많이 사용하려고 기부를 하였다. 내년에도 해야지&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.facebook.com/ujuckr/posts/10205404571549671"&gt;Thomas Sungjin Kang&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="2019-todo"&gt;2019년에 할 일?&amp;nbsp;Todo&lt;/h2&gt;
-&lt;p&gt;안되면 뭐 어쩔 수&amp;nbsp;없고&amp;hellip;&lt;/p&gt;
+&lt;h2 id="2019-todo"&gt;2019년에 할 일? Todo&lt;/h2&gt;
+&lt;p&gt;안되면 뭐 어쩔 수 없고&amp;hellip;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;일본&amp;nbsp;여행&lt;/li&gt;
+&lt;li&gt;일본 여행&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;이번에는 다른 곳으로!&amp;nbsp;수족관으로!&lt;/p&gt;
+&lt;p&gt;이번에는 다른 곳으로! 수족관으로!&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Go lang&amp;nbsp;익숙&lt;/li&gt;
+&lt;li&gt;Go lang 익숙&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Go lang을 가지고서 프로덕션을 만들던가 아니면 내가 사용할 무언가를 만들어봐야 할듯하다. Python을 이용해서 한번 만들어봤는데. 하기 전에 해야 될 일이&amp;hellip;&amp;nbsp;많다.&lt;/p&gt;
-&lt;p&gt;서비스 체계를 만드는데 적은 비용을 들여서 작업할 수 있는 기회를 만드는 게 필요할&amp;nbsp;듯.&lt;/p&gt;
+&lt;p&gt;Go lang을 가지고서 프로덕션을 만들던가 아니면 내가 사용할 무언가를 만들어봐야 할듯하다. Python을 이용해서 한번 만들어봤는데. 하기 전에 해야 될 일이&amp;hellip; 많다.&lt;/p&gt;
+&lt;p&gt;서비스 체계를 만드는데 적은 비용을 들여서 작업할 수 있는 기회를 만드는 게 필요할 듯.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Kube&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;드디어 머릿속에 Kube의 계념이 필요한 시점이 왔다. 회사에서 사용하는 서비스가 컨테이너 기반으로 작업을 해야 되는 시점이라 공부를 진행해야&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;드디어 머릿속에 Kube의 계념이 필요한 시점이 왔다. 회사에서 사용하는 서비스가 컨테이너 기반으로 작업을 해야 되는 시점이라 공부를 진행해야 된다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;인프라&amp;nbsp;인프라&amp;hellip;&lt;/li&gt;
+&lt;li&gt;인프라 인프라&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;서버리스가 맞는가? 컨테이너가 맞는가&amp;hellip; 보고 있으면 서버리스로 슬금슬금 넘어가긴&amp;nbsp;하겠지..?&lt;/p&gt;
+&lt;p&gt;서버리스가 맞는가? 컨테이너가 맞는가&amp;hellip; 보고 있으면 서버리스로 슬금슬금 넘어가긴 하겠지..?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;기록&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Notion을 이용해서 하루의 기록을 남기고 있고, 블로그를 정리하는데 하나로 모으고 있다. 나중에 사용하고 있는 것에 대해서 말할 기회가 더 있을련지 모르겠으나, 더 많은 내용들을 기록하고 정리하는 것이 필요할&amp;nbsp;듯.&lt;/p&gt;
-&lt;p&gt;평생의 숙제인&amp;nbsp;기록.&lt;/p&gt;
+&lt;p&gt;Notion을 이용해서 하루의 기록을 남기고 있고, 블로그를 정리하는데 하나로 모으고 있다. 나중에 사용하고 있는 것에 대해서 말할 기회가 더 있을련지 모르겠으나, 더 많은 내용들을 기록하고 정리하는 것이 필요할 듯.&lt;/p&gt;
+&lt;p&gt;평생의 숙제인 기록.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;정리 및&amp;nbsp;사용&lt;/li&gt;
+&lt;li&gt;정리 및 사용&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;기록한 것들을 정리하고 사용할 수 있는 방안도 마련해야 될 듯. 그러나 쉽지&amp;nbsp;않다.&lt;/p&gt;
+&lt;p&gt;기록한 것들을 정리하고 사용할 수 있는 방안도 마련해야 될 듯. 그러나 쉽지 않다.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="_2"&gt;블로그&amp;nbsp;정산&lt;/h2&gt;
+&lt;h2 id="_2"&gt;블로그 정산&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="blog_ga_1" src="https://ujuc.github.io/img/2018-12-28/blog_ga_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="blog_ga_2" src="https://ujuc.github.io/img/2018-12-28/blog_ga_2.png"&gt;&lt;/p&gt;
-&lt;p&gt;git-flow-github-flow-gitlab-flow 는&amp;hellip;&amp;nbsp;압도적이구만..;;;&lt;/p&gt;</content><category term="회고"></category><category term="retrospective"></category></entry><entry><title>Commnets in Markdown</title><link href="https://ujuc.github.io/2017/07/20/commnets_in_markdown/" rel="alternate"></link><published>2017-07-20T16:33:15+09:00</published><updated>2017-07-20T16:33:15+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-20:/2017/07/20/commnets_in_markdown/</id><summary type="html">&lt;p&gt;Markdown에서는 comment는 어떻게&amp;nbsp;해야되지&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt; 스팩 문서를 다시 번역하면서 꽤나 긴 markdown 문서를 작성해야되는 경우가 발생했다. 그러다보니&amp;hellip; 코멘트로 나눔이 필요한 경우가&amp;nbsp;발생!&lt;/p&gt;
-&lt;p&gt;구글에서 간단하게 검색하니 &lt;a href="https://stackoverflow.com/questions/4823468/comments-in-markdown"&gt;Comments in Markdown - Stackoverflow&lt;/a&gt; 라는 글이 하나&amp;nbsp;발견&amp;hellip;&lt;/p&gt;
-&lt;p&gt;코멘트 남기는 방법은 다음처럼 구성하면&amp;nbsp;된다.&lt;/p&gt;
+&lt;p&gt;git-flow-github-flow-gitlab-flow 는&amp;hellip; 압도적이구만..;;;&lt;/p&gt;</content><category term="Chat"></category><category term="회고"></category><category term="retrospective"></category></entry><entry><title>Commnets in Markdown</title><link href="https://ujuc.github.io/2017/07/20/commnets_in_markdown/" rel="alternate"></link><published>2017-07-20T16:33:15+09:00</published><updated>2017-07-20T16:33:15+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-07-20:/2017/07/20/commnets_in_markdown/</id><summary type="html">&lt;p&gt;Markdown에서는 comment는 어떻게 해야되지&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;JSON API 스팩 문서를 다시 번역하면서 꽤나 긴 markdown 문서를 작성해야되는 경우가 발생했다. 그러다보니&amp;hellip; 코멘트로 나눔이 필요한 경우가 발생!&lt;/p&gt;
+&lt;p&gt;구글에서 간단하게 검색하니 &lt;a href="https://stackoverflow.com/questions/4823468/comments-in-markdown"&gt;Comments in Markdown - Stackoverflow&lt;/a&gt; 라는 글이 하나 발견&amp;hellip;&lt;/p&gt;
+&lt;p&gt;코멘트 남기는 방법은 다음처럼 구성하면 된다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;//&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;개인적 취향은 두번째가 좋아보인다. 그리고 긴 코멘트가 필요하다면&amp;hellip; &lt;span class="caps"&gt;HTML&lt;/span&gt; 코멘트 태그를 사용해도&amp;nbsp;좋을듯.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;!&lt;/span&gt;&lt;span class="c1"&gt;---&lt;/span&gt;
-&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="k"&gt;comment&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="c1"&gt;---&amp;gt;&lt;/span&gt;
+&lt;p&gt;개인적 취향은 두번째가 좋아보인다. 그리고 긴 코멘트가 필요하다면&amp;hellip; HTML 코멘트 태그를 사용해도 좋을듯.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;&amp;lt;!---&lt;/span&gt;
+&lt;span class="err"&gt;This is comment.&lt;/span&gt;
+&lt;span class="err"&gt;---&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;오늘은&amp;nbsp;여기까지&amp;hellip;&lt;/p&gt;</content><category term="markdown"></category><category term="comment"></category><category term="문법"></category></entry><entry><title>백업 완료</title><link href="https://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-04-03T00:57:00+09:00</published><updated>2015-04-03T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:/2015/04/03/백업-완료/</id><summary type="html">&lt;p class="first last"&gt;이제 다시 시작. Jekyll &amp;gt; Octopress &amp;gt; Pelican&amp;nbsp;정착기.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지&amp;#8230; 놀면서 개발에대한 이야기를 써보자 였다.
-그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축&amp;#8230; 그러나 얼마 가지 못해
-Jekyll이 제대로 돌아가지 못하는 상황에&amp;#8230; &lt;span class="caps"&gt;OTL&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나&amp;#8230; 뭔놈의 테마가 마음에 드는넘이
-없는지&amp;#8230; 바꾸는데만 일주일&amp;#8230; 아&amp;#8230;&amp;nbsp;안해&amp;#8230;&lt;/p&gt;
+&lt;p&gt;오늘은 여기까지&amp;hellip;&lt;/p&gt;</content><category term="Chat"></category><category term="markdown"></category><category term="comment"></category><category term="문법"></category></entry><entry><title>백업 완료</title><link href="https://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-04-03T00:57:00+09:00</published><updated>2015-04-03T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:/2015/04/03/백업-완료/</id><summary type="html">&lt;p class="first last"&gt;이제 다시 시작. Jekyll &amp;gt; Octopress &amp;gt; Pelican 정착기.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지... 놀면서 개발에대한 이야기를 써보자 였다.
+그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축... 그러나 얼마 가지 못해
+Jekyll이 제대로 돌아가지 못하는 상황에... OTL&lt;/p&gt;
+&lt;p&gt;그래서 결국 &lt;a class="reference external" href="http://octopress.org/"&gt;Octopress&lt;/a&gt; 가 쉽다고 하여 갔으나... 뭔놈의 테마가 마음에 드는넘이
+없는지... 바꾸는데만 일주일... 아... 안해...&lt;/p&gt;
 &lt;p&gt;그래서 이번엔 OpenStack 문서화팀에서 문서들을 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText"&gt;reStructuredText&lt;/a&gt; 형식으로 작성하여
-Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서&amp;#8230; 배워봐야지 하면서 Python으로
+Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서... 배워봐야지 하면서 Python으로
 정적 페이지를 만들어주는 &lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt; 으로 스타표시는 오래됐는데 인자사
-사용해볼꺼라고&amp;nbsp;작업을&amp;#8230;&lt;/p&gt;
-&lt;p&gt;그런데 글쓰기 편하고 설정하기가 쉽다. Python을 좀 했다고 그런건지&amp;#8230; 기본
-설정들을 Make 파일로 명령을 내릴 수 있도록 구성을 해놔서 그런지&amp;#8230; 직접 명령어를
-칠필요도 없어서&amp;#8230; 그렇다고 내가 작성할 필요도 없는거고 (가장&amp;nbsp;크다.).&lt;/p&gt;
+사용해볼꺼라고 작업을...&lt;/p&gt;
+&lt;p&gt;그런데 글쓰기 편하고 설정하기가 쉽다. Python을 좀 했다고 그런건지... 기본
+설정들을 Make 파일로 명령을 내릴 수 있도록 구성을 해놔서 그런지... 직접 명령어를
+칠필요도 없어서... 그렇다고 내가 작성할 필요도 없는거고 (가장 크다.).&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt; 설정법에 대해서는 주말에 작성해야겠다. 이것저것 설정이나 추가하거나
-손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이&amp;nbsp;넣어놓는건지.;;;&lt;/p&gt;
-&lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시&amp;nbsp;만들었&amp;#8230;&lt;/p&gt;
-&lt;p&gt;이제 산적해있는 것들이나 빨리&amp;nbsp;써야겠다.&lt;/p&gt;
-</content><category term="백업완료"></category></entry><entry><title>단장 완료</title><link href="https://ujuc.github.io/2015/01/31/%EB%8B%A8%EC%9E%A5-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-01-31T04:10:00+09:00</published><updated>2015-03-30T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-01-31:/2015/01/31/단장-완료/</id><summary type="html">&lt;p class="first last"&gt;jekyll 로 변경하면서&amp;nbsp;작성.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;간단하게 작업을 진행해서 뭐 넣은 것 없는 그런페이지가&amp;nbsp;만들어진듯&amp;#8230;&lt;/p&gt;
-&lt;p&gt;여기다 아무리 무겁게 글을 써도 불러오는 속도가 빠르니 뭐 간다낳게 작성하기는&amp;nbsp;좋을듯.&lt;/p&gt;
-</content><category term="시작"></category></entry></feed>
+손대야될 것들이 이것저것. 그리고 이놈의 파이썬 개발자들은 옵션을 뭐이리도 많이
+넣어놓는건지.;;;&lt;/p&gt;
+&lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시 만들었...&lt;/p&gt;
+&lt;p&gt;이제 산적해있는 것들이나 빨리 써야겠다.&lt;/p&gt;
+</content><category term="Chat"></category><category term="백업완료"></category></entry><entry><title>단장 완료</title><link href="https://ujuc.github.io/2015/01/31/%EB%8B%A8%EC%9E%A5-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-01-31T04:10:00+09:00</published><updated>2015-03-30T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-01-31:/2015/01/31/단장-완료/</id><summary type="html">&lt;p class="first last"&gt;jekyll 로 변경하면서 작성.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;간단하게 작업을 진행해서 뭐 넣은 것 없는 그런페이지가 만들어진듯...&lt;/p&gt;
+&lt;p&gt;여기다 아무리 무겁게 글을 써도 불러오는 속도가 빠르니 뭐 간다낳게 작성하기는
+좋을듯.&lt;/p&gt;
+</content><category term="Chat"></category><category term="시작"></category></entry></feed>

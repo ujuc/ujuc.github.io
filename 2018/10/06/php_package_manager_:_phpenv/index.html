@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   <span class="caps">PHP</span> Package Manager :&nbsp;phpenv
+    잘 밤에 쓸데없는 생각하기... -   PHP Package Manager : phpenv
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,55 +94,66 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1><span class="caps">PHP</span> Package Manager :&nbsp;phpenv</h1></div>
+        <div class="article_title"><h1>PHP Package Manager : phpenv</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 18. 10. 06.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/php.html" class="article_tag">php</a>
+            <a href="https://ujuc.github.io/tag/phpenv.html" class="article_tag">phpenv</a>
+            <a href="https://ujuc.github.io/tag/env.html" class="article_tag">env</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><h2 id="_1">들어가는&nbsp;말</h2>
-<p>PHP로 개발을 해야되는 일이 생겼다. 버전을 7.x대로 써야되는데&hellip; 7.2는 아닌거같으니&hellip; 뭔가 버전을 따로 구성해서 진행하고&nbsp;싶다.!</p>
-<h2 id="php-package-manager"><span class="caps">PHP</span> Package&nbsp;Manager</h2>
+        <div class="article_text"><h2 id="_1">들어가는 말</h2>
+<p>PHP로 개발을 해야되는 일이 생겼다. 버전을 7.x대로 써야되는데&hellip; 7.2는 아닌거같으니&hellip; 뭔가 버전을 따로 구성해서 진행하고 싶다.!</p>
+<h2 id="php-package-manager">PHP Package Manager</h2>
 <p><a href="https://github.com/phpenv/phpenv">github.com/phpenv/phpemv</a></p>
 <p>버전 관리를 위한 부분.<br>
-사용법은 <code>rbenv</code>, <code>pyenv</code> 와 동일하다. (그렇다보니 shell script로만&nbsp;작성이되어있다.)</p>
+사용법은 <code>rbenv</code>, <code>pyenv</code> 와 동일하다. (그렇다보니 shell script로만 작성이되어있다.)</p>
 <h3 id="_2">설치</h3>
-<h4 id="github-checkout"><a href="https://github.com/phpenv/phpenv#installation">Github&nbsp;Checkout</a></h4>
-<div class="codehilite"><pre><span></span>$ <span class="nv">git</span> <span class="nv">clone</span> <span class="nv">git</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">phpenv</span><span class="o">/</span><span class="nv">phpenv</span>.<span class="nv">git</span> <span class="o">~/</span>.<span class="nv">phpenv</span>
-$ <span class="nv">echo</span> <span class="s1">&#39;</span><span class="s">export PATH=&quot;$HOME/.phpenv/bin:$PATH&quot;</span><span class="s1">&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span>.<span class="nv">bash_profile</span>
-$ <span class="nv">echo</span> <span class="s1">&#39;</span><span class="s">eval &quot;$(phpenv init -)&quot;</span><span class="s1">&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span>.<span class="nv">bash_profile</span>
-$ <span class="k">exec</span> $<span class="nv">SHELL</span> <span class="o">-</span><span class="nv">l</span>
+<h4 id="github-checkout"><a href="https://github.com/phpenv/phpenv#installation">Github Checkout</a></h4>
+<div class="codehilite"><pre><span></span>$ git clone git://github.com/phpenv/phpenv.git ~/.phpenv
+$ <span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.phpenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+$ <span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(phpenv init -)&quot;&#39;</span> &gt;&gt; ~/.bash_profile
+$ <span class="nb">exec</span> <span class="nv">$SHELL</span> -l
 </pre></div>
 
 
 <h4 id="phpenv-installer"><a href="https://github.com/phpenv/phpenv-installer">phpenv-installer</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="p">.</span><span class="n">githubusercontent</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">phpenv</span><span class="o">/</span><span class="n">phpenv</span><span class="o">-</span><span class="n">installer</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">phpenv</span><span class="o">-</span><span class="n">installer</span> <span class="o">|</span> <span class="n">bash</span>
+<div class="codehilite"><pre><span></span><span class="err">curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash</span>
 </pre></div>
 
 
-<p>이걸 설치하면 <code>php-build/php-build</code>, <code>madumlao/phpenv-aliases</code>, <code>ngyuki/phpenv-composer</code>가 자동으로&nbsp;설치된다.</p>
-<h3 id="php"><span class="caps">PHP</span>&nbsp;설치</h3>
+<p>이걸 설치하면 <code>php-build/php-build</code>, <code>madumlao/phpenv-aliases</code>, <code>ngyuki/phpenv-composer</code>가 자동으로 설치된다.</p>
+<h3 id="php">PHP 설치</h3>
 <div class="codehilite"><pre><span></span>$ phpenv install --list
 $ phpenv install <span class="o">{</span>php_version<span class="o">}</span>
 </pre></div>
 
 
-<h3 id="php_1"><span class="caps">PHP</span> 설치시&nbsp;에러</h3>
+<h3 id="php_1">PHP 설치시 에러</h3>
 <ul>
-<li>Mac os error <a href="https://qiita.com/maosanhioro/items/82698a8bdf6b7694ad36">해결&nbsp;문서</a></li>
+<li>Mac os error <a href="https://qiita.com/maosanhioro/items/82698a8bdf6b7694ad36">해결 문서</a></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="o">-----------------</span>
-<span class="o">|</span>  <span class="nv">BUILD</span> <span class="nv">ERROR</span>  <span class="o">|</span>
-<span class="o">-----------------</span>
+<div class="codehilite"><pre><span></span><span class="c1">-----------------</span>
+<span class="o">|</span>  <span class="n">BUILD</span> <span class="n">ERROR</span>  <span class="o">|</span>
+<span class="c1">-----------------</span>
 
-<span class="nv">Here</span> <span class="nv">are</span> <span class="nv">the</span> <span class="nv">last</span> <span class="mi">10</span> <span class="nv">lines</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">log</span>:
+<span class="n">Here</span> <span class="k">are</span> <span class="n">the</span> <span class="k">last</span> <span class="mi">10</span> <span class="n">lines</span> <span class="k">from</span> <span class="n">the</span> <span class="n">log</span><span class="p">:</span>
 
-<span class="o">-----------------------------------------</span>
-<span class="nv">configure</span>: <span class="nv">WARNING</span>: <span class="nv">This</span> <span class="nv">bison</span> <span class="nv">version</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">supported</span> <span class="k">for</span> <span class="nv">regeneration</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">Zend</span><span class="o">/</span><span class="nv">PHP</span> <span class="nv">parsers</span> <span class="ss">(</span><span class="nv">found</span>: <span class="mi">2</span>.<span class="mi">3</span>, <span class="nv">min</span>: <span class="mi">204</span>, <span class="nv">excluded</span>: <span class="ss">)</span>.
-<span class="nv">configure</span>: <span class="nv">WARNING</span>: <span class="nv">You</span> <span class="nv">will</span> <span class="nv">need</span> <span class="nv">re2c</span> <span class="mi">0</span>.<span class="mi">13</span>.<span class="mi">4</span> <span class="nv">or</span> <span class="nv">later</span> <span class="k">if</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">regenerate</span> <span class="nv">PHP</span> <span class="nv">parsers</span>.
-<span class="nv">configure</span>: <span class="nv">error</span>: <span class="nv">Cannot</span> <span class="nv">find</span> <span class="nv">OpenSSL</span><span class="s1">&#39;</span><span class="s">s &lt;evp.h&gt;</span>
-<span class="o">-----------------------------------------</span>
+<span class="c1">-----------------------------------------</span>
+<span class="n">configure</span><span class="p">:</span> <span class="n">WARNING</span><span class="p">:</span> <span class="n">This</span> <span class="n">bison</span> <span class="k">version</span> <span class="k">is</span> <span class="k">not</span> <span class="n">supported</span> <span class="k">for</span> <span class="n">regeneration</span> <span class="k">of</span> <span class="n">the</span> <span class="n">Zend</span><span class="o">/</span><span class="n">PHP</span> <span class="n">parsers</span> <span class="p">(</span><span class="k">found</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span> <span class="k">min</span><span class="p">:</span> <span class="mi">204</span><span class="p">,</span> <span class="n">excluded</span><span class="p">:</span> <span class="p">).</span>
+<span class="n">configure</span><span class="p">:</span> <span class="n">WARNING</span><span class="p">:</span> <span class="n">You</span> <span class="n">will</span> <span class="n">need</span> <span class="n">re2c</span> <span class="mi">0</span><span class="p">.</span><span class="mi">13</span><span class="p">.</span><span class="mi">4</span> <span class="k">or</span> <span class="n">later</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="k">to</span> <span class="n">regenerate</span> <span class="n">PHP</span> <span class="n">parsers</span><span class="p">.</span>
+<span class="n">configure</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">OpenSSL</span><span class="err">&#39;</span><span class="n">s</span> <span class="o">&lt;</span><span class="n">evp</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
+<span class="c1">-----------------------------------------</span>
 </pre></div>
 
 
 <ul>
-<li>추가 설치&nbsp;패키지</li>
+<li>추가 설치 패키지</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">bison</span><span class="mf">@2.7</span>
 <span class="err">$</span> <span class="n">brew</span> <span class="n">link</span> <span class="n">bison</span><span class="mf">@2.7</span> <span class="o">--</span><span class="n">force</span>
@@ -163,26 +174,15 @@ $ phpenv install <span class="o">{</span>php_version<span class="o">}</span>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="n">xcode</span><span class="o">-</span><span class="k">select</span> <span class="c1">--install</span>
+<div class="codehilite"><pre><span></span><span class="err">xcode-select --install</span>
 </pre></div>
 
 
-<p>모하비에서는&nbsp;안된다.</p>
-<h2 id="_3">나오는&nbsp;말</h2>
+<p>모하비에서는 안된다.</p>
+<h2 id="_3">나오는 말</h2>
 <p><code>phpenv</code>로는 설치가 안되서&hellip; <code>brew</code>로 그냥 설치&hellip;<br>
-<code>brew</code> 로 7.2 버전이랑 7.1 버전을 설치해두고 PhpStorm 에서 둘다 잡아두면 두개다 쓸수있지뭐&hellip; 마이너까지만&nbsp;신경쓰면되니.</p></div>
+<code>brew</code> 로 7.2 버전이랑 7.1 버전을 설치해두고 PhpStorm 에서 둘다 잡아두면 두개다 쓸수있지뭐&hellip; 마이너까지만 신경쓰면되니.</p></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 18. 10. 06.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/php.html" class="article_tag">php</a>
-              <a href="https://ujuc.github.io/tag/phpenv.html" class="article_tag">phpenv</a>
-              <a href="https://ujuc.github.io/tag/env.html" class="article_tag">env</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

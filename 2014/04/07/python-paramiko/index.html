@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   [Python]&nbsp;Paramiko
+    잘 밤에 쓸데없는 생각하기... -   [Python] Paramiko
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,17 +94,29 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>[Python]&nbsp;Paramiko</h1></div>
+        <div class="article_title"><h1>[Python] Paramiko</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 14. 04. 07.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
+            <a href="https://ujuc.github.io/tag/paramiko.html" class="article_tag">paramiko</a>
+            <a href="https://ujuc.github.io/tag/ssh.html" class="article_tag">ssh</a>
+            <a href="https://ujuc.github.io/tag/lib.html" class="article_tag">lib</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>한글로된 글이 없어서 우선 내가 알아낸 곳과 사용한 곳까지 작성을&nbsp;해둘려고한다.</p>
+        <div class="article_text"><p>한글로된 글이 없어서 우선 내가 알아낸 곳과 사용한 곳까지 작성을 해둘려고한다.</p>
 <h1 id="paramiko"><a href="http://www.paramiko.org/">Paramiko</a></h1>
 <ul>
-<li>Python 2.6+, 3.3+에서 사용할 수 있는 SSHv2&nbsp;구현체이다.</li>
-<li>물론 Client, Server를 둘다 사용이&nbsp;가능하다.</li>
-<li>저 레벨 암호화를 위해서 <a href="http://pycrypto.org/">PyCrypro</a>(이부분은 Python C 확장으로 구현)를 제외한 나머지 부분들은 전부 Python으로만&nbsp;구현되어있다.</li>
+<li>Python 2.6+, 3.3+에서 사용할 수 있는 SSHv2 구현체이다.</li>
+<li>물론 Client, Server를 둘다 사용이 가능하다.</li>
+<li>저 레벨 암호화를 위해서 <a href="http://pycrypto.org/">PyCrypro</a>(이부분은 Python C 확장으로 구현)를 제외한 나머지 부분들은 전부 Python으로만 구현되어있다.</li>
 </ul>
 <h2 id="_1">사용</h2>
-<h3 id="1">1. 사용&nbsp;예제</h3>
+<h3 id="1">1. 사용 예제</h3>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">paramiko</span>
 
 <span class="n">ssh</span> <span class="o">=</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">SSHClient</span><span class="p">()</span>
@@ -112,12 +124,12 @@
 </pre></div>
 
 
-<h3 id="2-host-keys">2. Host&nbsp;Keys</h3>
+<h3 id="2-host-keys">2. Host Keys</h3>
 <ul>
-<li>첫 접근시 받아오는 Host Keys가 있다. 이것을 받아서 저장하던 날려먹던 상관은 하지 않지만 있어야지 접근이&nbsp;가능하다.</li>
-<li>처음 <code>ssh</code>로 접근시 무의식적으로 <code>yes</code>를 누르는&nbsp;그것!!</li>
-<li>그러다보니 여기서도 그것에 관련된 내용을 사용할 수&nbsp;있다. </li>
-<li><code>set_missing_host_key_policy(policy)</code>를 이용하여 host keys를 받아 저장할 것인지 아닌지를 판단하게 되는데. 기본값은 <code>RejectPolicy</code>로 되어있으며, <code>yes</code>를 받아와야한다면 <code>AutoAddPolicy</code>를 사용하도록&nbsp;한다.</li>
+<li>첫 접근시 받아오는 Host Keys가 있다. 이것을 받아서 저장하던 날려먹던 상관은 하지 않지만 있어야지 접근이 가능하다.</li>
+<li>처음 <code>ssh</code>로 접근시 무의식적으로 <code>yes</code>를 누르는 그것!!</li>
+<li>그러다보니 여기서도 그것에 관련된 내용을 사용할 수 있다. </li>
+<li><code>set_missing_host_key_policy(policy)</code>를 이용하여 host keys를 받아 저장할 것인지 아닌지를 판단하게 되는데. 기본값은 <code>RejectPolicy</code>로 되어있으며, <code>yes</code>를 받아와야한다면 <code>AutoAddPolicy</code>를 사용하도록 한다.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">paramiko</span>
 
@@ -128,13 +140,13 @@
 
 
 <ul>
-<li>물론 Public key를 이용해서 비밀번호 없이 접근이 가능하도록 할 수 있을듯 한데 그건 좀 확인이&nbsp;필요할듯.</li>
+<li>물론 Public key를 이용해서 비밀번호 없이 접근이 가능하도록 할 수 있을듯 한데 그건 좀 확인이 필요할듯.</li>
 </ul>
-<h3 id="3">3.&nbsp;실행</h3>
+<h3 id="3">3. 실행</h3>
 <ul>
-<li>실행 명령어 <code>exec_command</code>를 실행하게되면, 값을 3개를 <code>tuple</code>로&nbsp;받아온다.</li>
+<li>실행 명령어 <code>exec_command</code>를 실행하게되면, 값을 3개를 <code>tuple</code>로 받아온다.</li>
 <li><code>stdin</code>, <code>stdout</code>, <code>stderr</code>이다.<br>
-*명령어에 대한 값들을 받아와 확인할때는 아래와 같이 작성을&nbsp;하면된다.</li>
+*명령어에 대한 값들을 받아와 확인할때는 아래와 같이 작성을 하면된다.</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">exec_command</span><span class="p">()</span>
 <span class="n">stdout</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
@@ -143,7 +155,7 @@
 
 
 <ul>
-<li>만약 <code>sudo</code>명령어가 필요한&nbsp;경우,</li>
+<li>만약 <code>sudo</code>명령어가 필요한 경우,</li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">ssh</span><span class="o">.</span><span class="n">exec_command</span><span class="p">(</span><span class="s1">&#39;sudo&#39;</span><span class="p">)</span>
 <span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;lol</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -153,39 +165,27 @@
 
 
 <ul>
-<li>위와 같이하여 작성을 하도록&nbsp;한다.</li>
-<li>그리고 <code>write</code>다음에는 <code>flush</code>를 꼭 해줘야 작동을 하니 그점은 주의하도록 한다. 관련 내용은 <a href="http://docs.paramiko.org/en/latest/api/file.html#paramiko.file.BufferedFile.write">여기</a>에&nbsp;있다</li>
+<li>위와 같이하여 작성을 하도록 한다.</li>
+<li>그리고 <code>write</code>다음에는 <code>flush</code>를 꼭 해줘야 작동을 하니 그점은 주의하도록 한다. 관련 내용은 <a href="http://docs.paramiko.org/en/latest/api/file.html#paramiko.file.BufferedFile.write">여기</a>에 있다</li>
 </ul>
-<h3 id="4">4. 연결&nbsp;끊기</h3>
+<h3 id="4">4. 연결 끊기</h3>
 <ul>
-<li>작업이 끝났으면 연결을&nbsp;끊어야된다.</li>
-<li>그냥 <code>close()</code>를 불러오면 알아서&nbsp;끊어준다.</li>
+<li>작업이 끝났으면 연결을 끊어야된다.</li>
+<li>그냥 <code>close()</code>를 불러오면 알아서 끊어준다.</li>
 </ul>
-<h3 id="5-sftp">5. <span class="caps">SFTP</span>&nbsp;사용.</h3>
+<h3 id="5-sftp">5. SFTP 사용.</h3>
 <ul>
-<li>어찌보면 <code>ssh</code>를 사용하면서 편했던 것이 <code>sftp</code>의 사용이다. 간단한 사용방법과 <code>ssh</code>가 설치가되어있으면 따로 <code>ftp</code>를 생성하지 않더라도 간단한 파일을 주고 받을 수 있도록 되어있기&nbsp;때문이다.</li>
-<li>먼저 <code>ssh</code>로 접속한 다음, <code>open_sftp()</code>후 파일을 가져올때는 <code>get('localfile.py', 'remotefile.py')</code>를 이용하고, 올려둘때는 <code>put('localfile.py', 'remotefile.py')</code>를&nbsp;사용하면된다.</li>
+<li>어찌보면 <code>ssh</code>를 사용하면서 편했던 것이 <code>sftp</code>의 사용이다. 간단한 사용방법과 <code>ssh</code>가 설치가되어있으면 따로 <code>ftp</code>를 생성하지 않더라도 간단한 파일을 주고 받을 수 있도록 되어있기 때문이다.</li>
+<li>먼저 <code>ssh</code>로 접속한 다음, <code>open_sftp()</code>후 파일을 가져올때는 <code>get('localfile.py', 'remotefile.py')</code>를 이용하고, 올려둘때는 <code>put('localfile.py', 'remotefile.py')</code>를 사용하면된다.</li>
 </ul>
-<h2 id="_2">참고&nbsp;자료</h2>
+<h2 id="_2">참고 자료</h2>
 <ul>
-<li><a href="http://www.paramiko.org/">Paramiko&nbsp;Homepage</a></li>
-<li><a href="http://docs.paramiko.org/en/latest/index.html">Docs&nbsp;paramiko</a></li>
-<li><a href="http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different"><span class="caps">SSH</span> Programming With Paramiko | Completely&nbsp;Different</a></li>
-<li><a href="http://segfault.in/2010/03/paramiko-ssh-and-sftp-with-python/">Paramiko: <span class="caps">SSH</span> and <span class="caps">SFTP</span> With&nbsp;Python</a></li>
+<li><a href="http://www.paramiko.org/">Paramiko Homepage</a></li>
+<li><a href="http://docs.paramiko.org/en/latest/index.html">Docs paramiko</a></li>
+<li><a href="http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different">SSH Programming With Paramiko | Completely Different</a></li>
+<li><a href="http://segfault.in/2010/03/paramiko-ssh-and-sftp-with-python/">Paramiko: SSH and SFTP With Python</a></li>
 </ul></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 14. 04. 07.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
-              <a href="https://ujuc.github.io/tag/paramiko.html" class="article_tag">paramiko</a>
-              <a href="https://ujuc.github.io/tag/ssh.html" class="article_tag">ssh</a>
-              <a href="https://ujuc.github.io/tag/lib.html" class="article_tag">lib</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

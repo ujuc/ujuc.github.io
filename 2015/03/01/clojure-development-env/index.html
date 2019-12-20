@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Clojure 개발 환경&nbsp;구축
+    잘 밤에 쓸데없는 생각하기... -   Clojure 개발 환경 구축
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,43 +94,54 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Clojure 개발 환경&nbsp;구축</h1></div>
+        <div class="article_title"><h1>Clojure 개발 환경 구축</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 15. 03. 01.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/clojure.html" class="article_tag">clojure</a>
+            <a href="https://ujuc.github.io/tag/gaebal-hwangyeong.html" class="article_tag">개발 환경</a>
+            <a href="https://ujuc.github.io/tag/lein.html" class="article_tag">lein</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><div class="section" id="id2">
-<h2>1.&nbsp;개요</h2>
-<p>Clojure를 공부하려하는데&#8230; 이것 저것 작업을 하려하니 짧은 기억력으로는 계속
+<h2>1. 개요</h2>
+<p>Clojure를 공부하려하는데... 이것 저것 작업을 하려하니 짧은 기억력으로는 계속
 봐야되는지라. 이렇게 작성을 해놔야 나중에 볼 듯하고, 또 어딘가에 넣어둔다고해도
-찾을때는 잘 못찾는&nbsp;지라&#8230;</p>
+찾을때는 잘 못찾는 지라...</p>
 <div class="section" id="id3">
-<h3>1.&nbsp;전재</h3>
+<h3>1. 전재</h3>
 <p>OSX를 기반으로 한다. <tt class="docutils literal">brew</tt> 를 패키지로 모두 작성된다. 만약 Linux에서
-작업하게되면 관련해서 문서는 추가로 작성할 예정임. 문제는 언제될지&nbsp;모르겠다.</p>
+작업하게되면 관련해서 문서는 추가로 작성할 예정임. 문제는 언제될지 모르겠다.</p>
 </div>
 </div>
 <div class="section" id="id4">
-<h2>2. 설치할&nbsp;것들</h2>
+<h2>2. 설치할 것들</h2>
 <div class="section" id="jdk">
-<h3>1. <span class="caps">JDK</span>&nbsp;설치</h3>
+<h3>1. JDK 설치</h3>
 <ul class="simple">
-<li>검색해서 JDK를 다운받으면&nbsp;된다.</li>
-<li>Apple에서 기본적으로 주는걸 써도 될&nbsp;듯.</li>
-<li>8으로 설치했는데 작업하는데는 아무런&nbsp;이상없다.</li>
-<li>그래서 그냥&nbsp;쓴다.</li>
-<li>그리고 <tt class="docutils literal"><span class="pre">brew-cask</span></tt> 에 JDK가&nbsp;있다는&#8230;</li>
+<li>검색해서 JDK를 다운받으면 된다.</li>
+<li>Apple에서 기본적으로 주는걸 써도 될 듯.</li>
+<li>8으로 설치했는데 작업하는데는 아무런 이상없다.</li>
+<li>그래서 그냥 쓴다.</li>
+<li>그리고 <tt class="docutils literal"><span class="pre">brew-cask</span></tt> 에 JDK가 있다는...</li>
 </ul>
 </div>
 </div>
 <div class="section" id="leiningen">
-<h2>2. Leiningen&nbsp;설치</h2>
+<h2>2. Leiningen 설치</h2>
 <ul class="simple">
-<li><tt class="docutils literal">brew install leiningen</tt> 으로&nbsp;설치.</li>
-<li>딱히 설정할 것&nbsp;없음.</li>
+<li><tt class="docutils literal">brew install leiningen</tt> 으로 설치.</li>
+<li>딱히 설정할 것 없음.</li>
 </ul>
 </div>
 <div class="section" id="lein">
-<h2>3. lein&nbsp;사용</h2>
+<h2>3. lein 사용</h2>
 <ul class="simple">
-<li>이거 쓸려고 넘많이&nbsp;적었다&#8230;</li>
+<li>이거 쓸려고 넘많이 적었다...</li>
 </ul>
 <pre class="code bash literal-block">
 $ lein
@@ -179,13 +190,13 @@ $ lein
     mixed-source, templates, and copying.
 </pre>
 <div class="section" id="project">
-<h3>1. project&nbsp;생성</h3>
+<h3>1. project 생성</h3>
 <pre class="code bash literal-block">
 lein new myproject
 </pre>
 <ul class="simple">
 <li><tt class="docutils literal">project.clj</tt> 에 프로젝트에 관련된 내용들을 작성한다.<ul>
-<li>필요한 것들이 있다면 여기다가 차곡차곡&nbsp;넣어준다.</li>
+<li>필요한 것들이 있다면 여기다가 차곡차곡 넣어준다.</li>
 <li>그리고 이곳에 <tt class="docutils literal">main</tt> 으로 사용할 코드의 위치를 작성해 줘야된다.<ul>
 <li>키워드는 <tt class="docutils literal">:main</tt> 이다.</li>
 </ul>
@@ -195,77 +206,66 @@ lein new myproject
 </ul>
 </div>
 <div class="section" id="id5">
-<h3>2. 의존하는 라이브러리&nbsp;다운로드</h3>
+<h3>2. 의존하는 라이브러리 다운로드</h3>
 <pre class="code bash literal-block">
 lein deps
 </pre>
-<p>위에서 작성해준 패키지들을 받아와서 실행해준다. 그러니 왠만해서는 설치하고&nbsp;하자.</p>
+<p>위에서 작성해준 패키지들을 받아와서 실행해준다. 그러니 왠만해서는 설치하고 하자.</p>
 </div>
 <div class="section" id="id6">
-<h3>3. 코드&nbsp;작성</h3>
-<p><tt class="docutils literal">src/myproject/core.clj</tt> 가 있다. 이곳에다가 코드를 작성해주면&nbsp;된다.</p>
+<h3>3. 코드 작성</h3>
+<p><tt class="docutils literal">src/myproject/core.clj</tt> 가 있다. 이곳에다가 코드를 작성해주면 된다.</p>
 </div>
 <div class="section" id="id7">
-<h3>4.&nbsp;실행</h3>
+<h3>4. 실행</h3>
 <pre class="code bash literal-block">
 lein run
 </pre>
-<p>쉽게 실행해서 나오는 것을 볼 수 있다. 뭐&nbsp;간단하네&#8230;</p>
+<p>쉽게 실행해서 나오는 것을 볼 수 있다. 뭐 간단하네...</p>
 </div>
 <div class="section" id="id8">
-<h3>5.&nbsp;패키징</h3>
-<p>역시 Java라고 해야될까&#8230; jar 로 만들어두면 멀티 플랫폼에서도 작동이 가능하다는
+<h3>5. 패키징</h3>
+<p>역시 Java라고 해야될까... jar 로 만들어두면 멀티 플랫폼에서도 작동이 가능하다는
 것이지. 그리고 그것을 묶어서 보여준다. 나중에가서 설정을 좀 해줘야되는 부분이
-발생하겠지만, 지금은 그렇게까지는 나올 필요가&nbsp;없으니&#8230;</p>
+발생하겠지만, 지금은 그렇게까지는 나올 필요가 없으니...</p>
 <pre class="code bash literal-block">
 lein uberjar
 </pre>
 </div>
 <div class="section" id="id9">
-<h3>6. 라이브러리&nbsp;검색</h3>
-<p>필요한 라이브러리들을 검색 하는건데&#8230; 검색하는게 더 빠를듯&#8230; 너무 많이
-나온다. 그리고 가끔 인덱스를 업데이트를 해주긴 해야되는데&#8230; 오래걸려&#8230;
-너무&nbsp;오래&#8230;</p>
+<h3>6. 라이브러리 검색</h3>
+<p>필요한 라이브러리들을 검색 하는건데... 검색하는게 더 빠를듯... 너무 많이
+나온다. 그리고 가끔 인덱스를 업데이트를 해주긴 해야되는데... 오래걸려...
+너무 오래...</p>
 <pre class="code bash literal-block">
 lein search ring
 </pre>
-<p>불편하게&#8230; 페이지별로 나오니. 이름은 정확히 입력하자. 그리고 동일한 페키지
-이름으로 버전들이 쭉~~ 나오니 그것도하나 염두해둘 것&#8230; 버전 정보는 명령어를
-하나더 쳐서 확인하게 해야지&#8230; 저렇게 다 보여줄 필요가&nbsp;있나&#8230;</p>
+<p>불편하게... 페이지별로 나오니. 이름은 정확히 입력하자. 그리고 동일한 페키지
+이름으로 버전들이 쭉~~ 나오니 그것도하나 염두해둘 것... 버전 정보는 명령어를
+하나더 쳐서 확인하게 해야지... 저렇게 다 보여줄 필요가 있나...</p>
 </div>
 <div class="section" id="id10">
-<h3>7. 패치&nbsp;설정</h3>
+<h3>7. 패치 설정</h3>
 <p>자동으로 잡아준다. 그래도 추가해야된다면 <tt class="docutils literal">proejct.clj</tt> 에 키워드
-<tt class="docutils literal"><span class="pre">:extra-classpath-dirs</span></tt> 를 사용하여 리스트 형식으로 추가해주면&nbsp;된다.</p>
+<tt class="docutils literal"><span class="pre">:extra-classpath-dirs</span></tt> 를 사용하여 리스트 형식으로 추가해주면 된다.</p>
 </div>
 <div class="section" id="id11">
-<h3>8. 인터프리터&nbsp;실행</h3>
-<p>인터프리터를 실행해서 작성한 내요이 맞는지 확인이&nbsp;가능하다.</p>
+<h3>8. 인터프리터 실행</h3>
+<p>인터프리터를 실행해서 작성한 내요이 맞는지 확인이 가능하다.</p>
 <pre class="code bash literal-block">
 lein repl
 </pre>
 </div>
 </div>
 <div class="section" id="id12">
-<h2>참고&nbsp;사이트!</h2>
+<h2>참고 사이트!</h2>
 <dl class="docutils">
-<dt><a class="reference external" href="http://english4u.kr/clojure-memo/index.html">Clojure 강좌 -&nbsp;김영태</a></dt>
-<dd>emacs로 되어있는 부부만&nbsp;제외했&#8230;</dd>
+<dt><a class="reference external" href="http://english4u.kr/clojure-memo/index.html">Clojure 강좌 - 김영태</a></dt>
+<dd>emacs로 되어있는 부부만 제외했...</dd>
 </dl>
 </div>
 </div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 15. 03. 01.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/clojure.html" class="article_tag">clojure</a>
-              <a href="https://ujuc.github.io/tag/gaebal-hwangyeong.html" class="article_tag">개발 환경</a>
-              <a href="https://ujuc.github.io/tag/lein.html" class="article_tag">lein</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Status bar <span class="amp">&amp;</span> Title bar&nbsp;숨기기
+    잘 밤에 쓸데없는 생각하기... -   Status bar &amp; Title bar 숨기기
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,19 +94,30 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Status bar <span class="amp">&amp;</span> Title bar&nbsp;숨기기</h1></div>
+        <div class="article_title"><h1>Status bar &amp; Title bar 숨기기</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 15. 04. 23.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/android.html" class="article_tag">android</a>
+            <a href="https://ujuc.github.io/tag/gibon.html" class="article_tag">기본</a>
+            <a href="https://ujuc.github.io/tag/nan-moreugessda.html" class="article_tag">난 모르겠다.</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><p>요즘 안드로이중이다. 오랜만에 했더니 봐야될께 많다. 특히 UI를 많이 안해서
-그런가.. 감이 잘 안온다는&nbsp;문제도&#8230;</p>
+그런가.. 감이 잘 안온다는 문제도...</p>
 <p>SplashActivity를 추가해줘야되는데. 안드로이드에서 뭘 알아야지.. 그냥 예제에 있는
-것들을 찾아서 변경해 추가를 했지만, 정리를 한번 해놔야되서&#8230; 뭐 간단하게 구성은
-되어있다만. 이렇게라도 적어놔야 나중에 또 다른곳에서 엉뚱한것을&nbsp;안찾지&#8230;</p>
+것들을 찾아서 변경해 추가를 했지만, 정리를 한번 해놔야되서... 뭐 간단하게 구성은
+되어있다만. 이렇게라도 적어놔야 나중에 또 다른곳에서 엉뚱한것을 안찾지...</p>
 <div class="section" id="title-bar">
-<h2>Title bar&nbsp;숨기기</h2>
+<h2>Title bar 숨기기</h2>
 <p>이것을 해줄려면 <tt class="docutils literal">style</tt> 을 구성해서 해줘야된다. 뭔가 많이 불편해서 다른
 곳에서도 가능한가를 찾아봤지만, 안된다. 뭐 특정 구역에서만 가능하게 해놨나보다.
-그져 따라서&nbsp;해놔야지&#8230;</p>
-<p><tt class="docutils literal">Styles.xml</tt> 에&nbsp;추가한다.</p>
+그져 따라서 해놔야지...</p>
+<p><tt class="docutils literal">Styles.xml</tt> 에 추가한다.</p>
 <pre class="code xml literal-block">
 <span class="nt">&lt;resources&gt;</span>
     <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">&quot;Theme.Splash&quot;</span> <span class="na">parent=</span><span class="s">&quot;android:Theme&quot;</span><span class="nt">&gt;</span>
@@ -114,41 +125,30 @@
     <span class="nt">&lt;/stlye&gt;</span>
 <span class="nt">&lt;/resources&gt;</span>
 </pre>
-<p>위와 같이 구성을 하고서 Activity에 작성을&nbsp;해주면된다.</p>
+<p>위와 같이 구성을 하고서 Activity에 작성을 해주면된다.</p>
 <pre class="code c# literal-block">
 <span class="na">[Activity (Theme = &quot;&#64;style/Theme.Splash&quot;, MainLauncher = true, NoHistory =
 ture)]</span>
 <span class="n">brabra</span>
 </pre>
 <p>이렇게 하고 필요한 내용들을 추가해주면 된다. 그러면 타이틂 바만 없어지는 것을
-확인할 수&nbsp;있다.</p>
+확인할 수 있다.</p>
 </div>
 <div class="section" id="status-bar">
-<h2>Status bar&nbsp;숨기기</h2>
-<p>동일한 <tt class="docutils literal">Styles.xml</tt> 에 <tt class="docutils literal">&lt;item&gt;</tt> 을&nbsp;변경해주면된다.</p>
+<h2>Status bar 숨기기</h2>
+<p>동일한 <tt class="docutils literal">Styles.xml</tt> 에 <tt class="docutils literal">&lt;item&gt;</tt> 을 변경해주면된다.</p>
 <pre class="code xml literal-block">
 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&quot;android:windowFullscreen&quot;</span><span class="nt">&gt;</span>ture<span class="nt">&lt;/item&gt;</span>
 </pre>
 <div class="section" id="id1">
-<h3>참고&nbsp;사이트</h3>
+<h3>참고 사이트</h3>
 <ul class="simple">
-<li><a class="reference external" href="http://www.androidpub.com/4710">전체화면&nbsp;사용하기</a></li>
+<li><a class="reference external" href="http://www.androidpub.com/4710">전체화면 사용하기</a></li>
 </ul>
 </div>
 </div>
 </div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 15. 04. 23.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/android.html" class="article_tag">android</a>
-              <a href="https://ujuc.github.io/tag/gibon.html" class="article_tag">기본</a>
-              <a href="https://ujuc.github.io/tag/nan-moreugessda.html" class="article_tag">난 모르겠다.</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

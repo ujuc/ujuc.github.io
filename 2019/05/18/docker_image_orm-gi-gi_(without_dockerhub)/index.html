@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Docker Image 옮기기 (without&nbsp;DockerHub)
+    잘 밤에 쓸데없는 생각하기... -   Docker Image 옮기기 (without DockerHub)
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,42 +94,42 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Docker Image 옮기기 (without&nbsp;DockerHub)</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 <span class="caps">AWS</span> ECR을 사용하는건&nbsp;제외. </p>
-<p>개발 과정에서 실제 OS에서 작동하는지 확인을 위한것이라 올리고 인증하고&nbsp;귀찮다.</p>
-<p>뭘로 검색했는지는 기억이 없지만 다음과 같은 글을 확인했고, 다음과 같은 명령을 사용하면 인터넷이나 Docker 레포없이 작업이&nbsp;가능하다.</p>
-<ul>
-<li>출처: <a href="https://stackoverflow.com/questions/23935141/how-to-copy-docker-images-from-one-host-to-another-without-using-a-repository">How to copy Docker images from one host to another without using a&nbsp;repository</a></li>
-</ul>
-<p>우선 로컬에서 Docker 이미지를 빌드한다. 명령어는 알꺼니&nbsp;넘어가자.</p>
-<p>다름 명령을 이용해서 tar 파일을&nbsp;만들자.</p>
-<div class="codehilite"><pre><span></span>docker save -o &lt;path <span class="k">for</span> generated tar file&gt; &lt;imange name&gt;:&lt;tag&gt;
-</pre></div>
-
-
-<p>만들어진 tar 파일을 원하는 곳에 업로드&nbsp;시킨다.</p>
-<p>이제 올린 노드에서 사용할 수 있도록 이미지를 docker에 등록해주면&nbsp;끝.</p>
-<div class="codehilite"><pre><span></span>docker load -i &lt;path to image tar file&gt;
-</pre></div>
-
-
-<h3 id="_1">참고</h3>
-<ul>
-<li><a href="https://docs.docker.com/engine/reference/commandline/save/">docker&nbsp;save</a></li>
-<li><a href="https://docs.docker.com/engine/reference/commandline/load/">docker&nbsp;load</a></li>
-</ul></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>Docker Image 옮기기 (without DockerHub)</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 19. 05. 18.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
-              <a href="https://ujuc.github.io/tag/docker-image.html" class="article_tag">docker image</a>
+            <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
+            <a href="https://ujuc.github.io/tag/docker-image.html" class="article_tag">docker image</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 AWS ECR을 사용하는건 제외. </p>
+<p>개발 과정에서 실제 OS에서 작동하는지 확인을 위한것이라 올리고 인증하고 귀찮다.</p>
+<p>뭘로 검색했는지는 기억이 없지만 다음과 같은 글을 확인했고, 다음과 같은 명령을 사용하면 인터넷이나 Docker 레포없이 작업이 가능하다.</p>
+<ul>
+<li>출처: <a href="https://stackoverflow.com/questions/23935141/how-to-copy-docker-images-from-one-host-to-another-without-using-a-repository">How to copy Docker images from one host to another without using a repository</a></li>
+</ul>
+<p>우선 로컬에서 Docker 이미지를 빌드한다. 명령어는 알꺼니 넘어가자.</p>
+<p>다름 명령을 이용해서 tar 파일을 만들자.</p>
+<div class="codehilite"><pre><span></span>docker save -o &lt;path <span class="k">for</span> generated tar file&gt; &lt;imange name&gt;:&lt;tag&gt;
+</pre></div>
+
+
+<p>만들어진 tar 파일을 원하는 곳에 업로드 시킨다.</p>
+<p>이제 올린 노드에서 사용할 수 있도록 이미지를 docker에 등록해주면 끝.</p>
+<div class="codehilite"><pre><span></span>docker load -i &lt;path to image tar file&gt;
+</pre></div>
+
+
+<h3 id="_1">참고</h3>
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/commandline/save/">docker save</a></li>
+<li><a href="https://docs.docker.com/engine/reference/commandline/load/">docker load</a></li>
+</ul></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

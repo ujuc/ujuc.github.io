@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Eclipse + <span class="caps">AVR</span> Plug-in Development Environment&nbsp;Setting
+    잘 밤에 쓸데없는 생각하기... -   Eclipse + AVR Plug-in Development Environment Setting
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,41 +94,41 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Eclipse + <span class="caps">AVR</span> Plug-in Development Environment&nbsp;Setting</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><p>Eclipse로 <span class="caps">AVR</span> 프로그램을 코딩할 수 있다는 소리를 듣고서 곧장 검색을 해서 필요한 것들을 깔았었다.<br>
-그런데 뭔가 프로젝트에 x표가 나타나서 신경쓰이게 하던것을 한 블로그에서&nbsp;찾았다!!!!</p>
-<p>그래서 이렇게 남긴다.&nbsp;까먹을까봐서..</p>
-<p><a href="http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_Eclipse_Plugin">공식&nbsp;홈페이지</a></p>
-<p>리눅스에서는 기본적으로 컴파일러는 gcc를 이용해서 작동을 시키게&nbsp;된다.</p>
-<div class="codehilite"><pre><span></span><span class="n">yaourt</span> <span class="o">-</span><span class="n">S</span> <span class="n">gcc</span><span class="o">-</span><span class="n">avr</span> <span class="n">avr</span><span class="o">-</span><span class="n">libc</span> <span class="n">avrdude</span> <span class="n">binutils</span><span class="o">-</span><span class="n">avr</span>
-</pre></div>
-
-
-<p>을 설치해줬다. Arch Linux에서는 이렇게 해주고 더 필요한 패키지들이&nbsp;있으면,</p>
-<div class="codehilite"><pre><span></span><span class="n">yaourt</span> <span class="o">-</span><span class="n">Ss</span> <span class="n">avr</span>
-</pre></div>
-
-
-<p>로 해줘 찾을 수&nbsp;있다.</p>
-<p>Eclipse를 설치 해주는데 이때 Eclipse는 C/C++용으로 설치해준다.<br>
-그리고서 프로젝트 만드는&nbsp;것은</p>
-<p><a href="http://hoyoung2.blogspot.com/2010/07/avr-developement-environment-setting.html">Don’t panic! WinAVR + Eclipse + <span class="caps">AVR</span> Plug-in Developement Environment&nbsp;Setting</a></p>
-<p>에서 확인하면&nbsp;끝…</p></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>Eclipse + AVR Plug-in Development Environment Setting</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 12. 10. 24.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/avr.html" class="article_tag">avr</a>
-              <a href="https://ujuc.github.io/tag/eclipse.html" class="article_tag">eclipse</a>
-              <a href="https://ujuc.github.io/tag/development-environment.html" class="article_tag">development environment</a>
-              <a href="https://ujuc.github.io/tag/environment.html" class="article_tag">environment</a>
-              <a href="https://ujuc.github.io/tag/arch.html" class="article_tag">arch</a>
+            <a href="https://ujuc.github.io/tag/avr.html" class="article_tag">avr</a>
+            <a href="https://ujuc.github.io/tag/eclipse.html" class="article_tag">eclipse</a>
+            <a href="https://ujuc.github.io/tag/development-environment.html" class="article_tag">development environment</a>
+            <a href="https://ujuc.github.io/tag/environment.html" class="article_tag">environment</a>
+            <a href="https://ujuc.github.io/tag/arch.html" class="article_tag">arch</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>Eclipse로 AVR 프로그램을 코딩할 수 있다는 소리를 듣고서 곧장 검색을 해서 필요한 것들을 깔았었다.<br>
+그런데 뭔가 프로젝트에 x표가 나타나서 신경쓰이게 하던것을 한 블로그에서 찾았다!!!!</p>
+<p>그래서 이렇게 남긴다. 까먹을까봐서..</p>
+<p><a href="http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_Eclipse_Plugin">공식 홈페이지</a></p>
+<p>리눅스에서는 기본적으로 컴파일러는 gcc를 이용해서 작동을 시키게 된다.</p>
+<div class="codehilite"><pre><span></span><span class="err">yaourt -S gcc-avr avr-libc avrdude binutils-avr</span>
+</pre></div>
+
+
+<p>을 설치해줬다. Arch Linux에서는 이렇게 해주고 더 필요한 패키지들이 있으면,</p>
+<div class="codehilite"><pre><span></span><span class="err">yaourt -Ss avr</span>
+</pre></div>
+
+
+<p>로 해줘 찾을 수 있다.</p>
+<p>Eclipse를 설치 해주는데 이때 Eclipse는 C/C++용으로 설치해준다.<br>
+그리고서 프로젝트 만드는 것은</p>
+<p><a href="http://hoyoung2.blogspot.com/2010/07/avr-developement-environment-setting.html">Don’t panic! WinAVR + Eclipse + AVR Plug-in Developement Environment Setting</a></p>
+<p>에서 확인하면 끝…</p></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

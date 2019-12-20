@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   Task 실행 라이브러리 -&nbsp;Invoke
+    잘 밤에 쓸데없는 생각하기... -   Task 실행 라이브러리 - Invoke
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,37 +94,51 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Task 실행 라이브러리 -&nbsp;Invoke</h1></div>
+        <div class="article_title"><h1>Task 실행 라이브러리 - Invoke</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 19. 07. 21.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/invoke.html" class="article_tag">invoke</a>
+            <a href="https://ujuc.github.io/tag/devops.html" class="article_tag">devops</a>
+            <a href="https://ujuc.github.io/tag/paramiko.html" class="article_tag">paramiko</a>
+            <a href="https://ujuc.github.io/tag/command.html" class="article_tag">command</a>
+            <a href="https://ujuc.github.io/tag/cli.html" class="article_tag">cli</a>
+            <a href="https://ujuc.github.io/tag/task.html" class="article_tag">task</a>
+          </i>
+        </div>
         <div id="division"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><p>Pelican 에서 Makefile를 이용해서 빌드하고 있었는데.<br>
 4.0.0 버전으로 올라오면서 <code>Invoke</code> 라이브러리를 사용하게 되었음을 확인.<br>
-그러니&nbsp;사용해봐야징&hellip;</p>
+그러니 사용해봐야징&hellip;</p>
 <p><a href="https://www.pyinvoke.org/">Home</a></p>
-<h2 id="what-is-invoke">What is&nbsp;Invoke?</h2>
-<p>Python (2.7, 3.4+) 태스크 실행 툴이자&nbsp;라이브러리</p>
+<h2 id="what-is-invoke">What is Invoke?</h2>
+<p>Python (2.7, 3.4+) 태스크 실행 툴이자 라이브러리</p>
 <ul>
 <li><code>[tasks.py](http://tasks.py)</code> 파일에 태스크를 명시하여 진행<ul>
-<li>물론 <code>tasks/*.py</code> 형식으로 만들어서 정의할 수도&nbsp;있다.</li>
+<li>물론 <code>tasks/*.py</code> 형식으로 만들어서 정의할 수도 있다.</li>
 </ul>
 </li>
 <li>
-<p><span class="caps">GNU</span> Make 처럼, 명령을 나열할 수&nbsp;있다.</p>
+<p>GNU Make 처럼, 명령을 나열할 수 있다.</p>
 <div class="codehilite"><pre><span></span>$ invoke clean build
 </pre></div>
 
 
 </li>
 <li>
-<p><span class="caps">REPL</span> 쪽에서 사용이&nbsp;가능하다.</p>
+<p>REPL 쪽에서 사용이 가능하다.</p>
 </li>
-<li>Unix <span class="caps">CLI</span> 와 같이 flag-based style 명령어를 만들 수 있다.<ul>
+<li>Unix CLI 와 같이 flag-based style 명령어를 만들 수 있다.<ul>
 <li><code>--ab</code> , <code>-d</code> 이런거</li>
 </ul>
 </li>
 </ul>
 <h2 id="_1">사용?</h2>
 <ul>
-<li><code>tasks.py</code> - <a href="https://github.com/ujuc/ujuc.github.io/blob/develop/tasks.py">ujuc.github.io -&nbsp;tasks.py</a></li>
+<li><code>tasks.py</code> - <a href="https://github.com/ujuc/ujuc.github.io/blob/develop/tasks.py">ujuc.github.io - tasks.py</a></li>
 </ul>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">invoke</span> <span class="kn">import</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">task</span>
 
@@ -139,22 +153,22 @@
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Start preview web page server&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;pelican -s {CONF_FILE}&quot;</span><span class="p">)</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;pelican -l&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{CONF_FILE}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -l&quot;</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Clean up this dir&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;rm -rf {OUTPUT_PATH} {BASE_PATH}/__pycache__ {BASE_PATH}/cache&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rm -rf </span><span class="si">{OUTPUT_PATH}</span><span class="s2"> </span><span class="si">{BASE_PATH}</span><span class="s2">/__pycache__ </span><span class="si">{BASE_PATH}</span><span class="s2">/cache&quot;</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">(</span><span class="n">post</span><span class="o">=</span><span class="p">[</span><span class="n">clean</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">pub</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Publish to github main page&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;pelican -s {PUBLISH_CONF_FILE}&quot;</span><span class="p">)</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;ghp-import -m &#39;Generate Pelican site&#39; -b master {OUTPUT_PATH}&quot;</span><span class="p">)</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;git push origin master&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{PUBLISH_CONF_FILE}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ghp-import -m &#39;Generate Pelican site&#39; -b master </span><span class="si">{OUTPUT_PATH}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;git push origin master&quot;</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">()</span>
@@ -173,7 +187,7 @@
 
 <h3 id="_2">실행</h3>
 <ul>
-<li>목록은&nbsp;이렇게</li>
+<li>목록은 이렇게</li>
 </ul>
 <div class="codehilite"><pre><span></span>$ inv --list
 
@@ -187,7 +201,7 @@ Available tasks:
 
 
 <ul>
-<li>help는&nbsp;이렇게</li>
+<li>help는 이렇게</li>
 </ul>
 <div class="codehilite"><pre><span></span>$ inv pub -h
 
@@ -202,22 +216,8 @@ Options:
 
 
 <hr>
-<p>자세한건 <a href="http://docs.pyinvoke.org/en/stable">Docs</a> 에서 읽어가면서&nbsp;확인</p></div>
+<p>자세한건 <a href="http://docs.pyinvoke.org/en/stable">Docs</a> 에서 읽어가면서 확인</p></div>
         <div id="division"><i class="far fa-hand-spock"></i></div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 19. 07. 21.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/invoke.html" class="article_tag">invoke</a>
-              <a href="https://ujuc.github.io/tag/devops.html" class="article_tag">devops</a>
-              <a href="https://ujuc.github.io/tag/paramiko.html" class="article_tag">paramiko</a>
-              <a href="https://ujuc.github.io/tag/command.html" class="article_tag">command</a>
-              <a href="https://ujuc.github.io/tag/cli.html" class="article_tag">cli</a>
-              <a href="https://ujuc.github.io/tag/task.html" class="article_tag">task</a>
-          </i>
-        </div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"

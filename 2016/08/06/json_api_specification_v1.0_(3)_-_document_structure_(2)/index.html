@@ -34,7 +34,7 @@
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -   [번역] <span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0 (3) - Document Structure&nbsp;(2)
+    잘 밤에 쓸데없는 생각하기... -   [번역] JSON API Specification v1.0 (3) - Document Structure (2)
     </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,131 +94,131 @@
   <div class="row">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>[번역] <span class="caps">JSON</span> <span class="caps">API</span> Specification v1.0 (3) - Document Structure&nbsp;(2)</h1></div>
-        <div id="division"><i class="fas fa-poo" style></i></div>
-        <div class="article_text"><h2 id="51-top-level">5.1. 최상위 (Top&nbsp;Level)</h2>
-<hr>
-<p><span class="caps">JSON</span> 오브젝트는 데이터를 포함한 <span class="caps">JSON</span> <span class="caps">API</span> 요청과 응답에 대한 근본(root) 입니다. &lt;<strong><span class="caps">MUST</span></strong>&gt; 이 오브젝트를 문서의 “최상위”라&nbsp;정의합니다.</p>
-<blockquote>
-<p>A <span class="caps">JSON</span> object <strong><span class="caps">MUST</span></strong> be at the root of every <span class="caps">JSON</span> <span class="caps">API</span> request and response containing data. This object defines a document’s “top&nbsp;level”.</p>
-</blockquote>
-<p>문서에서는 최소한 다음 최상위 멤버중 하나를 포함해야 합니다 &lt;<strong><span class="caps">MUST</span></strong>&gt;:</p>
-<ul>
-<li><code>data</code>: 문서에서 “일차&nbsp;데이터”</li>
-<li><code>errors</code>: <a href="http://jsonapi.org/format/#errors">error objects</a> 에대한&nbsp;배열</li>
-<li><code>meta</code>: 비표준 메타 정보가 포함되어있는 <a href="http://jsonapi.org/format/#document-meta">meta object</a>.</li>
-</ul>
-<blockquote>
-<p>A document <strong><span class="caps">MUST</span></strong> contain at least one of the following top-level&nbsp;members:</p>
-<ul>
-<li><code>data</code>: the document’s “primary&nbsp;data”</li>
-<li>​<code>errors</code>: an array of <a href="http://jsonapi.org/format/#errors">error&nbsp;objects</a></li>
-<li><code>meta</code>: a <a href="http://jsonapi.org/format/#document-meta">meta object</a> that contains non-standard&nbsp;meta-information.</li>
-</ul>
-</blockquote>
-<p><code>data</code>와 <code>errors</code> 멤버는 동일한 문서에 공존할 수 없습니다. &lt;<strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong>&gt;</p>
-<blockquote>
-<p>The members <code>data</code> and <code>errors</code> <strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong> coexist in the same&nbsp;document.</p>
-</blockquote>
-<p>문서에서는 다음 내용과 같은 최상위 멤버가 포함될 수 있습니다 &lt;<strong><span class="caps">MAY</span></strong>&gt;:</p>
-<ul>
-<li><code>jsonapi</code>: 서버에서 구현을 기술하는&nbsp;오브젝트</li>
-<li><code>links</code>: <a href="http://jsonapi.org/format/#document-links">links object</a>는 일차 데이터와&nbsp;연결됩니다.</li>
-<li><code>included</code>: 포함된 리소스중 각기 다르거나 일차 데이터와 관련된 <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a>에 대한&nbsp;배열.</li>
-</ul>
-<blockquote>
-<p>A document <strong><span class="caps">MAY</span></strong> contain any of these top-level&nbsp;members:</p>
-<ul>
-<li><code>jsonapi</code>: an object describing the server’s&nbsp;implementation</li>
-<li><code>links</code>: a <a href="http://jsonapi.org/format/#document-links">links object</a> related to the primary&nbsp;data.</li>
-<li><code>included</code>: an array of <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a> that are related to the primary data and/or each other (“included&nbsp;resources”).</li>
-</ul>
-</blockquote>
-<p>문서에 최상위 <code>data</code> 키가 포함되지 않은 경우, <code>included</code> 멤버 중 하나에 존재할 수 없습니다. &lt;<strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong>&gt;</p>
-<blockquote>
-<p>If a document does not contain a top-level <code>data</code> key, the <code>included</code> member <strong><span class="caps">MUST</span> <span class="caps">NOT</span></strong> be present&nbsp;either.</p>
-</blockquote>
-<p>최상위 <a href="http://jsonapi.org/format/#document-links">links object</a>는 다음 맴버를 포함할 수 있습니다 &lt;<strong><span class="caps">MAY</span></strong>&gt;:</p>
-<ul>
-<li><code>self</code>: 현재 응답 문서를 생성한 <a href="http://jsonapi.org/format/#document-links">link</a>.</li>
-<li><code>related</code>: 일차 데이터와 리소스간 관계를 나타내는 <a href="http://jsonapi.org/format/#document-resource-object-related-resource-links">related resource link</a>.</li>
-<li>일차 데이터에 대한 <a href="http://jsonapi.org/format/#fetching-pagination">pagination</a>&nbsp;링크.</li>
-</ul>
-<blockquote>
-<p>The top-level <a href="http://jsonapi.org/format/#document-links">links object</a> <strong><span class="caps">MAY</span></strong> contain the following&nbsp;members:</p>
-<ul>
-<li><code>self</code>: the <a href="http://jsonapi.org/format/#document-links">link</a> that generated the current response&nbsp;document.</li>
-<li><code>related</code>: a <a href="http://jsonapi.org/format/#document-resource-object-related-resource-links">related resource link</a> when the primary data represents a resource&nbsp;relationship.</li>
-<li><a href="http://jsonapi.org/format/#fetching-pagination">pagination</a> links for the primary&nbsp;data.</li>
-</ul>
-</blockquote>
-<p>문서에서 “일차 데이터”는 요청에의해 대상이되는 자원의 컬렉션이나 자원 관계를&nbsp;나타냅니다.</p>
-<blockquote>
-<p>The document’s “primary data” is a representation of the resource or collection of resources targeted by a&nbsp;request.</p>
-</blockquote>
-<p>일차 데이터는 다음 중 하나 입니다 &lt;<strong><span class="caps">MUST</span></strong>&gt;:</p>
-<ul>
-<li>단일 자원을 대상으로 요구하는 단일 <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a>, 단일 <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>, <code>null</code>을&nbsp;나타냅니다.</li>
-<li>타겟 리소스 컬렉션 요청에 대한 <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a> 배열, <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier objects</a> 배열, 빈 배열 (<code>[]</code>)를&nbsp;나타냅니다.</li>
-</ul>
-<blockquote>
-<p>Primary data <strong><span class="caps">MUST</span></strong> be&nbsp;either:</p>
-<ul>
-<li>a single <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a>, a single <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>, or <code>null</code>, for requests that target single&nbsp;resources</li>
-<li>an array of <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a>, an array of <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier objects</a>, or an empty array (<code>[]</code>), for requests that target resource&nbsp;collections</li>
-</ul>
-</blockquote>
-<p>예를 들어, 다음 일차 데이터는 단일 리소스 오브젝트를&nbsp;나타냅니다:</p>
-<blockquote>
-<p>For example, the following primary data is a single resource&nbsp;object:</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><span class="err">{</span>
- <span class="ss">&quot;data&quot;</span><span class="p">:</span> <span class="err">{</span>
-    <span class="ss">&quot;type&quot;</span><span class="p">:</span> <span class="ss">&quot;articles&quot;</span><span class="p">,</span>
-    <span class="ss">&quot;id&quot;</span><span class="p">:</span> <span class="ss">&quot;1&quot;</span><span class="p">,</span>
-    <span class="ss">&quot;attributes&quot;</span><span class="p">:</span> <span class="err">{</span>
-      <span class="o">//</span> <span class="p">...</span> <span class="n">this</span> <span class="n">article</span><span class="s1">&#39;s attributes</span>
-<span class="s1">    },</span>
-<span class="s1">    &quot;relationships&quot;: {</span>
-<span class="s1">      // ... this article&#39;</span><span class="n">s</span> <span class="n">relationships</span>
-    <span class="err">}</span>
-  <span class="err">}</span>
-<span class="err">}</span>
-</pre></div>
-
-
-<p>다음 일차 데이터는 동일한 리소스를 참조하는 단일 <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>입니다:</p>
-<blockquote>
-<p>The following primary data is a single <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a> that references the same&nbsp;resource:</p>
-</blockquote>
-<div class="codehilite"><pre><span></span><span class="err">{</span>
- <span class="ss">&quot;data&quot;</span><span class="p">:</span> <span class="err">{</span>
-    <span class="ss">&quot;type&quot;</span><span class="p">:</span> <span class="ss">&quot;articles&quot;</span><span class="p">,</span>
-    <span class="ss">&quot;id&quot;</span><span class="p">:</span> <span class="ss">&quot;1&quot;</span>
-  <span class="err">}</span>
-<span class="err">}</span>
-</pre></div>
-
-
-<p>리소스에 대한 논리 컬렉션은 아이템 하나만 있거나 비어있더라도 배열로 표현합니다. &lt;<strong><span class="caps">MUST</span></strong>&gt;</p>
-<blockquote>
-<p>A logical collection of resources <strong><span class="caps">MUST</span></strong> be represented as an array, even if it only contains one item or is&nbsp;empty.</p>
-</blockquote></div>
-        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <div class="article_title"><h1>[번역] JSON API Specification v1.0 (3) - Document Structure (2)</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 16. 08. 06.
           <i class="fas fa-ellipsis-v"></i>
           <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="fas fa-ellipsis-v"></i>
           <i class="fas fa-tags">
-              <a href="https://ujuc.github.io/tag/json.html" class="article_tag">json</a>
-              <a href="https://ujuc.github.io/tag/api.html" class="article_tag">api</a>
-              <a href="https://ujuc.github.io/tag/specification.html" class="article_tag">specification</a>
-              <a href="https://ujuc.github.io/tag/json-api.html" class="article_tag">json api</a>
-              <a href="https://ujuc.github.io/tag/seupeg-munseo.html" class="article_tag">스펙 문서</a>
-              <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
+            <a href="https://ujuc.github.io/tag/json.html" class="article_tag">json</a>
+            <a href="https://ujuc.github.io/tag/api.html" class="article_tag">api</a>
+            <a href="https://ujuc.github.io/tag/specification.html" class="article_tag">specification</a>
+            <a href="https://ujuc.github.io/tag/json-api.html" class="article_tag">json api</a>
+            <a href="https://ujuc.github.io/tag/seupeg-munseo.html" class="article_tag">스펙 문서</a>
+            <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
           </i>
         </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><h2 id="51-top-level">5.1. 최상위 (Top Level)</h2>
+<hr>
+<p>JSON 오브젝트는 데이터를 포함한 JSON API 요청과 응답에 대한 근본(root) 입니다. &lt;<strong>MUST</strong>&gt; 이 오브젝트를 문서의 “최상위”라 정의합니다.</p>
+<blockquote>
+<p>A JSON object <strong>MUST</strong> be at the root of every JSON API request and response containing data. This object defines a document’s “top level”.</p>
+</blockquote>
+<p>문서에서는 최소한 다음 최상위 멤버중 하나를 포함해야 합니다 &lt;<strong>MUST</strong>&gt;:</p>
+<ul>
+<li><code>data</code>: 문서에서 “일차 데이터”</li>
+<li><code>errors</code>: <a href="http://jsonapi.org/format/#errors">error objects</a> 에대한 배열</li>
+<li><code>meta</code>: 비표준 메타 정보가 포함되어있는 <a href="http://jsonapi.org/format/#document-meta">meta object</a>.</li>
+</ul>
+<blockquote>
+<p>A document <strong>MUST</strong> contain at least one of the following top-level members:</p>
+<ul>
+<li><code>data</code>: the document’s “primary data”</li>
+<li>​<code>errors</code>: an array of <a href="http://jsonapi.org/format/#errors">error objects</a></li>
+<li><code>meta</code>: a <a href="http://jsonapi.org/format/#document-meta">meta object</a> that contains non-standard meta-information.</li>
+</ul>
+</blockquote>
+<p><code>data</code>와 <code>errors</code> 멤버는 동일한 문서에 공존할 수 없습니다. &lt;<strong>MUST NOT</strong>&gt;</p>
+<blockquote>
+<p>The members <code>data</code> and <code>errors</code> <strong>MUST NOT</strong> coexist in the same document.</p>
+</blockquote>
+<p>문서에서는 다음 내용과 같은 최상위 멤버가 포함될 수 있습니다 &lt;<strong>MAY</strong>&gt;:</p>
+<ul>
+<li><code>jsonapi</code>: 서버에서 구현을 기술하는 오브젝트</li>
+<li><code>links</code>: <a href="http://jsonapi.org/format/#document-links">links object</a>는 일차 데이터와 연결됩니다.</li>
+<li><code>included</code>: 포함된 리소스중 각기 다르거나 일차 데이터와 관련된 <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a>에 대한 배열.</li>
+</ul>
+<blockquote>
+<p>A document <strong>MAY</strong> contain any of these top-level members:</p>
+<ul>
+<li><code>jsonapi</code>: an object describing the server’s implementation</li>
+<li><code>links</code>: a <a href="http://jsonapi.org/format/#document-links">links object</a> related to the primary data.</li>
+<li><code>included</code>: an array of <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a> that are related to the primary data and/or each other (“included resources”).</li>
+</ul>
+</blockquote>
+<p>문서에 최상위 <code>data</code> 키가 포함되지 않은 경우, <code>included</code> 멤버 중 하나에 존재할 수 없습니다. &lt;<strong>MUST NOT</strong>&gt;</p>
+<blockquote>
+<p>If a document does not contain a top-level <code>data</code> key, the <code>included</code> member <strong>MUST NOT</strong> be present either.</p>
+</blockquote>
+<p>최상위 <a href="http://jsonapi.org/format/#document-links">links object</a>는 다음 맴버를 포함할 수 있습니다 &lt;<strong>MAY</strong>&gt;:</p>
+<ul>
+<li><code>self</code>: 현재 응답 문서를 생성한 <a href="http://jsonapi.org/format/#document-links">link</a>.</li>
+<li><code>related</code>: 일차 데이터와 리소스간 관계를 나타내는 <a href="http://jsonapi.org/format/#document-resource-object-related-resource-links">related resource link</a>.</li>
+<li>일차 데이터에 대한 <a href="http://jsonapi.org/format/#fetching-pagination">pagination</a> 링크.</li>
+</ul>
+<blockquote>
+<p>The top-level <a href="http://jsonapi.org/format/#document-links">links object</a> <strong>MAY</strong> contain the following members:</p>
+<ul>
+<li><code>self</code>: the <a href="http://jsonapi.org/format/#document-links">link</a> that generated the current response document.</li>
+<li><code>related</code>: a <a href="http://jsonapi.org/format/#document-resource-object-related-resource-links">related resource link</a> when the primary data represents a resource relationship.</li>
+<li><a href="http://jsonapi.org/format/#fetching-pagination">pagination</a> links for the primary data.</li>
+</ul>
+</blockquote>
+<p>문서에서 “일차 데이터”는 요청에의해 대상이되는 자원의 컬렉션이나 자원 관계를 나타냅니다.</p>
+<blockquote>
+<p>The document’s “primary data” is a representation of the resource or collection of resources targeted by a request.</p>
+</blockquote>
+<p>일차 데이터는 다음 중 하나 입니다 &lt;<strong>MUST</strong>&gt;:</p>
+<ul>
+<li>단일 자원을 대상으로 요구하는 단일 <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a>, 단일 <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>, <code>null</code>을 나타냅니다.</li>
+<li>타겟 리소스 컬렉션 요청에 대한 <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a> 배열, <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier objects</a> 배열, 빈 배열 (<code>[]</code>)를 나타냅니다.</li>
+</ul>
+<blockquote>
+<p>Primary data <strong>MUST</strong> be either:</p>
+<ul>
+<li>a single <a href="http://jsonapi.org/format/#document-resource-objects">resource object</a>, a single <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>, or <code>null</code>, for requests that target single resources</li>
+<li>an array of <a href="http://jsonapi.org/format/#document-resource-objects">resource objects</a>, an array of <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier objects</a>, or an empty array (<code>[]</code>), for requests that target resource collections</li>
+</ul>
+</blockquote>
+<p>예를 들어, 다음 일차 데이터는 단일 리소스 오브젝트를 나타냅니다:</p>
+<blockquote>
+<p>For example, the following primary data is a single resource object:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="err">{</span>
+<span class="err"> &quot;data&quot;: {</span>
+<span class="err">    &quot;type&quot;: &quot;articles&quot;,</span>
+<span class="err">    &quot;id&quot;: &quot;1&quot;,</span>
+<span class="err">    &quot;attributes&quot;: {</span>
+<span class="err">      // ... this article&#39;s attributes</span>
+<span class="err">    },</span>
+<span class="err">    &quot;relationships&quot;: {</span>
+<span class="err">      // ... this article&#39;s relationships</span>
+<span class="err">    }</span>
+<span class="err">  }</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>다음 일차 데이터는 동일한 리소스를 참조하는 단일 <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>입니다:</p>
+<blockquote>
+<p>The following primary data is a single <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a> that references the same resource:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="err">{</span>
+<span class="err"> &quot;data&quot;: {</span>
+<span class="err">    &quot;type&quot;: &quot;articles&quot;,</span>
+<span class="err">    &quot;id&quot;: &quot;1&quot;</span>
+<span class="err">  }</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p>리소스에 대한 논리 컬렉션은 아이템 하나만 있거나 비어있더라도 배열로 표현합니다. &lt;<strong>MUST</strong>&gt;</p>
+<blockquote>
+<p>A logical collection of resources <strong>MUST</strong> be represented as an array, even if it only contains one item or is empty.</p>
+</blockquote></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
         <!-- Comment -->
         <div id="utterances">
           <script src="https://utteranc.es/client.js"
