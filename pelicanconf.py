@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from pendulum import today
 
 AUTHOR = "ujuc"
 SITENAME = "잘 밤에 쓸데없는 생각하기..."
 SITESUBTITLE = "Anythink, Everythink!"
 SITEURL = "https://ujuc.github.io"
+START_YEAR = 2012
+END_YEAR = today(tz='Asia/Seoul').year
 
 USER_LOGO_URL = "img/logo.jpg"
 
