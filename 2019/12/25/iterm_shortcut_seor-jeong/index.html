@@ -30,10 +30,12 @@
   <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
 
     <!-- Article head -->
+  <meta name="keywords" content="iterm, shortcut">
 
     <!-- Title -->
     <title>
-    잘 밤에 쓸데없는 생각하기... -     </title>
+    잘 밤에 쓸데없는 생각하기... -   iTerm shortcut 설정
+    </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
@@ -89,69 +91,102 @@
 </div>  </header>
 
   <div id="site_article" class="container">
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title">
-          <a href="https://ujuc.github.io/2019/12/25/iterm_shortcut_seor-jeong/">iTerm shortcut 설정</a>
-        </h3>
-        <div class="article_meta"><i class="far fa-calendar-plus"></i> 19. 12. 25.</div>
-        <div class="article_text"><p>iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 중간중간 건너 띄워서 가야할때, 사용하는 단축키를 정리한다.</p></div>
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>iTerm shortcut 설정</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 19. 12. 25.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/software.html">Software</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/iterm.html" class="article_tag">iterm</a>
+            <a href="https://ujuc.github.io/tag/shortcut.html" class="article_tag">shortcut</a>
+          </i>
+        </div>
+        <div id="division"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>매번 찾았는데&hellip; 이제는 기억을 못해서 써두려고 한다.</p>
+<p>원래 글은 <a href="https://stackoverflow.com/questions/6205157/iterm-2-how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line">(stackoverflow) iTerm 2: How to set keyboard shorcuts to jump to beginning/end of line?</a></p>
+<p>지금 글쓰는 오늘 날짜로 8년도 더된 글이다</p>
+<p>이정도면 기본으로 넣어줄 만한데&hellip; 암튼&hellip;</p>
+<p>개인적으로 설정해서 사용하는 답변은 <a href="https://stackoverflow.com/questions/6205157/iterm-2-how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line/22312856#22312856">두번째</a></p>
+<hr>
+<ol>
+<li>iTerm2 -&gt; Preferences</li>
+<li>&ldquo;Key&rdquo; 탭설정</li>
+<li>다음 단축키들을 입력한다.</li>
+</ol>
+<h2 id="_1">왼쪽으로 워드 단위 이동</h2>
+<ul>
+<li>키보드 입력: <code>option</code> + <code>&lt;-</code></li>
+<li>Action : Send Hex Code</li>
+<li>Code: <code>0x1b 0x62</code></li>
+</ul>
+<h2 id="_2">오른쪽으로 워드 단위 이동</h2>
+<ul>
+<li>키보드 입력: <code>option</code> + <code>-&gt;</code></li>
+<li>Action: Send Hex Code</li>
+<li>Code: <code>0x1b 0x66</code></li>
+</ul>
+<p><strong>위의 두 설정을 하게되면 다음 작업을 꼭 해줘야 된다.</strong></p>
+<ol>
+<li>&ldquo;Profiles&rdquo; 열고</li>
+<li>&ldquo;Keys&rdquo; 선택</li>
+<li><code>option</code> + <code>&lt;-</code>, <code>option</code> + <code>-&gt;</code> 항목을 삭제한다.</li>
+</ol>
+<h2 id="_3">맨 첫번째로 이동</h2>
+<ul>
+<li>키보드 입력: <code>cmd</code> + <code>&lt;-</code></li>
+<li>Action: Send Hex Code</li>
+<li>Code: <code>0x01</code></li>
+</ul>
+<h2 id="_4">맨끝으로 이동</h2>
+<ul>
+<li>키보드 입력: <code>cmd</code> + <code>-&gt;</code></li>
+<li>Action: Send Hex Code</li>
+<li>Code: <code>0x05</code></li>
+</ul></div>
+        <div id="division"><i class="far fa-hand-spock"></i></div>
+        <!-- Comment -->
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+                  repo="ujuc/ujuc.github.io"
+                  issue-term="url"
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+          </script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div style="text-align: center">🎗</div>
       </div>
-    </article>
-      <hr/>
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title">
-          <a href="https://ujuc.github.io/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/">pyenv 설치 스크립트 변경됨</a>
-        </h3>
-        <div class="article_meta"><i class="far fa-calendar-plus"></i> 19. 11. 29.</div>
-        <div class="article_text"><p>pyenv 설치 방법이 변경되어 간략하게 남겨둔다.</p></div>
-      </div>
-    </article>
-      <hr/>
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title">
-          <a href="https://ujuc.github.io/2019/09/28/toml_0.5.0_release/">TOML 0.5.0 Release</a>
-        </h3>
-        <div class="article_meta"><i class="far fa-calendar-plus"></i> 19. 09. 28.</div>
-        <div class="article_text"><p>TOML 0.5.0 릴리즈</p></div>
-      </div>
-    </article>
-      <hr/>
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title">
-          <a href="https://ujuc.github.io/2019/09/15/docker_image-e_php_composer_seor-ci/">Docker image에 php composer 설치</a>
-        </h3>
-        <div class="article_meta"><i class="far fa-calendar-plus"></i> 19. 09. 15.</div>
-        <div class="article_text"><p>Dockerfile에서 composer를 설치하는 방법을 정리한다.</p></div>
-      </div>
-    </article>
-      <hr/>
-    <article class="row">
-      <div class="container">
-        <h3 class="article_title">
-          <a href="https://ujuc.github.io/2019/08/15/writing_poetry_script/">Writing poetry script</a>
-        </h3>
-        <div class="article_meta"><i class="far fa-calendar-plus"></i> 19. 08. 15.</div>
-        <div class="article_text"><p><code>poetry</code>를 사용하면서 사용하고 싶었던 <code>[tool.poetry.scripts]</code> 사용법을 남긴다.</p></div>
-      </div>
-    </article>
+    </div>
+  </div>
   </div>
 
   <!-- body foot -->
   <div class="row">
     <div class="container">
-  <ul class="pagination">
-      <li class="align-middle"><a rel="next"><i class="fa fa-times"></i> Next</a></li>
-    <a class="align-middle" style="margin: 0 .5rem 0 .5rem"><i class="fas fa-sun" style="color:orangered"></i></a>
-      <li class="align-middle">
-        <a href="/index2.html">
-          Prev <i class="fas fa-arrow-circle-right"></i>
-        </a>
-      </li>
-  </ul>
     </div>
   </div>
 
