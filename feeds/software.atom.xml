@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Software</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/software.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-12-25T13:06:25+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>iTerm shortcut 설정</title><link href="https://ujuc.github.io/2019/12/25/iterm_shortcut_seor-jeong/" rel="alternate"></link><published>2019-12-25T13:06:25+09:00</published><updated>2019-12-25T13:06:25+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-12-25:/2019/12/25/iterm_shortcut_seor-jeong/</id><summary type="html">&lt;p&gt;iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 중간중간 건너 띄워서 가야할때, 사용하는 단축키를 정리한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;매번 찾았는데&amp;hellip; 이제는 기억을 못해서 써두려고 한다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Software</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/software.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-01-10T07:38:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>iTerm shortcut 설정</title><link href="https://ujuc.github.io/2019/12/25/iterm_shortcut_seor-jeong/" rel="alternate"></link><published>2019-12-25T13:06:25+09:00</published><updated>2020-01-10T07:38:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-12-25:/2019/12/25/iterm_shortcut_seor-jeong/</id><summary type="html">&lt;p&gt;iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 중간중간 건너 띄워서 가야할때, 사용하는 단축키를 정리한다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="0110"&gt;01/10 추가&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/channprj"&gt;@channprj&lt;/a&gt; 님께서 댓글로 Hex code로 하지 않아도 된다는 소식을 알려주셨다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;iTerm2 -&amp;gt; Preferences&lt;/li&gt;
+&lt;li&gt;Profile &amp;gt; Keys&lt;/li&gt;
+&lt;li&gt;Presets&amp;hellip; &amp;gt; Natual Text Editing&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2020-01-10_iterm2.png" width="30%"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;매번 찾았는데&amp;hellip; 이제는 기억을 못해서 써두려고 한다.&lt;/p&gt;
 &lt;p&gt;원래 글은 &lt;a href="https://stackoverflow.com/questions/6205157/iterm-2-how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line"&gt;(stackoverflow) iTerm 2: How to set keyboard shorcuts to jump to beginning/end of line?&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;지금 글쓰는 오늘 날짜로 8년도 더된 글이다&lt;/p&gt;
 &lt;p&gt;이정도면 기본으로 넣어줄 만한데&amp;hellip; 암튼&amp;hellip;&lt;/p&gt;
