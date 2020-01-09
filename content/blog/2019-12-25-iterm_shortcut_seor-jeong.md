@@ -1,9 +1,22 @@
 Title: iTerm shortcut 설정
 Date: 2019-12-25 13:06:25
+Modified: 2020-01-10 07:38:00
 Category: Software
 Tags: iterm, shortcut
 Slug: iterm_shortcut_seor-jeong
 Summary: iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 중간중간 건너 띄워서 가야할때, 사용하는 단축키를 정리한다.
+
+## 01/10 추가
+
+[@channprj](https://github.com/channprj) 님께서 댓글로 Hex code로 하지 않아도 된다는 소식을 알려주셨다.
+
+1. iTerm2 -> Preferences
+2. Profile > Keys
+3. Presets... > Natual Text Editing
+
+<img src="{static}/img/2020-01-10_iterm2.png" width="30%">
+
+---
 
 매번 찾았는데... 이제는 기억을 못해서 써두려고 한다.
 
