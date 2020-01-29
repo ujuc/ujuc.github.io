@@ -1,6 +1,6 @@
 Title: [번역] PSR-1: Basic Coding Standard
 Date: 2018-11-17 12:11:55
-Modifide: 2019-03-22 16:50:00
+Modified: 2019-03-22 16:50:00
 Category: Develop
 Tags: php, psr-1, psr, transelate
 Slug: psr-1:_basic_coding_standard
