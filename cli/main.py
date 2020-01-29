@@ -30,6 +30,7 @@ def post(ctx, title, rst=False):
     article = (
         f'Title: {title}\n'
         f'Date: {post_date}\n'
+        f'Modified: {post_date}\n'
         'Category: \n'
         'Tags: \n'
         f'Slug: {slug}\n'
