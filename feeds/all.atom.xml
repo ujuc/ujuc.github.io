@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-02-02T17:31:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>ReadtheDocs 로 퍼블리싱되는 문서에 한국어 지원하기</title><link href="https://ujuc.github.io/2020/01/31/readthedocs-ro-peo-beur-ri-sing-doe-neun-mun-seo-e-han-gug-eo-ji-weon-ha-gi/" rel="alternate"></link><published>2020-01-31T10:07:44+09:00</published><updated>2020-02-02T17:31:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-01-31:/2020/01/31/readthedocs-ro-peo-beur-ri-sing-doe-neun-mun-seo-e-han-gug-eo-ji-weon-ha-gi/</id><summary type="html">&lt;p&gt;Airship 프로젝트 문서 번역을 하려는데&amp;hellip; ReadtheDocs에서 제공하고 있었다. 여기서 한국어로 지원할 수 있도록 수정해주자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.airshipit.org/"&gt;Airship&lt;/a&gt; 프로젝트는 나중에 설명하도록 하자. (블로그 자주 써야지&amp;hellip;)&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-02-02T18:41:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Git commit message template 만들기</title><link href="https://ujuc.github.io/2020/02/02/git-commit-message-template-man-deul-gi/" rel="alternate"></link><published>2020-02-02T18:41:00+09:00</published><updated>2020-02-02T18:41:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-02:/2020/02/02/git-commit-message-template-man-deul-gi/</id><summary type="html">&lt;p&gt;Git commit message 에 변화를 만들고 싶었서 찾아봤다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;뭐때문에 여기까지 왔던건지 모르겠다.&lt;br&gt;
+그져 git commit message를 바꿔볼까 라는 생각에서 지금 여기로 온듯.&lt;/p&gt;
+&lt;h2 id="_1"&gt;만들어보자!&lt;/h2&gt;
+&lt;h3 id="1-git-config"&gt;1. Git config 에 추가&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;.gitconfig&lt;/code&gt; 파일에 &lt;code&gt;commit.template&lt;/code&gt; 항목에 기본 값으로 등록할 내용을 추가해준다.&lt;br&gt;
+여기서 나는 &lt;code&gt;~/.gitmessage&lt;/code&gt;라는 것을 전체 프로젝트에서 사용하도록 구성하겠다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;git config --global commit.template ~/.gitmessage&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;명령을 실행다면 &lt;code&gt;.gitconfig&lt;/code&gt; 파일에 다음과같이 설정이된다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[commit]&lt;/span&gt;
+  &lt;span class="na"&gt;template&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;~/.gitmessage&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3 id="2-commit-message-template"&gt;2. Commit message Template 작성&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;~/.gitmessage&lt;/code&gt; 작성을 하자.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;subject&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;#####&lt;/span&gt; &lt;span class="n"&gt;Subject&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt; &lt;span class="n"&gt;characters&lt;/span&gt; &lt;span class="o"&gt;#################&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
+
+
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Body&lt;/span&gt; &lt;span class="n"&gt;Message&lt;/span&gt;
+&lt;span class="o"&gt;########&lt;/span&gt; &lt;span class="n"&gt;Body&lt;/span&gt; &lt;span class="mi"&gt;72&lt;/span&gt; &lt;span class="n"&gt;characters&lt;/span&gt; &lt;span class="o"&gt;#######################################&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;
+
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Issue&lt;/span&gt; &lt;span class="n"&gt;Tracker&lt;/span&gt; &lt;span class="nb"&gt;Number&lt;/span&gt; &lt;span class="k"&gt;or&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt;
+
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="c1"&gt;--- COMMIT END ---&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="k"&gt;Type&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;feat&lt;/span&gt;    &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;feature&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;fix&lt;/span&gt;     &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;bug&lt;/span&gt; &lt;span class="n"&gt;fix&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;refactor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;refactoring&lt;/span&gt; &lt;span class="n"&gt;production&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;style&lt;/span&gt;   &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;formatting&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;missing&lt;/span&gt; &lt;span class="n"&gt;semi&lt;/span&gt; &lt;span class="n"&gt;colons&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;no&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;docs&lt;/span&gt;    &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;documentation&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;test&lt;/span&gt;    &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;adding&lt;/span&gt; &lt;span class="k"&gt;or&lt;/span&gt; &lt;span class="n"&gt;refactoring&lt;/span&gt; &lt;span class="n"&gt;tests&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;             &lt;span class="k"&gt;no&lt;/span&gt; &lt;span class="n"&gt;productin&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;chore&lt;/span&gt;   &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;updating&lt;/span&gt; &lt;span class="n"&gt;grunt&lt;/span&gt; &lt;span class="n"&gt;tasks&lt;/span&gt; &lt;span class="n"&gt;etc&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;             &lt;span class="k"&gt;no&lt;/span&gt; &lt;span class="n"&gt;production&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="c1"&gt;------------------&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;Remember&lt;/span&gt; &lt;span class="n"&gt;me&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;Capitalize&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;subject&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;     &lt;span class="err"&gt;제목줄은&lt;/span&gt; &lt;span class="err"&gt;대문자로&lt;/span&gt; &lt;span class="err"&gt;시작한다&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;Use&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;imperative&lt;/span&gt; &lt;span class="n"&gt;mood&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;subject&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;     &lt;span class="err"&gt;제목줄은&lt;/span&gt; &lt;span class="err"&gt;명령어로&lt;/span&gt; &lt;span class="err"&gt;작성한다&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="k"&gt;end&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;subject&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;period&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;     &lt;span class="err"&gt;제목줄은&lt;/span&gt; &lt;span class="err"&gt;마침표로&lt;/span&gt; &lt;span class="err"&gt;끝내지&lt;/span&gt; &lt;span class="err"&gt;않는다&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;Separate&lt;/span&gt; &lt;span class="n"&gt;subject&lt;/span&gt; &lt;span class="k"&gt;from&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;blank&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;     &lt;span class="err"&gt;본문과&lt;/span&gt; &lt;span class="err"&gt;제목에는&lt;/span&gt; &lt;span class="err"&gt;빈줄을&lt;/span&gt; &lt;span class="err"&gt;넣어서&lt;/span&gt; &lt;span class="err"&gt;구분한다&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;Use&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="k"&gt;explain&lt;/span&gt; &lt;span class="n"&gt;what&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="n"&gt;why&lt;/span&gt; &lt;span class="n"&gt;vs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;how&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;     &lt;span class="err"&gt;본문에는&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;어떻게&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;보다는&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;왜&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;와&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;무엇을&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;설명한다&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;   &lt;span class="n"&gt;Can&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;multiple&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;-&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;bullet&lt;/span&gt; &lt;span class="n"&gt;points&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt;     &lt;span class="err"&gt;본문에&lt;/span&gt; &lt;span class="err"&gt;목록을&lt;/span&gt; &lt;span class="err"&gt;나타낼때는&lt;/span&gt; &lt;span class="ss"&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;로&lt;/span&gt; &lt;span class="err"&gt;시작한다&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="c1"&gt;------------------&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;제목은 50자 이하로&amp;hellip;&lt;/li&gt;
+&lt;li&gt;본문은 72자 이하로&amp;hellip;&lt;/li&gt;
+&lt;li&gt;이슈는 남겨주는게 좋아서 트래커를 입력할 수 있도록&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;code&gt;#&lt;/code&gt; 으로 시작하는 줄은 삭제된다. 그리니 알아서 잘 띄우두도록하자.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;레포마다 다르게 설정하기&lt;/h2&gt;
+&lt;p&gt;다음 명령을 레포에서 입력한다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;git config commit.template .git/gitmessage&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;그리고 &lt;code&gt;.git/gitmessage&lt;/code&gt;에 template을 작성해준다.&lt;/p&gt;
+&lt;h2 id="_3"&gt;참고 사이트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration"&gt;Git Manual - Customizing Git - Git Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@alex.wasik/create-a-custom-git-commit-template-84468232a459"&gt;Create A Custom Git Commit Template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://thoughtbot.com/blog/better-commit-messages-with-a-gitmessage-template"&gt;Better Commit Messages with a .gitmessage Template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/adeekshith/cd4c95a064977cdc6c50"&gt;gist - adeekshith/.git-commit-template.txt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.conventionalcommits.org/ko/v1.0.0-beta.4/"&gt;Conventional Commits&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Develop"></category><category term="git"></category><category term="commit"></category><category term="template"></category></entry><entry><title>ReadtheDocs 로 퍼블리싱되는 문서에 한국어 지원하기</title><link href="https://ujuc.github.io/2020/01/31/readthedocs-ro-peo-beur-ri-sing-doe-neun-mun-seo-e-han-gug-eo-ji-weon-ha-gi/" rel="alternate"></link><published>2020-01-31T10:07:44+09:00</published><updated>2020-02-02T17:31:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-01-31:/2020/01/31/readthedocs-ro-peo-beur-ri-sing-doe-neun-mun-seo-e-han-gug-eo-ji-weon-ha-gi/</id><summary type="html">&lt;p&gt;Airship 프로젝트 문서 번역을 하려는데&amp;hellip; ReadtheDocs에서 제공하고 있었다. 여기서 한국어로 지원할 수 있도록 수정해주자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.airshipit.org/"&gt;Airship&lt;/a&gt; 프로젝트는 나중에 설명하도록 하자. (블로그 자주 써야지&amp;hellip;)&lt;/p&gt;
 &lt;p&gt;번역을 하려던 문서는 &lt;a href="https://airship-treasuremap.readthedocs.io/en/latest/"&gt;Airship Treasuremap&lt;/a&gt;이었는데, 잘못보고 다른 저장소를 사용하게 되어 중간에 작업했던거 남겨두고 진행하려고 한다.&lt;/p&gt;
 &lt;p&gt;지금의 내용은 &lt;a href="https://docs.readthedocs.io/en/stable/guides/manage-translations.html"&gt;Manage Translations&lt;/a&gt; 를 보고 따라하면 되는 부분이다.&lt;/p&gt;
 &lt;h2 id="_1"&gt;번역 파일 생성&lt;/h2&gt;

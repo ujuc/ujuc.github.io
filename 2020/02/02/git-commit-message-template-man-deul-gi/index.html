@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Style sheet -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/687641d3e8.js"></script>
+
+<!-- Google web font -->
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Fira+Mono|Noto+Serif+KR|Sunflower:300&display=swap');
+</style>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+    <!-- Article head -->
+  <meta name="keywords" content="git, commit, template">
+
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   Git commit message template 만들기
+    </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>Git commit message template 만들기</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 20. 02. 02. / <i class="fas fa-level-up-alt"></i> 20. 02. 02.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/git.html" class="article_tag">git</a>
+            <a href="https://ujuc.github.io/tag/commit.html" class="article_tag">commit</a>
+            <a href="https://ujuc.github.io/tag/template.html" class="article_tag">template</a>
+          </i>
+        </div>
+        <div class="text-center"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>뭐때문에 여기까지 왔던건지 모르겠다.<br>
+그져 git commit message를 바꿔볼까 라는 생각에서 지금 여기로 온듯.</p>
+<h2 id="_1">만들어보자!</h2>
+<h3 id="1-git-config">1. Git config 에 추가</h3>
+<p><code>.gitconfig</code> 파일에 <code>commit.template</code> 항목에 기본 값으로 등록할 내용을 추가해준다.<br>
+여기서 나는 <code>~/.gitmessage</code>라는 것을 전체 프로젝트에서 사용하도록 구성하겠다.</p>
+<div class="codehilite"><pre><span></span><span class="err">git config --global commit.template ~/.gitmessage</span>
+</pre></div>
+
+
+<p>명령을 실행다면 <code>.gitconfig</code> 파일에 다음과같이 설정이된다.</p>
+<div class="codehilite"><pre><span></span><span class="k">[commit]</span>
+  <span class="na">template</span> <span class="o">=</span> <span class="s">~/.gitmessage</span>
+</pre></div>
+
+
+<h3 id="2-commit-message-template">2. Commit message Template 작성</h3>
+<p><code>~/.gitmessage</code> 작성을 하자.</p>
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="o">&lt;</span><span class="k">type</span><span class="o">&gt;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">subject</span><span class="o">&gt;</span>
+<span class="o">#####</span> <span class="n">Subject</span> <span class="mi">50</span> <span class="n">characters</span> <span class="o">#################</span> <span class="o">-&gt;</span> <span class="o">|</span>
+
+
+<span class="o">#</span> <span class="n">Body</span> <span class="n">Message</span>
+<span class="o">########</span> <span class="n">Body</span> <span class="mi">72</span> <span class="n">characters</span> <span class="o">#######################################</span> <span class="o">-&gt;</span> <span class="o">|</span>
+
+<span class="o">#</span> <span class="n">Issue</span> <span class="n">Tracker</span> <span class="nb">Number</span> <span class="k">or</span> <span class="n">URL</span>
+
+<span class="o">#</span> <span class="c1">--- COMMIT END ---</span>
+<span class="o">#</span> <span class="k">Type</span> <span class="n">can</span> <span class="n">be</span>
+<span class="o">#</span>   <span class="n">feat</span>    <span class="p">:</span> <span class="k">new</span> <span class="n">feature</span>
+<span class="o">#</span>   <span class="n">fix</span>     <span class="p">:</span> <span class="n">bug</span> <span class="n">fix</span>
+<span class="o">#</span>   <span class="n">refactor</span><span class="p">:</span> <span class="n">refactoring</span> <span class="n">production</span> <span class="n">code</span>
+<span class="o">#</span>   <span class="n">style</span>   <span class="p">:</span> <span class="n">formatting</span><span class="p">,</span> <span class="n">missing</span> <span class="n">semi</span> <span class="n">colons</span><span class="p">,</span> <span class="n">etc</span><span class="p">;</span> <span class="k">no</span> <span class="n">code</span> <span class="n">change</span>
+<span class="o">#</span>   <span class="n">docs</span>    <span class="p">:</span> <span class="n">changes</span> <span class="k">to</span> <span class="n">documentation</span>
+<span class="o">#</span>   <span class="n">test</span>    <span class="p">:</span> <span class="n">adding</span> <span class="k">or</span> <span class="n">refactoring</span> <span class="n">tests</span>
+<span class="o">#</span>             <span class="k">no</span> <span class="n">productin</span> <span class="n">code</span> <span class="n">change</span>
+<span class="o">#</span>   <span class="n">chore</span>   <span class="p">:</span> <span class="n">updating</span> <span class="n">grunt</span> <span class="n">tasks</span> <span class="n">etc</span>
+<span class="o">#</span>             <span class="k">no</span> <span class="n">production</span> <span class="n">code</span> <span class="n">change</span>
+<span class="o">#</span> <span class="c1">------------------</span>
+<span class="o">#</span> <span class="n">Remember</span> <span class="n">me</span> <span class="o">~</span>
+<span class="o">#</span>   <span class="n">Capitalize</span> <span class="n">the</span> <span class="n">subject</span> <span class="n">line</span>
+<span class="o">#</span>     <span class="err">제목줄은</span> <span class="err">대문자로</span> <span class="err">시작한다</span><span class="p">.</span>
+<span class="o">#</span>   <span class="n">Use</span> <span class="n">the</span> <span class="n">imperative</span> <span class="n">mood</span> <span class="k">in</span> <span class="n">the</span> <span class="n">subject</span> <span class="n">line</span>
+<span class="o">#</span>     <span class="err">제목줄은</span> <span class="err">명령어로</span> <span class="err">작성한다</span><span class="p">.</span>
+<span class="o">#</span>   <span class="k">Do</span> <span class="k">not</span> <span class="k">end</span> <span class="n">the</span> <span class="n">subject</span> <span class="n">line</span> <span class="k">with</span> <span class="n">a</span> <span class="n">period</span>
+<span class="o">#</span>     <span class="err">제목줄은</span> <span class="err">마침표로</span> <span class="err">끝내지</span> <span class="err">않는다</span><span class="p">.</span>
+<span class="o">#</span>   <span class="n">Separate</span> <span class="n">subject</span> <span class="k">from</span> <span class="n">body</span> <span class="k">with</span> <span class="n">a</span> <span class="n">blank</span> <span class="n">line</span>
+<span class="o">#</span>     <span class="err">본문과</span> <span class="err">제목에는</span> <span class="err">빈줄을</span> <span class="err">넣어서</span> <span class="err">구분한다</span><span class="p">.</span>
+<span class="o">#</span>   <span class="n">Use</span> <span class="n">the</span> <span class="n">body</span> <span class="k">to</span> <span class="k">explain</span> <span class="n">what</span> <span class="k">and</span> <span class="n">why</span> <span class="n">vs</span><span class="p">.</span> <span class="n">how</span>
+<span class="o">#</span>     <span class="err">본문에는</span> <span class="ss">&quot;어떻게&quot;</span> <span class="err">보다는</span> <span class="ss">&quot;왜&quot;</span><span class="err">와</span> <span class="ss">&quot;무엇을&quot;</span> <span class="err">설명한다</span><span class="p">.</span>
+<span class="o">#</span>   <span class="n">Can</span> <span class="n">use</span> <span class="n">multiple</span> <span class="n">lines</span> <span class="k">with</span> <span class="ss">&quot;-&quot;</span> <span class="k">for</span> <span class="n">bullet</span> <span class="n">points</span> <span class="k">in</span> <span class="n">body</span>
+<span class="o">#</span>     <span class="err">본문에</span> <span class="err">목록을</span> <span class="err">나타낼때는</span> <span class="ss">&quot;-&quot;</span><span class="err">로</span> <span class="err">시작한다</span><span class="p">.</span>
+<span class="o">#</span> <span class="c1">------------------</span>
+</pre></div>
+
+
+<ul>
+<li>제목은 50자 이하로&hellip;</li>
+<li>본문은 72자 이하로&hellip;</li>
+<li>이슈는 남겨주는게 좋아서 트래커를 입력할 수 있도록&hellip;</li>
+<li><strong>NOTE</strong>: <code>#</code> 으로 시작하는 줄은 삭제된다. 그리니 알아서 잘 띄우두도록하자.</li>
+</ul>
+<h2 id="_2">레포마다 다르게 설정하기</h2>
+<p>다음 명령을 레포에서 입력한다.</p>
+<div class="codehilite"><pre><span></span><span class="err">git config commit.template .git/gitmessage</span>
+</pre></div>
+
+
+<p>그리고 <code>.git/gitmessage</code>에 template을 작성해준다.</p>
+<h2 id="_3">참고 사이트</h2>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">Git Manual - Customizing Git - Git Configuration</a></li>
+<li><a href="https://medium.com/@alex.wasik/create-a-custom-git-commit-template-84468232a459">Create A Custom Git Commit Template</a></li>
+<li><a href="https://thoughtbot.com/blog/better-commit-messages-with-a-gitmessage-template">Better Commit Messages with a .gitmessage Template</a></li>
+<li><a href="https://gist.github.com/adeekshith/cd4c95a064977cdc6c50">gist - adeekshith/.git-commit-template.txt</a></li>
+<li><a href="https://www.conventionalcommits.org/ko/v1.0.0-beta.4/">Conventional Commits</a></li>
+</ul></div>
+        <div class="text-center"><i class="far fa-hand-spock"></i></div>
+
+        <!-- Buy me a coffee -->
+        <div class="text-center">
+<p>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+         alt="Buy Me A Coffee"
+         style="width:15%"
+    >
+  </a>
+</p>        </div>
+
+        <!-- Comment -->
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+                  repo="ujuc/ujuc.github.io"
+                  issue-term="url"
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+          </script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div class="text-center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기...</a></p>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row text-right">
+  <div class="container" style="margin-bottom: 10px;">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+      <i class="far fa-closed-captioning"></i> BY-SA</a> 2012-2020 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->  <div id="js" class="contents">
+  </div>
+
+  </body>
+</html>
