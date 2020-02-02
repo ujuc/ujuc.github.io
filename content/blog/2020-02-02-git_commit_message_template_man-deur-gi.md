@@ -79,7 +79,7 @@ git config --global commit.template ~/.gitmessage
 다음 명령을 레포에서 입력한다.
 
 ```
-git config commit.template .git/gitmessage
+git config commit.template ./path/to/.gitmessage
 ```
 
 그리고 `.git/gitmessage`에 template을 작성해준다.
