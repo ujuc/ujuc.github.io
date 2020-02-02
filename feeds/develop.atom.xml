@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-09-28T11:44:36+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>TOML 0.5.0 Release</title><link href="https://ujuc.github.io/2019/09/28/toml_0.5.0_release/" rel="alternate"></link><published>2019-09-28T11:44:36+09:00</published><updated>2019-09-28T11:44:36+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-09-28:/2019/09/28/toml_0.5.0_release/</id><summary type="html">&lt;p&gt;TOML 0.5.0 릴리즈&lt;/p&gt;</summary><content type="html">&lt;p&gt;TOML 0.4.0 문서를 2017년에 번역해서 반영해두고 잊고 있었다가 오랜만에 들어갔더니 저번 7월달에 0.5.0 버전으로 업그레이드를 했다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-02-02T17:31:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>ReadtheDocs 로 퍼블리싱되는 문서에 한국어 지원하기</title><link href="https://ujuc.github.io/2020/01/31/readthedocs-ro-peo-beur-ri-sing-doe-neun-mun-seo-e-han-gug-eo-ji-weon-ha-gi/" rel="alternate"></link><published>2020-01-31T10:07:44+09:00</published><updated>2020-02-02T17:31:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-01-31:/2020/01/31/readthedocs-ro-peo-beur-ri-sing-doe-neun-mun-seo-e-han-gug-eo-ji-weon-ha-gi/</id><summary type="html">&lt;p&gt;Airship 프로젝트 문서 번역을 하려는데&amp;hellip; ReadtheDocs에서 제공하고 있었다. 여기서 한국어로 지원할 수 있도록 수정해주자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.airshipit.org/"&gt;Airship&lt;/a&gt; 프로젝트는 나중에 설명하도록 하자. (블로그 자주 써야지&amp;hellip;)&lt;/p&gt;
+&lt;p&gt;번역을 하려던 문서는 &lt;a href="https://airship-treasuremap.readthedocs.io/en/latest/"&gt;Airship Treasuremap&lt;/a&gt;이었는데, 잘못보고 다른 저장소를 사용하게 되어 중간에 작업했던거 남겨두고 진행하려고 한다.&lt;/p&gt;
+&lt;p&gt;지금의 내용은 &lt;a href="https://docs.readthedocs.io/en/stable/guides/manage-translations.html"&gt;Manage Translations&lt;/a&gt; 를 보고 따라하면 되는 부분이다.&lt;/p&gt;
+&lt;h2 id="_1"&gt;번역 파일 생성&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;code&gt;conf.py&lt;/code&gt; 파일이 있는 &lt;code&gt;docs&lt;/code&gt; 폴더나 도큐먼트 폴더에서 실행을 해야한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sphinx-build -b gettext . _build/gettext
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;위 명령을 실행하면 &lt;code&gt;pot&lt;/code&gt; 파일을 &lt;code&gt;_build/gettext&lt;/code&gt; 에 생긴것을 확인할 수 있다.&lt;/p&gt;
+&lt;h2 id="_2"&gt;번역할 텍스트 만들기&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;pot&lt;/code&gt; 파일은 &lt;code&gt;po&lt;/code&gt; 템플릿이라 곧장 번역을 할 수 없다.&lt;br&gt;
+그러니 &lt;code&gt;po&lt;/code&gt;파일을 다시 만들어야한다.&lt;/p&gt;
+&lt;p&gt;먼저 &lt;code&gt;sphinx-intl&lt;/code&gt; 패키지를 설치하여 다음 명령어를 실행한다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sphinx-intl update -p _build/gettext -l ko
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;locale/ko/LC_MESSAGES/**.po&lt;/code&gt; 파일이 생성된다.&lt;/p&gt;
+&lt;p&gt;나머지는 알아서&amp;hellip; po 파일을 가지고서 다른 서비스에 올려서 번역을 하거나 하면된다.&lt;/p&gt;
+&lt;h2 id="_3"&gt;선택한 언어로 문서 만들기&lt;/h2&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sphinx-build -b html -D &lt;span class="nv"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;ko . _build/html/ko
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;로 하면된다고 한다. 아직이 부분을 해보지는 않아서 해보고 업뎃하는걸로&amp;hellip;&lt;/p&gt;</content><category term="Develop"></category><category term="documents"></category><category term="po"></category><category term="readthedocs"></category></entry><entry><title>TOML 0.5.0 Release</title><link href="https://ujuc.github.io/2019/09/28/toml_0.5.0_release/" rel="alternate"></link><published>2019-09-28T11:44:36+09:00</published><updated>2019-09-28T11:44:36+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-09-28:/2019/09/28/toml_0.5.0_release/</id><summary type="html">&lt;p&gt;TOML 0.5.0 릴리즈&lt;/p&gt;</summary><content type="html">&lt;p&gt;TOML 0.4.0 문서를 2017년에 번역해서 반영해두고 잊고 있었다가 오랜만에 들어갔더니 저번 7월달에 0.5.0 버전으로 업그레이드를 했다.&lt;/p&gt;
 &lt;p&gt;TOML 레포에서 릴리즈를 6번 했는데. 0.4.0에서 0.5.0으로 업그레이드하는데. 장장 3년이나 걸렸다. 0.5.0 으로 업글될때 나온 커밋수도 10개밖에 안되는데&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Go때문에 많은 이슈들이 쌓였고, 어떻게 하면 좋을련지에 대한 내용들이 많이 오고간듯.&lt;/p&gt;
 &lt;p&gt;이슈를 보야될꺼같긴한데&amp;hellip; ~~귀찮아~~&lt;/p&gt;

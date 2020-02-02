@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta name="author" content="ujuc">
+<meta name="description" content="Posts and writings by ujuc">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Style sheet -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/687641d3e8.js"></script>
+
+<!-- Google web font -->
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Fira+Mono|Noto+Serif+KR|Sunflower:300&display=swap');
+</style>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+
+    <!-- Article head -->
+  <meta name="keywords" content="documents, po, readthedocs">
+
+    <!-- Title -->
+    <title>
+    잘 밤에 쓸데없는 생각하기... -   ReadtheDocs 로 퍼블리싱되는 문서에 한국어 지원하기
+    </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>ReadtheDocs 로 퍼블리싱되는 문서에 한국어 지원하기</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 20. 01. 31. / <i class="fas fa-level-up-alt"></i> 20. 02. 02.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/documents.html" class="article_tag">documents</a>
+            <a href="https://ujuc.github.io/tag/po.html" class="article_tag">po</a>
+            <a href="https://ujuc.github.io/tag/readthedocs.html" class="article_tag">readthedocs</a>
+          </i>
+        </div>
+        <div class="text-center"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p><a href="https://www.airshipit.org/">Airship</a> 프로젝트는 나중에 설명하도록 하자. (블로그 자주 써야지&hellip;)</p>
+<p>번역을 하려던 문서는 <a href="https://airship-treasuremap.readthedocs.io/en/latest/">Airship Treasuremap</a>이었는데, 잘못보고 다른 저장소를 사용하게 되어 중간에 작업했던거 남겨두고 진행하려고 한다.</p>
+<p>지금의 내용은 <a href="https://docs.readthedocs.io/en/stable/guides/manage-translations.html">Manage Translations</a> 를 보고 따라하면 되는 부분이다.</p>
+<h2 id="_1">번역 파일 생성</h2>
+<ul>
+<li><strong>NOTE</strong>: <code>conf.py</code> 파일이 있는 <code>docs</code> 폴더나 도큐먼트 폴더에서 실행을 해야한다.</li>
+</ul>
+<div class="codehilite"><pre><span></span>sphinx-build -b gettext . _build/gettext
+</pre></div>
+
+
+<p>위 명령을 실행하면 <code>pot</code> 파일을 <code>_build/gettext</code> 에 생긴것을 확인할 수 있다.</p>
+<h2 id="_2">번역할 텍스트 만들기</h2>
+<p><code>pot</code> 파일은 <code>po</code> 템플릿이라 곧장 번역을 할 수 없다.<br>
+그러니 <code>po</code>파일을 다시 만들어야한다.</p>
+<p>먼저 <code>sphinx-intl</code> 패키지를 설치하여 다음 명령어를 실행한다.</p>
+<div class="codehilite"><pre><span></span>sphinx-intl update -p _build/gettext -l ko
+</pre></div>
+
+
+<p><code>locale/ko/LC_MESSAGES/**.po</code> 파일이 생성된다.</p>
+<p>나머지는 알아서&hellip; po 파일을 가지고서 다른 서비스에 올려서 번역을 하거나 하면된다.</p>
+<h2 id="_3">선택한 언어로 문서 만들기</h2>
+<div class="codehilite"><pre><span></span>sphinx-build -b html -D <span class="nv">language</span><span class="o">=</span>ko . _build/html/ko
+</pre></div>
+
+
+<p>로 하면된다고 한다. 아직이 부분을 해보지는 않아서 해보고 업뎃하는걸로&hellip;</p></div>
+        <div class="text-center"><i class="far fa-hand-spock"></i></div>
+
+        <!-- Buy me a coffee -->
+        <div class="text-center">
+<p>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+         alt="Buy Me A Coffee"
+         style="width:15%"
+    >
+  </a>
+</p>        </div>
+
+        <!-- Comment -->
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+                  repo="ujuc/ujuc.github.io"
+                  issue-term="url"
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+          </script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div class="text-center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기...</a></p>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row text-right">
+  <div class="container" style="margin-bottom: 10px;">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+      <i class="far fa-closed-captioning"></i> BY-SA</a> 2012-2020 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->  <div id="js" class="contents">
+  </div>
+
+  </body>
+</html>
