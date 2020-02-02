@@ -63,7 +63,7 @@
 &lt;/ul&gt;
 &lt;h2 id="_2"&gt;레포마다 다르게 설정하기&lt;/h2&gt;
 &lt;p&gt;다음 명령을 레포에서 입력한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;git config commit.template .git/gitmessage&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;git config commit.template ./path/to/.gitmessage&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
