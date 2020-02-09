@@ -12,6 +12,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 SITEURL = "https://ujuc.github.io"
+META_IMAGE = "img/main.jpg"
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = "feeds/all.atom.xml"
