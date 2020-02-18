@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-11-29T15:44:29+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>pyenv 설치 스크립트 변경됨</title><link href="https://ujuc.github.io/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/" rel="alternate"></link><published>2019-11-29T15:44:29+09:00</published><updated>2019-11-29T15:44:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-11-29:/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/</id><summary type="html">&lt;p&gt;pyenv 설치 방법이 변경되어 간략하게 남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;dotrc를 작성할때 만들었던 스크립트에서는 다음의 URL로 Pyenv를 설치했다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-02-19T05:38:42+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>맥에서 gpg 키 서명 실패</title><link href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" rel="alternate"></link><published>2020-02-19T05:38:42+09:00</published><updated>2020-02-19T05:38:42+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-19:/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/</id><summary type="html">&lt;p&gt;commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;열심히 공부하고 커밋하려는 순간&amp;hellip;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; git commit
+error: gpg tailed to sign the data
+fatal: failed to wrtie commit object
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;gpg키로 commit을 할때마다 비밀번호를 물어야되는데&amp;hellip;&lt;br&gt;
+우리 macOS에서는 비밀번호를 처음에 묻고 keychain에 저장을 해놓으시고 커밋할때마다 자동으로 입력한다.&lt;/p&gt;
+&lt;p&gt;그게 문제가 되었다. 오랜만에 재시작을 하면서 섹션 만료가 되었고, 바꼈으면 물어야지&amp;hellip;&lt;br&gt;
+조용히 있어서 문제가 되었다.&lt;/p&gt;
+&lt;p&gt;이럴때 &lt;a href="https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/41506446"&gt;Stack Overflow/ git - gpg onto mac osx: error: failed to sign the data&lt;/a&gt;에서는 &lt;a href="https://www.gnupg.org/related_software/pinentry/index.en.html"&gt;pinentry&lt;/a&gt;를 추가 설치해서 비밀번호를 얻어서 하라고 되어있다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;brew install pinentry-mac
+
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;pinentry-program /usr/local/bin/pinentry-mac&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.gnupg/gpg-agent.conf
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;작동하는지 테스트&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; gpg --clearsign
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+&lt;span class="nb"&gt;test&lt;/span&gt;
+-----BEGIN PGP SIGNATURE-----
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;그리고 블로그 쓸려고 확인중 이 문제를 겪었을때 대응 할 수 있다는 다른 방법!&lt;/p&gt;
+&lt;h4 id="1-keychain-access"&gt;1. Keychain Access에서 수정&lt;/h4&gt;
+&lt;p&gt;macOS에서 &lt;code&gt;Keychain Access&lt;/code&gt;로 접근 Passwords 카테고리에서 gpg키에 대한 비밀번호를 찾고, &lt;code&gt;Access Control&lt;/code&gt;에서 &lt;strong&gt;Confirm before allowing access &amp;gt; Ask for Keychain password&lt;/strong&gt; 를 체크 하도록 하자.&lt;br&gt;
+이것도 매번 물어볼꺼다 저장이 안되어있는데 물어야지&amp;hellip;&lt;/p&gt;
+&lt;h4 id="2"&gt;2. 처음 입력할때&lt;/h4&gt;
+&lt;p&gt;gpg키를 맨처음 입력할때 잘보도록하자 거기에 비밀번호 저장할래가 있을꺼다. 그걸 해지한다.&lt;br&gt;
+그러면 매번 git commit할때마다 물을꺼다.&lt;br&gt;
+그러면 서명이 가능해지겠지&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="gpg"></category><category term="key"></category><category term="gnupg"></category><category term="pinentry"></category></entry><entry><title>pyenv 설치 스크립트 변경됨</title><link href="https://ujuc.github.io/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/" rel="alternate"></link><published>2019-11-29T15:44:29+09:00</published><updated>2019-11-29T15:44:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-11-29:/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/</id><summary type="html">&lt;p&gt;pyenv 설치 방법이 변경되어 간략하게 남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;dotrc를 작성할때 만들었던 스크립트에서는 다음의 URL로 Pyenv를 설치했다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ brew install pyenv
 
 $ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer &lt;span class="p"&gt;|&lt;/span&gt; bash
