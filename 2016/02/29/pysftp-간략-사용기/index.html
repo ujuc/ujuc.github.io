@@ -134,7 +134,7 @@
 </ol>
 <h2 id="_1">사용법</h2>
 <p>간단히 적겠다. 모자르면 <a href="http://pysftp.readthedocs.org/en/release_0.2.8/cookbook.html">문서</a>를 보자.</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pysftp</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pysftp</span>
 
 <span class="n">cinfo</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="s1">&#39;hostname&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;ujuc&#39;</span><span class="p">,</span>
          <span class="s1">&#39;private_key&#39;</span><span class="p">:</span> <span class="s1">&#39;/path/to/keyfile&#39;</span><span class="p">,</span> <span class="s1">&#39;port&#39;</span><span class="p">:</span> <span class="mi">2222</span><span class="p">}</span>
@@ -145,7 +145,7 @@
     <span class="k">with</span> <span class="n">sftp</span><span class="o">.</span><span class="n">cd</span><span class="p">(</span><span class="s1">&#39;static&#39;</span><span class="p">):</span>
         <span class="n">sftp</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">)</span>
         <span class="n">sftp</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;there&#39;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>이정도 주석 달다가 지웠다. 그것이 없어도 sftp를 사용하고 있다면 간단히 상요할 정도로 sftp 명령어에서 사용하는 내용들을 추가해놓았다.</p>

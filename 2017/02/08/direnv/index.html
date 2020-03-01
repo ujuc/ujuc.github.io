@@ -129,16 +129,16 @@
 코드에는 넣지 못하는 환경변수들을 셸에 <code>.bashrc</code> 나 <code>.profile</code> 에 모든 곳에서 사용하는 경우가 생기는데, 이걸 쓰면 프로젝트마다 다른 내용을 생성하여 보안을 높힐 수 있는 기회가 된다. (모든 보안은 사람이 행하는 보안을 제외하고&hellip; 직접 OS에 들어와서 까는건 어쩔 수 없잖아&hellip;)</p>
 <h4 id="_1">설치</h4>
 <h5 id="_2">빠지지 않는 메뉴얼 설치!</h5>
-<div class="codehilite"><pre><span></span>$ git clone https://github.com/direnv/direnv
+<div class="codehilite"><pre><span></span><code>$ git clone https://github.com/direnv/direnv
 $ <span class="nb">cd</span> direnv
 $ make install
 <span class="c1"># or symlink ./direnv into the $PATH</span>
-</pre></div>
+</code></pre></div>
 
 
 <h5 id="brew">brew</h5>
-<div class="codehilite"><pre><span></span>$ brew install direnv
-</pre></div>
+<div class="codehilite"><pre><span></span><code>$ brew install direnv
+</code></pre></div>
 
 
 <ul>
@@ -149,33 +149,33 @@ $ make install
 <ul>
 <li><code>~/.bashrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="err">eval &quot;$(direnv hook bash)&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">eval &quot;$(direnv hook bash)&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li><code>~/.zshrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="err">eval &quot;$(direnv hook zsh)&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">eval &quot;$(direnv hook zsh)&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li><code>~/.config/fish/config.fish</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="err">eval (direnv hook fish)</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">eval (direnv hook fish)</span>
+</code></pre></div>
 
 
 <ul>
 <li><code>~/.cshrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="err">eval `direnv hook tcsh`</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">eval `direnv hook tcsh`</span>
+</code></pre></div>
 
 
 <p>다음으로는 다음과 같이 설정해주면 된다.</p>
-<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> playground
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> playground
 $ <span class="nb">echo</span> <span class="nb">export</span> <span class="nv">FOO</span><span class="o">=</span>foo &gt; .envrc
 direnv: error .envrc is blocked. Run <span class="sb">`</span>direnv allow<span class="sb">`</span> to approve its content.
 $ direnv allow
@@ -188,7 +188,7 @@ direnv: loading .envrc
 direnv: <span class="nb">export</span> +FOO -PS2
 $ <span class="nb">echo</span> <span class="si">${</span><span class="nv">FOO</span><span class="si">}</span>
 foo
-</pre></div>
+</code></pre></div>
 
 
 <p>사용법은 간단하다.</p>

@@ -128,7 +128,7 @@
 </ul>
 <p>분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나 적어야겠다.</p>
 <h2 id="_1">아키텍쳐</h2>
-<div class="codehilite"><pre><span></span>                                         <span class="p">[</span><span class="n">web</span><span class="p">]</span>
+<div class="codehilite"><pre><span></span><code>                                         <span class="p">[</span><span class="n">web</span><span class="p">]</span>
                                            <span class="o">+</span>
                                            <span class="o">|</span>
                                  <span class="o">+---------+----------------+</span>
@@ -147,16 +147,16 @@
              <span class="p">(</span><span class="n">Job</span> <span class="n">execute</span> <span class="n">fail</span><span class="p">)</span>  <span class="o">|</span>   <span class="p">(</span><span class="n">Job</span> <span class="n">execute</span> <span class="n">result</span><span class="p">)</span>   <span class="o">|</span>
                                  <span class="o">|</span>                          <span class="o">|</span>
  <span class="p">[</span><span class="n">Send</span> <span class="n">Mail</span><span class="p">]</span><span class="o">&lt;--------------------+--------------------------+</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.<br>
 노드는 여러개를 사용할 수 있는 것인지&hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이 봐야될듯함.</p>
 <h2 id="_2">빌드</h2>
-<div class="codehilite"><pre><span></span>go get -u github.com/shunfei/cronsun
+<div class="codehilite"><pre><span></span><code>go get -u github.com/shunfei/cronsun
 <span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/shunfei/cronsun
 sh build.sh
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="_3">실행</h2>

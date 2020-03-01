@@ -127,11 +127,11 @@
         </div>
         <div class="text-center"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><p>vim 플러그인중 jedi-vim 을 사용하는데. 설치된 vim 에서 python 플러그가 켜있지 않아 관련되서 플러그인을 사용하지 않는다는 아래와 같은 에러 메시지를 뿜고 있었다.</p>
-<div class="codehilite"><pre><span></span><span class="n">Error</span><span class="o">:</span> <span class="n">jedi</span><span class="o">-</span><span class="n">vim</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">initialize</span> <span class="n">Python</span><span class="o">:</span> <span class="n">jedi</span><span class="err">#</span><span class="n">setup_py_version</span><span class="o">:</span> <span class="o">\</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Error</span><span class="o">:</span> <span class="n">jedi</span><span class="o">-</span><span class="n">vim</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">initialize</span> <span class="n">Python</span><span class="o">:</span> <span class="n">jedi</span><span class="err">#</span><span class="n">setup_py_version</span><span class="o">:</span> <span class="o">\</span>
         <span class="n">Vim</span><span class="o">(</span><span class="n">py3file</span><span class="o">):</span><span class="n">Traceback</span> <span class="o">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="o">):</span> <span class="o">\</span>
         <span class="o">(</span><span class="k">in</span> <span class="kd">function</span> <span class="n">jedi</span><span class="err">#</span><span class="n">init_python</span><span class="o">[</span><span class="mi">3</span><span class="o">]..&lt;</span><span class="n">SNR</span><span class="o">&gt;</span><span class="mi">72</span><span class="n">_init_python</span><span class="o">[</span><span class="mi">50</span><span class="o">]..</span><span class="n">jedi</span>
 <span class="err">#</span><span class="n">setup_py_version</span><span class="o">,</span> <span class="n">line</span> <span class="mi">18</span><span class="o">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="ubuntu">Ubuntu</h2>
@@ -141,38 +141,38 @@
 <li>해당 구성은 <a href="https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source">Building Vim from source</a> 를 이용해서 구성하는 것으로 했다.</li>
 </ul>
 <p>vim을 빌드하기 전에 dev 패키지를 설치해준다.</p>
-<div class="codehilite"><pre><span></span><span class="err">sudo apt install python3-dev ruby-dev</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">sudo apt install python3-dev ruby-dev</span>
+</code></pre></div>
 
 
 <p>그리고 기존 패키지로 설치되어 있는 vim을 삭제한다.</p>
-<div class="codehilite"><pre><span></span><span class="err">sudo apt remove vim vim-runtime</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">sudo apt remove vim vim-runtime</span>
+</code></pre></div>
 
 
 <p>Vim 코드를 받고 컴파일을 해주자.</p>
-<div class="codehilite"><pre><span></span><span class="err">git clone https://github.com/vim/vim.git</span>
+<div class="codehilite"><pre><span></span><code><span class="err">git clone https://github.com/vim/vim.git</span>
 <span class="err">cd vim</span>
 <span class="err">./configure --with-features=huge --enable-multibyte \</span>
 <span class="err">            --enable-rubyinterp=yes \</span>
 <span class="err">            --enable-python3interp=yes \</span>
 <span class="err">            --enable-cscope</span>
 <span class="err">sudo make install</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>설치가 제대로 되었는지 확인하려면 <code>vim --version</code> 으로 확인하면 된다.</p>
 <p>시스템 기본으로 구성하려면 아래 명령어를 쳐주면된다.</p>
-<div class="codehilite"><pre><span></span><span class="err">sudo update-alternatives --install /usr/bin/editer editer /usr/bin/vim 1</span>
+<div class="codehilite"><pre><span></span><code><span class="err">sudo update-alternatives --install /usr/bin/editer editer /usr/bin/vim 1</span>
 <span class="err">sudo update-alternatives --set editer /usr/bin/vim</span>
 <span class="err">sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1</span>
 <span class="err">sudo update-alternatives --set vi /usr/bin/vim</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="mac">Mac</h2>
 <p>Mac OS에서는 brew를 사용해서 설치하면된다. 설치할때 옵션을 붙여주면 되는데 그 옵션은 다음에서 처럼 확인이 가능하다.</p>
-<div class="codehilite"><pre><span></span><span class="err">brew options vim</span>
+<div class="codehilite"><pre><span></span><code><span class="err">brew options vim</span>
 <span class="err">--with-client-server</span>
 <span class="err">    Enable client/server mode</span>
 <span class="err">--with-custom-perl</span>
@@ -203,12 +203,12 @@
 <span class="err">    Build vim without ruby support</span>
 <span class="err">--HEAD</span>
 <span class="err">    Install HEAD version</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>이후 설치할때 필요한 옵션에 대해서 추가해주면된다.</p>
-<div class="codehilite"><pre><span></span><span class="err">brew install vim --with-client-server --with-override-system-vi --with-python3</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">brew install vim --with-client-server --with-override-system-vi --with-python3</span>
+</code></pre></div>
 
 
 <p>그리고 이 옵션은 다음번 vim 업데이트에도 반영이 되는 사안이니 한번만 설정해서 설치해주기만 하면된다.</p>

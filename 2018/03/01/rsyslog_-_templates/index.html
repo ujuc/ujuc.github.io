@@ -135,7 +135,7 @@
 <h3 id="template-statement"><code>template()</code> statement</h3>
 <p>문서상으로는 7버전 이상에서 사용할 수 있는 포맷이다.</p>
 <p>아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.</p>
-<div class="codehilite"><pre><span></span><span class="err">template(name=&quot;FileFormat&quot; type=&quot;list&quot;) {</span>
+<div class="codehilite"><pre><span></span><code><span class="err">template(name=&quot;FileFormat&quot; type=&quot;list&quot;) {</span>
 <span class="err">    property(name=&quot;timestamp&quot; dateFormat=&quot;rfc3339&quot;)</span>
 <span class="err">    constant(value=&quot; &quot;)</span>
 <span class="err">    property(name=&quot;hostname&quot;)</span>
@@ -145,7 +145,7 @@
 <span class="err">    property(name=&quot;msg&quot; droplastlf=&quot;on&quot; )</span>
 <span class="err">    constant(value=&quot;\n&quot;)</span>
 <span class="err">    }</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>작성된 템플릿을 이용해서 분석해보자.</p>
@@ -189,10 +189,10 @@
 </ul>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="err">set $!usr!tpl2!msg = $msg;</span>
+<div class="codehilite"><pre><span></span><code><span class="err">set $!usr!tpl2!msg = $msg;</span>
 <span class="err">set $!usr!tpl2!dataflow = field($msg, 58, 2);</span>
 <span class="err">template(name=&quot;tpl2&quot; type=&quot;subtree&quot; subtree=&quot;$!usr!tpl2&quot;)</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
@@ -202,10 +202,10 @@
 </ul>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="err">template(name=&quot;tpl3&quot; type=&quot;string&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="err">template(name=&quot;tpl3&quot; type=&quot;string&quot;</span>
 <span class="err">         string=&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
 <span class="err">        )</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
@@ -216,7 +216,7 @@
 </ul>
 <h4 id="option"><a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#options"><code>option</code></a></h4>
 <p>예제로 이해하자. 필요하면 링크를 타고 보고.</p>
-<div class="codehilite"><pre><span></span><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;outfmt&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;list&quot;</span><span class="w"> </span><span class="k">option</span><span class="p">.</span><span class="n">jsonf</span><span class="o">=</span><span class="ss">&quot;on&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;outfmt&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;list&quot;</span><span class="w"> </span><span class="k">option</span><span class="p">.</span><span class="n">jsonf</span><span class="o">=</span><span class="ss">&quot;on&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
 <span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;@timestamp&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;timereported&quot;</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="ss">&quot;rfc3339&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;host&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;hostname&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
 <span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;severity&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;syslogseverity-text&quot;</span><span class="w"> </span><span class="n">caseConversion</span><span class="o">=</span><span class="ss">&quot;upper&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
@@ -226,11 +226,11 @@
 <span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;message&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;msg&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
 
 <span class="w"> </span><span class="err">}</span><span class="w"></span>
-</pre></div>
+</code></pre></div>
 
 
 <p>이렇게 작성하면,</p>
-<div class="codehilite"><pre><span></span><span class="err">{</span>
+<div class="codehilite"><pre><span></span><code><span class="err">{</span>
 <span class="err">  &quot;@timestamp&quot;: &quot;2018-03-01T01:00:00+00:00&quot;,</span>
 <span class="err">  &quot;host&quot;: &quot;172.20.245.8&quot;,</span>
 <span class="err">  &quot;severity&quot;: &quot;DEBUG&quot;,</span>
@@ -239,14 +239,14 @@
 <span class="err">  &quot;source&quot;: &quot;tag&quot;,</span>
 <span class="err">  &quot;message&quot;: &quot; msgnum:00000000:&quot;</span>
 <span class="err">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="legacy-format">Legacy Format</h3>
 <p>6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을 권고하고있다.</p>
 <p>아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.</p>
-<div class="codehilite"><pre><span></span><span class="err">$template FileFormat,&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">$template FileFormat,&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
+</code></pre></div>
 
 
 <p>작성 요령은 <code>$template</code> 변수, <code>template 이름</code>, <code>"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"</code>. 필요한 내용들을 작성하면된다.</p>
@@ -269,10 +269,10 @@
 </ul>
 <h3 id="_1">동적 파일 이름 생성</h3>
 <p>두가지 방식이 있다만, 첫번째 방식으로 작성해서 템플릿 구성을 맞추는게 좋을것으로 보인다.</p>
-<div class="codehilite"><pre><span></span><span class="k">template</span> <span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;DynFile&quot;</span> <span class="k">type</span><span class="o">=</span><span class="ss">&quot;string&quot;</span> <span class="n">string</span><span class="o">=</span><span class="ss">&quot;/var/log/system-%HOSTNAME%.log&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">template</span> <span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;DynFile&quot;</span> <span class="k">type</span><span class="o">=</span><span class="ss">&quot;string&quot;</span> <span class="n">string</span><span class="o">=</span><span class="ss">&quot;/var/log/system-%HOSTNAME%.log&quot;</span><span class="p">)</span>
 
 <span class="err">$</span><span class="k">template</span> <span class="n">DynFile</span><span class="p">,</span><span class="ss">&quot;/var/log/system-%HOSTNAME%.log&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="_2">결.</h2>

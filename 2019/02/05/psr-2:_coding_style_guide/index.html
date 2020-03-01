@@ -211,7 +211,7 @@
 <blockquote>
 <p>This example encompasses some of the rules below as a quick overview:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">FooInterface</span><span class="p">;</span>
@@ -236,7 +236,7 @@
         <span class="c1">// method body</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h1 id="2">2. 일반적인 것들</h1>
@@ -322,7 +322,7 @@
 <blockquote>
 <p>For example:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nx">namesapce</span> <span class="nx">Vender\Package</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">FooClass</span><span class="p">;</span>
@@ -330,7 +330,7 @@
 <span class="k">use</span> <span class="nx">OhterVender\OtherPackage\BazClass</span><span class="p">;</span>
 
 <span class="c1">// ... additinal PHP code ...</span>
-</pre></div>
+</code></pre></div>
 
 
 <h1 id="4">4. 클래스, 속성, 메서드</h1>
@@ -347,7 +347,7 @@
 <blockquote>
 <p>The opening brace for the class MUST go on its own line; the closing brace for the class MUST go on the next line after the body.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">FooClass</span><span class="p">;</span>
@@ -358,14 +358,14 @@
 <span class="p">{</span>
     <span class="c1">// constants, properties, methods</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>[MAY] <code>implements</code> 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한 번만 들여 써질 수 있습니다. [MUST] 그렇게 표현할 때, 목록의 첫 번째 항목은 다음 줄에 있어야 하며, [MUST] 한 줄에 하나의 인터페이스만 있어야 합니다.</p>
 <blockquote>
 <p>Lists of <code>implements</code> MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one interface per line.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">use</span> <span class="nx">FooClass</span><span class="p">;</span>
@@ -376,7 +376,7 @@
 <span class="p">{</span>
     <span class="c1">// constants, properties, methods</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="42">4.2. 속성</h2>
@@ -400,14 +400,14 @@
 <blockquote>
 <p>A property declaration looks like the following.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">ClassName</span>
 <span class="p">{</span>
     <span class="k">public</span> <span class="nv">$foo</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="43">4.3. 메서드</h2>
@@ -427,7 +427,7 @@
 <blockquote>
 <p>A method declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">ClassName</span>
@@ -437,7 +437,7 @@
         <span class="c1">// method body</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="44">4.4. 메서드 인수</h2>
@@ -449,7 +449,7 @@
 <blockquote>
 <p>Method arguments with default values MUST go at the end of the argument list.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">ClassName</span>
@@ -459,7 +459,7 @@
         <span class="c1">// method body</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>[MAY] 인수 목록은 여러 줄에 걸쳐 나눌 수 있으며, 각 줄은 한 번만 들여 쓰기 할 수 있습니다. [MUST] 여러 줄로 나눠 표기할 때는 첫 번째 항목은 다음 줄에 있어야 합니다. [MUST] 한 줄에 하나의 인수만 있어야 합니다.</p>
@@ -470,7 +470,7 @@
 <blockquote>
 <p>When the argument list is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">ClassName</span>
@@ -483,7 +483,7 @@
         <span class="c1">// method body</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="45-abstract-final-static">4.5. abstract, final, static</h2>
@@ -495,7 +495,7 @@
 <blockquote>
 <p>When present, the <code>static</code> declaration MUST come after the visibility declaration.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Package</span><span class="p">;</span>
 
 <span class="k">abstract</span> <span class="k">class</span> <span class="nc">ClassName</span>
@@ -509,7 +509,7 @@
         <span class="c1">// method body</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="46">4.6. 메서드와 펑션 사용</h2>
@@ -517,11 +517,11 @@
 <blockquote>
 <p>When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis, there MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nx">bar</span><span class="p">();</span>
 <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
 <span class="nx">Foo</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>[MAY] 인수 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한번 들여 쓰일 수 있습니다. [MUST] 이렇게 할<br>
@@ -529,13 +529,13 @@
 <blockquote>
 <p>Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span>
     <span class="nv">$longArgument</span><span class="p">,</span>
     <span class="nv">$longerArgument</span><span class="p">,</span>
     <span class="nv">$muchLongerArgument</span>
 <span class="p">);</span>
-</pre></div>
+</code></pre></div>
 
 
 <h1 id="5">5. 제어문</h1>
@@ -590,7 +590,7 @@
 <blockquote>
 <p>An <code>if</code> structure looks like the following. Note the placement of parentheses, spaces, and braces; and that <code>else</code> and <code>elseif</code> are on the same line as the closing brace from the earlier body.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">if</span> <span class="p">(</span><span class="nv">$expr1</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// if body</span>
 <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$expr2</span><span class="p">)</span> <span class="p">{</span>
@@ -598,7 +598,7 @@
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="c1">// else body;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>[SHOULD] <code>else if</code> 대신 <code>elseif</code> 키워드를 사용하여 모든 제어 키워드가 단일 단어처럼 보이도록 해야 합니다.</p>
@@ -610,7 +610,7 @@
 <blockquote>
 <p>A <code>switch</code> structure looks like the following. Note the placement of parentheses, spaces, and braces. The <code>case</code> statement MUST be indented once from <code>switch</code>, and the <code>break</code> keyword (or other terminating keyword) MUST be indented at the same level as the <code>case</code> body. There MUST be a comment such as <code>// no break</code> when fall-through is intentional in a non-empty <code>case</code> body.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">switch</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
         <span class="k">echo</span> <span class="s1">&#39;First case, with a break&#39;</span><span class="p">;</span>
@@ -627,7 +627,7 @@
         <span class="k">echo</span> <span class="s1">&#39;Default case&#39;</span><span class="p">;</span>
         <span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="53-while-do-while"><strong>5.3. while, do while</strong></h2>
@@ -635,22 +635,22 @@
 <blockquote>
 <p>A <code>while</code> statement looks like the following. Note the placement of parentheses, spaces, and braces.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">while</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// structure body</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>마찬가지로 <code>do while</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
 <p>Similarly, a <code>do while</code> statement looks like the following. Note the placement of parentheses, spaces, and braces.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">do</span> <span class="p">{</span>
     <span class="c1">// structure body;</span>
 <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">);</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="54-for"><strong>5.4. for</strong></h2>
@@ -658,11 +658,11 @@
 <blockquote>
 <p>A <code>for</code> statement looks like the following. Note the placement of parentheses, spaces, and braces.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// for body</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="55-foreach"><strong>5.5. foreach</strong></h2>
@@ -670,11 +670,11 @@
 <blockquote>
 <p>A <code>foreach</code> statement looks like the following. Note the placement of parentheses, spaces, and braces.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$iterable</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// foreach body</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="56-try-catch"><strong>5.6. try, catch</strong></h2>
@@ -682,7 +682,7 @@
 <blockquote>
 <p>A <code>try catch</code> block looks like the following. Note the placement of parentheses, spaces, and braces.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">try</span> <span class="p">{</span>
     <span class="c1">// try body</span>
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">FirstExceptionType</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
@@ -690,7 +690,7 @@
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">OtherExceptionType</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// catch body</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h1 id="6-closures">6. Closures</h1>
@@ -718,7 +718,7 @@
 <blockquote>
 <p>A closure declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nv">$closureWithArgs</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$arg2</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// body</span>
 <span class="p">};</span>
@@ -726,7 +726,7 @@
 <span class="nv">$closureWithArgsAndVars</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$arg1</span><span class="p">,</span> <span class="nv">$arg2</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$var1</span><span class="p">,</span> <span class="nv">$var2</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// body</span>
 <span class="p">};</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>[MAY] 인수 목록과 변수 목록은 여러 행에 걸쳐 나눠질 수 있습니다. (각 행은 한번 들여 쓰기가 들어가야 합니다.) 그렇게 할때, [MUST] 목록의 첫 번째 항목은 다음 줄에 있어야 하며, [MUST] 한 줄에 하나의 인수나 변수만 있어야 합니다.</p>
@@ -741,7 +741,7 @@
 <blockquote>
 <p>The following are examples of closures with and without argument lists and variable lists split across multiple lines.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nv">$longArgs_noVars</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span>
     <span class="nv">$longArgument</span><span class="p">,</span>
     <span class="nv">$longerArgument</span><span class="p">,</span>
@@ -785,14 +785,14 @@
 <span class="p">)</span> <span class="p">{</span>
     <span class="c1">// body</span>
 <span class="p">};</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>형식 지정 규칙은 함수 또는 메서드 호출에서 클로저가 직접 인수로 사용될 때에도 적용됩니다.</p>
 <blockquote>
 <p>Note that the formatting rules also apply when the closure is used directly in a function or method call as an argument.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span>
     <span class="nv">$arg1</span><span class="p">,</span>
     <span class="k">function</span> <span class="p">(</span><span class="nv">$arg2</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$var1</span><span class="p">)</span> <span class="p">{</span>
@@ -800,7 +800,7 @@
     <span class="p">},</span>
     <span class="nv">$arg3</span>
 <span class="p">);</span>
-</pre></div>
+</code></pre></div>
 
 
 <h1 id="7-conclusion">7. Conclusion</h1>

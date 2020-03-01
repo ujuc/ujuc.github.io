@@ -126,10 +126,10 @@
         </div>
         <div class="text-center"><i class="fas fa-poo" style></i></div>
         <div class="article_text"><p>열심히 공부하고 커밋하려는 순간&hellip;</p>
-<div class="codehilite"><pre><span></span>&gt; git commit
+<div class="codehilite"><pre><span></span><code>&gt; git commit
 error: gpg tailed to sign the data
 fatal: failed to wrtie commit object
-</pre></div>
+</code></pre></div>
 
 
 <p>gpg키로 commit을 할때마다 비밀번호를 물어야되는데&hellip;<br>
@@ -137,20 +137,20 @@ fatal: failed to wrtie commit object
 <p>그게 문제가 되었다. 오랜만에 재시작을 하면서 섹션 만료가 되었고, 바꼈으면 물어야지&hellip;<br>
 조용히 있어서 문제가 되었다.</p>
 <p>이럴때 <a href="https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/41506446">Stack Overflow/ git - gpg onto mac osx: error: failed to sign the data</a>에서는 <a href="https://www.gnupg.org/related_software/pinentry/index.en.html">pinentry</a>를 추가 설치해서 비밀번호를 얻어서 하라고 되어있다.</p>
-<div class="codehilite"><pre><span></span>brew install pinentry-mac
+<div class="codehilite"><pre><span></span><code>brew install pinentry-mac
 
 <span class="nb">echo</span> <span class="s2">&quot;pinentry-program /usr/local/bin/pinentry-mac&quot;</span> &gt;&gt; ~/.gnupg/gpg-agent.conf
-</pre></div>
+</code></pre></div>
 
 
 <p>작동하는지 테스트</p>
-<div class="codehilite"><pre><span></span>&gt; <span class="nb">echo</span> <span class="s2">&quot;test&quot;</span> <span class="p">|</span> gpg --clearsign
+<div class="codehilite"><pre><span></span><code>&gt; <span class="nb">echo</span> <span class="s2">&quot;test&quot;</span> <span class="p">|</span> gpg --clearsign
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
 <span class="nb">test</span>
 -----BEGIN PGP SIGNATURE-----
-</pre></div>
+</code></pre></div>
 
 
 <p>그리고 블로그 쓸려고 확인중 이 문제를 겪었을때 대응 할 수 있다는 다른 방법!</p>

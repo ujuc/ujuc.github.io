@@ -208,7 +208,7 @@
 <blockquote>
 <p>The following is an example of a file with both declarations and side effects;i.e, an example of what to avoid:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// side effect: change ini settings</span>
 <span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;error_reporting&#39;</span><span class="p">,</span> <span class="k">E_ALL</span><span class="p">);</span>
 
@@ -223,14 +223,14 @@
 <span class="p">{</span>
     <span class="c1">// function body</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>다음 예제는 부작용이 없는 내용이 포함된 코드의 예입니다. 즉, 참고해야 할 예:</p>
 <blockquote>
 <p>The following example is of a file that contains declarations without side effects; i.e., an example of what to emulate:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// declaration</span>
 <span class="k">function</span> <span class="nf">foo</span><span class="p">()</span>
 <span class="p">{</span> 
@@ -244,7 +244,7 @@
         <span class="c1">// function body</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="3-namespace">3. 네임스페이스(Namespace)와 클래스 이름</h2>
@@ -265,27 +265,27 @@
 <p>Code written for PHP 5.3 and after MUST use formal namespaces.</p>
 </blockquote>
 <p>For example:</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// PHP 5.3 and later:</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Model</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Foo</span>
 <span class="p">{</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>[SHOULD] 5.2.x 이하에서 작성하는 코드에서는 클래스 이름에 <code>Vendor_</code> 접두사를 이용하는 네임스페이스 규칙을 사용해야 합니다.</p>
 <blockquote>
 <p>Code written for 5.2.x and before SHOULD use the pseudo-namespacing convention of <code>Vendor_</code> prefixes on class names.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="c1">// PHP 5.2.x and earlier:</span>
 
 <span class="k">class</span> <span class="nc">Vendor_Model_Foo</span>
 <span class="p">{</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="4">4. 클래스 상수, 속성, 메서드</h2>
@@ -298,7 +298,7 @@
 <blockquote>
 <p>Class constants MUST be declared in all upper case with underscore separators. For example:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">namespace</span> <span class="nx">Vendor\Model</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Foo</span>
@@ -306,7 +306,7 @@
     <span class="k">const</span> <span class="no">VERSION</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span><span class="p">;</span>
     <span class="k">const</span> <span class="no">DATE_APPROVED</span> <span class="o">=</span> <span class="s1">&#39;2012-06-01&#39;</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="42-properties">4.2 속성 (Properties)</h3>

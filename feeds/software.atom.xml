@@ -86,9 +86,9 @@
 &lt;p&gt;사진도 못 옮기고 이것저것 텍스트들도 제대로 작업을 못하던 중에 혹시나 그냥 앱만 지우면 안 되는 건가라는 생각에서 매뉴얼을 찾아서 보고 작동이 되는 것을 확인하였다.&lt;/p&gt;
 &lt;p&gt;그냥 이렇게 하면 된다고 말 한마디면 되는 건데&amp;hellip; G Suite 쪽은 제대로 알려주는 것이 없으니&amp;hellip;&lt;/p&gt;
 &lt;p&gt;터미널이 편하다면 터미널로 아니라면 해당 위치에 있는 파일들을 삭제하면 된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo rm -rf /Applications/Google&lt;span class="se"&gt;\ &lt;/span&gt;Drive&lt;span class="se"&gt;\ &lt;/span&gt;File&lt;span class="se"&gt;\ &lt;/span&gt;Stream.app/
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo rm -rf /Applications/Google&lt;span class="se"&gt;\ &lt;/span&gt;Drive&lt;span class="se"&gt;\ &lt;/span&gt;File&lt;span class="se"&gt;\ &lt;/span&gt;Stream.app/
 $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;위의 내용처럼 작업하고 재시작하면 잘 실행된다.&lt;/p&gt;</content><category term="Software"></category><category term="google drive stream"></category><category term="macos"></category><category term="mojave"></category></entry><entry><title>Pycharm에 pylint 추가</title><link href="https://ujuc.github.io/2018/09/24/pycharme_pylint_cu-ga/" rel="alternate"></link><published>2018-09-24T00:49:24+09:00</published><updated>2018-09-24T00:49:24+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-24:/2018/09/24/pycharme_pylint_cu-ga/</id><summary type="html">&lt;p&gt;Pycharm 에 pylint를 외부 툴로 등록하는 방법&lt;/p&gt;</summary><content type="html">&lt;p&gt;나는 블로그를 사용할때 Python 스크립트를 사용해서 작업을 하고 있다. 그러다보니 매번 파일에 추가되는 내용이나 달라지는 것들이 있으면 수정을 하는데&amp;hellip;&lt;/p&gt;
@@ -121,7 +121,7 @@ $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
 &lt;/ul&gt;
 &lt;p&gt;분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&amp;hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나 적어야겠다.&lt;/p&gt;
 &lt;h2 id="_1"&gt;아키텍쳐&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;                                         &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                                         &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
                                            &lt;span class="o"&gt;+&lt;/span&gt;
                                            &lt;span class="o"&gt;|&lt;/span&gt;
                                  &lt;span class="o"&gt;+---------+----------------+&lt;/span&gt;
@@ -140,16 +140,16 @@ $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
              &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Job&lt;/span&gt; &lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="n"&gt;fail&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Job&lt;/span&gt; &lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;
                                  &lt;span class="o"&gt;|&lt;/span&gt;                          &lt;span class="o"&gt;|&lt;/span&gt;
  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Send&lt;/span&gt; &lt;span class="n"&gt;Mail&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;--------------------+--------------------------+&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.&lt;br&gt;
 노드는 여러개를 사용할 수 있는 것인지&amp;hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이 봐야될듯함.&lt;/p&gt;
 &lt;h2 id="_2"&gt;빌드&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;go get -u github.com/shunfei/cronsun
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;go get -u github.com/shunfei/cronsun
 &lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$GOPATH&lt;/span&gt;/src/github.com/shunfei/cronsun
 sh build.sh
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h2 id="_3"&gt;실행&lt;/h2&gt;
@@ -174,12 +174,12 @@ sh build.sh
 &lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고 설치&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016-05-21_installing_shell_integration.png"&gt;&lt;/p&gt;
 &lt;p&gt;음.! 뭔가 이상하다&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;You will also have these commands:&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;You will also have these commands:&lt;/span&gt;
 &lt;span class="err"&gt;imgcat filename&lt;/span&gt;
 &lt;span class="err"&gt;  Displays the image inline.&lt;/span&gt;
 &lt;span class="err"&gt;it2dl filename&lt;/span&gt;
 &lt;span class="err"&gt;  Downloads the specified file, saving it in your Downloads folder.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;????&lt;/p&gt;

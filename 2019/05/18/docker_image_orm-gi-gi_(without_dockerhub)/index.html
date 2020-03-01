@@ -128,14 +128,14 @@
 </ul>
 <p>우선 로컬에서 Docker 이미지를 빌드한다. 명령어는 알꺼니 넘어가자.</p>
 <p>다름 명령을 이용해서 tar 파일을 만들자.</p>
-<div class="codehilite"><pre><span></span>docker save -o &lt;path <span class="k">for</span> generated tar file&gt; &lt;imange name&gt;:&lt;tag&gt;
-</pre></div>
+<div class="codehilite"><pre><span></span><code>docker save -o &lt;path <span class="k">for</span> generated tar file&gt; &lt;imange name&gt;:&lt;tag&gt;
+</code></pre></div>
 
 
 <p>만들어진 tar 파일을 원하는 곳에 업로드 시킨다.</p>
 <p>이제 올린 노드에서 사용할 수 있도록 이미지를 docker에 등록해주면 끝.</p>
-<div class="codehilite"><pre><span></span>docker load -i &lt;path to image tar file&gt;
-</pre></div>
+<div class="codehilite"><pre><span></span><code>docker load -i &lt;path to image tar file&gt;
+</code></pre></div>
 
 
 <h3 id="_1">참고</h3>

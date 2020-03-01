@@ -130,7 +130,7 @@
 <h2 id="_1">명령어 작성</h2>
 <p>블로그 새 글을 만들 수 있는 명령어를 작성한다.</p>
 <p><code>cli.py</code></p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
 <span class="kn">import</span> <span class="nn">kroman</span>
 <span class="kn">import</span> <span class="nn">pendulum</span>
@@ -194,11 +194,11 @@
 
 <span class="n">ns</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">()</span>
 <span class="n">ns</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>task를 등록해 주고 명령을 확인하면 다음 같이 보인다.</p>
-<div class="codehilite"><pre><span></span>$ inv --list
+<div class="codehilite"><pre><span></span><code>$ inv --list
 
 Available tasks:
 
@@ -207,11 +207,11 @@ Available tasks:
   preview    Start preview web page server
   pub        Publish to github main page
   cli.post   Make post template
-</pre></div>
+</code></pre></div>
 
 
 <p>명령어를 실행해 보자.</p>
-<div class="codehilite"><pre><span></span>$ inv --help cli.post
+<div class="codehilite"><pre><span></span><code>$ inv --help cli.post
 Usage: inv<span class="o">[</span>oke<span class="o">]</span> <span class="o">[</span>--core-opts<span class="o">]</span> cli.post <span class="o">[</span>--options<span class="o">]</span> <span class="o">[</span>other tasks here ...<span class="o">]</span>
 
 Docstring:
@@ -233,7 +233,7 @@ Category:
 Tags: 
 Slug: po-seu-teu_te-seu-teu
 Summary:
-</pre></div>
+</code></pre></div>
 
 
 <p>여기까지 <a href="https://github.com/ujuc/ujuc.github.io/commit/8e4fa75978c249192c203658dace4949a7956936">code commit</a>.</p>
@@ -244,7 +244,7 @@ Summary:
 <li>Package로 추가해야 되어 <code>cli</code> 폴더를 만들었다.</li>
 <li><a href="https://github.com/sdispater/poetry/issues/577">Poetry run: ModuleOrPackageNotFound with implicit namespace packages (PEP420)</a></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="c1"># Import Program class</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Import Program class</span>
 <span class="kn">from</span> <span class="nn">invoke</span> <span class="kn">import</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">Program</span><span class="p">,</span> <span class="n">task</span>
 
 <span class="o">...</span>
@@ -255,11 +255,11 @@ Summary:
     <span class="n">program</span><span class="o">.</span><span class="n">namespace</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">post</span><span class="p">)</span>
 
     <span class="n">program</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><code>pyproject.toml</code></p>
-<div class="codehilite"><pre><span></span><span class="k">[tool.poetry]</span>
+<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="p">...</span>
 
 <span class="n">packages</span> <span class="o">=</span> <span class="p">[</span>
@@ -272,11 +272,11 @@ Summary:
 <span class="n">cli</span> <span class="o">=</span> <span class="s">&#39;cli.main:run&#39;</span>
 
 <span class="p">...</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>이제 실행해 보자.</p>
-<div class="codehilite"><pre><span></span>$ poetry run cli --list
+<div class="codehilite"><pre><span></span><code>$ poetry run cli --list
 Subcommands:
 
   post   Make post template
@@ -284,7 +284,7 @@ Subcommands:
 <span class="c1"># Test create post</span>
 $ poetry run cli post -t <span class="s2">&quot;포스트 테스트&quot;</span>
 File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-seu-teu_te-seu-teu.md
-</pre></div>
+</code></pre></div>
 
 
 <p>잘된다.</p>
@@ -297,14 +297,14 @@ File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-s
 <hr>
 <p>ps. 파일 단위로도 가능하다.</p>
 <p><code>tasks.py</code></p>
-<div class="codehilite"><pre><span></span><span class="err">위에꺼 갔다 쓰자.. 귀찮다...</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">위에꺼 갔다 쓰자.. 귀찮다...</span>
+</code></pre></div>
 
 
 <p><code>pyproject.toml</code></p>
-<div class="codehilite"><pre><span></span><span class="k">[tool.poetry.scripts]</span>
+<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.scripts]</span>
 <span class="na">cli</span> <span class="o">=</span> <span class="s">&quot;tasks:run&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 <hr>
