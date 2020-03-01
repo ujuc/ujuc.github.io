@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Chat</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/chat.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2019-12-28T15:31:04+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Adieu 2019, Bienenue 2020</title><link href="https://ujuc.github.io/2019/12/28/adieu_2019,_bienenue_2020/" rel="alternate"></link><published>2019-12-28T15:31:04+09:00</published><updated>2019-12-28T15:31:04+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-12-28:/2019/12/28/adieu_2019,_bienenue_2020/</id><summary type="html">&lt;p&gt;일년치 회고 다음엔 6개월로 할까&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2018년도 작성글&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Chat</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/chat.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-03-01T10:07:50+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>github actions를 달았다</title><link href="https://ujuc.github.io/2020/03/01/github-actionsreul-dal-ass-da/" rel="alternate"></link><published>2020-03-01T10:07:50+09:00</published><updated>2020-03-01T10:07:50+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-03-01:/2020/03/01/github-actionsreul-dal-ass-da/</id><summary type="html">&lt;p&gt;블로그 퍼플리싱을 자동으로 하기위해 Github Actions 추가!&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 페이지 생성을 자동으로 하고 싶었다. 그런데 아무리 해도 안되더라.&lt;br&gt;
+포기하고 있었는데.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/fastai/fastpages"&gt;fastpages&lt;/a&gt; 라는 Jupyter notebooks을 생성하면 Github 블로그로 출력해주는 서비스를 보고 Github Actions를 이용해서 진행하고 있는 것을 발견!&lt;/p&gt;
+&lt;p&gt;그 Actions는 &lt;a href="https://github.com/peaceiris/actions-gh-pages"&gt;peaceiris/actions-gh-pages&lt;/a&gt;!!&lt;/p&gt;
+&lt;p&gt;아싸 이제 붙여야지&amp;hellip;&lt;/p&gt;
+&lt;p&gt;기존에 gh-pages로 퍼블리싱을 진행하고 있었기에 cli 명령어에 &lt;code&gt;build&lt;/code&gt;라는 명령어를 추가하고 작업을 진행하였다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;github pages&lt;/span&gt;
+
+&lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;push&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;branches&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;develop&lt;/span&gt;
+
+&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;runs-on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ubuntu-18.04&lt;/span&gt;
+    &lt;span class="nt"&gt;steps&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Checkout&lt;/span&gt;
+        &lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions/checkout@v2&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Checkout submodules&lt;/span&gt;
+        &lt;span class="nt"&gt;shell&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;bash&lt;/span&gt;
+        &lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
+          &lt;span class="no"&gt;auth_header=&amp;quot;$(git config --local --get http.https://github.com/.extraheader)&amp;quot;&lt;/span&gt;
+          &lt;span class="no"&gt;git submodule sync --recursive&lt;/span&gt;
+          &lt;span class="no"&gt;git -c &amp;quot;http.extraheader=$auth_header&amp;quot; -c protocol.version=2 submodule update --init --force --recursive --depth=1&lt;/span&gt;
+
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions/setup-python@v1&lt;/span&gt;
+        &lt;span class="nt"&gt;with&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;python-version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;3.8&lt;/span&gt;
+
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Setup poetry&lt;/span&gt;
+        &lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Gr1N/setup-poetry@v1&lt;/span&gt;
+        &lt;span class="nt"&gt;with&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;poetry-version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;1.0.3&lt;/span&gt;
+
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Install python pacakge&lt;/span&gt;
+        &lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;poetry install&lt;/span&gt;
+
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Build posts&lt;/span&gt;
+        &lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;poetry run cli build&lt;/span&gt;
+
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Deploy&lt;/span&gt;
+        &lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;peaceiris/actions-gh-pages@v3&lt;/span&gt;
+        &lt;span class="nt"&gt;with&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;personal_token&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;${{ secrets.PERSONAL_TOKEN }}&lt;/span&gt;
+          &lt;span class="nt"&gt;publish_branch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;master&lt;/span&gt;
+          &lt;span class="nt"&gt;publish_dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./output&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;추가하고 테스트 커밋으로 퍼블리싱되는 것을 확인하였다.&lt;/p&gt;
+&lt;p&gt;오늘의 삽질은 끝&amp;hellip;&lt;/p&gt;
+&lt;p&gt;PS. Poetry 를 사용하기 위한 actions가 여러개 있는데. &lt;a href="https://github.com/marketplace/actions/setup-poetry"&gt;Gr1N/Seup Poetry&lt;/a&gt; 를 사용한 것은 별표 많이 받은 Actions가 너무 느려서 였다.&lt;br&gt;
+명령어 많이 쓰지도 않는데 빌드하는데 1분이상 자기가 잡아먹고 있는건 아니지않는가&amp;hellip;&lt;/p&gt;</content><category term="Chat"></category><category term="github actions"></category></entry><entry><title>Adieu 2019, Bienenue 2020</title><link href="https://ujuc.github.io/2019/12/28/adieu_2019,_bienenue_2020/" rel="alternate"></link><published>2019-12-28T15:31:04+09:00</published><updated>2019-12-28T15:31:04+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-12-28:/2019/12/28/adieu_2019,_bienenue_2020/</id><summary type="html">&lt;p&gt;일년치 회고 다음엔 6개월로 할까&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2018년도 작성글&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://ujuc.github.io/2018/12/28/adieu_2018,_bienvenue_2019/"&gt;Adieu 2018, Bienvenue 2019&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;정리해야지&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그러고 보니 작년에도 12월 28일에 작성했구나.ㅡ.ㅡ;;&lt;/p&gt;
