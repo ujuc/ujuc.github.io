@@ -84,6 +84,12 @@ def pub(ctx):
     ctx.run(f"git push origin master")
 
 
+@task()
+def build(ctx):
+    """Build Blog Post"""
+    ctx.run(f"pelican -s {PUBLISH_CONF_FILE}")
+
+
 def run():
     program = Program(version='1.0.0')
     program.namespace = Collection()
@@ -91,4 +97,5 @@ def run():
     program.namespace.add_task(preview)
     program.namespace.add_task(pub)
     program.namespace.add_task(clean)
+    program.namespace.add_task(build)
     program.run()

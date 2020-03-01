@@ -1,0 +1,42 @@
+name: github pages
+
+on:
+  push:
+    branches: develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout submodules
+        shell: bash
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Setup poetry
+        uses: Gr1N/setup-poetry@v1
+        with:
+          poetry-version: 1.0.3
+
+      - name: Install python pacakge
+        run: poetry install
+
+      - name: Build posts
+        run: poetry run cli build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: master
+          publish_dir: ./output
+          user_name: Thomas Sunjin Kang
+          user_email: ujuc@ujuc.kr
