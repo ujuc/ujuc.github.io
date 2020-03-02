@@ -20,7 +20,7 @@ def post(ctx, title, rst=False):
     """Make post template"""
     today = pendulum.now()
 
-    slug = kroman.parse(title).lower().strip().replace(' ', '_')
+    slug = kroman.parse(title).lower().strip().replace(' ', '-')
     date = today.to_date_string()
     post_date = today.to_datetime_string()
     file_title = f'{date}-{slug}'
