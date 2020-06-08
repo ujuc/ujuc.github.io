@@ -153,30 +153,30 @@
     <span class="n">slug</span> <span class="o">=</span> <span class="n">kroman</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
     <span class="n">date</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">to_date_string</span><span class="p">()</span>
     <span class="n">post_date</span> <span class="o">=</span> <span class="n">today</span><span class="o">.</span><span class="n">to_datetime_string</span><span class="p">()</span>
-    <span class="n">file_title</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{date}</span><span class="s1">-</span><span class="si">{slug}</span><span class="s1">&#39;</span>
+    <span class="n">file_title</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">slug</span><span class="si">}</span><span class="s1">&#39;</span>
 
-    <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{file_title}</span><span class="s1">.md&#39;</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_title</span><span class="si">}</span><span class="s1">.md&#39;</span>
 
     <span class="n">article</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="sa">f</span><span class="s1">&#39;Title: </span><span class="si">{title}</span><span class="se">\n</span><span class="s1">&#39;</span>
-        <span class="sa">f</span><span class="s1">&#39;Date: </span><span class="si">{post_date}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;Title: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;Date: </span><span class="si">{</span><span class="n">post_date</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="s1">&#39;Category: </span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="s1">&#39;Tags: </span><span class="se">\n</span><span class="s1">&#39;</span>
-        <span class="sa">f</span><span class="s1">&#39;Slug: </span><span class="si">{slug}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;Slug: </span><span class="si">{</span><span class="n">slug</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
         <span class="s1">&#39;Summary: </span><span class="se">\n\n</span><span class="s1">&#39;</span>
     <span class="p">)</span>
 
     <span class="k">if</span> <span class="n">rst</span><span class="p">:</span>
-        <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{file_title}</span><span class="s1">.rst&#39;</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">file_title</span><span class="si">}</span><span class="s1">.rst&#39;</span>
         <span class="n">hashes</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>
 
         <span class="n">article</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{title}</span><span class="se">\n</span><span class="s1">&#39;</span>
-            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{hashes}</span><span class="se">\n</span><span class="s1">&#39;</span>
-            <span class="sa">f</span><span class="s1">&#39;:date: </span><span class="si">{post_date}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">hashes</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;:date: </span><span class="si">{</span><span class="n">post_date</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="s1">&#39;:category: </span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="s1">&#39;:tags: </span><span class="se">\n</span><span class="s1">&#39;</span>
-            <span class="sa">f</span><span class="s1">&#39;:slug: </span><span class="si">{slug}</span><span class="se">\n</span><span class="s1">&#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;:slug: </span><span class="si">{</span><span class="n">slug</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="s1">&#39;:summary: </span><span class="se">\n\n</span><span class="s1">&#39;</span>
         <span class="p">)</span>
 
@@ -189,7 +189,7 @@
     <span class="k">with</span> <span class="n">post_path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">post_file</span><span class="p">:</span>
         <span class="n">post_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;File created -&gt; </span><span class="si">{post_path}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;File created -&gt; </span><span class="si">{</span><span class="n">post_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
 
 <span class="n">ns</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">()</span>

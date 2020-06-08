@@ -171,21 +171,21 @@
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Start preview web page server&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{CONF_FILE}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{</span><span class="n">CONF_FILE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -l&quot;</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Clean up this dir&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rm -rf </span><span class="si">{OUTPUT_PATH}</span><span class="s2"> </span><span class="si">{BASE_PATH}</span><span class="s2">/__pycache__ </span><span class="si">{BASE_PATH}</span><span class="s2">/cache&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rm -rf </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/__pycache__ </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/cache&quot;</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">(</span><span class="n">post</span><span class="o">=</span><span class="p">[</span><span class="n">clean</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">pub</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Publish to github main page&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{PUBLISH_CONF_FILE}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ghp-import -m &#39;Generate Pelican site&#39; -b master </span><span class="si">{OUTPUT_PATH}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{</span><span class="n">PUBLISH_CONF_FILE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ghp-import -m &#39;Generate Pelican site&#39; -b master </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;git push origin master&quot;</span><span class="p">)</span>
 
 
