@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-03-02T22:07:01+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Jetbrains IDEA 설정 삭제하기</title><link href="https://ujuc.github.io/2020/03/02/jetbrains-idea-seol-jeong-sak-je-ha-gi/" rel="alternate"></link><published>2020-03-02T22:07:01+09:00</published><updated>2020-03-02T22:07:01+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-03-02:/2020/03/02/jetbrains-idea-seol-jeong-sak-je-ha-gi/</id><summary type="html">&lt;p&gt;JetBrains를 처음 설치한 것처럼 다시 설치해보자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;ol&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-06-11T20:27:58+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>git 기본 editor를 VS Code로 변경하기</title><link href="https://ujuc.github.io/2020/06/11/git-gi-bon-editorreur-vs-codero-byeon-gyeong-ha-gi/" rel="alternate"></link><published>2020-06-11T20:27:58+09:00</published><updated>2020-06-11T20:27:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-06-11:/2020/06/11/git-gi-bon-editorreur-vs-codero-byeon-gyeong-ha-gi/</id><summary type="html">&lt;p&gt;Git 커밋을 할때 VIM말고 다른 에디터도 사용할 수 있게 설정하자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;git 처음 설치해서 commit을 하게되면 nano라는 에디터를 만날 수 있다. 이거 잘 쓰는 사람을 본적이 없다.&lt;/p&gt;
+&lt;p&gt;나오는 방법을 나도 까먹는데&amp;hellip;;;&lt;/p&gt;
+&lt;p&gt;nano가 싫어 vim으로 변경해두길 어언.... 몇년&amp;hellip; 이제 그것도 귀찮아져서 VS Code로 변경하려고 한다.&lt;/p&gt;
+&lt;p&gt;명령은 간단하다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git config --global core.editor &lt;span class="s2"&gt;&amp;quot;code --wait&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;하게되면 git commit 입력창이 VS code 창으로 뜬다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="git commit 창 vs code" src="https://ujuc.github.io/img/2020-06-11_git-commit-at-vs-code.png"&gt;&lt;/p&gt;
+&lt;p&gt;이제 Tower 구독 결제가 되어있는지 한번 확인하고 없에야지..&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;번외&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git difftool
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;위 명령을 실행하게되면 git diff 를 vimdiff를 이용하여 보여준다.&lt;/p&gt;
+&lt;p&gt;이것도 아래 명령으로 변경이 가능하다.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git config --global diff.tool diff-code
+git config --global difftool.diff-code.cmd &lt;span class="s1"&gt;&amp;#39;code --wait --diff $LOCAL $REMOTE&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;tool&lt;/code&gt; 이름이 잘못되면 잘 안나올 수 있으니 편한걸로 바꾸도록 하자.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id="_1"&gt;참고&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/docs/editor/versioncontrol#_vs-code-as-git-editor"&gt;VS Code as Git editor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Develop"></category><category term="git"></category><category term="git editor"></category><category term="vscode"></category><category term="code"></category></entry><entry><title>Jetbrains IDEA 설정 삭제하기</title><link href="https://ujuc.github.io/2020/03/02/jetbrains-idea-seol-jeong-sak-je-ha-gi/" rel="alternate"></link><published>2020-03-02T22:07:01+09:00</published><updated>2020-03-02T22:07:01+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-03-02:/2020/03/02/jetbrains-idea-seol-jeong-sak-je-ha-gi/</id><summary type="html">&lt;p&gt;JetBrains를 처음 설치한 것처럼 다시 설치해보자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;ol&gt;
 &lt;li&gt;Tool box 로 설치한 기본 실행기 삭제&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;~/Library/ApplicationSupport&lt;/code&gt; 에 있는 플러그인 파일 삭제&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;~/Library/Preferences/com.jetbrains.*&lt;/code&gt; 에 있는 설정 파일 삭제&lt;/li&gt;
