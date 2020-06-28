@@ -39,4 +39,4 @@ jobs:
           publish_branch: master
           publish_dir: ./output
           user_name: Thomas Sunjin Kang
-          user_email: ujuc@ujuc.kr
+          user_email: ujuc@ujuc.me
