@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="ujuc">
+    
+    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기...">
+    <meta property="og:type" content="website">
+    <meta property="inLanguage" content="ko-KR">
+
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기...">
+
+    <meta name="keyward" content="git,command,restore,switch">
+    <meta property="og:title" content="git switch, restore 훑어보기">
+    <meta name="twitter:title" content="git switch, restore 훑어보기">
+    <meta itemprop="name" content="git switch, restore 훑어보기">
+    <meta name="description" content="git 2.23.0 이상에서 추가된 명령어인 switch, restore에 대해서 정리한다.">
+    <meta property="og:description" content="git 2.23.0 이상에서 추가된 명령어인 switch, restore에 대해서 정리한다.">
+    <meta name="twitter:description" content="git 2.23.0 이상에서 추가된 명령어인 switch, restore에 대해서 정리한다.">
+    <meta itemprop="description" content="git 2.23.0 이상에서 추가된 명령어인 switch, restore에 대해서 정리한다.">
+    <meta property="og:url" content="https://ujuc.github.io/2020/07/04/git-switch-n-restore-hurt-eo-bo-gi/">
+    <meta property="article:published_time" content="2020-07-04T08:54:35+09:00">
+    <meta property="article:modified_time" content="2020-07-05T12:21:00+09:00">
+    <meta property="article:tag" content="git">
+    <meta property="article:tag" content="command">
+    <meta property="article:tag" content="restore">
+    <meta property="article:tag" content="switch">
+    
+
+    <!-- Title -->
+    <title>
+      잘 밤에 쓸데없는 생각하기... / git switch, restore 훑어보기
+    </title>
+
+<!-- Style sheet -->
+<!-- Google web font -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Mono|Gugi|Noto+Serif+KR&display=swap&subset=korean" rel="stylesheet"> 
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/687641d3e8.js"></script>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>git switch, restore 훑어보기</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 20. 07. 04.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/git.html" class="article_tag">git</a>
+            <a href="https://ujuc.github.io/tag/command.html" class="article_tag">command</a>
+            <a href="https://ujuc.github.io/tag/restore.html" class="article_tag">restore</a>
+            <a href="https://ujuc.github.io/tag/switch.html" class="article_tag">switch</a>
+          </i>
+        </div>
+        <div class="text-center"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><div class="toc">
+<ul>
+<li><a href="#_1">들어가자</a></li>
+<li><a href="#git-switch">git switch</a><ul>
+<li><a href="#_2">개요</a></li>
+<li><a href="#_3">옵션별 설명</a><ul>
+<li><a href="#start-point">&lt;start-point&gt;</a></li>
+<li><a href="#-c-create-new-branch">(-c|&ndash;create) &lt;new-branch&gt;</a></li>
+<li><a href="#-c-force-create-new-branch">(-C|&ndash;force-create) &lt;new-branch&gt;</a></li>
+<li><a href="#-d-detach">(-d|&ndash;detach)</a></li>
+<li><a href="#-guess-no-guess">&ndash;guess, &ndash;no-guess</a></li>
+<li><a href="#-f-force-discard-changes">(-f|&ndash;force), &ndash;discard-changes</a></li>
+<li><a href="#-m-merge">(-m|&ndash;merge)</a></li>
+<li><a href="#-conflictstyle">&ndash;conflict=&lt;style&gt;</a></li>
+<li><a href="#-q-quiet">(-q|&ndash;quiet)</a></li>
+<li><a href="#-progress-no-progress">&ndash;progress, &ndash;no-progress</a></li>
+<li><a href="#-t-track">(-t|&ndash;track)</a></li>
+<li><a href="#-no-track">&ndash;no-track</a></li>
+<li><a href="#-orphan-new-branch">&ndash;orphan &lt;new-branch&gt;</a></li>
+<li><a href="#-ignore-other-worktrees">&ndash;ignore-other-worktrees</a></li>
+<li><a href="#-recurse-submodules-no-recurse-submodules">&ndash;recurse-submodules, &ndash;no-recurse-submodules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#git-restore">git restore</a><ul>
+<li><a href="#_4">개요</a></li>
+<li><a href="#_5">옵션별 설명</a><ul>
+<li><a href="#-s-tree-sourcetree">-s &lt;tree&gt;, &ndash;source=&lt;tree&gt;</a></li>
+<li><a href="#-p-patch">(-p|&ndash;patch)</a></li>
+<li><a href="#-w-worktree-s-staged">(-W|&ndash;worktree), (-S|&ndash;staged)</a></li>
+<li><a href="#-q-quiet_1">(-q|&ndash;quiet)</a></li>
+<li><a href="#-progress-no-progress_1">&ndash;progress, &ndash;no-progress</a></li>
+<li><a href="#-ours-theirs">&ndash;ours, &ndash;theirs</a></li>
+<li><a href="#-m-merge_1">(-m|&ndash;merge)</a></li>
+<li><a href="#-conflictstyle_1">&ndash;conflict=&lt;style&gt;</a></li>
+<li><a href="#-ignore-unmerged">&ndash;ignore-unmerged</a></li>
+<li><a href="#-ignore-skip-worktree-bits">&ndash;ignore-skip-worktree-bits</a></li>
+<li><a href="#-recurse-submodules-no-recurse-submodules_1">&ndash;recurse-submodules, &ndash;no-recurse-submodules</a></li>
+<li><a href="#-overlay-no-overlay">&ndash;overlay, &ndash;no-overlay</a></li>
+<li><a href="#-pathspec-from-filefile">&ndash;pathspec-from-file=&lt;file&gt;</a></li>
+<li><a href="#-pathspec-file-nul">&ndash;pathspec-file-nul</a></li>
+<li><a href="#-">&ndash;</a></li>
+<li><a href="#pathspec">&lt;pathspec&gt;&hellip;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr>
+<h1 id="_1">들어가자</h1>
+<p><strong>Note: THIS COMMAND IS EXPERIMENTAL. THE BEHAVIOR MAY CHANGE.</strong></p>
+<p>git 2.23.0 이후로 <code>switch</code>와 <code>restore</code> 실험 명령어가 추가 되었다. 그래서 <code>switch</code> 명령을 사용하고는 있지만, 어떻게 써야되는지에 대해서 고민을 해보지 않았던것&hellip;</p>
+<p>요즘에는 <a href="/2020/02/02/git_commit_message_template_man-deur-gi">git commit message template</a>를 만들어두고 쓰고 있기에 git cli를 많이 쓰게 되었다. git template을 보여주는건 git 명령을 통해서 실행되는 vim, VSCode가 아니면 보여주지도 않더라. 그러다보니 힘들게 사용중이다.</p>
+<hr>
+<h1 id="git-switch"><code>git switch</code></h1>
+<ul>
+<li>특정 branch로 변경(switching)한다.</li>
+<li>딴 의미 없다. 말그대로 switching 한다는 것.</li>
+<li><code>branch</code> 명령이나 <code>checkout</code> 명령을 이용해서 작업하던 것 중 branch를 관리하는 것에 대한 내용을<br>
+ 하나의 명령으로 따로 빼서 구성하도록 변경되었다.</li>
+<li>참고: <a href="https://git-scm.com/docs/git-switch">git-scm: git-switch</a></li>
+</ul>
+<h2 id="_2">개요</h2>
+<div class="codehilite"><pre><span></span><code>git switch [&lt;option&gt;] [--no-guess] &lt;branch&gt;
+git switch [&lt;option&gt;] --detach [&lt;start-point&gt;]
+git switch [&lt;option&gt;] (-c|-C) &lt;new-brach&gt; [&lt;start-point&gt;]
+git switch [&lt;option&gt;] --orphan &lt;new-branch&gt;
+</code></pre></div>
+
+
+<h2 id="_3">옵션별 설명</h2>
+<h3 id="start-point"><code>&lt;start-point&gt;</code></h3>
+<ul>
+<li>Branch를 딸 특정위치를 나타낸다.</li>
+<li>기본은 <code>HEAD</code>니 딱히 고민할 이유는 없을듯.</li>
+</ul>
+<h3 id="-c-create-new-branch"><code>(-c|--create) &lt;new-branch&gt;</code></h3>
+<ul>
+<li>새로운 branch를 <code>&lt;start-point&gt;</code>에서 생성을 한다.</li>
+<li>같은 명령어: <code>git branch &lt;new-branch&gt;</code></li>
+</ul>
+<h3 id="-c-force-create-new-branch"><code>(-C|--force-create) &lt;new-branch&gt;</code></h3>
+<ul>
+<li>있어도 그냥 새롭게 만든다.</li>
+<li>같은 명령어: <code>git branch -f &lt;new-branch&gt;</code></li>
+</ul>
+<h3 id="-d-detach"><code>(-d|--detach)</code></h3>
+<ul>
+<li>뭘 빼버린다는걸까?</li>
+<li>쓸일 없을꺼같으니 같은데&hellip;</li>
+<li><code>git checkout --detach [&lt;branch&gt;]</code><a href="https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt-emgitcheckoutem--detachltbranchgt">[1]</a>를 보도록 하자.</li>
+</ul>
+<h3 id="-guess-no-guess"><code>--guess</code>, <code>--no-guess</code></h3>
+<ul>
+<li>원격 레포에 동일한 이름이 있는 경우, 원걱 branch에서 해당 branch로 매칭한다.</li>
+<li>기본 값은 <code>--guess</code>, 아마 쓸때는 <code>--no-guess</code>를 이용할듯.</li>
+</ul>
+<h3 id="-f-force-discard-changes"><code>(-f|--force)</code>, <code>--discard-changes</code></h3>
+<ul>
+<li>자세한 설명은 생략한다.</li>
+</ul>
+<h3 id="-m-merge"><code>(-m|--merge)</code></h3>
+<ul>
+<li>이 옵션을 사용하면 변화분이 있더라도 three-way 머지를 진행하고 branch를 딴다.</li>
+<li>충돌나는 부분이 존재하면 해당 내용은 <code>git add</code>, <code>git rm</code>을 이용해서 해당 내용을 정리한뒤 진행하면된다.</li>
+</ul>
+<h3 id="-conflictstyle"><code>--conflict=&lt;style&gt;</code></h3>
+<ul>
+<li>충돌이 발생했을때 어떤 방법으로 진행할지에 대해서 정의한다.</li>
+</ul>
+<h3 id="-q-quiet"><code>(-q|--quiet)</code></h3>
+<ul>
+<li>출력끔</li>
+</ul>
+<h3 id="-progress-no-progress"><code>--progress</code>, <code>--no-progress</code></h3>
+<ul>
+<li>터미널이 연결되던 말던 stderr 메시지를 전달한다.</li>
+<li><code>--no-progress</code>는 <code>-q</code>와 같다.</li>
+</ul>
+<h3 id="-t-track"><code>(-t|--track)</code></h3>
+<ul>
+<li>원격 branch에서 새로운 branch를 딴다.</li>
+<li>이때는 <code>origin</code>, <code>remote/origin</code>, <code>refs/remote/origin</code>와 같이 <code>/</code>를 추가하여 만들어주면 새로운 브런치를 딸 수 있다.</li>
+<li>원격에서 새롭게 따는게 아니라면 <code>-c</code> 옵션을 같이 사용해야된다.</li>
+<li><code>git branch --tracker</code><a href="https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--t">[2]</a> 에 자세히 적혀있단다.</li>
+</ul>
+<h3 id="-no-track"><code>--no-track</code></h3>
+<ul>
+<li>&ldquo;upstream&rdquo; 구성을 하지 않는다.</li>
+<li><code>branch.autoSetupMerge</code> 옵션을 <code>true</code>로 설정하는 것과 동일한 효과.</li>
+</ul>
+<h3 id="-orphan-new-branch"><code>--orphan &lt;new-branch&gt;</code></h3>
+<ul>
+<li>새로운 <code>orphan</code> branch를 생성한다.</li>
+<li>모든 추적하던 파일은 삭제된다.</li>
+</ul>
+<h3 id="-ignore-other-worktrees"><code>--ignore-other-worktrees</code></h3>
+<ul>
+<li><code>git switch</code> 명령은 참조하는 위치가 다른 working tree에서 사용중이면 브런치를 따지 못한다.</li>
+<li>이 옵션으로 연결된 working tree를 계속 만들 수 있다.</li>
+</ul>
+<h3 id="-recurse-submodules-no-recurse-submodules"><code>--recurse-submodules</code>, <code>--no-recurse-submodules</code></h3>
+<ul>
+<li><code>superproject</code>에 활성화된 submodule 내용을 업데이트하여 반영한다.</li>
+<li><code>git submodule</code> 명령과 같이 서브 모듈 <code>HEAD</code>를 표기한다.</li>
+</ul>
+<h1 id="git-restore"><code>git restore</code></h1>
+<ul>
+<li>Working tree 파일을 되돌린다.</li>
+<li>생각보다 옵션이 많다&hellip;</li>
+</ul>
+<h2 id="_4">개요</h2>
+<div class="codehilite"><pre><span></span><code>git restore [&lt;option&gt;] [--source=&lt;tree&gt;] [--staged] [--worktree] [--] &lt;pathspec&gt;...
+git restore [&lt;option&gt;] [--source=&lt;tree&gt;] [--staged] [--worktree] --pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]
+git restore (-p|--patch) [&lt;option&gt;] [--source=&lt;tree&gt;] [--staged] [--worktree] [--] [&lt;pathspec&gt;...]
+</code></pre></div>
+
+
+<h2 id="_5">옵션별 설명</h2>
+<h3 id="-s-tree-sourcetree"><code>-s &lt;tree&gt;</code>, <code>--source=&lt;tree&gt;</code></h3>
+<ul>
+<li>입력된 work tree의 내용으로 되돌린다.</li>
+<li><code>--staged</code> 옵션 사용때 지정하지 이 옵션을 지정하지 않으면, <code>HEAD</code>에서 자동으로 되돌려진다.</li>
+</ul>
+<h3 id="-p-patch"><code>(-p|--patch)</code></h3>
+<ul>
+<li>대화 모드로 파일 변화 분을 되돌린다.</li>
+</ul>
+<h3 id="-w-worktree-s-staged"><code>(-W|--worktree)</code>, <code>(-S|--staged)</code></h3>
+<ul>
+<li>되돌리는 위치를 지정한다.</li>
+<li>옵션이 아무것도 없으면 work tree로 되돌려지며, <code>--staged</code>를 지정하면 index만 복원됨.</li>
+<li>옵션을 둘다 사용하면 둘다 되돌려진다.</li>
+</ul>
+<h3 id="-q-quiet_1"><code>(-q|--quiet)</code></h3>
+<ul>
+<li>메시지 끔.</li>
+</ul>
+<h3 id="-progress-no-progress_1"><code>--progress</code>, <code>--no-progress</code></h3>
+<ul>
+<li>stderr로 메시지를 출력한다.</li>
+<li><code>--no-progress</code> 옵션은 <code>-q</code>와 같다.</li>
+</ul>
+<h3 id="-ours-theirs"><code>--ours</code>, <code>--theirs</code></h3>
+<ul>
+<li>머지가 되지 않은 위치의 2번째(<code>ours</code>), 3번째(<code>theirs</code>) 위치의 값으로 되돌림</li>
+<li>뭔말이지&hellip;</li>
+</ul>
+<h3 id="-m-merge_1"><code>(-m|--merge)</code></h3>
+<ul>
+<li>Working tree에서 인덱스로 되돌릴때, 충돌이 발생하면 해당 내용을 머지 커밋으로 만든다.</li>
+</ul>
+<h3 id="-conflictstyle_1"><code>--conflict=&lt;style&gt;</code></h3>
+<ul>
+<li><code>--merge</code> 옵션 과 비슷하나 상위 계념이다.</li>
+<li>충돌이 났을대 어떻게 할지에 대해서 정의한다.</li>
+<li><code>merge.conflictStyle</code> 옵션을 덮어쓴다.</li>
+<li><code>merge</code>(기본값), <code>diff3</code>으로 지정할 수 있다.</li>
+</ul>
+<h3 id="-ignore-unmerged"><code>--ignore-unmerged</code></h3>
+<ul>
+<li>변경 사항이 있어 충돌이 발생했을때, 머지를 진행한다.</li>
+<li>머지되지 않은건 그대로 둔다.</li>
+</ul>
+<h3 id="-ignore-skip-worktree-bits"><code>--ignore-skip-worktree-bits</code></h3>
+<ul>
+<li>희소 체크아웃 모드(sparse checkout mode)에서 기본값은 <code>&lt;pathspec&gt;</code>과 <code>$GIT_DIR/info/sparse-checkout</code>에서의 희소 패턴(sparse pattern)에 맞는 항목만 업데이트한다.</li>
+<li>하지만 이 옵션을 붙이면 희소 패턴(sparse pattern) 값은 무시하고 <code>&lt;pathspec&gt;</code>에 존재하는 파일을 무조건 되돌리게 된다.</li>
+</ul>
+<h3 id="-recurse-submodules-no-recurse-submodules_1"><code>--recurse-submodules</code>, <code>--no-recurse-submodules</code></h3>
+<ul>
+<li><code>superproject</code>에 저장된 커밋으로 sub module이 되돌려진다.</li>
+</ul>
+<h3 id="-overlay-no-overlay"><code>--overlay</code>, <code>--no-overlay</code></h3>
+<ul>
+<li>기본 값은 <code>--no-overlay</code>.</li>
+<li>되돌릴때 수정된 파일을 삭제하지 않는다.</li>
+</ul>
+<h3 id="-pathspec-from-filefile"><code>--pathspec-from-file=&lt;file&gt;</code></h3>
+<ul>
+<li>옵션 내용들을 파일로 입력받는다.</li>
+<li><code>-</code>로 입력되면 stdin으로 받은 값을 옵션으로 받아들인다.</li>
+<li><code>LF</code>, <code>CR/LF</code> 로 항목을 구분한다.</li>
+<li><code>git-config</code><a href="https://git-scm.com/docs/git-config">[3]</a>에서 <code>core.quotePath</code> 항목 값이다.</li>
+</ul>
+<h3 id="-pathspec-file-nul"><code>--pathspec-file-nul</code></h3>
+<ul>
+<li><code>NUL</code> 문자로만 구분을 진행한다.</li>
+<li>이 옵션은 <code>--pathspec-from-file</code> 옵션과 같이 작동한다. 혼자서는 아무것도 안됨</li>
+</ul>
+<h3 id="-"><code>--</code></h3>
+<ul>
+<li>이후 인수를 옵션으로 읽지 않는다.</li>
+</ul>
+<h3 id="pathspec"><code>&lt;pathspec&gt;...</code></h3>
+<ul>
+<li><a href="https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec">git glossary</a> 항목으로 대신한다.</li>
+</ul></div>
+        <div class="text-center"><i class="far fa-hand-spock"></i></div>
+
+        <!-- Buy me a coffee -->
+        <div class="text-center">
+<p>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+         alt="Buy Me A Coffee"
+         style="width:15%"
+    >
+  </a>
+</p>        </div>
+
+        <!-- Comment -->
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+                  repo="ujuc/ujuc.github.io"
+                  issue-term="url"
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+          </script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div class="text-center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기...</a></p>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row text-right">
+  <div class="container" style="margin-bottom: 10px;">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+      <i class="far fa-closed-captioning"></i> BY-SA</a> 2012-2020 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>-->  <div id="js" class="contents">
+  </div>
+
+  </body>
+</html>
