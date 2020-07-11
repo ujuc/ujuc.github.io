@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-07-05T12:21:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>git switch, restore 훑어보기</title><link href="https://ujuc.github.io/2020/07/04/git-switch-n-restore-hurt-eo-bo-gi/" rel="alternate"></link><published>2020-07-04T08:54:35+09:00</published><updated>2020-07-05T12:21:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-07-04:/2020/07/04/git-switch-n-restore-hurt-eo-bo-gi/</id><summary type="html">&lt;p&gt;git 2.23.0 이상에서 추가된 명령어인 switch, restore에 대해서 정리한다.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-07-11T11:01:43+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>AWS RDS Proxy 간단하게 보기</title><link href="https://ujuc.github.io/2020/07/11/aws-rds-proxy-gan-dan-ha-ge-bo-gi/" rel="alternate"></link><published>2020-07-11T11:01:43+09:00</published><updated>2020-07-11T11:01:43+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-07-11:/2020/07/11/aws-rds-proxy-gan-dan-ha-ge-bo-gi/</id><summary type="html">&lt;p&gt;AWS RDS Proxy를 간략하게 정리해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 사용을 하자고 말이 나와서 진짜 간략하게 정리한걸 조금 정리하는 겸. 만들었는데 블로그도 쓸겸.&lt;/p&gt;
+&lt;h3 id="_1"&gt;설명서&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/AuroraUserGuide/rds-proxy.html"&gt;Aurora User Guide - RDS proxy&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="_2"&gt;간략 설명&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;대량의 컨넥션이 이뤄져서 컨넥션 풀 관리가 힘들다&amp;hellip;&lt;/li&gt;
+&lt;li&gt;우리는 DB를 엄청 크게 쓰고 있어요!&lt;/li&gt;
+&lt;li&gt;하는데만 쓰자&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_3"&gt;조금 자세하게&lt;/h3&gt;
+&lt;p&gt;DB와 애플리케이션 사이에 존재하여 DB 컨넥션에 대한 처리를 해준다.&lt;/p&gt;
+&lt;p&gt;원래는 프로그램상에서 컨넥션 풀을 생성하여 풀 관리를 하면서 작업을 진행해야 하나. 몇몇 언어나 일반 사용자들이 컨넥션 풀에 대해서 인지를 못하고 제대로 사용하고 있지 못하다. 그것을 proxy에서 일정한 컨넥션 풀을 생성하고 연결을 할 수 있도록 도와 주게 된다.&lt;/p&gt;
+&lt;p&gt;IAM과 AWS Secrets Manager 를 이용하여 DB 연결하는 비밀번호를 암호화하여 작업할 수 있다.&lt;/p&gt;</content><category term="Cloud"></category><category term="rds"></category><category term="aws"></category><category term="rds proxy"></category><category term="cloud"></category></entry><entry><title>git switch, restore 훑어보기</title><link href="https://ujuc.github.io/2020/07/04/git-switch-n-restore-hurt-eo-bo-gi/" rel="alternate"></link><published>2020-07-04T08:54:35+09:00</published><updated>2020-07-05T12:21:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-07-04:/2020/07/04/git-switch-n-restore-hurt-eo-bo-gi/</id><summary type="html">&lt;p&gt;git 2.23.0 이상에서 추가된 명령어인 switch, restore에 대해서 정리한다.&lt;/p&gt;</summary><content type="html">&lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#_1"&gt;들어가자&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#git-switch"&gt;git switch&lt;/a&gt;&lt;ul&gt;

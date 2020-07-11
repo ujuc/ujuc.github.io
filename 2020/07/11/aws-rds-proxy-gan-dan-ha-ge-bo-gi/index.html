@@ -15,13 +15,26 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기...">
 
-    <meta name="description" content="Anythink, Everythink!">
-    <meta name="twitter:title" content="잘 밤에 쓸데없는 생각하기...">
-    <meta name="twitter:description" content="Anythink, Everythink!">
+    <meta name="keyward" content="rds,aws,rds proxy,cloud">
+    <meta property="og:title" content="AWS RDS Proxy 간단하게 보기">
+    <meta name="twitter:title" content="AWS RDS Proxy 간단하게 보기">
+    <meta itemprop="name" content="AWS RDS Proxy 간단하게 보기">
+    <meta name="description" content="AWS RDS Proxy를 간략하게 정리해보자.">
+    <meta property="og:description" content="AWS RDS Proxy를 간략하게 정리해보자.">
+    <meta name="twitter:description" content="AWS RDS Proxy를 간략하게 정리해보자.">
+    <meta itemprop="description" content="AWS RDS Proxy를 간략하게 정리해보자.">
+    <meta property="og:url" content="https://ujuc.github.io/2020/07/11/aws-rds-proxy-gan-dan-ha-ge-bo-gi/">
+    <meta property="article:published_time" content="2020-07-11T11:01:43+09:00">
+    <meta property="article:modified_time" content="2020-07-11T11:01:43+09:00">
+    <meta property="article:tag" content="rds">
+    <meta property="article:tag" content="aws">
+    <meta property="article:tag" content="rds proxy">
+    <meta property="article:tag" content="cloud">
+    
 
     <!-- Title -->
     <title>
-      잘 밤에 쓸데없는 생각하기...| Tag: cloud
+      잘 밤에 쓸데없는 생각하기... / AWS RDS Proxy 간단하게 보기
     </title>
 
 <!-- Style sheet -->
@@ -95,81 +108,88 @@
 </div>  </header>
 
   <div id="site_article" class="container">
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2020/07/11/aws-rds-proxy-gan-dan-ha-ge-bo-gi/" class="article_title">AWS RDS Proxy 간단하게 보기</a>
-        </div>
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>AWS RDS Proxy 간단하게 보기</h1></div>
         <div class="article_meta">
           <i class="far fa-calendar-plus"></i> 20. 07. 11.
- / <i class="fas fa-level-up-alt"></i>20. 07. 11.        </div>
-        <div class="article_text"><p>AWS RDS Proxy를 간략하게 정리해보자.</p></div>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/cloud.html">Cloud</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/rds.html" class="article_tag">rds</a>
+            <a href="https://ujuc.github.io/tag/aws.html" class="article_tag">aws</a>
+            <a href="https://ujuc.github.io/tag/rds-proxy.html" class="article_tag">rds proxy</a>
+            <a href="https://ujuc.github.io/tag/cloud.html" class="article_tag">cloud</a>
+          </i>
+        </div>
+        <div class="text-center"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>회사에서 사용을 하자고 말이 나와서 진짜 간략하게 정리한걸 조금 정리하는 겸. 만들었는데 블로그도 쓸겸.</p>
+<h3 id="_1">설명서</h3>
+<p><a href="https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/AuroraUserGuide/rds-proxy.html">Aurora User Guide - RDS proxy</a></p>
+<h3 id="_2">간략 설명</h3>
+<ul>
+<li>대량의 컨넥션이 이뤄져서 컨넥션 풀 관리가 힘들다&hellip;</li>
+<li>우리는 DB를 엄청 크게 쓰고 있어요!</li>
+<li>하는데만 쓰자&hellip;</li>
+</ul>
+<h3 id="_3">조금 자세하게</h3>
+<p>DB와 애플리케이션 사이에 존재하여 DB 컨넥션에 대한 처리를 해준다.</p>
+<p>원래는 프로그램상에서 컨넥션 풀을 생성하여 풀 관리를 하면서 작업을 진행해야 하나. 몇몇 언어나 일반 사용자들이 컨넥션 풀에 대해서 인지를 못하고 제대로 사용하고 있지 못하다. 그것을 proxy에서 일정한 컨넥션 풀을 생성하고 연결을 할 수 있도록 도와 주게 된다.</p>
+<p>IAM과 AWS Secrets Manager 를 이용하여 DB 연결하는 비밀번호를 암호화하여 작업할 수 있다.</p></div>
+        <div class="text-center"><i class="far fa-hand-spock"></i></div>
+
+        <!-- Buy me a coffee -->
+        <div class="text-center">
+<p>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+         alt="Buy Me A Coffee"
+         style="width:15%"
+    >
+  </a>
+</p>        </div>
+
+        <!-- Comment -->
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+                  repo="ujuc/ujuc.github.io"
+                  issue-term="url"
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+          </script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div class="text-center">🎗</div>
       </div>
-    </article>
-    <hr/>
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2016/06/18/dog-teug-ha-da_onshape/" class="article_title">독특하다. Onshape</a>
-        </div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 16. 06. 18.
-        </div>
-        <div class="article_text"><p>독특하다. 정말 독특하다. 웹서비스에서 3D 캐드를 구현하여 작업할 수 있다니.</p></div>
-      </div>
-    </article>
-    <hr/>
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2015/07/22/cncf-org/" class="article_title">Cloud Native Computing Foundation</a>
-        </div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 15. 07. 22.
-        </div>
-        <div class="article_text"><p class="first last">Google에서 Kubernetes v1.0을 발표하면서 Cloud Native Computing Foundation과 함께 진행한다고 했다. 깊은글 아니다 소개 글이다. 깊은 글을 10분만에 적을 수 있겠는가?</p>
-</div>
-      </div>
-    </article>
-    <hr/>
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2015/04/10/odin-is/" class="article_title">Odin is?</a>
-        </div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 15. 04. 10.
-        </div>
-        <div class="article_text"><p class="first last">Parallels에서 이번에 새롭게 런칭한 Cloud 서비스 Odin.</p>
-</div>
-      </div>
-    </article>
-    <hr/>
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/" class="article_title">[Google Cloud Platfrom] Google Cloud Endpoints</a>
-        </div>
-        <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 14. 11. 14.
- / <i class="fas fa-level-up-alt"></i>16. 03. 01.        </div>
-        <div class="article_text"><p>Google Cloud Endpoints 간략하게 확인하기.</p></div>
-      </div>
-    </article>
+    </div>
+  </div>
   </div>
 
   <!-- body foot -->
   <div class="row">
     <div class="container">
-  <ul class="pagination">
-      <li class="align-middle"><a rel="next"><i class="fa fa-anchor"></i> Next</a></li>
-    <a class="align-middle" style="margin: 0 .5rem 0 .5rem"><i class="fas fa-sun" style="color:orangered"></i></a>
-      <li class="align-middle">
-        <a href="/tag/cloud2.html">
-          Prev <i class="fas fa-angle-double-right"></i>
-        </a>
-      </li>
-  </ul>
     </div>
   </div>
 
