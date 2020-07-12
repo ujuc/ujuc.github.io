@@ -24,7 +24,7 @@ jobs:
           python-version: 3.8
 
       - name: Setup poetry
-        uses: Gr1N/setup-poetry@v1
+        uses: Gr1N/setup-poetry@v2
         with:
           poetry-version: 1.0.3
 
