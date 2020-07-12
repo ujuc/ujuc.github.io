@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      timezone: "Asia/Seoul"
+    target-branch: "develop"
+    assignees:
+      - "ujuc"
+    reviews:
+      - "ujuc"
+    commit-message:
+      prefix: "chore: "
+      include: "scope"
+    labels:
+      - "github actions"
+      - "dependencies"
