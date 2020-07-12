@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="ujuc">
+    
+    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기...">
+    <meta property="og:type" content="website">
+    <meta property="inLanguage" content="ko-KR">
+
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기...">
+
+    <meta name="keyward" content="github,dependabot,dependencies packages,package manager">
+    <meta property="og:title" content="Github dependabot 설정하기">
+    <meta name="twitter:title" content="Github dependabot 설정하기">
+    <meta itemprop="name" content="Github dependabot 설정하기">
+    <meta name="description" content="Github Dependabot 설정을 해보자.">
+    <meta property="og:description" content="Github Dependabot 설정을 해보자.">
+    <meta name="twitter:description" content="Github Dependabot 설정을 해보자.">
+    <meta itemprop="description" content="Github Dependabot 설정을 해보자.">
+    <meta property="og:url" content="https://ujuc.github.io/2020/07/12/github-dependabot-seor-jeong-ha-gi/">
+    <meta property="article:published_time" content="2020-07-12T10:46:57+09:00">
+    <meta property="article:modified_time" content="2020-07-12T10:46:57+09:00">
+    <meta property="article:tag" content="github">
+    <meta property="article:tag" content="dependabot">
+    <meta property="article:tag" content="dependencies packages">
+    <meta property="article:tag" content="package manager">
+    
+
+    <!-- Title -->
+    <title>
+      잘 밤에 쓸데없는 생각하기... / Github dependabot 설정하기
+    </title>
+
+<!-- Style sheet -->
+<!-- Google web font -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Mono|Gugi|Noto+Serif+KR&display=swap&subset=korean" rel="stylesheet"> 
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/687641d3e8.js"></script>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+<div class="container" style="margin-top: 10px;">
+  <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-inbox"></i> Blog
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/archives.html">
+          <i class="fas fa-archive"></i> Archive
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tags.html">
+          <i class="fas fa-tags"></i> Tags
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/categories.html">
+          <i class="fas fa-folder-open"></i> Categories
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+          <i class="fas fa-newspaper"></i> Pages
+        </a>
+        <div class="dropdown-menu">
+        </div>
+      </li>
+  </nav>
+</div>  </header>
+
+  <div id="site_article" class="container">
+  <div class="row">
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>Github dependabot 설정하기</h1></div>
+        <div class="article_meta">
+          <i class="far fa-calendar-plus"></i> 20. 07. 12.
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="fas fa-ellipsis-v"></i>
+          <i class="fas fa-tags">
+            <a href="https://ujuc.github.io/tag/github.html" class="article_tag">github</a>
+            <a href="https://ujuc.github.io/tag/dependabot.html" class="article_tag">dependabot</a>
+            <a href="https://ujuc.github.io/tag/dependencies-packages.html" class="article_tag">dependencies packages</a>
+            <a href="https://ujuc.github.io/tag/package-manager.html" class="article_tag">package manager</a>
+          </i>
+        </div>
+        <div class="text-center"><i class="fas fa-poo" style></i></div>
+        <div class="article_text"><p>블로그 확인 중 Github Dependabot을 설정할 수 있는 기능이 있어서 적용.</p>
+<p>블로그는 간단해서 의존성을 관리할 필요가&hellip; 없지만 블로그는 테스트 용이니까&hellip; 이것을 붙여봤다.<br>
+자세한 사용법은 링크 타고 설명페이지에서 확인하도록&hellip; 저거까지하기엔 많아&hellip;</p>
+<hr>
+<div class="toc">
+<ul>
+<li><a href="#_1">설정 파일</a></li>
+<li><a href="#_2">구성 옵션</a></li>
+<li><a href="#package-ecosystem">package-ecosystem</a><ul>
+<li><a href="#drectory">drectory</a></li>
+<li><a href="#schedule">Schedule</a><ul>
+<li><a href="#interval">interval</a></li>
+<li><a href="#day">day</a></li>
+<li><a href="#timezone">timezone</a></li>
+</ul>
+</li>
+<li><a href="#allow">allow</a></li>
+<li><a href="#assignees">assignees</a></li>
+<li><a href="#commit-message">commit-message</a></li>
+<li><a href="#ignore">ignore</a></li>
+<li><a href="#labels">labels</a></li>
+<li><a href="#milestone">milestone</a></li>
+<li><a href="#pull-request-branch-nameseparator">pull-request-branch-name.separator</a></li>
+<li><a href="#rebase-strategy">rebase-strategy</a></li>
+<li><a href="#reviewers">reviewers</a></li>
+<li><a href="#target-branch">target-branch</a></li>
+<li><a href="#versioning-strategy">versioning-strategy</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_1">설정 파일</h2>
+<p><code>./.github/dependabo.yml</code> 으로 설정 파일을 구성한다. Github Actions랑 같은 위치.<br>
+그냥 여기다가 다 넣을 작정인듯.</p>
+<h2 id="_2">구성 옵션</h2>
+<h2 id="package-ecosystem"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#package-ecosystem"><code>package-ecosystem</code></a></h2>
+<ul>
+<li><strong>필수 항목!</strong></li>
+<li>패키지 메니저에 대한 내용을 정의 한다.</li>
+<li>사용 가능한 패키지 메니저<ul>
+<li><code>bundler</code></li>
+<li><code>cargo</code></li>
+<li><code>composer</code></li>
+<li><code>docker</code></li>
+<li><code>elm</code> (??)</li>
+<li><code>gitsubmodule</code></li>
+<li><code>github-actions</code></li>
+<li><code>gomode</code></li>
+<li><code>gradle</code></li>
+<li><code>maven</code></li>
+<li><code>mix</code> (??)</li>
+<li><code>npm</code></li>
+<li><code>unget</code></li>
+<li><code>pip</code></li>
+<li><code>terraform</code></li>
+</ul>
+</li>
+<li>ecosystem별로 하나의 리스트로 사용하여 작업한다.</li>
+</ul>
+<h3 id="drectory"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#directory"><code>drectory</code></a></h3>
+<ul>
+<li><strong>필수 항목</strong></li>
+<li>패키지 설정파일의 위치를 패키지 메니저마다 지정해줘야된다.</li>
+<li>Github Actions는 <code>/</code>로 하면 알아서 <code>.github/workflows</code>에 있는 파일을 가져다가 쓴다.</li>
+</ul>
+<h3 id="schedule"><code>Schedule</code></h3>
+<h4 id="interval"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduleinterval"><code>interval</code></a></h4>
+<ul>
+<li><strong>필수 항목</strong></li>
+<li>얼마마다 확인할 것인지에 대해서 정의하는 위치.</li>
+<li>항목은 <code>daily</code>, <code>weekly</code>, <code>monthly</code>가 있다.<ul>
+<li><code>daily</code>는 월~금요일에만 실행한다. (주말은 왜 쉬는거지&hellip;?)</li>
+<li><code>weekly</code>는 기본은 월요일에만 실행한다. 밑에서 설명할 <code>day</code> 항목으로 변경 가능.</li>
+<li><code>monthly</code>는 매달 한번 1일에 실행한다.</li>
+</ul>
+</li>
+</ul>
+<h4 id="day"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduleday"><code>day</code></a></h4>
+<ul>
+<li>주마다 업데이트할 스케출을 적어준다.</li>
+<li>기본값은 <code>monday 05:00 UTC</code> 이다.</li>
+<li>항목<ul>
+<li><code>monday</code></li>
+<li><code>tuesday</code></li>
+<li><code>wednesday</code></li>
+<li><code>thursday</code></li>
+<li><code>friday</code></li>
+<li><code>saturday</code></li>
+<li><code>sunday</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="timezone"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduletimezone"><code>timezone</code></a></h4>
+<ul>
+<li>UTC가 기본인데 이걸 바꾸고 싶으면 작성한다.</li>
+<li>Timezone은 풀네임 <code>Asia/Seoul</code>으로 해준다. <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">다른 타임존</a></li>
+<li>(?) 여기다가 한국시간을 박아두면 <code>13:00 KST</code>로 도는건가..음..?</li>
+</ul>
+<h3 id="allow"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduleinterval"><code>allow</code></a></h3>
+<ul>
+<li>기본적으로 모든 의존성을 확안하여 PR을 넣게 되는데, 업데이트 하고 싶은 의존성만 허용할 수 있는 옵션이다.</li>
+<li>항목<ul>
+<li><code>dependency-name</code>: 명시한 이름을 가진 패키지만 업데이트 한다. <code>*</code>를 이용하여 여러개의 패키지를 지정할 수 있다. (정규식의 <code>*</code> 사용법과 동일)</li>
+<li><code>dependency-type</code>: 음.. 타입....음..</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Support ecosystem</th>
+<th>Allow updates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>direct</code></td>
+<td>전부</td>
+<td>명시된 모든 의존성</td>
+</tr>
+<tr>
+<td><code>indirect</code></td>
+<td><code>bundler</code>, <code>pip</code>, <code>composer</code>, <code>cargo</code></td>
+<td>하위 의존성까지 전부</td>
+</tr>
+<tr>
+<td><code>all</code></td>
+<td>전부</td>
+<td>명시된 모든 의존성. <code>bundle</code>, <code>pip</code>, <code>composer</code>, <code>cargo</code> 는 하위 의존성까지 전부</td>
+</tr>
+<tr>
+<td><code>production</code></td>
+<td><code>bundler</code>, <code>composer</code>, <code>mix</code>, <code>maven</code>, <code>npm</code>, <code>pip</code></td>
+<td><strong>Product</strong> 환경에서 사용하는 패키지만</td>
+</tr>
+<tr>
+<td><code>development</code></td>
+<td><code>bundler</code>, <code>composer</code>, <code>mix</code>, <code>maven</code>, <code>npm</code>, <code>pip</code></td>
+<td><strong>Developmen</strong> 환경에서 사용하는 패키지만</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assignees"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#assignees"><code>assignees</code></a></h3>
+<ul>
+<li>Github Dependabot의 PR에 대한 담당자 지정.</li>
+<li>음&hellip;</li>
+</ul>
+<h3 id="commit-message"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#commit-message"><code>commit-message</code></a></h3>
+<ul>
+<li>Github Dependabot이 커밋할때 어떤걸 붙일 건지에 대한 설정</li>
+<li>항목<ul>
+<li><code>prefix</code>: 앞에 붙일 단어</li>
+<li><code>prefix-development</code>: 개발 환경용 앞에 붙일 단어<ul>
+<li>지원하는데는 당연히 <code>bundler</code>, <code>composer</code>, <code>mix</code>, <code>maven</code>, <code>npm</code>, <code>pip</code></li>
+</ul>
+</li>
+<li><code>include: "scope"</code>: 업데이트된 의존성 목록을 점두사 뒤에 넣어준다.</li>
+</ul>
+</li>
+<li><strong>NOTE</strong>: <code>target-branch</code>를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.</li>
+</ul>
+<h3 id="ignore"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#ignore"><code>ignore</code></a></h3>
+<ul>
+<li><code>@dependabot ignore</code>를 이용해서 <code>ignore</code> 된게 있는지 확인하라고 하는데&hellip;<ul>
+<li><code>@dependabot</code>은 어디서&hellip; 사용하나&hellip;?</li>
+</ul>
+</li>
+<li>암튼 뭔가를 하기 싫을때 하는거</li>
+<li>항목<ul>
+<li><code>dependency-name</code>: 의존성 패키지 이름</li>
+<li><code>versions</code>: 제외할 버전이나 버전 범위를 지정한다. 패키지 메니저마다 사용하는 패턴을 이용해서 작성하자.</li>
+</ul>
+</li>
+<li><strong>NOTE</strong>: <code>target-branch</code>를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.</li>
+</ul>
+<h3 id="labels"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#labels"><code>labels</code></a></h3>
+<ul>
+<li>PR시 명시된 <code>label</code>을 붙여 요청하게 된다.</li>
+<li>기본값은 <code>dependencies</code>.</li>
+</ul>
+<h3 id="milestone"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#milestone"><code>milestone</code></a></h3>
+<ul>
+<li>특정 milestone을 지정하여 해당 항목에 넣을 수 있다.</li>
+<li><strong>NOTE</strong>: <code>target-branch</code>를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.</li>
+</ul>
+<h3 id="pull-request-branch-nameseparator"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#pull-request-branch-nameseparator"><code>pull-request-branch-name.separator</code></a></h3>
+<ul>
+<li>PR마다 브런치를 만드는데, 이때 브런치 이름 구분자 명시용</li>
+<li>기본은 <code>/</code></li>
+</ul>
+<h3 id="rebase-strategy"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#rebase-strategy"><code>rebase-strategy</code></a></h3>
+<ul>
+<li>브런치 충돌났을때, 자동으로 PR을 리베이스하는데 이걸 끄고 싶을때 설정하면됨.</li>
+<li><code>disabled</code>: 충돌 해결은 사용자가.</li>
+<li><code>auto</code>: 기본값</li>
+</ul>
+<h3 id="reviewers"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#reviewers"><code>reviewers</code></a></h3>
+<ul>
+<li>PR시 리뷰를 요청할 사람 지정. 팀도 가능함.</li>
+<li><strong>NOTE</strong>: <code>target-branch</code>를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.</li>
+</ul>
+<h3 id="target-branch"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#target-branch"><code>target-branch</code></a></h3>
+<ul>
+<li>기본으로 확인하는 브런치는 레포에 설정된 기본 브런치로 진행한다.</li>
+<li>이걸 사용하면 명시된 브런치에서 의존성을 검사한다.</li>
+<li>보안 PR에 영향갈 수 있단다.</li>
+</ul>
+<h3 id="versioning-strategy"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#versioning-strategy"><code>versioning-strategy</code></a></h3>
+<ul>
+<li>Github Dependabot에서 의존성 업데이트를 진행하면서 명시하는 방법은 두가지 방법이 있다.<ul>
+<li>App: 요구 버전이 업데이트 (<code>npm</code>, <code>pip</code>, <code>composer</code>)</li>
+<li>Library: 버전 범위 업데이트 (<code>bundler</code>, <code>cargo</code>)</li>
+</ul>
+</li>
+<li>이 사항을 변경하기 위해서 사용.</li>
+<li><strong>NOTE</strong>: <code>target-branch</code>를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.</li>
+<li>사용 가능한 업데이트 옵션</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Support echosystem</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lockfile-only</code></td>
+<td><code>bundler</code>, <code>cargo</code>, <code>composer</code>, <code>mix</code>, <code>npm</code>, <code>pip</code></td>
+<td><code>lockfile</code> 업데이트에 대한 것만 PR한다.</td>
+</tr>
+<tr>
+<td><code>auto</code></td>
+<td><code>bundler</code>, <code>cargo</code>, <code>composer</code>, <code>mix</code>, <code>npm</code>, <code>pip</code></td>
+<td>디폴트로 진행한다.</td>
+</tr>
+<tr>
+<td><code>widen</code></td>
+<td><code>composer</code>, <code>npm</code></td>
+<td>가능하면 새 버전이랑 이전 버전을 모두 사용할 수 있도록 설정한다.</td>
+</tr>
+<tr>
+<td><code>increase</code></td>
+<td><code>bundler</code>, <code>composer</code>, <code>npm</code></td>
+<td>롤링 업데이트!!!!!!!</td>
+</tr>
+<tr>
+<td><code>increase-if-necessary</code></td>
+<td><code>bundler</code>, <code>comopser</code>, <code>npm</code></td>
+<td>꼭 필요할때만 업데이트</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>참고: <a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates">Configuration options for dependency updates</a></p></div>
+        <div class="text-center"><i class="far fa-hand-spock"></i></div>
+
+        <!-- Buy me a coffee -->
+        <div class="text-center">
+<p>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+         alt="Buy Me A Coffee"
+         style="width:15%"
+    >
+  </a>
+</p>        </div>
+
+        <!-- Comment -->
+        <div id="utterances">
+          <script src="https://utteranc.es/client.js"
+                  repo="ujuc/ujuc.github.io"
+                  issue-term="url"
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+          </script>
+        </div>
+          <div class="article_comments"><div id="disqus_thread" style="width: 100%"></div>
+<script>
+
+  /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ujucgithub.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+        <div class="text-center">🎗</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="row">
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기...</a></p>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row text-right">
+  <div class="container" style="margin-bottom: 10px;">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+      <i class="far fa-closed-captioning"></i> BY-SA</a> 2012-2020 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>  <div id="js" class="contents">
+  </div>
+
+  </body>
+</html>
