@@ -9,8 +9,6 @@ updates:
     target-branch: "develop"
     assignees:
       - "ujuc"
-    reviews:
-      - "ujuc"
     commit-message:
       prefix: "chore: "
       include: "scope"
