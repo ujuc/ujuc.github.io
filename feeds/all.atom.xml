@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-07-12T10:46:57+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Github dependabot 설정하기</title><link href="https://ujuc.github.io/2020/07/12/github-dependabot-seor-jeong-ha-gi/" rel="alternate"></link><published>2020-07-12T10:46:57+09:00</published><updated>2020-07-12T10:46:57+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-07-12:/2020/07/12/github-dependabot-seor-jeong-ha-gi/</id><summary type="html">&lt;p&gt;Github Dependabot 설정을 해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 확인 중 Github Dependabot을 설정할 수 있는 기능이 있어서 적용.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2020-07-18T09:01:52+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Daily Retrospective</title><link href="https://ujuc.github.io/2020/07/18/daily-retrospective/" rel="alternate"></link><published>2020-07-18T09:01:52+09:00</published><updated>2020-07-18T09:01:52+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-07-18:/2020/07/18/daily-retrospective/</id><summary type="html">&lt;p&gt;6월부터 매일 회고를 쓰고 있다. (주말은 하고 싶을때만&amp;hellip;)&lt;/p&gt;</summary><content type="html">&lt;p&gt;이번년도 시작할때 메모 컨설팅을 받았으나, 코로나로 인해서 제대로 못하였고, 내가 아는 방향과 같이 나가는 것이 있어서 뭔가 행동 방식을 추가로 하게되는 좋은 계기를 만들었다.&lt;/p&gt;
+&lt;p&gt;그러다가 매일했던 일과 매일 보는 문서 내용을 기억하못하는 현상이 새롭게 나오지 않다보니 큰일이다 싶어서 노트 작성을 시작했다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Notion daily retrospective" src="https://ujuc.github.io/img/2020-07-18_daily-retrospective-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;그래도 꾸준히 적고 있으며, 주말은 내가 하고 싶을때만 만들고 회사 쉬는날은 쉬어버리는 !! 너프한 회고!&lt;/p&gt;
+&lt;p&gt;이제는 이 회고들을 정리하는 회고를 만들어야되는데&amp;hellip; 이거 언제하자&amp;hellip; 한번 시작해야 되는데&amp;hellip;&lt;br&gt;
+글 정리하는게 귀찮...... (자동으로 하고싶다&amp;hellip;)&lt;/p&gt;
+&lt;p&gt;회고 질문&lt;/p&gt;
+&lt;p&gt;처음에는 야래 질문을 매일 아침에 그리고 일 중간중간에 작성을 했으나&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;오늘의 기분은?&lt;/li&gt;
+&lt;li&gt;어제는 뭘 했나?&lt;/li&gt;
+&lt;li&gt;오늘은 뭘 해야되나?&lt;/li&gt;
+&lt;li&gt;오늘은 뭘 했나?&lt;/li&gt;
+&lt;li&gt;오늘은 어떤 것을 봤나?&lt;/li&gt;
+&lt;li&gt;오늘은 무엇을 배웠냐?&lt;/li&gt;
+&lt;li&gt;오늘은 어떻게 지냈나?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;오늘 뭘 했나?&lt;/code&gt;, &lt;code&gt;오늘 뭘 해야되나?&lt;/code&gt; 질문은 &lt;code&gt;오늘은 뭘 했나?&lt;/code&gt; 밑에 추가를 하는 것으로 하나로 합쳤으나, 일이 얼마나 걸리고 얼마나 쌓여있고를 확인하려다보니 힘들어서 &lt;a href="https://clickup.com/"&gt;ClickUp&lt;/a&gt; 으로 옮겨서 Todo를 작성하고 내부에 작업에 대한 것들을 정리하고 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;오늘은 어떤 것을 봤나?&lt;/code&gt;의 질문도 문서가 많아지고 그것을 정리하는 방법을 찾다보니, &lt;a href="https://usejournal.com"&gt;Journal&lt;/a&gt; 에서 스크랩을 하게되면, 해당 페이지에 대한 노트를 작성할 수 있어서 그걸로 옮겼다.&lt;/p&gt;
+&lt;p&gt;그러다 보니.. 질문은 &lt;code&gt;오늘의 기분은?&lt;/code&gt;, &lt;code&gt;어제는 뭘 했나?&lt;/code&gt;, &lt;code&gt;오늘은 무엇을 배웠나?&lt;/code&gt;, &lt;code&gt;오늘은 어떻게 지냈나?&lt;/code&gt;로 줄었는데&amp;hellip; 뭔가 잘 기억안나는건&amp;hellip; 같은건 기분 때문인가&amp;hellip;&lt;br&gt;
+그냥 이렇게라도 적어놓으니 머리속이 복잡지 않아서 편하다.&lt;/p&gt;
+&lt;p&gt;활용은 나중에 생각하고 꾸준히 적어봐야지&amp;hellip;&lt;/p&gt;</content><category term="Chat"></category><category term="daily retrospective"></category><category term="매일 회고"></category><category term="회고"></category></entry><entry><title>Github dependabot 설정하기</title><link href="https://ujuc.github.io/2020/07/12/github-dependabot-seor-jeong-ha-gi/" rel="alternate"></link><published>2020-07-12T10:46:57+09:00</published><updated>2020-07-12T10:46:57+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-07-12:/2020/07/12/github-dependabot-seor-jeong-ha-gi/</id><summary type="html">&lt;p&gt;Github Dependabot 설정을 해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 확인 중 Github Dependabot을 설정할 수 있는 기능이 있어서 적용.&lt;/p&gt;
 &lt;p&gt;블로그는 간단해서 의존성을 관리할 필요가&amp;hellip; 없지만 블로그는 테스트 용이니까&amp;hellip; 이것을 붙여봤다.&lt;br&gt;
 자세한 사용법은 링크 타고 설명페이지에서 확인하도록&amp;hellip; 저거까지하기엔 많아&amp;hellip;&lt;/p&gt;
 &lt;hr&gt;
