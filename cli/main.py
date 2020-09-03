@@ -64,8 +64,7 @@ def post(ctx, title, rst=False):
 @task()
 def preview(ctx):
     """Start preview web page server"""
-    ctx.run(f"pelican -s {CONF_FILE}")
-    ctx.run(f"pelican -l")
+    ctx.run(f"pelican --autoreload --listen")
 
 
 @task()
@@ -89,7 +88,7 @@ def build(ctx):
 
 
 def run():
-    program = Program(version="1.1.0")
+    program = Program(version="1.2.0")
     program.namespace = Collection()
     program.namespace.add_task(post)
     program.namespace.add_task(preview)
