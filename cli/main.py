@@ -1,66 +1,64 @@
 from pathlib import Path
+import re
 
-import kroman
 import pendulum
 from invoke import Collection, Program, task
 
 BASE_PATH = Path.cwd()
-CONTENT_PATH = BASE_PATH / 'content'
+CONTENT_PATH = BASE_PATH / "content"
 OUTPUT_PATH = BASE_PATH / "output"
 CONF_FILE = BASE_PATH / "pelicanconf.py"
 PUBLISH_CONF_FILE = BASE_PATH / "publishconf.py"
 
+
 @task(
-    help={
-        'title': 'Post title',
-        'rst': 'Post format. if false, make markdown format'
-    }
+    help={"title": "Post title", "rst": "Post format. if false, make markdown format"}
 )
 def post(ctx, title, rst=False):
     """Make post template"""
     today = pendulum.now()
 
-    slug = kroman.parse(title).lower().strip().replace(' ', '-')
+    slug = re.sub("[^A-Za-z0-9가-힣]", "", title).lower().replace(" ", "-")
     date = today.to_date_string()
     post_date = today.to_datetime_string()
-    file_title = f'{date}-{slug}'
+    file_title = f"{date}-{slug}"
 
-    file_name = f'{file_title}.md'
+    file_name = f"{file_title}.md"
 
     article = (
-        f'Title: {title}\n'
-        f'Date: {post_date}\n'
-        f'Modified: {post_date}\n'
-        'Category: \n'
-        'Tags: \n'
-        f'Slug: {slug}\n'
-        'Summary: \n\n'
+        f"Title: {title}\n"
+        f"Date: {post_date}\n"
+        f"Modified: {post_date}\n"
+        "Category: \n"
+        "Tags: \n"
+        f"Slug: {slug}\n"
+        "Summary: \n\n"
     )
 
     if rst:
-        file_name = f'{file_title}.rst'
-        hashes = '#' * len(title) * 2
+        file_name = f"{file_title}.rst"
+        hashes = "#" * len(title) * 2
 
         article = (
-            f'{title}\n'
-            f'{hashes}\n'
-            f':date: {post_date}\n'
-            ':category: \n'
-            ':tags: \n'
-            f':slug: {slug}\n'
-            ':summary: \n\n'
+            f"{title}\n"
+            f"{hashes}\n"
+            f":date: {post_date}\n"
+            ":category: \n"
+            ":tags: \n"
+            f":slug: {slug}\n"
+            ":summary: \n\n"
         )
 
-    blog_path = CONTENT_PATH / 'blog'
+    blog_path = CONTENT_PATH / "blog"
     if not blog_path.is_dir():
         blog_path.mkdir(parents=True)
 
     post_path = blog_path / file_name
 
-    with post_path.open('w') as post_file:
+    with post_path.open("w") as post_file:
         post_file.write(article)
 
-    print(f'File created -> {post_path}')
+    print(f"File created -> {post_path}")
 
 
 @task()
@@ -91,7 +89,7 @@ def build(ctx):
 
 
 def run():
-    program = Program(version='1.0.0')
+    program = Program(version="1.1.0")
     program.namespace = Collection()
     program.namespace.add_task(post)
     program.namespace.add_task(preview)
