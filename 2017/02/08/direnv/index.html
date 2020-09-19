@@ -172,19 +172,19 @@ $ make install
 
 
 <p>다음으로는 다음과 같이 설정해주면 된다.</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> playground
-$ <span class="nb">echo</span> <span class="nb">export</span> <span class="nv">FOO</span><span class="o">=</span>foo &gt; .envrc
-direnv: error .envrc is blocked. Run <span class="sb">`</span>direnv allow<span class="sb">`</span> to approve its content.
-$ direnv allow
-direnv: loading .envrc
-direnv: <span class="nb">export</span> +FOO -PS2
-$ <span class="nb">cd</span> ..
-direnv: unloading
-$ <span class="nb">cd</span> playground
-direnv: loading .envrc
-direnv: <span class="nb">export</span> +FOO -PS2
-$ <span class="nb">echo</span> <span class="si">${</span><span class="nv">FOO</span><span class="si">}</span>
-foo
+<div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">cd</span> <span class="n">playground</span>
+<span class="o">$</span> <span class="n">echo</span> <span class="k">export</span> <span class="n">FOO</span><span class="o">=</span><span class="n">foo</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">envrc</span>
+<span class="n">direnv</span><span class="p">:</span> <span class="n">error</span> <span class="o">.</span><span class="n">envrc</span> <span class="k">is</span> <span class="n">blocked</span><span class="o">.</span> <span class="n">Run</span> <span class="err">`</span><span class="n">direnv</span> <span class="n">allow</span><span class="err">`</span> <span class="n">to</span> <span class="n">approve</span> <span class="n">its</span> <span class="n">content</span><span class="o">.</span>
+<span class="o">$</span> <span class="n">direnv</span> <span class="n">allow</span>
+<span class="n">direnv</span><span class="p">:</span> <span class="n">loading</span> <span class="o">.</span><span class="n">envrc</span>
+<span class="n">direnv</span><span class="p">:</span> <span class="k">export</span> <span class="o">+</span><span class="n">FOO</span> <span class="o">-</span><span class="n">PS2</span>
+<span class="o">$</span> <span class="n">cd</span> <span class="o">..</span>
+<span class="n">direnv</span><span class="p">:</span> <span class="n">unloading</span>
+<span class="o">$</span> <span class="n">cd</span> <span class="n">playground</span>
+<span class="n">direnv</span><span class="p">:</span> <span class="n">loading</span> <span class="o">.</span><span class="n">envrc</span>
+<span class="n">direnv</span><span class="p">:</span> <span class="k">export</span> <span class="o">+</span><span class="n">FOO</span> <span class="o">-</span><span class="n">PS2</span>
+<span class="o">$</span> <span class="n">echo</span> <span class="o">$</span><span class="p">{</span><span class="n">FOO</span><span class="p">}</span>
+<span class="n">foo</span>
 </code></pre></div>
 
 

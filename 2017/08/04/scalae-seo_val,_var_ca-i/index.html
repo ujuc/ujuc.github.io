@@ -121,15 +121,15 @@
 <p>초기 공부는 역시 홈페이지에 있는 문서를 기반으로&hellip; <a href="http://docs.scala-lang.org/tour/tour-of-scala.html">Scala Tour</a> 를 보다 <a href="http://docs.scala-lang.org/tour/classes.html">Classes</a>에 갔더니 예제로 다음 과 같은 내용이 있었다.</p>
 <div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Point</span><span class="o">(</span><span class="k">var</span> <span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="k">var</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">def</span> <span class="n">move</span><span class="o">(</span><span class="n">dx</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">dy</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
-        <span class="n">x</span> <span class="k">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span>
-        <span class="n">y</span> <span class="k">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span>
     <span class="o">}</span>
 
     <span class="k">override</span> <span class="k">def</span> <span class="n">toString</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> 
         <span class="s">s&quot;(</span><span class="si">$x</span><span class="s">, </span><span class="si">$y</span><span class="s">)&quot;</span>
 <span class="o">}</span>
 
-<span class="k">val</span> <span class="n">point1</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Point</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">point1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Point</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">)</span>
 <span class="n">point1</span><span class="o">.</span><span class="n">x</span>    <span class="c1">// 2</span>
 <span class="n">println</span><span class="o">(</span><span class="n">point1</span><span class="o">)</span>     <span class="c1">// prints (x, y)</span>
 </code></pre></div>
@@ -142,15 +142,15 @@
 <ul>
 <li><code>def</code>: 메소드, <em>immutable label</em>, <strong>lazily evaluated</strong></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">something</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="n">something</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
 <span class="n">something</span><span class="k">:</span> <span class="kt">Int</span>
 
 <span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span>
 <span class="n">res2</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">14</span>
 
-<span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span> <span class="k">=</span> <span class="mi">10</span>
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="o">&lt;</span><span class="n">console</span><span class="k">&gt;:</span><span class="mi">12</span><span class="k">:</span> <span class="kt">error:</span> <span class="kt">value</span> <span class="kt">something_=</span> <span class="kt">is</span> <span class="kt">not</span> <span class="kt">a</span> <span class="kt">member</span> <span class="kt">of</span> <span class="kt">object</span> <span class="kt">$iw</span>
-       <span class="n">something</span> <span class="k">=</span> <span class="mi">10</span>
+       <span class="n">something</span> <span class="o">=</span> <span class="mi">10</span>
        <span class="o">^</span>
 </code></pre></div>
 
@@ -158,12 +158,12 @@
 <ul>
 <li><code>val</code>: 상수, <em>immutable label</em>, <strong>eagerly/immediately evaluated</strong></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">somethingelse</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span>
+<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="k">val</span> <span class="n">somethingelse</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span>
 <span class="n">somethingelse</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">17</span>
 
-<span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span> <span class="k">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">10</span>
 <span class="o">&lt;</span><span class="n">console</span><span class="k">&gt;:</span><span class="mi">12</span><span class="k">:</span> <span class="kt">error:</span> <span class="kt">value</span> <span class="kt">something_=</span> <span class="kt">is</span> <span class="kt">not</span> <span class="kt">a</span> <span class="kt">member</span> <span class="kt">of</span> <span class="kt">object</span> <span class="kt">$iw</span>
-       <span class="n">something</span> <span class="k">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">10</span>
+       <span class="n">something</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">10</span>
        <span class="o">^</span>
 </code></pre></div>
 
@@ -171,10 +171,10 @@
 <ul>
 <li><code>var</code>: 변수, <em>mutable variable</em></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="k">var</span> <span class="n">aVariable</span> <span class="k">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
+<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="k">var</span> <span class="n">aVariable</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
 <span class="n">aVariable</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">6</span>
 
-<span class="n">scala</span><span class="o">&gt;</span> <span class="n">aVariable</span> <span class="k">=</span> <span class="mi">5</span>
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">aVariable</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">aVariable</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">5</span>
 </code></pre></div>
 
