@@ -35,15 +35,12 @@
 
     <!-- Title -->
     <title>
-      잘 밤에 쓸데없는 생각하기... / Install wireless Qualcomm Atheros device driver on Lenovo Y700
+      잘 밤에 쓸데없는 생각하기.../Install wireless Qualcomm Atheros device driver on Lenovo Y700
     </title>
 
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 <!-- Style -->
 <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
@@ -77,27 +74,27 @@
   <nav class="nav">
       <li class="nav-item">
         <a class="nav-link" href="/">
-          <i class="fas fa-inbox"></i> Blog
+          <i class="bi bi-inbox"></i> Blog
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/archives.html">
-          <i class="fas fa-archive"></i> Archive
+          <i class="bi bi-archive"></i> Archive
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/tags.html">
-          <i class="fas fa-tags"></i> Tags
+          <i class="bi bi-tags"></i> Tags
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/categories.html">
-          <i class="fas fa-folder-open"></i> Categories
+          <i class="bi bi-folder2-open"></i> Categories
         </a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
-          <i class="fas fa-newspaper"></i> Pages
+          <i class="bi bi-newspaper"></i> Pages
         </a>
         <div class="dropdown-menu">
         </div>
@@ -106,16 +103,15 @@
 </div>  </header>
 
   <div id="site_article" class="container">
-  <div class="row">
     <div class="container">
       <div class="article">
         <div class="article_title"><h1>Install wireless Qualcomm Atheros device driver on Lenovo Y700</h1></div>
         <div class="article_meta">
-          <i class="far fa-calendar-plus"></i> 16. 04. 22.
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="far fa-folder-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-          <i class="fas fa-ellipsis-v"></i>
-          <i class="fas fa-tags">
+          <i class="bi bi-calendar-plus"></i> 16. 04. 22.
+          <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-folder2-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-tags">
             <a href="https://ujuc.github.io/tag/lenovo.html" class="article_tag">lenovo</a>
             <a href="https://ujuc.github.io/tag/ubuntu.html" class="article_tag">ubuntu</a>
             <a href="https://ujuc.github.io/tag/qualcomm.html" class="article_tag">qualcomm</a>
@@ -124,7 +120,7 @@
             <a href="https://ujuc.github.io/tag/1604.html" class="article_tag">16.04</a>
           </i>
         </div>
-        <div class="text-center"><i class="fas fa-poo" style></i></div>
+        <div class="text-center"><i class="bi bi-tornado" style></i></div>
         <div class="article_text"><p>새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가 발생했다.</p>
 <p>Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&hellip; Ubuntu 16.04버전이 4.4.0&hellip; 그래서 백포트하고, 드라이버를 옮겨주는것으로 해결.</p>
 <p><a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation">Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation</a> 에서 말하는 작업을 설치해주면된다.</p>
@@ -146,7 +142,7 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
 <p>이건 위에껄 하고 안되면 추가해주도록 하자.</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">echo</span> blacklist ideapad_laptop <span class="p">|</span> sudo tee /etc/modprobe.d/blacklist.conf
 </code></pre></div></div>
-        <div class="text-center"><i class="far fa-hand-spock"></i></div>
+        <div class="text-center"><i class="bi bi-tsunami"></i></div>
 
         <!-- Buy me a coffee -->
         <div class="text-center">
@@ -193,12 +189,9 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
       </div>
     </div>
   </div>
-  </div>
 
   <!-- body foot -->
-  <div class="row">
-    <div class="container">
-    </div>
+  <div class="container">
   </div>
 
   <!-- Title -->
@@ -208,8 +201,8 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
     <hr />
     <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기...</a></p>
     <p>Anythink, Everythink!</p>
-    <span id="social-github"><a href="https://github.com/ujuc"><i class="fab fa-github-alt"></i></a></span>
-    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="fab fa-linkedin-in"></i></a></span>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="bi bi-github"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="bi bi-linkedin"></i></a></span>
   </div>
 </div>  </div>
 
@@ -217,15 +210,13 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
   <div id="site_footer" class="container">
 <div class="row text-right">
   <div class="container" style="margin-bottom: 10px;">
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-      <i class="far fa-closed-captioning"></i> BY-SA</a> 2012-2021 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+      <i class="bi bi-badge-cc"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2021 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
 </div>  </div>
 
   <!-- Javascript -->
 <!--bootstrap-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>  <div id="js" class="contents">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>  <div id="js" class="contents">
   </div>
 
   </body>
