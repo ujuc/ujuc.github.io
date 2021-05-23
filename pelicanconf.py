@@ -35,15 +35,15 @@ ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}/"
 ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
 
 MENUITEMS = (
-    ("Blog", "/", "fa-inbox"),
-    ("Archive", "/archives.html", "fa-archive"),
-    ("Tags", "/tags.html", "fa-tags"),
-    ("Categories", "/categories.html", "fa-folder-open"),
+    ("Blog", "/", "inbox"),
+    ("Archive", "/archives.html", "archive"),
+    ("Tags", "/tags.html", "tags"),
+    ("Categories", "/categories.html", "folder2-open"),
 )
 
 SOCIAL = (
-    ("Github", "https://github.com/ujuc", "fa-github-alt"),
-    ("Linkin", "https://kr.linkedin.com/in/sungjinkang", "fa-linkedin-in"),
+    ("Github", "https://github.com/ujuc", "github"),
+    ("Linkin", "https://kr.linkedin.com/in/sungjinkang", "linkedin"),
 )
 
 LINKS = ()
