@@ -18,7 +18,7 @@ def post(ctx, title, rst=False):
     """Make post template"""
     today = pendulum.now()
 
-    slug = re.sub("[^A-Za-z0-9가-힣]", "", title).lower().replace(" ", "-")
+    slug = re.sub("[^A-Za-z0-9가-힣\s]", "", title).lower().replace(" ", "-")
     date = today.to_date_string()
     post_date = today.to_datetime_string()
     file_title = f"{date}-{slug}"
