@@ -243,27 +243,26 @@
 <blockquote>
 <p>The handle of the next table meta data is in the field #0 (next). If there is no next table meta data, the field is zero. Names and types of table columns are stored in field #1 (scols). A single field is described by concatenating a type tag and the column name. The type tags are</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">bool       &#39;b&#39;</span>
-<span class="err">complex64  &#39;c&#39;</span>
-<span class="err">complex128 &#39;d&#39;</span>
-<span class="err">float32    &#39;f&#39;</span>
-<span class="err">float64    &#39;g&#39;, alias float</span>
-<span class="err">int8       &#39;i&#39;</span>
-<span class="err">int16      &#39;j&#39;</span>
-<span class="err">int32      &#39;k&#39;</span>
-<span class="err">int64      &#39;l&#39;, alias int</span>
-<span class="err">string     &#39;s&#39;</span>
-<span class="err">uint8      &#39;u&#39;, alias byte</span>
-<span class="err">uint16     &#39;v&#39;</span>
-<span class="err">uint32     &#39;w&#39;</span>
-<span class="err">uint64     &#39;x&#39;, alias uint</span>
-<span class="err">bigInt     &#39;I&#39;</span>
-<span class="err">bigRat     &#39;R&#39;</span>
-<span class="err">blob       &#39;B&#39;</span>
-<span class="err">duration   &#39;D&#39;</span>
-<span class="err">time       &#39;T&#39;</span>
+<div class="codehilite"><pre><span></span><code>bool       &#39;b&#39;
+complex64  &#39;c&#39;
+complex128 &#39;d&#39;
+float32    &#39;f&#39;
+float64    &#39;g&#39;, alias float
+int8       &#39;i&#39;
+int16      &#39;j&#39;
+int32      &#39;k&#39;
+int64      &#39;l&#39;, alias int
+string     &#39;s&#39;
+uint8      &#39;u&#39;, alias byte
+uint16     &#39;v&#39;
+uint32     &#39;w&#39;
+uint64     &#39;x&#39;, alias uint
+bigInt     &#39;I&#39;
+bigRat     &#39;R&#39;
+blob       &#39;B&#39;
+duration   &#39;D&#39;
+time       &#39;T&#39;
 </code></pre></div>
-
 
 <p>Scols 값은 위에서 설명한 인코딩된 필드를 <code>"|"</code>로 결합하여 사용합니다. 예를 들어</p>
 <blockquote>
@@ -272,14 +271,12 @@
 <div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">t</span> <span class="p">(</span><span class="n">Foo</span> <span class="n">bool</span><span class="p">,</span> <span class="n">Bar</span> <span class="n">string</span><span class="p">,</span> <span class="n">Baz</span> <span class="nb">float</span><span class="p">);</span>
 </code></pre></div>
 
-
 <p>이 문구는 scols를 사용하여 테이블 메타 데이터를 추가합니다.</p>
 <blockquote>
 <p>This statement adds a table meta data with scols</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;bFool|sBar|gBaz&quot;</span>
+<div class="codehilite"><pre><span></span><code>&quot;bFool|sBar|gBaz&quot;
 </code></pre></div>
-
 
 <p>테이블에서 컬럼을 삭제할 수 있습니다.</p>
 <blockquote>
@@ -288,43 +285,38 @@
 <div class="codehilite"><pre><span></span><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">t</span> <span class="k">DROP</span> <span class="k">COLUMN</span> <span class="n">Bar</span><span class="p">;</span>
 </code></pre></div>
 
-
 <p>이렇게 하면 scols에서 필드 정보가 <strong>지워</strong>집니다. 값은 다음과 같이 보여집니다.</p>
 <blockquote>
 <p>This &ldquo;erases&rdquo; the field info in scols, so the value becomes</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;bFool||gBaz&quot;</span>
+<div class="codehilite"><pre><span></span><code>&quot;bFool||gBaz&quot;
 </code></pre></div>
-
 
 <p>테이블에 커럼을 추가할 수 있습니다.<br>
 Colums can be added to a table</p>
 <div class="codehilite"><pre><span></span><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">t</span> <span class="k">ADD</span> <span class="k">Count</span> <span class="n">uint</span><span class="p">;</span>
 </code></pre></div>
 
-
 <p>새로운 필드는 scols 맨 끝에 항상 추가됩니다.</p>
 <blockquote>
 <p>New fields are always added to the end of scols</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">”bFool||gBaz|xCount&quot;</span>
+<div class="codehilite"><pre><span></span><code>”bFool||gBaz|xCount&quot;
 </code></pre></div>
-
 
 <p><code>strings.Split(scols, "|")</code>에 있는 필드에 대한 인덱스는 테이블 레코드에 있는 필드에 대한 인덱스 입니다. 위에서 설명한 컬럼 삭제 및 추가 규칙은 기존 테이블 데이터를 다시 만들 필요없이 스키마를 변경시킬 수 있습니다. 삭제된 컬럼은 원래 위치에 그대로 두고 새로운 레코드는 해당 위치에 <code>nil</code>을 삽입합니다. 인코딩된 <code>nil</code> 값은 1 바이트입니다. 기존 레코드에 없는 경우, 추가된 열은  <code>nil</code> 값을 반환합니다. 삭제된 컬럼의 오버해드가 문제가되고 테이블 레코드를 이동할 충분한 시간/공간과 메모리가 있다면:</p>
 <blockquote>
 <p>Index of a field in <code>strings.Split(scols, "|")</code> is the index of the field in a table record. The above discussed rules for column dropping and column adding allow for schema evolution without a need to reshape any existing table data. Dropped columns are left where they are and new records insert <code>nil</code> in their place. The encoded <code>nil</code> is one byte. Added columns, when not present in preexisting records are returned as <code>nil</code> values. If the overhead of dropped columns becomes an issue and there&rsquo;s time/space and memory enough to move the records of a table around:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="k">BEGIN</span> <span class="n">TRANSACTION</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">BEGIN</span> <span class="k">TRANSACTION</span><span class="p">;</span>
   <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">new</span> <span class="p">(</span><span class="k">column</span> <span class="n">definitions</span><span class="p">);</span>
   <span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">new</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">old</span><span class="p">;</span>
   <span class="k">DROP</span> <span class="k">TABLE</span> <span class="k">old</span><span class="p">;</span>
   <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">old</span> <span class="p">(</span><span class="k">column</span> <span class="n">definitions</span><span class="p">);</span>
   <span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">old</span> <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="k">new</span><span class="p">;</span>
   <span class="k">DROP</span> <span class="k">TABLE</span> <span class="k">new</span><span class="p">;</span>
-<span class="k">END</span> <span class="n">TRANSACTION</span><span class="p">;</span>
+<span class="k">END</span> <span class="k">TRANSACTION</span><span class="p">;</span>
 </code></pre></div>
-
 
 <p>이것은 시간적/공간적으로 효과적이지 못하며, Big Data일 경우, 트랜젝션이 프로세스에서 사용 가능한 메모리 리소스에 의해 제한되기에 OOM 이 발생할 수 있습니다. 어쩌면 이것을 수행하는 메소드나 QL 구문을 추가해야합니다.(MySQL OPTIMIZE TABLE 구문 채택을 고려해야합니다)</p>
 <blockquote>
@@ -334,9 +326,8 @@ Colums can be added to a table</p>
 <blockquote>
 <p>Field #2 (<code>hhead</code>) is a handle to a head of table records, i.e. not a handle to the first record in the table. It is thus always non zero even for a table having no records. The reason for this &ldquo;double pointer&rdquo; schema is to enable adding (linking) a new record by updating a single value of the (<code>hhead</code> pointing to) head.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">tableMeta.hhead -&gt; head -&gt; firstTableRecord</span>
+<div class="codehilite"><pre><span></span><code><span class="n">tableMeta</span><span class="p">.</span><span class="n">hhead</span> <span class="o">-&gt;</span> <span class="n">head</span> <span class="o">-&gt;</span> <span class="n">firstTableRecord</span>
 </code></pre></div>
-
 
 <p>테이블 이름은 필드 #3 (<code>name</code>)에 저장됩니다.</p>
 <blockquote>
@@ -347,35 +338,32 @@ Colums can be added to a table</p>
 <blockquote>
 <p>Consider an index named N, indexing column named C. The encoding of this particular index is a string &ldquo;<tag>N&rdquo;. <code>&lt;tag&gt;</code> is a string &ldquo;n&rdquo; for non unique indices and &ldquo;u&rdquo; for unique indices. There is this index information for the index possibly indexing the record id() and for all other columns of scols. Where the column is not indexed, the index info is an empty string. Infos for all indexes are joined with &ldquo;|&rdquo;. For example</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="k">BEGIN</span> <span class="n">TRANSACTION</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">BEGIN</span> <span class="k">TRANSACTION</span><span class="p">;</span>
   <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">t</span> <span class="p">(</span><span class="n">Foo</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Bar</span> <span class="n">bool</span><span class="p">,</span> <span class="n">Baz</span> <span class="n">string</span><span class="p">);</span>
   <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">X</span> <span class="k">ON</span> <span class="n">t</span> <span class="p">(</span><span class="n">Baz</span><span class="p">);</span>
   <span class="k">CREATE</span> <span class="k">UNIQUE</span> <span class="k">INDEX</span> <span class="n">Y</span> <span class="k">ON</span> <span class="n">t</span> <span class="p">(</span><span class="n">Foo</span><span class="p">);</span>
 <span class="k">COMMIT</span><span class="p">;</span>
 </code></pre></div>
 
-
 <p>위의 필드 #1과 #4는 다음과 같습니다:</p>
 <blockquote>
 <p>The values of fields #1 and #4 for the above are</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="c">scols: &quot;lFoo|bBar|sBaz&quot;</span>
-<span class="c">indices: &quot;|uY||nX&quot;</span>
+<div class="codehilite"><pre><span></span><code>scols: &quot;lFoo|bBar|sBaz&quot;
+indices: &quot;|uY||nX&quot;
 </code></pre></div>
-
 
 <p><code>"|"</code> 값을 나눠서 보자면:</p>
 <blockquote>
 <p>Aligning properly the &ldquo;|&rdquo; split parts</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">             id    col#0    col#1    col#2</span>
-<span class="err">+----------+----+--------+--------+--------+</span>
-<span class="err">|   scols: |    | &quot;lFoo&quot; | &quot;bBar&quot; | &quot;sBaz&quot; |</span>
-<span class="err">+----------+----+--------+--------+--------+</span>
-<span class="err">| indices: | &quot;&quot; | &quot;uY&quot;   | &quot;&quot;     | &quot;nX&quot;   |</span>
-<span class="err">+----------+----+--------+--------+--------+</span>
+<div class="codehilite"><pre><span></span><code><span class="c">             id    col#0    col#1    col#2</span>
+<span class="nb">+----------+----+--------+--------+--------+</span><span class="c"></span>
+<span class="c">|   scols: |    | &quot;lFoo&quot; | &quot;bBar&quot; | &quot;sBaz&quot; |</span>
+<span class="nb">+----------+----+--------+--------+--------+</span><span class="c"></span>
+<span class="c">| indices: | &quot;&quot; | &quot;uY&quot;   | &quot;&quot;     | &quot;nX&quot;   |</span>
+<span class="nb">+----------+----+--------+--------+--------+</span><span class="c"></span>
 </code></pre></div>
-
 
 <p><code>Foo</code>와 <code>Baz</code> 컬럼이 인덱스되는 동안 레코드 <code>id()</code>가 이테이블에 대해 인덱싱되지 않는 것을 보여줍니다.</p>
 <blockquote>
@@ -385,9 +373,8 @@ Colums can be added to a table</p>
 <blockquote>
 <p>Note that there cannot be two differently named indexes for the same column and it&rsquo;s intended. The indices are <a href="http://godoc.org/github.com/cznic/lldb#BTree">B+Trees</a>. The list of handles to their roots is pointed to by <code>hxroots</code> with zeros for non indexed columns. For the previous example</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">tableMeta.hxroots -&gt; {0, y, 0, x}</span>
+<div class="codehilite"><pre><span></span><code><span class="n">tableMeta</span><span class="p">.</span><span class="n">hxroots</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">}</span>
 </code></pre></div>
-
 
 <p>여기서 <code>x</code>는 <code>X</code> 인덱스의 B+Tree에 대한 루트이고, <code>y</code>는 <code>Y</code> 인덱스의 B+Tree에 대한 루트입니다. <code>id()</code>에 대한 인덱스가 있다면, 첫번째 <code>0</code>이 있는 곳에 B+Tree 루트가 있습니다. <code>hhead</code>와 마찬가지로 <code>hxroots</code>는 테이블에 대한 인덱스가 없는 경우라도 절대로 <code>0</code>이 아닙니다.</p>
 <blockquote>
@@ -461,50 +448,46 @@ Colums can be added to a table</p>
 <blockquote>
 <p>The composite key of the B+Tree is <code>{indexed values, record handle}</code>. The B+Tree value is not used.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">            B+Tree key                    B+Tree value</span>
-<span class="err">+----------------+---------------+      +--------------+</span>
-<span class="err">| Indexed Values | Record Handle |  -&gt;  |   not used   |</span>
-<span class="err">+----------------+---------------+      +--------------+</span>
+<div class="codehilite"><pre><span></span><code><span class="c">            B</span><span class="nb">+</span><span class="c">Tree key                    B</span><span class="nb">+</span><span class="c">Tree value</span>
+<span class="nb">+----------------+---------------+</span><span class="c">      </span><span class="nb">+--------------+</span><span class="c"></span>
+<span class="c">| Indexed Values | Record Handle |  </span><span class="nb">-</span><span class="nv">&gt;</span><span class="c">  |   not used   |</span>
+<span class="nb">+----------------+---------------+</span><span class="c">      </span><span class="nb">+--------------+</span><span class="c"></span>
 </code></pre></div>
-
 
 <h2 id="unique-index">Unique index</h2>
 <p>인덱스된 값이 모두 <code>NULL</code>이라면, 복합 B+Tree 키는 <code>{nil, record handle}</code>이고 B+Tree 값은 사용하지 않습니다.</p>
 <blockquote>
 <p>If the indexed values are all NULL then the composite B+Tree key is <code>{nil, record handle}</code> and the B+Tree value is not used.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">        B+Tree key                B+Tree value</span>
-<span class="err">+------+-----------------+      +--------------+</span>
-<span class="err">| NULL |  Record Handle  |  -&gt;  |   not used   |</span>
-<span class="err">+------+-----------------+      +--------------+</span>
+<div class="codehilite"><pre><span></span><code><span class="c">        B</span><span class="nb">+</span><span class="c">Tree key                B</span><span class="nb">+</span><span class="c">Tree value</span>
+<span class="nb">+------+-----------------+</span><span class="c">      </span><span class="nb">+--------------+</span><span class="c"></span>
+<span class="c">| NULL |  Record Handle  |  </span><span class="nb">-</span><span class="nv">&gt;</span><span class="c">  |   not used   |</span>
+<span class="nb">+------+-----------------+</span><span class="c">      </span><span class="nb">+--------------+</span><span class="c"></span>
 </code></pre></div>
-
 
 <p>인덱스된 값이 모두 <code>NULL</code>이라면, B+Tree 키에 대한 키가 인덕싱된 값이고, B+Tree 값은 레코드 handle 입니다.</p>
 <blockquote>
 <p>If the indexed values are not all NULL then key of the B+Tree key are the indexed values and the B+Tree value is the record handle.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">    B+Tree key                B+Tree value</span>
-<span class="err">+----------------+      +---------------+</span>
-<span class="err">| Indexed Values |  -&gt;  | Record Handle |</span>
-<span class="err">+----------------+      +---------------+</span>
+<div class="codehilite"><pre><span></span><code><span class="c">    B</span><span class="nb">+</span><span class="c">Tree key                B</span><span class="nb">+</span><span class="c">Tree value</span>
+<span class="nb">+----------------+</span><span class="c">      </span><span class="nb">+---------------+</span><span class="c"></span>
+<span class="c">| Indexed Values |  </span><span class="nb">-</span><span class="nv">&gt;</span><span class="c">  | Record Handle |</span>
+<span class="nb">+----------------+</span><span class="c">      </span><span class="nb">+---------------+</span><span class="c"></span>
 </code></pre></div>
-
 
 <h2 id="non-scalar-types">Non scalar types</h2>
 <p><a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a>에 대한 scalar 타입은 <code>bool</code>, <code>complex*</code>, <code>float*</code>, <code>int*</code>, <code>uint*</code>, <code>string</code>, <code>[]byte</code> 타입입니다. 모든 다른 타입은 <code>blob-like</code> 입니다.</p>
 <blockquote>
 <p>Scalar types of <a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a> are <code>bool</code>, <code>complex*</code>, <code>float*</code>, <code>int*</code>, <code>uint*</code>, <code>string</code> and <code>[]byte</code> types. All other types are &ldquo;blob-like&rdquo;.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">QL type         Go type</span>
-<span class="err">-----------------------------</span>
-<span class="err">blob            []byte</span>
-<span class="err">bigint          big.Int</span>
-<span class="err">bigrat          big.Rat</span>
-<span class="err">time            time.Time</span>
-<span class="err">duration        time.Duration</span>
+<div class="codehilite"><pre><span></span><code><span class="n">QL</span><span class="w"> </span><span class="n">type</span><span class="w">         </span><span class="k">Go</span><span class="w"> </span><span class="n">type</span><span class="w"></span>
+<span class="o">-----------------------------</span><span class="w"></span>
+<span class="k">blob</span><span class="w">            </span><span class="err">[]</span><span class="n">byte</span><span class="w"></span>
+<span class="nc">bigint</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="nc">Int</span><span class="w"></span>
+<span class="n">bigrat</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="n">Rat</span><span class="w"></span>
+<span class="nc">time</span><span class="w">            </span><span class="nc">time</span><span class="p">.</span><span class="nc">Time</span><span class="w"></span>
+<span class="n">duration</span><span class="w">        </span><span class="nc">time</span><span class="p">.</span><span class="n">Duration</span><span class="w"></span>
 </code></pre></div>
-
 
 <p>메모리 백엔드는 Go 타입으로 직접 저장합니다. 파일 백엔드는 lldb가 기본적으로 지원하는 유형이 더 적기에 (태그가 붙은) <code>[]byte</code>를 이용하여 위 모든 내용을 인코딩 해야합니다. <code>Blob-like</code>한 타입의 <code>NULL</code> 값은 <code>nil</code> (<code>lldb/db.go</code>안의 <code>gbNull</code>)으로 인코딩 됩니다. 이미 존재하는 QL 타입과 완전히 동일합니다.</p>
 <blockquote>
@@ -515,45 +498,40 @@ Colums can be added to a table</p>
 <blockquote>
 <p>The values of the blob-like types are first encoded into a <code>[]byte</code> slice:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">+-----------------------+-------------------+</span>
-<span class="err">| blob                  | raw               |</span>
-<span class="err">| bigint, bigrat, time  | gob encoded       |</span>
-<span class="err">| duration              | gob encoded int64 |</span>
-<span class="err">+-----------------------+-------------------+</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">+-----------------------+-------------------+</span><span class="c"></span>
+<span class="c">| blob                  | raw               |</span>
+<span class="c">| bigint</span><span class="nt">,</span><span class="c"> bigrat</span><span class="nt">,</span><span class="c"> time  | gob encoded       |</span>
+<span class="c">| duration              | gob encoded int64 |</span>
+<span class="nb">+-----------------------+-------------------+</span><span class="c"></span>
 </code></pre></div>
-
 
 <p><code>gob</code> 인코딩은 <code>blob-like</code>한 타입에 대한 모든 초기 인코딩과 관련하여 <strong>차별됩니다</strong>. 다른 말로, <code>gob</code> 인코딩이 반드시 써야되는 초기 타입 디스크립터는 제거되고 정직하게 디코딩될때 <strong>재 공급</strong>됩니다. (참조, <a href="https://github.com/cznic/ql/blob/v1.1.0/blob.go"><code>blob.go</code></a>). 결과로 나온 슬라이스 길이가 <code>&lt;= shortBolob</code> 인 경우, 첫번째이자 유일한 청크는 다음과 같은 스칼라 인코딩입니다:</p>
 <blockquote>
 <p>The gob encoding is &ldquo;differential&rdquo; wrt an initial encoding of all of the blob-like type. IOW, the initial type descriptors which gob encoding must write out are stripped off and &ldquo;resupplied&rdquo; on decoding transparently. See also blob.go. If the length of the resulting slice is <code>&lt;= shortBlob</code>, the first and only chunk is the scalar encoding of</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">[]interface{}{typeTag, slice}.                  // initial (and last) chunk</span>
+<div class="codehilite"><pre><span></span><code>[]interface{}{typeTag, slice}.                  // initial (and last) chunk
 </code></pre></div>
-
 
 <p>슬라이스 길이가 <code>0</code>일 수도 있습니다 (<code>blob("")</code>인 경우). 결과로 나온 슬라이스 길이가 길다면 (<code>&gt; shortBlob</code>), 첫 번째 청크는 인코딩에서 옵니다:</p>
 <blockquote>
 <p>The length of slice can be zero (for blob(&ldquo;&rdquo;)). If the resulting slice is long (<code>&gt; shortBlob</code>), the first chunk comes from encoding</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk</span>
+<div class="codehilite"><pre><span></span><code>[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk
 </code></pre></div>
-
 
 <p>이 경우 <code>len(firstPart) &lt;= shortBlob</code>입니다. 두번째와 다른 청크입니다. 만약 마지막 청크면 <code>src</code>는 다음과 같습니다.</p>
 <blockquote>
 <p>In this case <code>len(firstPart) &lt;= shortBlob</code>. Second and other chunks: If the chunk is the last one, src is</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">[]interface{lastPart}.                          // overflow chunk (last)</span>
+<div class="codehilite"><pre><span></span><code>[]interface{lastPart}.                          // overflow chunk (last)
 </code></pre></div>
-
 
 <p>이 경우 <code>len(lastPart) &lt;= 64kB</code>입니다. 마지막 청크가 아닌 경우, <code>src</code>는 다음과 같습니다.</p>
 <blockquote>
 <p>In this case <code>len(lastPart) &lt;= 64kB</code>. If the chunk is not the last one, src is</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">[]interface{}{nextHandle, part}.                // overflow chunk (not last)</span>
+<div class="codehilite"><pre><span></span><code>[]interface{}{nextHandle, part}.                // overflow chunk (not last)
 </code></pre></div>
-
 
 <p>이 경우는 <code>len(part) == 64kB</code> 입니다.</p>
 <blockquote>
@@ -564,11 +542,10 @@ Colums can be added to a table</p>
 <blockquote>
 <p>Referenced from above:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">[0]: http://godoc.org/github.com/cznic/lldb#hdr-Block_handles</span>
-<span class="err">[1]: http://godoc.org/github.com/cznic/lldb#EncodeScalars</span>
-<span class="err">[2]: http://godoc.org/github.com/cznic/lldb#BTree</span>
+<div class="codehilite"><pre><span></span><code>[0]: http://godoc.org/github.com/cznic/lldb#hdr-Block_handles
+[1]: http://godoc.org/github.com/cznic/lldb#EncodeScalars
+[2]: http://godoc.org/github.com/cznic/lldb#BTree
 </code></pre></div>
-
 
 <h2 id="rationale">Rationale</h2>
 <p>이 노트는 QL 소스를 보든 사람에게 유용 할 수 있지만, 특별히 의도된 독자는 미래의 나 자신입니다.</p>

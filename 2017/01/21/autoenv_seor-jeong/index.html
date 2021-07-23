@@ -123,18 +123,17 @@
 셸에도 넣어주자. <code>zsh</code> 를 사용하니 <code>~/.zshrc</code> 에 <code>source $(brew --prefix autoenv)/activate.sh</code> 를 넣어두게 되면 쉽다.</p>
 <h2 id="_1">설정</h2>
 <p>블로그를 <code>pelican</code> 으로 구성해서 작성하다보니 <code>pyenv</code>, <code>venv</code> 설정해서 패키지 설치 파일이 필요해서 구성했다.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">ujuc</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
+<div class="codehilite"><pre><span></span><code># ujuc.github.io
 
-<span class="k">source</span> <span class="p">..</span><span class="o">/</span><span class="n">env</span><span class="o">/</span><span class="n">blog</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
+source ../env/blog/bin/activate
 </code></pre></div>
 
-
 <p>다 좋은데 다른 폴더로 가거나 다른 프로젝트로 갔을때&hellip; 문제가 생길 수 있어서 끄는 방법을 찾았다. 상위 폴더에 다음 <code>.evn</code>를 만들어서 넣어주면 된다. 개발하면서 자주가는 곳에다가는 꼭 박아두자. (<a href="https://github.com/kennethreitz/autoenv/issues/30#issuecomment-26832177">원문</a>)</p>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="p">.</span><span class="n">env</span>
+<div class="codehilite"><pre><span></span><code># .<span class="nv">env</span>
 
-<span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">n</span> <span class="ss">&quot;$VIRTUAL_ENV&quot;</span> <span class="p">]</span> <span class="p">;</span> <span class="k">then</span>
-    <span class="n">deactivate</span>
-<span class="n">fi</span>
+<span class="k">if</span> [ <span class="o">-</span><span class="nv">n</span> <span class="s2">&quot;</span><span class="s">$VIRTUAL_ENV</span><span class="s2">&quot;</span> ] <span class="c1">; then</span>
+    <span class="nv">deactivate</span>
+<span class="nv">fi</span>
 </code></pre></div></div>
         <div class="text-center"><i class="bi bi-tsunami"></i></div>
 

@@ -158,7 +158,6 @@
 $ ip link <span class="nb">set</span> <span class="nv">$dev</span> down
 </code></pre></div>
 
-
 <ul>
 <li>고정 아이피 설정 <em>/etc/netplan/a.yaml</em></li>
 </ul>
@@ -171,7 +170,6 @@ $ ip link <span class="nb">set</span> <span class="nv">$dev</span> down
                 <span class="o">-</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">10.2</span><span class="o">/</span><span class="mi">24</span>
             <span class="n">dhcp4</span><span class="o">:</span> <span class="n">no</span>
 </code></pre></div>
-
 
 <h3 id="netplan_2">Netplan을 사용하고 싶지 않을 경우</h3>
 <p>Ubuntu 서버 설치 이미지로 부팅시 grub (<code>e</code> 버튼을 클릭해서 수정하거나, F6을 눌러 bootspash로 들어가서)에서 preseeding 설정으로 <code>netcfg/do_not_use_netplan=true</code> 명령을 추가해줍니다.</p>

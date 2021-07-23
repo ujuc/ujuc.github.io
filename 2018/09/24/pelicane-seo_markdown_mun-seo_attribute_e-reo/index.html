@@ -122,7 +122,6 @@ ERROR: Could not process blog/2014-02-23-pylint.md
   <span class="p">|</span> AttributeError: <span class="s1">&#39;Registry&#39;</span> object has no attribute <span class="s1">&#39;keys&#39;</span>
 </code></pre></div>
 
-
 <p>git으로 버전을 관리하고 있어 해당 변경점을 확인하였더니 확인했더니 Markdown 라이브러리 문제다. 그것도 메이저로 업그레이드되면서 무언가가 변경이 되었고, 그게 Pelican 에서 사용하는 어떤 키와 잘못 설정된 부분이 있어서 발생한 것으로 파악된다.</p>
 <p>나는 pipenv 를 사용하니 <code>Pipfile</code> 에서 <code>Markdown</code> 라이브러리 버전을 다음과 같이 수정을 하였다.</p>
 <div class="codehilite"><pre><span></span><code>[packages]

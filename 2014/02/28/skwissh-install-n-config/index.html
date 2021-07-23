@@ -142,12 +142,10 @@
 <div class="codehilite"><pre><span></span><code>$ sudo apt-get install python-pip
 </code></pre></div>
 
-
 <h3 id="_2">패키지 설치</h3>
 <h4 id="django">Django 설치</h4>
 <div class="codehilite"><pre><span></span><code>$ sudo pip isntall Django
 </code></pre></div>
-
 
 <h4 id="django-skwissh">Django-skwissh 설치</h4>
 <div class="codehilite"><pre><span></span><code>$ sudo apt-get install buid-essential python-dev
@@ -155,7 +153,6 @@ $ git clone https://github.com/rsaikali/django-skwissh.git
 $ <span class="nb">cd</span> django-skwissh
 $ sudo python setup.py install
 </code></pre></div>
-
 
 <h3 id="django_1">Django 설정</h3>
 <div class="codehilite"><pre><span></span><code>$ django-admin.py startproject mysite
@@ -173,13 +170,11 @@ $ vi mysite/urls.py
 url<span class="o">(</span><span class="s1">&#39;skwissh&#39;</span>, include<span class="o">(</span><span class="s1">&#39;skwissh.urls&#39;</span><span class="o">))</span>,
 </code></pre></div>
 
-
 <ul>
 <li>데이터 베이스 설정</li>
 </ul>
 <div class="codehilite"><pre><span></span><code>$ python manage.p syncdb
 </code></pre></div>
-
 
 <ul>
 <li>Skwissh 테스트 설치</li>
@@ -190,13 +185,11 @@ url<span class="o">(</span><span class="s1">&#39;skwissh&#39;</span>, include<sp
 $ crontab -l
 </code></pre></div>
 
-
 <ul>
 <li>Django 서버 작동</li>
 </ul>
 <div class="codehilite"><pre><span></span><code>$ python mange.py runserver <span class="m">0</span>.0.0.0:8000
 </code></pre></div>
-
 
 <h2 id="_3">참고 페이지</h2>
 <ul>

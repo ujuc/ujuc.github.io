@@ -42,7 +42,6 @@
 &lt;span class="nn"&gt;...&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;보면 알겠지만 분명 version 3버전인데 &lt;code&gt;&amp;amp;&lt;/code&gt;, &lt;code&gt;*&lt;/code&gt; 를 이용해서 이미지와 환경설정 구문을 반복해서 사용할 수 있도록 구성해놓은 것으로 판단되고 있다.&lt;br&gt;
 그래서 문서를 찾다보니 맨밑에&amp;hellip; &lt;code&gt;Extension fields&lt;/code&gt; 라고 되어있는 부분이 존재한다. 문서를 끝까지 안봐서 몰랐던듯.&lt;/p&gt;
 &lt;p&gt;뭔가 써봤으면 알것는데. 이번기회에 정리하고 사용해봐야할듯. 메뉴얼 문서 번역이 될듯함.&lt;/p&gt;
@@ -77,7 +76,6 @@
     &lt;span class="nt"&gt;logging&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nv"&gt;*default-logging&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;YAML 머지 형식을 이용하여 원하는 값을 추가할 수 있습니다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;3.9&amp;quot;&lt;/span&gt;
 &lt;span class="nt"&gt;x-volumes&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -103,7 +101,6 @@ error: gpg tailed to sign the data
 fatal: failed to wrtie commit object
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;gpg키로 commit을 할때마다 비밀번호를 물어야되는데&amp;hellip;&lt;br&gt;
 우리 macOS에서는 비밀번호를 처음에 묻고 keychain에 저장을 해놓으시고 커밋할때마다 자동으로 입력한다.&lt;/p&gt;
 &lt;p&gt;그게 문제가 되었다. 오랜만에 재시작을 하면서 섹션 만료가 되었고, 바꼈으면 물어야지&amp;hellip;&lt;br&gt;
@@ -114,7 +111,6 @@ fatal: failed to wrtie commit object
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;pinentry-program /usr/local/bin/pinentry-mac&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.gnupg/gpg-agent.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;작동하는지 테스트&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; gpg --clearsign
 -----BEGIN PGP SIGNED MESSAGE-----
@@ -123,7 +119,6 @@ Hash: SHA256
 &lt;span class="nb"&gt;test&lt;/span&gt;
 -----BEGIN PGP SIGNATURE-----
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;그리고 블로그 쓸려고 확인중 이 문제를 겪었을때 대응 할 수 있다는 다른 방법!&lt;/p&gt;
 &lt;h4 id="1-keychain-access"&gt;1. Keychain Access에서 수정&lt;/h4&gt;
@@ -137,7 +132,6 @@ Hash: SHA256
 
 $ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer &lt;span class="p"&gt;|&lt;/span&gt; bash
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;이번 수정하면서, 확인하니 이분들이 &lt;code&gt;pyenv.run&lt;/code&gt; 도메인을 구매하셨나보다. 스크립트가 변경되었다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ curl https://pyenv.run &lt;span class="p"&gt;|&lt;/span&gt; bash
@@ -172,12 +166,10 @@ $ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installe
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker save -o &amp;lt;path &lt;span class="k"&gt;for&lt;/span&gt; generated tar file&amp;gt; &amp;lt;imange name&amp;gt;:&amp;lt;tag&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;만들어진 tar 파일을 원하는 곳에 업로드 시킨다.&lt;/p&gt;
 &lt;p&gt;이제 올린 노드에서 사용할 수 있도록 이미지를 docker에 등록해주면 끝.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker load -i &amp;lt;path to image tar file&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3 id="_1"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
@@ -191,9 +183,8 @@ Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. &lt;code
 Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능하다. -20 ~ +19 까지의 값을 가지고 있으며, -20값이 우선순위가 가장 높은 값이고 양수로 올라갈수록 낮은 값이다. 0은 &lt;code&gt;PR&lt;/code&gt; 값과 동일한 설정을 나타낸다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="rriority"&gt;Rriority 계산&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;PR = 20 + (-20 ~ +19)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PR = 20 + (-20 ~ +19)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;해당 계산식을 이용하면 0 ~ 39 사이의 값이 되는데 이것은 Priority 값의 100 ~ 139 사이 값에 대응된다.&lt;/p&gt;
 &lt;h2 id="rriority_1"&gt;Rriority&lt;/h2&gt;
@@ -242,9 +233,8 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;ul&gt;
 &lt;li&gt;특정 사용자에 대한 모든 프로세스에대한 값을 정할때 사용한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Username    hard/soft    priority    10&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Username    hard/soft    priority    10
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;다음 링크에서 자세하게 확인하도록 하자.&lt;/p&gt;
 &lt;ul&gt;
@@ -323,7 +313,6 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;작성된 템플릿을 이용해서 분석해보자.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;template(parameters) { list-descriptions }&lt;/code&gt;&lt;ul&gt;
@@ -365,11 +354,10 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set $!usr!tpl2!msg = $msg;&lt;/span&gt;
-&lt;span class="err"&gt;set $!usr!tpl2!dataflow = field($msg, 58, 2);&lt;/span&gt;
-&lt;span class="err"&gt;template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=&amp;quot;$!usr!tpl2&amp;quot;)&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;set $!usr!tpl2!msg = $msg;
+set $!usr!tpl2!dataflow = field($msg, 58, 2);
+template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=&amp;quot;$!usr!tpl2&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#string"&gt;&lt;code&gt;string&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
@@ -378,11 +366,10 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;template(name=&amp;quot;tpl3&amp;quot; type=&amp;quot;string&amp;quot;&lt;/span&gt;
-&lt;span class="err"&gt;         string=&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;&lt;/span&gt;
-&lt;span class="err"&gt;        )&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;template&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;tpl3&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;string&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+         &lt;span class="nv"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+        &lt;span class="ss"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#plugin"&gt;&lt;code&gt;plugin&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
@@ -404,26 +391,23 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;이렇게 작성하면,&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{&lt;/span&gt;
-&lt;span class="err"&gt;  &amp;quot;@timestamp&amp;quot;: &amp;quot;2018-03-01T01:00:00+00:00&amp;quot;,&lt;/span&gt;
-&lt;span class="err"&gt;  &amp;quot;host&amp;quot;: &amp;quot;172.20.245.8&amp;quot;,&lt;/span&gt;
-&lt;span class="err"&gt;  &amp;quot;severity&amp;quot;: &amp;quot;DEBUG&amp;quot;,&lt;/span&gt;
-&lt;span class="err"&gt;  &amp;quot;facility&amp;quot;: &amp;quot;local4&amp;quot;,&lt;/span&gt;
-&lt;span class="err"&gt;  &amp;quot;syslog-tag&amp;quot;: &amp;quot;tag&amp;quot;,&lt;/span&gt;
-&lt;span class="err"&gt;  &amp;quot;source&amp;quot;: &amp;quot;tag&amp;quot;,&lt;/span&gt;
-&lt;span class="err"&gt;  &amp;quot;message&amp;quot;: &amp;quot; msgnum:00000000:&amp;quot;&lt;/span&gt;
-&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;@timestamp&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;2018-03-01T01:00:00+00:00&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;172.20.245.8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;severity&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;DEBUG&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;facility&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;local4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslog-tag&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;tag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;source&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;tag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot; msgnum:00000000:&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="err"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3 id="legacy-format"&gt;Legacy Format&lt;/h3&gt;
 &lt;p&gt;6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을 권고하고있다.&lt;/p&gt;
 &lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;$template FileFormat,&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="nv"&gt;template&lt;/span&gt; &lt;span class="nv"&gt;FileFormat&lt;/span&gt;,&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;작성 요령은 &lt;code&gt;$template&lt;/code&gt; 변수, &lt;code&gt;template 이름&lt;/code&gt;, &lt;code&gt;"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"&lt;/code&gt;. 필요한 내용들을 작성하면된다.&lt;/p&gt;
 &lt;ul&gt;
@@ -449,7 +433,6 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 
 &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="n"&gt;template&lt;/span&gt; &lt;span class="n"&gt;DynFile&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h2 id="_2"&gt;결.&lt;/h2&gt;
 &lt;p&gt;Rsyslog는 지금 리눅스에서 기본적으로 사용되는 System logging 프로그램이다. 그렇기에 사용하기가 쉽고 쉽게 다가갈 수 있다.&lt;br&gt;
@@ -498,7 +481,6 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt;/span&gt; down
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;ul&gt;
 &lt;li&gt;고정 아이피 설정 &lt;em&gt;/etc/netplan/a.yaml&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -511,7 +493,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
                 &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mf"&gt;10.10&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;10.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;
             &lt;span class="n"&gt;dhcp4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3 id="netplan_2"&gt;Netplan을 사용하고 싶지 않을 경우&lt;/h3&gt;
 &lt;p&gt;Ubuntu 서버 설치 이미지로 부팅시 grub (&lt;code&gt;e&lt;/code&gt; 버튼을 클릭해서 수정하거나, F6을 눌러 bootspash로 들어가서)에서 preseeding 설정으로 &lt;code&gt;netcfg/do_not_use_netplan=true&lt;/code&gt; 명령을 추가해줍니다.&lt;/p&gt;
@@ -541,7 +522,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;h2 id="virt-manager"&gt;virt-manager 설치&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt install -y kvm virt-manager
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;ul&gt;
 &lt;li&gt;virt-manager 설치 후에 VM을 생성한다.&lt;/li&gt;
@@ -582,7 +562,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ openstack image create --disk-format qcow2 --file windows.qcow2 windows
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h2 id="_3"&gt;참고&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;http://gotocloud.co.kr/?p=1575&lt;/li&gt;
@@ -612,7 +591,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yacron -c my-crontab.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;&lt;code&gt;-c&lt;/code&gt;를 사용해서 구성파일이 있는 곳을 가리킨다.&lt;/p&gt;
 &lt;h3 id="_4"&gt;기본 구성&lt;/h3&gt;
 &lt;ul&gt;
@@ -624,7 +602,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
     &lt;span class="nt"&gt;shell&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;/bin/bash&lt;/span&gt;
     &lt;span class="nt"&gt;schedule&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;*/5&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;*&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;*&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;*&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;*&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;ul&gt;
 &lt;li&gt;특정일 (2017/7/19)에만 5분마다 &lt;code&gt;echo "foobar"&lt;/code&gt;를 실행하는 job.&lt;/li&gt;
@@ -640,7 +617,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
       &lt;span class="nt"&gt;dayOfWeek&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;*&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;ul&gt;
 &lt;li&gt;특정 환경변수 값 설정&lt;/li&gt;
 &lt;/ul&gt;
@@ -653,7 +629,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
       &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;key&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;PATH&lt;/span&gt;
         &lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;/bin:/usr/bin&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3 id="_5"&gt;기본 값 지정&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;defaults&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -670,7 +645,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
     &lt;span class="nt"&gt;shell&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;/bin/sh&lt;/span&gt;
     &lt;span class="nt"&gt;schedule&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;*/5&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;*&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;*&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;*&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;*&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3 id="_6"&gt;리포트&lt;/h3&gt;
 &lt;ul&gt;
@@ -695,7 +669,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
         &lt;span class="nt"&gt;smtp_host&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;127.0.0.1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;&lt;code&gt;onFailure&lt;/code&gt; 부분이 job 실패시 작어하는 부분임.&lt;br&gt;
 &lt;code&gt;captureStderr: true&lt;/code&gt; 부분은 stderr로 출력되는 데이터를 잡겠다는거 반대로는 &lt;code&gt;captureStdout: true&lt;/code&gt; 가 있다.&lt;/p&gt;
 &lt;ul&gt;
@@ -713,7 +686,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
         &lt;span class="nt"&gt;to&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;example@bar.com&lt;/span&gt;
         &lt;span class="nt"&gt;smtp_host&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;127.0.0.1&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3 id="failure"&gt;failure 제어&lt;/h3&gt;
 &lt;ul&gt;
@@ -739,7 +711,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
   &lt;span class="nt"&gt;producesStderr&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
   &lt;span class="nt"&gt;nonzeroReturn&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;retry&lt;/code&gt;&lt;/li&gt;
@@ -780,7 +751,6 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 sudo dpkg -i linux-firmware_1.158_all.deb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;그리고 리붓해주면 손쉽게&amp;hellip; 설치가 가능하다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;참고: &lt;a href="http://packages.ubuntu.com/search?keywords=linux-firmware"&gt;Ubuntu package&lt;/a&gt;&lt;/li&gt;
@@ -800,7 +770,6 @@ sudo cp -r ath10k-firmware/QCA9377 /lib/firmware/ath10k/
 sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;그리고 하나더&amp;hellip;&lt;/p&gt;
 &lt;p&gt;이건 위에껄 하고 안되면 추가해주도록 하자.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; blacklist ideapad_laptop &lt;span class="p"&gt;|&lt;/span&gt; sudo tee /etc/modprobe.d/blacklist.conf
@@ -810,71 +779,59 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install glances
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;항상 사용하던건 &lt;code&gt;apt-get&lt;/code&gt; 명령어로 설치를 하는거였는데 4글자 줄엇다!&lt;br&gt;
 &lt;code&gt;sudo aptitude install&lt;/code&gt; 로도 가능하다만&amp;hellip; 이렇게 하는 사람들 잘못봤다.&lt;/p&gt;
 &lt;h2 id="2"&gt;2. 패키지가 설치된 위치 확인&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt content glances
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;대응되는 명령어는 &lt;code&gt;dpkg -L&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="3"&gt;3. 패키지 디펜던시 확인&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt depends glances
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;대응되는 명령어가 &lt;code&gt;apt-get check&lt;/code&gt;, &lt;code&gt;dpkg -C&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="4"&gt;4. 패키지 찾기&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt search openstack
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;대응되는 명령어는 &lt;code&gt;apt-cache search&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="5"&gt;5. 패키지 정보 확인&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt show firefox
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;대응되는 명령어 &lt;code&gt;apt-cache show&lt;/code&gt;, &lt;code&gt;dpkg -p&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id="6"&gt;6. 깨진 디펜던시가 있는지 확인&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt check firefox
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;이거와 대응되는게 있는지 잘모르겠다.&lt;/p&gt;
 &lt;h2 id="7"&gt;7. 제공된 패키지에서 빠진 패키지에 대한 목록 보여주기&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt recommends apache2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h2 id="8"&gt;8. 패키지 버전 체크&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt version firefox
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h2 id="9"&gt;9. 시스템 패키지 업데이트&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt update
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get update&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="10"&gt;10. 시스템 업그레이드&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get upgrade&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="11"&gt;11. 커널 버전까지 시스템 업그레이드&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt full-upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get dist-upgrade&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="12"&gt;12. 사용하지 않는 페키지 삭제&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt autoremove
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get autoremove&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="13"&gt;13. 다운로드된 페키지에서 오래된 저장소 삭제&lt;/h2&gt;
@@ -882,24 +839,20 @@ sudo cp /lib/firmware/ath10k/QCA9377/hw1.0/firmware-5.bin_WLAN.TF.1.0-00267-1 /l
 sudo apt clean
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get clean&lt;/code&gt;, &lt;code&gt;apt-get autoclean&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="14"&gt;14. 패키지 구성파일까지 삭제&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt purge glance
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-purge&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="15-deb-160502"&gt;15. deb 패키지 설치 (작동이 안된다&amp;hellip; -160502)&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt deb atom-amd64.deb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;대응되는건 &lt;code&gt;dpkg&lt;/code&gt; 에서 찾으면될듯..&lt;/p&gt;
 &lt;h2 id="16"&gt;16. 사용법은&lt;/h2&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt &lt;span class="nb"&gt;help&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;&lt;code&gt;apt&lt;/code&gt; 사용법을 찾아서 작업하면 될것으로 보여짐.&lt;/p&gt;
 &lt;h2 id="_1"&gt;맺음&lt;/h2&gt;
@@ -920,12 +873,10 @@ sudo apt clean
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo unattended-upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도 있다.&lt;/p&gt;
 &lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를 하면된다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo unattended-upgrade --dry-run
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;왠만해서는 &lt;code&gt;--dry-run&lt;/code&gt; 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는 않지&amp;hellip;&lt;/p&gt;
 &lt;p&gt;단점은 아직 1.0이 아니다. 그래서 그런지 외부로 출력되는게 없고, 전부 log파일로만 나온다&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="ubuntu"></category><category term="manage"></category><category term="upgrade"></category><category term="security"></category><category term="command"></category></entry><entry><title>mysql 복제 오류</title><link href="https://ujuc.github.io/2016/01/28/mysql-%EB%B3%B5%EC%A0%9C-%EC%98%A4%EB%A5%98/" rel="alternate"></link><published>2016-01-28T01:10:00+09:00</published><updated>2016-01-28T01:10:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-28:/2016/01/28/mysql-복제-오류/</id><summary type="html">&lt;p&gt;오랜만에 RDS를 확인하러 들어갔더니&amp;hellip; error 이벤트가&amp;hellip; 딱!&lt;/p&gt;</summary><content type="html">&lt;p&gt;오랜만에 설정할 일이 있어서 RDS로 접속했더니&amp;hellip; RDS 인스턴스에서 error 이벤트가&lt;br&gt;
@@ -978,12 +929,10 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ which go
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;&lt;img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;요놈을 안나오게 해보자.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ which go &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt; /dev/null
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;&lt;img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;오~~~&lt;/p&gt;
@@ -991,12 +940,10 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ which rbenv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;&lt;img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을 사용하면&amp;hellip;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ which rbenv &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt; /dev/null
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;&lt;img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;음&amp;hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸 막으라했더니&amp;hellip;&lt;/p&gt;
@@ -1008,13 +955,11 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;음?? 암것도 안나온다&amp;hellip;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;256&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;출력값이 256이라니&amp;hellip; 혹시나 해서 봤더니 8bit밀란다. 저걸 밀면 1이 떨어지는데&amp;hellip;&lt;br&gt;
 리눅스에서 반환값이 1이면 비정상 종료일때로 알고 있다. 고로니 저넘은 제대로&lt;br&gt;
@@ -1049,12 +994,10 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt-get install python-pip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h3 id="_2"&gt;패키지 설치&lt;/h3&gt;
 &lt;h4 id="django"&gt;Django 설치&lt;/h4&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo pip isntall Django
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h4 id="django-skwissh"&gt;Django-skwissh 설치&lt;/h4&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt-get install buid-essential python-dev
@@ -1062,7 +1005,6 @@ $ git clone https://github.com/rsaikali/django-skwissh.git
 $ &lt;span class="nb"&gt;cd&lt;/span&gt; django-skwissh
 $ sudo python setup.py install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3 id="django_1"&gt;Django 설정&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ django-admin.py startproject mysite
@@ -1080,13 +1022,11 @@ $ vi mysite/urls.py
 url&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh&amp;#39;&lt;/span&gt;, include&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh.urls&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;,
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;ul&gt;
 &lt;li&gt;데이터 베이스 설정&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ python manage.p syncdb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;ul&gt;
 &lt;li&gt;Skwissh 테스트 설치&lt;/li&gt;
@@ -1097,13 +1037,11 @@ url&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh&a
 $ crontab -l
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;ul&gt;
 &lt;li&gt;Django 서버 작동&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ python mange.py runserver &lt;span class="m"&gt;0&lt;/span&gt;.0.0.0:8000
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h2 id="_3"&gt;참고 페이지&lt;/h2&gt;
 &lt;ul&gt;
@@ -1112,11 +1050,10 @@ $ crontab -l
 &lt;/ul&gt;</content><category term="Operation"></category><category term="python"></category><category term="monitoring"></category><category term="ssh"></category><category term="django"></category></entry><entry><title>Screen 명령어를 통해서 Serial 통신</title><link href="https://ujuc.github.io/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/" rel="alternate"></link><published>2013-01-09T11:39:40+09:00</published><updated>2018-03-11T11:39:40+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-01-09:/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/</id><summary type="html">&lt;p&gt;screen으로 serial 통신을 하는 프로그램으로 사용하자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이 발생하여…&lt;/p&gt;
 &lt;p&gt;여기 저기 찾다가. &lt;code&gt;Screen&lt;/code&gt;을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. &lt;code&gt;minicom&lt;/code&gt;도 필요없다.&lt;/p&gt;
 &lt;p&gt;명령어 사용법 : &lt;code&gt;screen ‘디바이스 위치’ ‘전송속도’&lt;/code&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;# Mac&lt;/span&gt;
-&lt;span class="err"&gt;screen /dev/tty.XXX 115200&lt;/span&gt;
-&lt;span class="err"&gt;# Linux&lt;/span&gt;
-&lt;span class="err"&gt;screen /dev/ttyXXX 115200&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# Mac
+screen /dev/tty.XXX 115200
+# Linux
+screen /dev/ttyXXX 115200
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;종료할때는 &lt;Crtl&gt;+&lt;A&gt; &amp;lt;Crtl+&amp;lt;&gt;로 종료할 수 있다.&lt;/p&gt;</content><category term="Operation"></category><category term="screen"></category><category term="serial"></category></entry></feed>

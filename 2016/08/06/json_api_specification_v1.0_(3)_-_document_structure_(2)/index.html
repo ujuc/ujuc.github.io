@@ -198,33 +198,31 @@
 <blockquote>
 <p>For example, the following primary data is a single resource object:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">{</span>
-<span class="err"> &quot;data&quot;: {</span>
-<span class="err">    &quot;type&quot;: &quot;articles&quot;,</span>
-<span class="err">    &quot;id&quot;: &quot;1&quot;,</span>
-<span class="err">    &quot;attributes&quot;: {</span>
-<span class="err">      // ... this article&#39;s attributes</span>
-<span class="err">    },</span>
-<span class="err">    &quot;relationships&quot;: {</span>
-<span class="err">      // ... this article&#39;s relationships</span>
-<span class="err">    }</span>
-<span class="err">  }</span>
-<span class="err">}</span>
+<div class="codehilite"><pre><span></span><code>{
+ &quot;data&quot;: {
+    &quot;type&quot;: &quot;articles&quot;,
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;attributes&quot;: {
+      // ... this article&#39;s attributes
+    },
+    &quot;relationships&quot;: {
+      // ... this article&#39;s relationships
+    }
+  }
+}
 </code></pre></div>
-
 
 <p>다음 일차 데이터는 동일한 리소스를 참조하는 단일 <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a>입니다:</p>
 <blockquote>
 <p>The following primary data is a single <a href="http://jsonapi.org/format/#document-resource-identifier-objects">resource identifier object</a> that references the same resource:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">{</span>
-<span class="err"> &quot;data&quot;: {</span>
-<span class="err">    &quot;type&quot;: &quot;articles&quot;,</span>
-<span class="err">    &quot;id&quot;: &quot;1&quot;</span>
-<span class="err">  }</span>
-<span class="err">}</span>
+<div class="codehilite"><pre><span></span><code>{
+ &quot;data&quot;: {
+    &quot;type&quot;: &quot;articles&quot;,
+    &quot;id&quot;: &quot;1&quot;
+  }
+}
 </code></pre></div>
-
 
 <p>리소스에 대한 논리 컬렉션은 아이템 하나만 있거나 비어있더라도 배열로 표현합니다. &lt;<strong>MUST</strong>&gt;</p>
 <blockquote>

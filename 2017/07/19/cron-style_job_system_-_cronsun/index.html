@@ -142,7 +142,6 @@
  <span class="p">[</span><span class="n">Send</span> <span class="n">Mail</span><span class="p">]</span><span class="o">&lt;--------------------+--------------------------+</span>
 </code></pre></div>
 
-
 <p>Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.<br>
 노드는 여러개를 사용할 수 있는 것인지&hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이 봐야될듯함.</p>
 <h2 id="_2">빌드</h2>
@@ -150,7 +149,6 @@
 <span class="nb">cd</span> <span class="nv">$GOPATH</span>/src/github.com/shunfei/cronsun
 sh build.sh
 </code></pre></div>
-
 
 <h2 id="_3">실행</h2>
 <ol>

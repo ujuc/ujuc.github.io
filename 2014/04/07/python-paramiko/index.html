@@ -133,7 +133,6 @@
 <span class="n">ssh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;ujuc&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;lol&#39;</span><span class="p">)</span>
 </code></pre></div>
 
-
 <h3 id="2-host-keys">2. Host Keys</h3>
 <ul>
 <li>첫 접근시 받아오는 Host Keys가 있다. 이것을 받아서 저장하던 날려먹던 상관은 하지 않지만 있어야지 접근이 가능하다.</li>
@@ -147,7 +146,6 @@
 <span class="n">ssh</span><span class="o">.</span><span class="n">set_missing_host_key_policy</span><span class="p">(</span><span class="n">paramiko</span><span class="o">.</span><span class="n">AutoAddPolicy</span><span class="p">())</span>
 <span class="n">ssh</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;ujuc&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;lol&#39;</span><span class="p">)</span>
 </code></pre></div>
-
 
 <ul>
 <li>물론 Public key를 이용해서 비밀번호 없이 접근이 가능하도록 할 수 있을듯 한데 그건 좀 확인이 필요할듯.</li>
@@ -163,7 +161,6 @@
 <span class="p">[</span><span class="s1">&#39;test</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span>
 </code></pre></div>
 
-
 <ul>
 <li>만약 <code>sudo</code>명령어가 필요한 경우,</li>
 </ul>
@@ -172,7 +169,6 @@
 <span class="n">stdin</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">stdout</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </code></pre></div>
-
 
 <ul>
 <li>위와 같이하여 작성을 하도록 한다.</li>

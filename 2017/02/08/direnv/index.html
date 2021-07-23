@@ -128,11 +128,9 @@ $ make install
 <span class="c1"># or symlink ./direnv into the $PATH</span>
 </code></pre></div>
 
-
 <h5 id="brew">brew</h5>
 <div class="codehilite"><pre><span></span><code>$ brew install direnv
 </code></pre></div>
-
 
 <ul>
 <li>리눅스 패키지도 있다고 하니 사용하는 것에 있는지 검색해보고 설치하도록 하자.</li>
@@ -142,30 +140,26 @@ $ make install
 <ul>
 <li><code>~/.bashrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">eval &quot;$(direnv hook bash)&quot;</span>
+<div class="codehilite"><pre><span></span><code>eval &quot;$(direnv hook bash)&quot;
 </code></pre></div>
-
 
 <ul>
 <li><code>~/.zshrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">eval &quot;$(direnv hook zsh)&quot;</span>
+<div class="codehilite"><pre><span></span><code>eval &quot;$(direnv hook zsh)&quot;
 </code></pre></div>
-
 
 <ul>
 <li><code>~/.config/fish/config.fish</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">eval (direnv hook fish)</span>
+<div class="codehilite"><pre><span></span><code>eval (direnv hook fish)
 </code></pre></div>
-
 
 <ul>
 <li><code>~/.cshrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">eval `direnv hook tcsh`</span>
+<div class="codehilite"><pre><span></span><code>eval `direnv hook tcsh`
 </code></pre></div>
-
 
 <p>다음으로는 다음과 같이 설정해주면 된다.</p>
 <div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">cd</span> <span class="n">playground</span>
@@ -182,7 +176,6 @@ $ make install
 <span class="o">$</span> <span class="n">echo</span> <span class="o">$</span><span class="p">{</span><span class="n">FOO</span><span class="p">}</span>
 <span class="n">foo</span>
 </code></pre></div>
-
 
 <p>사용법은 간단하다.</p>
 <p>그런데 이걸 쓰는 이유는 코드에 자동으로 생성하는 비번이나 아니면 Auth token 등을 넣으실껀데&hellip;<br>

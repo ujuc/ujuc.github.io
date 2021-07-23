@@ -140,7 +140,6 @@
     <span class="p">}</span>
 </code></pre></div>
 
-
 <p>작성된 템플릿을 이용해서 분석해보자.</p>
 <ul>
 <li><code>template(parameters) { list-descriptions }</code><ul>
@@ -182,11 +181,10 @@
 </ul>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">set $!usr!tpl2!msg = $msg;</span>
-<span class="err">set $!usr!tpl2!dataflow = field($msg, 58, 2);</span>
-<span class="err">template(name=&quot;tpl2&quot; type=&quot;subtree&quot; subtree=&quot;$!usr!tpl2&quot;)</span>
+<div class="codehilite"><pre><span></span><code>set $!usr!tpl2!msg = $msg;
+set $!usr!tpl2!dataflow = field($msg, 58, 2);
+template(name=&quot;tpl2&quot; type=&quot;subtree&quot; subtree=&quot;$!usr!tpl2&quot;)
 </code></pre></div>
-
 
 <ul>
 <li><a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#string"><code>string</code></a><ul>
@@ -195,11 +193,10 @@
 </ul>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">template(name=&quot;tpl3&quot; type=&quot;string&quot;</span>
-<span class="err">         string=&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
-<span class="err">        )</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">template</span><span class="ss">(</span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">tpl3</span><span class="s2">&quot;</span> <span class="nv">type</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">string</span><span class="s2">&quot;</span>
+         <span class="nv">string</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="ss">)</span>
 </code></pre></div>
-
 
 <ul>
 <li><a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#plugin"><code>plugin</code></a><ul>
@@ -221,26 +218,23 @@
 <span class="w"> </span><span class="err">}</span><span class="w"></span>
 </code></pre></div>
 
-
 <p>이렇게 작성하면,</p>
-<div class="codehilite"><pre><span></span><code><span class="err">{</span>
-<span class="err">  &quot;@timestamp&quot;: &quot;2018-03-01T01:00:00+00:00&quot;,</span>
-<span class="err">  &quot;host&quot;: &quot;172.20.245.8&quot;,</span>
-<span class="err">  &quot;severity&quot;: &quot;DEBUG&quot;,</span>
-<span class="err">  &quot;facility&quot;: &quot;local4&quot;,</span>
-<span class="err">  &quot;syslog-tag&quot;: &quot;tag&quot;,</span>
-<span class="err">  &quot;source&quot;: &quot;tag&quot;,</span>
-<span class="err">  &quot;message&quot;: &quot; msgnum:00000000:&quot;</span>
-<span class="err">}</span>
+<div class="codehilite"><pre><span></span><code><span class="err">{</span><span class="w"></span>
+<span class="w">  </span><span class="ss">&quot;@timestamp&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;2018-03-01T01:00:00+00:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="ss">&quot;host&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;172.20.245.8&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="ss">&quot;severity&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;DEBUG&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="ss">&quot;facility&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;local4&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="ss">&quot;syslog-tag&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;tag&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="ss">&quot;source&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;tag&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="ss">&quot;message&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot; msgnum:00000000:&quot;</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
 </code></pre></div>
-
 
 <h3 id="legacy-format">Legacy Format</h3>
 <p>6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을 권고하고있다.</p>
 <p>아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.</p>
-<div class="codehilite"><pre><span></span><code><span class="err">$template FileFormat,&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
+<div class="codehilite"><pre><span></span><code>$<span class="nv">template</span> <span class="nv">FileFormat</span>,<span class="s2">&quot;</span><span class="s">%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%</span><span class="se">\n</span><span class="s2">&quot;</span>
 </code></pre></div>
-
 
 <p>작성 요령은 <code>$template</code> 변수, <code>template 이름</code>, <code>"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"</code>. 필요한 내용들을 작성하면된다.</p>
 <ul>
@@ -266,7 +260,6 @@
 
 <span class="o">$</span><span class="n">template</span> <span class="n">DynFile</span><span class="p">,</span><span class="s2">&quot;/var/log/system-%HOSTNAME%.log&quot;</span>
 </code></pre></div>
-
 
 <h2 id="_2">결.</h2>
 <p>Rsyslog는 지금 리눅스에서 기본적으로 사용되는 System logging 프로그램이다. 그렇기에 사용하기가 쉽고 쉽게 다가갈 수 있다.<br>

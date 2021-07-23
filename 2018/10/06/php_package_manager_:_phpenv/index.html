@@ -129,11 +129,9 @@ $ <span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(phpenv init -)
 $ <span class="nb">exec</span> <span class="nv">$SHELL</span> -l
 </code></pre></div>
 
-
 <h4 id="phpenv-installer"><a href="https://github.com/phpenv/phpenv-installer">phpenv-installer</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash</span>
+<div class="codehilite"><pre><span></span><code>curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash
 </code></pre></div>
-
 
 <p>이걸 설치하면 <code>php-build/php-build</code>, <code>madumlao/phpenv-aliases</code>, <code>ngyuki/phpenv-composer</code>가 자동으로 설치된다.</p>
 <h3 id="php">PHP 설치</h3>
@@ -141,24 +139,22 @@ $ <span class="nb">exec</span> <span class="nv">$SHELL</span> -l
 $ phpenv install <span class="o">{</span>php_version<span class="o">}</span>
 </code></pre></div>
 
-
 <h3 id="php_1">PHP 설치시 에러</h3>
 <ul>
 <li>Mac os error <a href="https://qiita.com/maosanhioro/items/82698a8bdf6b7694ad36">해결 문서</a></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1">-----------------</span>
-<span class="o">|</span>  <span class="n">BUILD</span> <span class="n">ERROR</span>  <span class="o">|</span>
-<span class="c1">-----------------</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">-----------------</span><span class="c"></span>
+<span class="c">|  BUILD ERROR  |</span>
+<span class="nb">-----------------</span><span class="c"></span>
 
-<span class="n">Here</span> <span class="k">are</span> <span class="n">the</span> <span class="k">last</span> <span class="mi">10</span> <span class="n">lines</span> <span class="k">from</span> <span class="n">the</span> <span class="n">log</span><span class="p">:</span>
+<span class="c">Here are the last 10 lines from the log:</span>
 
-<span class="c1">-----------------------------------------</span>
-<span class="n">configure</span><span class="p">:</span> <span class="n">WARNING</span><span class="p">:</span> <span class="n">This</span> <span class="n">bison</span> <span class="k">version</span> <span class="k">is</span> <span class="k">not</span> <span class="n">supported</span> <span class="k">for</span> <span class="n">regeneration</span> <span class="k">of</span> <span class="n">the</span> <span class="n">Zend</span><span class="o">/</span><span class="n">PHP</span> <span class="n">parsers</span> <span class="p">(</span><span class="k">found</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span> <span class="k">min</span><span class="p">:</span> <span class="mi">204</span><span class="p">,</span> <span class="n">excluded</span><span class="p">:</span> <span class="p">).</span>
-<span class="n">configure</span><span class="p">:</span> <span class="n">WARNING</span><span class="p">:</span> <span class="n">You</span> <span class="n">will</span> <span class="n">need</span> <span class="n">re2c</span> <span class="mi">0</span><span class="p">.</span><span class="mi">13</span><span class="p">.</span><span class="mi">4</span> <span class="k">or</span> <span class="n">later</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="k">to</span> <span class="n">regenerate</span> <span class="n">PHP</span> <span class="n">parsers</span><span class="p">.</span>
-<span class="n">configure</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">OpenSSL</span><span class="err">&#39;</span><span class="n">s</span> <span class="o">&lt;</span><span class="n">evp</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span>
-<span class="c1">-----------------------------------------</span>
+<span class="nb">-----------------------------------------</span><span class="c"></span>
+<span class="c">configure: WARNING: This bison version is not supported for regeneration of the Zend/PHP parsers (found: 2</span><span class="nt">.</span><span class="c">3</span><span class="nt">,</span><span class="c"> min: 204</span><span class="nt">,</span><span class="c"> excluded: )</span><span class="nt">.</span><span class="c"></span>
+<span class="c">configure: WARNING: You will need re2c 0</span><span class="nt">.</span><span class="c">13</span><span class="nt">.</span><span class="c">4 or later if you want to regenerate PHP parsers</span><span class="nt">.</span><span class="c"></span>
+<span class="c">configure: error: Cannot find OpenSSL&#39;s </span><span class="nv">&lt;</span><span class="c">evp</span><span class="nt">.</span><span class="c">h</span><span class="nv">&gt;</span><span class="c"></span>
+<span class="nb">-----------------------------------------</span><span class="c"></span>
 </code></pre></div>
-
 
 <ul>
 <li>추가 설치 패키지</li>
@@ -174,17 +170,14 @@ $ phpenv install <span class="o">{</span>php_version<span class="o">}</span>
 <span class="n">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">mcrypt</span>
 </code></pre></div>
 
-
 <ul>
 <li><code>libz</code> error</li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="n">configure</span><span class="o">:</span> <span class="n">error</span><span class="o">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">libz</span>
 </code></pre></div>
 
-
-<div class="codehilite"><pre><span></span><code><span class="err">xcode-select --install</span>
+<div class="codehilite"><pre><span></span><code>xcode-select --install
 </code></pre></div>
-
 
 <p>모하비에서는 안된다.</p>
 <h2 id="_3">나오는 말</h2>

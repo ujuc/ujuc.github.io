@@ -164,24 +164,24 @@
 <blockquote>
 <p>Here’s how an article (i.e. a resource of type “articles”) might appear in a document:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="err">// ...</span>
-<span class="err">{</span>
-<span class="err"> &quot;type&quot;: &quot;articles&quot;,</span>
-<span class="err">  &quot;id&quot;: &quot;1&quot;,</span>
-<span class="err">  &quot;attributes&quot;: {</span>
-<span class="err">    &quot;title&quot;: &quot;Rails is Omakase&quot;</span>
-<span class="err">  },</span>
-<span class="err">  &quot;relationships&quot;: {</span>
-<span class="err">    &quot;author&quot;: {</span>
-<span class="err">      &quot;links&quot;: {</span>
-<span class="err">        &quot;self&quot;: &quot;/articles/1/relationships/author&quot;,</span>
-<span class="err">        &quot;related&quot;: &quot;/articles/1/author&quot;</span>
-<span class="err">      },</span>
-<span class="err">      &quot;data&quot;: { &quot;type&quot;: &quot;people&quot;, &quot;id&quot;: &quot;9&quot; }</span>
-<span class="err">    }</span>
-<span class="err">  }</span>
-<span class="err">}</span>
-<span class="err">    // ...</span>
+<div class="codehilite"><pre><span></span><code>// ...
+{
+ &quot;type&quot;: &quot;articles&quot;,
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;attributes&quot;: {
+    &quot;title&quot;: &quot;Rails is Omakase&quot;
+  },
+  &quot;relationships&quot;: {
+    &quot;author&quot;: {
+      &quot;links&quot;: {
+        &quot;self&quot;: &quot;/articles/1/relationships/author&quot;,
+        &quot;related&quot;: &quot;/articles/1/author&quot;
+      },
+      &quot;data&quot;: { &quot;type&quot;: &quot;people&quot;, &quot;id&quot;: &quot;9&quot; }
+    }
+  }
+}
+    // ...
 </code></pre></div></div>
         <div class="text-center"><i class="bi bi-tsunami"></i></div>
 

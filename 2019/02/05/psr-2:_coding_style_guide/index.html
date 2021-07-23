@@ -231,7 +231,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h1 id="2">2. 일반적인 것들</h1>
 <h2 id="21">2.1. 기본 코딩 표준</h2>
 <p>[MUST] 코드는 반드시 <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md">PSR-1</a>에 표기된 모든 규칙을 따라야 합니다.</p>
@@ -325,7 +324,6 @@
 <span class="c1">// ... additinal PHP code ...</span>
 </code></pre></div>
 
-
 <h1 id="4">4. 클래스, 속성, 메서드</h1>
 <p>&ldquo;class&rdquo;라는 용어는 모든 클래스, 인터페이스, 특성을 나타냅니다.</p>
 <blockquote>
@@ -353,7 +351,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>[MAY] <code>implements</code> 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한 번만 들여 써질 수 있습니다. [MUST] 그렇게 표현할 때, 목록의 첫 번째 항목은 다음 줄에 있어야 하며, [MUST] 한 줄에 하나의 인터페이스만 있어야 합니다.</p>
 <blockquote>
 <p>Lists of <code>implements</code> MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one interface per line.</p>
@@ -370,7 +367,6 @@
     <span class="c1">// constants, properties, methods</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <h2 id="42">4.2. 속성</h2>
 <p>[MUST] 모든 속성에서 가시성을 반드시 선언해야 합니다.</p>
@@ -402,7 +398,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h2 id="43">4.3. 메서드</h2>
 <p>[MUST] 모든 메서드는 가시성을 선언해야 합니다.</p>
 <blockquote>
@@ -432,7 +427,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h2 id="44">4.4. 메서드 인수</h2>
 <p>인수 목록에서는 [MUST NOT] 쉼표 앞에 공백이 있으면 됩니다. [MUST]  쉼표 뒤에 공백을 두어야 합니다.</p>
 <blockquote>
@@ -453,7 +447,6 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <p>[MAY] 인수 목록은 여러 줄에 걸쳐 나눌 수 있으며, 각 줄은 한 번만 들여 쓰기 할 수 있습니다. [MUST] 여러 줄로 나눠 표기할 때는 첫 번째 항목은 다음 줄에 있어야 합니다. [MUST] 한 줄에 하나의 인수만 있어야 합니다.</p>
 <blockquote>
@@ -477,7 +470,6 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <h2 id="45-abstract-final-static">4.5. abstract, final, static</h2>
 <p>[MUST] <code>abstract</code> 와 <code>final</code> 선언은 가시성 선언 앞에 와야 합니다.</p>
@@ -504,7 +496,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h2 id="46">4.6. 메서드와 펑션 사용</h2>
 <p>[MUST NOT] 메서드나 함수 호출을 할 경우, 메서드 상에 공백이 없어야 합니다. 또는 [MUST NOT] 함수 이름과 여는 괄호 뒤에는 공백이 있어서는 안 됩니다. 그리고 [MUST NOT] 닫는 괄호 앞에는 공백이 없어야 합니다. [MUST NOT] 인수 목록에는 쉼표 앞에 공백이 있어서 안되며, [MUST] 쉼표 뒤에 공백이 와야 합니다.</p>
 <blockquote>
@@ -515,7 +506,6 @@
 <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
 <span class="nx">Foo</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
 </code></pre></div>
-
 
 <p>[MAY] 인수 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한번 들여 쓰일 수 있습니다. [MUST] 이렇게 할<br>
  때 목록의 첫 번째 항목은 다음 줄에 있어야 합니다. [MUST] 한 줄에 하나의 인수만 있어야 합니다.</p>
@@ -529,7 +519,6 @@
     <span class="nv">$muchLongerArgument</span>
 <span class="p">);</span>
 </code></pre></div>
-
 
 <h1 id="5">5. 제어문</h1>
 <p>제어문에 대한 일반적인 스타일 규칙은 다음과 같습니다:</p>
@@ -593,7 +582,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>[SHOULD] <code>else if</code> 대신 <code>elseif</code> 키워드를 사용하여 모든 제어 키워드가 단일 단어처럼 보이도록 해야 합니다.</p>
 <blockquote>
 <p>The keyword <code>elseif</code> SHOULD be used instead of <code>else if</code> so that all control keywords look like single words.</p>
@@ -622,7 +610,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h2 id="53-while-do-while"><strong>5.3. while, do while</strong></h2>
 <p><code>while</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
@@ -634,7 +621,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>마찬가지로 <code>do while</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
 <p>Similarly, a <code>do while</code> statement looks like the following. Note the placement of parentheses, spaces, and braces.</p>
@@ -644,7 +630,6 @@
     <span class="c1">// structure body;</span>
 <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">);</span>
 </code></pre></div>
-
 
 <h2 id="54-for"><strong>5.4. for</strong></h2>
 <p><code>for</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
@@ -657,7 +642,6 @@
 <span class="p">}</span>
 </code></pre></div>
 
-
 <h2 id="55-foreach"><strong>5.5. foreach</strong></h2>
 <p><code>foreach</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
@@ -668,7 +652,6 @@
     <span class="c1">// foreach body</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <h2 id="56-try-catch"><strong>5.6. try, catch</strong></h2>
 <p><code>try catch</code> 블록은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
@@ -684,7 +667,6 @@
     <span class="c1">// catch body</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <h1 id="6-closures">6. Closures</h1>
 <p>[MUST] 클로저는 <code>function</code> 키워드 뒤에 공백과 <code>use</code> 키워드 앞뒤 공백으로 선언해야 합니다.</p>
@@ -720,7 +702,6 @@
     <span class="c1">// body</span>
 <span class="p">};</span>
 </code></pre></div>
-
 
 <p>[MAY] 인수 목록과 변수 목록은 여러 행에 걸쳐 나눠질 수 있습니다. (각 행은 한번 들여 쓰기가 들어가야 합니다.) 그렇게 할때, [MUST] 목록의 첫 번째 항목은 다음 줄에 있어야 하며, [MUST] 한 줄에 하나의 인수나 변수만 있어야 합니다.</p>
 <blockquote>
@@ -780,7 +761,6 @@
 <span class="p">};</span>
 </code></pre></div>
 
-
 <p>형식 지정 규칙은 함수 또는 메서드 호출에서 클로저가 직접 인수로 사용될 때에도 적용됩니다.</p>
 <blockquote>
 <p>Note that the formatting rules also apply when the closure is used directly in a function or method call as an argument.</p>
@@ -794,7 +774,6 @@
     <span class="nv">$arg3</span>
 <span class="p">);</span>
 </code></pre></div>
-
 
 <h1 id="7-conclusion">7. Conclusion</h1>
 <p>이 가이드에서 의도적으로 생략한 스타일과 연습해야 될 많은 요소들이 있습니다. 다음 내용들이 포함되지만 이 내용에 국한되지 않습니다:</p>

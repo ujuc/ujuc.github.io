@@ -122,11 +122,9 @@ $ brew cask install keybase
 $ brew cask install gpg-suite
 </code></pre></div>
 
-
 <h3 id="gpg">GPG 키 생성</h3>
 <div class="codehilite"><pre><span></span><code>$ keybase pgp gen --multi
 </code></pre></div>
-
 
 <h3 id="git">Git 구성에 추가</h3>
 <div class="codehilite"><pre><span></span><code>$ gpg --list-secret-keys --keyid-format LONG
@@ -141,19 +139,16 @@ $ git config --global user.signingkey <span class="o">{</span>keyid<span class="
 $ git config --global commit.gpgsign <span class="nb">true</span>
 </code></pre></div>
 
-
 <h3 id="github-public-gpg">Github 에 Public GPG 키 등록</h3>
 <p><a href="https://github.com/settings/keys">https://github.com/settings/keys</a> 에 접속하여 <strong>New GPG key</strong> 메뉴 선택</p>
 <p>아래 명령어로 GPG키 복사하여 붙여넣기</p>
 <div class="codehilite"><pre><span></span><code>$ keybase pgp <span class="nb">export</span> -q <span class="o">{</span>keyid<span class="o">}</span> <span class="p">|</span> pbcopy
 </code></pre></div>
 
-
 <h3 id="git-gui">Git GUI 툴에서 커밋이 가능하게 옵션 추가</h3>
 <div class="codehilite"><pre><span></span><code>$ <span class="nb">echo</span> no-tty &gt;&gt; ~/.gnupg/gpg.conf
 $ git config --global gpg.program <span class="si">${</span><span class="nv">which</span><span class="p"> gpg</span><span class="si">}</span>
 </code></pre></div>
-
 
 <h3 id="_2">회사 컴퓨터에도 가능하게 해두자</h3>
 <p>위에서 말한 프로그램을 설치한 뒤 다음 명령을 이용해서 key를 저장한다. 하나의 키를 가지고 있을 경우에만 다음 명령이 먹힌다. 두개이상이면 다른 모습이 보인다고&hellip;</p>
@@ -165,7 +160,6 @@ $ keybase pgp <span class="nb">export</span> <span class="p">|</span> gpg --impo
 <span class="c1"># Private key export</span>
 $ keybase pgp <span class="nb">export</span> --secret <span class="p">|</span> gpg --allow-secret-key-import --import
 </code></pre></div>
-
 
 <h3 id="_3">참고 사이트</h3>
 <ul>

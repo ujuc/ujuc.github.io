@@ -126,7 +126,6 @@
 <div class="codehilite"><pre><span></span><code>sphinx-build -b gettext . _build/gettext
 </code></pre></div>
 
-
 <p>위 명령을 실행하면 <code>pot</code> 파일을 <code>_build/gettext</code> 에 생긴것을 확인할 수 있다.</p>
 <h2 id="_2">번역할 텍스트 만들기</h2>
 <p><code>pot</code> 파일은 <code>po</code> 템플릿이라 곧장 번역을 할 수 없다.<br>
@@ -135,13 +134,11 @@
 <div class="codehilite"><pre><span></span><code>sphinx-intl update -p _build/gettext -l ko
 </code></pre></div>
 
-
 <p><code>locale/ko/LC_MESSAGES/**.po</code> 파일이 생성된다.</p>
 <p>나머지는 알아서&hellip; po 파일을 가지고서 다른 서비스에 올려서 번역을 하거나 하면된다.</p>
 <h2 id="_3">선택한 언어로 문서 만들기</h2>
 <div class="codehilite"><pre><span></span><code>sphinx-build -b html -D <span class="nv">language</span><span class="o">=</span>ko . _build/html/ko
 </code></pre></div>
-
 
 <p>로 하면된다고 한다. 아직이 부분을 해보지는 않아서 해보고 업뎃하는걸로&hellip;</p></div>
         <div class="text-center"><i class="bi bi-tsunami"></i></div>

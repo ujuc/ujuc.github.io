@@ -90,7 +90,6 @@
 $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;위의 내용처럼 작업하고 재시작하면 잘 실행된다.&lt;/p&gt;</content><category term="Software"></category><category term="google drive stream"></category><category term="macos"></category><category term="mojave"></category></entry><entry><title>Pycharm에 pylint 추가</title><link href="https://ujuc.github.io/2018/09/24/pycharme_pylint_cu-ga/" rel="alternate"></link><published>2018-09-24T00:49:24+09:00</published><updated>2018-09-24T00:49:24+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-24:/2018/09/24/pycharme_pylint_cu-ga/</id><summary type="html">&lt;p&gt;Pycharm 에 pylint를 외부 툴로 등록하는 방법&lt;/p&gt;</summary><content type="html">&lt;p&gt;나는 블로그를 사용할때 Python 스크립트를 사용해서 작업을 하고 있다. 그러다보니 매번 파일에 추가되는 내용이나 달라지는 것들이 있으면 수정을 하는데&amp;hellip;&lt;/p&gt;
 &lt;p&gt;지금까지는 lint 작업은 하지않고서 pycharm에서 지적하는 부분만 가지고 작업을 하였다만&amp;hellip; 이제 lint를 적용해서 작업을 공통으로 사용할 수 있게 해놔야지&amp;hellip;&lt;/p&gt;
 &lt;p&gt;pylint만 있는건 아니지만, pep8이나 다른것들을 정리하려면&amp;hellip; 너무 많은 것을 등록해야된&amp;hellip; 논외로..&lt;/p&gt;
@@ -142,7 +141,6 @@ $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Send&lt;/span&gt; &lt;span class="n"&gt;Mail&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;--------------------+--------------------------+&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.&lt;br&gt;
 노드는 여러개를 사용할 수 있는 것인지&amp;hellip; 보기로는 그렇게 되어있긴한데.. 뭐 이건 코드도 같이 봐야될듯함.&lt;/p&gt;
 &lt;h2 id="_2"&gt;빌드&lt;/h2&gt;
@@ -150,7 +148,6 @@ $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
 &lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$GOPATH&lt;/span&gt;/src/github.com/shunfei/cronsun
 sh build.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h2 id="_3"&gt;실행&lt;/h2&gt;
 &lt;ol&gt;
@@ -180,7 +177,6 @@ sh build.sh
 &lt;span class="n"&gt;it2dl&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;
   &lt;span class="n"&gt;Downloads&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;specified&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;saving&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;Downloads&lt;/span&gt; &lt;span class="n"&gt;folder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;????&lt;/p&gt;
 &lt;p&gt;그래서 실행해봤다.!&lt;/p&gt;
