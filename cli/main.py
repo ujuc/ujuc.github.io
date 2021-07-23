@@ -3,12 +3,15 @@ import re
 
 import pendulum
 from invoke import Collection, Program, task
+from rich.console import Console
 
 BASE_PATH = Path.cwd()
 CONTENT_PATH = BASE_PATH / "content"
 OUTPUT_PATH = BASE_PATH / "output"
 CONF_FILE = BASE_PATH / "pelicanconf.py"
 PUBLISH_CONF_FILE = BASE_PATH / "publishconf.py"
+
+console = Console()
 
 
 @task(
@@ -58,7 +61,7 @@ def post(ctx, title, rst=False):
     with post_path.open("w") as post_file:
         post_file.write(article)
 
-    print(f"File created -> {post_path}")
+    console.print(f"File created -> {post_path}")
 
 
 @task()
