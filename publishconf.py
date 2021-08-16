@@ -29,7 +29,7 @@ GOOGLE_ADSENSE = "ca-pub-1014314833699403"
 BMC_CODE = "8967ktT"
 
 # Comment Services
-DISQUS_SITENAME = True
+DISQUS_SITENAME = False
 UTTERANCES = True
 GISCUS = True
 REPO_NAME = "ujuc/ujuc.github.io"
