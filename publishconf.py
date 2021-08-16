@@ -23,9 +23,16 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = True
 GOOGLE_ANALYTICS = "UA-58634276-1"
 GOOGLE_ADSENSE = "ca-pub-1014314833699403"
 
 BMC_CODE = "8967ktT"
-UTTERANCES_REPO = "ujuc/ujuc.github.io"
+
+# Comment Services
+DISQUS_SITENAME = True
+UTTERANCES = True
+GISCUS = True
+REPO_NAME = "ujuc/ujuc.github.io"
+REPO_ID = "MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
+GISUS_CATEGORY = "General"
+GISUS_CATEGORY_ID = "MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
