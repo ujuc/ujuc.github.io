@@ -15,13 +15,25 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기...">
 
-    <meta name="description" content="Anythink, Everythink!">
-    <meta name="twitter:title" content="잘 밤에 쓸데없는 생각하기...">
-    <meta name="twitter:description" content="Anythink, Everythink!">
+    <meta name="keyward" content="minikube,kube,docker">
+    <meta property="og:title" content="minikube로 docker를 대신해볼까?">
+    <meta name="twitter:title" content="minikube로 docker를 대신해볼까?">
+    <meta itemprop="name" content="minikube로 docker를 대신해볼까?">
+    <meta name="description" content="minikube로 docker에서 벗어날까한다.">
+    <meta property="og:description" content="minikube로 docker에서 벗어날까한다.">
+    <meta name="twitter:description" content="minikube로 docker에서 벗어날까한다.">
+    <meta itemprop="description" content="minikube로 docker에서 벗어날까한다.">
+    <meta property="og:url" content="https://ujuc.github.io/2021/10/10/minikube로-docker를-대신해볼까/">
+    <meta property="article:published_time" content="2021-10-10T09:50:45+09:00">
+    <meta property="article:modified_time" content="2021-10-10T09:50:45+09:00">
+    <meta property="article:tag" content="minikube">
+    <meta property="article:tag" content="kube">
+    <meta property="article:tag" content="docker">
+    
 
     <!-- Title -->
     <title>
-      잘 밤에 쓸데없는 생각하기...  | Category: Operation
+      잘 밤에 쓸데없는 생각하기.../minikube로 docker를 대신해볼까?
     </title>
 
 <!-- Style sheet -->
@@ -89,78 +101,71 @@
   </header>
 
   <div id="site_article" class="container">
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2021/10/10/minikube로-docker를-대신해볼까/" class="article_title">minikube로 docker를 대신해볼까?</a>
-        </div>
+    <div class="container">
+      <div class="article">
+        <div class="article_title"><h1>minikube로 docker를 대신해볼까?</h1></div>
         <div class="article_meta">
           <i class="bi bi-calendar-plus"></i> 21. 10. 10.
- / <i class="bi bi-arrow-repeat"></i>21. 10. 10.        </div>
-        <div class="article_text"><p>minikube로 docker에서 벗어날까한다.</p></div>
+          <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-folder2-open"></i> <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-tags">
+            <a href="https://ujuc.github.io/tag/minikube.html" class="article_tag">minikube</a>
+            <a href="https://ujuc.github.io/tag/kube.html" class="article_tag">kube</a>
+            <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
+          </i>
+        </div>
+        <div class="text-center"><i class="bi bi-tornado" style></i></div>
+        <div class="article_text"><p>전에 docker가 유료화로 바뀐다고 한뒤 뭔가 docker 대신으로 할 것을 찾는게 유행인듯.</p>
+<p>이것저것 해보다가 minikube로 작업하는게 좋다는 소릴 들었고 세팅을 하긴했는데&hellip; <code>docker-compose</code> 항목을 어떻게 바꾸지 하다가 검색에 들어갔다.</p>
+<p><a href="https://novemberde.github.io/post/2021/09/02/podman-minikube/">minikube로 docker와 docker-compose를 대체하기</a></p>
+<p>역시 누군가 먼저 해주셨고. 그걸보고 있는데&hellip;</p>
+<p>생각보다 <code>minikube</code>는 말그대로 <code>docker-desktop</code>이고 <code>kubectl</code>을 이용해서 작업을 해야하는구나&hellip; 명령어를 찾아서 작업할 수 있게 구성을 하고 손에 익혀나가면 좋을듯.</p>
+<p>그런데 이미지 빌드는 어떻게 하는걸까?? <code>docker-compose</code> 처럼 만들면 이미지가 추가되려나&hellip;<br>
+테스트로 진행한 airflow에 있는 <code>docker-compose</code>는 복잡해서 못하는듯.<br>
+사람이 생성을 해줘야 하는 부분이라 <code>kompose</code> 패키지를 좀더 보고 한번 정리를 해야할꺼같다.</p></div>
+        <div class="text-center"><i class="bi bi-tsunami"></i></div>
+
+        <!-- Buy me a coffee -->
+        <div class="text-center">
+<p>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+         alt="Buy Me A Coffee"
+         style="width:15%"
+    >
+  </a>
+</p>        </div>
+
+        <!-- Comment -->
+<div id="giscus">
+    <script src="https://giscus.app/client.js"
+        data-repo="ujuc/ujuc.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
+        data-category="General"
+        data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
+        data-mapping="title"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div><div id="utterances">
+    <script src="https://utteranc.es/client.js"
+            repo="ujuc/ujuc.github.io"
+            issue-term="url"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>        <div class="text-center">🎗</div>
       </div>
-    </article>
-    <hr/>
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2021/07/15/docker-compose-extension-fields-알아보기/" class="article_title">docker-compose Extension fields 알아보기</a>
-        </div>
-        <div class="article_meta">
-          <i class="bi bi-calendar-plus"></i> 21. 07. 15.
- / <i class="bi bi-arrow-repeat"></i>21. 07. 15.        </div>
-        <div class="article_text"><p>docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자.</p></div>
-      </div>
-    </article>
-    <hr/>
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" class="article_title">맥에서 gpg 키 서명 실패</a>
-        </div>
-        <div class="article_meta">
-          <i class="bi bi-calendar-plus"></i> 20. 02. 19.
- / <i class="bi bi-arrow-repeat"></i>20. 02. 19.        </div>
-        <div class="article_text"><p>commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!</p></div>
-      </div>
-    </article>
-    <hr/>
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/" class="article_title">pyenv 설치 스크립트 변경됨</a>
-        </div>
-        <div class="article_meta">
-          <i class="bi bi-calendar-plus"></i> 19. 11. 29.
-        </div>
-        <div class="article_text"><p>pyenv 설치 방법이 변경되어 간략하게 남겨둔다.</p></div>
-      </div>
-    </article>
-    <hr/>
-    <article class="row">
-      <div class="container">
-        <div>
-          <a href="https://ujuc.github.io/2019/05/25/docker_container_sa-yong-ja_seor-jeong/" class="article_title">Docker container 사용자 설정</a>
-        </div>
-        <div class="article_meta">
-          <i class="bi bi-calendar-plus"></i> 19. 05. 25.
-        </div>
-        <div class="article_text"><p>Docker container를 사용할때 발생한 에러에 대해서 작성하였다.</p></div>
-      </div>
-    </article>
+    </div>
   </div>
 
   <!-- body foot -->
   <div class="container">
-<ul class="pagination">
-        <li class="align-middle"><a rel="next"><i class="bi bi-chevron-bar-left"></i> Next</a></li>
-    <a class="align-middle" style="margin: 0 .5rem 0 .5rem"><i class="bi bi-sun-fill" style="color:orangered"></i></a>
-        <li class="align-middle">
-            <a href="/category/operation2.html">
-                Prev <i class="bi bi-chevron-double-right"></i>
-            </a>
-        </li>
-</ul>
   </div>
 
   <!-- Title -->
