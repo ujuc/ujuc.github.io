@@ -103,11 +103,13 @@
   <div id="site_article" class="container">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Clojure 개발 환경 구축</h1></div>
+        <div class="article_title">Clojure 개발 환경 구축</div>
         <div class="article_meta">
-          <i class="bi bi-calendar-plus"></i> 15. 03. 01.
-          <i class="bi bi-three-dots-vertical"></i>
-          <i class="bi bi-folder2-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="bi bi-calendar-plus"></i> 
+            15. 03. 01.
+ / <i class="bi bi-arrow-repeat"></i> 15. 04. 01.           <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-folder2-open"></i> 
+            <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="bi bi-three-dots-vertical"></i>
           <i class="bi bi-tags">
             <a href="https://ujuc.github.io/tag/clojure.html" class="article_tag">clojure</a>
@@ -116,18 +118,18 @@
           </i>
         </div>
         <div class="text-center"><i class="bi bi-tornado" style></i></div>
-        <div class="article_text"><div class="section" id="id2">
+        <div class="article_text"><div class="section" id="section-1">
 <h2>1. 개요</h2>
 <p>Clojure를 공부하려하는데... 이것 저것 작업을 하려하니 짧은 기억력으로는 계속
 봐야되는지라. 이렇게 작성을 해놔야 나중에 볼 듯하고, 또 어딘가에 넣어둔다고해도
 찾을때는 잘 못찾는 지라...</p>
-<div class="section" id="id3">
+<div class="section" id="section-2">
 <h3>1. 전재</h3>
 <p>OSX를 기반으로 한다. <tt class="docutils literal">brew</tt> 를 패키지로 모두 작성된다. 만약 Linux에서
 작업하게되면 관련해서 문서는 추가로 작성할 예정임. 문제는 언제될지 모르겠다.</p>
 </div>
 </div>
-<div class="section" id="id4">
+<div class="section" id="section-3">
 <h2>2. 설치할 것들</h2>
 <div class="section" id="jdk">
 <h3>1. JDK 설치</h3>
@@ -214,25 +216,25 @@ lein new myproject
 </li>
 </ul>
 </div>
-<div class="section" id="id5">
+<div class="section" id="section-4">
 <h3>2. 의존하는 라이브러리 다운로드</h3>
 <pre class="code bash literal-block">
 lein deps
 </pre>
 <p>위에서 작성해준 패키지들을 받아와서 실행해준다. 그러니 왠만해서는 설치하고 하자.</p>
 </div>
-<div class="section" id="id6">
+<div class="section" id="section-5">
 <h3>3. 코드 작성</h3>
 <p><tt class="docutils literal">src/myproject/core.clj</tt> 가 있다. 이곳에다가 코드를 작성해주면 된다.</p>
 </div>
-<div class="section" id="id7">
+<div class="section" id="section-6">
 <h3>4. 실행</h3>
 <pre class="code bash literal-block">
 lein run
 </pre>
 <p>쉽게 실행해서 나오는 것을 볼 수 있다. 뭐 간단하네...</p>
 </div>
-<div class="section" id="id8">
+<div class="section" id="section-7">
 <h3>5. 패키징</h3>
 <p>역시 Java라고 해야될까... jar 로 만들어두면 멀티 플랫폼에서도 작동이 가능하다는
 것이지. 그리고 그것을 묶어서 보여준다. 나중에가서 설정을 좀 해줘야되는 부분이
@@ -241,7 +243,7 @@ lein run
 lein uberjar
 </pre>
 </div>
-<div class="section" id="id9">
+<div class="section" id="section-8">
 <h3>6. 라이브러리 검색</h3>
 <p>필요한 라이브러리들을 검색 하는건데... 검색하는게 더 빠를듯... 너무 많이
 나온다. 그리고 가끔 인덱스를 업데이트를 해주긴 해야되는데... 오래걸려...
@@ -253,12 +255,12 @@ lein search ring
 이름으로 버전들이 쭉~~ 나오니 그것도하나 염두해둘 것... 버전 정보는 명령어를
 하나더 쳐서 확인하게 해야지... 저렇게 다 보여줄 필요가 있나...</p>
 </div>
-<div class="section" id="id10">
+<div class="section" id="section-9">
 <h3>7. 패치 설정</h3>
 <p>자동으로 잡아준다. 그래도 추가해야된다면 <tt class="docutils literal">proejct.clj</tt> 에 키워드
 <tt class="docutils literal"><span class="pre">:extra-classpath-dirs</span></tt> 를 사용하여 리스트 형식으로 추가해주면 된다.</p>
 </div>
-<div class="section" id="id11">
+<div class="section" id="section-10">
 <h3>8. 인터프리터 실행</h3>
 <p>인터프리터를 실행해서 작성한 내요이 맞는지 확인이 가능하다.</p>
 <pre class="code bash literal-block">
@@ -266,7 +268,7 @@ lein repl
 </pre>
 </div>
 </div>
-<div class="section" id="id12">
+<div class="section" id="section-11">
 <h2>참고 사이트!</h2>
 <dl class="docutils">
 <dt><a class="reference external" href="http://english4u.kr/clojure-memo/index.html">Clojure 강좌 - 김영태</a></dt>

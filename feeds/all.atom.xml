@@ -2751,15 +2751,15 @@ $ phpenv install &lt;span class="o"&gt;{&lt;/span&gt;php_version&lt;span class="
 &lt;ul&gt;
 &lt;li&gt;추가 설치 패키지&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt;
-&lt;span class="n"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="n"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;re2c&lt;/span&gt;
+&lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;re2c&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="n"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;openssl&lt;/span&gt; &lt;span class="n"&gt;libxml2&lt;/span&gt;
-&lt;span class="n"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;openssl&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;libxml2&lt;/span&gt;
+&lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;openssl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libxml2&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;openssl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libxml2&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="n"&gt;$&lt;/span&gt; &lt;span class="n"&gt;brew&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;mcrypt&lt;/span&gt;
+&lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;mcrypt&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
@@ -3951,25 +3951,25 @@ $ ip link &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$dev&lt
 &lt;/ul&gt;
 &lt;p&gt;분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&amp;hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나 적어야겠다.&lt;/p&gt;
 &lt;h2 id="_1"&gt;아키텍쳐&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                                         &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-                                           &lt;span class="o"&gt;+&lt;/span&gt;
-                                           &lt;span class="o"&gt;|&lt;/span&gt;
-                                 &lt;span class="o"&gt;+---------+----------------+&lt;/span&gt;
-                                 &lt;span class="o"&gt;|&lt;/span&gt;                          &lt;span class="o"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Add&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Delete&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Update&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Execute&lt;/span&gt; &lt;span class="n"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;                          &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Query&lt;/span&gt; &lt;span class="n"&gt;job&lt;/span&gt; &lt;span class="n"&gt;exec&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                                 &lt;span class="o"&gt;+&lt;/span&gt;                          &lt;span class="o"&gt;+&lt;/span&gt;
-                               &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;etcd&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;                   &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;MongoDB&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-                                 &lt;span class="o"&gt;+&lt;/span&gt;                          &lt;span class="o"&gt;^&lt;/span&gt;
-                      &lt;span class="o"&gt;+----------------------+&lt;/span&gt;              &lt;span class="o"&gt;|&lt;/span&gt;
-                      &lt;span class="o"&gt;+&lt;/span&gt;          &lt;span class="o"&gt;+&lt;/span&gt;           &lt;span class="o"&gt;+&lt;/span&gt;              &lt;span class="o"&gt;|&lt;/span&gt;
-                   &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="mf"&gt;.1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;   &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="mf"&gt;.2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;   &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;           &lt;span class="o"&gt;|&lt;/span&gt;
-                      &lt;span class="o"&gt;+&lt;/span&gt;          &lt;span class="o"&gt;+&lt;/span&gt;           &lt;span class="o"&gt;+&lt;/span&gt;              &lt;span class="o"&gt;|&lt;/span&gt;
-                      &lt;span class="o"&gt;+----------------------+&lt;/span&gt;              &lt;span class="o"&gt;|&lt;/span&gt;
-                                 &lt;span class="o"&gt;|&lt;/span&gt;                          &lt;span class="o"&gt;|&lt;/span&gt;
-                                 &lt;span class="o"&gt;|&lt;/span&gt;                          &lt;span class="o"&gt;|&lt;/span&gt;
-             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Job&lt;/span&gt; &lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="n"&gt;fail&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Job&lt;/span&gt; &lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;
-                                 &lt;span class="o"&gt;|&lt;/span&gt;                          &lt;span class="o"&gt;|&lt;/span&gt;
- &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Send&lt;/span&gt; &lt;span class="n"&gt;Mail&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;--------------------+--------------------------+&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;                                         &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                           &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                           &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                 &lt;/span&gt;&lt;span class="o"&gt;+---------+----------------+&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                 &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;                          &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Add&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Delete&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Update&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Execute&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;                          &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Query&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;job&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                 &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;                          &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                               &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;etcd&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;MongoDB&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                 &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;                          &lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                      &lt;/span&gt;&lt;span class="o"&gt;+----------------------+&lt;/span&gt;&lt;span class="w"&gt;              &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                      &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;           &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;              &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="mf"&gt;.1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="mf"&gt;.2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;           &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                      &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;           &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt;              &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                      &lt;/span&gt;&lt;span class="o"&gt;+----------------------+&lt;/span&gt;&lt;span class="w"&gt;              &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                 &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;                          &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                 &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;                          &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;             &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Job&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;fail&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Job&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;                                 &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;                          &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Send&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Mail&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;--------------------+--------------------------+&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.&lt;br&gt;
@@ -6080,7 +6080,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 </summary><content type="html">&lt;p&gt;나도 &lt;a class="reference external" href="http://github.com/ujuc/dotrc"&gt;vimrc&lt;/a&gt; 설정을 따로 만들었다만, 그것들을 전부 다른 애들이 설정해놓은 것들에서 수정해서 만든거라. 자세히 매뉴얼을 읽어보고 만들지는 않았다.&lt;/p&gt;
 &lt;p&gt;그런데 얼마전부터 &lt;a class="reference external" href="http://neovim.io"&gt;NeoVim&lt;/a&gt; 매뉴얼을 번역하면서 기능들을 보고 있는데, 사용하고 있는 것들에대해서 나올때마다 작성을 해놔야지... 안그러면 또 안찾아볼 가능성이 높으니...&lt;/p&gt;
 &lt;p&gt;마우스와 관련된 옵션은 &lt;tt class="docutils literal"&gt;mouse&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousefocus&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;moushide&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousemodel&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mouseshape&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;mousetime&lt;/tt&gt;&lt;/p&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;옵션 설명(이라쓰고 번역...)&lt;/h2&gt;
 &lt;div class="section" id="mouse"&gt;
 &lt;h3&gt;&lt;a class="reference external" href="http://neovim.io/doc/user/options.html#'mouse'"&gt;mouse&lt;/a&gt;&lt;/h3&gt;
@@ -6313,34 +6313,34 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;/div&gt;
 </content><category term="Develop"></category><category term="vim"></category><category term="vi"></category><category term="vimrc"></category><category term="mouse"></category><category term="기본 설정"></category><category term="transelate"></category></entry><entry><title>Cloud Native Computing Foundation</title><link href="https://ujuc.github.io/2015/07/22/cncf-org/" rel="alternate"></link><published>2015-07-22T22:36:00+09:00</published><updated>2015-07-22T22:36:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-07-22:/2015/07/22/cncf-org/</id><summary type="html">&lt;p class="first last"&gt;Google에서 Kubernetes v1.0을 발표하면서 Cloud Native Computing Foundation과 함께 진행한다고 했다. 깊은글 아니다 소개 글이다. 깊은 글을 10분만에 적을 수 있겠는가?&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;얼마 전 아시는 분께서 공유를 해주신 사이트...
-구글에서 &lt;a class="reference external" href="http://kubernetes.io/"&gt;Kubernetes&lt;/a&gt; v1.0을 공개하면서 &lt;a class="reference external" href="https://cncf.io/"&gt;Cloud Native Computing Foundation&lt;/a&gt; 와 함께 Container의 생태계를 만들어나갈 거라 전함. &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;여기의 목표(?) 미션은 현대 분산 시스템 환경에 특화된 새로운 컴퓨팅 패러다임을 생성하고 진행하는 데 있다고 한다. &lt;a class="footnote-reference" href="#id6" id="id2"&gt;[2]&lt;/a&gt; (무의식적으로 번역하고 있었다.;;)&lt;/p&gt;
+구글에서 &lt;a class="reference external" href="http://kubernetes.io/"&gt;Kubernetes&lt;/a&gt; v1.0을 공개하면서 &lt;a class="reference external" href="https://cncf.io/"&gt;Cloud Native Computing Foundation&lt;/a&gt; 와 함께 Container의 생태계를 만들어나갈 거라 전함. &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;여기의 목표(?) 미션은 현대 분산 시스템 환경에 특화된 새로운 컴퓨팅 패러다임을 생성하고 진행하는 데 있다고 한다. &lt;a class="footnote-reference" href="#footnote-2" id="footnote-reference-2"&gt;[2]&lt;/a&gt; (무의식적으로 번역하고 있었다.;;)&lt;/p&gt;
 &lt;p&gt;또 번역하다가 때리치웠...&lt;/p&gt;
 &lt;p&gt;이번껀 구글에서는 Container를 직접 구현하는 것보다는 그것은 _OpenContainers 로 넘기고 자기들은 오케스트레이션에 더 많은 작업을 하겠다는 의도가 보이는 건 나만의 느낌...&lt;/p&gt;
 &lt;p&gt;참가 업체들을 보면 항상 보던 업체들이 많이 보여서... 뭐 딱히 뭐라 말하기 뭐하다는...&lt;/p&gt;
 &lt;p&gt;잘 진행될까 고민되고, 언제쯤 저들이 사용한 것들에 대한 내용을 말해줄 것인지에 대한 내용을 확인 할 수 있을는지 두고두고 봐야 될 프로젝트가 늘었다.&lt;/p&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;관련 소식기사&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://techcrunch.com/2015/07/21/as-kubernetes-hits-1-0-google-donates-technology-to-newly-formed-cloud-native-computing-foundation-with-ibm-intel-twitter-and-others/?ncid=pushup"&gt;As Kubernetes Hits 1.0, Google Donates Technology To Newly Formed Cloud Native Computing Foundation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.linuxfoundation.org/news-media/announcements/2015/07/new-cloud-native-computing-foundation-drive-alignment-among"&gt;New Cloud Native Computing Foundation to Drive Alignment Among Container Technologies&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;table class="docutils footnote" frame="void" id="id5" rules="none"&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-1" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://googlecloudplatform.blogspot.kr/2015/07/Kubernetes-V1-Released.html"&gt;http://googlecloudplatform.blogspot.kr/2015/07/Kubernetes-V1-Released.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://googlecloudplatform.blogspot.kr/2015/07/Kubernetes-V1-Released.html"&gt;http://googlecloudplatform.blogspot.kr/2015/07/Kubernetes-V1-Released.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-2" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://cncf.io/about/our-mission"&gt;https://cncf.io/about/our-mission&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://cncf.io/about/our-mission"&gt;https://cncf.io/about/our-mission&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 </content><category term="Foundation"></category><category term="google"></category><category term="kubernetes"></category><category term="cloud"></category><category term="container"></category></entry><entry><title>OpenStack 새로운 버전 매기기 변경</title><link href="https://ujuc.github.io/2015/06/28/openstack-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84-%EB%A7%A4%EA%B8%B0%EA%B8%B0-%EB%B3%80%EA%B2%BD/" rel="alternate"></link><published>2015-06-28T22:24:00+09:00</published><updated>2015-06-28T22:24:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-28:/2015/06/28/openstack-새로운-버전-매기기-변경/</id><summary type="html">&lt;p class="first last"&gt;OpenStack 버전 매기는 방법이 변경되었다. &lt;tt class="docutils literal"&gt;YEAR.N&lt;/tt&gt; 에서 &lt;tt class="docutils literal"&gt;X.Y.Z&lt;/tt&gt; 로..&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Liberty 부터는 버전에 관련된 부분이 변경이 되었다. 이번에 Liberty-1 개발 마일스
-톤 이메일 &lt;a class="footnote-reference" href="#id2" id="id1"&gt;[1]&lt;/a&gt; 에서 보면 알 수 있다.&lt;/p&gt;
+톤 이메일 &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt; 에서 보면 알 수 있다.&lt;/p&gt;
 &lt;p&gt;그리고 이것에 대한 자세한 내용은 &lt;a class="reference external" href="http://ttx.re/new-versioning.html"&gt;New OpenStack Component Versioning&lt;/a&gt; 에서 확인
 하면된다.&lt;/p&gt;
 &lt;p&gt;언제부터인가 OpenStack 버전은 &lt;tt class="docutils literal"&gt;YEAR.N&lt;/tt&gt; 으로 버전을 진행하고 있었고,  Kilo의 경우도
@@ -6364,10 +6364,10 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 전이나 LTS 버전같은게 나와줘야되지 않을까하는데... 뭐 이건 관련 내용을 찾으면 다
 시 말을 해야겠다. 너부 빨리 바뀌는 부분들이 많아서 조직에 개발자가 없다면, 특히
 나 우리나라 SI의 경우에는 대응하기가 쉽지 않아보인다.&lt;/p&gt;
-&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-1" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html"&gt;http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html"&gt;http://lists.openstack.org/pipermail/openstack-announce/2015-June/000391.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 </content><category term="Develop"></category><category term="openstack"></category><category term="versioning"></category></entry><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="https://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><published>2015-06-14T22:30:00+09:00</published><updated>2015-06-14T22:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:/2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p class="first last"&gt;숙제를 늦게하고 있는데 잘안되서 찾다보니...&lt;/p&gt;
@@ -6451,7 +6451,7 @@ ImportError:No module named pkg_resources
 설정을 변경해주어야 할때빼고는 하지말자.&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.intel.com/support/edison/sb/CS-035180.htm"&gt;Yocta 컴파일 이미지 다운로드&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h3&gt;&lt;a class="reference external" href="https://software.intel.com/en-us/articles/intel-edison-flashing-firmware-on-os-x-wired"&gt;플래싱 순서&lt;/a&gt;&lt;/h3&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;위의 사진대로 USB를 연결해주고 (2번에 연결)&lt;/li&gt;
@@ -6469,7 +6469,7 @@ ImportError:No module named pkg_resources
 &lt;/ol&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;div class="section" id="edison-1"&gt;
 &lt;h2&gt;Edison 구성&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;기본 구성을 하는데 필요한 명령어는 &lt;tt class="docutils literal"&gt;configure_edison&lt;/tt&gt; 으로 작업을 구성하도록
@@ -6516,7 +6516,7 @@ ImportError:No module named pkg_resources
 다고 한다. 몇몇 설정이 그렇게 되어있었다. (Yocta Projectdp서 사용하는데,
 OpenWRT에서 사용하고 있다.)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="section" id="id4"&gt;
+&lt;div class="section" id="section-2"&gt;
 &lt;h3&gt;패키지 관리자 설치 및 설정&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://software.intel.com/en-us/articles/managing-devkit-libraries-intel-edison-or-intel-galileo-board"&gt;Intel page&lt;/a&gt;&lt;/li&gt;
@@ -6575,7 +6575,7 @@ ture)]&lt;/span&gt;
 &lt;pre class="code xml literal-block"&gt;
 &lt;span class="nt"&gt;&amp;lt;item&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;android:windowFullscreen&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;ture&lt;span class="nt"&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h3&gt;참고 사이트&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.androidpub.com/4710"&gt;전체화면 사용하기&lt;/a&gt;&lt;/li&gt;
@@ -6657,7 +6657,7 @@ Linux의 &lt;cite&gt;proc&lt;/cite&gt; 쪽에서 관련 내용을 가져온다.&
 형태로 뽑아주도록 되어있다.&lt;/p&gt;
 &lt;p&gt;몇몇 부분을 수정하거나 작업을 해야되긴 하겠지만 이 정도로 작은 아이를 띄워
 무리없이 가져올 수 있다면 그것도 좋은 방법이 아닐까...&lt;/p&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;내가 생각하는 비슷한 패키지&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/nicolargo/glances"&gt;nicolargo/glances&lt;/a&gt; - Python으로 구성되어있으며, 서버 형식으로 API들을 뽑아 올
 수 있다. 물론 간단한 웹으로도 가능하다.&lt;/p&gt;
@@ -6666,10 +6666,10 @@ Linux의 &lt;cite&gt;proc&lt;/cite&gt; 쪽에서 관련 내용을 가져온다.&
 </summary><content type="html">&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중... 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
 이용해서 FTP 클라잉너트를 만들었다.&lt;/p&gt;
 &lt;p&gt;뭔짓이지...&lt;/p&gt;
-&lt;p&gt;암튼... 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;... 역시 다른
+&lt;p&gt;암튼... 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;... 역시 다른
 구멍을 파는 사람들이 있구나...&lt;/p&gt;
 &lt;p&gt;변화점까지 확인할 수 있다는건 git의 장점을 가져왔구나.&lt;/p&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md"&gt;설치&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;기본 설치&lt;/li&gt;
@@ -6704,7 +6704,7 @@ $ brew install git-ftp
 &lt;li&gt;git이 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt; 을 사용하긴 한다만...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
+&lt;div class="section" id="section-2"&gt;
 &lt;h2&gt;사용법&lt;/h2&gt;
 &lt;pre class="code bash literal-block"&gt;
 &lt;span class="c1"&gt;# Pushing for the fist time
@@ -6717,16 +6717,16 @@ $ brew install git-ftp
 &lt;li&gt;더 자세한 내용은 &lt;a class="reference external" href="https://gitub.com/git-ftp/git-ftp/blob/develop/man/git-ftp.1.md"&gt;man page&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id5"&gt;
+&lt;div class="section" id="section-3"&gt;
 &lt;h2&gt;제한 사항&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;윈도우와 OS X에서는 테스트를 많이 안했으니 관련된 버그가 있으면 말해 줄 것.&lt;/li&gt;
 &lt;li&gt;배포 도구로 만들어지지 않아서... 커밋이나 체크 아웃 같은건 알아서... 조심히...&lt;/li&gt;
 &lt;/ul&gt;
-&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-1" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/README.md#about"&gt;https://github.com/git-ftp/git-ftp/blob/develop/README.md#about&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/README.md#about"&gt;https://github.com/git-ftp/git-ftp/blob/develop/README.md#about&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
@@ -6737,14 +6737,14 @@ $ brew install git-ftp
 &lt;p&gt;Wiki에서는 이 &lt;a class="reference external" href="https://fnords.wordpress.com/2011/11/23/improving-nova-privilege-escalation-model-part-1/"&gt;블로그&lt;/a&gt; 에 작성된 문제를 해결하기 위해서 만들어졌다고 한다.&lt;/p&gt;
 &lt;p&gt;짧은 내기억으로는 간단한 팡리로만 존재했던 것같은데. (아닐 가능성 100%라논
 소리...), 지금은 oslo 패키지로 관리되고 있다. &lt;a class="reference external" href="https://github.com/openstack/oslo.rootwrap"&gt;github repo&lt;/a&gt;&lt;/p&gt;
-&lt;div class="section" id="id2"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;사용자용&lt;/h2&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;nova.conf&lt;/tt&gt; 에 다음 문구 추가하도록...&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 rootwrap_config=/etc/nova/rootwrap.conf
 &lt;/pre&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;div class="section" id="section-2"&gt;
 &lt;h2&gt;배포용 패키지를 만드는 사람용&lt;/h2&gt;
 &lt;div class="section" id="suduers"&gt;
 &lt;h3&gt;Suduers 설정&lt;/h3&gt;
@@ -6753,7 +6753,7 @@ rootwrap_config=/etc/nova/rootwrap.conf
 nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
 &lt;/pre&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
+&lt;div class="section" id="section-3"&gt;
 &lt;h3&gt;필터 위치 설정&lt;/h3&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;rootwrap&lt;/tt&gt; 으로 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Nova-provided&lt;/span&gt;&lt;/tt&gt; 필터 파일을 로드하고, &lt;tt class="docutils literal"&gt;rootwrap.d&lt;/tt&gt; 로 확장
 사용자의 필터 파일을 로드하도록 설정해 줄것.&lt;/p&gt;
@@ -6762,12 +6762,12 @@ nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
 filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 &lt;/pre&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id5"&gt;
+&lt;div class="section" id="section-4"&gt;
 &lt;h3&gt;필터 정의&lt;/h3&gt;
 &lt;p&gt;각 노드마다 설치를... 해줘야된다고.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id6"&gt;
+&lt;div class="section" id="section-5"&gt;
 &lt;h2&gt;플러그인 작성자용&lt;/h2&gt;
 &lt;div class="section" id="run-as-root"&gt;
 &lt;h3&gt;새로운 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;run-as-root&lt;/span&gt;&lt;/tt&gt; 명령을 추가&lt;/h3&gt;
@@ -6778,9 +6778,9 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id7"&gt;
+&lt;div class="section" id="section-6"&gt;
 &lt;h2&gt;프로젝트 개발자용&lt;/h2&gt;
-&lt;div class="section" id="id8"&gt;
+&lt;div class="section" id="run-as-root-1"&gt;
 &lt;h3&gt;새로운 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;run-as-root&lt;/span&gt;&lt;/tt&gt; 명령을 추가&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;nova.utils.execute(run_as_root=True)&lt;/tt&gt; 를 사용할 것.&lt;/li&gt;
@@ -6793,7 +6793,7 @@ filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id9"&gt;
+&lt;div class="section" id="section-7"&gt;
 &lt;h2&gt;상위 필터 타입 추가&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;기본 필터 타입은 &lt;tt class="docutils literal"&gt;CommandFilter&lt;/tt&gt; 임.&lt;/li&gt;
@@ -6808,7 +6808,7 @@ vim에 관련된 내용이 올라왔다.&lt;/p&gt;
 &lt;p&gt;뭐 특별한 것은 없어 보이지만, Vim을 설정하는 것들에대해 커밋을 통해서 작성해
 뒀다. 그래서 더 좋다. 이렇게하면 나중에 누군가에게 vim을 설정하는 방법에 대해서
 알려주는 방법에서도 좋을 듯함.&lt;/p&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;아쉬운것&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://github.com/gmarik/Vundle.vim"&gt;Vundle&lt;/a&gt; 을 사용해서 플러그인을 설치한다.&lt;/li&gt;
@@ -6825,24 +6825,24 @@ vim에 관련된 내용이 올라왔다.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;놀다 보니 이것저것 보는 것들도 많다. 그런것들이라도 간단히 적어둬야지...&lt;/p&gt;
 &lt;p&gt;노트에다가 작성을 해놓고 넣어두는 것도 한 방법이지만, 봤을때 좋은거라 생각한다면
 그것으로 작업이 가능하지 않을까 하여...&lt;/p&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;div class="section" id="timesheet-js-1"&gt;
 &lt;h2&gt;timesheet.js&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;홈페이지: &lt;a class="reference external" href="https://github.com/sbstjn/timesheet.js"&gt;sbstjn/timesheet.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;손을 좀 대서 자세하게 보이거나 이것저것 손을 볼 수 있을 것같은데...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id2"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;예제&lt;/h2&gt;
 &lt;p&gt;HTML 태그를 쓸수 없다는게 rst의 단점...&lt;/p&gt;
 &lt;p&gt;그래서 &lt;a class="reference external" href="http://jsfiddle.net/fujstt3s/1/"&gt;예제&lt;/a&gt; 는 링크로.... OTL&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
+&lt;div class="section" id="section-2"&gt;
 &lt;h2&gt;특이점&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;소스파일로 되어있는기.. &lt;a class="reference external" href="http://haml.info/"&gt;haml&lt;/a&gt; 로 되어있고, &lt;a class="reference external" href="http://sass-lang.com/"&gt;sass&lt;/a&gt; 는 첨가.&lt;ul&gt;
 &lt;li&gt;sass는 CSS를 더 변수, 함수, 확장 / 상속 등의 기능을 추가해서 쉽게 만들고,
-쉽게 유지보수 할 수 있도록 되어있다고 한다. 여러 종류가 있다고... &lt;a class="footnote-reference" href="#id6" id="id5"&gt;[1]&lt;/a&gt;&lt;/li&gt;
+쉽게 유지보수 할 수 있도록 되어있다고 한다. 여러 종류가 있다고... &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;haml은 HTML abstraction markup language라고 하는걸 줄였다고, 작성을 해놨네.
 HTML 태그를 작성하기 더 쉽게 되어있긴한데... 태그를 변수로 주는게 특이하다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -6851,27 +6851,27 @@ HTML 태그를 작성하기 더 쉽게 되어있긴한데... 태그를 변수로
 더 바닥을 아는 사람들이 없어져가고, 그것들을 알 수 있는 방법들도
 없어져가는건 안좋은 점 중 하나다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-1" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id5"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://windtale.net/blog/why-i-choose-sass/"&gt;http://windtale.net/blog/why-i-choose-sass/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://windtale.net/blog/why-i-choose-sass/"&gt;http://windtale.net/blog/why-i-choose-sass/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 </content><category term="Develop"></category><category term="javascript"></category><category term="js"></category></entry><entry><title>Clojure 개발 환경 구축</title><link href="https://ujuc.github.io/2015/03/01/clojure-development-env/" rel="alternate"></link><published>2015-03-01T00:00:00+09:00</published><updated>2015-04-01T21:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-01:/2015/03/01/clojure-development-env/</id><summary type="html">&lt;p class="first last"&gt;Clojure 개발 환경 구축... &lt;a class="reference external" href="https://www.facebook.com/weweirdmeetup"&gt;#이상한 모임&lt;/a&gt; 에서 웹 작업을 진행하는데
 있어서... 내가 불편하여...&lt;/p&gt;
-</summary><content type="html">&lt;div class="section" id="id2"&gt;
+</summary><content type="html">&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;1. 개요&lt;/h2&gt;
 &lt;p&gt;Clojure를 공부하려하는데... 이것 저것 작업을 하려하니 짧은 기억력으로는 계속
 봐야되는지라. 이렇게 작성을 해놔야 나중에 볼 듯하고, 또 어딘가에 넣어둔다고해도
 찾을때는 잘 못찾는 지라...&lt;/p&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;div class="section" id="section-2"&gt;
 &lt;h3&gt;1. 전재&lt;/h3&gt;
 &lt;p&gt;OSX를 기반으로 한다. &lt;tt class="docutils literal"&gt;brew&lt;/tt&gt; 를 패키지로 모두 작성된다. 만약 Linux에서
 작업하게되면 관련해서 문서는 추가로 작성할 예정임. 문제는 언제될지 모르겠다.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
+&lt;div class="section" id="section-3"&gt;
 &lt;h2&gt;2. 설치할 것들&lt;/h2&gt;
 &lt;div class="section" id="jdk"&gt;
 &lt;h3&gt;1. JDK 설치&lt;/h3&gt;
@@ -6958,25 +6958,25 @@ lein new myproject
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id5"&gt;
+&lt;div class="section" id="section-4"&gt;
 &lt;h3&gt;2. 의존하는 라이브러리 다운로드&lt;/h3&gt;
 &lt;pre class="code bash literal-block"&gt;
 lein deps
 &lt;/pre&gt;
 &lt;p&gt;위에서 작성해준 패키지들을 받아와서 실행해준다. 그러니 왠만해서는 설치하고 하자.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id6"&gt;
+&lt;div class="section" id="section-5"&gt;
 &lt;h3&gt;3. 코드 작성&lt;/h3&gt;
 &lt;p&gt;&lt;tt class="docutils literal"&gt;src/myproject/core.clj&lt;/tt&gt; 가 있다. 이곳에다가 코드를 작성해주면 된다.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id7"&gt;
+&lt;div class="section" id="section-6"&gt;
 &lt;h3&gt;4. 실행&lt;/h3&gt;
 &lt;pre class="code bash literal-block"&gt;
 lein run
 &lt;/pre&gt;
 &lt;p&gt;쉽게 실행해서 나오는 것을 볼 수 있다. 뭐 간단하네...&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id8"&gt;
+&lt;div class="section" id="section-7"&gt;
 &lt;h3&gt;5. 패키징&lt;/h3&gt;
 &lt;p&gt;역시 Java라고 해야될까... jar 로 만들어두면 멀티 플랫폼에서도 작동이 가능하다는
 것이지. 그리고 그것을 묶어서 보여준다. 나중에가서 설정을 좀 해줘야되는 부분이
@@ -6985,7 +6985,7 @@ lein run
 lein uberjar
 &lt;/pre&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id9"&gt;
+&lt;div class="section" id="section-8"&gt;
 &lt;h3&gt;6. 라이브러리 검색&lt;/h3&gt;
 &lt;p&gt;필요한 라이브러리들을 검색 하는건데... 검색하는게 더 빠를듯... 너무 많이
 나온다. 그리고 가끔 인덱스를 업데이트를 해주긴 해야되는데... 오래걸려...
@@ -6997,12 +6997,12 @@ lein search ring
 이름으로 버전들이 쭉~~ 나오니 그것도하나 염두해둘 것... 버전 정보는 명령어를
 하나더 쳐서 확인하게 해야지... 저렇게 다 보여줄 필요가 있나...&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id10"&gt;
+&lt;div class="section" id="section-9"&gt;
 &lt;h3&gt;7. 패치 설정&lt;/h3&gt;
 &lt;p&gt;자동으로 잡아준다. 그래도 추가해야된다면 &lt;tt class="docutils literal"&gt;proejct.clj&lt;/tt&gt; 에 키워드
 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;:extra-classpath-dirs&lt;/span&gt;&lt;/tt&gt; 를 사용하여 리스트 형식으로 추가해주면 된다.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id11"&gt;
+&lt;div class="section" id="section-10"&gt;
 &lt;h3&gt;8. 인터프리터 실행&lt;/h3&gt;
 &lt;p&gt;인터프리터를 실행해서 작성한 내요이 맞는지 확인이 가능하다.&lt;/p&gt;
 &lt;pre class="code bash literal-block"&gt;
@@ -7010,7 +7010,7 @@ lein repl
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id12"&gt;
+&lt;div class="section" id="section-11"&gt;
 &lt;h2&gt;참고 사이트!&lt;/h2&gt;
 &lt;dl class="docutils"&gt;
 &lt;dt&gt;&lt;a class="reference external" href="http://english4u.kr/clojure-memo/index.html"&gt;Clojure 강좌 - 김영태&lt;/a&gt;&lt;/dt&gt;
@@ -7060,7 +7060,7 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
 그런데.... 왜이리 어려운거지....&lt;/p&gt;
 &lt;p&gt;신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런... 어렵지 않을
 것같아 시작...&lt;/p&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h2&gt;준비 해야될 것&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;a class="reference external" href="https://launchpad.net/+login"&gt;Launchpad&lt;/a&gt; 계정&lt;ul&gt;
@@ -7100,9 +7100,9 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;div class="section" id="section-2"&gt;
 &lt;h2&gt;작업 플로워&lt;/h2&gt;
-&lt;div class="section" id="id4"&gt;
+&lt;div class="section" id="section-3"&gt;
 &lt;h3&gt;버그일 경우&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;우선 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bugs.launchpad.net/&amp;lt;projectname&amp;gt;&lt;/span&gt;&lt;/tt&gt; 으로 접속하여 버그 리포팅.&lt;ul&gt;
@@ -7122,14 +7122,14 @@ $ brew install vim --with-cscope --with-lua --override-system-vim
 references&lt;/a&gt; 를 보면됨.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id5"&gt;
+&lt;div class="section" id="section-4"&gt;
 &lt;h3&gt;청사진으로 새로운 기능을 붙일 경우&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;이건 그냥 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Blueprints"&gt;Blueprints - wiki&lt;/a&gt; 를 보자.&lt;/li&gt;
 &lt;li&gt;관심 없고, 내가 딱히 추가할 내용도 별로 없어서... 우선은.. 빈칸...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id6"&gt;
+&lt;div class="section" id="section-5"&gt;
 &lt;h3&gt;변경을 시작해볼까~~~&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;첫 클론을 떠온거라면 상관없지만... 뜬지 꽤됐으면 업스트림이랑 코드를 맞춰줘야
@@ -7152,7 +7152,7 @@ $ git pull --ff-only origin master
 git checkout -b TOPIC-BRANCH
 &lt;/pre&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id7"&gt;
+&lt;div class="section" id="section-6"&gt;
 &lt;h3&gt;변경 사항 커밋&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;제목은 50자 이내로 작성하고, 한줄 띄우고 내용을 작성해줘야된다.&lt;/li&gt;
@@ -7175,14 +7175,14 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 오셤으로 해주면된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id8"&gt;
+&lt;div class="section" id="section-7"&gt;
 &lt;h3&gt;리뷰 등록&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;tt class="docutils literal"&gt;git reivew&lt;/tt&gt; 로 하면 &lt;tt class="docutils literal"&gt;review.openstack.org&lt;/tt&gt; 에 올라가 있는 것을 확인할 수
 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id9"&gt;
+&lt;div class="section" id="section-8"&gt;
 &lt;h3&gt;변경사항이 있을때&lt;/h3&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;커밋 메시지에 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Change-Id&lt;/span&gt;&lt;/tt&gt; 가없을때는 붙여넣기 해준 다음 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt; 로 커밋.&lt;/li&gt;
@@ -7296,7 +7296,7 @@ ADATA and Crucial 에서 글이올라왔길레 봤는데...&lt;/p&gt;
 &lt;/div&gt;
 </content><category term="Hardware"></category><category term="ram"></category><category term="hw"></category><category term="하드웨어"></category></entry><entry><title>gitworkflows(7)에대한 이야기</title><link href="https://ujuc.github.io/2015/02/02/gitworkflows7/" rel="alternate"></link><published>2015-02-02T00:00:00+09:00</published><updated>2015-03-31T00:13:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-02:/2015/02/02/gitworkflows7/</id><summary type="html">&lt;p class="first last"&gt;Git workflow 7 에대한 이야기&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;페이스북의 &lt;a class="reference external" href="https://www.facebook.com/groups/kgugs"&gt;Korea Git User Group&lt;/a&gt; 에 &lt;tt class="docutils literal"&gt;gitworkflows&lt;/tt&gt; 에 대한 내용을
-이야기하면서 슬라이드 &lt;a class="footnote-reference" href="#id3" id="id1"&gt;[1]&lt;/a&gt; 를 하나 올려주셨다.&lt;/p&gt;
+이야기하면서 슬라이드 &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt; 를 하나 올려주셨다.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated"&gt;The gitworkflows(7) illustrated&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;정말 슬라이드를 이렇게까지 만들어주는건 정말 좋은듯. 특히 발표 당시에 그것을
 못들었다고 해도 이 슬라이드만 보고도 알 수 있어서 더 좋음. 물론 발표용이라면
@@ -7304,17 +7304,17 @@ ADATA and Crucial 에서 글이올라왔길레 봤는데...&lt;/p&gt;
 &lt;p&gt;그렇다고 이걸 쓰고 싶지는 않다. 뭔가 복잡하다. 이게 어디서 좋은거지 라는
 생각이든다.&lt;/p&gt;
 &lt;p&gt;브런치 전략은 &lt;a class="reference external" href="http://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html"&gt;git-flow&lt;/a&gt; 가 가장 쉽게 접근 할 수 잇는듯...&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://git-scm.com/docs/gitworkflows/1.8.2.1"&gt;gitworkflows(7) Manual Page&lt;/a&gt; &lt;a class="footnote-reference" href="#id4" id="id2"&gt;[2]&lt;/a&gt; 를 확인하도록하자.&lt;/p&gt;
-&lt;table class="docutils footnote" frame="void" id="id3" rules="none"&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://git-scm.com/docs/gitworkflows/1.8.2.1"&gt;gitworkflows(7) Manual Page&lt;/a&gt; &lt;a class="footnote-reference" href="#footnote-2" id="footnote-reference-2"&gt;[2]&lt;/a&gt; 를 확인하도록하자.&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-1" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;원문이 일어로 보인다. &lt;a class="reference external" href="(http://www.slideshare.net/ktateish/gitworkflows7)"&gt;図解gitworkflows(7)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;원문이 일어로 보인다. &lt;a class="reference external" href="(http://www.slideshare.net/ktateish/gitworkflows7)"&gt;図解gitworkflows(7)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-2" rules="none"&gt;
 &lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
 &lt;tbody valign="top"&gt;
-&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;문서가 1.8.2.1 이전과 이후로 많은 부분이 변경된 것으로 보인다. 그만큼
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;문서가 1.8.2.1 이전과 이후로 많은 부분이 변경된 것으로 보인다. 그만큼
 길어졌고 추가된 기능들이 많은것을 볼수 있으니, 관련해서 한번 찾아보는 것이
 필요.&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;

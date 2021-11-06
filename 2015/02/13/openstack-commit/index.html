@@ -102,11 +102,13 @@
   <div id="site_article" class="container">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>OpenStack Commit</h1></div>
+        <div class="article_title">OpenStack Commit</div>
         <div class="article_meta">
-          <i class="bi bi-calendar-plus"></i> 15. 02. 13.
-          <i class="bi bi-three-dots-vertical"></i>
-          <i class="bi bi-folder2-open"></i> <a href="https://ujuc.github.io/category/develop.html">Develop</a>
+          <i class="bi bi-calendar-plus"></i> 
+            15. 02. 13.
+ / <i class="bi bi-arrow-repeat"></i> 15. 03. 31.           <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-folder2-open"></i> 
+            <a href="https://ujuc.github.io/category/develop.html">Develop</a>
           <i class="bi bi-three-dots-vertical"></i>
           <i class="bi bi-tags">
             <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
@@ -118,7 +120,7 @@
 그런데.... 왜이리 어려운거지....</p>
 <p>신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런... 어렵지 않을
 것같아 시작...</p>
-<div class="section" id="id1">
+<div class="section" id="section-1">
 <h2>준비 해야될 것</h2>
 <ol class="arabic simple">
 <li><a class="reference external" href="https://launchpad.net/+login">Launchpad</a> 계정<ul>
@@ -158,9 +160,9 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id3">
+<div class="section" id="section-2">
 <h2>작업 플로워</h2>
-<div class="section" id="id4">
+<div class="section" id="section-3">
 <h3>버그일 경우</h3>
 <ul class="simple">
 <li>우선 <tt class="docutils literal"><span class="pre">bugs.launchpad.net/&lt;projectname&gt;</span></tt> 으로 접속하여 버그 리포팅.<ul>
@@ -180,14 +182,14 @@
 references</a> 를 보면됨.</li>
 </ul>
 </div>
-<div class="section" id="id5">
+<div class="section" id="section-4">
 <h3>청사진으로 새로운 기능을 붙일 경우</h3>
 <ul class="simple">
 <li>이건 그냥 <a class="reference external" href="https://wiki.openstack.org/wiki/Blueprints">Blueprints - wiki</a> 를 보자.</li>
 <li>관심 없고, 내가 딱히 추가할 내용도 별로 없어서... 우선은.. 빈칸...</li>
 </ul>
 </div>
-<div class="section" id="id6">
+<div class="section" id="section-5">
 <h3>변경을 시작해볼까~~~</h3>
 <ul class="simple">
 <li>첫 클론을 떠온거라면 상관없지만... 뜬지 꽤됐으면 업스트림이랑 코드를 맞춰줘야
@@ -210,7 +212,7 @@ $ git pull --ff-only origin master
 git checkout -b TOPIC-BRANCH
 </pre>
 </div>
-<div class="section" id="id7">
+<div class="section" id="section-6">
 <h3>변경 사항 커밋</h3>
 <ul class="simple">
 <li>제목은 50자 이내로 작성하고, 한줄 띄우고 내용을 작성해줘야된다.</li>
@@ -233,14 +235,14 @@ Closes-Bug: #&lt;bug_number&gt;
 오셤으로 해주면된다.</li>
 </ul>
 </div>
-<div class="section" id="id8">
+<div class="section" id="section-7">
 <h3>리뷰 등록</h3>
 <ul class="simple">
 <li><tt class="docutils literal">git reivew</tt> 로 하면 <tt class="docutils literal">review.openstack.org</tt> 에 올라가 있는 것을 확인할 수
 있다.</li>
 </ul>
 </div>
-<div class="section" id="id9">
+<div class="section" id="section-8">
 <h3>변경사항이 있을때</h3>
 <ul class="simple">
 <li>커밋 메시지에 <tt class="docutils literal"><span class="pre">Change-Id</span></tt> 가없을때는 붙여넣기 해준 다음 <tt class="docutils literal"><span class="pre">--amend</span></tt> 로 커밋.</li>

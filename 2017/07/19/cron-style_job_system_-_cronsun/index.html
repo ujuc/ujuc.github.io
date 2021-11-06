@@ -102,11 +102,13 @@
   <div id="site_article" class="container">
     <div class="container">
       <div class="article">
-        <div class="article_title"><h1>Cron-Style Job System - cronsun</h1></div>
+        <div class="article_title">Cron-Style Job System - cronsun</div>
         <div class="article_meta">
-          <i class="bi bi-calendar-plus"></i> 17. 07. 19.
+          <i class="bi bi-calendar-plus"></i> 
+            17. 07. 19.
           <i class="bi bi-three-dots-vertical"></i>
-          <i class="bi bi-folder2-open"></i> <a href="https://ujuc.github.io/category/software.html">Software</a>
+          <i class="bi bi-folder2-open"></i> 
+            <a href="https://ujuc.github.io/category/software.html">Software</a>
           <i class="bi bi-three-dots-vertical"></i>
           <i class="bi bi-tags">
             <a href="https://ujuc.github.io/tag/go.html" class="article_tag">go</a>
@@ -121,25 +123,25 @@
 </ul>
 <p>분산 cron 스타일 잡 시스템이라고 한다. 대략적인 구성을 보고 싶어서 작성하는 것이니 만큼&hellip; 설치랑 해당 내용만 작성해두고 언제가 쓸일 있을때 사용 후기나 적어야겠다.</p>
 <h2 id="_1">아키텍쳐</h2>
-<div class="codehilite"><pre><span></span><code>                                         <span class="p">[</span><span class="n">web</span><span class="p">]</span>
-                                           <span class="o">+</span>
-                                           <span class="o">|</span>
-                                 <span class="o">+---------+----------------+</span>
-                                 <span class="o">|</span>                          <span class="o">|</span>
-<span class="p">(</span><span class="n">Add</span><span class="o">/</span><span class="n">Delete</span><span class="o">/</span><span class="n">Update</span><span class="o">/</span><span class="n">Execute</span> <span class="n">jobs</span><span class="p">)</span> <span class="o">|</span>                          <span class="o">|</span> <span class="p">(</span><span class="n">Query</span> <span class="n">job</span> <span class="n">exec</span> <span class="n">result</span><span class="p">)</span>
-                                 <span class="o">+</span>                          <span class="o">+</span>
-                               <span class="p">[</span><span class="n">etcd</span><span class="p">]</span>                   <span class="p">[</span><span class="n">MongoDB</span><span class="p">]</span>
-                                 <span class="o">+</span>                          <span class="o">^</span>
-                      <span class="o">+----------------------+</span>              <span class="o">|</span>
-                      <span class="o">+</span>          <span class="o">+</span>           <span class="o">+</span>              <span class="o">|</span>
-                   <span class="p">[</span><span class="n">node</span><span class="mf">.1</span><span class="p">]</span>   <span class="p">[</span><span class="n">node</span><span class="mf">.2</span><span class="p">]</span>   <span class="p">[</span><span class="n">node</span><span class="p">.</span><span class="n">n</span><span class="p">]</span>           <span class="o">|</span>
-                      <span class="o">+</span>          <span class="o">+</span>           <span class="o">+</span>              <span class="o">|</span>
-                      <span class="o">+----------------------+</span>              <span class="o">|</span>
-                                 <span class="o">|</span>                          <span class="o">|</span>
-                                 <span class="o">|</span>                          <span class="o">|</span>
-             <span class="p">(</span><span class="n">Job</span> <span class="n">execute</span> <span class="n">fail</span><span class="p">)</span>  <span class="o">|</span>   <span class="p">(</span><span class="n">Job</span> <span class="n">execute</span> <span class="n">result</span><span class="p">)</span>   <span class="o">|</span>
-                                 <span class="o">|</span>                          <span class="o">|</span>
- <span class="p">[</span><span class="n">Send</span> <span class="n">Mail</span><span class="p">]</span><span class="o">&lt;--------------------+--------------------------+</span>
+<div class="codehilite"><pre><span></span><code><span class="w">                                         </span><span class="p">[</span><span class="n">web</span><span class="p">]</span><span class="w"></span>
+<span class="w">                                           </span><span class="o">+</span><span class="w"></span>
+<span class="w">                                           </span><span class="o">|</span><span class="w"></span>
+<span class="w">                                 </span><span class="o">+---------+----------------+</span><span class="w"></span>
+<span class="w">                                 </span><span class="o">|</span><span class="w">                          </span><span class="o">|</span><span class="w"></span>
+<span class="p">(</span><span class="n">Add</span><span class="o">/</span><span class="n">Delete</span><span class="o">/</span><span class="n">Update</span><span class="o">/</span><span class="n">Execute</span><span class="w"> </span><span class="n">jobs</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w">                          </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">Query</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                 </span><span class="o">+</span><span class="w">                          </span><span class="o">+</span><span class="w"></span>
+<span class="w">                               </span><span class="p">[</span><span class="n">etcd</span><span class="p">]</span><span class="w">                   </span><span class="p">[</span><span class="n">MongoDB</span><span class="p">]</span><span class="w"></span>
+<span class="w">                                 </span><span class="o">+</span><span class="w">                          </span><span class="o">^</span><span class="w"></span>
+<span class="w">                      </span><span class="o">+----------------------+</span><span class="w">              </span><span class="o">|</span><span class="w"></span>
+<span class="w">                      </span><span class="o">+</span><span class="w">          </span><span class="o">+</span><span class="w">           </span><span class="o">+</span><span class="w">              </span><span class="o">|</span><span class="w"></span>
+<span class="w">                   </span><span class="p">[</span><span class="n">node</span><span class="mf">.1</span><span class="p">]</span><span class="w">   </span><span class="p">[</span><span class="n">node</span><span class="mf">.2</span><span class="p">]</span><span class="w">   </span><span class="p">[</span><span class="n">node</span><span class="p">.</span><span class="n">n</span><span class="p">]</span><span class="w">           </span><span class="o">|</span><span class="w"></span>
+<span class="w">                      </span><span class="o">+</span><span class="w">          </span><span class="o">+</span><span class="w">           </span><span class="o">+</span><span class="w">              </span><span class="o">|</span><span class="w"></span>
+<span class="w">                      </span><span class="o">+----------------------+</span><span class="w">              </span><span class="o">|</span><span class="w"></span>
+<span class="w">                                 </span><span class="o">|</span><span class="w">                          </span><span class="o">|</span><span class="w"></span>
+<span class="w">                                 </span><span class="o">|</span><span class="w">                          </span><span class="o">|</span><span class="w"></span>
+<span class="w">             </span><span class="p">(</span><span class="n">Job</span><span class="w"> </span><span class="n">execute</span><span class="w"> </span><span class="n">fail</span><span class="p">)</span><span class="w">  </span><span class="o">|</span><span class="w">   </span><span class="p">(</span><span class="n">Job</span><span class="w"> </span><span class="n">execute</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w">   </span><span class="o">|</span><span class="w"></span>
+<span class="w">                                 </span><span class="o">|</span><span class="w">                          </span><span class="o">|</span><span class="w"></span>
+<span class="w"> </span><span class="p">[</span><span class="n">Send</span><span class="w"> </span><span class="n">Mail</span><span class="p">]</span><span class="o">&lt;--------------------+--------------------------+</span><span class="w"></span>
 </code></pre></div>
 
 <p>Job을 매니징하고 등록하는 부분을 Web으로 구성해둬서 접근이 쉽게 되어있고, etcd를 이용해서 워커들의 작동을 정리하고, MongoDB에다가 job 실행 결과에 대한 부분을 저장해두는 방식으로 보여짐.<br>
