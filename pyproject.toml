@@ -2,7 +2,7 @@
 name = "ujuc.github.io"
 version = "1.1.0"
 description = "blog"
-authors = ["Thomas SJ Kang <ujuc@ujuc.kr>"]
+authors = ["Sungjin Kang <ujuc@ujuc.me>"]
 
 packages = [
     { include='cli', from='.' }
