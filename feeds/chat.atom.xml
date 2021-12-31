@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Chat</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/chat.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2021-12-29T23:50:12+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Adieu 2021, Bienvenue 2022</title><link href="https://ujuc.github.io/2021/12/29/adieu-2021-bienvenue-2022/" rel="alternate"></link><published>2021-12-29T23:50:12+09:00</published><updated>2021-12-29T23:50:12+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2021-12-29:/2021/12/29/adieu-2021-bienvenue-2022/</id><summary type="html">&lt;p&gt;매년을 보내며 하나의 루틴 올해는 늦었군&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2020 회고: &lt;a href="https://ujuc.github.io/2020/12/27/adieu2020bienvenue2021/"&gt;Adieu 2020, Bienvenue 2021&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Chat</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/chat.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2021-12-31T19:18:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Adieu 2021, Bienvenue 2022</title><link href="https://ujuc.github.io/2021/12/29/adieu-2021-bienvenue-2022/" rel="alternate"></link><published>2021-12-29T23:50:12+09:00</published><updated>2021-12-31T19:18:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2021-12-29:/2021/12/29/adieu-2021-bienvenue-2022/</id><summary type="html">&lt;p&gt;매년을 보내며 하나의 루틴 올해는 늦었군&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2020 회고: &lt;a href="https://ujuc.github.io/2020/12/27/adieu2020bienvenue2021/"&gt;Adieu 2020, Bienvenue 2021&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="_1"&gt;하려고 했던 일&lt;/h2&gt;
 &lt;h3 id="_2"&gt;경제 공부&lt;/h3&gt;
@@ -34,6 +34,9 @@
 &lt;h3 id="_11"&gt;경조사&lt;/h3&gt;
 &lt;p&gt;동생이 결혼을 했다.&lt;br&gt;
 나는 헤어졌다.&lt;/p&gt;
+&lt;h3 id="aws-gameday-2"&gt;AWS Gameday 2등&lt;/h3&gt;
+&lt;p&gt;회사에서 기회가 되서 나갔다가 2등했다.&lt;/p&gt;
+&lt;p&gt;https://aws.amazon.com/ko/blogs/korea/aws-gameday-microservice-magic-interview/&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="_12"&gt;해보자 내년&lt;/h2&gt;
 &lt;h3 id="_13"&gt;루틴 만들기&lt;/h3&gt;
