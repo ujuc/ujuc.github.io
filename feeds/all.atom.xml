@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2021-12-31T19:18:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Adieu 2021, Bienvenue 2022</title><link href="https://ujuc.github.io/2021/12/29/adieu-2021-bienvenue-2022/" rel="alternate"></link><published>2021-12-29T23:50:12+09:00</published><updated>2021-12-31T19:18:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2021-12-29:/2021/12/29/adieu-2021-bienvenue-2022/</id><summary type="html">&lt;p&gt;매년을 보내며 하나의 루틴 올해는 늦었군&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2020 회고: &lt;a href="https://ujuc.github.io/2020/12/27/adieu2020bienvenue2021/"&gt;Adieu 2020, Bienvenue 2021&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기...</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2022-02-17T21:22:11+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Roam Research - Tag CSS 지정</title><link href="https://ujuc.github.io/2022/02/17/roam-research--tag-css-%EC%A7%80%EC%A0%95/" rel="alternate"></link><published>2022-02-17T21:22:11+09:00</published><updated>2022-02-17T21:22:11+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2022-02-17:/2022/02/17/roam-research--tag-css-지정/</id><summary type="html">&lt;p&gt;Roam Research 에서 tag 지정할때 눈에 좀 띄게하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;그냥 본론으로 들어가자.&lt;br&gt;
+Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇게 간단해도 되나 싶은&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;[[roam/css]]&lt;/code&gt; 페이지를 생성한다.&lt;ul&gt;
+&lt;li&gt;앞으로 모든 CSS 파일을 수정하는건 여기서 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/code block&lt;/code&gt;을 선택한다.&lt;/li&gt;
+&lt;li&gt;언어 선택을 &lt;code&gt;css&lt;/code&gt;로 변경해준다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[data-tag="{TAG_NAME}"]&lt;/code&gt; CSS를 먹일 태그를 지정해준다.&lt;ul&gt;
+&lt;li&gt;앞뒤로 뭔가를 붙일려면 &lt;code&gt;[data-tag={TAG_NAME}"]::before&lt;/code&gt;, &lt;code&gt;[data-tag="{TAG_NAME}"]::after&lt;/code&gt; 를 이용해서 앞뒤에 특정 내용을 붙일 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="_1"&gt;예제&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="생각 tag 나가기" src="https://ujuc.github.io/img/2022-02-17-roam_tag.png"&gt;&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="nt"&gt;data-tag&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;생각&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mh"&gt;#1A87C0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;bold&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="nt"&gt;data-tag&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;생각&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="nd"&gt;after&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;content&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\f090&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;font-family&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;FontAwesome&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Develop"></category><category term="roam research"></category><category term="css"></category><category term="note"></category></entry><entry><title>Adieu 2021, Bienvenue 2022</title><link href="https://ujuc.github.io/2021/12/29/adieu-2021-bienvenue-2022/" rel="alternate"></link><published>2021-12-29T23:50:12+09:00</published><updated>2021-12-31T19:18:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2021-12-29:/2021/12/29/adieu-2021-bienvenue-2022/</id><summary type="html">&lt;p&gt;매년을 보내며 하나의 루틴 올해는 늦었군&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2020 회고: &lt;a href="https://ujuc.github.io/2020/12/27/adieu2020bienvenue2021/"&gt;Adieu 2020, Bienvenue 2021&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="_1"&gt;하려고 했던 일&lt;/h2&gt;
 &lt;h3 id="_2"&gt;경제 공부&lt;/h3&gt;
