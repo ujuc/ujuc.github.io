@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="ujuc">
+    
+    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기...">
+    <meta property="og:type" content="website">
+    <meta property="inLanguage" content="ko-KR">
+
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기...">
+
+    <meta name="keyward" content="datadog,kubernetes,monitoring">
+    <meta property="og:title" content="Datadog에서 Kubernetes 서비스 통합 서비스 태깅 추가하기">
+    <meta name="twitter:title" content="Datadog에서 Kubernetes 서비스 통합 서비스 태깅 추가하기">
+    <meta itemprop="name" content="Datadog에서 Kubernetes 서비스 통합 서비스 태깅 추가하기">
+    <meta name="description" content="Datadog을 kubernetes에서 사용할 수 있겠금 태깅을 하는 방법에 대해서 간략하게 정리한다.">
+    <meta property="og:description" content="Datadog을 kubernetes에서 사용할 수 있겠금 태깅을 하는 방법에 대해서 간략하게 정리한다.">
+    <meta name="twitter:description" content="Datadog을 kubernetes에서 사용할 수 있겠금 태깅을 하는 방법에 대해서 간략하게 정리한다.">
+    <meta itemprop="description" content="Datadog을 kubernetes에서 사용할 수 있겠금 태깅을 하는 방법에 대해서 간략하게 정리한다.">
+    <meta property="og:url" content="https://ujuc.github.io/2022/03/27/datadog에서-kubernetes-서비스-통합-서비스-태깅-추가하기/">
+    <meta property="article:published_time" content="2022-03-27T16:06:58+09:00">
+    <meta property="article:modified_time" content="2022-03-27T16:06:58+09:00">
+    <meta property="article:tag" content="datadog">
+    <meta property="article:tag" content="kubernetes">
+    <meta property="article:tag" content="monitoring">
+    
+
+    <!-- Title -->
+    <title>
+      잘 밤에 쓸데없는 생각하기.../Datadog에서 Kubernetes 서비스 통합 서비스 태깅 추가하기
+    </title>
+
+<!-- Style sheet -->
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-58634276-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-58634276-1');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1014314833699403",
+      enable_page_level_ads: true
+    });
+  </script>
+  </head>
+
+  <body>
+  <header>
+    <!-- navi -->
+    <div class="container" style="margin-top: 10px;">
+<nav class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">
+        <i class="bi bi-inbox"></i> Blog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/archives.html">
+        <i class="bi bi-archive"></i> Archive
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/tags.html">
+        <i class="bi bi-tags"></i> Tags
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/categories.html">
+        <i class="bi bi-folder2-open"></i> Categories
+      </a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
+        <i class="bi bi-newspaper"></i> Pages
+      </a>
+      <div class="dropdown-menu">
+      </div>
+    </li>
+</nav>    </div>
+  </header>
+
+  <div id="site_article" class="container">
+    <div class="container">
+      <div class="article">
+        <div class="article_title">Datadog에서 Kubernetes 서비스 통합 서비스 태깅 추가하기</div>
+        <div class="article_meta">
+          <i class="bi bi-calendar-plus"></i> 
+            22. 03. 27.
+ / <i class="bi bi-arrow-repeat"></i> 22. 03. 27.           <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-folder2-open"></i> 
+            <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+          <i class="bi bi-three-dots-vertical"></i>
+          <i class="bi bi-tags">
+            <a href="https://ujuc.github.io/tag/datadog.html" class="article_tag">datadog</a>
+            <a href="https://ujuc.github.io/tag/kubernetes.html" class="article_tag">kubernetes</a>
+            <a href="https://ujuc.github.io/tag/monitoring.html" class="article_tag">monitoring</a>
+          </i>
+        </div>
+        <div class="text-center"><i class="bi bi-tornado" style></i></div>
+        <div class="article_text"><p>Datadog을 이용하여 모니터링 중인데. K8s로 넘어가는 중이라 추가로 설정하는 것이 필요했다.<br>
+구축중인 동료가 기본적인 agent 구성을 해주었으나, 제대로 작동하지 않고 있었고, Tag가 잘못된 것인지 아니면 인식을 못하는 것인지 Tag를 이용하여 서비스를 찾는 환경이 쉽지 않은 일이 발생했다.<br>
+뭔가 설정을 잘못한 것이 있겠지하면서 메뉴얼을 다시 읽었고 그것에 대해 정리 해놓는다.</p>
+<ul>
+<li>환경은 Kubernetes로 작업한다.</li>
+<li>해당 파일들은 <code>kind: Deployment</code> 항목에서 할당된다. 기본 라벨은  <code>tags.datadog.com</code>으로 묶어서 사용할 수 있도록 구성할 수 있으며, 해당 묶음은 Datadog에서 읽어가는 부분이라 다르게 사용하면 제대로 못읽어 갈 수 있다.</li>
+</ul>
+<h3 id="pod">Pod 레벨 메트릭에 붙은 태깅</h3>
+<div class="codehilite"><pre><span></span><code><span class="nn">...</span><span class="w"></span>
+<span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">tags.datadog.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">tags.datadog.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">tags.datadog.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="kubernetes">Kubernetes 상태값 메트릭 태깅</h3>
+<p>Agent에 옵션을 추가해야 하는데 기본 옵션은 외부 환경 변수로 주입할 수 없어 설정 파일을 생성하여 연결 해줘야 한다. 그리고 해당 항목을 설정하지 않으면, APM에서 Kubernetes Pods 항목에 아무런 Pod도 보이지 않게 된다.</p>
+<h4 id="configmapyaml"><code>ConfigMap.yaml</code></h4>
+<ul>
+<li>라벨에서 기본 tag를 가져올 수 있도록 <code>join_standard_tags</code> 옵션을 <code>true</code>로 변경 해준다. <a href="https://github.com/DataDog/integrations-core/blob/master/kubernetes_state/datadog_checks/kubernetes_state/data/conf.yaml.example#L53-L63">코드상 설명</a></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span><span class="w"></span>
+<span class="nt">data</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">kubernetes_stage.yaml</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">init_config:</span><span class="w"></span>
+
+<span class="w">    </span><span class="no">instances:</span><span class="w"></span>
+<span class="w">      </span><span class="no">- join_standard_tags: true</span><span class="w"></span>
+</code></pre></div>
+
+<h4 id="agent-configmap">Agent 항목에 ConfigMap으로 만든 설정 파일을 마운트 해준다.</h4>
+<div class="codehilite"><pre><span></span><code><span class="nn">...</span><span class="w"></span>
+<span class="w">  </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span><span class="w"></span>
+<span class="w">      </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/datadog-agent/conf.d/kubernetes_state.d</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span><span class="w"></span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">configMap</span><span class="p">:</span><span class="w"></span>
+<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span><span class="w"></span>
+<span class="w">              </span><span class="nt">items</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes_state.yaml</span><span class="w"></span>
+<span class="w">                  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conf.yaml</span><span class="w"></span>
+</code></pre></div>
+
+<h4 id="pod-label">서비스 Pod에서 label을 다음과 같이 작성해준다.</h4>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">tags.datadoghq.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">tags.datadoghq.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">tags.datadoghq.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">tags.datadoghq.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">tags.datadoghq.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="nt">tags.datadoghq.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="apm-tracer-satesd">APM tracer와 SatesD 클라이언트 환경 설정</h3>
+<div class="codehilite"><pre><span></span><code><span class="nn">...</span><span class="w"></span>
+<span class="nt">containers</span><span class="p">:</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_ENV</span><span class="w"></span>
+<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/env&#39;]</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_SERVICE</span><span class="w"></span>
+<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/service&#39;]</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_VERSION</span><span class="w"></span>
+<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/version&#39;]</span><span class="w"></span>
+</code></pre></div>
+
+<p>이 세가지를 한번에 구성해두면, APM을 통해서 들어가거나 Trace를 통해서 서비스의 문제점을 찾을때 연관된 내용들을 손쉽게 찾을 수 있을 것이다.</p></div>
+        <div class="text-center"><i class="bi bi-tsunami"></i></div>
+
+        <!-- Buy me a coffee -->
+        <div class="text-center">
+<p>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+         alt="Buy Me A Coffee"
+         style="width:15%"
+    >
+  </a>
+</p>        </div>
+
+        <!-- Comment -->
+<div id="giscus">
+    <script src="https://giscus.app/client.js"
+        data-repo="ujuc/ujuc.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
+        data-category="General"
+        data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
+        data-mapping="title"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div><div id="utterances">
+    <script src="https://utteranc.es/client.js"
+            repo="ujuc/ujuc.github.io"
+            issue-term="url"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+</div>        <div class="text-center">🎗</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- body foot -->
+  <div class="container">
+  </div>
+
+  <!-- Title -->
+  <div id="site_title" class="container">
+<div class="row">
+  <div class="container">
+    <hr />
+    <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기...</a></p>
+    <p>Anythink, Everythink!</p>
+    <span id="social-github"><a href="https://github.com/ujuc"><i class="bi bi-github"></i></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><i class="bi bi-linkedin"></i></a></span>
+  </div>
+</div>  </div>
+
+  <!-- Footer -->
+  <div id="site_footer" class="container">
+<div class="row text-right">
+  <div class="container" style="margin-bottom: 10px;">
+      <i class="bi bi-badge-cc"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2022 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div>  </div>
+
+  <!-- Javascript -->
+<!--bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>  <div id="js" class="contents">
+  </div>
+
+  </body>
+</html>
