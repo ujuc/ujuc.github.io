@@ -150,77 +150,77 @@
 <ul>
 <li>매 5분마다 <code>echo "foobar"</code>를 실행하는 job.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
-    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;foobar&quot;</span>
-    <span class="nt">shell</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
-    <span class="nt">schedule</span><span class="p">:</span> <span class="s">&quot;*/5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-01</span><span class="w"></span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;foobar&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span><span class="w"></span>
+<span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*/5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <ul>
 <li>특정일 (2017/7/19)에만 5분마다 <code>echo "foobar"</code>를 실행하는 job.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
-    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;foobar&quot;</span>
-    <span class="nt">schedule</span><span class="p">:</span>
-      <span class="nt">minute</span><span class="p">:</span> <span class="s">&quot;*/5&quot;</span>
-      <span class="nt">dayOfMonth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">19</span>
-      <span class="nt">month</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
-      <span class="nt">year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2017</span>
-      <span class="nt">dayOfWeek</span><span class="p">:</span> <span class="s">&quot;*&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-01</span><span class="w"></span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;foobar&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">minute</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*/5&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dayOfMonth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">19</span><span class="w"></span>
+<span class="w">      </span><span class="nt">month</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span><span class="w"></span>
+<span class="w">      </span><span class="nt">year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2017</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dayOfWeek</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <ul>
 <li>특정 환경변수 값 설정</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
-    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;foobar&quot;</span>
-    <span class="nt">shell</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
-    <span class="nt">schedule</span><span class="p">:</span> <span class="s">&quot;*/5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
-    <span class="nt">environment</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PATH</span>
-        <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/bin:/usr/bin</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-01</span><span class="w"></span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;foobar&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span><span class="w"></span>
+<span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*/5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PATH</span><span class="w"></span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin:/usr/bin</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="_5">기본 값 지정</h3>
-<div class="codehilite"><pre><span></span><code><span class="nt">defaults</span><span class="p">:</span>
-    <span class="nt">environment</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">PATH</span>
-        <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/bin:/usr/bin</span>
-    <span class="nt">shell</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
-<span class="nt">jobs</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
-    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;foobar&quot;</span>  <span class="c1"># run /bin/bash</span>
-    <span class="nt">schedule</span><span class="p">:</span> <span class="s">&quot;*/5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-02</span>
-    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;zbr&quot;</span>  <span class="c1"># run /bin/sh</span>
-    <span class="nt">shell</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/bin/sh</span>
-    <span class="nt">schedule</span><span class="p">:</span> <span class="s">&quot;*/5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">defaults</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PATH</span><span class="w"></span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin:/usr/bin</span><span class="w"></span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span><span class="w"></span>
+<span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-01</span><span class="w"></span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;foobar&quot;</span><span class="w">  </span><span class="c1"># run /bin/bash</span><span class="w"></span>
+<span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*/5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-02</span><span class="w"></span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;zbr&quot;</span><span class="w">  </span><span class="c1"># run /bin/sh</span><span class="w"></span>
+<span class="w">    </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/sh</span><span class="w"></span>
+<span class="w">    </span><span class="nt">schedule</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*/5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="_6">리포트</h3>
 <ul>
 <li>job 이 실패했을때 알려준다. Sentry는 나중에 추가될 꺼임.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
-  <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-    <span class="no">echo &quot;hello&quot; 1&gt;&amp;2</span>
-    <span class="no">sleep 1</span>
-    <span class="no">exit 10</span>
-  <span class="nt">schedule</span><span class="p">:</span>
-    <span class="nt">minute</span><span class="p">:</span> <span class="s">&quot;*/2&quot;</span>
-  <span class="nt">captureStderr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">onFailure</span><span class="p">:</span>
-    <span class="nt">report</span><span class="p">:</span>
-      <span class="nt">sentry</span><span class="p">:</span>
-        <span class="nt">dsn</span><span class="p">:</span>
-          <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example</span>
-      <span class="nt">mail</span><span class="p">:</span>
-        <span class="nt">from</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example@foo.com</span>
-        <span class="nt">to</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example@bar.com</span>
-        <span class="nt">smtp_host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-01</span><span class="w"></span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">echo &quot;hello&quot; 1&gt;&amp;2</span><span class="w"></span>
+<span class="w">    </span><span class="no">sleep 1</span><span class="w"></span>
+<span class="w">    </span><span class="no">exit 10</span><span class="w"></span>
+<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">minute</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*/2&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">captureStderr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">onFailure</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">report</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">sentry</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">dsn</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span><span class="w"></span>
+<span class="w">      </span><span class="nt">mail</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example@foo.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example@bar.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">smtp_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span><span class="w"></span>
 </code></pre></div>
 
 <p><code>onFailure</code> 부분이 job 실패시 작어하는 부분임.<br>
@@ -228,17 +228,17 @@
 <ul>
 <li>job 이 성공했을 경우, 알림은 <code>onSuccess</code> 옵션을 추가한다.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
-  <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;hello world&quot;</span>
-  <span class="nt">schedule</span><span class="p">:</span>
-    <span class="nt">minute</span><span class="p">:</span> <span class="s">&quot;*/2&quot;</span>
-  <span class="nt">captureStdout</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">onSuccess</span><span class="p">:</span>
-    <span class="nt">report</span><span class="p">:</span>
-      <span class="nt">mail</span><span class="p">:</span>
-        <span class="nt">from</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example@foo.com</span>
-        <span class="nt">to</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example@bar.com</span>
-        <span class="nt">smtp_host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-01</span><span class="w"></span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;hello world&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">minute</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*/2&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">captureStdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">onSuccess</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">report</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">mail</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example@foo.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example@bar.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">smtp_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="failure">failure 제어</h3>
@@ -260,41 +260,41 @@
 </ul>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">failsWhen</span><span class="p">:</span>
-  <span class="nt">producesStdout</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-  <span class="nt">producesStderr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">nonzeroReturn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">failsWhen</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">producesStdout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="w">  </span><span class="nt">producesStderr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">nonzeroReturn</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
 
 <ul>
 <li><code>retry</code></li>
 </ul>
 <p><code>onFailure</code> 안에다가 추가한다. 그리고 job 재시도도 완전히 실패했다면, <code>onPermanentFailure</code> 옵션을 사용하여 리포트를 받는다.</p>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test-01</span>
-  <span class="nt">command</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-    <span class="no">echo &quot;hello&quot; 1&gt;&amp;2</span>
-    <span class="no">sleep 1</span>
-    <span class="no">exit 10</span>
-  <span class="nt">schedule</span><span class="p">:</span>
-    <span class="nt">minute</span><span class="p">:</span> <span class="s">&quot;*/10&quot;</span>
-  <span class="nt">captureStderr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">onFailure</span><span class="p">:</span>
-    <span class="nt">report</span><span class="p">:</span>
-      <span class="nt">mail</span><span class="p">:</span>
-        <span class="nt">from</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">a@foo.com</span>
-        <span class="nt">to</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">a@bar.com</span>
-        <span class="nt">smtp_host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
-    <span class="nt">retry</span><span class="p">:</span>
-      <span class="nt">maximumRetries</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
-      <span class="nt">initialDelay</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-      <span class="nt">maximumDelay</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
-      <span class="nt">backoffMultiplier</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
-  <span class="nt">onPermanentFailure</span><span class="p">:</span>
-    <span class="nt">report</span><span class="p">:</span>
-      <span class="nt">mail</span><span class="p">:</span>
-        <span class="nt">from</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">a@foo.com</span>
-        <span class="nt">to</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">a@bar.com</span>
-        <span class="nt">smtp_host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span>
+<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-01</span><span class="w"></span>
+<span class="w">  </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">    </span><span class="no">echo &quot;hello&quot; 1&gt;&amp;2</span><span class="w"></span>
+<span class="w">    </span><span class="no">sleep 1</span><span class="w"></span>
+<span class="w">    </span><span class="no">exit 10</span><span class="w"></span>
+<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">minute</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*/10&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">captureStderr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">onFailure</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">report</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">mail</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a@foo.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a@bar.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">smtp_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span><span class="w"></span>
+<span class="w">    </span><span class="nt">retry</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">maximumRetries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<span class="w">      </span><span class="nt">initialDelay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">      </span><span class="nt">maximumDelay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"></span>
+<span class="w">      </span><span class="nt">backoffMultiplier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
+<span class="w">  </span><span class="nt">onPermanentFailure</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">report</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">mail</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a@foo.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a@bar.com</span><span class="w"></span>
+<span class="w">        </span><span class="nt">smtp_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">127.0.0.1</span><span class="w"></span>
 </code></pre></div></div>
         <div class="text-center"><i class="bi bi-tsunami"></i></div>
 

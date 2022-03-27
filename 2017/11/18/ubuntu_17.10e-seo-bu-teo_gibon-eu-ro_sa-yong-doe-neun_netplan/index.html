@@ -163,14 +163,14 @@ $ ip link <span class="nb">set</span> <span class="nv">$dev</span> down
 <ul>
 <li>고정 아이피 설정 <em>/etc/netplan/a.yaml</em></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">network</span><span class="o">:</span>
-    <span class="n">version</span><span class="o">:</span> <span class="mi">2</span>
-    <span class="n">renderer</span><span class="o">:</span> <span class="n">networkd</span>
-    <span class="n">ethernets</span><span class="o">:</span>
-        <span class="n">enp3s0</span><span class="o">:</span>
-            <span class="n">addresses</span><span class="o">:</span>
-                <span class="o">-</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">10.2</span><span class="o">/</span><span class="mi">24</span>
-            <span class="n">dhcp4</span><span class="o">:</span> <span class="n">no</span>
+<div class="codehilite"><pre><span></span><code><span class="n">network</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">version</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">    </span><span class="n">renderer</span><span class="o">:</span><span class="w"> </span><span class="n">networkd</span><span class="w"></span>
+<span class="w">    </span><span class="n">ethernets</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">enp3s0</span><span class="o">:</span><span class="w"></span>
+<span class="w">            </span><span class="n">addresses</span><span class="o">:</span><span class="w"></span>
+<span class="w">                </span><span class="o">-</span><span class="w"> </span><span class="mf">10.10</span><span class="o">.</span><span class="mf">10.2</span><span class="o">/</span><span class="mi">24</span><span class="w"></span>
+<span class="w">            </span><span class="n">dhcp4</span><span class="o">:</span><span class="w"> </span><span class="n">no</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="netplan_2">Netplan을 사용하고 싶지 않을 경우</h3>
