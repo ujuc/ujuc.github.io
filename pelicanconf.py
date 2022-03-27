@@ -38,7 +38,7 @@ MENUITEMS = (
     ("Blog", "/", "inbox"),
     ("Archive", "/archives.html", "archive"),
     ("Tags", "/tags.html", "tags"),
-    ("Categories", "/categories.html", "folder2-open"),
+    ("Categories", "/categories.html", "folder-open"),
 )
 
 SOCIAL = (
