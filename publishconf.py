@@ -23,7 +23,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-GOOGLE_ANALYTICS = "UA-58634276-1"
+GOOGLE_ANALYTICS = "G-X9EBSXCBTS"
 GOOGLE_ADSENSE = "ca-pub-1014314833699403"
 
 BMC_CODE = "8967ktT"
