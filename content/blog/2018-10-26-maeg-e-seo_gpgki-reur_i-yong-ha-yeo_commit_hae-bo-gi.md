@@ -1,5 +1,6 @@
 Title: 맥에서 GPG키를 이용하여 Commit 해보기
 Date: 2018-10-26 23:24:58
+Modified: 2022-05-01 22:44
 Category: Develop
 Tags: gpg key, keybase.io, keybase
 Slug: maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi
@@ -11,8 +12,8 @@ Summary: GPG 키를 이용해서 내 커밋이 정말 내가 올린 것이라 �
 
 ```bash
 $ brew install gpg
-$ brew cask install keybase
-$ brew cask install gpg-suite
+$ brew install --cask keybase
+$ brew install --cask gpg-suite
 ```
 
 ### GPG 키 생성
