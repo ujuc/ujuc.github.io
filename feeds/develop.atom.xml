@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2022-02-17T21:22:11+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Roam Research - Tag CSS 지정</title><link href="https://ujuc.github.io/2022/02/17/roam-research--tag-css-%EC%A7%80%EC%A0%95/" rel="alternate"></link><published>2022-02-17T21:22:11+09:00</published><updated>2022-02-17T21:22:11+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2022-02-17:/2022/02/17/roam-research--tag-css-지정/</id><summary type="html">&lt;p&gt;Roam Research 에서 tag 지정할때 눈에 좀 띄게하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;그냥 본론으로 들어가자.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기... - Develop</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2022-05-01T22:44:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Roam Research - Tag CSS 지정</title><link href="https://ujuc.github.io/2022/02/17/roam-research--tag-css-%EC%A7%80%EC%A0%95/" rel="alternate"></link><published>2022-02-17T21:22:11+09:00</published><updated>2022-02-17T21:22:11+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2022-02-17:/2022/02/17/roam-research--tag-css-지정/</id><summary type="html">&lt;p&gt;Roam Research 에서 tag 지정할때 눈에 좀 띄게하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;그냥 본론으로 들어가자.&lt;br&gt;
 Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇게 간단해도 되나 싶은&amp;hellip;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;[[roam/css]]&lt;/code&gt; 페이지를 생성한다.&lt;ul&gt;
@@ -2012,11 +2012,11 @@ Options:
 &lt;p&gt;[MUST] 메서드 이름은 &lt;code&gt;camleCase()&lt;/code&gt; 방식으로 선언되어야 합니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Method names MUST be declared in &lt;code&gt;camelCase()&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Develop"></category><category term="php"></category><category term="psr-1"></category><category term="psr"></category><category term="transelate"></category></entry><entry><title>맥에서 GPG키를 이용하여 Commit 해보기</title><link href="https://ujuc.github.io/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/" rel="alternate"></link><published>2018-10-26T23:24:58+09:00</published><updated>2018-10-26T23:24:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-10-26:/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/</id><summary type="html">&lt;p&gt;GPG 키를 이용해서 내 커밋이 정말 내가 올린 것이라 말하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://keybase.io/"&gt;keybase.io&lt;/a&gt; 계정이 있다는 가정하에서 하니, 가입을 하자.&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="Develop"></category><category term="php"></category><category term="psr-1"></category><category term="psr"></category><category term="transelate"></category></entry><entry><title>맥에서 GPG키를 이용하여 Commit 해보기</title><link href="https://ujuc.github.io/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/" rel="alternate"></link><published>2018-10-26T23:24:58+09:00</published><updated>2022-05-01T22:44:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-10-26:/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/</id><summary type="html">&lt;p&gt;GPG 키를 이용해서 내 커밋이 정말 내가 올린 것이라 말하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://keybase.io/"&gt;keybase.io&lt;/a&gt; 계정이 있다는 가정하에서 하니, 가입을 하자.&lt;/p&gt;
 &lt;h3 id="_1"&gt;필요한 것들&lt;/h3&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ brew install gpg
-$ brew cask install keybase
-$ brew cask install gpg-suite
+$ brew install --cask keybase
+$ brew install --cask gpg-suite
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="gpg"&gt;GPG 키 생성&lt;/h3&gt;
