@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="ujuc">
     
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기...">
+    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
     <meta property="og:type" content="website">
     <meta property="inLanguage" content="ko-KR">
 
     <!-- Twitter Card data-->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기...">
+    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
 
     <meta name="keyward" content="scala,value">
     <meta property="og:title" content="Scala에서 val, var 차이">
@@ -31,7 +31,7 @@
 
     <!-- Title -->
     <title>
-      잘 밤에 쓸데없는 생각하기.../Scala에서 val, var 차이
+      잘 밤에 쓸데없는 생각하기/Scala에서 val, var 차이
     </title>
 
 <!-- Style sheet -->
@@ -44,8 +44,8 @@
 <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
 
 <!-- Feed -->
-  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... ATOM" />
-  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기... RSS" />
+  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 ATOM" />
+  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
   <script>
@@ -69,33 +69,6 @@
     <!-- navi -->
     <div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
-      </a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">
-        <em class="fa-solid fa-newspaper"></em> Pages
-      </a>
-      <div class="dropdown-menu">
-      </div>
-    </li>
 </ul>    </div>
   </header>
 
@@ -118,19 +91,19 @@
         <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
         <div class="article_text"><p>요세 Java를 공부하기는 싫고 JVM에서 도는 걸 찾다가. Scala쪽으로 어떤분이 약을 파셔서 약을먹었다.</p>
 <p>초기 공부는 역시 홈페이지에 있는 문서를 기반으로&hellip; <a href="http://docs.scala-lang.org/tour/tour-of-scala.html">Scala Tour</a> 를 보다 <a href="http://docs.scala-lang.org/tour/classes.html">Classes</a>에 갔더니 예제로 다음 과 같은 내용이 있었다.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="kd">var</span> <span class="n">x</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="kd">var</span> <span class="n">y</span><span class="p">:</span> <span class="nc">Int</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">dx</span><span class="p">:</span> <span class="nc">Int</span><span class="p">,</span> <span class="n">dy</span><span class="p">:</span> <span class="nc">Int</span><span class="p">):</span> <span class="nc">Unit</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">dx</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span>
-    <span class="p">}</span>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="n">dx</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">):</span><span class="w"> </span><span class="nc">Unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dx</span><span class="w"></span>
+<span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dy</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">override</span> <span class="k">def</span> <span class="nf">toString</span><span class="p">:</span> <span class="nc">String</span> <span class="o">=</span> 
-        <span class="s">s&quot;(</span><span class="si">$</span><span class="n">x</span><span class="s">, </span><span class="si">$</span><span class="n">y</span><span class="s">)&quot;</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="k">override</span><span class="w"> </span><span class="k">def</span><span class="w"> </span><span class="nf">toString</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="w">        </span><span class="s">s&quot;(</span><span class="si">$</span><span class="n">x</span><span class="s">, </span><span class="si">$</span><span class="n">y</span><span class="s">)&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="kd">val</span> <span class="n">point1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">point1</span><span class="p">.</span><span class="n">x</span>    <span class="c1">// 2</span>
-<span class="n">println</span><span class="p">(</span><span class="n">point1</span><span class="p">)</span>     <span class="c1">// prints (x, y)</span>
+<span class="kd">val</span><span class="w"> </span><span class="n">point1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"></span>
+<span class="n">point1</span><span class="p">.</span><span class="n">x</span><span class="w">    </span><span class="c1">// 2</span>
+<span class="n">println</span><span class="p">(</span><span class="n">point1</span><span class="p">)</span><span class="w">     </span><span class="c1">// prints (x, y)</span>
 </code></pre></div>
 
 <p>변수를 초기화하는데 <code>var</code>랑 <code>val</code>이 같이 쓰였다. 느낌상으로는 <code>var</code>, <code>val</code>이나 동일할꺼같은데 같은걸 다른곳에서 다르게 사용할 필요가 없을꺼니 구글검색.</p>
@@ -140,38 +113,38 @@
 <ul>
 <li><code>def</code>: 메소드, <em>immutable label</em>, <strong>lazily evaluated</strong></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">something</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
-<span class="n">something</span><span class="p">:</span> <span class="nc">Int</span>
+<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="k">def</span><span class="w"> </span><span class="nf">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+<span class="n">something</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"></span>
 
-<span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span>
-<span class="n">res2</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"></span>
+<span class="n">res2</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="w"></span>
 
-<span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="o">&lt;</span><span class="n">console</span><span class="o">&gt;:</span><span class="mi">12</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">value</span> <span class="n">something_=</span> <span class="n">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">member</span> <span class="n">of</span> <span class="k">object</span> <span class="nc">$iw</span>
-       <span class="n">something</span> <span class="o">=</span> <span class="mi">10</span>
-       <span class="n">^</span>
+<span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">console</span><span class="o">&gt;:</span><span class="mi">12</span><span class="p">:</span><span class="w"> </span><span class="n">error</span><span class="p">:</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">something_=</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">member</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="nc">$iw</span><span class="w"></span>
+<span class="w">       </span><span class="n">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="w">       </span><span class="n">^</span><span class="w"></span>
 </code></pre></div>
 
 <ul>
 <li><code>val</code>: 상수, <em>immutable label</em>, <strong>eagerly/immediately evaluated</strong></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="kd">val</span> <span class="n">somethingelse</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span>
-<span class="n">somethingelse</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">17</span>
+<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="n">somethingelse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="n">somethingelse</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="w"></span>
 
-<span class="n">scala</span><span class="o">&gt;</span> <span class="n">something</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">10</span>
-<span class="o">&lt;</span><span class="n">console</span><span class="o">&gt;:</span><span class="mi">12</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">value</span> <span class="n">something_=</span> <span class="n">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">member</span> <span class="n">of</span> <span class="k">object</span> <span class="nc">$iw</span>
-       <span class="n">something</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">10</span>
-       <span class="n">^</span>
+<span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="o">&lt;</span><span class="n">console</span><span class="o">&gt;:</span><span class="mi">12</span><span class="p">:</span><span class="w"> </span><span class="n">error</span><span class="p">:</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">something_=</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">member</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="nc">$iw</span><span class="w"></span>
+<span class="w">       </span><span class="n">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="w">       </span><span class="n">^</span><span class="w"></span>
 </code></pre></div>
 
 <ul>
 <li><code>var</code>: 변수, <em>mutable variable</em></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span> <span class="kd">var</span> <span class="n">aVariable</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="n">aVariable</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">6</span>
+<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">aVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="n">aVariable</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="w"></span>
 
-<span class="n">scala</span><span class="o">&gt;</span> <span class="n">aVariable</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">aVariable</span><span class="p">:</span> <span class="nc">Int</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="n">aVariable</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
 </code></pre></div>
 
 <p>개인적으로는 <a href="https://stackoverflow.com/a/33066906/978762">두번째 답</a>이 마음에 든다. </p></div>
@@ -224,7 +197,7 @@
 <div class="row">
   <div class="container">
     <hr />
-    <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기...</a></p>
+    <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기</a></p>
     <p>Anythink, Everythink!</p>
     <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
     <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><em class="fa-brands fa-linkedin"></em></a></span>
