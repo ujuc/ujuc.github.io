@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from pendulum import today
 
 AUTHOR = "ujuc"
-SITENAME = "잘 밤에 쓸데없는 생각하기..."
+SITENAME = "잘 밤에 쓸데없는 생각하기"
 SITESUBTITLE = "Anythink, Everythink!"
 SITEURL = "https://ujuc.github.io"
 START_YEAR = 2012
@@ -34,7 +34,7 @@ ARTICLE_PATHS = ["blog"]
 ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}/"
 ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
 
-MENUITEMS = (
+MENU = (
     ("Blog", "/", "inbox"),
     ("Archive", "/archives.html", "archive"),
     ("Tags", "/tags.html", "tags"),
@@ -50,7 +50,7 @@ LINKS = ()
 
 DEFAULT_PAGINATION = 5
 STATIC_PATHS = ["img", "misc"]
-DISPALY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
