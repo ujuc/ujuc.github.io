@@ -1,28 +1,54 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Gowun+Batang:wght@400;700&display=swap');
+@font-face {
+  font-family: 'ChusaLove';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'Binggrae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Var */
 :root {
-  --header-font: "Dongle", sans-serif;
-  --body-font: "Gowun Batang", sans-serif;
+  --site-title-font: 'ChusaLove', serif;
+  --article-title-font: 'Binggrae', serif;
+  --article-title-font-size: 1.8rem;
+  --header-font: 'IBM Plex Sans', sans-serif;
+  --body-font: 'NanumSquareRound', sans-serif;
+  --body-font-size: .95rem;
 }
 
 a, a:link, a:visited, a:hover {
-  color: #4335a4;
+  color: #000000;
+  text-decoration: none;
 }
 
-div.article_text dl {
+div.article-text dl {
   margin-left: .6rem;
   margin-bottom: 0;
 }
 
-div.article_text dl dt {
-  font-size: 1rem;
+div.article-text dl dt {
+  font-size: .9rem;
 }
 
-div.article_text dl dd {
-  font-size: .9rem;
-  margin-left: .9rem;
+div.article-text dl dd {
+  font-size: .85rem;
+  margin-left: 1rem;
 }
 
 img {
@@ -30,7 +56,7 @@ img {
 }
 
 blockquote {
-  font-size: 0.9rem;
+  font-size: .9rem;
   color: #649098;
 }
 
@@ -45,27 +71,28 @@ article div.gist{
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
   font-weight: bold;
 }
 
 h1 {
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin-top: 1.8rem;
-}
-
-h3 {
   font-size: 1.6rem;
   margin-top: 1.6rem;
 }
 
-h4 {
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h3 {
   font-size: 1.4rem;
   margin-top: 1.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  margin-top: 1.3rem;
 }
 
 h5 {
@@ -79,28 +106,65 @@ h6 {
 }
 
 /* class */
-.article_title {
-  font-family: var(--header-font);
-  font-size: 2rem;
+.nav-link {
+  font-family: var(--article-title-font);
+  font-size: .9rem;
+}
+
+.site-title {
+  font-family: var(--site-title-font);
+  font-size: 1.2rem;
+}
+
+.site-body {
+  font-family: var(--body-font);
+  font-size: .95rem;
+}
+
+.archive-title {
+  font-family: var(--article-title-font);
+  font-size: 1.05rem;
   font-weight: bold;
 }
 
-.nav, .pagination {
-  font-family: var(--header-font);
-  font-size: 1.5rem;
+.archive-body {
+  font-family: var(--article-title-font);
+  font-size: .95rem;
 }
 
-.article_text, .article_tag, .article_meta .category_title, .archive_title {
+.article-tag {
   font-family: var(--body-font);
+  font-size: .95rem;
+}
+
+.article-title {
+  font-family: var(--article-title-font);
+  font-size: var(--article-title-font-size);
+}
+
+.article-meta {
+  font-family: var(--body-font);
+  font-size: .85rem;
+}
+
+.article-text {
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+}
+
+.pagination {
+  font-family: var(--body-font);
+  font-size: .9rem;
+}
+
+.category-title {
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
 }
 
 .toc {
   font-family: var(--body-font);
   font-size: .9rem;
-}
-
-.pagination {
-  margin-bottom: 0;
 }
 
 .alert {
@@ -116,30 +180,23 @@ h6 {
   white-space: nowrap;
 }
 
+/* icon */
+.svg-inline--fa {
+  font-size: .65rem;
+  margin-bottom: 1px;
+}
+
 /* id */
-#site_footer {
+#site-article {
+  margin-top: 20px;
+}
+
+#site-footer {
   font-size: .8rem;
   color: #93a1a1;
-}
-
-#site_title {
-  font-family: var(--header-font);
-}
-
-#site_title span a {
-  color: #000;
-}
-
-#site_article {
-  margin-top: 20px;
 }
 
 #social {
   font-size: 1rem;
   margin-right: .2rem;
-}
-
-/* icon */
-.svg-inline--fa {
-  font-size: .9rem;
 }

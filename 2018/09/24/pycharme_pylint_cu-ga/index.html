@@ -29,7 +29,6 @@
     <meta property="article:tag" content="pylint">
     <meta property="article:tag" content="python">
     <meta property="article:tag" content="lint">
-    
 
     <!-- Title -->
     <title>
@@ -38,7 +37,7 @@
 
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
 
 <!-- Style -->
@@ -46,54 +45,78 @@
 <link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
 
 <!-- Feed -->
-  <link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 ATOM" />
-  <link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 ATOM" />
+<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-    gtag('config', 'G-X9EBSXCBTS');
-  </script>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-1014314833699403",
-      enable_page_level_ads: true
-    });
-  </script>
+gtag('config', 'G-X9EBSXCBTS');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1014314833699403",
+    enable_page_level_ads: true
+  });
+</script>
   </head>
 
   <body>
-  <header>
-    <!-- navi -->
-    <div class="container" style="margin-top: 10px;">
+    <header>
+      <!-- navi -->
+      <div class="container" style="margin-top: 10px;">
 <ul class="nav">
-</ul>    </div>
-  </header>
+    <li class="nav-item">
+      <a class="nav-link" href="/">
+        <em class="fa-solid fa-inbox"></em> Blog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/archives.html">
+        <em class="fa-solid fa-archive"></em> Archive
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/tags.html">
+        <em class="fa-solid fa-tags"></em> Tags
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/categories.html">
+        <em class="fa-solid fa-folder-open"></em> Categories
+      </a>
+    </li>
+</ul>      </div>
+    </header>
 
-  <div id="site_article" class="container">
-    <div class="container">
-      <div class="article">
-        <div class="article_title">Pycharm에 pylint 추가</div>
-        <div class="article_meta">
-          <em class="fa-regular fa-calendar-plus"></em>
-            18. 09. 24.
-          <em class="fa-solid fa-ellipsis-vertical"></em>
-          <em class="fa-solid fa-folder-open"></em> 
-            <a href="https://ujuc.github.io/category/software.html">Software</a>
-          <em class="fa-solid fa-ellipsis-vertical"></em>
-          <em class="fa-solid fa-tags"></em>
-            <a href="https://ujuc.github.io/tag/pycharm.html" class="article_tag">pycharm</a>
-            <a href="https://ujuc.github.io/tag/pylint.html" class="article_tag">pylint</a>
-            <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
-            <a href="https://ujuc.github.io/tag/lint.html" class="article_tag">lint</a>
-          </i>
-        </div>
-        <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-        <div class="article_text"><p>나는 블로그를 사용할때 Python 스크립트를 사용해서 작업을 하고 있다. 그러다보니 매번 파일에 추가되는 내용이나 달라지는 것들이 있으면 수정을 하는데&hellip;</p>
+    <div id="site-article" class="container">
+<div class="container">
+  <div class="article">
+  <!-- Title -->
+    <div class="article-title">Pycharm에 pylint 추가</div>
+
+  <!-- Meta -->
+    <div class="article-meta">
+      <em class="fa-regular fa-calendar-plus"></em>
+        18. 09. 24.
+      <em class="fa-solid fa-ellipsis-vertical"></em>
+      <em class="fa-solid fa-folder-open"></em>
+        <a href="https://ujuc.github.io/category/software.html">Software</a>
+      <em class="fa-solid fa-ellipsis-vertical"></em>
+      <em class="fa-solid fa-tags"></em>
+        <a href="https://ujuc.github.io/tag/pycharm.html" class="article_tag">pycharm</a>
+        <a href="https://ujuc.github.io/tag/pylint.html" class="article_tag">pylint</a>
+        <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
+        <a href="https://ujuc.github.io/tag/lint.html" class="article_tag">lint</a>
+    </div>
+
+  <!--Article -->
+    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+    <div class="article-text"><p>나는 블로그를 사용할때 Python 스크립트를 사용해서 작업을 하고 있다. 그러다보니 매번 파일에 추가되는 내용이나 달라지는 것들이 있으면 수정을 하는데&hellip;</p>
 <p>지금까지는 lint 작업은 하지않고서 pycharm에서 지적하는 부분만 가지고 작업을 하였다만&hellip; 이제 lint를 적용해서 작업을 공통으로 사용할 수 있게 해놔야지&hellip;</p>
 <p>pylint만 있는건 아니지만, pep8이나 다른것들을 정리하려면&hellip; 너무 많은 것을 등록해야된&hellip; 논외로..</p>
 <p><a href="https://stackoverflow.com/questions/38134086/how-to-run-pylint-with-pycharm">How to run Pylint with PyCharm - stackoverflow</a></p>
@@ -102,74 +125,78 @@
 <p>나는 global로 pylint를 설치하지 않았다. 귀찮기도하고 많은 버전을 섞어쓰는 환경이다보니&hellip; <code>pipenv</code> 를 사용하고 있는데 이것에 대한 내용은 없다. global 하게 패키지까는 것도 부담스럽고&hellip;</p>
 <p>다음 사진과 같이 나는 내용을 수정해서 사용한다.</p>
 <p><img alt="My_settings" src="https://ujuc.github.io/img/2018-09-24_pycharm_export_tool_setting.png"></p></div>
-        <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
 
-        <!-- Buy me a coffee -->
-        <div class="text-center">
-<p>
+  <!-- Buy me a coffee -->
+    <div class="text-center">
+<div>
   <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
-         alt="Buy Me A Coffee"
-         style="width:15%"
-    >
+       alt="Buy Me A Coffee"
+       style="width:15%">
   </a>
-</p>        </div>
+</div>    </div>
 
-        <!-- Comment -->
+  <!-- Comment -->
 <div id="giscus">
-    <script src="https://giscus.app/client.js"
-        data-repo="ujuc/ujuc.github.io"
-        data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-        data-category="General"
-        data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-        data-mapping="title"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-theme="light"
-        crossorigin="anonymous"
-        async>
+<script src="https://giscus.app/client.js"
+  data-repo="ujuc/ujuc.github.io"
+  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
+  data-category="General"
+  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
+  data-mapping="title"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-theme="light"
+  crossorigin="anonymous"
+  async>
 </script>
 </div><div id="utterances">
-    <script src="https://utteranc.es/client.js"
-            repo="ujuc/ujuc.github.io"
-            issue-term="url"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-    </script>
-</div>        <div class="text-center">🎗</div>
-      </div>
+  <script src="https://utteranc.es/client.js"
+    repo="ujuc/ujuc.github.io"
+    issue-term="url"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>    <div class="text-center">🎗</div>
+  </div>
+</div>
     </div>
-  </div>
 
-  <!-- body foot -->
-  <div class="container">
-  </div>
+    <!-- body foot -->
+    <div class="container">
+    </div>
 
-  <!-- Title -->
-  <div id="site_title" class="container">
+    <!-- Title -->
+    <div id="site-title" class="container">
+      <hr/>
 <div class="row">
   <div class="container">
-    <hr />
-    <p><a href="https://ujuc.github.io" class="article_title">잘 밤에 쓸데없는 생각하기</a></p>
-    <p>Anythink, Everythink!</p>
+  <div class="site-title">
+    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+  </div>
+  <div class="site-body">
+    Anythink, Everythink!
+  </div>
+  <div>
     <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
     <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><em class="fa-brands fa-linkedin"></em></a></span>
   </div>
-</div>  </div>
+  </div>
+</div>    </div>
 
-  <!-- Footer -->
-  <div id="site_footer" class="container">
+    <!-- Footer -->
+    <div id="site-footer" class="container">
 <div class="row text-right">
   <div class="container" style="margin-bottom: 10px;">
     <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2022 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>  </div>
+</div>    </div>
 
-  <!-- Javascript -->
+    <!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>  <div id="js" class="contents">
-  </div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
+    </div>
   </body>
 </html>
