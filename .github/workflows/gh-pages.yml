@@ -40,5 +40,5 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_branch: master
           publish_dir: ./output
-          user_name: Thomas Sunjin Kang
+          user_name: Sunjin Kang
           user_email: ujuc@ujuc.me
