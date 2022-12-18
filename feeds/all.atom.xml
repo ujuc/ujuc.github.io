@@ -1082,8 +1082,8 @@ Hash: SHA256
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sphinx-build -b html -D &lt;span class="nv"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;ko . _build/html/ko
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;로 하면된다고 한다. 아직이 부분을 해보지는 않아서 해보고 업뎃하는걸로&amp;hellip;&lt;/p&gt;</content><category term="Develop"></category><category term="documents"></category><category term="po"></category><category term="readthedocs"></category></entry><entry><title>Adieu 2019, Bienenue 2020</title><link href="https://ujuc.github.io/2019/12/28/adieu_2019,_bienenue_2020/" rel="alternate"></link><published>2019-12-28T15:31:04+09:00</published><updated>2019-12-28T15:31:04+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-12-28:/2019/12/28/adieu_2019,_bienenue_2020/</id><summary type="html">&lt;p&gt;일년치 회고 다음엔 6개월로 할까&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2018년도 작성글&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://ujuc.github.io/2018/12/28/adieu_2018,_bienvenue_2019/"&gt;Adieu 2018, Bienvenue 2019&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;로 하면된다고 한다. 아직이 부분을 해보지는 않아서 해보고 업뎃하는걸로&amp;hellip;&lt;/p&gt;</content><category term="Develop"></category><category term="documents"></category><category term="po"></category><category term="readthedocs"></category></entry><entry><title>Adieu 2019, Bienvenue 2020</title><link href="https://ujuc.github.io/2019/12/28/adieu_2019_bienvenue_2020/" rel="alternate"></link><published>2019-12-28T15:31:04+09:00</published><updated>2019-12-28T15:31:04+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-12-28:/2019/12/28/adieu_2019_bienvenue_2020/</id><summary type="html">&lt;p&gt;일년치 회고 다음엔 6개월로 할까&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2018년도 작성글&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://ujuc.github.io/2018/12/28/adieu_2018_bienvenue_2019/"&gt;Adieu 2018, Bienvenue 2019&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;정리해야지&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그러고 보니 작년에도 12월 28일에 작성했구나.ㅡ.ㅡ;;&lt;/p&gt;
 &lt;hr&gt;
@@ -2492,7 +2492,7 @@ Options:
 &lt;p&gt;[MAY] 향후 권장 사항은 스타일이나 연습해야 될 많은 요소들을 다루기 위해 이 가이드를 수정하고 확장할 수 있습니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Future recommendations MAY revise and extend this guide to address those or other elements of style and practice.&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Develop"></category><category term="php"></category><category term="psr"></category><category term="prs-2"></category><category term="transelate"></category></entry><entry><title>Adieu 2018, Bienvenue 2019</title><link href="https://ujuc.github.io/2018/12/28/adieu_2018,_bienvenue_2019/" rel="alternate"></link><published>2018-12-28T07:47:47+09:00</published><updated>2018-12-28T07:47:47+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-12-28:/2018/12/28/adieu_2018,_bienvenue_2019/</id><summary type="html">&lt;p&gt;2018년이 끝나감&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2017년 작성했던 글&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="Develop"></category><category term="php"></category><category term="psr"></category><category term="prs-2"></category><category term="transelate"></category></entry><entry><title>Adieu 2018, Bienvenue 2019</title><link href="https://ujuc.github.io/2018/12/28/adieu_2018_bienvenue_2019/" rel="alternate"></link><published>2018-12-28T07:47:47+09:00</published><updated>2018-12-28T07:47:47+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-12-28:/2018/12/28/adieu_2018_bienvenue_2019/</id><summary type="html">&lt;p&gt;2018년이 끝나감&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2017년 작성했던 글&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://ujuc.kr/adieu-2017-bienvenue-2018-2cb5ef44c708"&gt;Adieu 2017, Bienvenue 2018 - ujuc thinks&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;벌써 2019년이 다가오고 있어서 정리하자.&lt;/p&gt;
 &lt;hr&gt;
