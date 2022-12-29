@@ -1,9 +1,14 @@
-from pathlib import Path
 import re
 
+from pathlib import Path
+from subprocess import run as sub_run
+
 import pendulum
-from invoke import Collection, Program, task
-from rich.console import Console
+
+from cleo.application import Application
+from cleo.commands.command import Command
+from cleo.helpers import argument
+
 
 BASE_PATH = Path.cwd()
 CONTENT_PATH = BASE_PATH / "content"
@@ -11,91 +16,88 @@ OUTPUT_PATH = BASE_PATH / "output"
 CONF_FILE = BASE_PATH / "pelicanconf.py"
 PUBLISH_CONF_FILE = BASE_PATH / "publishconf.py"
 
-console = Console()
 
+class PostCmd(Command):
+    name = "post"
+    description = "Make post template"
+    arguments = [argument("title", "Post title")]
 
-@task(
-    help={"title": "Post title", "rst": "Post format. if false, make markdown format"}
-)
-def post(ctx, title, rst=False):
-    """Make post template"""
-    today = pendulum.now()
+    def handle(self) -> int:
+        title = self.argument("title")
+        today = pendulum.now()
 
-    slug = re.sub("[^A-Za-z0-9가-힣\s]", "", title).lower().replace(" ", "-")
-    date = today.to_date_string()
-    post_date = today.to_datetime_string()
-    file_title = f"{date}-{slug}"
+        slug = re.sub("[^A-Za-z0-9가-힣]", "", title).lower().replace(" ", "-")
+        date = f"{today.month}-{today.day}"
+        post_date = today.to_datetime_string()
 
-    file_name = f"{file_title}.md"
-
-    article = (
-        f"Title: {title}\n"
-        f"Date: {post_date}\n"
-        f"Modified: {post_date}\n"
-        "Category: \n"
-        "Tags: \n"
-        f"Slug: {slug}\n"
-        "Summary: \n\n"
-    )
-
-    if rst:
-        file_name = f"{file_title}.rst"
-        hashes = "#" * len(title) * 2
+        file_name = f"{date}-{slug}.md"
 
         article = (
-            f"{title}\n"
-            f"{hashes}\n"
-            f":date: {post_date}\n"
-            ":category: \n"
-            ":tags: \n"
-            f":slug: {slug}\n"
-            ":summary: \n\n"
+            f"Title: {title}\n"
+            f"Date: {post_date}\n"
+            f"Modified: {post_date}\n"
+            "Category: \n"
+            "Tags: \n"
+            f"Slug: {slug}\n"
+            "Summary: \n\n"
         )
 
-    blog_path = CONTENT_PATH / "blog"
-    if not blog_path.is_dir():
-        blog_path.mkdir(parents=True)
+        blog_path = CONTENT_PATH / "blog" / f"{today.year}"
+        if not blog_path.is_dir():
+            blog_path.mkdir(parents=True)
 
-    post_path = blog_path / file_name
+        post_path = blog_path / file_name
 
-    with post_path.open("w") as post_file:
-        post_file.write(article)
+        with post_path.open("w") as post_file:
+            post_file.write(article)
 
-    console.print(f"File created -> {post_path}")
+        self.line(f"Post crate -> {post_path}")
 
-
-@task()
-def preview(ctx):
-    """Start preview web page server"""
-    ctx.run(f"pelican --autoreload --listen")
+        return 0
 
 
-@task()
-def clean(ctx):
-    """Clean up this dir"""
-    ctx.run(f"rm -rf {OUTPUT_PATH} {BASE_PATH}/__pycache__ {BASE_PATH}/cache")
+class PreviewCmd(Command):
+    name = "preview"
+    description = "Start preview page server"
+
+    def handle(self) -> int:
+        return sub_run(
+            "pelican --autoreload --listen", shell=True, check=True
+        ).returncode
 
 
-@task(post=[clean])
-def pub(ctx):
-    """Publish to github main page"""
-    ctx.run(f"pelican -s {PUBLISH_CONF_FILE}")
-    ctx.run(f"ghp-import -m 'Generate Pelican site' -b master {OUTPUT_PATH}")
-    ctx.run(f"git push origin master")
+class CleanCmd(Command):
+    name = "clean"
+    description = "Clean up cache dir"
+
+    def handle(self) -> int:
+        return sub_run(
+            f"rm -rf {OUTPUT_PATH} {BASE_PATH}/__pycache__ {BASE_PATH}/cache",
+            shell=True,
+            check=True,
+        ).returncode
 
 
-@task()
-def build(ctx):
-    """Build Blog Post"""
-    ctx.run(f"pelican -s {PUBLISH_CONF_FILE}")
+class BuildCmd(Command):
+    """
+    Build Blog Post
+    """
+
+    name = "build"
+    description = "Build Blog Post"
+
+    def handle(self) -> int:
+        return sub_run(
+            f"pelican -s {PUBLISH_CONF_FILE}", shell=True, check=True
+        ).returncode
 
 
 def run():
-    program = Program(version="1.2.0")
-    program.namespace = Collection()
-    program.namespace.add_task(post)
-    program.namespace.add_task(preview)
-    program.namespace.add_task(pub)
-    program.namespace.add_task(clean)
-    program.namespace.add_task(build)
-    program.run()
+    app = Application("cli", "2.0")
+
+    app.add(PostCmd())
+    app.add(PreviewCmd())
+    app.add(CleanCmd())
+    app.add(BuildCmd())
+
+    app.run()
