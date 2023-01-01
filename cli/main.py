@@ -26,7 +26,7 @@ class PostCmd(Command):
         title = self.argument("title")
         today = pendulum.now()
 
-        slug = re.sub("[^A-Za-z0-9가-힣]", "", title).lower().replace(" ", "-")
+        slug = re.sub("[^\w\s가-힣]", "", title).lower().replace(" ", "-")
         date = f"{today.month}-{today.day}"
         post_date = today.to_datetime_string()
 
