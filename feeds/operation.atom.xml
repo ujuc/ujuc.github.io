@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2022-03-27T16:06:58+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Datadog에서 Kubernetes 서비스 통합 서비스 태깅 추가하기</title><link href="https://ujuc.github.io/2022/03/27/datadog%EC%97%90%EC%84%9C-kubernetes-%EC%84%9C%EB%B9%84%EC%8A%A4-%ED%86%B5%ED%95%A9-%EC%84%9C%EB%B9%84%EC%8A%A4-%ED%83%9C%EA%B9%85-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/" rel="alternate"></link><published>2022-03-27T16:06:58+09:00</published><updated>2022-03-27T16:06:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2022-03-27:/2022/03/27/datadog에서-kubernetes-서비스-통합-서비스-태깅-추가하기/</id><summary type="html">&lt;p&gt;Datadog을 kubernetes에서 사용할 수 있겠금 태깅을 하는 방법에 대해서 간략하게 정리한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Datadog을 이용하여 모니터링 중인데. K8s로 넘어가는 중이라 추가로 설정하는 것이 필요했다.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2023-01-18T19:22:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Datadog에서 Kubernetes 서비스 통합 서비스 태깅 추가하기</title><link href="https://ujuc.github.io/2022/03/27/datadog%EC%97%90%EC%84%9C-kubernetes-%EC%84%9C%EB%B9%84%EC%8A%A4-%ED%86%B5%ED%95%A9-%EC%84%9C%EB%B9%84%EC%8A%A4-%ED%83%9C%EA%B9%85-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/" rel="alternate"></link><published>2022-03-27T16:06:58+09:00</published><updated>2022-03-27T16:06:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2022-03-27:/2022/03/27/datadog에서-kubernetes-서비스-통합-서비스-태깅-추가하기/</id><summary type="html">&lt;p&gt;Datadog을 kubernetes에서 사용할 수 있겠금 태깅을 하는 방법에 대해서 간략하게 정리한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Datadog을 이용하여 모니터링 중인데. K8s로 넘어가는 중이라 추가로 설정하는 것이 필요했다.&lt;br&gt;
 구축중인 동료가 기본적인 agent 구성을 해주었으나, 제대로 작동하지 않고 있었고, Tag가 잘못된 것인지 아니면 인식을 못하는 것인지 Tag를 이용하여 서비스를 찾는 환경이 쉽지 않은 일이 발생했다.&lt;br&gt;
 뭔가 설정을 잘못한 것이 있겠지하면서 메뉴얼을 다시 읽었고 그것에 대해 정리 해놓는다.&lt;/p&gt;
 &lt;ul&gt;
@@ -192,10 +192,12 @@
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;&amp;lt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;*default-volume&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;driver&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;default&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;volume-local&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="docker"></category><category term="compose"></category><category term="config file"></category></entry><entry><title>맥에서 gpg 키 서명 실패</title><link href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" rel="alternate"></link><published>2020-02-19T05:38:42+09:00</published><updated>2020-02-19T05:38:42+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-19:/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/</id><summary type="html">&lt;p&gt;commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;열심히 공부하고 커밋하려는 순간&amp;hellip;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="docker"></category><category term="compose"></category><category term="config file"></category></entry><entry><title>맥에서 gpg 키 서명 실패</title><link href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" rel="alternate"></link><published>2020-02-19T05:38:42+09:00</published><updated>2023-01-18T19:22:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-19:/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/</id><summary type="html">&lt;p&gt;commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;2023.01.18 설정값이 변경된 것들이 있어서 회사 컴퓨터를 새롭게 받아 설치한 기념으로 업데이트 한다. (Thanks to. &lt;a href="https://github.com/roeniss"&gt;@roeniss&lt;/a&gt;)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;열심히 공부하고 커밋하려는 순간&amp;hellip;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; git commit
 error: gpg tailed to sign the data
-fatal: failed to wrtie commit object
+fatal: failed to write commit object
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;gpg키로 commit을 할때마다 비밀번호를 물어야되는데&amp;hellip;&lt;br&gt;
@@ -203,9 +205,11 @@ fatal: failed to wrtie commit object
 &lt;p&gt;그게 문제가 되었다. 오랜만에 재시작을 하면서 섹션 만료가 되었고, 바꼈으면 물어야지&amp;hellip;&lt;br&gt;
 조용히 있어서 문제가 되었다.&lt;/p&gt;
 &lt;p&gt;이럴때 &lt;a href="https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/41506446"&gt;Stack Overflow/ git - gpg onto mac osx: error: failed to sign the data&lt;/a&gt;에서는 &lt;a href="https://www.gnupg.org/related_software/pinentry/index.en.html"&gt;pinentry&lt;/a&gt;를 추가 설치해서 비밀번호를 얻어서 하라고 되어있다.&lt;/p&gt;
+&lt;p&gt;MacOS의 경우, &lt;code&gt;pinentry&lt;/code&gt; 가 &lt;code&gt;pinentry-mac&lt;/code&gt;으로 패키징되어있다. 그래서 다음과같이 설치한다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew install pinentry-mac
 
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;pinentry-program /usr/local/bin/pinentry-mac&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.gnupg/gpg-agent.conf
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pinentry-program ${which pinentry}&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.gnupg/gpg-agent.conf
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GPG_TTY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;tty&lt;span class="k"&gt;)&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;작동하는지 테스트&lt;/p&gt;

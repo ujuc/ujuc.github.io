@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2023-01-01T22:38:23+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>특정 CSS selector를 잡기위해 정규식 사용하기</title><link href="https://ujuc.github.io/2023/01/01/%ED%8A%B9%EC%A0%95-css-selector%EB%A5%BC-%EC%9E%A1%EA%B8%B0%EC%9C%84%ED%95%B4-%EC%A0%95%EA%B7%9C%EC%8B%9D-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" rel="alternate"></link><published>2023-01-01T22:38:23+09:00</published><updated>2023-01-01T22:38:23+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2023-01-01:/2023/01/01/특정-css-selector를-잡기위해-정규식-사용하기/</id><summary type="html">&lt;p&gt;Roam Research에서 tag에 특정 값을 넣는데 필요한 설정을 찾다가 발견한 css 규식이형 사용법&lt;/p&gt;</summary><content type="html">&lt;p&gt;Roam Research에서 css를 튜닝할 수 있도록 열어두고 있다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2023-01-18T19:22:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>특정 CSS selector를 잡기위해 정규식 사용하기</title><link href="https://ujuc.github.io/2023/01/01/%ED%8A%B9%EC%A0%95-css-selector%EB%A5%BC-%EC%9E%A1%EA%B8%B0%EC%9C%84%ED%95%B4-%EC%A0%95%EA%B7%9C%EC%8B%9D-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" rel="alternate"></link><published>2023-01-01T22:38:23+09:00</published><updated>2023-01-01T22:38:23+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2023-01-01:/2023/01/01/특정-css-selector를-잡기위해-정규식-사용하기/</id><summary type="html">&lt;p&gt;Roam Research에서 tag에 특정 값을 넣는데 필요한 설정을 찾다가 발견한 css 규식이형 사용법&lt;/p&gt;</summary><content type="html">&lt;p&gt;Roam Research에서 css를 튜닝할 수 있도록 열어두고 있다.&lt;/p&gt;
 &lt;p&gt;그냥 tag가 &lt;code&gt;@home/경조사&lt;/code&gt; 와 같이 단계를 만들어나가고 있는데&amp;hellip; 튜닝을 하고 싶다는거지&amp;hellip;&lt;br&gt;
 그래서 규식이형이 가능한지 찾다가 &lt;a href="https://stackoverflow.com/questions/42497352/css-with-regex-for-id"&gt;Css with regex for id&lt;/a&gt; 라는 글을 발견.&lt;/p&gt;
 &lt;p&gt;사용법은 간단하다.&lt;/p&gt;
@@ -1013,10 +1013,12 @@ git config --global difftool.diff-code.cmd &lt;span class="s1"&gt;&amp;#39;code 
 &lt;p&gt;추가하고 테스트 커밋으로 퍼블리싱되는 것을 확인하였다.&lt;/p&gt;
 &lt;p&gt;오늘의 삽질은 끝&amp;hellip;&lt;/p&gt;
 &lt;p&gt;PS. Poetry 를 사용하기 위한 actions가 여러개 있는데. &lt;a href="https://github.com/marketplace/actions/setup-poetry"&gt;Gr1N/Seup Poetry&lt;/a&gt; 를 사용한 것은 별표 많이 받은 Actions가 너무 느려서 였다.&lt;br&gt;
-명령어 많이 쓰지도 않는데 빌드하는데 1분이상 자기가 잡아먹고 있는건 아니지않는가&amp;hellip;&lt;/p&gt;</content><category term="Chat"></category><category term="github actions"></category></entry><entry><title>맥에서 gpg 키 서명 실패</title><link href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" rel="alternate"></link><published>2020-02-19T05:38:42+09:00</published><updated>2020-02-19T05:38:42+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-19:/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/</id><summary type="html">&lt;p&gt;commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;열심히 공부하고 커밋하려는 순간&amp;hellip;&lt;/p&gt;
+명령어 많이 쓰지도 않는데 빌드하는데 1분이상 자기가 잡아먹고 있는건 아니지않는가&amp;hellip;&lt;/p&gt;</content><category term="Chat"></category><category term="github actions"></category></entry><entry><title>맥에서 gpg 키 서명 실패</title><link href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" rel="alternate"></link><published>2020-02-19T05:38:42+09:00</published><updated>2023-01-18T19:22:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-19:/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/</id><summary type="html">&lt;p&gt;commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;2023.01.18 설정값이 변경된 것들이 있어서 회사 컴퓨터를 새롭게 받아 설치한 기념으로 업데이트 한다. (Thanks to. &lt;a href="https://github.com/roeniss"&gt;@roeniss&lt;/a&gt;)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;열심히 공부하고 커밋하려는 순간&amp;hellip;&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; git commit
 error: gpg tailed to sign the data
-fatal: failed to wrtie commit object
+fatal: failed to write commit object
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;gpg키로 commit을 할때마다 비밀번호를 물어야되는데&amp;hellip;&lt;br&gt;
@@ -1024,9 +1026,11 @@ fatal: failed to wrtie commit object
 &lt;p&gt;그게 문제가 되었다. 오랜만에 재시작을 하면서 섹션 만료가 되었고, 바꼈으면 물어야지&amp;hellip;&lt;br&gt;
 조용히 있어서 문제가 되었다.&lt;/p&gt;
 &lt;p&gt;이럴때 &lt;a href="https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/41506446"&gt;Stack Overflow/ git - gpg onto mac osx: error: failed to sign the data&lt;/a&gt;에서는 &lt;a href="https://www.gnupg.org/related_software/pinentry/index.en.html"&gt;pinentry&lt;/a&gt;를 추가 설치해서 비밀번호를 얻어서 하라고 되어있다.&lt;/p&gt;
+&lt;p&gt;MacOS의 경우, &lt;code&gt;pinentry&lt;/code&gt; 가 &lt;code&gt;pinentry-mac&lt;/code&gt;으로 패키징되어있다. 그래서 다음과같이 설치한다.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew install pinentry-mac
 
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;pinentry-program /usr/local/bin/pinentry-mac&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.gnupg/gpg-agent.conf
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pinentry-program ${which pinentry}&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.gnupg/gpg-agent.conf
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;GPG_TTY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;tty&lt;span class="k"&gt;)&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;작동하는지 테스트&lt;/p&gt;

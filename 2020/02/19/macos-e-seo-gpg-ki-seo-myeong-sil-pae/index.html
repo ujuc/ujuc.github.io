@@ -25,7 +25,7 @@
     <meta itemprop="description" content="commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!">
     <meta property="og:url" content="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/">
     <meta property="article:published_time" content="2020-02-19T05:38:42+09:00">
-    <meta property="article:modified_time" content="2020-02-19T05:38:42+09:00">
+    <meta property="article:modified_time" content="2023-01-18T19:22:00+09:00">
     <meta property="article:tag" content="gpg">
     <meta property="article:tag" content="key">
     <meta property="article:tag" content="gnupg">
@@ -104,7 +104,7 @@ gtag('config', 'G-X9EBSXCBTS');
     <div class="article-meta">
       <em class="fa-regular fa-calendar-plus"></em>
         20. 02. 19.
- / <em class="fa-solid fa-arrows-rotate"></em> 20. 02. 19.       <em class="fa-solid fa-ellipsis-vertical"></em>
+ / <em class="fa-solid fa-arrows-rotate"></em> 23. 01. 18.       <em class="fa-solid fa-ellipsis-vertical"></em>
       <em class="fa-solid fa-folder-open"></em>
         <a href="https://ujuc.github.io/category/operation.html">Operation</a>
       <em class="fa-solid fa-ellipsis-vertical"></em>
@@ -117,10 +117,12 @@ gtag('config', 'G-X9EBSXCBTS');
 
   <!--Article -->
     <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>열심히 공부하고 커밋하려는 순간&hellip;</p>
+    <div class="article-text"><p>2023.01.18 설정값이 변경된 것들이 있어서 회사 컴퓨터를 새롭게 받아 설치한 기념으로 업데이트 한다. (Thanks to. <a href="https://github.com/roeniss">@roeniss</a>)</p>
+<hr>
+<p>열심히 공부하고 커밋하려는 순간&hellip;</p>
 <div class="codehilite"><pre><span></span><code>&gt; git commit
 error: gpg tailed to sign the data
-fatal: failed to wrtie commit object
+fatal: failed to write commit object
 </code></pre></div>
 
 <p>gpg키로 commit을 할때마다 비밀번호를 물어야되는데&hellip;<br>
@@ -128,9 +130,11 @@ fatal: failed to wrtie commit object
 <p>그게 문제가 되었다. 오랜만에 재시작을 하면서 섹션 만료가 되었고, 바꼈으면 물어야지&hellip;<br>
 조용히 있어서 문제가 되었다.</p>
 <p>이럴때 <a href="https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/41506446">Stack Overflow/ git - gpg onto mac osx: error: failed to sign the data</a>에서는 <a href="https://www.gnupg.org/related_software/pinentry/index.en.html">pinentry</a>를 추가 설치해서 비밀번호를 얻어서 하라고 되어있다.</p>
+<p>MacOS의 경우, <code>pinentry</code> 가 <code>pinentry-mac</code>으로 패키징되어있다. 그래서 다음과같이 설치한다.</p>
 <div class="codehilite"><pre><span></span><code>brew install pinentry-mac
 
-<span class="nb">echo</span> <span class="s2">&quot;pinentry-program /usr/local/bin/pinentry-mac&quot;</span> &gt;&gt; ~/.gnupg/gpg-agent.conf
+<span class="nb">echo</span> <span class="s1">&#39;pinentry-program ${which pinentry}&#39;</span> &gt;&gt; ~/.gnupg/gpg-agent.conf
+<span class="nb">echo</span> <span class="err">&#39;</span><span class="nb">export</span> <span class="nv">GPG_TTY</span><span class="o">=</span><span class="k">$(</span>tty<span class="k">)</span> &gt;&gt; ~/.zshrc
 </code></pre></div>
 
 <p>작동하는지 테스트</p>
