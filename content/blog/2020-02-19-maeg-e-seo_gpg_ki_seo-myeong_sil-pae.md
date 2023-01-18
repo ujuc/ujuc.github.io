@@ -1,17 +1,21 @@
 Title: 맥에서 gpg 키 서명 실패
 Date: 2020-02-19 05:38:42
-Modified: 2020-02-19 05:38:42
+Modified: 2023-01-18 19:22:00
 Category: Operation
 Tags: gpg, key, gnupg, pinentry
 Slug: macos-e-seo-gpg-ki-seo-myeong-sil-pae
 Summary: commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!
+
+2023.01.18 설정값이 변경된 것들이 있어서 회사 컴퓨터를 새롭게 받아 설치한 기념으로 업데이트 한다. (Thanks to. [@roeniss](https://github.com/roeniss))
+
+---
 
 열심히 공부하고 커밋하려는 순간...
 
 ```shell
 > git commit
 error: gpg tailed to sign the data
-fatal: failed to wrtie commit object
+fatal: failed to write commit object
 ```
 
 gpg키로 commit을 할때마다 비밀번호를 물어야되는데...
@@ -22,10 +26,13 @@ gpg키로 commit을 할때마다 비밀번호를 물어야되는데...
 
 이럴때 [Stack Overflow/ git - gpg onto mac osx: error: failed to sign the data][1]에서는 [pinentry][2]를 추가 설치해서 비밀번호를 얻어서 하라고 되어있다.
 
+MacOS의 경우, `pinentry` 가 `pinentry-mac`으로 패키징되어있다. 그래서 다음과같이 설치한다.
+
 ```shell
 brew install pinentry-mac
 
-echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+echo 'pinentry-program ${which pinentry}' >> ~/.gnupg/gpg-agent.conf
+echo 'export GPG_TTY=$(tty) >> ~/.zshrc
 ```
 
 작동하는지 테스트
@@ -54,4 +61,3 @@ gpg키를 맨처음 입력할때 잘보도록하자 거기에 비밀번호 저�
 
 [1]: https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/41506446
 [2]: https://www.gnupg.org/related_software/pinentry/index.en.html
-
