@@ -7,7 +7,7 @@
 &lt;li&gt;해당 파일들은 &lt;code&gt;kind: Deployment&lt;/code&gt; 항목에서 할당된다. 기본 라벨은  &lt;code&gt;tags.datadog.com&lt;/code&gt;으로 묶어서 사용할 수 있도록 구성할 수 있으며, 해당 묶음은 Datadog에서 읽어가는 부분이라 다르게 사용하면 제대로 못읽어 갈 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="pod"&gt;Pod 레벨 메트릭에 붙은 태깅&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;...&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;...&lt;/span&gt;
 &lt;span class="nt"&gt;template&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;metadata&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;labels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -23,7 +23,7 @@
 &lt;ul&gt;
 &lt;li&gt;라벨에서 기본 tag를 가져올 수 있도록 &lt;code&gt;join_standard_tags&lt;/code&gt; 옵션을 &lt;code&gt;true&lt;/code&gt;로 변경 해준다. &lt;a href="https://github.com/DataDog/integrations-core/blob/master/kubernetes_state/datadog_checks/kubernetes_state/data/conf.yaml.example#L53-L63"&gt;코드상 설명&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;apiVersion&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;v1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;apiVersion&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;v1&lt;/span&gt;
 &lt;span class="nt"&gt;kind&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;ConfigMap&lt;/span&gt;
 &lt;span class="nt"&gt;metadata&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;datadog-agent-kubernetes-state&lt;/span&gt;
@@ -36,7 +36,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id="agent-configmap"&gt;Agent 항목에 ConfigMap으로 만든 설정 파일을 마운트 해준다.&lt;/h4&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;...&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;...&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;volumeMounts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;datadog-agent-kubernetes-state&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;mountPath&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;/etc/datadog-agent/conf.d/kubernetes_state.d&lt;/span&gt;
@@ -53,7 +53,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id="pod-label"&gt;서비스 Pod에서 label을 다음과 같이 작성해준다.&lt;/h4&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;apiVersion&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;v1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;apiVersion&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;v1&lt;/span&gt;
 &lt;span class="nt"&gt;kind&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Deployment&lt;/span&gt;
 &lt;span class="nt"&gt;metadata&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;labels&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -71,7 +71,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="apm-tracer-satesd"&gt;APM tracer와 SatesD 클라이언트 환경 설정&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;...&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nn"&gt;...&lt;/span&gt;
 &lt;span class="nt"&gt;containers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="nn"&gt;...&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;env&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -98,7 +98,7 @@
 테스트로 진행한 airflow에 있는 &lt;code&gt;docker-compose&lt;/code&gt;는 복잡해서 못하는듯.&lt;br&gt;
 사람이 생성을 해줘야 하는 부분이라 &lt;code&gt;kompose&lt;/code&gt; 패키지를 좀더 보고 한번 정리를 해야할꺼같다.&lt;/p&gt;</content><category term="Operation"></category><category term="minikube"></category><category term="kube"></category><category term="docker"></category></entry><entry><title>docker-compose Extension fields 알아보기</title><link href="https://ujuc.github.io/2021/07/15/docker-compose-extension-fields-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0/" rel="alternate"></link><published>2021-07-15T15:53:42+09:00</published><updated>2021-07-15T15:53:42+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2021-07-15:/2021/07/15/docker-compose-extension-fields-알아보기/</id><summary type="html">&lt;p&gt;docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Airflow를 볼까해서 docker-compose 파일을 받아서 봤는데&amp;hellip; 뭔가 새로운 문구가 발견되었다.&lt;br&gt;
 다음과같은 부분임.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
 &lt;span class="nt"&gt;x-airflow-common&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nl"&gt;&amp;amp;airflow-common&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;${AIRFLOW_IMAGE_NAME:-apache/airflow:2.1.2}&lt;/span&gt;
@@ -156,7 +156,7 @@
 &lt;p&gt;Note: 포멧 버전 3.7과 2.4에서는 &lt;code&gt;service&lt;/code&gt;, &lt;code&gt;volume&lt;/code&gt;, &lt;code&gt;network&lt;/code&gt;, &lt;code&gt;config&lt;/code&gt;, &lt;code&gt;secret&lt;/code&gt; 정의시 사용이 가능합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;다음과 같이 YAML anchor 기능을 통해서 리소스 정의에 삽입이 가능합니다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;3.9&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;3.9&amp;quot;&lt;/span&gt;
 &lt;span class="nt"&gt;x-logging&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nl"&gt;&amp;amp;default-logging&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;options&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -174,7 +174,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;YAML 머지 형식을 이용하여 원하는 값을 추가할 수 있습니다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;3.9&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;3.9&amp;quot;&lt;/span&gt;
 &lt;span class="nt"&gt;x-volumes&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nl"&gt;&amp;amp;default-volume&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;driver&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;foobar-storage&lt;/span&gt;
@@ -195,7 +195,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="docker"></category><category term="compose"></category><category term="config file"></category></entry><entry><title>맥에서 gpg 키 서명 실패</title><link href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" rel="alternate"></link><published>2020-02-19T05:38:42+09:00</published><updated>2023-01-18T19:22:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-19:/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/</id><summary type="html">&lt;p&gt;commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;2023.01.18 설정값이 변경된 것들이 있어서 회사 컴퓨터를 새롭게 받아 설치한 기념으로 업데이트 한다. (Thanks to. &lt;a href="https://github.com/roeniss"&gt;@roeniss&lt;/a&gt;)&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;열심히 공부하고 커밋하려는 순간&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit
 error:&lt;span class="w"&gt; &lt;/span&gt;gpg&lt;span class="w"&gt; &lt;/span&gt;tailed&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;sign&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;data
 fatal:&lt;span class="w"&gt; &lt;/span&gt;failed&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;write&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;object
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -206,14 +206,14 @@ fatal:&lt;span class="w"&gt; &lt;/span&gt;failed&lt;span class="w"&gt; &lt;/span
 조용히 있어서 문제가 되었다.&lt;/p&gt;
 &lt;p&gt;이럴때 &lt;a href="https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/41506446"&gt;Stack Overflow/ git - gpg onto mac osx: error: failed to sign the data&lt;/a&gt;에서는 &lt;a href="https://www.gnupg.org/related_software/pinentry/index.en.html"&gt;pinentry&lt;/a&gt;를 추가 설치해서 비밀번호를 얻어서 하라고 되어있다.&lt;/p&gt;
 &lt;p&gt;MacOS의 경우, &lt;code&gt;pinentry&lt;/code&gt; 가 &lt;code&gt;pinentry-mac&lt;/code&gt;으로 패키징되어있다. 그래서 다음과같이 설치한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pinentry-mac
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pinentry-mac
 
 &lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pinentry-program ${which pinentry}&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;~/.gnupg/gpg-agent.conf
 &lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;GPG_TTY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;tty&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;~/.zshrc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;작동하는지 테스트&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;gpg&lt;span class="w"&gt; &lt;/span&gt;--clearsign
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;gpg&lt;span class="w"&gt; &lt;/span&gt;--clearsign
 -----BEGIN&lt;span class="w"&gt; &lt;/span&gt;PGP&lt;span class="w"&gt; &lt;/span&gt;SIGNED&lt;span class="w"&gt; &lt;/span&gt;MESSAGE-----
 Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 
@@ -229,13 +229,13 @@ Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 &lt;p&gt;gpg키를 맨처음 입력할때 잘보도록하자 거기에 비밀번호 저장할래가 있을꺼다. 그걸 해지한다.&lt;br&gt;
 그러면 매번 git commit할때마다 물을꺼다.&lt;br&gt;
 그러면 서명이 가능해지겠지&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="gpg"></category><category term="key"></category><category term="gnupg"></category><category term="pinentry"></category></entry><entry><title>pyenv 설치 스크립트 변경됨</title><link href="https://ujuc.github.io/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/" rel="alternate"></link><published>2019-11-29T15:44:29+09:00</published><updated>2019-11-29T15:44:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-11-29:/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/</id><summary type="html">&lt;p&gt;pyenv 설치 방법이 변경되어 간략하게 남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;dotrc를 작성할때 만들었던 스크립트에서는 다음의 URL로 Pyenv를 설치했다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pyenv
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pyenv
 
 $&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-L&lt;span class="w"&gt; &lt;/span&gt;https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bash
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이번 수정하면서, 확인하니 이분들이 &lt;code&gt;pyenv.run&lt;/code&gt; 도메인을 구매하셨나보다. 스크립트가 변경되었다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;https://pyenv.run&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bash
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;https://pyenv.run&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bash
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="python"></category><category term="pyenv"></category><category term="python version management"></category><category term="version management"></category></entry><entry><title>Docker container 사용자 설정</title><link href="https://ujuc.github.io/2019/05/25/docker_container_sa-yong-ja_seor-jeong/" rel="alternate"></link><published>2019-05-25T12:38:45+09:00</published><updated>2019-05-25T12:38:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-25:/2019/05/25/docker_container_sa-yong-ja_seor-jeong/</id><summary type="html">&lt;p&gt;Docker container를 사용할때 발생한 에러에 대해서 작성하였다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 개발한 소스들을 Docker 이미지를 만들어서 ubuntu 18.04에서 작업을 할 수 있도록 구성을 했다.&lt;/p&gt;
 &lt;p&gt;인프라 작업을 하고 있지만, OS나 인프라는 매번 내가 생각했던 대로 잘 안 해준다.&lt;/p&gt;
 &lt;p&gt;이번에도 에러가 났다&amp;hellip;&lt;/p&gt;
@@ -264,12 +264,12 @@ $&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-L&
 &lt;/ul&gt;
 &lt;p&gt;우선 로컬에서 Docker 이미지를 빌드한다. 명령어는 알꺼니 넘어가자.&lt;/p&gt;
 &lt;p&gt;다름 명령을 이용해서 tar 파일을 만들자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker&lt;span class="w"&gt; &lt;/span&gt;save&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;path&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generated&lt;span class="w"&gt; &lt;/span&gt;tar&lt;span class="w"&gt; &lt;/span&gt;file&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;imange&lt;span class="w"&gt; &lt;/span&gt;name&amp;gt;:&amp;lt;tag&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker&lt;span class="w"&gt; &lt;/span&gt;save&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;path&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generated&lt;span class="w"&gt; &lt;/span&gt;tar&lt;span class="w"&gt; &lt;/span&gt;file&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;imange&lt;span class="w"&gt; &lt;/span&gt;name&amp;gt;:&amp;lt;tag&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;만들어진 tar 파일을 원하는 곳에 업로드 시킨다.&lt;/p&gt;
 &lt;p&gt;이제 올린 노드에서 사용할 수 있도록 이미지를 docker에 등록해주면 끝.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker&lt;span class="w"&gt; &lt;/span&gt;load&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;path&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;image&lt;span class="w"&gt; &lt;/span&gt;tar&lt;span class="w"&gt; &lt;/span&gt;file&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;docker&lt;span class="w"&gt; &lt;/span&gt;load&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;path&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;image&lt;span class="w"&gt; &lt;/span&gt;tar&lt;span class="w"&gt; &lt;/span&gt;file&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="_1"&gt;참고&lt;/h3&gt;
@@ -284,7 +284,7 @@ Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. &lt;code
 Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능하다. -20 ~ +19 까지의 값을 가지고 있으며, -20값이 우선순위가 가장 높은 값이고 양수로 올라갈수록 낮은 값이다. 0은 &lt;code&gt;PR&lt;/code&gt; 값과 동일한 설정을 나타낸다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="rriority"&gt;Rriority 계산&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PR = 20 + (-20 ~ +19)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;PR = 20 + (-20 ~ +19)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;해당 계산식을 이용하면 0 ~ 39 사이의 값이 되는데 이것은 Priority 값의 100 ~ 139 사이 값에 대응된다.&lt;/p&gt;
@@ -334,7 +334,7 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;ul&gt;
 &lt;li&gt;특정 사용자에 대한 모든 프로세스에대한 값을 정할때 사용한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Username    hard/soft    priority    10
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Username    hard/soft    priority    10
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;다음 링크에서 자세하게 확인하도록 하자.&lt;/p&gt;
@@ -402,7 +402,7 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;h3 id="template-statement"&gt;&lt;code&gt;template()&lt;/code&gt; statement&lt;/h3&gt;
 &lt;p&gt;문서상으로는 7버전 이상에서 사용할 수 있는 포맷이다.&lt;/p&gt;
 &lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;FileFormat&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;FileFormat&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -455,7 +455,7 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;set $!usr!tpl2!msg = $msg;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;set $!usr!tpl2!msg = $msg;
 set $!usr!tpl2!dataflow = field($msg, 58, 2);
 template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=&amp;quot;$!usr!tpl2&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -467,7 +467,7 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;template&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;tpl3&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;string&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;template&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;tpl3&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;string&amp;quot;&lt;/span&gt;
 &lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nv"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;&lt;/span&gt;
 &lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -480,7 +480,7 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;/ul&gt;
 &lt;h4 id="option"&gt;&lt;a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#options"&gt;&lt;code&gt;option&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;예제로 이해하자. 필요하면 링크를 타고 보고.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;outfmt&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;option&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jsonf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;outfmt&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;option&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jsonf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;@timestamp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;timereported&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;severity&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;syslogseverity-text&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;caseConversion&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;upper&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;jsonf&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -493,7 +493,7 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이렇게 작성하면,&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;@timestamp&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;2018-03-01T01:00:00+00:00&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;172.20.245.8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;severity&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;DEBUG&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -507,7 +507,7 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;h3 id="legacy-format"&gt;Legacy Format&lt;/h3&gt;
 &lt;p&gt;6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을 권고하고있다.&lt;/p&gt;
 &lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="nv"&gt;template&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;FileFormat&lt;/span&gt;,&lt;span class="s2"&gt;&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="nv"&gt;template&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;FileFormat&lt;/span&gt;,&lt;span class="s2"&gt;&amp;quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;작성 요령은 &lt;code&gt;$template&lt;/code&gt; 변수, &lt;code&gt;template 이름&lt;/code&gt;, &lt;code&gt;"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"&lt;/code&gt;. 필요한 내용들을 작성하면된다.&lt;/p&gt;
@@ -530,7 +530,7 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;/ul&gt;
 &lt;h3 id="_1"&gt;동적 파일 이름 생성&lt;/h3&gt;
 &lt;p&gt;두가지 방식이 있다만, 첫번째 방식으로 작성해서 템플릿 구성을 맞추는게 좋을것으로 보인다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;DynFile&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;string&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;DynFile&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;string&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;DynFile&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/var/log/system-%HOSTNAME%.log&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -578,14 +578,14 @@ template(name=&amp;quot;tpl2&amp;quot; type=&amp;quot;subtree&amp;quot; subtree=
 &lt;ul&gt;
 &lt;li&gt;설정한 인터페이스 끄고키기&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;up
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;up
 $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$dev&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;down
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
 &lt;li&gt;고정 아이피 설정 &lt;em&gt;/etc/netplan/a.yaml&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;renderer&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;networkd&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ethernets&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
@@ -621,7 +621,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;li&gt;Windows CD&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="virt-manager"&gt;virt-manager 설치&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-y&lt;span class="w"&gt; &lt;/span&gt;kvm&lt;span class="w"&gt; &lt;/span&gt;virt-manager
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;-y&lt;span class="w"&gt; &lt;/span&gt;kvm&lt;span class="w"&gt; &lt;/span&gt;virt-manager
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
@@ -660,7 +660,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;openstack&lt;span class="w"&gt; &lt;/span&gt;image&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;--disk-format&lt;span class="w"&gt; &lt;/span&gt;qcow2&lt;span class="w"&gt; &lt;/span&gt;--file&lt;span class="w"&gt; &lt;/span&gt;windows.qcow2&lt;span class="w"&gt; &lt;/span&gt;windows
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;openstack&lt;span class="w"&gt; &lt;/span&gt;image&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;--disk-format&lt;span class="w"&gt; &lt;/span&gt;qcow2&lt;span class="w"&gt; &lt;/span&gt;--file&lt;span class="w"&gt; &lt;/span&gt;windows.qcow2&lt;span class="w"&gt; &lt;/span&gt;windows
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="_3"&gt;참고&lt;/h2&gt;
@@ -689,7 +689,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;li&gt;pip install yacron&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_3"&gt;사용&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yacron&lt;span class="w"&gt; &lt;/span&gt;-c&lt;span class="w"&gt; &lt;/span&gt;my-crontab.yaml
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yacron&lt;span class="w"&gt; &lt;/span&gt;-c&lt;span class="w"&gt; &lt;/span&gt;my-crontab.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code&gt;-c&lt;/code&gt;를 사용해서 구성파일이 있는 곳을 가리킨다.&lt;/p&gt;
@@ -697,7 +697,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;ul&gt;
 &lt;li&gt;매 5분마다 &lt;code&gt;echo "foobar"&lt;/code&gt;를 실행하는 job.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;echo &amp;quot;foobar&amp;quot;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;shell&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;/bin/bash&lt;/span&gt;
@@ -707,7 +707,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;ul&gt;
 &lt;li&gt;특정일 (2017/7/19)에만 5분마다 &lt;code&gt;echo "foobar"&lt;/code&gt;를 실행하는 job.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;echo &amp;quot;foobar&amp;quot;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;schedule&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -721,7 +721,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;ul&gt;
 &lt;li&gt;특정 환경변수 값 설정&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;echo &amp;quot;foobar&amp;quot;&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;shell&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;/bin/bash&lt;/span&gt;
@@ -732,7 +732,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="_5"&gt;기본 값 지정&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;defaults&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;defaults&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;key&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;PATH&lt;/span&gt;
 &lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;value&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;/bin:/usr/bin&lt;/span&gt;
@@ -751,7 +751,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;ul&gt;
 &lt;li&gt;job 이 실패했을때 알려준다. Sentry는 나중에 추가될 꺼임.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="no"&gt;echo &amp;quot;hello&amp;quot; 1&amp;gt;&amp;amp;2&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="no"&gt;sleep 1&lt;/span&gt;
@@ -775,7 +775,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;ul&gt;
 &lt;li&gt;job 이 성공했을 경우, 알림은 &lt;code&gt;onSuccess&lt;/code&gt; 옵션을 추가한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;echo &amp;quot;hello world&amp;quot;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;schedule&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;minute&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*/2&amp;quot;&lt;/span&gt;
@@ -807,7 +807,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;failsWhen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;failsWhen&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;producesStdout&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;false&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;producesStderr&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;nonzeroReturn&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
@@ -817,7 +817,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;li&gt;&lt;code&gt;retry&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;onFailure&lt;/code&gt; 안에다가 추가한다. 그리고 job 재시도도 완전히 실패했다면, &lt;code&gt;onPermanentFailure&lt;/code&gt; 옵션을 사용하여 리포트를 받는다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;test-01&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="no"&gt;echo &amp;quot;hello&amp;quot; 1&amp;gt;&amp;amp;2&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="no"&gt;sleep 1&lt;/span&gt;
@@ -848,7 +848,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;p&gt;커널은 4.2이상. 16.04가 버전업되면서 커널도 업글이되어서 이건 넘어갔다.&lt;/p&gt;
 &lt;p&gt;Qualcomm atheros 10k 드라이버가 들어있는 패키지는 &lt;code&gt;linux-firmware 1.158&lt;/code&gt;. 16.04에서 공식 지원하는 버전은 &lt;code&gt;1.157&lt;/code&gt;. 아마 6개월쯤 지나면 이것도 올라가겠지만 지금은 올라가지 않았으니. &lt;code&gt;1.158&lt;/code&gt;은 16.10에 추가될 패키지로 지금은 테스팅 버전이다. 이것을 가져다가 설치하면 된다.&lt;/p&gt;
 &lt;p&gt;어짜피 기본 내용만 맞으면되니 &lt;code&gt;dpkg&lt;/code&gt;를 이용해서 설치해주면된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget&lt;span class="w"&gt; &lt;/span&gt;http://mirrors.kernel.org/ubuntu/pool/main/l/linux-firmware/linux-firmware_1.158_all.deb
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;wget&lt;span class="w"&gt; &lt;/span&gt;http://mirrors.kernel.org/ubuntu/pool/main/l/linux-firmware/linux-firmware_1.158_all.deb
 sudo&lt;span class="w"&gt; &lt;/span&gt;dpkg&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;linux-firmware_1.158_all.deb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -858,7 +858,7 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;dpkg&lt;span class="w"&gt; &lt;/span&gt;
 &lt;/ul&gt;</content><category term="Operation"></category><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link href="https://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" rel="alternate"></link><published>2016-04-22T22:59:00+09:00</published><updated>2016-04-22T22:59:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-22:/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</id><summary type="html">&lt;p&gt;Qualcomm Atheros device driver on Lenovo Y700&lt;/p&gt;</summary><content type="html">&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가 발생했다.&lt;/p&gt;
 &lt;p&gt;Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&amp;hellip; Ubuntu 16.04버전이 4.4.0&amp;hellip; 그래서 백포트하고, 드라이버를 옮겨주는것으로 해결.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation&lt;/a&gt; 에서 말하는 작업을 설치해주면된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;build-essential&lt;span class="w"&gt; &lt;/span&gt;linux-headers-&lt;span class="k"&gt;$(&lt;/span&gt;uname&lt;span class="w"&gt; &lt;/span&gt;-r&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;git
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;build-essential&lt;span class="w"&gt; &lt;/span&gt;linux-headers-&lt;span class="k"&gt;$(&lt;/span&gt;uname&lt;span class="w"&gt; &lt;/span&gt;-r&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;git
 &lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;options ath10k_core skip_otp=y&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;tee&lt;span class="w"&gt; &lt;/span&gt;/etc/modprobe.d/ath10k_core.conf
 wget&lt;span class="w"&gt; &lt;/span&gt;https://www.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/backports-4.4.2-1.tar.gz
 tar&lt;span class="w"&gt; &lt;/span&gt;-zxvf&lt;span class="w"&gt; &lt;/span&gt;backports-4.4.2-1.tar.gz
@@ -873,86 +873,86 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;cp&lt;span class="w"&gt; &lt;/span&gt;/l
 
 &lt;p&gt;그리고 하나더&amp;hellip;&lt;/p&gt;
 &lt;p&gt;이건 위에껄 하고 안되면 추가해주도록 하자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;blacklist&lt;span class="w"&gt; &lt;/span&gt;ideapad_laptop&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;tee&lt;span class="w"&gt; &lt;/span&gt;/etc/modprobe.d/blacklist.conf
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;blacklist&lt;span class="w"&gt; &lt;/span&gt;ideapad_laptop&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;tee&lt;span class="w"&gt; &lt;/span&gt;/etc/modprobe.d/blacklist.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link href="https://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" rel="alternate"></link><published>2016-04-17T12:23:00+09:00</published><updated>2016-04-17T12:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-17:/2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</id><summary type="html">&lt;p&gt;하위 명령어 &lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;apt-cache&lt;/code&gt;를 사용하지 않고 패키지 매너저 &lt;code&gt;apt&lt;/code&gt;를 사용하는 방법.&lt;/p&gt;</summary><content type="html">&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;hellip; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;hellip; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고 한다.&lt;/p&gt;
 &lt;p&gt;참고는 &lt;a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/"&gt;15 Examples of How to Use New Advanced Package Tool (APT) in Ubuntu/Debian&lt;/a&gt; 을 사용함. 기본적으로 되는 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html"&gt;Ubuntu man&lt;/a&gt; 페이지는 끼고 살자&amp;hellip;&lt;/p&gt;
 &lt;h2 id="1"&gt;1. 패키지 설치&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;glances
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;glances
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;항상 사용하던건 &lt;code&gt;apt-get&lt;/code&gt; 명령어로 설치를 하는거였는데 4글자 줄엇다!&lt;br&gt;
 &lt;code&gt;sudo aptitude install&lt;/code&gt; 로도 가능하다만&amp;hellip; 이렇게 하는 사람들 잘못봤다.&lt;/p&gt;
 &lt;h2 id="2"&gt;2. 패키지가 설치된 위치 확인&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;content&lt;span class="w"&gt; &lt;/span&gt;glances
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;content&lt;span class="w"&gt; &lt;/span&gt;glances
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는 명령어는 &lt;code&gt;dpkg -L&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="3"&gt;3. 패키지 디펜던시 확인&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;depends&lt;span class="w"&gt; &lt;/span&gt;glances
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;depends&lt;span class="w"&gt; &lt;/span&gt;glances
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는 명령어가 &lt;code&gt;apt-get check&lt;/code&gt;, &lt;code&gt;dpkg -C&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="4"&gt;4. 패키지 찾기&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;search&lt;span class="w"&gt; &lt;/span&gt;openstack
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;search&lt;span class="w"&gt; &lt;/span&gt;openstack
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는 명령어는 &lt;code&gt;apt-cache search&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="5"&gt;5. 패키지 정보 확인&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;firefox
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;firefox
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는 명령어 &lt;code&gt;apt-cache show&lt;/code&gt;, &lt;code&gt;dpkg -p&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id="6"&gt;6. 깨진 디펜던시가 있는지 확인&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;check&lt;span class="w"&gt; &lt;/span&gt;firefox
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;check&lt;span class="w"&gt; &lt;/span&gt;firefox
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이거와 대응되는게 있는지 잘모르겠다.&lt;/p&gt;
 &lt;h2 id="7"&gt;7. 제공된 패키지에서 빠진 패키지에 대한 목록 보여주기&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;recommends&lt;span class="w"&gt; &lt;/span&gt;apache2
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;recommends&lt;span class="w"&gt; &lt;/span&gt;apache2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="8"&gt;8. 패키지 버전 체크&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;version&lt;span class="w"&gt; &lt;/span&gt;firefox
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;version&lt;span class="w"&gt; &lt;/span&gt;firefox
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="9"&gt;9. 시스템 패키지 업데이트&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;update
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;update
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get update&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="10"&gt;10. 시스템 업그레이드&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;upgrade
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get upgrade&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="11"&gt;11. 커널 버전까지 시스템 업그레이드&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;full-upgrade
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;full-upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get dist-upgrade&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="12"&gt;12. 사용하지 않는 페키지 삭제&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;autoremove
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;autoremove
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get autoremove&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="13"&gt;13. 다운로드된 페키지에서 오래된 저장소 삭제&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;autoclean
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;autoclean
 sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;clean
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-get clean&lt;/code&gt;, &lt;code&gt;apt-get autoclean&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="14"&gt;14. 패키지 구성파일까지 삭제&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;purge&lt;span class="w"&gt; &lt;/span&gt;glance
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;purge&lt;span class="w"&gt; &lt;/span&gt;glance
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는건 &lt;code&gt;apt-purge&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="15-deb-160502"&gt;15. deb 패키지 설치 (작동이 안된다&amp;hellip; -160502)&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;deb&lt;span class="w"&gt; &lt;/span&gt;atom-amd64.deb
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;deb&lt;span class="w"&gt; &lt;/span&gt;atom-amd64.deb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;대응되는건 &lt;code&gt;dpkg&lt;/code&gt; 에서 찾으면될듯..&lt;/p&gt;
 &lt;h2 id="16"&gt;16. 사용법은&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;help&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;help&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code&gt;apt&lt;/code&gt; 사용법을 찾아서 작업하면 될것으로 보여짐.&lt;/p&gt;
@@ -971,12 +971,12 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;c
 &lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html"&gt;Ubuntu manpage - unattended-upgrade&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_1"&gt;사용법&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;unattended-upgrade
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;unattended-upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도 있다.&lt;/p&gt;
 &lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를 하면된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;unattended-upgrade&lt;span class="w"&gt; &lt;/span&gt;--dry-run
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;unattended-upgrade&lt;span class="w"&gt; &lt;/span&gt;--dry-run
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;왠만해서는 &lt;code&gt;--dry-run&lt;/code&gt; 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는 않지&amp;hellip;&lt;/p&gt;
@@ -1027,29 +1027,29 @@ mariadb를 사용하는게 정신 건강에 좋은&amp;hellip;&lt;/p&gt;</conten
 &lt;/table&gt;
 &lt;p&gt;간단히 하자.&lt;br&gt;
 go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올 것이다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;go
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;go
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;요놈을 안나오게 해보자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;go&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/dev/null
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;go&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/dev/null
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;오~~~&lt;/p&gt;
 &lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;hellip; 이건 설치가 되어있으니&amp;hellip; 없는걸로&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;rbenv
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;rbenv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을 사용하면&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;rbenv&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/dev/null
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;rbenv&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/dev/null
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;음&amp;hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸 막으라했더니&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그럼 Python에서는 어디로 나올까?&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
                             &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;check_rbenv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1057,7 +1057,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;음?? 암것도 안나온다&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;256&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1092,23 +1092,23 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;li&gt;OS: Ubuntu 12.04.4 server&lt;/li&gt;
 &lt;li&gt;Install Package&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python-pip
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python-pip
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="_2"&gt;패키지 설치&lt;/h3&gt;
 &lt;h4 id="django"&gt;Django 설치&lt;/h4&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;isntall&lt;span class="w"&gt; &lt;/span&gt;Django
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;isntall&lt;span class="w"&gt; &lt;/span&gt;Django
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id="django-skwissh"&gt;Django-skwissh 설치&lt;/h4&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;buid-essential&lt;span class="w"&gt; &lt;/span&gt;python-dev
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;buid-essential&lt;span class="w"&gt; &lt;/span&gt;python-dev
 $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;https://github.com/rsaikali/django-skwissh.git
 $&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;django-skwissh
 $&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;setup.py&lt;span class="w"&gt; &lt;/span&gt;install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="django_1"&gt;Django 설정&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;django-admin.py&lt;span class="w"&gt; &lt;/span&gt;startproject&lt;span class="w"&gt; &lt;/span&gt;mysite
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;django-admin.py&lt;span class="w"&gt; &lt;/span&gt;startproject&lt;span class="w"&gt; &lt;/span&gt;mysite
 $&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;mysite
 $&lt;span class="w"&gt; &lt;/span&gt;vi&lt;span class="w"&gt; &lt;/span&gt;mysql/settings.py
 
@@ -1126,14 +1126,14 @@ url&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh&a
 &lt;ul&gt;
 &lt;li&gt;데이터 베이스 설정&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;manage.p&lt;span class="w"&gt; &lt;/span&gt;syncdb
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;manage.p&lt;span class="w"&gt; &lt;/span&gt;syncdb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Skwissh 테스트 설치&lt;/li&gt;
 &lt;li&gt;이작업을 하면 crontab에 테스크가 등록된다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;manage.py&lt;span class="w"&gt; &lt;/span&gt;installtask
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;manage.py&lt;span class="w"&gt; &lt;/span&gt;installtask
 &lt;span class="c1"&gt;# crontab에 등록되었는지 확인&lt;/span&gt;
 $&lt;span class="w"&gt; &lt;/span&gt;crontab&lt;span class="w"&gt; &lt;/span&gt;-l
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1141,7 +1141,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;crontab&lt;span class="w"&gt; &lt;/span&gt;
 &lt;ul&gt;
 &lt;li&gt;Django 서버 작동&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;mange.py&lt;span class="w"&gt; &lt;/span&gt;runserver&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;.0.0.0:8000
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;mange.py&lt;span class="w"&gt; &lt;/span&gt;runserver&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;.0.0.0:8000
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="_3"&gt;참고 페이지&lt;/h2&gt;
@@ -1151,7 +1151,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;crontab&lt;span class="w"&gt; &lt;/span&gt;
 &lt;/ul&gt;</content><category term="Operation"></category><category term="python"></category><category term="monitoring"></category><category term="ssh"></category><category term="django"></category></entry><entry><title>Screen 명령어를 통해서 Serial 통신</title><link href="https://ujuc.github.io/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/" rel="alternate"></link><published>2013-01-09T11:39:40+09:00</published><updated>2018-03-11T11:39:40+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-01-09:/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/</id><summary type="html">&lt;p&gt;screen으로 serial 통신을 하는 프로그램으로 사용하자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이 발생하여…&lt;/p&gt;
 &lt;p&gt;여기 저기 찾다가. &lt;code&gt;Screen&lt;/code&gt;을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. &lt;code&gt;minicom&lt;/code&gt;도 필요없다.&lt;/p&gt;
 &lt;p&gt;명령어 사용법 : &lt;code&gt;screen ‘디바이스 위치’ ‘전송속도’&lt;/code&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# Mac
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# Mac
 screen /dev/tty.XXX 115200
 # Linux
 screen /dev/ttyXXX 115200

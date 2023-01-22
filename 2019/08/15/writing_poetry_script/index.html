@@ -122,7 +122,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <h2 id="_1">명령어 작성</h2>
 <p>블로그 새 글을 만들 수 있는 명령어를 작성한다.</p>
 <p><code>cli.py</code></p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
 <span class="kn">import</span> <span class="nn">kroman</span>
 <span class="kn">import</span> <span class="nn">pendulum</span>
@@ -189,7 +189,7 @@ gtag('config', 'G-X9EBSXCBTS');
 </code></pre></div>
 
 <p>task를 등록해 주고 명령을 확인하면 다음 같이 보인다.</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>inv<span class="w"> </span>--list
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>inv<span class="w"> </span>--list
 
 Available<span class="w"> </span>tasks:
 
@@ -201,7 +201,7 @@ Available<span class="w"> </span>tasks:
 </code></pre></div>
 
 <p>명령어를 실행해 보자.</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>inv<span class="w"> </span>--help<span class="w"> </span>cli.post
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>inv<span class="w"> </span>--help<span class="w"> </span>cli.post
 Usage:<span class="w"> </span>inv<span class="o">[</span>oke<span class="o">]</span><span class="w"> </span><span class="o">[</span>--core-opts<span class="o">]</span><span class="w"> </span>cli.post<span class="w"> </span><span class="o">[</span>--options<span class="o">]</span><span class="w"> </span><span class="o">[</span>other<span class="w"> </span>tasks<span class="w"> </span>here<span class="w"> </span>...<span class="o">]</span>
 
 Docstring:
@@ -233,7 +233,7 @@ Summary:
 <li>Package로 추가해야 되어 <code>cli</code> 폴더를 만들었다.</li>
 <li><a href="https://github.com/sdispater/poetry/issues/577">Poetry run: ModuleOrPackageNotFound with implicit namespace packages (PEP420)</a></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Import Program class</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import Program class</span>
 <span class="kn">from</span> <span class="nn">invoke</span> <span class="kn">import</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">Program</span><span class="p">,</span> <span class="n">task</span>
 
 <span class="o">...</span>
@@ -247,7 +247,7 @@ Summary:
 </code></pre></div>
 
 <p><code>pyproject.toml</code></p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry]</span>
 <span class="p">...</span>
 
 <span class="n">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -263,7 +263,7 @@ Summary:
 </code></pre></div>
 
 <p>이제 실행해 보자.</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </span>cli<span class="w"> </span>--list
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </span>cli<span class="w"> </span>--list
 Subcommands:
 
 <span class="w">  </span>post<span class="w">   </span>Make<span class="w"> </span>post<span class="w"> </span>template
@@ -283,11 +283,11 @@ File<span class="w"> </span>created<span class="w"> </span>-&gt;<span class="w">
 <hr>
 <p>ps. 파일 단위로도 가능하다.</p>
 <p><code>tasks.py</code></p>
-<div class="codehilite"><pre><span></span><code>위에꺼 갔다 쓰자.. 귀찮다...
+<div class="highlight"><pre><span></span><code>위에꺼 갔다 쓰자.. 귀찮다...
 </code></pre></div>
 
 <p><code>pyproject.toml</code></p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.scripts]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.poetry.scripts]</span>
 <span class="na">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tasks:run&quot;</span>
 </code></pre></div>
 

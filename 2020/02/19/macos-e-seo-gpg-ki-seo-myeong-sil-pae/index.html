@@ -120,7 +120,7 @@ gtag('config', 'G-X9EBSXCBTS');
     <div class="article-text"><p>2023.01.18 설정값이 변경된 것들이 있어서 회사 컴퓨터를 새롭게 받아 설치한 기념으로 업데이트 한다. (Thanks to. <a href="https://github.com/roeniss">@roeniss</a>)</p>
 <hr>
 <p>열심히 공부하고 커밋하려는 순간&hellip;</p>
-<div class="codehilite"><pre><span></span><code>&gt;<span class="w"> </span>git<span class="w"> </span>commit
+<div class="highlight"><pre><span></span><code>&gt;<span class="w"> </span>git<span class="w"> </span>commit
 error:<span class="w"> </span>gpg<span class="w"> </span>tailed<span class="w"> </span>to<span class="w"> </span>sign<span class="w"> </span>the<span class="w"> </span>data
 fatal:<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>write<span class="w"> </span>commit<span class="w"> </span>object
 </code></pre></div>
@@ -131,14 +131,14 @@ fatal:<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> <
 조용히 있어서 문제가 되었다.</p>
 <p>이럴때 <a href="https://stackoverflow.com/questions/41502146/git-gpg-onto-mac-osx-error-gpg-failed-to-sign-the-data/41506446">Stack Overflow/ git - gpg onto mac osx: error: failed to sign the data</a>에서는 <a href="https://www.gnupg.org/related_software/pinentry/index.en.html">pinentry</a>를 추가 설치해서 비밀번호를 얻어서 하라고 되어있다.</p>
 <p>MacOS의 경우, <code>pinentry</code> 가 <code>pinentry-mac</code>으로 패키징되어있다. 그래서 다음과같이 설치한다.</p>
-<div class="codehilite"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>pinentry-mac
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>pinentry-mac
 
 <span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;pinentry-program ${which pinentry}&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.gnupg/gpg-agent.conf
 <span class="nb">echo</span><span class="w"> </span><span class="err">&#39;</span><span class="nb">export</span><span class="w"> </span><span class="nv">GPG_TTY</span><span class="o">=</span><span class="k">$(</span>tty<span class="k">)</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
 </code></pre></div>
 
 <p>작동하는지 테스트</p>
-<div class="codehilite"><pre><span></span><code>&gt;<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--clearsign
+<div class="highlight"><pre><span></span><code>&gt;<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--clearsign
 -----BEGIN<span class="w"> </span>PGP<span class="w"> </span>SIGNED<span class="w"> </span>MESSAGE-----
 Hash:<span class="w"> </span>SHA256
 

@@ -15,7 +15,7 @@ Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇�
 &lt;/ol&gt;
 &lt;h3 id="_1"&gt;예제&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="생각 tag 나가기" src="https://ujuc.github.io/img/2022-02-17-roam_tag.png"&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="nt"&gt;data-tag&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;생각&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="nt"&gt;data-tag&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;생각&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mh"&gt;#1A87C0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;bold&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -346,7 +346,7 @@ Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇�
 &lt;li&gt;참고: &lt;a href="https://git-scm.com/docs/git-switch"&gt;git-scm: git-switch&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_2"&gt;개요&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git switch [&amp;lt;option&amp;gt;] [--no-guess] &amp;lt;branch&amp;gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git switch [&amp;lt;option&amp;gt;] [--no-guess] &amp;lt;branch&amp;gt;
 git switch [&amp;lt;option&amp;gt;] --detach [&amp;lt;start-point&amp;gt;]
 git switch [&amp;lt;option&amp;gt;] (-c|-C) &amp;lt;new-brach&amp;gt; [&amp;lt;start-point&amp;gt;]
 git switch [&amp;lt;option&amp;gt;] --orphan &amp;lt;new-branch&amp;gt;
@@ -434,7 +434,7 @@ git switch [&amp;lt;option&amp;gt;] --orphan &amp;lt;new-branch&amp;gt;
 &lt;li&gt;생각보다 옵션이 많다&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_4"&gt;개요&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git restore [&amp;lt;option&amp;gt;] [--source=&amp;lt;tree&amp;gt;] [--staged] [--worktree] [--] &amp;lt;pathspec&amp;gt;...
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git restore [&amp;lt;option&amp;gt;] [--source=&amp;lt;tree&amp;gt;] [--staged] [--worktree] [--] &amp;lt;pathspec&amp;gt;...
 git restore [&amp;lt;option&amp;gt;] [--source=&amp;lt;tree&amp;gt;] [--staged] [--worktree] --pathspec-from-file=&amp;lt;file&amp;gt; [--pathspec-file-nul]
 git restore (-p|--patch) [&amp;lt;option&amp;gt;] [--source=&amp;lt;tree&amp;gt;] [--staged] [--worktree] [--] [&amp;lt;pathspec&amp;gt;...]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -522,7 +522,7 @@ git restore (-p|--patch) [&amp;lt;option&amp;gt;] [--source=&amp;lt;tree&amp;gt;
 &lt;p&gt;나오는 방법을 나도 까먹는데&amp;hellip;;;&lt;/p&gt;
 &lt;p&gt;nano가 싫어 vim으로 변경해두길 어언.... 몇년&amp;hellip; 이제 그것도 귀찮아져서 VS Code로 변경하려고 한다.&lt;/p&gt;
 &lt;p&gt;명령은 간단하다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;core.editor&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;code --wait&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;core.editor&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;code --wait&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;하게되면 git commit 입력창이 VS code 창으로 뜬다.&lt;/p&gt;
@@ -530,12 +530,12 @@ git restore (-p|--patch) [&amp;lt;option&amp;gt;] [--source=&amp;lt;tree&amp;gt;
 &lt;p&gt;이제 Tower 구독 결제가 되어있는지 한번 확인하고 없에야지..&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;번외&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;difftool
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;difftool
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;위 명령을 실행하게되면 git diff 를 vimdiff를 이용하여 보여준다.&lt;/p&gt;
 &lt;p&gt;이것도 아래 명령으로 변경이 가능하다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;diff.tool&lt;span class="w"&gt; &lt;/span&gt;diff-code
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;diff.tool&lt;span class="w"&gt; &lt;/span&gt;diff-code
 git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;difftool.diff-code.cmd&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;code --wait --diff $LOCAL $REMOTE&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -555,17 +555,17 @@ git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt
 &lt;h3 id="1-git-config"&gt;1. Git config 에 추가&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;.gitconfig&lt;/code&gt; 파일에 &lt;code&gt;commit.template&lt;/code&gt; 항목에 기본 값으로 등록할 내용을 추가해준다.&lt;br&gt;
 여기서 나는 &lt;code&gt;~/.gitmessage&lt;/code&gt;라는 것을 전체 프로젝트에서 사용하도록 구성하겠다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git config --global commit.template ~/.gitmessage
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git config --global commit.template ~/.gitmessage
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;명령을 실행다면 &lt;code&gt;.gitconfig&lt;/code&gt; 파일에 다음과같이 설정이된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[commit]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[commit]&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="na"&gt;template&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;~/.gitmessage&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="2-commit-message-template"&gt;2. Commit message Template 작성&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;~/.gitmessage&lt;/code&gt; 작성을 하자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;subject&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;type&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;subject&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="err"&gt;#####&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;Subject&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;50&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;characters&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#################&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;-&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
 
 
@@ -610,7 +610,7 @@ git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt
 &lt;/ul&gt;
 &lt;h2 id="_2"&gt;레포마다 다르게 설정하기&lt;/h2&gt;
 &lt;p&gt;다음 명령을 레포에서 입력한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git config commit.template ./path/to/.gitmessage
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git config commit.template ./path/to/.gitmessage
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;그리고 &lt;code&gt;.git/gitmessage&lt;/code&gt;에 template을 작성해준다.&lt;/p&gt;
@@ -628,7 +628,7 @@ git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;code&gt;conf.py&lt;/code&gt; 파일이 있는 &lt;code&gt;docs&lt;/code&gt; 폴더나 도큐먼트 폴더에서 실행을 해야한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sphinx-build&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;gettext&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;_build/gettext
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sphinx-build&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;gettext&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;_build/gettext
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;위 명령을 실행하면 &lt;code&gt;pot&lt;/code&gt; 파일을 &lt;code&gt;_build/gettext&lt;/code&gt; 에 생긴것을 확인할 수 있다.&lt;/p&gt;
@@ -636,13 +636,13 @@ git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt
 &lt;p&gt;&lt;code&gt;pot&lt;/code&gt; 파일은 &lt;code&gt;po&lt;/code&gt; 템플릿이라 곧장 번역을 할 수 없다.&lt;br&gt;
 그러니 &lt;code&gt;po&lt;/code&gt;파일을 다시 만들어야한다.&lt;/p&gt;
 &lt;p&gt;먼저 &lt;code&gt;sphinx-intl&lt;/code&gt; 패키지를 설치하여 다음 명령어를 실행한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sphinx-intl&lt;span class="w"&gt; &lt;/span&gt;update&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;_build/gettext&lt;span class="w"&gt; &lt;/span&gt;-l&lt;span class="w"&gt; &lt;/span&gt;ko
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sphinx-intl&lt;span class="w"&gt; &lt;/span&gt;update&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;_build/gettext&lt;span class="w"&gt; &lt;/span&gt;-l&lt;span class="w"&gt; &lt;/span&gt;ko
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code&gt;locale/ko/LC_MESSAGES/**.po&lt;/code&gt; 파일이 생성된다.&lt;/p&gt;
 &lt;p&gt;나머지는 알아서&amp;hellip; po 파일을 가지고서 다른 서비스에 올려서 번역을 하거나 하면된다.&lt;/p&gt;
 &lt;h2 id="_3"&gt;선택한 언어로 문서 만들기&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sphinx-build&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;html&lt;span class="w"&gt; &lt;/span&gt;-D&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;ko&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;_build/html/ko
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sphinx-build&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;html&lt;span class="w"&gt; &lt;/span&gt;-D&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;ko&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="w"&gt; &lt;/span&gt;_build/html/ko
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;로 하면된다고 한다. 아직이 부분을 해보지는 않아서 해보고 업뎃하는걸로&amp;hellip;&lt;/p&gt;</content><category term="Develop"></category><category term="documents"></category><category term="po"></category><category term="readthedocs"></category></entry><entry><title>TOML 0.5.0 Release</title><link href="https://ujuc.github.io/2019/09/28/toml_0.5.0_release/" rel="alternate"></link><published>2019-09-28T11:44:36+09:00</published><updated>2019-09-28T11:44:36+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-09-28:/2019/09/28/toml_0.5.0_release/</id><summary type="html">&lt;p&gt;TOML 0.5.0 릴리즈&lt;/p&gt;</summary><content type="html">&lt;p&gt;TOML 0.4.0 문서를 2017년에 번역해서 반영해두고 잊고 있었다가 오랜만에 들어갔더니 저번 7월달에 0.5.0 버전으로 업그레이드를 했다.&lt;/p&gt;
@@ -802,7 +802,7 @@ continuation operator in multi-line basic strings.&lt;/p&gt;
 &lt;h2 id="_1"&gt;명령어 작성&lt;/h2&gt;
 &lt;p&gt;블로그 새 글을 만들 수 있는 명령어를 작성한다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;cli.py&lt;/code&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;kroman&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pendulum&lt;/span&gt;
@@ -869,7 +869,7 @@ continuation operator in multi-line basic strings.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;task를 등록해 주고 명령을 확인하면 다음 같이 보인다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="w"&gt; &lt;/span&gt;--list
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="w"&gt; &lt;/span&gt;--list
 
 Available&lt;span class="w"&gt; &lt;/span&gt;tasks:
 
@@ -881,7 +881,7 @@ Available&lt;span class="w"&gt; &lt;/span&gt;tasks:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;명령어를 실행해 보자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="w"&gt; &lt;/span&gt;--help&lt;span class="w"&gt; &lt;/span&gt;cli.post
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="w"&gt; &lt;/span&gt;--help&lt;span class="w"&gt; &lt;/span&gt;cli.post
 Usage:&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="o"&gt;[&lt;/span&gt;oke&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;--core-opts&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cli.post&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;--options&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;other&lt;span class="w"&gt; &lt;/span&gt;tasks&lt;span class="w"&gt; &lt;/span&gt;here&lt;span class="w"&gt; &lt;/span&gt;...&lt;span class="o"&gt;]&lt;/span&gt;
 
 Docstring:
@@ -913,7 +913,7 @@ Summary:
 &lt;li&gt;Package로 추가해야 되어 &lt;code&gt;cli&lt;/code&gt; 폴더를 만들었다.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/sdispater/poetry/issues/577"&gt;Poetry run: ModuleOrPackageNotFound with implicit namespace packages (PEP420)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Import Program class&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Import Program class&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;invoke&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;
 
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -927,7 +927,7 @@ Summary:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code&gt;pyproject.toml&lt;/code&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[tool.poetry]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[tool.poetry]&lt;/span&gt;
 &lt;span class="p"&gt;...&lt;/span&gt;
 
 &lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
@@ -943,7 +943,7 @@ Summary:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이제 실행해 보자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;cli&lt;span class="w"&gt; &lt;/span&gt;--list
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;poetry&lt;span class="w"&gt; &lt;/span&gt;run&lt;span class="w"&gt; &lt;/span&gt;cli&lt;span class="w"&gt; &lt;/span&gt;--list
 Subcommands:
 
 &lt;span class="w"&gt;  &lt;/span&gt;post&lt;span class="w"&gt;   &lt;/span&gt;Make&lt;span class="w"&gt; &lt;/span&gt;post&lt;span class="w"&gt; &lt;/span&gt;template
@@ -963,11 +963,11 @@ File&lt;span class="w"&gt; &lt;/span&gt;created&lt;span class="w"&gt; &lt;/span&
 &lt;hr&gt;
 &lt;p&gt;ps. 파일 단위로도 가능하다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;tasks.py&lt;/code&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;위에꺼 갔다 쓰자.. 귀찮다...
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;위에꺼 갔다 쓰자.. 귀찮다...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code&gt;pyproject.toml&lt;/code&gt;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[tool.poetry.scripts]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[tool.poetry.scripts]&lt;/span&gt;
 &lt;span class="na"&gt;cli&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;tasks:run&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -977,7 +977,7 @@ File&lt;span class="w"&gt; &lt;/span&gt;created&lt;span class="w"&gt; &lt;/span&
 &lt;h2 id="rustup-rust"&gt;Rustup으로 Rust 설치&lt;/h2&gt;
 &lt;p&gt;처음에는 rustup을 이용해서 설치한게 아니라 brow를 이용해서 설치를 했었다.&lt;br&gt;
 coc.nvim에서 rust 플러그인을 쓸려고하니&amp;hellip; 안된다고 해서 설치.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl&lt;span class="w"&gt; &lt;/span&gt;--proto&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;=https&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--tlsv1.2&lt;span class="w"&gt; &lt;/span&gt;-sSf&lt;span class="w"&gt; &lt;/span&gt;https://sh.rustup.rs&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sh
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl&lt;span class="w"&gt; &lt;/span&gt;--proto&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;=https&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--tlsv1.2&lt;span class="w"&gt; &lt;/span&gt;-sSf&lt;span class="w"&gt; &lt;/span&gt;https://sh.rustup.rs&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;명령어를 확인했는데 이거 괜찮은 툴이다.&lt;br&gt;
@@ -986,7 +986,7 @@ coc.nvim에서 rust 플러그인을 쓸려고하니&amp;hellip; 안된다고 해
 &lt;h3 id="cocnvim"&gt;coc.nvim 플러그인 설치&lt;/h3&gt;
 &lt;p&gt;원래 목적인 coc.nvim 플러그인을 설치하자.&lt;br&gt;
 vim에서 명령을 날린다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;:CocInstall coc-rls
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;:CocInstall coc-rls
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;환경 끝.&lt;/p&gt;
@@ -1010,7 +1010,7 @@ vim에서 명령을 날린다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;GNU Make 처럼, 명령을 나열할 수 있다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;invoke&lt;span class="w"&gt; &lt;/span&gt;clean&lt;span class="w"&gt; &lt;/span&gt;build
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;invoke&lt;span class="w"&gt; &lt;/span&gt;clean&lt;span class="w"&gt; &lt;/span&gt;build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;
@@ -1026,7 +1026,7 @@ vim에서 명령을 날린다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;tasks.py&lt;/code&gt; - &lt;a href="https://github.com/ujuc/ujuc.github.io/blob/develop/tasks.py"&gt;ujuc.github.io - tasks.py&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;invoke&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;invoke&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Collection&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;
 
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pathlib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Path&lt;/span&gt;
 
@@ -1074,7 +1074,7 @@ vim에서 명령을 날린다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;목록은 이렇게&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="w"&gt; &lt;/span&gt;--list
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="w"&gt; &lt;/span&gt;--list
 
 Available&lt;span class="w"&gt; &lt;/span&gt;tasks:
 
@@ -1087,7 +1087,7 @@ Available&lt;span class="w"&gt; &lt;/span&gt;tasks:
 &lt;ul&gt;
 &lt;li&gt;help는 이렇게&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="w"&gt; &lt;/span&gt;pub&lt;span class="w"&gt; &lt;/span&gt;-h
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="w"&gt; &lt;/span&gt;pub&lt;span class="w"&gt; &lt;/span&gt;-h
 
 Usage:&lt;span class="w"&gt; &lt;/span&gt;inv&lt;span class="o"&gt;[&lt;/span&gt;oke&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;--core-opts&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pub&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;other&lt;span class="w"&gt; &lt;/span&gt;tasks&lt;span class="w"&gt; &lt;/span&gt;here&lt;span class="w"&gt; &lt;/span&gt;...&lt;span class="o"&gt;]&lt;/span&gt;
 
@@ -1197,7 +1197,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;This example encompasses some of the rules below as a quick overview:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nx"&gt;FooInterface&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -1307,7 +1307,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;For example:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="nx"&gt;namesapce&lt;/span&gt; &lt;span class="nx"&gt;Vender\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nx"&gt;FooClass&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -1331,7 +1331,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;The opening brace for the class MUST go on its own line; the closing brace for the class MUST go on the next line after the body.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nx"&gt;FooClass&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -1348,7 +1348,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;Lists of &lt;code&gt;implements&lt;/code&gt; MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one interface per line.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nx"&gt;FooClass&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -1382,7 +1382,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;A property declaration looks like the following.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ClassName&lt;/span&gt;
@@ -1408,7 +1408,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;A method declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ClassName&lt;/span&gt;
@@ -1429,7 +1429,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;Method arguments with default values MUST go at the end of the argument list.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ClassName&lt;/span&gt;
@@ -1449,7 +1449,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;When the argument list is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ClassName&lt;/span&gt;
@@ -1473,7 +1473,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;When present, the &lt;code&gt;static&lt;/code&gt; declaration MUST come after the visibility declaration.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Package&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;abstract&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ClassName&lt;/span&gt;
@@ -1494,7 +1494,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis, there MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="nx"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="nv"&gt;$foo&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$arg1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;Foo&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$arg2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$arg3&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -1505,7 +1505,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="nv"&gt;$foo&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="nv"&gt;$longArgument&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="nv"&gt;$longerArgument&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1565,7 +1565,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;An &lt;code&gt;if&lt;/code&gt; structure looks like the following. Note the placement of parentheses, spaces, and braces; and that &lt;code&gt;else&lt;/code&gt; and &lt;code&gt;elseif&lt;/code&gt; are on the same line as the closing brace from the earlier body.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$expr1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// if body&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;elseif&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$expr2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1584,7 +1584,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;A &lt;code&gt;switch&lt;/code&gt; structure looks like the following. Note the placement of parentheses, spaces, and braces. The &lt;code&gt;case&lt;/code&gt; statement MUST be indented once from &lt;code&gt;switch&lt;/code&gt;, and the &lt;code&gt;break&lt;/code&gt; keyword (or other terminating keyword) MUST be indented at the same level as the &lt;code&gt;case&lt;/code&gt; body. There MUST be a comment such as &lt;code&gt;// no break&lt;/code&gt; when fall-through is intentional in a non-empty &lt;code&gt;case&lt;/code&gt; body.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$expr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;First case, with a break&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -1608,7 +1608,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;A &lt;code&gt;while&lt;/code&gt; statement looks like the following. Note the placement of parentheses, spaces, and braces.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$expr&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// structure body&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -1618,7 +1618,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;Similarly, a &lt;code&gt;do while&lt;/code&gt; statement looks like the following. Note the placement of parentheses, spaces, and braces.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// structure body;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$expr&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -1629,7 +1629,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;A &lt;code&gt;for&lt;/code&gt; statement looks like the following. Note the placement of parentheses, spaces, and braces.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// for body&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -1640,7 +1640,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;A &lt;code&gt;foreach&lt;/code&gt; statement looks like the following. Note the placement of parentheses, spaces, and braces.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$iterable&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$key&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// foreach body&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -1651,7 +1651,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;A &lt;code&gt;try catch&lt;/code&gt; block looks like the following. Note the placement of parentheses, spaces, and braces.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;try&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// try body&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;catch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;FirstExceptionType&lt;/span&gt; &lt;span class="nv"&gt;$e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1686,7 +1686,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;A closure declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="nv"&gt;$closureWithArgs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$arg1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$arg2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// body&lt;/span&gt;
 &lt;span class="p"&gt;};&lt;/span&gt;
@@ -1708,7 +1708,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;The following are examples of closures with and without argument lists and variable lists split across multiple lines.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="nv"&gt;$longArgs_noVars&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="nv"&gt;$longArgument&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="nv"&gt;$longerArgument&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -1758,7 +1758,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;Note that the formatting rules also apply when the closure is used directly in a function or method call as an argument.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="nv"&gt;$foo&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="nv"&gt;$arg1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$arg2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$var1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1903,7 +1903,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;The following is an example of a file with both declarations and side effects;i.e, an example of what to avoid:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="c1"&gt;// side effect: change ini settings&lt;/span&gt;
 &lt;span class="nb"&gt;ini_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;error_reporting&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;E_ALL&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
@@ -1924,7 +1924,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;The following example is of a file that contains declarations without side effects; i.e., an example of what to emulate:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="c1"&gt;// declaration&lt;/span&gt;
 &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt; 
@@ -1958,7 +1958,7 @@ Options:
 &lt;p&gt;Code written for PHP 5.3 and after MUST use formal namespaces.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="c1"&gt;// PHP 5.3 and later:&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Model&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
@@ -1971,7 +1971,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;Code written for 5.2.x and before SHOULD use the pseudo-namespacing convention of &lt;code&gt;Vendor_&lt;/code&gt; prefixes on class names.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="c1"&gt;// PHP 5.2.x and earlier:&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Vendor_Model_Foo&lt;/span&gt;
@@ -1989,7 +1989,7 @@ Options:
 &lt;blockquote&gt;
 &lt;p&gt;Class constants MUST be declared in all upper case with underscore separators. For example:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;Vendor\Model&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Foo&lt;/span&gt;
@@ -2014,17 +2014,17 @@ Options:
 &lt;p&gt;Method names MUST be declared in &lt;code&gt;camelCase()&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</content><category term="Develop"></category><category term="php"></category><category term="psr-1"></category><category term="psr"></category><category term="transelate"></category></entry><entry><title>맥에서 GPG키를 이용하여 Commit 해보기</title><link href="https://ujuc.github.io/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/" rel="alternate"></link><published>2018-10-26T23:24:58+09:00</published><updated>2022-05-01T22:44:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-10-26:/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/</id><summary type="html">&lt;p&gt;GPG 키를 이용해서 내 커밋이 정말 내가 올린 것이라 말하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://keybase.io/"&gt;keybase.io&lt;/a&gt; 계정이 있다는 가정하에서 하니, 가입을 하자.&lt;/p&gt;
 &lt;h3 id="_1"&gt;필요한 것들&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;gpg
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;gpg
 $&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--cask&lt;span class="w"&gt; &lt;/span&gt;keybase
 $&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--cask&lt;span class="w"&gt; &lt;/span&gt;gpg-suite
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="gpg"&gt;GPG 키 생성&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;keybase&lt;span class="w"&gt; &lt;/span&gt;pgp&lt;span class="w"&gt; &lt;/span&gt;gen&lt;span class="w"&gt; &lt;/span&gt;--multi
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;keybase&lt;span class="w"&gt; &lt;/span&gt;pgp&lt;span class="w"&gt; &lt;/span&gt;gen&lt;span class="w"&gt; &lt;/span&gt;--multi
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="git"&gt;Git 구성에 추가&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;gpg&lt;span class="w"&gt; &lt;/span&gt;--list-secret-keys&lt;span class="w"&gt; &lt;/span&gt;--keyid-format&lt;span class="w"&gt; &lt;/span&gt;LONG
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;gpg&lt;span class="w"&gt; &lt;/span&gt;--list-secret-keys&lt;span class="w"&gt; &lt;/span&gt;--keyid-format&lt;span class="w"&gt; &lt;/span&gt;LONG
 /Users/&lt;span class="o"&gt;{&lt;/span&gt;username&lt;span class="o"&gt;}&lt;/span&gt;/.gnupg/pubring.kbx
 ------------------------------
 sec&lt;span class="w"&gt;   &lt;/span&gt;rsa4096/&lt;span class="o"&gt;{&lt;/span&gt;keyid&lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2018&lt;/span&gt;-10-18&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;expires:&lt;span class="w"&gt; &lt;/span&gt;20xx-10-01&lt;span class="o"&gt;]&lt;/span&gt;
@@ -2039,17 +2039,17 @@ $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;conf
 &lt;h3 id="github-public-gpg"&gt;Github 에 Public GPG 키 등록&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://github.com/settings/keys"&gt;https://github.com/settings/keys&lt;/a&gt; 에 접속하여 &lt;strong&gt;New GPG key&lt;/strong&gt; 메뉴 선택&lt;/p&gt;
 &lt;p&gt;아래 명령어로 GPG키 복사하여 붙여넣기&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;keybase&lt;span class="w"&gt; &lt;/span&gt;pgp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-q&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;keyid&lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pbcopy
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;keybase&lt;span class="w"&gt; &lt;/span&gt;pgp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-q&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;keyid&lt;span class="o"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;pbcopy
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="git-gui"&gt;Git GUI 툴에서 커밋이 가능하게 옵션 추가&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;no-tty&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;~/.gnupg/gpg.conf
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;no-tty&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;~/.gnupg/gpg.conf
 $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;config&lt;span class="w"&gt; &lt;/span&gt;--global&lt;span class="w"&gt; &lt;/span&gt;gpg.program&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;which&lt;/span&gt;&lt;span class="p"&gt; gpg&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="_2"&gt;회사 컴퓨터에도 가능하게 해두자&lt;/h3&gt;
 &lt;p&gt;위에서 말한 프로그램을 설치한 뒤 다음 명령을 이용해서 key를 저장한다. 하나의 키를 가지고 있을 경우에만 다음 명령이 먹힌다. 두개이상이면 다른 모습이 보인다고&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;keybase&lt;span class="w"&gt; &lt;/span&gt;pgp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;keybase&lt;span class="w"&gt; &lt;/span&gt;pgp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt;
 -----BEGIN&lt;span class="w"&gt; &lt;/span&gt;PGP&lt;span class="w"&gt; &lt;/span&gt;PUBLIC&lt;span class="w"&gt; &lt;/span&gt;KEY&lt;span class="w"&gt; &lt;/span&gt;BLOCK-----
 
 &lt;span class="c1"&gt;# Public key export&lt;/span&gt;
@@ -2071,19 +2071,19 @@ $&lt;span class="w"&gt; &lt;/span&gt;keybase&lt;span class="w"&gt; &lt;/span&gt;
 사용법은 &lt;code&gt;rbenv&lt;/code&gt;, &lt;code&gt;pyenv&lt;/code&gt; 와 동일하다. (그렇다보니 shell script로만 작성이되어있다.)&lt;/p&gt;
 &lt;h3 id="_2"&gt;설치&lt;/h3&gt;
 &lt;h4 id="github-checkout"&gt;&lt;a href="https://github.com/phpenv/phpenv#installation"&gt;Github Checkout&lt;/a&gt;&lt;/h4&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;git://github.com/phpenv/phpenv.git&lt;span class="w"&gt; &lt;/span&gt;~/.phpenv
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;git://github.com/phpenv/phpenv.git&lt;span class="w"&gt; &lt;/span&gt;~/.phpenv
 $&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;export PATH=&amp;quot;$HOME/.phpenv/bin:$PATH&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;~/.bash_profile
 $&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;eval &amp;quot;$(phpenv init -)&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;~/.bash_profile
 $&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-l
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id="phpenv-installer"&gt;&lt;a href="https://github.com/phpenv/phpenv-installer"&gt;phpenv-installer&lt;/a&gt;&lt;/h4&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;curl -L https://raw.githubusercontent.com/phpenv/phpenv-installer/master/bin/phpenv-installer | bash
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이걸 설치하면 &lt;code&gt;php-build/php-build&lt;/code&gt;, &lt;code&gt;madumlao/phpenv-aliases&lt;/code&gt;, &lt;code&gt;ngyuki/phpenv-composer&lt;/code&gt;가 자동으로 설치된다.&lt;/p&gt;
 &lt;h3 id="php"&gt;PHP 설치&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;phpenv&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--list
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;phpenv&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--list
 $&lt;span class="w"&gt; &lt;/span&gt;phpenv&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;php_version&lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -2091,7 +2091,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;phpenv&lt;span class="w"&gt; &lt;/span&gt;i
 &lt;ul&gt;
 &lt;li&gt;Mac os error &lt;a href="https://qiita.com/maosanhioro/items/82698a8bdf6b7694ad36"&gt;해결 문서&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;-----------------&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;-----------------&lt;/span&gt;
 &lt;span class="c"&gt;|  BUILD ERROR  |&lt;/span&gt;
 &lt;span class="nb"&gt;-----------------&lt;/span&gt;
 
@@ -2107,7 +2107,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;phpenv&lt;span class="w"&gt; &lt;/span&gt;i
 &lt;ul&gt;
 &lt;li&gt;추가 설치 패키지&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt;
 &lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bison&lt;/span&gt;&lt;span class="mf"&gt;@2.7&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;force&lt;/span&gt;
 
 &lt;span class="n"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;brew&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;re2c&lt;/span&gt;
@@ -2121,17 +2121,17 @@ $&lt;span class="w"&gt; &lt;/span&gt;phpenv&lt;span class="w"&gt; &lt;/span&gt;i
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;libz&lt;/code&gt; error&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;configure&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Cannot&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libz&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;configure&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Cannot&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;libz&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xcode-select --install
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;xcode-select --install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;모하비에서는 안된다.&lt;/p&gt;
 &lt;h2 id="_3"&gt;나오는 말&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;phpenv&lt;/code&gt;로는 설치가 안되서&amp;hellip; &lt;code&gt;brew&lt;/code&gt;로 그냥 설치&amp;hellip;&lt;br&gt;
 &lt;code&gt;brew&lt;/code&gt; 로 7.2 버전이랑 7.1 버전을 설치해두고 PhpStorm 에서 둘다 잡아두면 두개다 쓸수있지뭐&amp;hellip; 마이너까지만 신경쓰면되니.&lt;/p&gt;</content><category term="Develop"></category><category term="php"></category><category term="phpenv"></category><category term="env"></category></entry><entry><title>Pelican에서 Markdown 문서 Attribute 에러</title><link href="https://ujuc.github.io/2018/09/24/pelicane-seo_markdown_mun-seo_attribute_e-reo/" rel="alternate"></link><published>2018-09-24T22:45:00+09:00</published><updated>2018-09-28T18:58:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-24:/2018/09/24/pelicane-seo_markdown_mun-seo_attribute_e-reo/</id><summary type="html">&lt;p&gt;Pelican을 새로 설치하였더니 markdown 문서들이 전부 컴파일이 안된다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그를 python 3.7로 업그레이드로 진행하고 나서 다음과 같은 에러가 발생한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/content&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/output&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/pelicanconf.py&lt;span class="w"&gt; &lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/content&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/output&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/pelicanconf.py&lt;span class="w"&gt; &lt;/span&gt;
 ERROR:&lt;span class="w"&gt; &lt;/span&gt;Could&lt;span class="w"&gt; &lt;/span&gt;not&lt;span class="w"&gt; &lt;/span&gt;process&lt;span class="w"&gt; &lt;/span&gt;blog/2017-10-22-pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi.md
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;AttributeError:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Registry&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;object&lt;span class="w"&gt; &lt;/span&gt;has&lt;span class="w"&gt; &lt;/span&gt;no&lt;span class="w"&gt; &lt;/span&gt;attribute&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;keys&amp;#39;&lt;/span&gt;
 ERROR:&lt;span class="w"&gt; &lt;/span&gt;Could&lt;span class="w"&gt; &lt;/span&gt;not&lt;span class="w"&gt; &lt;/span&gt;process&lt;span class="w"&gt; &lt;/span&gt;blog/2014-02-23-pylint.md
@@ -2140,7 +2140,7 @@ ERROR:&lt;span class="w"&gt; &lt;/span&gt;Could&lt;span class="w"&gt; &lt;/span&
 
 &lt;p&gt;git으로 버전을 관리하고 있어 해당 변경점을 확인하였더니 확인했더니 Markdown 라이브러리 문제다. 그것도 메이저로 업그레이드되면서 무언가가 변경이 되었고, 그게 Pelican 에서 사용하는 어떤 키와 잘못 설정된 부분이 있어서 발생한 것으로 파악된다.&lt;/p&gt;
 &lt;p&gt;나는 pipenv 를 사용하니 &lt;code&gt;Pipfile&lt;/code&gt; 에서 &lt;code&gt;Markdown&lt;/code&gt; 라이브러리 버전을 다음과 같이 수정을 하였다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[packages]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[packages]
 Markdown = {version = &amp;quot;&amp;lt;3.0&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Develop"></category><category term="pelican"></category><category term="markdown"></category></entry><entry><title>[번역] Design of QL</title><link href="https://ujuc.github.io/2018/05/24/design_of_ql/" rel="alternate"></link><published>2018-05-24T00:00:02+09:00</published><updated>2018-03-23T16:50:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-05-24:/2018/05/24/design_of_ql/</id><summary type="html">&lt;p&gt;Go 임베디드 데이터베이스 패키지인 QL에 대한 디자인 문서이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;code&gt;QL&lt;/code&gt; design 문서&lt;/p&gt;
 &lt;p&gt;이 문서는 &lt;a href="https://github.com/cznic/ql"&gt;&lt;code&gt;cznic/ql&lt;/code&gt;&lt;/a&gt; 프로젝트 설계 문서이다.&lt;br&gt;
@@ -2269,7 +2269,7 @@ Markdown = {version = &amp;quot;&amp;lt;3.0&amp;quot;}
 &lt;blockquote&gt;
 &lt;p&gt;The handle of the next table meta data is in the field #0 (next). If there is no next table meta data, the field is zero. Names and types of table columns are stored in field #1 (scols). A single field is described by concatenating a type tag and the column name. The type tags are&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;bool       &amp;#39;b&amp;#39;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;bool       &amp;#39;b&amp;#39;
 complex64  &amp;#39;c&amp;#39;
 complex128 &amp;#39;d&amp;#39;
 float32    &amp;#39;f&amp;#39;
@@ -2294,47 +2294,47 @@ time       &amp;#39;T&amp;#39;
 &lt;blockquote&gt;
 &lt;p&gt;The scols value is the above described encoded fields joined using &amp;ldquo;|&amp;rdquo;. For example&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Bar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Baz&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Bar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Baz&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이 문구는 scols를 사용하여 테이블 메타 데이터를 추가합니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This statement adds a table meta data with scols&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;quot;bFool|sBar|gBaz&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;quot;bFool|sBar|gBaz&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;테이블에서 컬럼을 삭제할 수 있습니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Columns can be dropped from a table&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;ALTER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;DROP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;COLUMN&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Bar&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;ALTER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;DROP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;COLUMN&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Bar&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이렇게 하면 scols에서 필드 정보가 &lt;strong&gt;지워&lt;/strong&gt;집니다. 값은 다음과 같이 보여집니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This &amp;ldquo;erases&amp;rdquo; the field info in scols, so the value becomes&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;quot;bFool||gBaz&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;quot;bFool||gBaz&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;테이블에 커럼을 추가할 수 있습니다.&lt;br&gt;
 Colums can be added to a table&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;ALTER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;ADD&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Count&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;uint&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;ALTER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;ADD&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Count&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;uint&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;새로운 필드는 scols 맨 끝에 항상 추가됩니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;New fields are always added to the end of scols&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;”bFool||gBaz|xCount&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;”bFool||gBaz|xCount&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code&gt;strings.Split(scols, "|")&lt;/code&gt;에 있는 필드에 대한 인덱스는 테이블 레코드에 있는 필드에 대한 인덱스 입니다. 위에서 설명한 컬럼 삭제 및 추가 규칙은 기존 테이블 데이터를 다시 만들 필요없이 스키마를 변경시킬 수 있습니다. 삭제된 컬럼은 원래 위치에 그대로 두고 새로운 레코드는 해당 위치에 &lt;code&gt;nil&lt;/code&gt;을 삽입합니다. 인코딩된 &lt;code&gt;nil&lt;/code&gt; 값은 1 바이트입니다. 기존 레코드에 없는 경우, 추가된 열은  &lt;code&gt;nil&lt;/code&gt; 값을 반환합니다. 삭제된 컬럼의 오버해드가 문제가되고 테이블 레코드를 이동할 충분한 시간/공간과 메모리가 있다면:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Index of a field in &lt;code&gt;strings.Split(scols, "|")&lt;/code&gt; is the index of the field in a table record. The above discussed rules for column dropping and column adding allow for schema evolution without a need to reshape any existing table data. Dropped columns are left where they are and new records insert &lt;code&gt;nil&lt;/code&gt; in their place. The encoded &lt;code&gt;nil&lt;/code&gt; is one byte. Added columns, when not present in preexisting records are returned as &lt;code&gt;nil&lt;/code&gt; values. If the overhead of dropped columns becomes an issue and there&amp;rsquo;s time/space and memory enough to move the records of a table around:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TRANSACTION&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TRANSACTION&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;column&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;definitions&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;INSERT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;INTO&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;SELECT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;FROM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;old&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;DROP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;old&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -2352,7 +2352,7 @@ Colums can be added to a table&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Field #2 (&lt;code&gt;hhead&lt;/code&gt;) is a handle to a head of table records, i.e. not a handle to the first record in the table. It is thus always non zero even for a table having no records. The reason for this &amp;ldquo;double pointer&amp;rdquo; schema is to enable adding (linking) a new record by updating a single value of the (&lt;code&gt;hhead&lt;/code&gt; pointing to) head.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;tableMeta&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hhead&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;firstTableRecord&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;tableMeta&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hhead&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;firstTableRecord&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;테이블 이름은 필드 #3 (&lt;code&gt;name&lt;/code&gt;)에 저장됩니다.&lt;/p&gt;
@@ -2364,7 +2364,7 @@ Colums can be added to a table&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Consider an index named N, indexing column named C. The encoding of this particular index is a string &amp;ldquo;&lt;tag&gt;N&amp;rdquo;. &lt;code&gt;&amp;lt;tag&amp;gt;&lt;/code&gt; is a string &amp;ldquo;n&amp;rdquo; for non unique indices and &amp;ldquo;u&amp;rdquo; for unique indices. There is this index information for the index possibly indexing the record id() and for all other columns of scols. Where the column is not indexed, the index info is an empty string. Infos for all indexes are joined with &amp;ldquo;|&amp;rdquo;. For example&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TRANSACTION&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TRANSACTION&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TABLE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Bar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Baz&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;INDEX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;ON&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Baz&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;UNIQUE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;INDEX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;ON&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Foo&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -2375,7 +2375,7 @@ Colums can be added to a table&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The values of fields #1 and #4 for the above are&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;scols: &amp;quot;lFoo|bBar|sBaz&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;scols: &amp;quot;lFoo|bBar|sBaz&amp;quot;
 indices: &amp;quot;|uY||nX&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -2383,7 +2383,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;Aligning properly the &amp;ldquo;|&amp;rdquo; split parts&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;             id    col#0    col#1    col#2&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;             id    col#0    col#1    col#2&lt;/span&gt;
 &lt;span class="nb"&gt;+----------+----+--------+--------+--------+&lt;/span&gt;
 &lt;span class="c"&gt;|   scols: |    | &amp;quot;lFoo&amp;quot; | &amp;quot;bBar&amp;quot; | &amp;quot;sBaz&amp;quot; |&lt;/span&gt;
 &lt;span class="nb"&gt;+----------+----+--------+--------+--------+&lt;/span&gt;
@@ -2399,7 +2399,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;Note that there cannot be two differently named indexes for the same column and it&amp;rsquo;s intended. The indices are &lt;a href="http://godoc.org/github.com/cznic/lldb#BTree"&gt;B+Trees&lt;/a&gt;. The list of handles to their roots is pointed to by &lt;code&gt;hxroots&lt;/code&gt; with zeros for non indexed columns. For the previous example&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;tableMeta&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hxroots&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;tableMeta&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hxroots&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;여기서 &lt;code&gt;x&lt;/code&gt;는 &lt;code&gt;X&lt;/code&gt; 인덱스의 B+Tree에 대한 루트이고, &lt;code&gt;y&lt;/code&gt;는 &lt;code&gt;Y&lt;/code&gt; 인덱스의 B+Tree에 대한 루트입니다. &lt;code&gt;id()&lt;/code&gt;에 대한 인덱스가 있다면, 첫번째 &lt;code&gt;0&lt;/code&gt;이 있는 곳에 B+Tree 루트가 있습니다. &lt;code&gt;hhead&lt;/code&gt;와 마찬가지로 &lt;code&gt;hxroots&lt;/code&gt;는 테이블에 대한 인덱스가 없는 경우라도 절대로 &lt;code&gt;0&lt;/code&gt;이 아닙니다.&lt;/p&gt;
@@ -2474,7 +2474,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;The composite key of the B+Tree is &lt;code&gt;{indexed values, record handle}&lt;/code&gt;. The B+Tree value is not used.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;            B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree key                    B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree value&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;            B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree key                    B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree value&lt;/span&gt;
 &lt;span class="nb"&gt;+----------------+---------------+&lt;/span&gt;&lt;span class="c"&gt;      &lt;/span&gt;&lt;span class="nb"&gt;+--------------+&lt;/span&gt;
 &lt;span class="c"&gt;| Indexed Values | Record Handle |  &lt;/span&gt;&lt;span class="nb"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;&amp;gt;&lt;/span&gt;&lt;span class="c"&gt;  |   not used   |&lt;/span&gt;
 &lt;span class="nb"&gt;+----------------+---------------+&lt;/span&gt;&lt;span class="c"&gt;      &lt;/span&gt;&lt;span class="nb"&gt;+--------------+&lt;/span&gt;
@@ -2485,7 +2485,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;If the indexed values are all NULL then the composite B+Tree key is &lt;code&gt;{nil, record handle}&lt;/code&gt; and the B+Tree value is not used.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;        B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree key                B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree value&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;        B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree key                B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree value&lt;/span&gt;
 &lt;span class="nb"&gt;+------+-----------------+&lt;/span&gt;&lt;span class="c"&gt;      &lt;/span&gt;&lt;span class="nb"&gt;+--------------+&lt;/span&gt;
 &lt;span class="c"&gt;| NULL |  Record Handle  |  &lt;/span&gt;&lt;span class="nb"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;&amp;gt;&lt;/span&gt;&lt;span class="c"&gt;  |   not used   |&lt;/span&gt;
 &lt;span class="nb"&gt;+------+-----------------+&lt;/span&gt;&lt;span class="c"&gt;      &lt;/span&gt;&lt;span class="nb"&gt;+--------------+&lt;/span&gt;
@@ -2495,7 +2495,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;If the indexed values are not all NULL then key of the B+Tree key are the indexed values and the B+Tree value is the record handle.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;    B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree key                B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree value&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;    B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree key                B&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt;&lt;span class="c"&gt;Tree value&lt;/span&gt;
 &lt;span class="nb"&gt;+----------------+&lt;/span&gt;&lt;span class="c"&gt;      &lt;/span&gt;&lt;span class="nb"&gt;+---------------+&lt;/span&gt;
 &lt;span class="c"&gt;| Indexed Values |  &lt;/span&gt;&lt;span class="nb"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;&amp;gt;&lt;/span&gt;&lt;span class="c"&gt;  | Record Handle |&lt;/span&gt;
 &lt;span class="nb"&gt;+----------------+&lt;/span&gt;&lt;span class="c"&gt;      &lt;/span&gt;&lt;span class="nb"&gt;+---------------+&lt;/span&gt;
@@ -2506,7 +2506,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;Scalar types of &lt;a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"&gt;&lt;code&gt;lldb/EncodeScalars&lt;/code&gt;&lt;/a&gt; are &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;complex*&lt;/code&gt;, &lt;code&gt;float*&lt;/code&gt;, &lt;code&gt;int*&lt;/code&gt;, &lt;code&gt;uint*&lt;/code&gt;, &lt;code&gt;string&lt;/code&gt; and &lt;code&gt;[]byte&lt;/code&gt; types. All other types are &amp;ldquo;blob-like&amp;rdquo;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;QL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="k"&gt;Go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;QL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="k"&gt;Go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;
 &lt;span class="o"&gt;-----------------------------&lt;/span&gt;
 &lt;span class="k"&gt;blob&lt;/span&gt;&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="err"&gt;[]&lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt;
 &lt;span class="nc"&gt;bigint&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="n"&gt;big&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;
@@ -2524,7 +2524,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;The values of the blob-like types are first encoded into a &lt;code&gt;[]byte&lt;/code&gt; slice:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;+-----------------------+-------------------+&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;+-----------------------+-------------------+&lt;/span&gt;
 &lt;span class="c"&gt;| blob                  | raw               |&lt;/span&gt;
 &lt;span class="c"&gt;| bigint&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; bigrat&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; time  | gob encoded       |&lt;/span&gt;
 &lt;span class="c"&gt;| duration              | gob encoded int64 |&lt;/span&gt;
@@ -2535,28 +2535,28 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;The gob encoding is &amp;ldquo;differential&amp;rdquo; wrt an initial encoding of all of the blob-like type. IOW, the initial type descriptors which gob encoding must write out are stripped off and &amp;ldquo;resupplied&amp;rdquo; on decoding transparently. See also blob.go. If the length of the resulting slice is &lt;code&gt;&amp;lt;= shortBlob&lt;/code&gt;, the first and only chunk is the scalar encoding of&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[]interface{}{typeTag, slice}.                  // initial (and last) chunk
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[]interface{}{typeTag, slice}.                  // initial (and last) chunk
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;슬라이스 길이가 &lt;code&gt;0&lt;/code&gt;일 수도 있습니다 (&lt;code&gt;blob("")&lt;/code&gt;인 경우). 결과로 나온 슬라이스 길이가 길다면 (&lt;code&gt;&amp;gt; shortBlob&lt;/code&gt;), 첫 번째 청크는 인코딩에서 옵니다:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The length of slice can be zero (for blob(&amp;ldquo;&amp;rdquo;)). If the resulting slice is long (&lt;code&gt;&amp;gt; shortBlob&lt;/code&gt;), the first chunk comes from encoding&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이 경우 &lt;code&gt;len(firstPart) &amp;lt;= shortBlob&lt;/code&gt;입니다. 두번째와 다른 청크입니다. 만약 마지막 청크면 &lt;code&gt;src&lt;/code&gt;는 다음과 같습니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In this case &lt;code&gt;len(firstPart) &amp;lt;= shortBlob&lt;/code&gt;. Second and other chunks: If the chunk is the last one, src is&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[]interface{lastPart}.                          // overflow chunk (last)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[]interface{lastPart}.                          // overflow chunk (last)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이 경우 &lt;code&gt;len(lastPart) &amp;lt;= 64kB&lt;/code&gt;입니다. 마지막 청크가 아닌 경우, &lt;code&gt;src&lt;/code&gt;는 다음과 같습니다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In this case &lt;code&gt;len(lastPart) &amp;lt;= 64kB&lt;/code&gt;. If the chunk is not the last one, src is&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[]interface{}{nextHandle, part}.                // overflow chunk (not last)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[]interface{}{nextHandle, part}.                // overflow chunk (not last)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이 경우는 &lt;code&gt;len(part) == 64kB&lt;/code&gt; 입니다.&lt;/p&gt;
@@ -2568,7 +2568,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;blockquote&gt;
 &lt;p&gt;Referenced from above:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[0]: http://godoc.org/github.com/cznic/lldb#hdr-Block_handles
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;[0]: http://godoc.org/github.com/cznic/lldb#hdr-Block_handles
 [1]: http://godoc.org/github.com/cznic/lldb#EncodeScalars
 [2]: http://godoc.org/github.com/cznic/lldb#BTree
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -2584,13 +2584,13 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt; 에서 사용하는 &lt;code&gt;.env&lt;/code&gt;를 내가 원하는 위치에 옮겨보자.&lt;/p&gt;
 &lt;h3 id="workon_home"&gt;&lt;code&gt;WORKON_HOME&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;저 깊이 들어가는 &lt;code&gt;.env&lt;/code&gt; 폴더를 내가 원하는 위치로 옮겨준다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=~/.&lt;/span&gt;&lt;span class="n"&gt;venvs&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=~/.&lt;/span&gt;&lt;span class="n"&gt;venvs&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="pipenv_venv_in_project"&gt;&lt;code&gt;PIPENV_VENV_IN_PROJECT&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;프로젝트를 진행하고있는 곳에 &lt;code&gt;.env&lt;/code&gt; 파일을 만들어준다.&lt;br&gt;
 이럴때는 &lt;code&gt;.gitignore&lt;/code&gt;에서 &lt;code&gt;.env/&lt;/code&gt; 파일을 예외로 해주어야된다. 해주는게 좋을꺼다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PIPENV_VENV_IN_PROJECT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;true&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PIPENV_VENV_IN_PROJECT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;true&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id="_1"&gt;참고&lt;/h4&gt;
@@ -2632,7 +2632,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;/ul&gt;
 &lt;p&gt;다른 것도 많으니 &lt;a href="http://distro.readthedocs.io/en/latest/"&gt;문서&lt;/a&gt; 확인하자.&lt;/p&gt;</content><category term="Develop"></category><category term="python"></category><category term="linux"></category><category term="distribution"></category><category term="lib"></category></entry><entry><title>Scala에서 val, var 차이</title><link href="https://ujuc.github.io/2017/08/04/scalae-seo_val,_var_ca-i/" rel="alternate"></link><published>2017-08-04T11:07:25+09:00</published><updated>2017-08-04T11:07:25+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-08-04:/2017/08/04/scalae-seo_val,_var_ca-i/</id><summary type="html">&lt;p&gt;Scala에서 &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;val&lt;/code&gt;의 차이가 궁금해졌다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;요세 Java를 공부하기는 싫고 JVM에서 도는 걸 찾다가. Scala쪽으로 어떤분이 약을 파셔서 약을먹었다.&lt;/p&gt;
 &lt;p&gt;초기 공부는 역시 홈페이지에 있는 문서를 기반으로&amp;hellip; &lt;a href="http://docs.scala-lang.org/tour/tour-of-scala.html"&gt;Scala Tour&lt;/a&gt; 를 보다 &lt;a href="http://docs.scala-lang.org/tour/classes.html"&gt;Classes&lt;/a&gt;에 갔더니 예제로 다음 과 같은 내용이 있었다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Point&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Point&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;move&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dx&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dy&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Unit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dx&lt;/span&gt;
 &lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dy&lt;/span&gt;
@@ -2654,7 +2654,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;def&lt;/code&gt;: 메소드, &lt;em&gt;immutable label&lt;/em&gt;, &lt;strong&gt;lazily evaluated&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;something&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;something&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="n"&gt;something&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;
 
 &lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;something&lt;/span&gt;
@@ -2669,7 +2669,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;val&lt;/code&gt;: 상수, &lt;em&gt;immutable label&lt;/em&gt;, &lt;strong&gt;eagerly/immediately evaluated&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;val&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;somethingelse&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;val&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;somethingelse&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;span class="n"&gt;somethingelse&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;17&lt;/span&gt;
 
 &lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;something&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;
@@ -2681,7 +2681,7 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;var&lt;/code&gt;: 변수, &lt;em&gt;mutable variable&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;aVariable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;aVariable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="n"&gt;aVariable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Int&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;
 
 &lt;span class="n"&gt;scala&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;aVariable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;
@@ -2705,14 +2705,14 @@ indices: &amp;quot;|uY||nX&amp;quot;
 코드에는 넣지 못하는 환경변수들을 셸에 &lt;code&gt;.bashrc&lt;/code&gt; 나 &lt;code&gt;.profile&lt;/code&gt; 에 모든 곳에서 사용하는 경우가 생기는데, 이걸 쓰면 프로젝트마다 다른 내용을 생성하여 보안을 높힐 수 있는 기회가 된다. (모든 보안은 사람이 행하는 보안을 제외하고&amp;hellip; 직접 OS에 들어와서 까는건 어쩔 수 없잖아&amp;hellip;)&lt;/p&gt;
 &lt;h4 id="_1"&gt;설치&lt;/h4&gt;
 &lt;h5 id="_2"&gt;빠지지 않는 메뉴얼 설치!&lt;/h5&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;https://github.com/direnv/direnv
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;https://github.com/direnv/direnv
 $&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;direnv
 $&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;install
 &lt;span class="c1"&gt;# or symlink ./direnv into the $PATH&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id="brew"&gt;brew&lt;/h5&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;direnv
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;direnv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
@@ -2723,29 +2723,29 @@ $&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;ins
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;eval &amp;quot;$(direnv hook bash)&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;eval &amp;quot;$(direnv hook bash)&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~/.zshrc&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;eval &amp;quot;$(direnv hook zsh)&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;eval &amp;quot;$(direnv hook zsh)&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~/.config/fish/config.fish&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;eval (direnv hook fish)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;eval (direnv hook fish)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~/.cshrc&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;eval `direnv hook tcsh`
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;eval `direnv hook tcsh`
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;다음으로는 다음과 같이 설정해주면 된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;playground&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;playground&lt;/span&gt;
 &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;FOO&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;envrc&lt;/span&gt;
 &lt;span class="n"&gt;direnv&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;envrc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;blocked&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Run&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;direnv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;approve&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;its&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;direnv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt;
@@ -2766,7 +2766,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;ins
 &lt;p&gt;더 자세한건 홈페이지에서!!&lt;br&gt;
 그런데 이거 참 좋당.&lt;br&gt;
 이제 어디서 쓰써볼까나&amp;hellip;&lt;/p&gt;</content><category term="Develop"></category><category term="env"></category><category term="shell"></category><category term="environment"></category></entry><entry><title>vim 빌드해보자</title><link href="https://ujuc.github.io/2017/01/28/vim_bir-deu-hae-bo-ja/" rel="alternate"></link><published>2017-01-28T22:46:29+09:00</published><updated>2017-01-28T22:46:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2017-01-28:/2017/01/28/vim_bir-deu-hae-bo-ja/</id><summary type="html">&lt;p&gt;이번에 플러그인을 사용하기 위해서 했던 작업들을 구성해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;vim 플러그인중 jedi-vim 을 사용하는데. 설치된 vim 에서 python 플러그가 켜있지 않아 관련되서 플러그인을 사용하지 않는다는 아래와 같은 에러 메시지를 뿜고 있었다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jedi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;failed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jedi&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;setup_py_version&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jedi&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;failed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Python&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jedi&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;setup_py_version&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;
 &lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;Vim&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;py3file&lt;/span&gt;&lt;span class="o"&gt;):&lt;/span&gt;&lt;span class="n"&gt;Traceback&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;recent&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;last&lt;/span&gt;&lt;span class="o"&gt;):&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;\&lt;/span&gt;
 &lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jedi&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;init_python&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]..&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;SNR&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;72&lt;/span&gt;&lt;span class="n"&gt;_init_python&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="o"&gt;]..&lt;/span&gt;&lt;span class="n"&gt;jedi&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;setup_py_version&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
@@ -2779,15 +2779,15 @@ $&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;ins
 &lt;li&gt;해당 구성은 &lt;a href="https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source"&gt;Building Vim from source&lt;/a&gt; 를 이용해서 구성하는 것으로 했다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;vim을 빌드하기 전에 dev 패키지를 설치해준다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python3-dev ruby-dev
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python3-dev ruby-dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;그리고 기존 패키지로 설치되어 있는 vim을 삭제한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt remove vim vim-runtime
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt remove vim vim-runtime
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Vim 코드를 받고 컴파일을 해주자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/vim/vim.git
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/vim/vim.git
 cd vim
 ./configure --with-features=huge --enable-multibyte \
             --enable-rubyinterp=yes \
@@ -2798,7 +2798,7 @@ sudo make install
 
 &lt;p&gt;설치가 제대로 되었는지 확인하려면 &lt;code&gt;vim --version&lt;/code&gt; 으로 확인하면 된다.&lt;/p&gt;
 &lt;p&gt;시스템 기본으로 구성하려면 아래 명령어를 쳐주면된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo update-alternatives --install /usr/bin/editer editer /usr/bin/vim 1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo update-alternatives --install /usr/bin/editer editer /usr/bin/vim 1
 sudo update-alternatives --set editer /usr/bin/vim
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
 sudo update-alternatives --set vi /usr/bin/vim
@@ -2806,7 +2806,7 @@ sudo update-alternatives --set vi /usr/bin/vim
 
 &lt;h2 id="mac"&gt;Mac&lt;/h2&gt;
 &lt;p&gt;Mac OS에서는 brew를 사용해서 설치하면된다. 설치할때 옵션을 붙여주면 되는데 그 옵션은 다음에서 처럼 확인이 가능하다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew options vim
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew options vim
 --with-client-server
     Enable client/server mode
 --with-custom-perl
@@ -2840,7 +2840,7 @@ sudo update-alternatives --set vi /usr/bin/vim
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이후 설치할때 필요한 옵션에 대해서 추가해주면된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew install vim --with-client-server --with-override-system-vi --with-python3
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew install vim --with-client-server --with-override-system-vi --with-python3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;그리고 이 옵션은 다음번 vim 업데이트에도 반영이 되는 사안이니 한번만 설정해서 설치해주기만 하면된다.&lt;/p&gt;
@@ -2856,13 +2856,13 @@ linux-brew 에서는 어떻게 될련지 모르겠지만 그것까지는 사용�
 셸에도 넣어주자. &lt;code&gt;zsh&lt;/code&gt; 를 사용하니 &lt;code&gt;~/.zshrc&lt;/code&gt; 에 &lt;code&gt;source $(brew --prefix autoenv)/activate.sh&lt;/code&gt; 를 넣어두게 되면 쉽다.&lt;/p&gt;
 &lt;h2 id="_1"&gt;설정&lt;/h2&gt;
 &lt;p&gt;블로그를 &lt;code&gt;pelican&lt;/code&gt; 으로 구성해서 작성하다보니 &lt;code&gt;pyenv&lt;/code&gt;, &lt;code&gt;venv&lt;/code&gt; 설정해서 패키지 설치 파일이 필요해서 구성했다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# ujuc.github.io
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# ujuc.github.io
 
 source ../env/blog/bin/activate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;다 좋은데 다른 폴더로 가거나 다른 프로젝트로 갔을때&amp;hellip; 문제가 생길 수 있어서 끄는 방법을 찾았다. 상위 폴더에 다음 &lt;code&gt;.evn&lt;/code&gt;를 만들어서 넣어주면 된다. 개발하면서 자주가는 곳에다가는 꼭 박아두자. (&lt;a href="https://github.com/kennethreitz/autoenv/issues/30#issuecomment-26832177"&gt;원문&lt;/a&gt;)&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;#&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="nv"&gt;env&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;#&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="nv"&gt;env&lt;/span&gt;
 
 &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;[&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$VIRTUAL_ENV&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;]&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;; then&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;deactivate&lt;/span&gt;
@@ -2999,7 +2999,7 @@ source ../env/blog/bin/activate
 &lt;blockquote&gt;
 &lt;p&gt;Here’s how an article (i.e. a resource of type “articles”) might appear in a document:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// ...&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// ...&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -3093,7 +3093,7 @@ source ../env/blog/bin/activate
 &lt;blockquote&gt;
 &lt;p&gt;For example, the following primary data is a single resource object:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
  &amp;quot;data&amp;quot;: {
     &amp;quot;type&amp;quot;: &amp;quot;articles&amp;quot;,
     &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;,
@@ -3111,7 +3111,7 @@ source ../env/blog/bin/activate
 &lt;blockquote&gt;
 &lt;p&gt;The following primary data is a single &lt;a href="http://jsonapi.org/format/#document-resource-identifier-objects"&gt;resource identifier object&lt;/a&gt; that references the same resource:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;{
  &amp;quot;data&amp;quot;: {
     &amp;quot;type&amp;quot;: &amp;quot;articles&amp;quot;,
     &amp;quot;id&amp;quot;: &amp;quot;1&amp;quot;
@@ -3213,7 +3213,7 @@ source ../env/blog/bin/activate
 그러다보니 가끔 길이를 확인해서 커밋을 해야되는 경우가 발생하는데&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그나마 기본적으로 설정해놓은 80줄은 쉽게 찾으나&amp;hellip; 커밋 제목인 50자, 커밋 메시지&lt;br&gt;
 제한인 72자를 확인하는게 쉽지가 않아서 줄을 그어놓고 사용하기위해 설정을 한다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;set cc=51,73,81,121
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;set cc=51,73,81,121
 highlight ColorColumn ctermbg=17 guibg=navyblue
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -3233,7 +3233,7 @@ highlight ColorColumn ctermbg=17 guibg=navyblue
 &lt;/ol&gt;
 &lt;h2 id="_1"&gt;사용법&lt;/h2&gt;
 &lt;p&gt;간단히 적겠다. 모자르면 &lt;a href="http://pysftp.readthedocs.org/en/release_0.2.8/cookbook.html"&gt;문서&lt;/a&gt;를 보자.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pysftp&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pysftp&lt;/span&gt;
 
 &lt;span class="n"&gt;cinfo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;host&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hostname&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ujuc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
          &lt;span class="s1"&gt;&amp;#39;private_key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/path/to/keyfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;port&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2222&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
@@ -3263,7 +3263,7 @@ highlight ColorColumn ctermbg=17 guibg=navyblue
 &lt;p&gt;설치는 알아서&amp;hellip;&lt;/p&gt;
 &lt;h3 id="_2"&gt;예제&lt;/h3&gt;
 &lt;p&gt;Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 &lt;code&gt;git-subtree&lt;/code&gt;를 모르겠는데 뭐&amp;hellip;&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.&lt;/span&gt;
 $&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;vendor&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;forge&lt;span class="w"&gt; &lt;/span&gt;https://github.com/brettlangdon/forge&lt;span class="w"&gt; &lt;/span&gt;v0.1.6
 +&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;subtree&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;--prefix&lt;span class="w"&gt; &lt;/span&gt;vendor/github.com/brettlangdon/forge&lt;span class="w"&gt; &lt;/span&gt;--message&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Add &amp;quot;forge&amp;quot; from &amp;quot;https://github.com/brettlangdon/   forge@v0.1.6&amp;quot;&lt;/span&gt;
 
@@ -3372,7 +3372,7 @@ forge@v0.1.7:
 &lt;h3 id="pager-mode-pager"&gt;Pager Mode (Pager 모드)&lt;/h3&gt;
 &lt;p&gt;Stdin 파이프를 사용할 경우, 모든 로그나 diff 옵션은 무시되고 pager 뷰는 stdin으로 들어온 데이터를 로딩하여 확인할 수 있습니다. Pager 모드는 다양한 Git 명령에 대한 출력값을 색상을 추가하여 확인할 수 있도록 도와줍니다.&lt;/p&gt;
 &lt;p&gt;예로 &lt;code&gt;git-show(1)&lt;/code&gt; 명령에 대한 출력을 색상을 추가한 버전으로 보고 싶다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tig
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tig
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
@@ -3389,14 +3389,14 @@ forge@v0.1.7:
 &lt;p&gt;주의: 메인 뷰에 대한 옵션을 지정하는 경우엔, 메인 뷰에서 사용하는 형식으로 자동 설정되는 &lt;code&gt;--pretty&lt;/code&gt; 옵션을 사용할 수 없습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;커밋과 author, 커미터 정보를 모두 보여주는 방법에 대한 예:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;--pretty&lt;span class="o"&gt;=&lt;/span&gt;fuller
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;--pretty&lt;span class="o"&gt;=&lt;/span&gt;fuller
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Git 명령에 대해 지원되는 변경 옵션 지원에 대한 소개는 &lt;a href="#5-revision-specification"&gt;지정 리버전&lt;/a&gt; 섹션을 참조하세요. 특정 Git 명령 옵션에 대한 자세한 설명은 해당 명령의 맨 페이지를 참조하세요.&lt;/p&gt;
 &lt;h2 id="2-the-viewer"&gt;2. The Viewer (뷰어)&lt;/h2&gt;
 &lt;p&gt;디스플레이는 하나 이상의 뷰와 스크린으로 구성되어있으며, 맨 마지막 라인은 상태 윈도우로 사용됩니다. 기본 값은 한번에 하나의 뷰만을 보여줍니다. 하지만 메인과 로그 뷰로 나눠서 커밋 diff를 확인할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;현재 라인이 커밋 라인일때, 로그 뷰에서 엔터키를 누르게되면 다음과 같은 명령이 실행되는 것과 같습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;commit&lt;span class="w"&gt; &lt;/span&gt;4d55caff4cc89335192f3e566004b4ceef572521
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;commit&lt;span class="w"&gt; &lt;/span&gt;4d55caff4cc89335192f3e566004b4ceef572521
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;뷰를 나눠서 볼 수 있는데, 로그 뷰는 윈도우 상단에, diff 뷰는 윈도우 하단에 위치시킬 수 있습니다. 탭을 눌러 두 뷰사이를 왔다갔다 할 수 있습니다. 로그 뷰만 보려면 &lt;code&gt;l&lt;/code&gt;를 누르면 됩니다.&lt;/p&gt;
@@ -3511,42 +3511,42 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;마지막 커밋에 대해 amend 적용:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;+&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;--amend
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;+&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;--amend
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;크립 보드에서 커밋 ID 복사:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;9&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!@sh&lt;span class="w"&gt; &lt;/span&gt;-c&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;echo -n %(commit) | xclip -selection c&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;9&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!@sh&lt;span class="w"&gt; &lt;/span&gt;-c&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;echo -n %(commit) | xclip -selection c&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;리뷰 즁 현재 커밋에서 사용된 노트 추가/수정:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;T&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;notes&lt;span class="w"&gt; &lt;/span&gt;edit&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;commit&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;T&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;notes&lt;span class="w"&gt; &lt;/span&gt;edit&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;commit&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Git 대화형으로 파일 내용에 세밀한 staging 추가 입력:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;I&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;file&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;I&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;file&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;선택된 브런치의 최상위에서 현재 브런치로 리배이스:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;refs&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;branch&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;refs&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;branch&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="title-windows"&gt;Title Windows (제목 윈도우)&lt;/h3&gt;
 &lt;p&gt;각 뷰는 뷰 이름에 대한 제목 윈도우를 가집니다. 가능하다면 현재 커밋 ID로도 나태낼 수 있으며, 뷰에서는 다음과 같이 위치됩니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;c622eefaa485995320bc743431bae0d497b1d875&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;61&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;%&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;c622eefaa485995320bc743431bae0d497b1d875&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;61&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;%&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;기본 값으로 현재 뷰의 제목은 굵은 폰트를 사용하여 강조됩니다. 긴 로딩이 있는 뷰의 경우(3초 이상), 로딩이 시작된 시간으로 부터의 시간이 추가되어 보여집니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;77d9e40fbcea3238015aea403e06f61542df9a31&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;779&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;%&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;5s
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;77d9e40fbcea3238015aea403e06f61542df9a31&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;779&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;%&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;5s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="3-environment-variables"&gt;3. Environment Variables (환경 변수)&lt;/h2&gt;
@@ -3561,24 +3561,24 @@ forge@v0.1.7:
 &lt;/dl&gt;
 &lt;h3 id="repository-references"&gt;Repository References (저장소 참조)&lt;/h3&gt;
 &lt;p&gt;태그와 브런치 head가 참조하는 커밋은  &lt;code&gt;[&lt;/code&gt;과 &lt;code&gt;]&lt;/code&gt;에 둘러쌓여 참조 이름으로 표시됩니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="m"&gt;2006&lt;/span&gt;-03-26&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;19&lt;/span&gt;:42&lt;span class="w"&gt; &lt;/span&gt;Petr&lt;span class="w"&gt; &lt;/span&gt;Baudis&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;cogito-0.17.1&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Cogito&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;.17.1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="m"&gt;2006&lt;/span&gt;-03-26&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;19&lt;/span&gt;:42&lt;span class="w"&gt; &lt;/span&gt;Petr&lt;span class="w"&gt; &lt;/span&gt;Baudis&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;cogito-0.17.1&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Cogito&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;.17.1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;브런치가 보여지는 것을 제한하길 원한다면, 보여질 브런치의 이름이 &lt;code&gt;master&lt;/code&gt;이거나 &lt;code&gt;feature/&lt;/code&gt; 로 접두어로 시작하는 경우엔 다음과 같이 변수를 설정할 수 있습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;TIG_LS_REMOTE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git ls-remote . master feature/*&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tig
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;TIG_LS_REMOTE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;git ls-remote . master feature/*&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tig
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;또는 여러분의 환경에서 영구적으로 변수를 설하여 사용할 수 있습니다.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;&lt;code&gt;TIG_LS_REMOTE&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;ls-remote&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;ls-remote&lt;span class="w"&gt; &lt;/span&gt;.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;h3 id="diff-options-diff"&gt;Diff options (Diff 옵션)&lt;/h3&gt;
 &lt;p&gt;Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜와 같이 보길 원한다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;TIG_DIFF_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--relative-date&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tig
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;TIG_DIFF_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--relative-date&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tig
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;또는 여러분의 환경에서 영구적으로 변수를 설정하여 사용할 수 있습니다.&lt;/p&gt;
@@ -3979,17 +3979,17 @@ forge@v0.1.7:
 &lt;p&gt;설정 가능한 옵션을 사용하여 Git과 상호 작용을 이 세션에서 설명합니다. 예를 들어 &lt;a href="#diff-options-diff"&gt;diff 옵션&lt;/a&gt;에 대한 세션에서 설명된 환경 변수를 사용하여 구성할 수 있습니다.&lt;/p&gt;
 &lt;h3 id="limit-by-path-name"&gt;Limit by Path Name (패치 이름 제한)&lt;/h3&gt;
 &lt;p&gt;특정 파일 (또는 여러 파일) 변경에 대해서만 확인하고 싶다면 다음과 같이 목록으로 나타냅니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;Makefile&lt;span class="w"&gt; &lt;/span&gt;README
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;Makefile&lt;span class="w"&gt; &lt;/span&gt;README
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Tig의 하위 명령 또는 태그 이름과 같은 저장소 참조에서 발생할 수 있는 모호성을 방지하기 위해 Git 옵션의 경우 &lt;code&gt;--&lt;/code&gt;를 사용하여 구분해야됩니다. &lt;code&gt;states&lt;/code&gt;라는 이름을 가진 파일이 있다면, &lt;code&gt;status&lt;/code&gt; 하위 명령과 충돌을 일으킬꺼니 다음과 같이 사용해야합니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;status
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;status
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="limit-by-date-or-number"&gt;Limit by Date or Number (날짜나 숫자 제한)&lt;/h3&gt;
 &lt;p&gt;Git과의 상호작용 속도를 올리기 위해 로그와 메인 뷰에서 보여지는 커밋의 수를 제한할 수 있습니다. 예를 들어, 날짜로 제한을 걸 경우엔 &lt;code&gt;--since=1.month&lt;/code&gt;, 커밋 수로 제한을 걸 경우엔 &lt;code&gt;-n400&lt;/code&gt;와 같이 사용합니다.&lt;/p&gt;
 &lt;p&gt;만약 두 날짜 사이에 발생한 변경분에 대해서 확인하고 싶다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;--after&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;May 5th&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--before&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2006-05-16 15:44&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;--after&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;May 5th&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--before&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;2006-05-16 15:44&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
@@ -3997,29 +3997,29 @@ forge@v0.1.7:
 &lt;/blockquote&gt;
 &lt;h3 id="limiting-by-commit-ranges"&gt;Limiting by Commit Ranges (커밋 범위 제한)&lt;/h3&gt;
 &lt;p&gt;대안으로 &amp;ldquo;&lt;code&gt;tag-1.0&lt;/code&gt;과 &lt;code&gt;tag-2.0&lt;/code&gt; 사이의 모든 커밋&amp;rdquo;과 같은 특정 범위로 제안할 수 있습니다. 예를 들면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;tag-1.0..tag-2.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;tag-1.0..tag-2.0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;원격 브런치로 푸시되지 않은 커밋의 검색 제한은 다음과 같은 방법으로 가능합니다. &lt;code&gt;origin&lt;/code&gt;을 업스트림 원격 브런치고 가정하고 사용한다면:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;origin..HEAD
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;origin..HEAD
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;원격 브런치에서 푸시된 내용들을 나열 합니다. 선택적으로 &lt;code&gt;HEAD&lt;/code&gt;는 생략될 수 있습니다.&lt;/p&gt;
 &lt;h3 id="limiting-by-reachability"&gt;Limiting by Reachability (도달 가능 제한)&lt;/h3&gt;
 &lt;p&gt;Git 인터프리트에서는 &amp;ldquo;tag-1.0&amp;hellip;tag-2.0&amp;rdquo;을 사용하는 경우, &amp;ldquo;&lt;code&gt;tag-1.0&lt;/code&gt;를 제외하고 &lt;code&gt;tag-2.0&lt;/code&gt;까지의 모든 커밋&amp;rdquo;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수 있습니다.&lt;/p&gt;
 &lt;p&gt;이 방법으로 다음 미리 커밋을 지정하려는 경우:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;tag-2.0&lt;span class="w"&gt; &lt;/span&gt;^tag-1.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;tag-2.0&lt;span class="w"&gt; &lt;/span&gt;^tag-1.0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;부정 연산자로 &lt;code&gt;^&lt;/code&gt;를 생각할 수 있습니다. 이 대체 문법을 사용하면 위의 여려 브런치의 cut off를 지정하여 커밋 브런치를 없애버릴 수 있습니다.&lt;/p&gt;
 &lt;h3 id="combining-revisions-specification"&gt;Combining Revisions Specification (변경 사항 연결)&lt;/h3&gt;
 &lt;p&gt;리버전 옵션은 다음과 같이 연결하여 사용할 수 있습니다. &amp;ldquo;&lt;code&gt;Documentation/&lt;/code&gt; 디렉토리에 있는 파일의 변경 사항들을 마지막달 20개 커밋까지 보여다오.&amp;rdquo;를 다음과 같이 나타낼 수 있습니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;--since&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;.month&lt;span class="w"&gt; &lt;/span&gt;-n20&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;Documentation/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;--since&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;.month&lt;span class="w"&gt; &lt;/span&gt;-n20&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;Documentation/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="examining-all-repository-references"&gt;Examining All Repository References (모든 저장소 참조 검사)&lt;/h3&gt;
 &lt;p&gt;일부 경우엔 저장소에 대한 모든 참조를 걸쳐서 변화를 조회하는 것이 편할 수 있습니다. 다음 예제는 &amp;ldquo;이 저장소의 개발 라인에서 지난주내 특정파일이 변경되었는지&amp;rdquo;에 대해 묻는 것입니다. 다음 명령으로 가능합니다:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;--all&lt;span class="w"&gt; &lt;/span&gt;--since&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;.week&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;Makefile
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;--all&lt;span class="w"&gt; &lt;/span&gt;--since&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;.week&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;Makefile
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="6-more-information"&gt;6. More Information (정보를 더 원하시면)&lt;/h2&gt;
@@ -5234,7 +5234,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 &lt;li&gt;&lt;code&gt;/_ah/spi/.*&lt;/code&gt; URL은 &lt;code&gt;app.yaml&lt;/code&gt; 파일에 하나만 가능함.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;여러 API를 사용하고 싶으면 &lt;code&gt;main.py&lt;/code&gt; 에 일반 예제들처럼 API클래스를 생성하고 다음과 같이 설정해주면됨.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# app.yaml&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# app.yaml&lt;/span&gt;
 &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;_ah&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;spi&lt;/span&gt;&lt;span class="o"&gt;/.*&lt;/span&gt;
   &lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;
 
@@ -5245,7 +5245,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;하나의 API에 여러 클래스를 두고 싶다면 아래의 방법으로 구성&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# API를 종류별로 나눔 &lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# API를 종류별로 나눔 &lt;/span&gt;
 &lt;span class="n"&gt;test_api_v1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;endpoints&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;test&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;v1.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;test1_api_v1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;endpoints&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;test1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;v1.0&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -5275,7 +5275,7 @@ Closes-Bug: #&amp;lt;bug_number&amp;gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;project-id.appspot.com/_ah/api/explorer&lt;/code&gt; 로 접근하여 확인.&lt;/li&gt;
 &lt;li&gt;업로드되어 표시되는 시간이 오래걸리니(최소 5분은 걸리는듯.) 올라갔는지 확인을 하려면 Google Developers Console에서 로그로 확인하면된다.&lt;/li&gt;
-&lt;li&gt;올라갔다면 아래와 같이 표시된다.&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;https://1-dot-project-id.appspot.com/_ah/api/test@v1.0&lt;span class="w"&gt; &lt;/span&gt;Saved
+&lt;li&gt;올라갔다면 아래와 같이 표시된다.&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;https://1-dot-project-id.appspot.com/_ah/api/test@v1.0&lt;span class="w"&gt; &lt;/span&gt;Saved
 https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0&lt;span class="w"&gt; &lt;/span&gt;Saved
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -5452,7 +5452,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0&lt;span class="w"&gt; &l
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;사용&lt;/h2&gt;
 &lt;h3 id="1"&gt;1. 사용 예제&lt;/h3&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;paramiko&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;paramiko&lt;/span&gt;
 
 &lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SSHClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;127.0.0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ujuc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;lol&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -5465,7 +5465,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0&lt;span class="w"&gt; &l
 &lt;li&gt;그러다보니 여기서도 그것에 관련된 내용을 사용할 수 있다. &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;set_missing_host_key_policy(policy)&lt;/code&gt;를 이용하여 host keys를 받아 저장할 것인지 아닌지를 판단하게 되는데. 기본값은 &lt;code&gt;RejectPolicy&lt;/code&gt;로 되어있으며, &lt;code&gt;yes&lt;/code&gt;를 받아와야한다면 &lt;code&gt;AutoAddPolicy&lt;/code&gt;를 사용하도록 한다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;paramiko&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;paramiko&lt;/span&gt;
 
 &lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SSHClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_missing_host_key_policy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AutoAddPolicy&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
@@ -5481,7 +5481,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0&lt;span class="w"&gt; &l
 &lt;li&gt;&lt;code&gt;stdin&lt;/code&gt;, &lt;code&gt;stdout&lt;/code&gt;, &lt;code&gt;stderr&lt;/code&gt;이다.&lt;br&gt;
 *명령어에 대한 값들을 받아와 확인할때는 아래와 같이 작성을 하면된다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readlines&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;test&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -5489,7 +5489,7 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0&lt;span class="w"&gt; &l
 &lt;ul&gt;
 &lt;li&gt;만약 &lt;code&gt;sudo&lt;/code&gt;명령어가 필요한 경우,&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sudo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sudo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;lol&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -5519,11 +5519,11 @@ https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0&lt;span class="w"&gt; &l
 &lt;li&gt;&lt;a href="http://www.pylint.org"&gt;pylint 홈페이지&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;설치&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pylint
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pylint
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="_2"&gt;사용&lt;/h2&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pylint filename.py
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pylint filename.py
 pylint-gui
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -5545,21 +5545,21 @@ pylint-gui
 &lt;/ul&gt;</content><category term="Develop"></category><category term="python"></category><category term="lint"></category><category term="pylint"></category><category term="code convention"></category></entry><entry><title>Python setup.py unilnstall 방법</title><link href="https://ujuc.github.io/2013/11/22/python_setup.py_unilnstall_bang-beob/" rel="alternate"></link><published>2013-11-22T11:22:23+09:00</published><updated>2018-03-11T11:22:23+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-11-22:/2013/11/22/python_setup.py_unilnstall_bang-beob/</id><summary type="html">&lt;p&gt;setup.py를 이용하여 uninstall 하는 방법에 대해서 간략 정리.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/1550226/python-setup-py-uninstall"&gt;Python setup.py uninstall&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;삭제하는 방법은 모든걸 지워 버려야된다는 것.&lt;/p&gt;
 &lt;p&gt;우선 &lt;code&gt;setup.py&lt;/code&gt;로 설치하는 경로를 파일로 받는다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;setup.,py&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--record&lt;span class="w"&gt; &lt;/span&gt;files.txt
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;setup.,py&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--record&lt;span class="w"&gt; &lt;/span&gt;files.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;그러고 난 뒤 그 내용에 있는 것들을 모두 다 지워주면 되는데. 이때, 폴더 내부만 삭제할뿐 생성된 파일이 삭제되지 않으니 유의해서 삭제할 수 있도록 조정해주면 된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;cat&lt;span class="w"&gt; &lt;/span&gt;files.txt&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;xargs&lt;span class="w"&gt; &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;cat&lt;span class="w"&gt; &lt;/span&gt;files.txt&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;xargs&lt;span class="w"&gt; &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Develop"></category><category term="python"></category><category term="setup.py"></category><category term="setup"></category><category term="tool"></category></entry><entry><title>Eclipse + AVR Plug-in Development Environment Setting</title><link href="https://ujuc.github.io/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting/" rel="alternate"></link><published>2012-10-24T11:34:15+09:00</published><updated>2018-03-11T11:34:15+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2012-10-24:/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting/</id><summary type="html">&lt;p&gt;Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Eclipse로 AVR 프로그램을 코딩할 수 있다는 소리를 듣고서 곧장 검색을 해서 필요한 것들을 깔았었다.&lt;br&gt;
 그런데 뭔가 프로젝트에 x표가 나타나서 신경쓰이게 하던것을 한 블로그에서 찾았다!!!!&lt;/p&gt;
 &lt;p&gt;그래서 이렇게 남긴다. 까먹을까봐서..&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_Eclipse_Plugin"&gt;공식 홈페이지&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;리눅스에서는 기본적으로 컴파일러는 gcc를 이용해서 작동을 시키게 된다.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yaourt -S gcc-avr avr-libc avrdude binutils-avr
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yaourt -S gcc-avr avr-libc avrdude binutils-avr
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;을 설치해줬다. Arch Linux에서는 이렇게 해주고 더 필요한 패키지들이 있으면,&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yaourt -Ss avr
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;yaourt -Ss avr
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;로 해줘 찾을 수 있다.&lt;/p&gt;

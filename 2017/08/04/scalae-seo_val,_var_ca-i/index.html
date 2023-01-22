@@ -114,7 +114,7 @@ gtag('config', 'G-X9EBSXCBTS');
     <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
     <div class="article-text"><p>요세 Java를 공부하기는 싫고 JVM에서 도는 걸 찾다가. Scala쪽으로 어떤분이 약을 파셔서 약을먹었다.</p>
 <p>초기 공부는 역시 홈페이지에 있는 문서를 기반으로&hellip; <a href="http://docs.scala-lang.org/tour/tour-of-scala.html">Scala Tour</a> 를 보다 <a href="http://docs.scala-lang.org/tour/classes.html">Classes</a>에 갔더니 예제로 다음 과 같은 내용이 있었다.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">def</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="n">dx</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">):</span><span class="w"> </span><span class="nc">Unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dx</span>
 <span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dy</span>
@@ -136,7 +136,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><code>def</code>: 메소드, <em>immutable label</em>, <strong>lazily evaluated</strong></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="k">def</span><span class="w"> </span><span class="nf">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span>
+<div class="highlight"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="k">def</span><span class="w"> </span><span class="nf">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span>
 <span class="n">something</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span>
 
 <span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="n">something</span>
@@ -151,7 +151,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><code>val</code>: 상수, <em>immutable label</em>, <strong>eagerly/immediately evaluated</strong></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="n">somethingelse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">5</span>
+<div class="highlight"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="n">somethingelse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">5</span>
 <span class="n">somethingelse</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span>
 
 <span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span>
@@ -163,7 +163,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><code>var</code>: 변수, <em>mutable variable</em></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">aVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span>
+<div class="highlight"><pre><span></span><code><span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="n">aVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span>
 <span class="n">aVariable</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
 
 <span class="n">scala</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>

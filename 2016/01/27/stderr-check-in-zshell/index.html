@@ -147,29 +147,29 @@ gtag('config', 'G-X9EBSXCBTS');
 </table>
 <p>간단히 하자.<br>
 go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올 것이다.</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>go
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>go
 </code></pre></div>
 
 <p><img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png"></p>
 <p>요놈을 안나오게 해보자.</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>go<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>/dev/null
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>go<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
 
 <p><img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png"></p>
 <p>오~~~</p>
 <p>stderr 값이 나오면 안나오게 할려고 보면&hellip; 이건 설치가 되어있으니&hellip; 없는걸로&hellip;</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>rbenv
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>rbenv
 </code></pre></div>
 
 <p><img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png"></p>
 <p>이걸 위와 같이 <code>1</code> 을 사용하면&hellip;</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>rbenv<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>/dev/null
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>rbenv<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
 
 <p><img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png"></p>
 <p>음&hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. <code>1</code>로 출력되는걸 막으라했더니&hellip;</p>
 <p>그럼 Python에서는 어디로 나올까?</p>
-<div class="codehilite"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="k">as</span> <span class="nn">sub</span>
+<div class="highlight"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="k">as</span> <span class="nn">sub</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">check_rbenv</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;which rbenv&#39;</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
                             <span class="n">stderr</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
 <span class="n">In</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">check_rbenv</span><span class="p">)</span>
@@ -177,7 +177,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 </code></pre></div>
 
 <p>음?? 암것도 안나온다&hellip;</p>
-<div class="codehilite"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;which rbenv&#39;</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span> <span class="mi">256</span>
 </code></pre></div>

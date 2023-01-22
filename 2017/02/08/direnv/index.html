@@ -121,14 +121,14 @@ gtag('config', 'G-X9EBSXCBTS');
 코드에는 넣지 못하는 환경변수들을 셸에 <code>.bashrc</code> 나 <code>.profile</code> 에 모든 곳에서 사용하는 경우가 생기는데, 이걸 쓰면 프로젝트마다 다른 내용을 생성하여 보안을 높힐 수 있는 기회가 된다. (모든 보안은 사람이 행하는 보안을 제외하고&hellip; 직접 OS에 들어와서 까는건 어쩔 수 없잖아&hellip;)</p>
 <h4 id="_1">설치</h4>
 <h5 id="_2">빠지지 않는 메뉴얼 설치!</h5>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/direnv/direnv
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/direnv/direnv
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>direnv
 $<span class="w"> </span>make<span class="w"> </span>install
 <span class="c1"># or symlink ./direnv into the $PATH</span>
 </code></pre></div>
 
 <h5 id="brew">brew</h5>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>direnv
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>direnv
 </code></pre></div>
 
 <ul>
@@ -139,29 +139,29 @@ $<span class="w"> </span>make<span class="w"> </span>install
 <ul>
 <li><code>~/.bashrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code>eval &quot;$(direnv hook bash)&quot;
+<div class="highlight"><pre><span></span><code>eval &quot;$(direnv hook bash)&quot;
 </code></pre></div>
 
 <ul>
 <li><code>~/.zshrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code>eval &quot;$(direnv hook zsh)&quot;
+<div class="highlight"><pre><span></span><code>eval &quot;$(direnv hook zsh)&quot;
 </code></pre></div>
 
 <ul>
 <li><code>~/.config/fish/config.fish</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code>eval (direnv hook fish)
+<div class="highlight"><pre><span></span><code>eval (direnv hook fish)
 </code></pre></div>
 
 <ul>
 <li><code>~/.cshrc</code></li>
 </ul>
-<div class="codehilite"><pre><span></span><code>eval `direnv hook tcsh`
+<div class="highlight"><pre><span></span><code>eval `direnv hook tcsh`
 </code></pre></div>
 
 <p>다음으로는 다음과 같이 설정해주면 된다.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">playground</span>
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">playground</span>
 <span class="o">$</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="k">export</span><span class="w"> </span><span class="n">FOO</span><span class="o">=</span><span class="n">foo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">.</span><span class="n">envrc</span>
 <span class="n">direnv</span><span class="p">:</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">.</span><span class="n">envrc</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">blocked</span><span class="o">.</span><span class="w"> </span><span class="n">Run</span><span class="w"> </span><span class="err">`</span><span class="n">direnv</span><span class="w"> </span><span class="n">allow</span><span class="err">`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">approve</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">content</span><span class="o">.</span>
 <span class="o">$</span><span class="w"> </span><span class="n">direnv</span><span class="w"> </span><span class="n">allow</span>

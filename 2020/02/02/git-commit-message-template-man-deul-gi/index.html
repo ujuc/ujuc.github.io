@@ -121,17 +121,17 @@ gtag('config', 'G-X9EBSXCBTS');
 <h3 id="1-git-config">1. Git config 에 추가</h3>
 <p><code>.gitconfig</code> 파일에 <code>commit.template</code> 항목에 기본 값으로 등록할 내용을 추가해준다.<br>
 여기서 나는 <code>~/.gitmessage</code>라는 것을 전체 프로젝트에서 사용하도록 구성하겠다.</p>
-<div class="codehilite"><pre><span></span><code>git config --global commit.template ~/.gitmessage
+<div class="highlight"><pre><span></span><code>git config --global commit.template ~/.gitmessage
 </code></pre></div>
 
 <p>명령을 실행다면 <code>.gitconfig</code> 파일에 다음과같이 설정이된다.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[commit]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[commit]</span>
 <span class="w">  </span><span class="na">template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">~/.gitmessage</span>
 </code></pre></div>
 
 <h3 id="2-commit-message-template">2. Commit message Template 작성</h3>
 <p><code>~/.gitmessage</code> 작성을 하자.</p>
-<div class="codehilite"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">type</span><span class="o">&gt;:</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">subject</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">type</span><span class="o">&gt;:</span><span class="w"> </span><span class="o">&lt;</span><span class="nt">subject</span><span class="o">&gt;</span>
 <span class="err">#####</span><span class="w"> </span><span class="nt">Subject</span><span class="w"> </span><span class="nt">50</span><span class="w"> </span><span class="nt">characters</span><span class="w"> </span><span class="err">#################</span><span class="w"> </span><span class="nt">-</span><span class="o">&gt;</span><span class="w"> </span><span class="o">|</span>
 
 
@@ -176,7 +176,7 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <h2 id="_2">레포마다 다르게 설정하기</h2>
 <p>다음 명령을 레포에서 입력한다.</p>
-<div class="codehilite"><pre><span></span><code>git config commit.template ./path/to/.gitmessage
+<div class="highlight"><pre><span></span><code>git config commit.template ./path/to/.gitmessage
 </code></pre></div>
 
 <p>그리고 <code>.git/gitmessage</code>에 template을 작성해준다.</p>

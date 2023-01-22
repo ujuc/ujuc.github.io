@@ -161,7 +161,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <li><code>/_ah/spi/.*</code> URL은 <code>app.yaml</code> 파일에 하나만 가능함.</li>
 <li>
 <p>여러 API를 사용하고 싶으면 <code>main.py</code> 에 일반 예제들처럼 API클래스를 생성하고 다음과 같이 설정해주면됨.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># app.yaml</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># app.yaml</span>
 <span class="o">-</span> <span class="n">url</span><span class="p">:</span> <span class="o">/</span><span class="n">_ah</span><span class="o">/</span><span class="n">spi</span><span class="o">/.*</span>
   <span class="n">script</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">application</span>
 
@@ -172,7 +172,7 @@ gtag('config', 'G-X9EBSXCBTS');
 </li>
 <li>
 <p>하나의 API에 여러 클래스를 두고 싶다면 아래의 방법으로 구성</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># API를 종류별로 나눔 </span>
+<div class="highlight"><pre><span></span><code><span class="c1"># API를 종류별로 나눔 </span>
 <span class="n">test_api_v1</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
 <span class="n">test1_api_v1</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test1&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
 
@@ -202,7 +202,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><code>project-id.appspot.com/_ah/api/explorer</code> 로 접근하여 확인.</li>
 <li>업로드되어 표시되는 시간이 오래걸리니(최소 5분은 걸리는듯.) 올라갔는지 확인을 하려면 Google Developers Console에서 로그로 확인하면된다.</li>
-<li>올라갔다면 아래와 같이 표시된다.<div class="codehilite"><pre><span></span><code>https://1-dot-project-id.appspot.com/_ah/api/test@v1.0<span class="w"> </span>Saved
+<li>올라갔다면 아래와 같이 표시된다.<div class="highlight"><pre><span></span><code>https://1-dot-project-id.appspot.com/_ah/api/test@v1.0<span class="w"> </span>Saved
 https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0<span class="w"> </span>Saved
 </code></pre></div>
 

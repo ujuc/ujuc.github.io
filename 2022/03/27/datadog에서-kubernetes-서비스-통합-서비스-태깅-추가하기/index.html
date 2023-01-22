@@ -123,7 +123,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <li>해당 파일들은 <code>kind: Deployment</code> 항목에서 할당된다. 기본 라벨은  <code>tags.datadog.com</code>으로 묶어서 사용할 수 있도록 구성할 수 있으며, 해당 묶음은 Datadog에서 읽어가는 부분이라 다르게 사용하면 제대로 못읽어 갈 수 있다.</li>
 </ul>
 <h3 id="pod">Pod 레벨 메트릭에 붙은 태깅</h3>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
 <span class="nt">template</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">metadata</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
@@ -139,7 +139,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>라벨에서 기본 tag를 가져올 수 있도록 <code>join_standard_tags</code> 옵션을 <code>true</code>로 변경 해준다. <a href="https://github.com/DataDog/integrations-core/blob/master/kubernetes_state/datadog_checks/kubernetes_state/data/conf.yaml.example#L53-L63">코드상 설명</a></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span>
@@ -152,7 +152,7 @@ gtag('config', 'G-X9EBSXCBTS');
 </code></pre></div>
 
 <h4 id="agent-configmap">Agent 항목에 ConfigMap으로 만든 설정 파일을 마운트 해준다.</h4>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
 <span class="w">  </span><span class="nt">volumeMounts</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span>
 <span class="w">      </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/datadog-agent/conf.d/kubernetes_state.d</span>
@@ -169,7 +169,7 @@ gtag('config', 'G-X9EBSXCBTS');
 </code></pre></div>
 
 <h4 id="pod-label">서비스 Pod에서 label을 다음과 같이 작성해준다.</h4>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
@@ -187,7 +187,7 @@ gtag('config', 'G-X9EBSXCBTS');
 </code></pre></div>
 
 <h3 id="apm-tracer-satesd">APM tracer와 SatesD 클라이언트 환경 설정</h3>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<div class="highlight"><pre><span></span><code><span class="nn">...</span>
 <span class="nt">containers</span><span class="p">:</span>
 <span class="nn">...</span>
 <span class="w">  </span><span class="nt">env</span><span class="p">:</span>

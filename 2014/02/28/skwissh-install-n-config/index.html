@@ -138,23 +138,23 @@ gtag('config', 'G-X9EBSXCBTS');
 <li>OS: Ubuntu 12.04.4 server</li>
 <li>Install Package</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python-pip
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python-pip
 </code></pre></div>
 
 <h3 id="_2">패키지 설치</h3>
 <h4 id="django">Django 설치</h4>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>pip<span class="w"> </span>isntall<span class="w"> </span>Django
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>pip<span class="w"> </span>isntall<span class="w"> </span>Django
 </code></pre></div>
 
 <h4 id="django-skwissh">Django-skwissh 설치</h4>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>buid-essential<span class="w"> </span>python-dev
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>buid-essential<span class="w"> </span>python-dev
 $<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/rsaikali/django-skwissh.git
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>django-skwissh
 $<span class="w"> </span>sudo<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
 </code></pre></div>
 
 <h3 id="django_1">Django 설정</h3>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>django-admin.py<span class="w"> </span>startproject<span class="w"> </span>mysite
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>django-admin.py<span class="w"> </span>startproject<span class="w"> </span>mysite
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>mysite
 $<span class="w"> </span>vi<span class="w"> </span>mysql/settings.py
 
@@ -172,14 +172,14 @@ url<span class="o">(</span><span class="s1">&#39;skwissh&#39;</span>,<span class
 <ul>
 <li>데이터 베이스 설정</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>manage.p<span class="w"> </span>syncdb
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>manage.p<span class="w"> </span>syncdb
 </code></pre></div>
 
 <ul>
 <li>Skwissh 테스트 설치</li>
 <li>이작업을 하면 crontab에 테스크가 등록된다.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>installtask
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>manage.py<span class="w"> </span>installtask
 <span class="c1"># crontab에 등록되었는지 확인</span>
 $<span class="w"> </span>crontab<span class="w"> </span>-l
 </code></pre></div>
@@ -187,7 +187,7 @@ $<span class="w"> </span>crontab<span class="w"> </span>-l
 <ul>
 <li>Django 서버 작동</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>mange.py<span class="w"> </span>runserver<span class="w"> </span><span class="m">0</span>.0.0.0:8000
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>mange.py<span class="w"> </span>runserver<span class="w"> </span><span class="m">0</span>.0.0.0:8000
 </code></pre></div>
 
 <h2 id="_3">참고 페이지</h2>
