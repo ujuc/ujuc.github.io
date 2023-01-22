@@ -121,16 +121,16 @@ gtag('config', 'G-X9EBSXCBTS');
     <div class="article-text"><p>pip를 설치하고 패키지를 확인하려고하면 다음과 같은 에러가 발생한다.</p>
 <pre class="code bash literal-block">
 <span class="c1"># pip install flask
-</span>Traceback <span class="o">(</span>most recent call las<span class="o">)</span>:
-File <span class="s2">&quot;/usr/bin/pip&quot;</span>, line <span class="m">5</span>, <span class="k">in</span> &lt;module&gt;
-from pkg_resources import load_entry_point
-ImportError:No module named pkg_resources
+</span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>las<span class="o">)</span>:<span class="w">
+</span>File<span class="w"> </span><span class="s2">&quot;/usr/bin/pip&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">5</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;<span class="w">
+</span>from<span class="w"> </span>pkg_resources<span class="w"> </span>import<span class="w"> </span>load_entry_point<span class="w">
+</span>ImportError:No<span class="w"> </span>module<span class="w"> </span>named<span class="w"> </span>pkg_resources
 </pre>
 <p>발생하는건 <tt class="docutils literal">setuptools</tt> 패키지가 설치되지 않아서 문제가...</p>
 <pre class="code bash literal-block">
 <span class="c1"># wget --no-check-certificate \
-</span>  https://pypi.python.org/packages/source/s/setuptools/setuptools-15.2.tar.gz#md5<span class="o">=</span>a9028a9794fc7ae02320d32e2d7e12ee
-<span class="c1"># tar zxf setuptools-15.2.tar.gz
+</span><span class="w">  </span>https://pypi.python.org/packages/source/s/setuptools/setuptools-15.2.tar.gz#md5<span class="o">=</span>a9028a9794fc7ae02320d32e2d7e12ee<span class="w">
+</span><span class="c1"># tar zxf setuptools-15.2.tar.gz
 # python setuptools-15.2/ez_setup.py</span>
 </pre>
 <ul class="simple">

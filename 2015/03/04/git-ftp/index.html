@@ -131,28 +131,28 @@ gtag('config', 'G-X9EBSXCBTS');
 <li>기본 설치</li>
 </ul>
 <pre class="code bash literal-block">
-$ git clone https://github.com/git-ftp/git-ftp.git
-$ <span class="nb">cd</span> git-ftp
-$ git tag
-$ git checkout &lt;tag&gt;
-$ sudo make install
+$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/git-ftp/git-ftp.git<span class="w">
+</span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>git-ftp<span class="w">
+</span>$<span class="w"> </span>git<span class="w"> </span>tag<span class="w">
+</span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>&lt;tag&gt;<span class="w">
+</span>$<span class="w"> </span>sudo<span class="w"> </span>make<span class="w"> </span>install
 </pre>
 <ul class="simple">
 <li>업그레이드의 경우</li>
 </ul>
 <pre class="code bash literal-block">
-$ git pull
-$ git tag
-$ git checkout &lt;tag&gt;
-$ sudo make install
+$<span class="w"> </span>git<span class="w"> </span>pull<span class="w">
+</span>$<span class="w"> </span>git<span class="w"> </span>tag<span class="w">
+</span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>&lt;tag&gt;<span class="w">
+</span>$<span class="w"> </span>sudo<span class="w"> </span>make<span class="w"> </span>install
 </pre>
 <ul class="simple">
 <li>Mac OS X</li>
 </ul>
 <pre class="code bash literal-block">
-$ brew install git
-$ brew install curl --with-ssl --with-libssh2
-$ brew install git-ftp
+$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>git<span class="w">
+</span>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>--with-ssl<span class="w"> </span>--with-libssh2<span class="w">
+</span>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>git-ftp
 </pre>
 <ul class="simple">
 <li><tt class="docutils literal">curl</tt> 을 기본으로 설치했는데 <tt class="docutils literal">ssl</tt>, <tt class="docutils literal">libssh2</tt> 를 사용할 수 있도록 설정이
@@ -164,10 +164,10 @@ $ brew install git-ftp
 <h2>사용법</h2>
 <pre class="code bash literal-block">
 <span class="c1"># Pushing for the fist time
-</span>$ git ftp init -u &lt;user&gt; -P ftp://host.example.com/public_html
+</span>$<span class="w"> </span>git<span class="w"> </span>ftp<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>&lt;user&gt;<span class="w"> </span>-P<span class="w"> </span>ftp://host.example.com/public_html<span class="w">
 
-<span class="c1"># using
-</span>$ git ftp push -u &lt;user&gt; -P ftp://host.example.com/public_html
+</span><span class="c1"># using
+</span>$<span class="w"> </span>git<span class="w"> </span>ftp<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>&lt;user&gt;<span class="w"> </span>-P<span class="w"> </span>ftp://host.example.com/public_html
 </pre>
 <ul class="simple">
 <li>더 자세한 내용은 <a class="reference external" href="https://gitub.com/git-ftp/git-ftp/blob/develop/man/git-ftp.1.md">man page</a>.</li>

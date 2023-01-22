@@ -120,11 +120,11 @@ gtag('config', 'G-X9EBSXCBTS');
     <div class="article-text"><p><a href="http://stackoverflow.com/questions/1550226/python-setup-py-uninstall">Python setup.py uninstall</a></p>
 <p>삭제하는 방법은 모든걸 지워 버려야된다는 것.</p>
 <p>우선 <code>setup.py</code>로 설치하는 경로를 파일로 받는다.</p>
-<div class="codehilite"><pre><span></span><code>$ python setup.,py install --record files.txt
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>setup.,py<span class="w"> </span>install<span class="w"> </span>--record<span class="w"> </span>files.txt
 </code></pre></div>
 
 <p>그러고 난 뒤 그 내용에 있는 것들을 모두 다 지워주면 되는데. 이때, 폴더 내부만 삭제할뿐 생성된 파일이 삭제되지 않으니 유의해서 삭제할 수 있도록 조정해주면 된다.</p>
-<div class="codehilite"><pre><span></span><code>$ cat files.txt <span class="p">|</span> xargs rm -rf
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>files.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>rm<span class="w"> </span>-rf
 </code></pre></div></div>
     <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
 

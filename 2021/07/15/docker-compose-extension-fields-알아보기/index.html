@@ -117,45 +117,45 @@ gtag('config', 'G-X9EBSXCBTS');
     <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
     <div class="article-text"><p>Airflow를 볼까해서 docker-compose 파일을 받아서 봤는데&hellip; 뭔가 새로운 문구가 발견되었다.<br>
 다음과같은 부분임.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span><span class="w"></span>
-<span class="nt">x-airflow-common</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nl">&amp;airflow-common</span><span class="w"></span>
-<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${AIRFLOW_IMAGE_NAME:-apache/airflow:2.1.2}</span><span class="w"></span>
-<span class="w">  </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nl">&amp;airflow-common-env</span><span class="w"></span>
-<span class="w">    </span><span class="nt">AIRFLOW__CORE__EXECUTOR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CeleryExecutor</span><span class="w"></span>
-<span class="w">    </span><span class="nt">AIRFLOW__CORE__SQL_ALCHEMY_CONN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgresql+psycopg2://airflow:airflow@postgres/airflow</span><span class="w"></span>
-<span class="w">    </span><span class="nt">AIRFLOW__CELERY__RESULT_BACKEND</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db+postgresql://airflow:airflow@postgres/airflow</span><span class="w"></span>
-<span class="w">    </span><span class="nt">AIRFLOW__CELERY__BROKER_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis://:@redis:6379/0</span><span class="w"></span>
-<span class="w">    </span><span class="nt">AIRFLOW__CORE__FERNET_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">AIRFLOW__CORE__LOAD_EXAMPLES</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">AIRFLOW__API__AUTH_BACKEND</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;airflow.api.auth.backend.basic_auth&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">_PIP_ADDITIONAL_REQUIREMENTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_PIP_ADDITIONAL_REQUIREMENTS:-}</span><span class="w"></span>
-<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./dags:/opt/airflow/dags</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./logs:/opt/airflow/logs</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./plugins:/opt/airflow/plugins</span><span class="w"></span>
-<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">depends_on</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">redis</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span><span class="w"></span>
-<span class="w">    </span><span class="nt">postgres</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<span class="nt">x-airflow-common</span><span class="p">:</span>
+<span class="w">  </span><span class="nl">&amp;airflow-common</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${AIRFLOW_IMAGE_NAME:-apache/airflow:2.1.2}</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="nl">&amp;airflow-common-env</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CORE__EXECUTOR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CeleryExecutor</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CORE__SQL_ALCHEMY_CONN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgresql+psycopg2://airflow:airflow@postgres/airflow</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CELERY__RESULT_BACKEND</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db+postgresql://airflow:airflow@postgres/airflow</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CELERY__BROKER_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis://:@redis:6379/0</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CORE__FERNET_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CORE__LOAD_EXAMPLES</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+<span class="w">    </span><span class="nt">AIRFLOW__API__AUTH_BACKEND</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;airflow.api.auth.backend.basic_auth&#39;</span>
+<span class="w">    </span><span class="nt">_PIP_ADDITIONAL_REQUIREMENTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_PIP_ADDITIONAL_REQUIREMENTS:-}</span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./dags:/opt/airflow/dags</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./logs:/opt/airflow/logs</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./plugins:/opt/airflow/plugins</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}&quot;</span>
+<span class="w">  </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">redis</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<span class="w">    </span><span class="nt">postgres</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
 
-<span class="nt">services</span><span class="p">:</span><span class="w"></span>
-<span class="nn">...</span><span class="w"></span>
-<span class="w">  </span><span class="nt">airflow-init</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*airflow-common</span><span class="w"></span>
-<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="w"></span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*airflow-common-env</span><span class="w"></span>
-<span class="w">      </span><span class="nt">_AIRFLOW_DB_UPGRADE</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_CREATE</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_AIRFLOW_WWW_USER_USERNAME:-airflow}</span><span class="w"></span>
-<span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_AIRFLOW_WWW_USER_PASSWORD:-airflow}</span><span class="w"></span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="nn">...</span>
+<span class="w">  </span><span class="nt">airflow-init</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*airflow-common</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*airflow-common-env</span>
+<span class="w">      </span><span class="nt">_AIRFLOW_DB_UPGRADE</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+<span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_CREATE</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+<span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_AIRFLOW_WWW_USER_USERNAME:-airflow}</span>
+<span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_AIRFLOW_WWW_USER_PASSWORD:-airflow}</span>
 
-<span class="nn">...</span><span class="w"></span>
+<span class="nn">...</span>
 </code></pre></div>
 
 <p>보면 알겠지만 분명 version 3버전인데 <code>&amp;</code>, <code>*</code> 를 이용해서 이미지와 환경설정 구문을 반복해서 사용할 수 있도록 구성해놓은 것으로 판단되고 있다.<br>
@@ -175,42 +175,42 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>Note: 포멧 버전 3.7과 2.4에서는 <code>service</code>, <code>volume</code>, <code>network</code>, <code>config</code>, <code>secret</code> 정의시 사용이 가능합니다.</p>
 </blockquote>
 <p>다음과 같이 YAML anchor 기능을 통해서 리소스 정의에 삽입이 가능합니다.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span><span class="w"></span>
-<span class="nt">x-logging</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nl">&amp;default-logging</span><span class="w"></span>
-<span class="w">  </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;12m&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;5&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json-file</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span>
+<span class="nt">x-logging</span><span class="p">:</span>
+<span class="w">  </span><span class="nl">&amp;default-logging</span>
+<span class="w">  </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;12m&#39;</span>
+<span class="w">    </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;5&#39;</span>
+<span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json-file</span>
 
-<span class="nt">services</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">web</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp/web:latest</span><span class="w"></span>
-<span class="w">    </span><span class="nt">logging</span><span class="p">:</span><span class="w"> </span><span class="nv">*default-logging</span><span class="w"></span>
-<span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:latest</span><span class="w"></span>
-<span class="w">    </span><span class="nt">logging</span><span class="p">:</span><span class="w"> </span><span class="nv">*default-logging</span><span class="w"></span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp/web:latest</span>
+<span class="w">    </span><span class="nt">logging</span><span class="p">:</span><span class="w"> </span><span class="nv">*default-logging</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:latest</span>
+<span class="w">    </span><span class="nt">logging</span><span class="p">:</span><span class="w"> </span><span class="nv">*default-logging</span>
 </code></pre></div>
 
 <p>YAML 머지 형식을 이용하여 원하는 값을 추가할 수 있습니다.</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span><span class="w"></span>
-<span class="nt">x-volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nl">&amp;default-volume</span><span class="w"></span>
-<span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foobar-storage</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span>
+<span class="nt">x-volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nl">&amp;default-volume</span>
+<span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foobar-storage</span>
 
-<span class="nt">services</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">web</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp/web:latest</span><span class="w"></span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;vol1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;vol2&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;vol3&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">vol1</span><span class="p">:</span><span class="w"> </span><span class="nv">*default-volume</span><span class="w"></span>
-<span class="w">  </span><span class="nt">vol2</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&lt;&lt; </span><span class="p">:</span><span class="w"> </span><span class="nv">*default-volume</span><span class="w"></span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume02</span><span class="w"></span>
-<span class="w">  </span><span class="nt">vol3</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&lt;&lt; </span><span class="p">:</span><span class="w"> </span><span class="nv">*default-volume</span><span class="w"></span>
-<span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span><span class="w"></span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume-local</span><span class="w"></span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp/web:latest</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;vol1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;vol2&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;vol3&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">vol1</span><span class="p">:</span><span class="w"> </span><span class="nv">*default-volume</span>
+<span class="w">  </span><span class="nt">vol2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">&lt;&lt; </span><span class="p">:</span><span class="w"> </span><span class="nv">*default-volume</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume02</span>
+<span class="w">  </span><span class="nt">vol3</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">&lt;&lt; </span><span class="p">:</span><span class="w"> </span><span class="nv">*default-volume</span>
+<span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume-local</span>
 </code></pre></div></div>
     <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
 

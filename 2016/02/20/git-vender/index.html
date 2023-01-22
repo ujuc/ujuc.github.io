@@ -132,52 +132,52 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>설치는 알아서&hellip;</p>
 <h3 id="_2">예제</h3>
 <p>Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 <code>git-subtree</code>를 모르겠는데 뭐&hellip;</p>
-<div class="codehilite"><pre><span></span><code>$ <span class="c1"># Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.</span>
-$ git vendor add forge https://github.com/brettlangdon/forge v0.1.6
-+ git subtree add --prefix vendor/github.com/brettlangdon/forge --message <span class="s1">&#39;Add &quot;forge&quot; from &quot;https://github.com/brettlangdon/   forge@v0.1.6&quot;</span>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span><span class="c1"># Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.</span>
+$<span class="w"> </span>git<span class="w"> </span>vendor<span class="w"> </span>add<span class="w"> </span>forge<span class="w"> </span>https://github.com/brettlangdon/forge<span class="w"> </span>v0.1.6
++<span class="w"> </span>git<span class="w"> </span>subtree<span class="w"> </span>add<span class="w"> </span>--prefix<span class="w"> </span>vendor/github.com/brettlangdon/forge<span class="w"> </span>--message<span class="w"> </span><span class="s1">&#39;Add &quot;forge&quot; from &quot;https://github.com/brettlangdon/   forge@v0.1.6&quot;</span>
 
 <span class="s1">git-vendor-name: forge</span>
 <span class="s1">git-vendor-dir: vendor/github.com/brettlangdon/forge</span>
 <span class="s1">git-vendor-repository: https://github.com/brettlangdon/forge</span>
 <span class="s1">git-vendor-ref: v0.1.6</span>
-<span class="s1">&#39;</span> https://github.com/brettlangdon/forge v0.1.6 --squash
-git fetch https://github.com/brettlangdon/forge v0.1.6
-warning: no common commits
-remote: Counting objects: <span class="m">405</span>, <span class="k">done</span>.
-remote: Total <span class="m">405</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, pack-reused <span class="m">404</span>
-Receiving objects: <span class="m">100</span>% <span class="o">(</span><span class="m">405</span>/405<span class="o">)</span>, <span class="m">68</span>.31 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
-Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">227</span>/227<span class="o">)</span>, <span class="k">done</span>.
-From https://github.com/brettlangdon/forge
- * tag               v0.1.6     -&gt; FETCH_HEAD
-Added dir <span class="s1">&#39;vendor/github.com/brettlangdon/forge&#39;</span>
+<span class="s1">&#39;</span><span class="w"> </span>https://github.com/brettlangdon/forge<span class="w"> </span>v0.1.6<span class="w"> </span>--squash
+git<span class="w"> </span>fetch<span class="w"> </span>https://github.com/brettlangdon/forge<span class="w"> </span>v0.1.6
+warning:<span class="w"> </span>no<span class="w"> </span>common<span class="w"> </span>commits
+remote:<span class="w"> </span>Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">405</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Total<span class="w"> </span><span class="m">405</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">404</span>
+Receiving<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">405</span>/405<span class="o">)</span>,<span class="w"> </span><span class="m">68</span>.31<span class="w"> </span>KiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>bytes/s,<span class="w"> </span><span class="k">done</span>.
+Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">227</span>/227<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+From<span class="w"> </span>https://github.com/brettlangdon/forge
+<span class="w"> </span>*<span class="w"> </span>tag<span class="w">               </span>v0.1.6<span class="w">     </span>-&gt;<span class="w"> </span>FETCH_HEAD
+Added<span class="w"> </span>dir<span class="w"> </span><span class="s1">&#39;vendor/github.com/brettlangdon/forge&#39;</span>
 
-$ <span class="c1"># 목록으로보면..</span>
-$ git vendor list
+$<span class="w"> </span><span class="c1"># 목록으로보면..</span>
+$<span class="w"> </span>git<span class="w"> </span>vendor<span class="w"> </span>list
 forge@v0.1.6:
-    name:   forge
-    dir:    vendor/github.com/brettlangdon/forge
-    repo:   https://github.com/brettlangdon/forge
-    ref:    v0.1.6
-    commit: 3335840c5f0ad9e821006588f1b16a3385d9c318
+<span class="w">    </span>name:<span class="w">   </span>forge
+<span class="w">    </span>dir:<span class="w">    </span>vendor/github.com/brettlangdon/forge
+<span class="w">    </span>repo:<span class="w">   </span>https://github.com/brettlangdon/forge
+<span class="w">    </span>ref:<span class="w">    </span>v0.1.6
+<span class="w">    </span>commit:<span class="w"> </span>3335840c5f0ad9e821006588f1b16a3385d9c318
 
-$ <span class="c1"># 업데이트를 하면</span>
-$ git vendor update forge v0.1.7
-From https://github.com/brettlangdon/forge
-    * tag               v0.1.7     -&gt; FETCH_HEAD
-Merge made by the <span class="s1">&#39;recursive&#39;</span> strategy.
- vendor/github.com/brettlangdon/forge/forge_test.go <span class="p">|</span> <span class="m">2</span> ++
- vendor/github.com/brettlangdon/forge/scanner.go    <span class="p">|</span> <span class="m">4</span> ++++
- vendor/github.com/brettlangdon/forge/test.cfg      <span class="p">|</span> <span class="m">1</span> +
- <span class="m">3</span> files changed, <span class="m">7</span> insertions<span class="o">(</span>+<span class="o">)</span>
+$<span class="w"> </span><span class="c1"># 업데이트를 하면</span>
+$<span class="w"> </span>git<span class="w"> </span>vendor<span class="w"> </span>update<span class="w"> </span>forge<span class="w"> </span>v0.1.7
+From<span class="w"> </span>https://github.com/brettlangdon/forge
+<span class="w">    </span>*<span class="w"> </span>tag<span class="w">               </span>v0.1.7<span class="w">     </span>-&gt;<span class="w"> </span>FETCH_HEAD
+Merge<span class="w"> </span>made<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span><span class="s1">&#39;recursive&#39;</span><span class="w"> </span>strategy.
+<span class="w"> </span>vendor/github.com/brettlangdon/forge/forge_test.go<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>++
+<span class="w"> </span>vendor/github.com/brettlangdon/forge/scanner.go<span class="w">    </span><span class="p">|</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>++++
+<span class="w"> </span>vendor/github.com/brettlangdon/forge/test.cfg<span class="w">      </span><span class="p">|</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>+
+<span class="w"> </span><span class="m">3</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">7</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
 
-$ <span class="c1"># 확인하면..</span>
-$ git vendor list
+$<span class="w"> </span><span class="c1"># 확인하면..</span>
+$<span class="w"> </span>git<span class="w"> </span>vendor<span class="w"> </span>list
 forge@v0.1.7:
-    name:   forge
-    dir:    vendor/github.com/brettlangdon/forge
-    repo:   https://github.com/brettlangdon/forge
-    ref:    v0.1.7
-    commit: 071c5f108e0af39bf67a87fc766ea9bfb72b9ee7
+<span class="w">    </span>name:<span class="w">   </span>forge
+<span class="w">    </span>dir:<span class="w">    </span>vendor/github.com/brettlangdon/forge
+<span class="w">    </span>repo:<span class="w">   </span>https://github.com/brettlangdon/forge
+<span class="w">    </span>ref:<span class="w">    </span>v0.1.7
+<span class="w">    </span>commit:<span class="w"> </span>071c5f108e0af39bf67a87fc766ea9bfb72b9ee7
 </code></pre></div>
 
 <h2 id="_3">관련 페이지</h2>

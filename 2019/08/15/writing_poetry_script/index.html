@@ -139,7 +139,7 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="p">}</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">rst</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Make post template&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make post template&quot;&quot;&quot;</span>
     <span class="n">today</span> <span class="o">=</span> <span class="n">pendulum</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
 
     <span class="n">slug</span> <span class="o">=</span> <span class="n">kroman</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
@@ -189,39 +189,39 @@ gtag('config', 'G-X9EBSXCBTS');
 </code></pre></div>
 
 <p>task를 등록해 주고 명령을 확인하면 다음 같이 보인다.</p>
-<div class="codehilite"><pre><span></span><code>$ inv --list
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>inv<span class="w"> </span>--list
 
-Available tasks:
+Available<span class="w"> </span>tasks:
 
-  clean      Clean up this dir
-  fix        Execute black
-  preview    Start preview web page server
-  pub        Publish to github main page
-  cli.post   Make post template
+<span class="w">  </span>clean<span class="w">      </span>Clean<span class="w"> </span>up<span class="w"> </span>this<span class="w"> </span>dir
+<span class="w">  </span>fix<span class="w">        </span>Execute<span class="w"> </span>black
+<span class="w">  </span>preview<span class="w">    </span>Start<span class="w"> </span>preview<span class="w"> </span>web<span class="w"> </span>page<span class="w"> </span>server
+<span class="w">  </span>pub<span class="w">        </span>Publish<span class="w"> </span>to<span class="w"> </span>github<span class="w"> </span>main<span class="w"> </span>page
+<span class="w">  </span>cli.post<span class="w">   </span>Make<span class="w"> </span>post<span class="w"> </span>template
 </code></pre></div>
 
 <p>명령어를 실행해 보자.</p>
-<div class="codehilite"><pre><span></span><code>$ inv --help cli.post
-Usage: inv<span class="o">[</span>oke<span class="o">]</span> <span class="o">[</span>--core-opts<span class="o">]</span> cli.post <span class="o">[</span>--options<span class="o">]</span> <span class="o">[</span>other tasks here ...<span class="o">]</span>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>inv<span class="w"> </span>--help<span class="w"> </span>cli.post
+Usage:<span class="w"> </span>inv<span class="o">[</span>oke<span class="o">]</span><span class="w"> </span><span class="o">[</span>--core-opts<span class="o">]</span><span class="w"> </span>cli.post<span class="w"> </span><span class="o">[</span>--options<span class="o">]</span><span class="w"> </span><span class="o">[</span>other<span class="w"> </span>tasks<span class="w"> </span>here<span class="w"> </span>...<span class="o">]</span>
 
 Docstring:
-  Make post template
+<span class="w">  </span>Make<span class="w"> </span>post<span class="w"> </span>template
 
 Options:
-  -r, --rst                   Post format. <span class="k">if</span> false, make markdown format
-  -t STRING, --title<span class="o">=</span>STRING   Post title
+<span class="w">  </span>-r,<span class="w"> </span>--rst<span class="w">                   </span>Post<span class="w"> </span>format.<span class="w"> </span><span class="k">if</span><span class="w"> </span>false,<span class="w"> </span>make<span class="w"> </span>markdown<span class="w"> </span>format
+<span class="w">  </span>-t<span class="w"> </span>STRING,<span class="w"> </span>--title<span class="o">=</span>STRING<span class="w">   </span>Post<span class="w"> </span>title
 
 <span class="c1"># Test create post</span>
-$ inv cli.post -t <span class="s2">&quot;포스트 테스트&quot;</span>
-File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
+$<span class="w"> </span>inv<span class="w"> </span>cli.post<span class="w"> </span>-t<span class="w"> </span><span class="s2">&quot;포스트 테스트&quot;</span>
+File<span class="w"> </span>created<span class="w"> </span>-&gt;<span class="w"> </span>/Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
 
 <span class="c1"># Cat post file</span>
-$ cat content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
-Title: 포스트 테스트
-Date: <span class="m">2019</span>-08-14 <span class="m">23</span>:49:02
-Category: 
-Tags: 
-Slug: po-seu-teu_te-seu-teu
+$<span class="w"> </span>cat<span class="w"> </span>content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
+Title:<span class="w"> </span>포스트<span class="w"> </span>테스트
+Date:<span class="w"> </span><span class="m">2019</span>-08-14<span class="w"> </span><span class="m">23</span>:49:02
+Category:<span class="w"> </span>
+Tags:<span class="w"> </span>
+Slug:<span class="w"> </span>po-seu-teu_te-seu-teu
 Summary:
 </code></pre></div>
 
@@ -247,30 +247,30 @@ Summary:
 </code></pre></div>
 
 <p><code>pyproject.toml</code></p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry]</span>
+<span class="p">...</span>
 
-<span class="n">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">include</span><span class="o">=</span><span class="s">&#39;cli&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">from</span><span class="o">=</span><span class="s">&#39;.&#39;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="p">]</span><span class="w"></span>
+<span class="n">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">include</span><span class="o">=</span><span class="s">&#39;cli&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">from</span><span class="o">=</span><span class="s">&#39;.&#39;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]</span>
 
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 
-<span class="k">[tool.poetry.scripts]</span><span class="w"></span>
-<span class="n">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;cli.main:run&#39;</span><span class="w"></span>
+<span class="k">[tool.poetry.scripts]</span>
+<span class="n">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;cli.main:run&#39;</span>
 
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 </code></pre></div>
 
 <p>이제 실행해 보자.</p>
-<div class="codehilite"><pre><span></span><code>$ poetry run cli --list
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </span>cli<span class="w"> </span>--list
 Subcommands:
 
-  post   Make post template
+<span class="w">  </span>post<span class="w">   </span>Make<span class="w"> </span>post<span class="w"> </span>template
 
 <span class="c1"># Test create post</span>
-$ poetry run cli post -t <span class="s2">&quot;포스트 테스트&quot;</span>
-File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-seu-teu_te-seu-teu.md
+$<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </span>cli<span class="w"> </span>post<span class="w"> </span>-t<span class="w"> </span><span class="s2">&quot;포스트 테스트&quot;</span>
+File<span class="w"> </span>created<span class="w"> </span>-&gt;<span class="w"> </span>/Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-seu-teu_te-seu-teu.md
 </code></pre></div>
 
 <p>잘된다.</p>
@@ -287,8 +287,8 @@ File created -&gt; /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-15-po-s
 </code></pre></div>
 
 <p><code>pyproject.toml</code></p>
-<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.scripts]</span><span class="w"></span>
-<span class="na">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tasks:run&quot;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">[tool.poetry.scripts]</span>
+<span class="na">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tasks:run&quot;</span>
 </code></pre></div>
 
 <hr>

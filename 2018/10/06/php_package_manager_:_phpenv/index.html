@@ -122,10 +122,10 @@ gtag('config', 'G-X9EBSXCBTS');
 사용법은 <code>rbenv</code>, <code>pyenv</code> 와 동일하다. (그렇다보니 shell script로만 작성이되어있다.)</p>
 <h3 id="_2">설치</h3>
 <h4 id="github-checkout"><a href="https://github.com/phpenv/phpenv#installation">Github Checkout</a></h4>
-<div class="codehilite"><pre><span></span><code>$ git clone git://github.com/phpenv/phpenv.git ~/.phpenv
-$ <span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.phpenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
-$ <span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(phpenv init -)&quot;&#39;</span> &gt;&gt; ~/.bash_profile
-$ <span class="nb">exec</span> <span class="nv">$SHELL</span> -l
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git://github.com/phpenv/phpenv.git<span class="w"> </span>~/.phpenv
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/.phpenv/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(phpenv init -)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+$<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="nv">$SHELL</span><span class="w"> </span>-l
 </code></pre></div>
 
 <h4 id="phpenv-installer"><a href="https://github.com/phpenv/phpenv-installer">phpenv-installer</a></h4>
@@ -134,45 +134,45 @@ $ <span class="nb">exec</span> <span class="nv">$SHELL</span> -l
 
 <p>이걸 설치하면 <code>php-build/php-build</code>, <code>madumlao/phpenv-aliases</code>, <code>ngyuki/phpenv-composer</code>가 자동으로 설치된다.</p>
 <h3 id="php">PHP 설치</h3>
-<div class="codehilite"><pre><span></span><code>$ phpenv install --list
-$ phpenv install <span class="o">{</span>php_version<span class="o">}</span>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>phpenv<span class="w"> </span>install<span class="w"> </span>--list
+$<span class="w"> </span>phpenv<span class="w"> </span>install<span class="w"> </span><span class="o">{</span>php_version<span class="o">}</span>
 </code></pre></div>
 
 <h3 id="php_1">PHP 설치시 에러</h3>
 <ul>
 <li>Mac os error <a href="https://qiita.com/maosanhioro/items/82698a8bdf6b7694ad36">해결 문서</a></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nb">-----------------</span><span class="c"></span>
+<div class="codehilite"><pre><span></span><code><span class="nb">-----------------</span>
 <span class="c">|  BUILD ERROR  |</span>
-<span class="nb">-----------------</span><span class="c"></span>
+<span class="nb">-----------------</span>
 
 <span class="c">Here are the last 10 lines from the log:</span>
 
-<span class="nb">-----------------------------------------</span><span class="c"></span>
-<span class="c">configure: WARNING: This bison version is not supported for regeneration of the Zend/PHP parsers (found: 2</span><span class="nt">.</span><span class="c">3</span><span class="nt">,</span><span class="c"> min: 204</span><span class="nt">,</span><span class="c"> excluded: )</span><span class="nt">.</span><span class="c"></span>
-<span class="c">configure: WARNING: You will need re2c 0</span><span class="nt">.</span><span class="c">13</span><span class="nt">.</span><span class="c">4 or later if you want to regenerate PHP parsers</span><span class="nt">.</span><span class="c"></span>
-<span class="c">configure: error: Cannot find OpenSSL&#39;s </span><span class="nv">&lt;</span><span class="c">evp</span><span class="nt">.</span><span class="c">h</span><span class="nv">&gt;</span><span class="c"></span>
-<span class="nb">-----------------------------------------</span><span class="c"></span>
+<span class="nb">-----------------------------------------</span>
+<span class="c">configure: WARNING: This bison version is not supported for regeneration of the Zend/PHP parsers (found: 2</span><span class="nt">.</span><span class="c">3</span><span class="nt">,</span><span class="c"> min: 204</span><span class="nt">,</span><span class="c"> excluded: )</span><span class="nt">.</span>
+<span class="c">configure: WARNING: You will need re2c 0</span><span class="nt">.</span><span class="c">13</span><span class="nt">.</span><span class="c">4 or later if you want to regenerate PHP parsers</span><span class="nt">.</span>
+<span class="c">configure: error: Cannot find OpenSSL&#39;s </span><span class="nv">&lt;</span><span class="c">evp</span><span class="nt">.</span><span class="c">h</span><span class="nv">&gt;</span>
+<span class="nb">-----------------------------------------</span>
 </code></pre></div>
 
 <ul>
 <li>추가 설치 패키지</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">bison</span><span class="mf">@2.7</span><span class="w"></span>
-<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="n">bison</span><span class="mf">@2.7</span><span class="w"> </span><span class="o">--</span><span class="n">force</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">bison</span><span class="mf">@2.7</span>
+<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="n">bison</span><span class="mf">@2.7</span><span class="w"> </span><span class="o">--</span><span class="n">force</span>
 
-<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">re2c</span><span class="w"></span>
+<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">re2c</span>
 
-<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openssl</span><span class="w"> </span><span class="n">libxml2</span><span class="w"></span>
-<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="o">--</span><span class="n">force</span><span class="w"> </span><span class="n">openssl</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="o">--</span><span class="n">force</span><span class="w"> </span><span class="n">libxml2</span><span class="w"></span>
+<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openssl</span><span class="w"> </span><span class="n">libxml2</span>
+<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="o">--</span><span class="n">force</span><span class="w"> </span><span class="n">openssl</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="o">--</span><span class="n">force</span><span class="w"> </span><span class="n">libxml2</span>
 
-<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">mcrypt</span><span class="w"></span>
+<span class="n">$</span><span class="w"> </span><span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">mcrypt</span>
 </code></pre></div>
 
 <ul>
 <li><code>libz</code> error</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">configure</span><span class="o">:</span><span class="w"> </span><span class="n">error</span><span class="o">:</span><span class="w"> </span><span class="n">Cannot</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">libz</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">configure</span><span class="o">:</span><span class="w"> </span><span class="n">error</span><span class="o">:</span><span class="w"> </span><span class="n">Cannot</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">libz</span>
 </code></pre></div>
 
 <div class="codehilite"><pre><span></span><code>xcode-select --install

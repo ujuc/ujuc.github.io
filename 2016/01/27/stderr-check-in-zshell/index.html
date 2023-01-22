@@ -147,23 +147,23 @@ gtag('config', 'G-X9EBSXCBTS');
 </table>
 <p>간단히 하자.<br>
 go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올 것이다.</p>
-<div class="codehilite"><pre><span></span><code>$ which go
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>go
 </code></pre></div>
 
 <p><img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png"></p>
 <p>요놈을 안나오게 해보자.</p>
-<div class="codehilite"><pre><span></span><code>$ which go <span class="m">1</span>&gt; /dev/null
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>go<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
 
 <p><img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png"></p>
 <p>오~~~</p>
 <p>stderr 값이 나오면 안나오게 할려고 보면&hellip; 이건 설치가 되어있으니&hellip; 없는걸로&hellip;</p>
-<div class="codehilite"><pre><span></span><code>$ which rbenv
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>rbenv
 </code></pre></div>
 
 <p><img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png"></p>
 <p>이걸 위와 같이 <code>1</code> 을 사용하면&hellip;</p>
-<div class="codehilite"><pre><span></span><code>$ which rbenv <span class="m">1</span>&gt; /dev/null
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>rbenv<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
 
 <p><img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png"></p>

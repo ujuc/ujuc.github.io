@@ -126,8 +126,8 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>커널은 4.2이상. 16.04가 버전업되면서 커널도 업글이되어서 이건 넘어갔다.</p>
 <p>Qualcomm atheros 10k 드라이버가 들어있는 패키지는 <code>linux-firmware 1.158</code>. 16.04에서 공식 지원하는 버전은 <code>1.157</code>. 아마 6개월쯤 지나면 이것도 올라가겠지만 지금은 올라가지 않았으니. <code>1.158</code>은 16.10에 추가될 패키지로 지금은 테스팅 버전이다. 이것을 가져다가 설치하면 된다.</p>
 <p>어짜피 기본 내용만 맞으면되니 <code>dpkg</code>를 이용해서 설치해주면된다.</p>
-<div class="codehilite"><pre><span></span><code>wget http://mirrors.kernel.org/ubuntu/pool/main/l/linux-firmware/linux-firmware_1.158_all.deb
-sudo dpkg -i linux-firmware_1.158_all.deb
+<div class="codehilite"><pre><span></span><code>wget<span class="w"> </span>http://mirrors.kernel.org/ubuntu/pool/main/l/linux-firmware/linux-firmware_1.158_all.deb
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>linux-firmware_1.158_all.deb
 </code></pre></div>
 
 <p>그리고 리붓해주면 손쉽게&hellip; 설치가 가능하다.</p>

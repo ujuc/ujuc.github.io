@@ -127,16 +127,16 @@ gtag('config', 'G-X9EBSXCBTS');
 <h3 id="template-statement"><code>template()</code> statement</h3>
 <p>문서상으로는 7버전 이상에서 사용할 수 있는 포맷이다.</p>
 <p>아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;FileFormat&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">&quot;list&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;timestamp&quot;</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="s2">&quot;rfc3339&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;hostname&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;syslogtag&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">spifno1stsp</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">droplastlf</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;FileFormat&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">&quot;list&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;timestamp&quot;</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="s2">&quot;rfc3339&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;hostname&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;syslogtag&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">spifno1stsp</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">droplastlf</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 
 <p>작성된 템플릿을 이용해서 분석해보자.</p>
@@ -192,9 +192,9 @@ template(name=&quot;tpl2&quot; type=&quot;subtree&quot; subtree=&quot;$!usr!tpl2
 </ul>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nv">template</span><span class="ss">(</span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;tpl3&quot;</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="w"></span>
-<span class="w">         </span><span class="nv">string</span><span class="o">=</span><span class="s2">&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="ss">)</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nv">template</span><span class="ss">(</span><span class="nv">name</span><span class="o">=</span><span class="s2">&quot;tpl3&quot;</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span>
+<span class="w">         </span><span class="nv">string</span><span class="o">=</span><span class="s2">&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
+<span class="w">        </span><span class="ss">)</span>
 </code></pre></div>
 
 <ul>
@@ -205,34 +205,34 @@ template(name=&quot;tpl2&quot; type=&quot;subtree&quot; subtree=&quot;$!usr!tpl2
 </ul>
 <h4 id="option"><a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#options"><code>option</code></a></h4>
 <p>예제로 이해하자. 필요하면 링크를 타고 보고.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;outfmt&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;list&quot;</span><span class="w"> </span><span class="k">option</span><span class="p">.</span><span class="n">jsonf</span><span class="o">=</span><span class="ss">&quot;on&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
-<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;@timestamp&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;timereported&quot;</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="ss">&quot;rfc3339&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;host&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;hostname&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;severity&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;syslogseverity-text&quot;</span><span class="w"> </span><span class="n">caseConversion</span><span class="o">=</span><span class="ss">&quot;upper&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;facility&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;syslogfacility-text&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;syslog-tag&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;syslogtag&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;source&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;app-name&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;message&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;msg&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;outfmt&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="ss">&quot;list&quot;</span><span class="w"> </span><span class="k">option</span><span class="p">.</span><span class="n">jsonf</span><span class="o">=</span><span class="ss">&quot;on&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">{</span>
+<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;@timestamp&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;timereported&quot;</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="ss">&quot;rfc3339&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span>
+<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;host&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;hostname&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span>
+<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;severity&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;syslogseverity-text&quot;</span><span class="w"> </span><span class="n">caseConversion</span><span class="o">=</span><span class="ss">&quot;upper&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span>
+<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;facility&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;syslogfacility-text&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span>
+<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;syslog-tag&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;syslogtag&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span>
+<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;source&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;app-name&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span>
+<span class="w">         </span><span class="n">property</span><span class="p">(</span><span class="n">outname</span><span class="o">=</span><span class="ss">&quot;message&quot;</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="ss">&quot;msg&quot;</span><span class="w"> </span><span class="nf">format</span><span class="o">=</span><span class="ss">&quot;jsonf&quot;</span><span class="p">)</span>
 
-<span class="w"> </span><span class="err">}</span><span class="w"></span>
+<span class="w"> </span><span class="err">}</span>
 </code></pre></div>
 
 <p>이렇게 작성하면,</p>
-<div class="codehilite"><pre><span></span><code><span class="err">{</span><span class="w"></span>
-<span class="w">  </span><span class="ss">&quot;@timestamp&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;2018-03-01T01:00:00+00:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="ss">&quot;host&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;172.20.245.8&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="ss">&quot;severity&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;DEBUG&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="ss">&quot;facility&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;local4&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="ss">&quot;syslog-tag&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;tag&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="ss">&quot;source&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;tag&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="ss">&quot;message&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot; msgnum:00000000:&quot;</span><span class="w"></span>
-<span class="err">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="err">{</span>
+<span class="w">  </span><span class="ss">&quot;@timestamp&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;2018-03-01T01:00:00+00:00&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;host&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;172.20.245.8&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;severity&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;DEBUG&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;facility&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;local4&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;syslog-tag&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;tag&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;source&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;tag&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">&quot;message&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot; msgnum:00000000:&quot;</span>
+<span class="err">}</span>
 </code></pre></div>
 
 <h3 id="legacy-format">Legacy Format</h3>
 <p>6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을 권고하고있다.</p>
 <p>아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.</p>
-<div class="codehilite"><pre><span></span><code>$<span class="nv">template</span><span class="w"> </span><span class="nv">FileFormat</span>,<span class="s2">&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code>$<span class="nv">template</span><span class="w"> </span><span class="nv">FileFormat</span>,<span class="s2">&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
 </code></pre></div>
 
 <p>작성 요령은 <code>$template</code> 변수, <code>template 이름</code>, <code>"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"</code>. 필요한 내용들을 작성하면된다.</p>
@@ -255,9 +255,9 @@ template(name=&quot;tpl2&quot; type=&quot;subtree&quot; subtree=&quot;$!usr!tpl2
 </ul>
 <h3 id="_1">동적 파일 이름 생성</h3>
 <p>두가지 방식이 있다만, 첫번째 방식으로 작성해서 템플릿 구성을 맞추는게 좋을것으로 보인다.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">template</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;DynFile&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="n">string</span><span class="o">=</span><span class="s2">&quot;/var/log/system-%HOSTNAME%.log&quot;</span><span class="p">)</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">template</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;DynFile&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="n">string</span><span class="o">=</span><span class="s2">&quot;/var/log/system-%HOSTNAME%.log&quot;</span><span class="p">)</span>
 
-<span class="o">$</span><span class="n">template</span><span class="w"> </span><span class="n">DynFile</span><span class="p">,</span><span class="s2">&quot;/var/log/system-%HOSTNAME%.log&quot;</span><span class="w"></span>
+<span class="o">$</span><span class="n">template</span><span class="w"> </span><span class="n">DynFile</span><span class="p">,</span><span class="s2">&quot;/var/log/system-%HOSTNAME%.log&quot;</span>
 </code></pre></div>
 
 <h2 id="_2">결.</h2>

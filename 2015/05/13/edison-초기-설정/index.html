@@ -203,8 +203,8 @@ OpenWRT에서 사용하고 있다.)</li>
 </ul>
 <pre class="code bash literal-block">
 <span class="c1"># echo &quot;src intel-iotdk http://iotdk.intel.com/repos/1.1/intelgalactic&quot; &gt; \
-</span>    /etc/opkg/intel-iotdk.conf# opkg update<span class="p">;</span> opkg upgrade
-<span class="c1"># opkg update; opkg upgrade</span>
+</span><span class="w">    </span>/etc/opkg/intel-iotdk.conf#<span class="w"> </span>opkg<span class="w"> </span>update<span class="p">;</span><span class="w"> </span>opkg<span class="w"> </span>upgrade<span class="w">
+</span><span class="c1"># opkg update; opkg upgrade</span>
 </pre>
 <ul class="simple">
 <li>이렇게하면 기본적인 것들은 추가가 된다만 패키지가 많지는 않다.</li>
@@ -212,12 +212,12 @@ OpenWRT에서 사용하고 있다.)</li>
 </ul>
 <pre class="code bash literal-block">
 <span class="c1"># vi /etc/opkg/base-feeds.conf
-</span>
-src/gz all http://repo.opkg.net/edison/repo/all
-src/gz edison http://repo.opkg.net/edison/repo/edison
-src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
+</span><span class="w">
+</span>src/gz<span class="w"> </span>all<span class="w"> </span>http://repo.opkg.net/edison/repo/all<span class="w">
+</span>src/gz<span class="w"> </span>edison<span class="w"> </span>http://repo.opkg.net/edison/repo/edison<span class="w">
+</span>src/gz<span class="w"> </span>core2-32<span class="w"> </span>http://repo.opkg.net/edison/repo/core2-32<span class="w">
 
-<span class="c1"># opkg update</span>
+</span><span class="c1"># opkg update</span>
 </pre>
 </div>
 </div>

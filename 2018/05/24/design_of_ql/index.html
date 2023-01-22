@@ -267,7 +267,7 @@ time       &#39;T&#39;
 <blockquote>
 <p>The scols value is the above described encoded fields joined using &ldquo;|&rdquo;. For example</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">Foo</span><span class="w"> </span><span class="n">bool</span><span class="p">,</span><span class="w"> </span><span class="n">Bar</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Baz</span><span class="w"> </span><span class="nb">float</span><span class="p">);</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">Foo</span><span class="w"> </span><span class="n">bool</span><span class="p">,</span><span class="w"> </span><span class="n">Bar</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Baz</span><span class="w"> </span><span class="nb">float</span><span class="p">);</span>
 </code></pre></div>
 
 <p>이 문구는 scols를 사용하여 테이블 메타 데이터를 추가합니다.</p>
@@ -281,7 +281,7 @@ time       &#39;T&#39;
 <blockquote>
 <p>Columns can be dropped from a table</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">Bar</span><span class="p">;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">Bar</span><span class="p">;</span>
 </code></pre></div>
 
 <p>이렇게 하면 scols에서 필드 정보가 <strong>지워</strong>집니다. 값은 다음과 같이 보여집니다.</p>
@@ -293,7 +293,7 @@ time       &#39;T&#39;
 
 <p>테이블에 커럼을 추가할 수 있습니다.<br>
 Colums can be added to a table</p>
-<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">Count</span><span class="w"> </span><span class="n">uint</span><span class="p">;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">Count</span><span class="w"> </span><span class="n">uint</span><span class="p">;</span>
 </code></pre></div>
 
 <p>새로운 필드는 scols 맨 끝에 항상 추가됩니다.</p>
@@ -307,14 +307,14 @@ Colums can be added to a table</p>
 <blockquote>
 <p>Index of a field in <code>strings.Split(scols, "|")</code> is the index of the field in a table record. The above discussed rules for column dropping and column adding allow for schema evolution without a need to reshape any existing table data. Dropped columns are left where they are and new records insert <code>nil</code> in their place. The encoded <code>nil</code> is one byte. Added columns, when not present in preexisting records are returned as <code>nil</code> values. If the overhead of dropped columns becomes an issue and there&rsquo;s time/space and memory enough to move the records of a table around:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="k">BEGIN</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="k">column</span><span class="w"> </span><span class="n">definitions</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">old</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">old</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">old</span><span class="w"> </span><span class="p">(</span><span class="k">column</span><span class="w"> </span><span class="n">definitions</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">old</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">new</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">new</span><span class="p">;</span><span class="w"></span>
-<span class="k">END</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">BEGIN</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
+<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="k">column</span><span class="w"> </span><span class="n">definitions</span><span class="p">);</span>
+<span class="w">  </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">old</span><span class="p">;</span>
+<span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">old</span><span class="p">;</span>
+<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">old</span><span class="w"> </span><span class="p">(</span><span class="k">column</span><span class="w"> </span><span class="n">definitions</span><span class="p">);</span>
+<span class="w">  </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">old</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">new</span><span class="p">;</span>
+<span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">new</span><span class="p">;</span>
+<span class="k">END</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
 </code></pre></div>
 
 <p>이것은 시간적/공간적으로 효과적이지 못하며, Big Data일 경우, 트랜젝션이 프로세스에서 사용 가능한 메모리 리소스에 의해 제한되기에 OOM 이 발생할 수 있습니다. 어쩌면 이것을 수행하는 메소드나 QL 구문을 추가해야합니다.(MySQL OPTIMIZE TABLE 구문 채택을 고려해야합니다)</p>
@@ -325,7 +325,7 @@ Colums can be added to a table</p>
 <blockquote>
 <p>Field #2 (<code>hhead</code>) is a handle to a head of table records, i.e. not a handle to the first record in the table. It is thus always non zero even for a table having no records. The reason for this &ldquo;double pointer&rdquo; schema is to enable adding (linking) a new record by updating a single value of the (<code>hhead</code> pointing to) head.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="n">tableMeta</span><span class="p">.</span><span class="n">hhead</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">head</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">firstTableRecord</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">tableMeta</span><span class="p">.</span><span class="n">hhead</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">head</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">firstTableRecord</span>
 </code></pre></div>
 
 <p>테이블 이름은 필드 #3 (<code>name</code>)에 저장됩니다.</p>
@@ -337,11 +337,11 @@ Colums can be added to a table</p>
 <blockquote>
 <p>Consider an index named N, indexing column named C. The encoding of this particular index is a string &ldquo;<tag>N&rdquo;. <code>&lt;tag&gt;</code> is a string &ldquo;n&rdquo; for non unique indices and &ldquo;u&rdquo; for unique indices. There is this index information for the index possibly indexing the record id() and for all other columns of scols. Where the column is not indexed, the index info is an empty string. Infos for all indexes are joined with &ldquo;|&rdquo;. For example</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="k">BEGIN</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">Foo</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="n">Bar</span><span class="w"> </span><span class="n">bool</span><span class="p">,</span><span class="w"> </span><span class="n">Baz</span><span class="w"> </span><span class="n">string</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">Baz</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">Foo</span><span class="p">);</span><span class="w"></span>
-<span class="k">COMMIT</span><span class="p">;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="k">BEGIN</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
+<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">Foo</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="n">Bar</span><span class="w"> </span><span class="n">bool</span><span class="p">,</span><span class="w"> </span><span class="n">Baz</span><span class="w"> </span><span class="n">string</span><span class="p">);</span>
+<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">Baz</span><span class="p">);</span>
+<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">Y</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">(</span><span class="n">Foo</span><span class="p">);</span>
+<span class="k">COMMIT</span><span class="p">;</span>
 </code></pre></div>
 
 <p>위의 필드 #1과 #4는 다음과 같습니다:</p>
@@ -357,11 +357,11 @@ indices: &quot;|uY||nX&quot;
 <p>Aligning properly the &ldquo;|&rdquo; split parts</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="c">             id    col#0    col#1    col#2</span>
-<span class="nb">+----------+----+--------+--------+--------+</span><span class="c"></span>
+<span class="nb">+----------+----+--------+--------+--------+</span>
 <span class="c">|   scols: |    | &quot;lFoo&quot; | &quot;bBar&quot; | &quot;sBaz&quot; |</span>
-<span class="nb">+----------+----+--------+--------+--------+</span><span class="c"></span>
+<span class="nb">+----------+----+--------+--------+--------+</span>
 <span class="c">| indices: | &quot;&quot; | &quot;uY&quot;   | &quot;&quot;     | &quot;nX&quot;   |</span>
-<span class="nb">+----------+----+--------+--------+--------+</span><span class="c"></span>
+<span class="nb">+----------+----+--------+--------+--------+</span>
 </code></pre></div>
 
 <p><code>Foo</code>와 <code>Baz</code> 컬럼이 인덱스되는 동안 레코드 <code>id()</code>가 이테이블에 대해 인덱싱되지 않는 것을 보여줍니다.</p>
@@ -372,7 +372,7 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>Note that there cannot be two differently named indexes for the same column and it&rsquo;s intended. The indices are <a href="http://godoc.org/github.com/cznic/lldb#BTree">B+Trees</a>. The list of handles to their roots is pointed to by <code>hxroots</code> with zeros for non indexed columns. For the previous example</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="n">tableMeta</span><span class="p">.</span><span class="n">hxroots</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">tableMeta</span><span class="p">.</span><span class="n">hxroots</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">}</span>
 </code></pre></div>
 
 <p>여기서 <code>x</code>는 <code>X</code> 인덱스의 B+Tree에 대한 루트이고, <code>y</code>는 <code>Y</code> 인덱스의 B+Tree에 대한 루트입니다. <code>id()</code>에 대한 인덱스가 있다면, 첫번째 <code>0</code>이 있는 곳에 B+Tree 루트가 있습니다. <code>hhead</code>와 마찬가지로 <code>hxroots</code>는 테이블에 대한 인덱스가 없는 경우라도 절대로 <code>0</code>이 아닙니다.</p>
@@ -448,9 +448,9 @@ indices: &quot;|uY||nX&quot;
 <p>The composite key of the B+Tree is <code>{indexed values, record handle}</code>. The B+Tree value is not used.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="c">            B</span><span class="nb">+</span><span class="c">Tree key                    B</span><span class="nb">+</span><span class="c">Tree value</span>
-<span class="nb">+----------------+---------------+</span><span class="c">      </span><span class="nb">+--------------+</span><span class="c"></span>
+<span class="nb">+----------------+---------------+</span><span class="c">      </span><span class="nb">+--------------+</span>
 <span class="c">| Indexed Values | Record Handle |  </span><span class="nb">-</span><span class="nv">&gt;</span><span class="c">  |   not used   |</span>
-<span class="nb">+----------------+---------------+</span><span class="c">      </span><span class="nb">+--------------+</span><span class="c"></span>
+<span class="nb">+----------------+---------------+</span><span class="c">      </span><span class="nb">+--------------+</span>
 </code></pre></div>
 
 <h2 id="unique-index">Unique index</h2>
@@ -459,9 +459,9 @@ indices: &quot;|uY||nX&quot;
 <p>If the indexed values are all NULL then the composite B+Tree key is <code>{nil, record handle}</code> and the B+Tree value is not used.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="c">        B</span><span class="nb">+</span><span class="c">Tree key                B</span><span class="nb">+</span><span class="c">Tree value</span>
-<span class="nb">+------+-----------------+</span><span class="c">      </span><span class="nb">+--------------+</span><span class="c"></span>
+<span class="nb">+------+-----------------+</span><span class="c">      </span><span class="nb">+--------------+</span>
 <span class="c">| NULL |  Record Handle  |  </span><span class="nb">-</span><span class="nv">&gt;</span><span class="c">  |   not used   |</span>
-<span class="nb">+------+-----------------+</span><span class="c">      </span><span class="nb">+--------------+</span><span class="c"></span>
+<span class="nb">+------+-----------------+</span><span class="c">      </span><span class="nb">+--------------+</span>
 </code></pre></div>
 
 <p>인덱스된 값이 모두 <code>NULL</code>이라면, B+Tree 키에 대한 키가 인덕싱된 값이고, B+Tree 값은 레코드 handle 입니다.</p>
@@ -469,9 +469,9 @@ indices: &quot;|uY||nX&quot;
 <p>If the indexed values are not all NULL then key of the B+Tree key are the indexed values and the B+Tree value is the record handle.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="c">    B</span><span class="nb">+</span><span class="c">Tree key                B</span><span class="nb">+</span><span class="c">Tree value</span>
-<span class="nb">+----------------+</span><span class="c">      </span><span class="nb">+---------------+</span><span class="c"></span>
+<span class="nb">+----------------+</span><span class="c">      </span><span class="nb">+---------------+</span>
 <span class="c">| Indexed Values |  </span><span class="nb">-</span><span class="nv">&gt;</span><span class="c">  | Record Handle |</span>
-<span class="nb">+----------------+</span><span class="c">      </span><span class="nb">+---------------+</span><span class="c"></span>
+<span class="nb">+----------------+</span><span class="c">      </span><span class="nb">+---------------+</span>
 </code></pre></div>
 
 <h2 id="non-scalar-types">Non scalar types</h2>
@@ -479,13 +479,13 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>Scalar types of <a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a> are <code>bool</code>, <code>complex*</code>, <code>float*</code>, <code>int*</code>, <code>uint*</code>, <code>string</code> and <code>[]byte</code> types. All other types are &ldquo;blob-like&rdquo;.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="n">QL</span><span class="w"> </span><span class="n">type</span><span class="w">         </span><span class="k">Go</span><span class="w"> </span><span class="n">type</span><span class="w"></span>
-<span class="o">-----------------------------</span><span class="w"></span>
-<span class="k">blob</span><span class="w">            </span><span class="err">[]</span><span class="n">byte</span><span class="w"></span>
-<span class="nc">bigint</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="nc">Int</span><span class="w"></span>
-<span class="n">bigrat</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="n">Rat</span><span class="w"></span>
-<span class="nc">time</span><span class="w">            </span><span class="nc">time</span><span class="p">.</span><span class="nc">Time</span><span class="w"></span>
-<span class="n">duration</span><span class="w">        </span><span class="nc">time</span><span class="p">.</span><span class="n">Duration</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="n">QL</span><span class="w"> </span><span class="n">type</span><span class="w">         </span><span class="k">Go</span><span class="w"> </span><span class="n">type</span>
+<span class="o">-----------------------------</span>
+<span class="k">blob</span><span class="w">            </span><span class="err">[]</span><span class="n">byte</span>
+<span class="nc">bigint</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="nc">Int</span>
+<span class="n">bigrat</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="n">Rat</span>
+<span class="nc">time</span><span class="w">            </span><span class="nc">time</span><span class="p">.</span><span class="nc">Time</span>
+<span class="n">duration</span><span class="w">        </span><span class="nc">time</span><span class="p">.</span><span class="n">Duration</span>
 </code></pre></div>
 
 <p>메모리 백엔드는 Go 타입으로 직접 저장합니다. 파일 백엔드는 lldb가 기본적으로 지원하는 유형이 더 적기에 (태그가 붙은) <code>[]byte</code>를 이용하여 위 모든 내용을 인코딩 해야합니다. <code>Blob-like</code>한 타입의 <code>NULL</code> 값은 <code>nil</code> (<code>lldb/db.go</code>안의 <code>gbNull</code>)으로 인코딩 됩니다. 이미 존재하는 QL 타입과 완전히 동일합니다.</p>
@@ -497,11 +497,11 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>The values of the blob-like types are first encoded into a <code>[]byte</code> slice:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="nb">+-----------------------+-------------------+</span><span class="c"></span>
+<div class="codehilite"><pre><span></span><code><span class="nb">+-----------------------+-------------------+</span>
 <span class="c">| blob                  | raw               |</span>
 <span class="c">| bigint</span><span class="nt">,</span><span class="c"> bigrat</span><span class="nt">,</span><span class="c"> time  | gob encoded       |</span>
 <span class="c">| duration              | gob encoded int64 |</span>
-<span class="nb">+-----------------------+-------------------+</span><span class="c"></span>
+<span class="nb">+-----------------------+-------------------+</span>
 </code></pre></div>
 
 <p><code>gob</code> 인코딩은 <code>blob-like</code>한 타입에 대한 모든 초기 인코딩과 관련하여 <strong>차별됩니다</strong>. 다른 말로, <code>gob</code> 인코딩이 반드시 써야되는 초기 타입 디스크립터는 제거되고 정직하게 디코딩될때 <strong>재 공급</strong>됩니다. (참조, <a href="https://github.com/cznic/ql/blob/v1.1.0/blob.go"><code>blob.go</code></a>). 결과로 나온 슬라이스 길이가 <code>&lt;= shortBolob</code> 인 경우, 첫번째이자 유일한 청크는 다음과 같은 스칼라 인코딩입니다:</p>

@@ -133,7 +133,7 @@ gtag('config', 'G-X9EBSXCBTS');
 </li>
 <li>
 <p>GNU Make 처럼, 명령을 나열할 수 있다.</p>
-<div class="codehilite"><pre><span></span><code>$ invoke clean build
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>invoke<span class="w"> </span>clean<span class="w"> </span>build
 </code></pre></div>
 
 </li>
@@ -161,20 +161,20 @@ gtag('config', 'G-X9EBSXCBTS');
 
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Start preview web page server&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Start preview web page server&quot;&quot;&quot;</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{</span><span class="n">CONF_FILE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -l&quot;</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Clean up this dir&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Clean up this dir&quot;&quot;&quot;</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rm -rf </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/__pycache__ </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/cache&quot;</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">(</span><span class="n">post</span><span class="o">=</span><span class="p">[</span><span class="n">clean</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">pub</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Publish to github main page&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Publish to github main page&quot;&quot;&quot;</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{</span><span class="n">PUBLISH_CONF_FILE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ghp-import -m &#39;Generate Pelican site&#39; -b master </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;git push origin master&quot;</span><span class="p">)</span>
@@ -182,7 +182,7 @@ gtag('config', 'G-X9EBSXCBTS');
 
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">fix</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Execute black&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Execute black&quot;&quot;&quot;</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;black -l 80 .&quot;</span><span class="p">)</span>
 
 
@@ -197,28 +197,28 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>목록은 이렇게</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$ inv --list
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>inv<span class="w"> </span>--list
 
-Available tasks:
+Available<span class="w"> </span>tasks:
 
-  clean     Clean up this dir
-  fix       Execute black
-  preview   Start preview web page server
-  pub       Publish to github main page
+<span class="w">  </span>clean<span class="w">     </span>Clean<span class="w"> </span>up<span class="w"> </span>this<span class="w"> </span>dir
+<span class="w">  </span>fix<span class="w">       </span>Execute<span class="w"> </span>black
+<span class="w">  </span>preview<span class="w">   </span>Start<span class="w"> </span>preview<span class="w"> </span>web<span class="w"> </span>page<span class="w"> </span>server
+<span class="w">  </span>pub<span class="w">       </span>Publish<span class="w"> </span>to<span class="w"> </span>github<span class="w"> </span>main<span class="w"> </span>page
 </code></pre></div>
 
 <ul>
 <li>help는 이렇게</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>$ inv pub -h
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>inv<span class="w"> </span>pub<span class="w"> </span>-h
 
-Usage: inv<span class="o">[</span>oke<span class="o">]</span> <span class="o">[</span>--core-opts<span class="o">]</span> pub <span class="o">[</span>other tasks here ...<span class="o">]</span>
+Usage:<span class="w"> </span>inv<span class="o">[</span>oke<span class="o">]</span><span class="w"> </span><span class="o">[</span>--core-opts<span class="o">]</span><span class="w"> </span>pub<span class="w"> </span><span class="o">[</span>other<span class="w"> </span>tasks<span class="w"> </span>here<span class="w"> </span>...<span class="o">]</span>
 
 Docstring:
-  Publish to github main page
+<span class="w">  </span>Publish<span class="w"> </span>to<span class="w"> </span>github<span class="w"> </span>main<span class="w"> </span>page
 
 Options:
-  none
+<span class="w">  </span>none
 </code></pre></div>
 
 <hr>

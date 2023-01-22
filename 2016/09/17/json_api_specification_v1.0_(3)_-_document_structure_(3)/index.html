@@ -163,24 +163,24 @@ gtag('config', 'G-X9EBSXCBTS');
 <blockquote>
 <p>Here’s how an article (i.e. a resource of type “articles”) might appear in a document:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code>// ...
-{
- &quot;type&quot;: &quot;articles&quot;,
-  &quot;id&quot;: &quot;1&quot;,
-  &quot;attributes&quot;: {
-    &quot;title&quot;: &quot;Rails is Omakase&quot;
-  },
-  &quot;relationships&quot;: {
-    &quot;author&quot;: {
-      &quot;links&quot;: {
-        &quot;self&quot;: &quot;/articles/1/relationships/author&quot;,
-        &quot;related&quot;: &quot;/articles/1/author&quot;
-      },
-      &quot;data&quot;: { &quot;type&quot;: &quot;people&quot;, &quot;id&quot;: &quot;9&quot; }
-    }
-  }
-}
-    // ...
+<div class="codehilite"><pre><span></span><code><span class="c1">// ...</span>
+<span class="p">{</span>
+<span class="w"> </span><span class="s">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;articles&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s">&quot;attributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Rails is Omakase&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="s">&quot;relationships&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s">&quot;links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;self&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/articles/1/relationships/author&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;related&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/articles/1/author&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="s">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;people&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;9&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="w">    </span><span class="c1">// ...</span>
 </code></pre></div></div>
     <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
 

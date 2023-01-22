@@ -121,7 +121,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>나오는 방법을 나도 까먹는데&hellip;;;</p>
 <p>nano가 싫어 vim으로 변경해두길 어언.... 몇년&hellip; 이제 그것도 귀찮아져서 VS Code로 변경하려고 한다.</p>
 <p>명령은 간단하다.</p>
-<div class="codehilite"><pre><span></span><code>git config --global core.editor <span class="s2">&quot;code --wait&quot;</span>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span><span class="s2">&quot;code --wait&quot;</span>
 </code></pre></div>
 
 <p>하게되면 git commit 입력창이 VS code 창으로 뜬다.</p>
@@ -129,13 +129,13 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>이제 Tower 구독 결제가 되어있는지 한번 확인하고 없에야지..</p>
 <hr>
 <p><strong>번외</strong></p>
-<div class="codehilite"><pre><span></span><code>git difftool
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>difftool
 </code></pre></div>
 
 <p>위 명령을 실행하게되면 git diff 를 vimdiff를 이용하여 보여준다.</p>
 <p>이것도 아래 명령으로 변경이 가능하다.</p>
-<div class="codehilite"><pre><span></span><code>git config --global diff.tool diff-code
-git config --global difftool.diff-code.cmd <span class="s1">&#39;code --wait --diff $LOCAL $REMOTE&#39;</span>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>diff.tool<span class="w"> </span>diff-code
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>difftool.diff-code.cmd<span class="w"> </span><span class="s1">&#39;code --wait --diff $LOCAL $REMOTE&#39;</span>
 </code></pre></div>
 
 <p><code>tool</code> 이름이 잘못되면 잘 안나올 수 있으니 편한걸로 바꾸도록 하자.</p>

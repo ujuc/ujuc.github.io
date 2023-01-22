@@ -123,14 +123,14 @@ gtag('config', 'G-X9EBSXCBTS');
 <li>해당 파일들은 <code>kind: Deployment</code> 항목에서 할당된다. 기본 라벨은  <code>tags.datadog.com</code>으로 묶어서 사용할 수 있도록 구성할 수 있으며, 해당 묶음은 Datadog에서 읽어가는 부분이라 다르게 사용하면 제대로 못읽어 갈 수 있다.</li>
 </ul>
 <h3 id="pod">Pod 레벨 메트릭에 붙은 태깅</h3>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span><span class="w"></span>
-<span class="nt">template</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">tags.datadog.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">tags.datadog.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">tags.datadog.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span><span class="w"></span>
-<span class="nn">...</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<span class="nt">template</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tags.datadog.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span>
+<span class="w">      </span><span class="nt">tags.datadog.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span>
+<span class="w">      </span><span class="nt">tags.datadog.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span>
+<span class="nn">...</span>
 </code></pre></div>
 
 <h3 id="kubernetes">Kubernetes 상태값 메트릭 태깅</h3>
@@ -139,70 +139,70 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>라벨에서 기본 tag를 가져올 수 있도록 <code>join_standard_tags</code> 옵션을 <code>true</code>로 변경 해준다. <a href="https://github.com/DataDog/integrations-core/blob/master/kubernetes_state/datadog_checks/kubernetes_state/data/conf.yaml.example#L53-L63">코드상 설명</a></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span><span class="w"></span>
-<span class="nt">data</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">kubernetes_stage.yaml</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">    </span><span class="no">init_config:</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">kubernetes_stage.yaml</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">init_config:</span>
 
-<span class="w">    </span><span class="no">instances:</span><span class="w"></span>
-<span class="w">      </span><span class="no">- join_standard_tags: true</span><span class="w"></span>
+<span class="w">    </span><span class="no">instances:</span>
+<span class="w">      </span><span class="no">- join_standard_tags: true</span>
 </code></pre></div>
 
 <h4 id="agent-configmap">Agent 항목에 ConfigMap으로 만든 설정 파일을 마운트 해준다.</h4>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span><span class="w"></span>
-<span class="w">  </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span><span class="w"></span>
-<span class="w">      </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/datadog-agent/conf.d/kubernetes_state.d</span><span class="w"></span>
-<span class="nn">...</span><span class="w"></span>
-<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span><span class="w"></span>
-<span class="w">      </span><span class="nt">projected</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">configMap</span><span class="p">:</span><span class="w"></span>
-<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span><span class="w"></span>
-<span class="w">              </span><span class="nt">items</span><span class="p">:</span><span class="w"></span>
-<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes_state.yaml</span><span class="w"></span>
-<span class="w">                  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conf.yaml</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<span class="w">  </span><span class="nt">volumeMounts</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span>
+<span class="w">      </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/datadog-agent/conf.d/kubernetes_state.d</span>
+<span class="nn">...</span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span>
+<span class="w">      </span><span class="nt">projected</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">configMap</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datadog-agent-kubernetes-state</span>
+<span class="w">              </span><span class="nt">items</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes_state.yaml</span>
+<span class="w">                  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conf.yaml</span>
 </code></pre></div>
 
 <h4 id="pod-label">서비스 Pod에서 label을 다음과 같이 작성해준다.</h4>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tags.datadoghq.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tags.datadoghq.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">tags.datadoghq.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span><span class="w"></span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">tags.datadoghq.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">tags.datadoghq.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">tags.datadoghq.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span><span class="w"></span>
-<span class="nn">...</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tags.datadoghq.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span>
+<span class="w">    </span><span class="nt">tags.datadoghq.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span>
+<span class="w">    </span><span class="nt">tags.datadoghq.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">tags.datadoghq.com/env</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;ENV&gt;&quot;</span>
+<span class="w">        </span><span class="nt">tags.datadoghq.com/service</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;SERVICE&gt;&quot;</span>
+<span class="w">        </span><span class="nt">tags.datadoghq.com/version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;VERSION&gt;&quot;</span>
+<span class="nn">...</span>
 </code></pre></div>
 
 <h3 id="apm-tracer-satesd">APM tracer와 SatesD 클라이언트 환경 설정</h3>
-<div class="codehilite"><pre><span></span><code><span class="nn">...</span><span class="w"></span>
-<span class="nt">containers</span><span class="p">:</span><span class="w"></span>
-<span class="nn">...</span><span class="w"></span>
-<span class="w">  </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_ENV</span><span class="w"></span>
-<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/env&#39;]</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_SERVICE</span><span class="w"></span>
-<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/service&#39;]</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_VERSION</span><span class="w"></span>
-<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/version&#39;]</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nn">...</span>
+<span class="nt">containers</span><span class="p">:</span>
+<span class="nn">...</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_ENV</span>
+<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/env&#39;]</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_SERVICE</span>
+<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/service&#39;]</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DD_VERSION</span>
+<span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">fieldRef</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">fieldPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;tags.datadoghq.com/version&#39;]</span>
 </code></pre></div>
 
 <p>이 세가지를 한번에 구성해두면, APM을 통해서 들어가거나 Trace를 통해서 서비스의 문제점을 찾을때 연관된 내용들을 손쉽게 찾을 수 있을 것이다.</p></div>
