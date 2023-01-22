@@ -80,7 +80,9 @@ MARKDOWN = {
         "markdown.extensions.footnotes": {},
         "markdown.extensions.tables": {},
         "markdown.extensions.admonition": {},
-        "markdown.extensions.codehilite": {},
+        "markdown.extensions.codehilite": {
+            "css_class": "highlight"
+        },
         "markdown.extensions.meta": {},
         "markdown.extensions.nl2br": {},
         "markdown.extensions.sane_lists": {},
