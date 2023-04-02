@@ -22,6 +22,7 @@ cli = 'cli.main:run'
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"
 isort = "^5.11.4"
+ruff = "^0.0.260"
 
 [tool.isort]
 profile = "black"
@@ -31,6 +32,15 @@ lines_after_imports = 2
 lines_between_types = 1
 src_paths = [
     "cli"
+]
+
+[tool.ruff]
+select = ["E", "F"]
+
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
 ]
 
 [build-system]
