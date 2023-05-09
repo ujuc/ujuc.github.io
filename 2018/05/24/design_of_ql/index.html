@@ -479,13 +479,13 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>Scalar types of <a href="http://godoc.org/github.com/cznic/lldb#EncodeScalars"><code>lldb/EncodeScalars</code></a> are <code>bool</code>, <code>complex*</code>, <code>float*</code>, <code>int*</code>, <code>uint*</code>, <code>string</code> and <code>[]byte</code> types. All other types are &ldquo;blob-like&rdquo;.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="n">QL</span><span class="w"> </span><span class="n">type</span><span class="w">         </span><span class="k">Go</span><span class="w"> </span><span class="n">type</span>
+<div class="highlight"><pre><span></span><code><span class="nx">QL</span><span class="w"> </span><span class="k">type</span><span class="w">         </span><span class="nx">Go</span><span class="w"> </span><span class="k">type</span>
 <span class="o">-----------------------------</span>
-<span class="k">blob</span><span class="w">            </span><span class="err">[]</span><span class="n">byte</span>
-<span class="nc">bigint</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="nc">Int</span>
-<span class="n">bigrat</span><span class="w">          </span><span class="n">big</span><span class="p">.</span><span class="n">Rat</span>
-<span class="nc">time</span><span class="w">            </span><span class="nc">time</span><span class="p">.</span><span class="nc">Time</span>
-<span class="n">duration</span><span class="w">        </span><span class="nc">time</span><span class="p">.</span><span class="n">Duration</span>
+<span class="nx">blob</span><span class="w">            </span><span class="p">[]</span><span class="nx">byte</span>
+<span class="nx">bigint</span><span class="w">          </span><span class="nx">big</span><span class="p">.</span><span class="nx">Int</span>
+<span class="nx">bigrat</span><span class="w">          </span><span class="nx">big</span><span class="p">.</span><span class="nx">Rat</span>
+<span class="nx">time</span><span class="w">            </span><span class="nx">time</span><span class="p">.</span><span class="nx">Time</span>
+<span class="nx">duration</span><span class="w">        </span><span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span>
 </code></pre></div>
 
 <p>메모리 백엔드는 Go 타입으로 직접 저장합니다. 파일 백엔드는 lldb가 기본적으로 지원하는 유형이 더 적기에 (태그가 붙은) <code>[]byte</code>를 이용하여 위 모든 내용을 인코딩 해야합니다. <code>Blob-like</code>한 타입의 <code>NULL</code> 값은 <code>nil</code> (<code>lldb/db.go</code>안의 <code>gbNull</code>)으로 인코딩 됩니다. 이미 존재하는 QL 타입과 완전히 동일합니다.</p>
@@ -508,14 +508,14 @@ indices: &quot;|uY||nX&quot;
 <blockquote>
 <p>The gob encoding is &ldquo;differential&rdquo; wrt an initial encoding of all of the blob-like type. IOW, the initial type descriptors which gob encoding must write out are stripped off and &ldquo;resupplied&rdquo; on decoding transparently. See also blob.go. If the length of the resulting slice is <code>&lt;= shortBlob</code>, the first and only chunk is the scalar encoding of</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>[]interface{}{typeTag, slice}.                  // initial (and last) chunk
+<div class="highlight"><pre><span></span><code><span class="p">[]</span><span class="kd">interface</span><span class="p">{}{</span><span class="nx">typeTag</span><span class="p">,</span><span class="w"> </span><span class="nx">slice</span><span class="p">}.</span><span class="w">                  </span><span class="c1">// initial (and last) chunk</span>
 </code></pre></div>
 
 <p>슬라이스 길이가 <code>0</code>일 수도 있습니다 (<code>blob("")</code>인 경우). 결과로 나온 슬라이스 길이가 길다면 (<code>&gt; shortBlob</code>), 첫 번째 청크는 인코딩에서 옵니다:</p>
 <blockquote>
 <p>The length of slice can be zero (for blob(&ldquo;&rdquo;)). If the resulting slice is long (<code>&gt; shortBlob</code>), the first chunk comes from encoding</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>[]interface{}{typeTag, nextHandle, firstPart}.  // initial, but not final chunk
+<div class="highlight"><pre><span></span><code><span class="p">[]</span><span class="kd">interface</span><span class="p">{}{</span><span class="nx">typeTag</span><span class="p">,</span><span class="w"> </span><span class="nx">nextHandle</span><span class="p">,</span><span class="w"> </span><span class="nx">firstPart</span><span class="p">}.</span><span class="w">  </span><span class="c1">// initial, but not final chunk</span>
 </code></pre></div>
 
 <p>이 경우 <code>len(firstPart) &lt;= shortBlob</code>입니다. 두번째와 다른 청크입니다. 만약 마지막 청크면 <code>src</code>는 다음과 같습니다.</p>
