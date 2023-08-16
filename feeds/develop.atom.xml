@@ -2862,11 +2862,11 @@ source ../env/blog/bin/activate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;다 좋은데 다른 폴더로 가거나 다른 프로젝트로 갔을때&amp;hellip; 문제가 생길 수 있어서 끄는 방법을 찾았다. 상위 폴더에 다음 &lt;code&gt;.evn&lt;/code&gt;를 만들어서 넣어주면 된다. 개발하면서 자주가는 곳에다가는 꼭 박아두자. (&lt;a href="https://github.com/kennethreitz/autoenv/issues/30#issuecomment-26832177"&gt;원문&lt;/a&gt;)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;#&lt;span class="w"&gt; &lt;/span&gt;.&lt;span class="nv"&gt;env&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="gh"&gt;#&lt;/span&gt; .env
 
-&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;[&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;n&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$VIRTUAL_ENV&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;]&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;; then&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;deactivate&lt;/span&gt;
-&lt;span class="nv"&gt;fi&lt;/span&gt;
+if [ -n &amp;quot;$VIRTUAL_ENV&amp;quot; ] ; then
+    deactivate
+fi
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Develop"></category><category term="autoenv"></category><category term="env"></category><category term="setup"></category></entry><entry><title>Pendulum 버전업</title><link href="https://ujuc.github.io/2016/12/28/pendulum_beo-jeon-eob/" rel="alternate"></link><published>2016-12-28T23:36:13+09:00</published><updated>2016-12-28T23:36:13+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-12-28:/2016/12/28/pendulum_beo-jeon-eob/</id><summary type="html">&lt;p&gt;datetime 패키지중 하나인 Pendulum이 업그래이드 했다. 그래서&amp;hellip; 에러가 발생했다&lt;/p&gt;</summary><content type="html">&lt;p&gt;기본 패키지 인 datetime 이 영 불편해서 회사 프로젝트에서 사용중이던 date 파일을 &lt;a href="https://pendulum.eustace.io"&gt;Pendulum&lt;/a&gt;으로 변경하여 구성하고 잘 쓰고 있었는데&amp;hellip; 패키지 업그레이드로 사용하던 기능이 deprecate 되어버렸다.&lt;br&gt;
 아직 정식 1.0 버전이 나오지 않았기에 내용들이 계속 바뀌고 있다보니&amp;hellip; 속이&amp;hellip;&lt;/p&gt;
 &lt;hr&gt;

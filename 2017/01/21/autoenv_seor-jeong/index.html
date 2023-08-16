@@ -128,11 +128,11 @@ source ../env/blog/bin/activate
 </code></pre></div>
 
 <p>다 좋은데 다른 폴더로 가거나 다른 프로젝트로 갔을때&hellip; 문제가 생길 수 있어서 끄는 방법을 찾았다. 상위 폴더에 다음 <code>.evn</code>를 만들어서 넣어주면 된다. 개발하면서 자주가는 곳에다가는 꼭 박아두자. (<a href="https://github.com/kennethreitz/autoenv/issues/30#issuecomment-26832177">원문</a>)</p>
-<div class="highlight"><pre><span></span><code>#<span class="w"> </span>.<span class="nv">env</span>
+<div class="highlight"><pre><span></span><code><span class="gh">#</span> .env
 
-<span class="k">if</span><span class="w"> </span>[<span class="w"> </span><span class="o">-</span><span class="nv">n</span><span class="w"> </span><span class="s2">&quot;$VIRTUAL_ENV&quot;</span><span class="w"> </span>]<span class="w"> </span><span class="c1">; then</span>
-<span class="w">    </span><span class="nv">deactivate</span>
-<span class="nv">fi</span>
+if [ -n &quot;$VIRTUAL_ENV&quot; ] ; then
+    deactivate
+fi
 </code></pre></div></div>
     <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
 
