@@ -78,6 +78,7 @@ MARKDOWN = {
         "markdown.extensions.def_list": {},
         "markdown.extensions.fenced_code": {},
         "markdown.extensions.footnotes": {},
+        "markdown.extensions.md_in_html": {},
         "markdown.extensions.tables": {},
         "markdown.extensions.admonition": {},
         "markdown.extensions.codehilite": {
@@ -88,6 +89,7 @@ MARKDOWN = {
         "markdown.extensions.sane_lists": {},
         "markdown.extensions.smarty": {},
         "markdown.extensions.toc": {},
+        "markdown.extensions.wikilinks": {},
     },
     "output_format": "html5",
 }
