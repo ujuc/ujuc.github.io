@@ -25,7 +25,7 @@
     <meta itemprop="description" content="Git flow, GitHub flow, GitLab flow 에대해서 좀 알아보자. 머리아프다.">
     <meta property="og:url" content="https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/">
     <meta property="article:published_time" content="2015-12-16T08:50:00+09:00">
-    <meta property="article:modified_time" content="2019-03-24T00:00:00+09:00">
+    <meta property="article:modified_time" content="2023-08-26T00:00:00+09:00">
     <meta property="article:tag" content="git">
     <meta property="article:tag" content="workflow">
     <meta property="article:tag" content="github">
@@ -38,7 +38,8 @@
 
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
 
 <!-- Style -->
@@ -104,7 +105,7 @@ gtag('config', 'G-X9EBSXCBTS');
     <div class="article-meta">
       <em class="fa-regular fa-calendar-plus"></em>
         15. 12. 16.
- / <em class="fa-solid fa-arrows-rotate"></em> 19. 03. 24.       <em class="fa-solid fa-ellipsis-vertical"></em>
+ / <em class="fa-solid fa-arrows-rotate"></em> 23. 08. 26.       <em class="fa-solid fa-ellipsis-vertical"></em>
       <em class="fa-solid fa-folder-open"></em>
         <a href="https://ujuc.github.io/category/develop.html">Develop</a>
       <em class="fa-solid fa-ellipsis-vertical"></em>
@@ -117,56 +118,102 @@ gtag('config', 'G-X9EBSXCBTS');
 
   <!--Article -->
     <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>회사에서  <code>git</code>을 가지고서 버전 관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금 더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. <br>
+    <div class="article-text"><div class="alert alert-warning d-flex align-items-center m-2" role="alert">
+<p><i class="fa-solid fa-triangle-exclamation"></i> 문서가 업데이트 된지 오래되었습니다. 정리가 필요합니다. 그리고 하나더 여기서 이야기하는 것은 방법론입니다.</p>
+</div>
+<p>회사에서  <code>git</code>을 가지고서 버전 관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금 더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. <br>
 물론 새로운 프로젝트를 진행하면서 어떤 방법으로 진행하는 것이 맞는 것인지도 필요하기도 했고, 그러다가 <a href="http://koalabot-weirdmeetup.herokuapp.com/slack">이상한 모임 Slack</a>에서 관련 이야기가 나오면서 커밋을 하기 위한 방법론 중 하나인 <code>git-flow</code>의 종류가 3가지나 된다는 것을 보고 이놈들의 다른 점이 무엇인지 어떤 방법에서 편한 것인지에 대한 내용을 확인하고 싶어 졌다.</p>
-<h2 id="git-flow"><a href="https://github.com/nvie/gitflow">Git Flow</a></h2>
+<div class="border-top border-bottom border-secondary-subtle">
+<div class="toc">
+<ul>
+<li><a href="#git-flow">Git Flow</a><ul>
+<li><a href="#_1">구조와 흐름</a><ul>
+<li><a href="#feature">Feature 브랜치</a></li>
+<li><a href="#release">Release 브랜치</a></li>
+<li><a href="#hotfix">Hotfix 브랜치</a></li>
+</ul>
+</li>
+<li><a href="#_2">장점</a></li>
+<li><a href="#_3">단점</a></li>
+<li><a href="#_4">참고</a></li>
+</ul>
+</li>
+<li><a href="#github-flow">GitHub Flow</a><ul>
+<li><a href="#_5">특징</a></li>
+<li><a href="#_6">그럼 어떻게 사용할 것인가?</a></li>
+<li><a href="#_7">장점</a></li>
+<li><a href="#_8">단점</a></li>
+<li><a href="#_9">참고</a></li>
+</ul>
+</li>
+<li><a href="#gitlab-flow">GitLab Flow</a><ul>
+<li><a href="#production-branch-with-gitlab-flow">Production branch with GitLab flow</a></li>
+<li><a href="#environment-branches-with-gitlab-flow">Environment branches with GitLab flow</a></li>
+<li><a href="#release-branches-with-gitlab-flow">Release branches with GitLab flow</a></li>
+<li><a href="#mergepull-requests-with-gitlab-flow">Merge/pull requests with GitLab flow</a></li>
+<li><a href="#issues-with-gitlab-flow">Issues with GitLab flow</a></li>
+<li><a href="#_10">참고</a></li>
+</ul>
+</li>
+<li><a href="#_11">끝</a></li>
+<li><a href="#_12">참고</a></li>
+</ul>
+</div>
+</div>
+<h1 id="git-flow"><a href="https://github.com/nvie/gitflow">Git Flow</a></h1>
 <blockquote>
 <p><a href="http://nvie.com/posts/a-successful-git-branching-model/">Vincent Driessen이 말한 branching model</a>를 구현한 Git 확장 모듈이다. - <a href="https://github.com/nvie/gitflow">nvie/gitflw</a></p>
 </blockquote>
-<p>기본 브런치는 5가지를 이야기한다. <code>feature &gt; develop &gt; release &gt; hotfix &gt; master</code> 브런치가 존재하며, 머지 순서는 앞에서 뒤로 진행된다. <code>release</code> 브런치와 <code>hotfix</code> 브런치의 경우, <code>develop</code> 브런치의 오른쪽에 존재하기에 모두 <code>develop</code> 브런치도 머지를 하도록 구성이 되어있다.</p>
+<p>기본 브랜치는 5가지를 이야기한다. <code>feature &gt; develop &gt; release &gt; hotfix &gt; master</code> 브랜치가 존재하며, 머지 순서는 앞에서 뒤로 진행된다. <code>release</code> 브랜치와 <code>hotfix</code> 브랜치의 경우, <code>develop</code> 브랜치의 오른쪽에 존재하기에 모두 <code>develop</code> 브랜치도 머지를 하도록 구성이 되어있다.</p>
 <p>Vincent Driessen은 관련하여 스크립트로 명령을 구성해놨으며, 그냥 설치를 하여 CLI에서 명령으로 작업을 하여도 되고, GUI 툴들에서 기본 내장 git-flow 명령이나 플러그인을 설치하여 작업을 진행할 수 있도록 보편화되어있는 브런칭 모델이다.</p>
-<p><img alt="Git Flow model" src="http://nvie.com/img/git-model@2x.png"></p>
-<h3 id="_1">구조와 흐름</h3>
-<p>가장 중심이 되는 브런치는 <code>master</code>랑 <code>develop</code> 브런치이며, 이 두 개 브런치는 무조건 있어야 한다. 이름은 바뀔 수 있다만 웬만해서는 변경하지 않고 진행하도록 하자. Git도 Production에서 사용하는 브런치는 <code>master</code>를 사용하게 되니 관련된 부분을 변경하면 새로운 사람이 왔을때 스터디 커브가 존재할 수 있다.</p>
-<p>머지된 <code>feature</code>, <code>release</code>, <code>hotfix</code> 브런치는 삭제하도록 한다.</p>
-<h4 id="feature">Feature 브런치</h4>
+<div class="row justify-content-center">
+<div class="col-6 col-sm-9">
+<p><img alt="Git Flow model" src="https://ujuc.github.io/img/2015/12-16/git-model@2x.png"><br>
+</p>
+</div>
+</div>
+<h2 id="_1">구조와 흐름</h2>
+<p>가장 중심이 되는 브랜치는 <code>master</code>랑 <code>develop</code> 브랜치이며, 이 두 개 브랜치는 무조건 있어야 한다. 이름은 바뀔 수 있다만 웬만해서는 변경하지 않고 진행하도록 하자. Git도 Production에서 사용하는 브랜치는 <code>master</code>를 사용하게 되니 관련된 부분을 변경하면 새로운 사람이 왔을때 스터디 커브가 존재할 수 있다.</p>
+<p>머지된 <code>feature</code>, <code>release</code>, <code>hotfix</code> 브랜치는 삭제하도록 한다.</p>
+<h3 id="feature">Feature 브랜치</h3>
 <ul>
-<li>브런치 나오는 곳 : <code>develop</code></li>
-<li>브런치가 들어가는 곳 : <code>develop</code></li>
+<li>브랜치 나오는 곳 : <code>develop</code></li>
+<li>브랜치가 들어가는 곳 : <code>develop</code></li>
 <li>이름 지정 : <code>master</code>, <code>develop</code>, <code>release-*</code>, <code>hotfix-*</code>를 제외한 어떤 것이든 가능.</li>
 </ul>
-<p>새로운 기능을 추가하는 브런치이다.<br>
-<code>feature</code>브런치는 <code>origin</code>에는 반영하지 않고, 개발자의 reop애만 존재하도록 한다.</p>
-<p>여기서 머지를 할 때, <code>--no-ff</code> 옵션을 이용하여 브런치에서 머지가 되었음을 git 기록에 남겨두도록 한다. 이렇게 되면 나중에 히스토리 관리가 어려워지는 부분이 존재한다고 한다만&hellip; 그것을 확인할 수 있는 방법들은 많으니 뭐&hellip;</p>
-<h4 id="release">Release 브런치</h4>
+<p>새로운 기능을 추가하는 브랜치이다.<br>
+<code>feature</code>브랜치는 <code>origin</code>에는 반영하지 않고, 개발자의 reop애만 존재하도록 한다.</p>
+<p>여기서 머지를 할 때, <code>--no-ff</code> 옵션을 이용하여 브랜치에서 머지가 되었음을 git 기록에 남겨두도록 한다. 이렇게 되면 나중에 히스토리 관리가 어려워지는 부분이 존재한다고 한다만&hellip; 그것을 확인할 수 있는 방법들은 많으니 뭐&hellip;</p>
+<h3 id="release">Release 브랜치</h3>
 <ul>
-<li>브런치 나오는 곳 : <code>develop</code></li>
-<li>브런치가 들어가는 곳 : <code>develop</code>, <code>master</code></li>
+<li>브랜치 나오는 곳 : <code>develop</code></li>
+<li>브랜치가 들어가는 곳 : <code>develop</code>, <code>master</code></li>
 <li>이름 지정 : <code>release-*</code></li>
 </ul>
-<p>새로운 Production 릴리즈를 위한 브런치이다.<br>
-지금까지 한 기능을 묶어 <code>develop</code> 브런치에서 <code>release</code> 브런치를 따내고, <code>develop</code> 브런치에서는 다음번 릴리즈에서 사용할 기능을 추가한다.<br>
-<code>release</code> 브런치에서는 버그 픽스에 대한 부분만 커밋하고, <strong>릴리즈가 준비되었다고 생각하면</strong> <code>master</code>로 머지를 진행한다. (이때도 <code>--no-ff</code> 옵션을 이용하여 머지하였음을 남긴다.) <br>
-<code>master</code>로 머지 후 <code>tag</code> 명령을 이용하여 릴리즈 버전에 대해 명시를 하고, <code>-s</code> 나 <code>-u &lt;key&gt;</code> 옵션을 이용하여 머지한 사람의 정보를 남겨두도록 한다. 그런 뒤 <code>develop</code> 브런치로 머지하여, <code>release</code> 브런치에서 수정된 내용이 <code>develop</code> 브런치에 반영한다.</p>
-<h4 id="hotfix">Hotfix 브런치</h4>
+<p>새로운 Production 릴리즈를 위한 브랜치이다.<br>
+지금까지 한 기능을 묶어 <code>develop</code> 브랜치에서 <code>release</code> 브랜치를 따내고, <code>develop</code> 브랜치에서는 다음번 릴리즈에서 사용할 기능을 추가한다.<br>
+<code>release</code> 브랜치에서는 버그 픽스에 대한 부분만 커밋하고, <strong>릴리즈가 준비되었다고 생각하면</strong> <code>master</code>로 머지를 진행한다. (이때도 <code>--no-ff</code> 옵션을 이용하여 머지하였음을 남긴다.) <br>
+<code>master</code>로 머지 후 <code>tag</code> 명령을 이용하여 릴리즈 버전에 대해 명시를 하고, <code>-s</code> 나 <code>-u &lt;key&gt;</code> 옵션을 이용하여 머지한 사람의 정보를 남겨두도록 한다. 그런 뒤 <code>develop</code> 브랜치로 머지하여, <code>release</code> 브랜치에서 수정된 내용이 <code>develop</code> 브랜치에 반영한다.</p>
+<h3 id="hotfix">Hotfix 브랜치</h3>
 <ul>
-<li>브런치 나오는 곳 : <code>master</code></li>
-<li>브런치가 들어가는 곳 : <code>develop</code>, <code>master</code></li>
+<li>브랜치 나오는 곳 : <code>master</code></li>
+<li>브랜치가 들어가는 곳 : <code>develop</code>, <code>master</code></li>
 <li>이름 지정 : <code>hotfix-*</code></li>
 </ul>
-<p>Production에서 발생한 버그들은 전부 여기로&hellip; 수정 끝나면, <code>develop</code>, <code>master</code> 브런치에 반영하고, <code>master</code>에 다가는 <code>tag</code> 를 추가해준다.<br>
-만약 <code>release</code> 브런치가 존재한다면, <code>release</code> 브런치에 <code>hotfix</code> 브런치를 머지하여 릴리즈 될 때 반영이 될 수 있도록 한다.</p>
-<h3 id="_2">장점</h3>
+<p>Production에서 발생한 버그들은 전부 여기로&hellip; 수정 끝나면, <code>develop</code>, <code>master</code> 브랜치에 반영하고, <code>master</code>에 다가는 <code>tag</code> 를 추가해준다.<br>
+만약 <code>release</code> 브랜치가 존재한다면, <code>release</code> 브랜치에 <code>hotfix</code> 브랜치를 머지하여 릴리즈 될 때 반영이 될 수 있도록 한다.</p>
+<h2 id="_2">장점</h2>
 <ul>
-<li>명령어가 나와있다.</li>
+<li>alias script가 존재한다.</li>
+<li><a href="https://github.com/petervanderdoes/gitflow-avh">gitflow-avh</a></li>
 <li>웬만한 에디터와 IDE에는 플러그인으로 존재한다.</li>
 </ul>
-<h3 id="_3">단점</h3>
+<h2 id="_3">단점</h2>
 <ul>
-<li>브런치가 많아 복잡하다.</li>
-<li>안 쓰는 브런치가 있다. 그리고 몇몇 브런치는 애매한 포지션이다.</li>
+<li>브랜치가 많아 복잡하다.</li>
+<li>안 쓰는 브랜치가 있다. 그리고 몇몇 브랜치는 애매한 포지션이다.</li>
 </ul>
-<h3 id="_4">참고</h3>
+<h2 id="_4">참고</h2>
 <ul>
 <li><a href="https://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model - Vincent Driessen</a></li>
 <li><a href="https://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html">git-flow cheatsheet</a></li>
@@ -174,47 +221,52 @@ gtag('config', 'G-X9EBSXCBTS');
 <li><a href="http://huns.me/development/1131">gifflow, 쉬운 git brunch 관리 - 개발왕 김코딩</a></li>
 <li><a href="https://ohgyun.com/402">git 브랜칭 전략과 git flow - 꿀벌개발일지</a></li>
 </ul>
-<h2 id="github-flow">GitHub Flow</h2>
+<h1 id="github-flow">GitHub Flow</h1>
 <p>Scott chacon은 <a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a>에서 Git flow가 좋은 방식이긴 하지만 GitHub에서 사용하기에는 복잡하다 여겨 사용하지 않고 <code>GitHub Flow</code>라는 내용으로 사용을 하고 있다고 한다. 그리고 <strong>자동화의 개념이 들어가 있다는 점</strong>. 자동화가 안되어있는 곳에서는 수동으로 관련 작업을 진행하면 된다.</p>
-<p>흐름이 단순한 만큼 룰도 단순하다. <code>master</code> 브런치에 대한 <code>role</code>만 정확하다면 나머지 브런치들에는 관여를 하지 않는다. 그리고 <code>pull request</code> 기능을 사용하도록 권장을 한다.</p>
-<p><img alt="GitHub Flow Model" src="http://cdn-ak.f.st-hatena.com/images/fotolife/s/shoma2da/20151104/20151104223339.png"></p>
-<h3 id="_5">특징</h3>
+<p>흐름이 단순한 만큼 룰도 단순하다. <code>master</code> 브랜치에 대한 <code>role</code>만 정확하다면 나머지 브랜치들에는 관여를 하지 않는다. 그리고 <code>pull request</code> 기능을 사용하도록 권장을 한다.</p>
+<div class="row justify-content-center">
+<div class="col-6 col-sm-9">
+<p><img alt="GitHub Flow Model" src="https://ujuc.github.io/img/2015/12-16/20151104223339.png"><br>
+</p>
+</div>
+</div>
+<h2 id="_5">특징</h2>
 <ul>
-<li><code>release</code> 브런치가 명확하지 않은 시스템에서 사용에 맞게 되어있다.</li>
+<li><code>release</code> 브랜치가 명확하지 않은 시스템에서 사용에 맞게 되어있다.</li>
 <li>여기에는 GitHub의 서비스 특성상. 릴리즈라는 개념이 없는 서비스를 진행하고 있어서 그런 것으로 보이며, 웹 서비스들이 릴리즈라는 개념이 없이지고 있으니 사용하기 편할 것으로 보인다.</li>
 <li><code>hotfix</code>와 가장 작은 기능을 구분하지 않는다. 어차피 둘 다 개발자가 수정해야 되는 일중에 하나이다. 단지 우선순위가 어디가 높냐라는 단계이다.</li>
 </ul>
-<h3 id="_6">그럼 어떻게 사용할 것인가?</h3>
-<h4 id="1-master">1. <code>master</code> 브런치는 어떤 때든 배포가 가능하다.</h4>
-<p><code>master</code> 브런치는 항상 최신의 상태이며, stable 상태로 Product에 배포되는 브런치이다. 그리고 이 브런치에 대해서는 엄격한 <em>role</em>를 주어 사용한다.</p>
-<h4 id="2-master">2. 새로운 일을 시작하기 위해 브런치를 <code>master</code>에서 딴다면 이름은 어떤 일을 하는지 명확하게 작성한다.</h4>
-<p><code>git flow</code> 와는 다르게 <code>feature</code> 브런치나 <code>develop</code> 브런치가 존재하지 않는다. 그렇기에 새로운 기능을 추가하거나 버그를 해결하기 위한 브런치의 이름은 자세하게 어떤 일을 하고 있는지에 대해서 작성해주도록 하자. Github 페이지에서 보면 어떤 일들이 진행되고 있는지를 확인하기 쉽게 말이다.</p>
-<h4 id="3-push">3. 원격지 브런치로 수시로 push를 한다.</h4>
+<h2 id="_6">그럼 어떻게 사용할 것인가?</h2>
+<p><strong>1. <code>master</code> 브랜치는 어떤 때든 배포가 가능하다.</strong></p>
+<p><code>master</code> 브랜치는 항상 최신의 상태이며, stable 상태로 Product에 배포되는 브랜치이다. 그리고 이 브랜치에 대해서는 엄격한 <em>role</em>를 주어 사용한다.</p>
+<p><strong>2. 새로운 일을 시작하기 위해 브랜치를 <code>master</code>에서 딴다면 이름은 어떤 일을 하는지 명확하게 작성한다.</strong></p>
+<p><code>git flow</code> 와는 다르게 <code>feature</code> 브랜치나 <code>develop</code> 브랜치가 존재하지 않는다. 그렇기에 새로운 기능을 추가하거나 버그를 해결하기 위한 브랜치의 이름은 자세하게 어떤 일을 하고 있는지에 대해서 작성해주도록 하자. Github 페이지에서 보면 어떤 일들이 진행되고 있는지를 확인하기 쉽게 말이다.</p>
+<p><strong>3. 원격지 브랜치로 수시로 push를 한다.</strong></p>
 <p><code>git flow</code> 와 가장 상반되는 방식이다. 항상 원격지에 자신이 하고 있는 일들을 올려 다른 사람들도 확인할 수 있도록 해준다.<br>
 이 방법의 좋은 점은 하드웨어에 문제가 발생하여 작업하던 부분이 없어지더라도 원격지에 있는 소스를 받아서 작업을 할 수 있도록 해준다.</p>
-<h4 id="4-pull-request">4. 피드백이나 도움이 필요할 때, 그리고 머징 준비가 완료되었을 때는 <code>pull request</code>를 생성한다.</h4>
+<p><strong>4. 피드백이나 도움이 필요할 때, 그리고 머징 준비가 완료되었을 때는 <code>pull request</code>를 생성한다.</strong></p>
 <p><code>pull request</code> 는 코드 리뷰를 도와주는 시스템이다. <br>
-그렇기에 이것을 이용하여 자신의 코드를 공유하고, 리뷰를 받을 수 있도록 한다. 물론 머지가 준비 완료되어 <code>master</code> 브런치로 반영을 요구하여도 된다.</p>
-<h4 id="5-master">5. 기능에 대한 리뷰와 사인이 끝난 후 <code>master</code>로 머지한다.</h4>
+그렇기에 이것을 이용하여 자신의 코드를 공유하고, 리뷰를 받을 수 있도록 한다. 물론 머지가 준비 완료되어 <code>master</code> 브랜치로 반영을 요구하여도 된다.</p>
+<p><strong>5. 기능에 대한 리뷰와 사인이 끝난 후 <code>master</code>로 머지한다.</strong></p>
 <p>곧장 product로 반영이될 기능이기에 이해관계가 연결된 사람들과 충분한 논의 이후 반영하도록 한다.</p>
-<h4 id="6-master">6. <code>master</code>로 머지되고 푸시되었을 때는 즉시 배포되어야 한다.</h4>
+<p><strong>6. <code>master</code>로 머지되고 푸시되었을 때는 즉시 배포되어야 한다.</strong></p>
 <p><strong>GitHub Flow</strong>의 핵심인듯한 <code>master</code>로 머지가 일어나면 <code>hubot</code>을 이용하여 자동으로 배포가 되도록 설정해놓는다.</p>
-<h3 id="_7">장점</h3>
+<h2 id="_7">장점</h2>
 <ul>
-<li>브런치 전략이 단순하다.</li>
+<li>브랜치 전략이 단순하다.</li>
 <li>처음 git을 접하는 사람에게 정말 좋은 시스템이 된다.</li>
 <li>Github 사이트에서 제공하는 기능을 모두 사용하여 작업을 진행한다.</li>
 <li>코드 리뷰를 자연스럽게 사용할 수 있다.</li>
 <li>CI가 필수적이며, 배포는 자동으로 진행할 수 있다.</li>
 <li>Github가 작업을 할 때 이렇게 작업하고 있다.</li>
 </ul>
-<h3 id="_8">단점</h3>
+<h2 id="_8">단점</h2>
 <ul>
 <li>CI와 배포 자동화가 되어있지 않은 시스템에서는 사람이 관련된 업무를 진행한다.</li>
 <li>많은 것들이 올라오기 시작하면&hellip; 그때부터는 헬이&hellip;</li>
 <li>너무 간단하니&hellip; 이거 단점이 있나 싶다&hellip;</li>
 </ul>
-<h3 id="_9">참고</h3>
+<h2 id="_9">참고</h2>
 <ul>
 <li><a href="https://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a></li>
 <li><a href="https://guides.github.com/introduction/flow/">Understanding the GitHub Flow</a></li>
@@ -222,38 +274,41 @@ gtag('config', 'G-X9EBSXCBTS');
 <li><a href="https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/">Git Flow vs Github Flow</a></li>
 <li><a href="https://github.com/blog/1557-github-flow-in-the-browser">GitHub Flow in teh Browser</a></li>
 </ul>
-<h2 id="gitlab-flow">GitLab Flow</h2>
+<h1 id="gitlab-flow">GitLab Flow</h1>
+<div class="alert alert-danger d-flex align-items-center m-2" role="alert">
+<p><i class="fa-solid fa-triangle-exclamation"></i> 문서가 쓰여졌던 시점의 방식입니다. 지금은 변경되었습니다. <a href="https://about.gitlab.com/blog/2023/07/27/gitlab-flow-duo/">Combine GitLab Flow and GitLab Duo for a workflow powerhouse</a> 를 확인하세요.</p>
+</div>
 <p>Github에서 말하는 flow는 너무나도 간단하여 배포, 환경 구성, 릴리즈, 통합에 대한 이슈를 남겨둔 것이 많았다. 그것을 보안하기 위해 GitLab에서 관련 내용들을 추가적으로 덧붙여 설명한 것을 일컫는다.</p>
-<h3 id="production-branch-with-gitlab-flow">Production branch with GitLab flow</h3>
+<h2 id="production-branch-with-gitlab-flow">Production branch with GitLab flow</h2>
 <p><img alt="GitLab Flow Model - production branch" src="https://about.gitlab.com/images/git_flow/production_branch.png"></p>
-<p><code>production</code> 브런치가 존재하여 커밋한 내용들을 일방적으로 디플로이를 하는 형태. GitHub에서 브런치 하나를 더 구성하여 사용하는 이것도 조금은 간단한 구성이다.<br>
+<p><code>production</code> 브랜치가 존재하여 커밋한 내용들을 일방적으로 디플로이를 하는 형태. GitHub에서 브랜치 하나를 더 구성하여 사용하는 이것도 조금은 간단한 구성이다.<br>
 이렇게 구성하면 배포 자동화가 되어있 지않은 구성에서 어떻게 배포를 진행할 것인가에 대한 내용을 담았다. 물론 이걸로 부족하여 다음의 것도 추가되었다.</p>
-<h3 id="environment-branches-with-gitlab-flow">Environment branches with GitLab flow</h3>
+<h2 id="environment-branches-with-gitlab-flow">Environment branches with GitLab flow</h2>
 <p><img alt="GitLab Flow Model - environment branch" src="https://about.gitlab.com/images/git_flow/environment_branches.png"></p>
 <p><code>master</code>와 <code>production</code> 사이에 <code>pre-production</code>을 두어 개발한 내용을 곧장 반영하지 않고 시간을 두고 반영을 하는 것을 말한다. Staging을위한 공간을 만드는 거지&hellip;</p>
-<h3 id="release-branches-with-gitlab-flow">Release branches with GitLab flow</h3>
+<h2 id="release-branches-with-gitlab-flow">Release branches with GitLab flow</h2>
 <p><img alt="GitLab Flow Model - Release branch" src="https://about.gitlab.com/images/git_flow/release_branches.png"></p>
-<p><code>release</code>한 브런치를 두고서 보안상 문제가 발생한 것이나 백 포트를 위해서 작업을 할 경우, cherry-pick을 이용해서 작업을 진행할 수 도 있다. 아니면 해당 릴리즈에서 발생하는 버그들을 묶어서 수정하는 방식으로 작업한다. 일반적으로 말하는 &lsquo;upstream first&rsquo; 정책이다.</p>
-<h3 id="mergepull-requests-with-gitlab-flow">Merge/pull requests with GitLab flow</h3>
+<p><code>release</code>한 브랜치를 두고서 보안상 문제가 발생한 것이나 백 포트를 위해서 작업을 할 경우, cherry-pick을 이용해서 작업을 진행할 수 도 있다. 아니면 해당 릴리즈에서 발생하는 버그들을 묶어서 수정하는 방식으로 작업한다. 일반적으로 말하는 &lsquo;upstream first&rsquo; 정책이다.</p>
+<h2 id="mergepull-requests-with-gitlab-flow">Merge/pull requests with GitLab flow</h2>
 <p>Pull request를 사용하는 방법이다. GitHub Flow에서 하는 방법과 동일하다. 원문은 길게 적어놨는데&hellip; 딱히&hellip;</p>
-<h3 id="issues-with-gitlab-flow">Issues with GitLab flow</h3>
+<h2 id="issues-with-gitlab-flow">Issues with GitLab flow</h2>
 <p>Issue 트러커와 연결하여 사용하는 것을 말한다. 긴~~ 시간 동안 작업을 할 경우, 이슈를 생성하여 작업을 진행하는 것으로&hellip;<br>
-브런치 이름에는 이슈번호를 적어 작업 중인 이슈가 어떤 것인지를 명확하게 해주는 것이 필요하다.<br>
+브랜치 이름에는 이슈번호를 적어 작업 중인 이슈가 어떤 것인지를 명확하게 해주는 것이 필요하다.<br>
 작업이 끝나거나 코드 공유가 필요한 시점이면 Merge/pull requsts를 보낸다.</p>
 <p>다 적을려고 봤더니 그냥 GitLab 사용법에 대해서만 추가적으로 말하고 있어서 이쯤적고 영어로 읽자. 영어가 어렵다면&hellip; 일본어를 번역해서 읽으면 좀 더 쉽게 읽을 수 있다.</p>
-<h3 id="_10">참고</h3>
+<h2 id="_10">참고</h2>
 <ul>
 <li><a href="https://about.gitlab.com/2014/09/29/gitlab-flow/">GitLab Flow</a></li>
 <li><a href="https://postd.cc/gitlab-flow/">GitLab flowから学ぶワークフローの実践</a></li>
 <li><a href="https://doc.gitlab.com/ee/workflow/gitlab_flow.html">GitLab Document</a></li>
 <li><a href="http://shoma2da.hatenablog.com/entry/2015/11/04/233534">アプリ開発にはGitlab flowが合うと思います</a></li>
 </ul>
-<h2 id="_11">끝</h2>
+<h1 id="_11">끝</h1>
 <p>하&hellip; 길었다. 모든 자료는 공식적으로 첫 번째로 작성된 포스트의 내용을 가져와 작성하였다. 그쪽의 내용이 가장 먼저 말한 사람의 생각이 들어가 있다고 생각했기 때문이다. <br>
 그리고 찾으면서 발견한 글들의 경우, 참고 사이트로 작성을 해놨으니 그것을 확인하면 될듯.</p>
 <p>Git flow가 편한줄 알았더니&hellip; GitHub나 GitLab을 사용하고 있다면, 굳이 Git flow가 아니더라도 괜찮겠다는 생각이 드는데 딱히 OpenSource를 하는 그룹에서도 Git flow를 사용하기보다는 자신의 코드가 들어가 있는 플랫폼을 가지고서 작업을 하는 경우가 많아서&hellip; 뭐. 업스트림에 작업을 할 수 있는 사람이 한정되어있으니까&hellip;</p>
 <p>이런 방법들을 어떻게 사용해보는 것이 좋을련지를 고민해보는 것도 필요하지 않을까 한다. 간단하게 하는 방법도 있고 하니까.. 그리고 내꺼나 차근차근 구축해 나가야 되는데&hellip;</p>
-<h3 id="_12">참고</h3>
+<h1 id="_12">참고</h1>
 <ul>
 <li><a href="https://gist.github.com/nzakas/5511916">Using GitHub inside a company - Gist</a></li>
 <li><a href="https://www.nczonline.net/blog/2013/05/21/github-workflows-inside-of-a-company/">GitHub workflows inside of a company</a></li>
@@ -261,7 +316,8 @@ gtag('config', 'G-X9EBSXCBTS');
 <li><a href="http://www.slideshare.net/ktateish/the-gitworkflows7-illustrated">The gitworkflows(7)</a></li>
 </ul>
 <hr>
-<p>2019-03-24: 죽은 링크 삭제, 맞춤법 검사</p></div>
+<p>2019-03-24: 죽은 링크 삭제, 맞춤법 검사<br>
+2023-08-26: 죽은 이미지를 살리지 못함, 전체 스타일 변경, CSS 수정.</p></div>
     <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
 
   <!-- Buy me a coffee -->
