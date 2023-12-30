@@ -1638,13 +1638,13 @@ Summary:
 &lt;span class="p"&gt;...&lt;/span&gt;
 
 &lt;span class="n"&gt;packages&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cli&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;include&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cli&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;]&lt;/span&gt;
 
 &lt;span class="p"&gt;...&lt;/span&gt;
 
 &lt;span class="k"&gt;[tool.poetry.scripts]&lt;/span&gt;
-&lt;span class="n"&gt;cli&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cli.main:run&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;cli&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cli.main:run&amp;#39;&lt;/span&gt;
 
 &lt;span class="p"&gt;...&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
