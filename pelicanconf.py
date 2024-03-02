@@ -43,6 +43,7 @@ MENU = (
 SOCIAL = (
     ("Github", "https://github.com/ujuc", "github"),
     ("Linkin", "https://kr.linkedin.com/in/sungjinkang", "linkedin"),
+    ("X", "https://x.com/ujuc", "x-twitter"),
 )
 
 LINKS = ()
@@ -54,12 +55,6 @@ DISPLAY_PAGES_ON_MENU = False
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 THEME = "clean/"
-
-# Address
-EMAIL_ADDRESS = "ujuc@ujuc.kr"
-GITHUB_ADDRESS = "https://github.com/ujuc"
-SO_ADDRESS = "https://stackoverflow.com/users/978762/sungjin-gang"
-TWITTER_ADDRESS = "https://twitter.com/ujuc"
 
 AUTHORS = {}
 
