@@ -8,18 +8,18 @@ packages = [{ include = 'cli', from = '.' }]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
-pendulum = ">=3.0.0"
-pelican = ">=4.9.1"
-Markdown = ">=3.4.1"
-rich = ">=13.2.0"
-cleo = ">=2.0.1"
+pendulum = "^3.0.0"
+pelican = "^4.9.1"
+Markdown = "^3.6"
+rich = "^13.7.1"
+cleo = "^2.1.0"
 
 [tool.poetry.scripts]
 cli = 'cli.main:run'
 
 [tool.poetry.group.dev.dependencies]
-isort = ">=5.11.4"
-ruff = ">=0.0.260"
+isort = "^5.13.2"
+ruff = "^0.3.7"
 
 [tool.isort]
 profile = "ruff"
