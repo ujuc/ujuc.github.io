@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="ujuc">
+    
+    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
+    <meta property="og:type" content="website">
+    <meta property="inLanguage" content="ko-KR">
+
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
+
+    <meta name="keyward" content="xdg-utils,desktop,unix-like,os">
+    <meta property="og:title" content="XDG에서 사용중인 기본 디렉토리 정리">
+    <meta name="twitter:title" content="XDG에서 사용중인 기본 디렉토리 정리">
+    <meta itemprop="name" content="XDG에서 사용중인 기본 디렉토리 정리">
+    <meta name="description" content="dotrc 정리중에 tigrc 파일을 $XDG_CONFIG_HOME/tig/config 부터 찾고 있는것을 보다보니 $XDG_CONFIG_HOME 이라는 것을 확인했고, XDG-utils에서 사용중인 디렉토리에대해서 정리한다.">
+    <meta property="og:description" content="dotrc 정리중에 tigrc 파일을 $XDG_CONFIG_HOME/tig/config 부터 찾고 있는것을 보다보니 $XDG_CONFIG_HOME 이라는 것을 확인했고, XDG-utils에서 사용중인 디렉토리에대해서 정리한다.">
+    <meta name="twitter:description" content="dotrc 정리중에 tigrc 파일을 $XDG_CONFIG_HOME/tig/config 부터 찾고 있는것을 보다보니 $XDG_CONFIG_HOME 이라는 것을 확인했고, XDG-utils에서 사용중인 디렉토리에대해서 정리한다.">
+    <meta itemprop="description" content="dotrc 정리중에 tigrc 파일을 $XDG_CONFIG_HOME/tig/config 부터 찾고 있는것을 보다보니 $XDG_CONFIG_HOME 이라는 것을 확인했고, XDG-utils에서 사용중인 디렉토리에대해서 정리한다.">
+    <meta property="og:url" content="https://ujuc.github.io/2024/06/30/xdg에서-사용중인-기본-디렉토리-정리/">
+    <meta property="article:published_time" content="2024-06-30T15:25:14+09:00">
+    <meta property="article:modified_time" content="2024-06-30T15:25:14+09:00">
+    <meta property="article:tag" content="xdg-utils">
+    <meta property="article:tag" content="desktop">
+    <meta property="article:tag" content="unix-like">
+    <meta property="article:tag" content="os">
+
+    <!-- Title -->
+    <title>
+      잘 밤에 쓸데없는 생각하기/XDG에서 사용중인 기본 디렉토리 정리
+    </title>
+
+<!-- Style sheet -->
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+<link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 ATOM" />
+<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-X9EBSXCBTS');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1014314833699403",
+    enable_page_level_ads: true
+  });
+</script>
+  </head>
+
+  <body>
+    <header>
+      <!-- navi -->
+      <div class="container" style="margin-top: 10px;">
+<ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">
+        <em class="fa-solid fa-inbox"></em> Blog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/archives.html">
+        <em class="fa-solid fa-archive"></em> Archive
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/tags.html">
+        <em class="fa-solid fa-tags"></em> Tags
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/categories.html">
+        <em class="fa-solid fa-folder-open"></em> Categories
+      </a>
+    </li>
+</ul>      </div>
+    </header>
+
+    <div id="site-article" class="container">
+<div class="container">
+  <div class="article">
+  <!-- Title -->
+    <div class="article-title">XDG에서 사용중인 기본 디렉토리 정리</div>
+
+  <!-- Meta -->
+    <div class="article-meta">
+      <em class="fa-regular fa-calendar-plus"></em>
+        24. 06. 30.
+ / <em class="fa-solid fa-arrows-rotate"></em> 24. 06. 30.       <em class="fa-solid fa-ellipsis-vertical"></em>
+      <em class="fa-solid fa-folder-open"></em>
+        <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+      <em class="fa-solid fa-ellipsis-vertical"></em>
+      <em class="fa-solid fa-tags"></em>
+        <a href="https://ujuc.github.io/tag/xdg-utils.html" class="article_tag">xdg-utils</a>
+        <a href="https://ujuc.github.io/tag/desktop.html" class="article_tag">desktop</a>
+        <a href="https://ujuc.github.io/tag/unix-like.html" class="article_tag">unix-like</a>
+        <a href="https://ujuc.github.io/tag/os.html" class="article_tag">os</a>
+    </div>
+
+  <!--Article -->
+    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+    <div class="article-text"><ul>
+<li>공식 문서: <a href="https://specifications.freedesktop.org/basedir-spec/latest/index.html">XDG Base Directory Specification</a></li>
+<li><a href="https://www.freedesktop.org/wiki/Specifications/basedir-spec/">freedesktop.org Specifications Wiki - Desktop base directories</a></li>
+</ul>
+<hr>
+<div class="toc">
+<ul>
+<li><a href="#_1">환경 변수 설명</a><ul>
+<li><a href="#dir">사용자 실행파일 DIR</a></li>
+<li><a href="#xdg_data_home">XDG_DATA_HOME</a></li>
+<li><a href="#xdg_data_dirs">XDG_DATA_DIRS</a></li>
+<li><a href="#xdg_config_home">XDG_CONFIG_HOME</a></li>
+<li><a href="#xdg_config_dirs">XDG_CONFIG_DIRS</a></li>
+<li><a href="#xdg_state_home">XDG_STATE_HOME</a></li>
+<li><a href="#xdg_cache_home">XDG_CACHE_HOME</a></li>
+<li><a href="#xdg_runtime_dir">XDG_RUNTIME_DIR</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><code>freedesktop.org</code> 에서 2003년도에 정의한 내용인데&hellip; 난 지금 봤다. 이상하게 요즘 사용하는 툴에서 <code>config</code> 파일을 <code>$HOME/.config</code>로 넣고 있어서 확인한 내용 정리.</p>
+<p><code>XDG</code> 는 <code>Cross Desktop Group</code>의 줄임말.</p>
+<h1 id="_1">환경 변수 설명</h1>
+<ul>
+<li>MacOS에서는 아래 변수가 정의되어있지 않기에 비어있음. Linux는 기본으로 들어가있을것같은데 찾지 않음.</li>
+<li>모든 경로는 절대 경로여야하며, 상대경로로 작성시 무시됨.</li>
+<li>디릭토리 우선순위: <code>HOME</code> 변수 &gt;&gt; <code>DIRS</code> </li>
+</ul>
+<h2 id="dir">사용자 실행파일 DIR</h2>
+<ul>
+<li><code>$HOME/.local/bin</code> 에 저장될 수 있으며, 리눅스 배포판에서는 <code>UNIX $PATH</code> 환경 변수에 적절한 위치로 보이게 설정해야함.</li>
+<li>왠만해서는 하나의 아키텍처 시스템에서 사용되는 <code>$HOME</code>이지만 다른 아키텍처 시스템에서 공유될 수 있으니 조심해서 사용할 것.</li>
+</ul>
+<h2 id="xdg_data_home">XDG_DATA_HOME</h2>
+<ul>
+<li><code>$XDG_DATA_HOME</code></li>
+<li>기본값: <code>$HOME/.local/share</code></li>
+<li>사용자별 데이터 파일을 저장하는 기본 디렉토리 </li>
+</ul>
+<h2 id="xdg_data_dirs">XDG_DATA_DIRS</h2>
+<ul>
+<li><code>$XDG_DATA_DIRS</code></li>
+<li>기본값: <code>/usr/local/share/:/usr/share/</code></li>
+<li>데이터 파일 검색시 추가로 확인할 디렉토리 집합</li>
+<li>우선 순위별로 추가하고 구분은 <code>:</code>를 이용</li>
+</ul>
+<h2 id="xdg_config_home">XDG_CONFIG_HOME</h2>
+<ul>
+<li><code>$XDG_CONFIG_HOME</code></li>
+<li>기본값: <code>$HOME/.config</code></li>
+<li>사용자별 구성 파일을 저장하는 기본 디렉토리</li>
+</ul>
+<h2 id="xdg_config_dirs">XDG_CONFIG_DIRS</h2>
+<ul>
+<li><code>$XDG_CONFIG_DIRS</code></li>
+<li>기본값: <code>/etc/xdg</code></li>
+<li>구성 파일 검색시 추가로 확인할 디렉토리 집합</li>
+<li>우선 순위별로 추가하고 구분은 <code>:</code>를 이용</li>
+</ul>
+<h2 id="xdg_state_home">XDG_STATE_HOME</h2>
+<ul>
+<li><code>$XDG_STATE_HOME</code></li>
+<li>기본값: <code>$HOME/.local/state</code></li>
+<li>사용자별 상태 파일을 저장하는 기본 디렉토리</li>
+<li>상태 파일?: 작업 기록, 애플리케이션 현재 상태 등등등&hellip;(?)</li>
+</ul>
+<blockquote>
+<p>예제: gh state 파일</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="na">.local</span><span class="err">/</span><span class="no">state</span><span class="err">/</span><span class="no">gh</span>
+<span class="err">❯</span><span class="w"> </span><span class="nf">cat</span><span class="w"> </span><span class="no">state.yml</span><span class="w"> </span>
+<span class="err">───────┬─────────────────────────────────────────────────────────</span>
+<span class="w">       </span><span class="err">│</span><span class="w"> </span><span class="nl">File:</span><span class="w"> </span><span class="nf">state.yml</span>
+<span class="err">───────┼─────────────────────────────────────────────────────────</span>
+<span class="w">   </span><span class="err">1</span><span class="w">   </span><span class="err">│</span><span class="w"> </span><span class="nl">checked_for_update_at:</span><span class="w"> </span><span class="err">2024-06-30</span><span class="nl">T11:</span><span class="err">43:11</span><span class="nf">.458951</span><span class="err">+</span><span class="mi">09</span><span class="p">:</span><span class="mi">00</span>
+<span class="w">   </span><span class="err">2</span><span class="w">   </span><span class="err">│</span><span class="w"> </span><span class="nl">latest_release:</span>
+<span class="w">   </span><span class="err">3</span><span class="w">   </span><span class="err">│</span><span class="w">     </span><span class="nl">version:</span><span class="w"> </span><span class="nf">v2.52.0</span>
+<span class="w">   </span><span class="err">4</span><span class="w">   </span><span class="err">│</span><span class="w">     </span><span class="nl">url:</span><span class="w"> </span><span class="nl">https:</span><span class="c1">//github.com/cli/cli/releases/tag/v2.52.0</span>
+<span class="w">   </span><span class="err">5</span><span class="w">   </span><span class="err">│</span><span class="w">     </span><span class="nl">publishedat:</span><span class="w"> </span><span class="err">2024-06-24</span><span class="nl">T19:</span><span class="err">10:40</span><span class="nf">Z</span>
+<span class="err">───────┴─────────────────────────────────────────────────────────-</span>
+</code></pre></div>
+
+<h2 id="xdg_cache_home">XDG_CACHE_HOME</h2>
+<ul>
+<li><code>$XDG_CACHE_HOME</code></li>
+<li>기본값: <code>$HOME/.cache</code></li>
+<li>사용자별 캐시 데이터 파일을 저장하는 기본 디렉토리</li>
+</ul>
+<h2 id="xdg_runtime_dir">XDG_RUNTIME_DIR</h2>
+<ul>
+<li><code>$XDG_RUNTIME_DIR</code></li>
+<li>사용자별 애플리케이션 런타입 파일 및 기타 파일 객체(소켓, 이름이 지정된 파이프 등)을 저장하는 기본 디렉토리</li>
+<li><strong>[MUST]</strong> 사용자만 읽기, 쓰기, 접근이 가능해야함 (Mode: <code>0700</code>)</li>
+<li><strong>[MUST]</strong> 로컬 파일 시스템에만 존재해야하며, 공유되는 곳에 있어서는 안됨.</li>
+<li><strong>[MUST]</strong> 사용자 로그인시 생성되고, 로그아웃되면 제거됨.</li>
+<li><strong>[MAY]</strong> 주기적으로 정리 대상이 될 수 있음.</li>
+<li>파일을 삭제하지 않도록 하려면 6시간마다 access time timestamp를 수정하거나, 파일에 <code>sticky</code> 비트를 설정해야함.</li>
+<li>해당 변수가 설정되지 않은 경우</li>
+<li>애플리케이션에서 유사한 기능을 가진 대체 디렉토리로 대체하고 경고 메시지를 출력하게 해야함.</li>
+<li>통신, 동기화 목적으로 사용해야하며, 런타임 메모리에 상주가 가능하나 반드시 디스크로 스왑 아웃하지 않으니 대용량 파일을 저장해서는 안됨.</li>
+</ul></div>
+    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+
+  <!-- Buy me a coffee -->
+    <div class="text-center">
+<div>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+       alt="Buy Me A Coffee"
+       style="width:15%">
+  </a>
+</div>    </div>
+
+  <!-- Comment -->
+<div id="giscus">
+<script src="https://giscus.app/client.js"
+  data-repo="ujuc/ujuc.github.io"
+  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
+  data-category="General"
+  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
+  data-mapping="title"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-theme="light"
+  crossorigin="anonymous"
+  async>
+</script>
+</div><div id="utterances">
+  <script src="https://utteranc.es/client.js"
+    repo="ujuc/ujuc.github.io"
+    issue-term="url"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>    <div class="text-center">🎗</div>
+  </div>
+</div>
+    </div>
+
+    <!-- body foot -->
+    <div class="container">
+    </div>
+
+    <!-- Title -->
+    <div id="site-title" class="container">
+      <hr/>
+<div class="row">
+  <div class="container">
+  <div class="site-title">
+    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+  </div>
+  <div class="site-body">
+    Anythink, Everythink!
+  </div>
+  <div>
+    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><em class="fa-brands fa-linkedin"></em></a></span>
+    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+  </div>
+  </div>
+</div>    </div>
+
+    <!-- Footer -->
+    <div id="site-footer" class="container">
+<div class="row text-right">
+  <div class="container" style="margin-bottom: 10px;">
+    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2024 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div>    </div>
+
+    <!-- Javascript -->
+<!--bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
+    </div>
+  </body>
+</html>
