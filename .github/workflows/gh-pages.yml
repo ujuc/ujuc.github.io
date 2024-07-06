@@ -13,19 +13,14 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          check-latest: true
+      - name: Setup rye
+        uses: eifinger/setup-rye@v4
 
-      - name: Setup poetry
-        uses: Gr1N/setup-poetry@v9
-
-      - name: Install python pacakge
-        run: poetry install
+      - name: Install dependencies
+        run: rye sync
 
       - name: Build posts
-        run: poetry run cli build
+        run: rye run cli build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
