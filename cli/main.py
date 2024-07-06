@@ -9,7 +9,6 @@ from cleo.application import Application
 from cleo.commands.command import Command
 from cleo.helpers import argument
 
-
 BASE_PATH = Path.cwd()
 CONTENT_PATH = BASE_PATH / "content"
 OUTPUT_PATH = BASE_PATH / "output"
