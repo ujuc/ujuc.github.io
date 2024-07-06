@@ -1,40 +1,23 @@
-[tool.poetry]
+[project]
 name = "ujuc.github.io"
 version = "2.0.0"
 description = "blog"
-authors = ["Sungjin Kang <ujuc@ujuc.me>"]
+authors = [
+    { name = "sungjin.kang", email = "ujuc@ujuc.me" }
+]
+dependencies = [
+    "pendulum>=3.0.0",
+    "pelican>=4.9.1",
+    "markdown>=3.6",
+    "rich>=13.7.1",
+    "cleo>=2.1.0",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
 
-packages = [{ include = 'cli', from = '.' }]
+[tool.rye]
+managed = true
+dev-dependencies = []
 
-[tool.poetry.dependencies]
-python = ">=3.11,<4.0"
-pendulum = "^3.0.0"
-pelican = "^4.9.1"
-Markdown = "^3.6"
-rich = "^13.7.1"
-cleo = "^2.1.0"
-
-[tool.poetry.scripts]
-cli = 'cli.main:run'
-
-[tool.poetry.group.dev.dependencies]
-isort = "^5.13.2"
-ruff = "^0.3.7"
-
-[tool.isort]
-profile = "ruff"
-force_single_line = true
-atomic = true
-lines_after_imports = 2
-lines_between_types = 1
-src_paths = ["cli"]
-
-[tool.ruff]
-exclude = [".git", ".venv", "__pycache__"]
-
-[tool.ruff.lint]
-select = ["E", "F"]
-
-[build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+[tool.rye.scripts]
+cli = { call = "cli:run" }
