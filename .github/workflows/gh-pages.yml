@@ -13,14 +13,16 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Setup rye
-        uses: eifinger/setup-rye@v4
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v1
+        with:
+          enable-cache: true
 
       - name: Install dependencies
-        run: rye sync --no-lock
+        run: uv sync --no-lock
 
       - name: Build posts
-        run: rye run cli build
+        run: uv run cli build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
