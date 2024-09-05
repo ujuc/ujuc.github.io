@@ -19,7 +19,7 @@ jobs:
           enable-cache: true
 
       - name: Install dependencies
-        run: uv sync --no-lock
+        run: uv sync --locked
 
       - name: Build posts
         run: uv run cli build
