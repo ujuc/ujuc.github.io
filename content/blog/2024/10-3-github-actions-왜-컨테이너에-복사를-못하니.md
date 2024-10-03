@@ -4,7 +4,7 @@ Modified: 2024-10-03 09:40:58
 Category: Operation
 Tags: GitHub, Actions, docker, container, ci, cd
 Slug: github-actions-왜-컨테이너에-복사를-못하니
-Summary: [docker/build-push-action][1]를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?
+Summary: [docker/build-push-action](https://github.com/docker/build-push-action)를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?
 
 회사에서 CI/CD 환경으로 GitHub Actions를 이용하여 컨테이너 이미지를 만들도록 구현을 해뒀다.
 
