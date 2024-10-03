@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="ujuc">
+    
+    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
+    <meta property="og:type" content="website">
+    <meta property="inLanguage" content="ko-KR">
+
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
+
+    <meta name="keyward" content="GitHub,Actions,docker,container,ci,cd">
+    <meta property="og:title" content="[GitHub Actions] 왜 컨테이너에 복사를 못하니?">
+    <meta name="twitter:title" content="[GitHub Actions] 왜 컨테이너에 복사를 못하니?">
+    <meta itemprop="name" content="[GitHub Actions] 왜 컨테이너에 복사를 못하니?">
+    <meta name="description" content="[docker/build-push-action][1]를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?">
+    <meta property="og:description" content="[docker/build-push-action][1]를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?">
+    <meta name="twitter:description" content="[docker/build-push-action][1]를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?">
+    <meta itemprop="description" content="[docker/build-push-action][1]를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?">
+    <meta property="og:url" content="https://ujuc.github.io/2024/10/03/github-actions-왜-컨테이너에-복사를-못하니/">
+    <meta property="article:published_time" content="2024-10-03T09:40:58+09:00">
+    <meta property="article:modified_time" content="2024-10-03T09:40:58+09:00">
+    <meta property="article:tag" content="GitHub">
+    <meta property="article:tag" content="Actions">
+    <meta property="article:tag" content="docker">
+    <meta property="article:tag" content="container">
+    <meta property="article:tag" content="ci">
+    <meta property="article:tag" content="cd">
+
+    <!-- Title -->
+    <title>
+      잘 밤에 쓸데없는 생각하기/[GitHub Actions] 왜 컨테이너에 복사를 못하니?
+    </title>
+
+<!-- Style sheet -->
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+<link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 ATOM" />
+<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-X9EBSXCBTS');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1014314833699403",
+    enable_page_level_ads: true
+  });
+</script>
+  </head>
+
+  <body>
+    <header>
+      <!-- navi -->
+      <div class="container" style="margin-top: 10px;">
+<ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">
+        <em class="fa-solid fa-inbox"></em> Blog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/archives.html">
+        <em class="fa-solid fa-archive"></em> Archive
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/tags.html">
+        <em class="fa-solid fa-tags"></em> Tags
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/categories.html">
+        <em class="fa-solid fa-folder-open"></em> Categories
+      </a>
+    </li>
+</ul>      </div>
+    </header>
+
+    <div id="site-article" class="container">
+<div class="container">
+  <div class="article">
+  <!-- Title -->
+    <div class="article-title">[GitHub Actions] 왜 컨테이너에 복사를 못하니?</div>
+
+  <!-- Meta -->
+    <div class="article-meta">
+      <em class="fa-regular fa-calendar-plus"></em>
+        24. 10. 03.
+ / <em class="fa-solid fa-arrows-rotate"></em> 24. 10. 03.       <em class="fa-solid fa-ellipsis-vertical"></em>
+      <em class="fa-solid fa-folder-open"></em>
+        <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+      <em class="fa-solid fa-ellipsis-vertical"></em>
+      <em class="fa-solid fa-tags"></em>
+        <a href="https://ujuc.github.io/tag/github.html" class="article_tag">GitHub</a>
+        <a href="https://ujuc.github.io/tag/actions.html" class="article_tag">Actions</a>
+        <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
+        <a href="https://ujuc.github.io/tag/container.html" class="article_tag">container</a>
+        <a href="https://ujuc.github.io/tag/ci.html" class="article_tag">ci</a>
+        <a href="https://ujuc.github.io/tag/cd.html" class="article_tag">cd</a>
+    </div>
+
+  <!--Article -->
+    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+    <div class="article-text"><p>회사에서 CI/CD 환경으로 GitHub Actions를 이용하여 컨테이너 이미지를 만들도록 구현을 해뒀다.</p>
+<p>컨테이너를 만들때 사용한 Action은 <a href="https://github.com/actions/checkout/">docker/build-push-action</a>. Docker 에서 <code>docker buildx build</code>를 명령어를 한번 랩핑 해서 사용할 수 있도록 해놓은 Action 인데&hellip;<br>
+이게 multi-stage 빌드로 이미지를 빌드하게되면 잘 가져오던 파일을 runner에서 직접 빌드하여 복사하려고 하면 안되는 문제점을 확인해서 왜 안되는지에 대해서 정리하려고 한다.</p>
+<p>또 삽질하기 싫다.</p>
+<p>시작은 이게 아니라 GitHub Cache 를 사용해서 빌드시간 줄이도록 해놨는데 컨테이너 레이어로 cache 가 남아서 용량 제한(10G)에 도달했던걸 해결하고 있었는데 &hellip; ㅠ.ㅠ</p>
+<hr>
+<div class="toc">
+<ul>
+<li><a href="#_1">하고 싶었던 작업</a></li>
+<li><a href="#_2">결과</a></li>
+<li><a href="#_3">뭐가 문젠지 보자.</a><ul>
+<li><a href="#action-job">Action Job 로그</a></li>
+<li><a href="#dockerbuild-push-action-git-context">docker/build-push-action - Git context</a></li>
+</ul>
+</li>
+<li><a href="#_4">그래서</a></li>
+</ul>
+</div>
+<h1 id="_1">하고 싶었던 작업</h1>
+<ul>
+<li>Workflow</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm i &amp;&amp; npm run build</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker/build-push-action@v6</span>
+</code></pre></div>
+
+<ul>
+<li>Dockerfile</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="k">COPY</span><span class="w"> </span>./node_modules<span class="w"> </span>./node_modules
+</code></pre></div>
+
+<h1 id="_2">결과</h1>
+<div class="highlight"><pre><span></span><code><span class="n">ERROR</span><span class="o">:</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">calculate</span><span class="w"> </span><span class="n">checksum</span><span class="w"> </span>
+<span class="w">  </span><span class="n">of</span><span class="w"> </span><span class="n">ref</span><span class="w"> </span><span class="n">e029</span><span class="o">::</span><span class="n">mclu</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/node_modules&quot;</span><span class="o">:</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">found</span>
+</code></pre></div>
+
+<p>빌드된 <code>node_modules</code> 폴더를 찾을 수 없다!</p>
+<h1 id="_3">뭐가 문젠지 보자.</h1>
+<h2 id="action-job">Action Job 로그</h2>
+<ul>
+<li><a href="https://github.com/actions/checkout/">actions/checkout</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">##</span><span class="w"> </span><span class="n">Run</span><span class="w"> </span><span class="n">actions</span><span class="o">/</span><span class="n">checkout</span><span class="nv">@v4</span>
+<span class="n">Temporarily</span><span class="w"> </span><span class="n">overriding</span><span class="w"> </span>
+<span class="w">  </span><span class="n">HOME</span><span class="o">=</span><span class="s1">&#39;/home/runner/work/_temp/4d270f53-51a0-434e-aa52-9f4e95bf278a&#39;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">before</span><span class="w"> </span><span class="n">making</span><span class="w"> </span><span class="k">global</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="n">changes</span>
+</code></pre></div>
+
+<ul>
+<li><a href="https://github.com/docker/build-push-action">docker/build-push-action</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">## Run docker/build-push-action@v6</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">docker</span><span class="w"> </span><span class="n">buildx</span><span class="w"> </span><span class="n">build</span><span class="w"> </span>
+<span class="w">    </span><span class="o">--</span><span class="n">cache</span><span class="o">-</span><span class="n">from</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="n">gha</span><span class="w"> </span><span class="o">--</span><span class="n">cache</span><span class="o">-</span><span class="n">to</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="n">gha</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="nb">max</span><span class="w"> </span>
+<span class="w">    </span><span class="o">--</span><span class="n">iidfile</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">_temp</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">actions</span><span class="o">-</span><span class="n">toolkit</span><span class="o">-</span><span class="n">cB7XtZ</span><span class="o">/</span><span class="n">build</span><span class="o">-</span><span class="n">iidfile</span><span class="o">-</span><span class="mi">2</span><span class="n">d520664a2</span><span class="o">.</span><span class="n">txt</span><span class="w"> </span>
+<span class="w">    </span><span class="o">--</span><span class="n">platform</span><span class="w"> </span><span class="n">linux</span><span class="o">/</span><span class="n">amd64</span><span class="w"> </span>
+<span class="w">    </span><span class="o">--</span><span class="n">attest</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="n">provenance</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="nb">min</span><span class="p">,</span><span class="n">inline</span><span class="o">-</span><span class="n">only</span><span class="o">=</span><span class="bp">true</span><span class="p">,</span><span class="n">builder</span><span class="o">-</span><span class="n">id</span><span class="o">=</span><span class="w"> </span>
+<span class="w">    </span><span class="o">--</span><span class="n">secret</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="n">GIT_AUTH_TOKEN</span><span class="p">,</span><span class="n">src</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">_temp</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">actions</span><span class="o">-</span><span class="n">toolkit</span><span class="o">-</span><span class="n">cB7XtZ</span><span class="o">/</span><span class="n">tmp</span><span class="o">-</span><span class="mi">1978</span><span class="o">-</span><span class="mi">917</span><span class="n">X1YS1aV1W</span><span class="w"> </span>
+<span class="w">    </span><span class="o">--</span><span class="n">tag</span><span class="w"> </span><span class="n">bd6e</span><span class="w"> </span>
+<span class="w">    </span><span class="o">--</span><span class="n">metadata</span><span class="o">-</span><span class="n">file</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">runner</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">_temp</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">actions</span><span class="o">-</span><span class="n">toolkit</span><span class="o">-</span><span class="n">cB7XtZ</span><span class="o">/</span><span class="n">build</span><span class="o">-</span><span class="n">metadata</span><span class="o">-</span><span class="mf">74e703</span><span class="n">f218</span><span class="o">.</span><span class="n">json</span><span class="w"> </span>
+<span class="w">    </span><span class="o">--</span><span class="n">push</span><span class="w"> </span>
+</code></pre></div>
+
+<p><em>싸늘하다.</em> 왜 두개의 work 폴더가 다르지&hellip;?<br>
+<a href="https://github.com/actions/checkout/">actions/checkout</a>에서는 <code>runner/work/_temp/4d270f53-*</code> 이라는 디렉토리에서 코드를 옮겨다 놨는데 <a href="https://github.com/docker/build-push-action">build-push-action</a>는 <code>runner/work/_temp/docker-actions-toolkit-cB7XtZ</code> 로 다시 코드를 땡겨서 넣어뒀다.</p>
+<p>하 뭐가 잘못된걸까 <a href="https://github.com/docker/build-push-action">build-push-action</a>의 <code>README</code>에서 확인해보자</p>
+<h2 id="dockerbuild-push-action-git-context"><a href="https://github.com/docker/build-push-action">docker/build-push-action</a> - Git context</h2>
+<blockquote>
+<p>By default, this action uses the <a href="https://docs.docker.com/engine/reference/commandline/build/#git-repositories">Git context</a>, so you don&rsquo;t need to use the <code>[actions/checkout][1]</code> action to check out the repository as this will be done directly by <a href="https://github.com/moby/buildkit">BuildKit</a>.</p>
+</blockquote>
+<p>위의 내용으로 나의 삽질이 왜 하게되었는지에 대해서 보여지는데&hellip; <a href="https://github.com/docker/build-push-action">build-push-action</a>의 경우, <a href="https://github.com/actions/checkout/">actions/checkout</a> 을 통해서 코드를 받아오지 않더라도 동작하도록 구성해놨다고 한다.</p>
+<p>해당 부위에대한 문서 수정한 가장 최근 일자가 2년전이니&hellip; 내가 채크하지 못한걸로&hellip;</p>
+<h1 id="_4">그래서</h1>
+<ul>
+<li><strong>매번 사용할때마다 읽지만, 다시금 <code>README</code>를 잘읽어보자.</strong></li>
+<li>일부 엑션은 동작중에 checkout을 하는 경우가 있구나&hellip;</li>
+</ul>
+<p>왜 넣는거냐 도대체&hellip;</p></div>
+    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+
+  <!-- Buy me a coffee -->
+    <div class="text-center">
+<div>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+       alt="Buy Me A Coffee"
+       style="width:15%">
+  </a>
+</div>    </div>
+
+  <!-- Comment -->
+<div id="giscus">
+<script src="https://giscus.app/client.js"
+  data-repo="ujuc/ujuc.github.io"
+  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
+  data-category="General"
+  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
+  data-mapping="title"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-theme="light"
+  crossorigin="anonymous"
+  async>
+</script>
+</div><div id="utterances">
+  <script src="https://utteranc.es/client.js"
+    repo="ujuc/ujuc.github.io"
+    issue-term="url"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>    <div class="text-center">🎗</div>
+  </div>
+</div>
+    </div>
+
+    <!-- body foot -->
+    <div class="container">
+    </div>
+
+    <!-- Title -->
+    <div id="site-title" class="container">
+      <hr/>
+<div class="row">
+  <div class="container">
+  <div class="site-title">
+    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+  </div>
+  <div class="site-body">
+    Anythink, Everythink!
+  </div>
+  <div>
+    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><em class="fa-brands fa-linkedin"></em></a></span>
+    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+  </div>
+  </div>
+</div>    </div>
+
+    <!-- Footer -->
+    <div id="site-footer" class="container">
+<div class="row text-right">
+  <div class="container" style="margin-bottom: 10px;">
+    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2024 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div>    </div>
+
+    <!-- Javascript -->
+<!--bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
+    </div>
+  </body>
+</html>

@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2024-06-30T15:25:14+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>XDG에서 사용중인 기본 디렉토리 정리</title><link href="https://ujuc.github.io/2024/06/30/xdg%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%EC%A4%91%EC%9D%B8-%EA%B8%B0%EB%B3%B8-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A0%95%EB%A6%AC/" rel="alternate"></link><published>2024-06-30T15:25:14+09:00</published><updated>2024-06-30T15:25:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-06-30:/2024/06/30/xdg에서-사용중인-기본-디렉토리-정리/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/ujuc/dotrc"&gt;dotrc&lt;/a&gt; 정리중에 &lt;code&gt;tigrc&lt;/code&gt; 파일을 &lt;code&gt;$XDG_CONFIG_HOME/tig/config&lt;/code&gt; 부터 찾고 있는것을 보다보니 &lt;code&gt;$XDG_CONFIG_HOME&lt;/code&gt; 이라는 것을 확인했고, &lt;a href="https://en.wikipedia.org/wiki/Portland_Project"&gt;XDG-utils&lt;/a&gt;에서 사용중인 디렉토리에대해서 정리한다.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2024-10-03T09:40:58+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>[GitHub Actions] 왜 컨테이너에 복사를 못하니?</title><link href="https://ujuc.github.io/2024/10/03/github-actions-%EC%99%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%EB%B3%B5%EC%82%AC%EB%A5%BC-%EB%AA%BB%ED%95%98%EB%8B%88/" rel="alternate"></link><published>2024-10-03T09:40:58+09:00</published><updated>2024-10-03T09:40:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-10-03:/2024/10/03/github-actions-왜-컨테이너에-복사를-못하니/</id><summary type="html">&lt;p&gt;[docker/build-push-action][1]를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 CI/CD 환경으로 GitHub Actions를 이용하여 컨테이너 이미지를 만들도록 구현을 해뒀다.&lt;/p&gt;
+&lt;p&gt;컨테이너를 만들때 사용한 Action은 &lt;a href="https://github.com/actions/checkout/"&gt;docker/build-push-action&lt;/a&gt;. Docker 에서 &lt;code&gt;docker buildx build&lt;/code&gt;를 명령어를 한번 랩핑 해서 사용할 수 있도록 해놓은 Action 인데&amp;hellip;&lt;br&gt;
+이게 multi-stage 빌드로 이미지를 빌드하게되면 잘 가져오던 파일을 runner에서 직접 빌드하여 복사하려고 하면 안되는 문제점을 확인해서 왜 안되는지에 대해서 정리하려고 한다.&lt;/p&gt;
+&lt;p&gt;또 삽질하기 싫다.&lt;/p&gt;
+&lt;p&gt;시작은 이게 아니라 GitHub Cache 를 사용해서 빌드시간 줄이도록 해놨는데 컨테이너 레이어로 cache 가 남아서 용량 제한(10G)에 도달했던걸 해결하고 있었는데 &amp;hellip; ㅠ.ㅠ&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class="toc"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#_1"&gt;하고 싶었던 작업&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_2"&gt;결과&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_3"&gt;뭐가 문젠지 보자.&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#action-job"&gt;Action Job 로그&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#dockerbuild-push-action-git-context"&gt;docker/build-push-action - Git context&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#_4"&gt;그래서&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;h1 id="_1"&gt;하고 싶었던 작업&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Workflow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions/checkout@v4&lt;/span&gt;
+
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;npm i &amp;amp;&amp;amp; npm run build&lt;/span&gt;
+
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;docker/build-push-action@v6&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dockerfile&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;/app&lt;/span&gt;
+
+&lt;span class="k"&gt;COPY&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;./node_modules&lt;span class="w"&gt; &lt;/span&gt;./node_modules
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id="_2"&gt;결과&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;failed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;calculate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;checksum&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ref&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e029&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;mclu&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/node_modules&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;found&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;빌드된 &lt;code&gt;node_modules&lt;/code&gt; 폴더를 찾을 수 없다!&lt;/p&gt;
+&lt;h1 id="_3"&gt;뭐가 문젠지 보자.&lt;/h1&gt;
+&lt;h2 id="action-job"&gt;Action Job 로그&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/actions/checkout/"&gt;actions/checkout&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;##&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Run&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;checkout&lt;/span&gt;&lt;span class="nv"&gt;@v4&lt;/span&gt;
+&lt;span class="n"&gt;Temporarily&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;overriding&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;HOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/home/runner/work/_temp/4d270f53-51a0-434e-aa52-9f4e95bf278a&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;before&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;making&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;global&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;changes&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/docker/build-push-action"&gt;docker/build-push-action&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;## Run docker/build-push-action@v6&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;docker&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;buildx&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;gha&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;gha&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;max&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;iidfile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;runner&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;_temp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;docker&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;toolkit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cB7XtZ&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;iidfile&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;d520664a2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;platform&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;amd64&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;attest&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;provenance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;inline&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;builder&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;secret&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;GIT_AUTH_TOKEN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;runner&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;_temp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;docker&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;toolkit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cB7XtZ&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tmp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1978&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;917&lt;/span&gt;&lt;span class="n"&gt;X1YS1aV1W&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bd6e&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;metadata&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;runner&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;_temp&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;docker&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;actions&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;toolkit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cB7XtZ&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;metadata&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;74e703&lt;/span&gt;&lt;span class="n"&gt;f218&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;싸늘하다.&lt;/em&gt; 왜 두개의 work 폴더가 다르지&amp;hellip;?&lt;br&gt;
+&lt;a href="https://github.com/actions/checkout/"&gt;actions/checkout&lt;/a&gt;에서는 &lt;code&gt;runner/work/_temp/4d270f53-*&lt;/code&gt; 이라는 디렉토리에서 코드를 옮겨다 놨는데 &lt;a href="https://github.com/docker/build-push-action"&gt;build-push-action&lt;/a&gt;는 &lt;code&gt;runner/work/_temp/docker-actions-toolkit-cB7XtZ&lt;/code&gt; 로 다시 코드를 땡겨서 넣어뒀다.&lt;/p&gt;
+&lt;p&gt;하 뭐가 잘못된걸까 &lt;a href="https://github.com/docker/build-push-action"&gt;build-push-action&lt;/a&gt;의 &lt;code&gt;README&lt;/code&gt;에서 확인해보자&lt;/p&gt;
+&lt;h2 id="dockerbuild-push-action-git-context"&gt;&lt;a href="https://github.com/docker/build-push-action"&gt;docker/build-push-action&lt;/a&gt; - Git context&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;By default, this action uses the &lt;a href="https://docs.docker.com/engine/reference/commandline/build/#git-repositories"&gt;Git context&lt;/a&gt;, so you don&amp;rsquo;t need to use the &lt;code&gt;[actions/checkout][1]&lt;/code&gt; action to check out the repository as this will be done directly by &lt;a href="https://github.com/moby/buildkit"&gt;BuildKit&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;위의 내용으로 나의 삽질이 왜 하게되었는지에 대해서 보여지는데&amp;hellip; &lt;a href="https://github.com/docker/build-push-action"&gt;build-push-action&lt;/a&gt;의 경우, &lt;a href="https://github.com/actions/checkout/"&gt;actions/checkout&lt;/a&gt; 을 통해서 코드를 받아오지 않더라도 동작하도록 구성해놨다고 한다.&lt;/p&gt;
+&lt;p&gt;해당 부위에대한 문서 수정한 가장 최근 일자가 2년전이니&amp;hellip; 내가 채크하지 못한걸로&amp;hellip;&lt;/p&gt;
+&lt;h1 id="_4"&gt;그래서&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;매번 사용할때마다 읽지만, 다시금 &lt;code&gt;README&lt;/code&gt;를 잘읽어보자.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;일부 엑션은 동작중에 checkout을 하는 경우가 있구나&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;왜 넣는거냐 도대체&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="GitHub"></category><category term="Actions"></category><category term="docker"></category><category term="container"></category><category term="ci"></category><category term="cd"></category></entry><entry><title>XDG에서 사용중인 기본 디렉토리 정리</title><link href="https://ujuc.github.io/2024/06/30/xdg%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%EC%A4%91%EC%9D%B8-%EA%B8%B0%EB%B3%B8-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A0%95%EB%A6%AC/" rel="alternate"></link><published>2024-06-30T15:25:14+09:00</published><updated>2024-06-30T15:25:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-06-30:/2024/06/30/xdg에서-사용중인-기본-디렉토리-정리/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/ujuc/dotrc"&gt;dotrc&lt;/a&gt; 정리중에 &lt;code&gt;tigrc&lt;/code&gt; 파일을 &lt;code&gt;$XDG_CONFIG_HOME/tig/config&lt;/code&gt; 부터 찾고 있는것을 보다보니 &lt;code&gt;$XDG_CONFIG_HOME&lt;/code&gt; 이라는 것을 확인했고, &lt;a href="https://en.wikipedia.org/wiki/Portland_Project"&gt;XDG-utils&lt;/a&gt;에서 사용중인 디렉토리에대해서 정리한다.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;공식 문서: &lt;a href="https://specifications.freedesktop.org/basedir-spec/latest/index.html"&gt;XDG Base Directory Specification&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.freedesktop.org/wiki/Specifications/basedir-spec/"&gt;freedesktop.org Specifications Wiki - Desktop base directories&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
