@@ -1,7 +1,7 @@
 Title: KVM on ARM project
 Date: 2013-10-14 11:29:17
 Modified: 2018-03-11 11:29:17
-Category: Hardware
+Category: Operation
 Tags: arm, kvm, hypervisor
 Slug: kvm_on_arm_project
 Summary: ARM 칩에서 KVM을 사용하는 프로젝트가 있어서 정리한다.
@@ -16,6 +16,8 @@ Virtual Open Systems is an innovative, agile and dynamic start-up company operat
 
 삼성 Exynos 5250를 사용하는 Arndale Board에서 KVM을 이용하여 올렸는데 보면 QEMU가 작동하는 것을 볼 수 있다. 그러나 확실히 속도는 빠르다. 몇배속으로 돌린것인지 아니면 내가 봐왔던 ARM이 느렸던건지..
 
- [Youtube 동영상](http://youtu.be/yB8bdA2hjYg)
+[Youtube 동영상](http://youtu.be/yB8bdA2hjYg)
 
- 덧. 2013.01.11에 작성한 글을 옮기면서 변경사항들이 있어 추가함.
+---
+
+덧. 2013.01.11에 작성한 글을 옮기면서 변경사항들이 있어 추가함.

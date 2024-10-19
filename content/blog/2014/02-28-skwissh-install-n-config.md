@@ -1,4 +1,4 @@
-Title: [Monitoring] SkwiSSH 설치 및 구성
+Title: SkwiSSH 설치 및 구성
 Date: 2014-02-28 21:46
 Modified: 2016-03-03 22:08
 Category: Operation

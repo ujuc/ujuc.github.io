@@ -1,7 +1,7 @@
 Title: [Google App Engine] NDB - Properties
 Date: 2014-11-10 18:05
 Modified: 2016-03-03 21:47
-Category: Develop
+Category: 번역
 Tags: google, cloud, gcp, google cloud platform, ndb
 Slug: google-app-engine-ndb-properties
 Summary: NDB 문서를 번역해놓은 것.
@@ -9,9 +9,11 @@ Summary: NDB 문서를 번역해놓은 것.
 * 관련해서 한글로되 문서가 없어서 [2014/10/27일자 문서][ndb-properties]를 가지고서 정리하였다.
 
 ## 소개
+
 `Model`에서 사용할 수 있는 데이터 모델을 말한다. 모델 타입으로 생각하면 쉽겠다. 어려울 것도 없다만.
 
 ## Type
+
 | Property type | 설명 |
 | ------------- | --- |
 | `IntegerProperty` | 64-bit signed 정수 값 |
@@ -37,6 +39,7 @@ Summary: NDB 문서를 번역해놓은 것.
 * `compressed` 옵션: `True`로 설정시, gzip으로 압축하여 디스크에 저장함. 이때 CPU 인/디코딩하는데 IO를 사용을 함. 
 
 ## Property Options
+
 | Argument | Type | Default | 설명 |
 | -------- | ---- | ------- | --- |
 | `indexed` | `bool` | 사용하는 것만 `True` | `False`로 설정시 쿼리는 불가능해지나 쓰기 속도가 높아짐.<br>다 사용가능한건 아님.<br>인덱스 안하는게 인덱스하는 것보다 write 코스트가 적음. |

@@ -1,8 +1,8 @@
 Title: Eclipse + AVR Plug-in Development Environment Setting
 Date: 2012-10-24 11:34:15
-Modified: 2018-03-11 11:34:15
+Modified: 2018-03-11 11:34
 Category: Develop
-Tags: avr, eclipse, development environment, environment, arch
+Tags: avr, eclipse, development environment, environment, arch linux, 개발 환경
 Slug: eclipse_+_arm_plug-in_development_environment_setting
 Summary: Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기.
 

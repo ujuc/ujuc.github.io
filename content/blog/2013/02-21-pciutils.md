@@ -1,7 +1,7 @@
 Title: PCIutils
 Date: 2013-02-21 12:00:45
 Modified: 2018-03-11 12:00:45
-Category: Hardware
+Category: Develop
 Tags: pci, linux,
 Slug: pciutils
 Summary: `pciutils` 패키지에 대해서 알아본다.

@@ -1,8 +1,8 @@
 Title: Screen 명령어를 통해서 Serial 통신
 Date: 2013-01-09 11:39:40
 Modified: 2018-03-11 11:39:40
-Category: Operation
-Tags: screen, serial
+Category: Develop
+Tags: screen, serial communication
 Slug: screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin
 Summary: screen으로 serial 통신을 하는 프로그램으로 사용하자.
 

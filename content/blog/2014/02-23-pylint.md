@@ -1,4 +1,4 @@
-Title: pylint
+Title: pylint 간략 사용법
 Date: 2014-02-23 11:14:35
 Modified: 2018-03-11 11:14:35
 Category: Develop
