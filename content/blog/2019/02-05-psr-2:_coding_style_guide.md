@@ -1,7 +1,7 @@
-Title: [번역] PSR-2: Coding Style Guide
+Title: PSR-2: Coding Style Guide
 Date: 2019-02-05 02:02:45
 Modified: 2019-03-23 16:45:00
-Category: Develop
+Category: 번역
 Tags: php, psr, prs-2, transelate
 Slug: psr-2:_coding_style_guide
 Summary: PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다.

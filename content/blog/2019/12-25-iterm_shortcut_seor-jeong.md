@@ -1,7 +1,7 @@
 Title: iTerm shortcut 설정
 Date: 2019-12-25 13:06:25
 Modified: 2020-01-10 07:38:00
-Category: Software
+Category: Operation
 Tags: iterm, shortcut
 Slug: iterm_shortcut_seor-jeong
 Summary: iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 중간중간 건너 띄워서 가야할때, 사용하는 단축키를 정리한다.

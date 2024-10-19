@@ -1,6 +1,6 @@
 Title: pyenv 설치 스크립트 변경됨
 Date: 2019-11-29 15:44:29
-Category: Operation
+Category: Develop
 Tags: python, pyenv, python version management, version management
 Slug: pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem
 Summary: pyenv 설치 방법이 변경되어 간략하게 남겨둔다.

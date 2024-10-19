@@ -1,7 +1,7 @@
 Title: AWS RDS Proxy 간단하게 보기
 Date: 2020-07-11 11:01:43
 Modified: 2020-07-11 11:01:43
-Category: Cloud
+Category: Operation
 Tags: rds, aws, rds proxy, cloud
 Slug: aws-rds-proxy-gan-dan-ha-ge-bo-gi
 Summary: AWS RDS Proxy를 간략하게 정리해보자.

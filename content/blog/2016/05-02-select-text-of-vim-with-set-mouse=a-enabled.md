@@ -1,6 +1,6 @@
 Title: Select text of vim with set mouse=a enabled
 Date: 2016-05-02 23:27
-Category: Software
+Category: Operation
 Tags: vim, mouse, copy
 Slug: select-text-of-vim-with-set-mouse=a-enabled
 Summary: Vim사용에 있어서 마우스로 블록을 선택할 수 있도록 하였다. 그랬더니 다른 부분에서 

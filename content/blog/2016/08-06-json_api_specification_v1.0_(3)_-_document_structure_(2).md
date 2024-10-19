@@ -1,7 +1,7 @@
-Title: [번역] JSON API Specification v1.0 (3) - Document Structure (2)
+Title: JSON API Specification v1.0 (3) - Document Structure (2)
 Date: 2016-08-06 14:40
 Modified: 2019-03-23 16:50
-Category: Develop
+Category: 번역
 Tags: json, api, specification, json api, 스펙 문서, transelate
 Slug: json_api_specification_v1.0_(3)_-_document_structure_(2)
 Summary: 문서 구조에서 Top level에 대한 내용을 정리한다.

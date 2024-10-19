@@ -1,6 +1,6 @@
-Title: Spec Architecture Design Guide Restructure (번역)
+Title: Spec Architecture Design Guide Restructure
 Date: 2016-05-29 13:43
-Category: Cloud
+Category: 번역
 Tags: openstack, documents, spec, architecture design guide
 Slug: spec-architecture-design-guide-restructure (번역)
 Summary: 이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다.

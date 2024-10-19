@@ -1,6 +1,6 @@
 Title: Pelican 4.1.0 Release Note
 Date: 2019-07-21 15:23:10
-Category: Software
+Category: Operation
 Tags: pelican, static blogging tools, python
 Slug: pelican_4.1.0_release_note
 Summary: pelican 4.1.0 이 업글이 되었다.

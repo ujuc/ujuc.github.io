@@ -1,6 +1,6 @@
 Title: Docker container 사용자 설정
 Date: 2019-05-25 12:38:45
-Category: Operation
+Category: Develop
 Tags: docker, container, ubuntu, linux
 Slug: docker_container_sa-yong-ja_seor-jeong
 Summary: Docker container를 사용할때 발생한 에러에 대해서 작성하였다.

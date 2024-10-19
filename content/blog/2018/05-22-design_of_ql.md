@@ -1,7 +1,7 @@
-Title: [번역] Design of QL
+Title: Design of QL
 Date: 2018-05-24 00:00:02
 Modified: 2018-03-23 16:50:00
-Category: Develop
+Category: 번역
 Tags: go, database, translate
 Slug: design_of_ql
 Summary: Go 임베디드 데이터베이스 패키지인 QL에 대한 디자인 문서이다.

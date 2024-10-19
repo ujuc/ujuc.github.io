@@ -1,6 +1,6 @@
 Title: Pycharm에 pylint 추가
 Date: 2018-09-24 00:49:24
-Category: Software 
+Category: Develop 
 Tags: pycharm, pylint, python, lint
 Slug: pycharme_pylint_cu-ga
 Summary: Pycharm 에 pylint를 외부 툴로 등록하는 방법

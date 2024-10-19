@@ -1,7 +1,7 @@
-Title: [번역] Tig Manual
+Title: Tig Manual
 Date: 2016-02-10 02:08
 Modified: 2019-03-23 16:50
-Category: Develop
+Category: 번역
 Tags: tig, translate
 Slug: tig-manual
 Summary: Tig 메뉴얼 번역 축약본

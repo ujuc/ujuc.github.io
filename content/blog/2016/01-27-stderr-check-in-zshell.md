@@ -1,6 +1,6 @@
 Title: Stderr check in zshell
 Date: 2016-01-27 00:57
-Category: Operation
+Category: Develop
 Tags: zsh, operation
 Slug: stderr-check-in-zshell
 Summary: zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고

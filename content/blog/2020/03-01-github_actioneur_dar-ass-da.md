@@ -1,7 +1,7 @@
 Title: github actions를 달았다
 Date: 2020-03-01 10:07:50
 Modified: 2020-03-01 10:07:50
-Category: Chat
+Category: Develop
 Tags: github actions
 Slug: github-actionsreul-dal-ass-da
 Summary: 블로그 퍼플리싱을 자동으로 하기위해 Github Actions 추가!

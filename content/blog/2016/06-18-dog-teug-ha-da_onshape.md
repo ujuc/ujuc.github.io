@@ -1,6 +1,6 @@
 Title: 독특하다. Onshape
 Date: 2016-06-18 11:41
-Category: Software
+Category: Chat
 Tags: cad, cloud, engineering, 3d cad
 Slug: dog-teug-ha-da_onshape
 Summary: 독특하다. 정말 독특하다. 웹서비스에서 3D 캐드를 구현하여 작업할 수 있다니.

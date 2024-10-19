@@ -1,6 +1,6 @@
 Title: Boilerplate shell scripts template 글 소개
 Date: 2019-03-19 06:59:31
-Category: Develop
+Category: Chat
 Tags: shell, template, boilerplate
 Slug: boilerplate_shell_scripts_template_geur_so-gae
 Summary: 간단한 shell 스크립트를 template으로 만들어둔 것이 있어 소개한다.

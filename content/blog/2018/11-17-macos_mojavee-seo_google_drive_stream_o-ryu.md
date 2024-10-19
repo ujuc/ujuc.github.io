@@ -1,6 +1,6 @@
 Title: MacOS Mojave에서 Google Drive Stream 오류
 Date: 2018-11-17 10:35:17
-Category: Software
+Category: Operation
 Tags: google drive stream, macos, mojave
 Slug: macos_mojavee-seo_google_drive_stream_o-ryu
 Summary: Google Drive Stream이 실행은 커녕 죽어버린다.

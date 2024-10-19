@@ -1,6 +1,6 @@
 Title: Atom Git 커밋 메시지 Styleguides 속 Emoji
 Date: 2018-12-16 00:31:14
-Category: TIL
+Category: Chat
 Tags: emoji, atom, git commit, git, styleguide
 Slug: atom_git_keo-mis_me-si-ji_styleguides_sog_emoji
 Summary: 블로그 글을 읽다가 커밋메시지에 이모지를 넣는 방법이 있다고 하여 정리해보았다.

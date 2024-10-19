@@ -1,6 +1,6 @@
 Title: Recoll - 리눅스에서 GUI로 문서 검색을 해보자
 Date: 2018-09-23 23:27:51
-Category: Software
+Category: Operation
 Tags: recoll, document, search, gui
 Slug: recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja
 Summary: 페이스북에서 보았던 recoll이라는 프로그램에 대해서 정리만 해둔다.

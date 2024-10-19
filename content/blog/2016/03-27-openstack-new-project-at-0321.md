@@ -1,6 +1,6 @@
 Title: OpenStack New Project at 0321
 Date: 2016-03-27 22:47
-Category: Community
+Category: Chat
 Tags: openstack, big tent
 Slug: openstack-new-project-at-0321
 Summary: 이번에 새롭게 official project로 등록된 프로젝트들.

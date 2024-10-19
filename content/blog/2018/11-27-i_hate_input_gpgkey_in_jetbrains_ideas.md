@@ -1,6 +1,6 @@
 Title: I hate input gpgkey in JetBrains IDEAs
 Date: 2018-11-27 01:31:32
-Category: Software 
+Category: Operation
 Tags: jetbrains idea, gpg suite, key mapping 
 Slug: i_hate_input_gpgkey_in_jetbrains_ideas
 Summary: JetBrains IDEA를 주력하여 사용 중인데. GPG 키가 계속 침범을 하네? 그래서 문제를 찾았다.
