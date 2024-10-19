@@ -1291,7 +1291,115 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;p&gt;결국 내가 하고 싶은데로 안되는거네&amp;hellip; 이런!&lt;/p&gt;
 &lt;p&gt;다른 방법으로 찾아야지 뭐 별수 있나&amp;hellip; 그래도 이번에 건진건 저렇게 숫자를&lt;br&gt;
 사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;hellip; 그정도면 1시간동안&lt;br&gt;
-작업한 것에 대한 내용은 될듯.&lt;/p&gt;</content><category term="Operation"></category><category term="zsh"></category><category term="operation"></category></entry><entry><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link href="https://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/" rel="alternate"></link><published>2014-11-09T00:44:00+09:00</published><updated>2015-04-12T14:12:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-09:/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</id><summary type="html">&lt;p class="first last"&gt;Ubuntu에서 nabi를 입력기로 사용한다. 그런데 언제부터인가. tray로
+작업한 것에 대한 내용은 될듯.&lt;/p&gt;</content><category term="Operation"></category><category term="zsh"></category><category term="operation"></category></entry><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="https://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><published>2015-06-14T22:30:00+09:00</published><updated>2015-06-14T22:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:/2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p class="first last"&gt;숙제를 늦게하고 있는데 잘안되서 찾다보니...&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고 있는데.&lt;/p&gt;
+&lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;tt class="docutils literal"&gt;journal&lt;/tt&gt; 로 보여지는 것 말고도
+&lt;tt class="docutils literal"&gt;/var/log/zabbix&lt;/tt&gt; 가 보여서 확인했더니..&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;
+using configuration file: /etc/zabbix/zabbix_server.conf
+current database version (mandatory/optional): 02040000/02040000
+required mandatory version: 02040000
+listener failed: zbx_tcp_listen() fatal error: unable to serve on any address [[-]:10051]
+Got signal [signal:11(SIGSEGV),reason:1,refaddr:0x18]. Crashing ...
+&lt;/pre&gt;
+&lt;p&gt;음? 서버를 못찾는다고..?? 뭔 말이지. 그래서 그냥 통짜로 복사 붙여넣기.&lt;/p&gt;
+&lt;p&gt;구글에서 말하는 것들이 많은데 그 중에서 일본사람이 작성한 글. &lt;a class="reference external" href="http://qiita.com/_BSmile_/items/61932e45de5330190027"&gt;CentOS7.1 で zabbix-serverの起動が失敗する話とその解決方法&lt;/a&gt; 에서는 CV#-2014-0092는... gnutls에 패치가되었는데..
+CVE-2014-8564는 적용이 안되서 그부분에 대한 내용을 추가하던지 수정을 해야된다고 한다.&lt;/p&gt;
+&lt;p&gt;자세한건 구글 번역기로 사이트를 돌려서 보도록하자. 그렇다보니 여기서 추천하는 방법은 &lt;tt class="docutils literal"&gt;trousers&lt;/tt&gt; 를 업데이트 하는 방법을 추천하고 있다.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;
+$ sudo rpm -Uvh https://kojipkgs.fedoraproject.org/packages/trousers/0.3.11.2/3.fc20/x86_64/trousers-0.3.11.2-3.fc20.x86_64.rpm
+Retrieving https://kojipkgs.fedoraproject.org/packages/trousers/0.3.11.2/3.fc20/x86_64/trousers-0.3.11.2-3.fc20.x86_64.rpm
+Preparing...                          ################################# [100%]
+Updating / installing...
+1:trousers-0.3.11.2-3.fc20         ################################# [ 50%]
+Cleaning up / removing...
+2:trousers-0.3.11.2-3.el7          ################################# [100%
+
+$ sudo systemctl start zabbix-server
+&lt;/pre&gt;
+&lt;p&gt;작동되는 것을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;이 글은 &lt;strong&gt;CentOS 7.1.1503&lt;/strong&gt; 버전, &lt;strong&gt;Zabbix 2.4.5&lt;/strong&gt; 버전에서 확인되었고 테스트되었다. 이후 버전에서는 관련 버그가 잡히길.&lt;/p&gt;
+</content><category term="Operation"></category><category term="zabbix"></category><category term="centos"></category></entry><entry><title>Odin is?</title><link href="https://ujuc.github.io/2015/04/10/odin-is/" rel="alternate"></link><published>2015-04-10T01:00:00+09:00</published><updated>2015-04-10T01:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-10:/2015/04/10/odin-is/</id><summary type="html">&lt;p class="first last"&gt;Parallels에서 이번에 새롭게 런칭한 Cloud 서비스 Odin.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Mirantis 블로그를 보다보니... Parallels의 이름이 올라오면서 &lt;a class="reference external" href="https://www.mirantis.com/blog/parallels-goes-open-source-wants-openstacks-help-penetrate-enterprise/"&gt;Parallels goes open
+source, wants OpenStack's help to penetrate enterprise&lt;/a&gt; 라는 글이 올라왔다.&lt;/p&gt;
+&lt;p&gt;내용은 간단하다. Pareallels에서 기업용으로 &lt;a class="reference external" href="http://www.odin.com/"&gt;Odin&lt;/a&gt; 이라는 서비스를 런칭했는데,
+자사의 하이퍼 바이저의 개발을 중지하고 KVM을 사용, OpenStack의 도움으로
+컨테이너를 이용하는 서비스 개발에 집중을 하겠다는 소식...&lt;/p&gt;
+&lt;p&gt;뭐 서비스 측이랑 이야기가 조금 다른 부분이 있긴하다만... Parallels가 OpenStack
+기업 멤버로 등록 Odin으로 등록되어있다. 골드맴버로 들어올려는걸 파운데이션에서
+거절했다고...&lt;/p&gt;
+&lt;p&gt;그냥 푸념이지만... 분명 많은 곳에서 하고 있는 것같은데... 파운데이션 후원사
+목록에는 아무도 없다는게... 좀 그래...&lt;/p&gt;
+&lt;p&gt;여는 글은 Odin으로 했으나 맺는 글은... 오픈소스 프로젝트 기부에대한 푸념으로...&lt;/p&gt;
+</content><category term="Operation"></category><category term="openstack"></category><category term="cloud"></category><category term="parallels"></category></entry><entry><title>git-ftp로 ftp 클라이언트를!</title><link href="https://ujuc.github.io/2015/03/04/git-ftp/" rel="alternate"></link><published>2015-03-04T00:00:00+09:00</published><updated>2015-04-02T00:48:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-04:/2015/03/04/git-ftp/</id><summary type="html">&lt;p class="first last"&gt;ftp만 열려있고 ssh가 안되는 웹 호스팅에서 작업하는 개발자를 위해...&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;백수 3개월 들어가지는지라 깃 배회중... 누군가 스타를 누른 &lt;a class="reference external" href="https://github.com/git-ftp/git-ftp"&gt;git-ftp&lt;/a&gt;. git을
+이용해서 FTP 클라잉너트를 만들었다.&lt;/p&gt;
+&lt;p&gt;뭔짓이지...&lt;/p&gt;
+&lt;p&gt;암튼... 만든 이유가 FTP만 지원하는 웹호스팅 때문에 만들었다고 &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;... 역시 다른
+구멍을 파는 사람들이 있구나...&lt;/p&gt;
+&lt;p&gt;변화점까지 확인할 수 있다는건 git의 장점을 가져왔구나.&lt;/p&gt;
+&lt;div class="section" id="section-1"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/INSTALL.md"&gt;설치&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;기본 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;https://github.com/git-ftp/git-ftp.git&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;git-ftp&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;tag&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;tag&amp;gt;&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;install
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;업그레이드의 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;pull&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;tag&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;tag&amp;gt;&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;install
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Mac OS X&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;--with-ssl&lt;span class="w"&gt; &lt;/span&gt;--with-libssh2&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;git-ftp
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;curl&lt;/tt&gt; 을 기본으로 설치했는데 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;libssh2&lt;/tt&gt; 를 사용할 수 있도록 설정이
+필요한 갑다.&lt;/li&gt;
+&lt;li&gt;git이 &lt;tt class="docutils literal"&gt;ssl&lt;/tt&gt; 을 사용하긴 한다만...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="section-2"&gt;
+&lt;h2&gt;사용법&lt;/h2&gt;
+&lt;pre class="code bash literal-block"&gt;
+&lt;span class="c1"&gt;# Pushing for the fist time
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;ftp&lt;span class="w"&gt; &lt;/span&gt;init&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;user&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;-P&lt;span class="w"&gt; &lt;/span&gt;ftp://host.example.com/public_html&lt;span class="w"&gt;
+
+&lt;/span&gt;&lt;span class="c1"&gt;# using
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;ftp&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;user&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;-P&lt;span class="w"&gt; &lt;/span&gt;ftp://host.example.com/public_html
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;더 자세한 내용은 &lt;a class="reference external" href="https://gitub.com/git-ftp/git-ftp/blob/develop/man/git-ftp.1.md"&gt;man page&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="section-3"&gt;
+&lt;h2&gt;제한 사항&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;윈도우와 OS X에서는 테스트를 많이 안했으니 관련된 버그가 있으면 말해 줄 것.&lt;/li&gt;
+&lt;li&gt;배포 도구로 만들어지지 않아서... 커밋이나 체크 아웃 같은건 알아서... 조심히...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-1" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://github.com/git-ftp/git-ftp/blob/develop/README.md#about"&gt;https://github.com/git-ftp/git-ftp/blob/develop/README.md#about&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</content><category term="Operation"></category><category term="git"></category><category term="ftp"></category><category term="shell"></category><category term="cli"></category><category term="bash"></category></entry><entry><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link href="https://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/" rel="alternate"></link><published>2014-11-09T00:44:00+09:00</published><updated>2015-04-12T14:12:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-09:/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</id><summary type="html">&lt;p class="first last"&gt;Ubuntu에서 nabi를 입력기로 사용한다. 그런데 언제부터인가. tray로
 들어가지 않는 문제가 발생했다. 거의 업데이트가 안되고 있어서
 그런것같기도 하지만, 그것에 대한 내용이다.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가...

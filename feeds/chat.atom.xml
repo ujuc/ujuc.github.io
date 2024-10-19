@@ -636,7 +636,48 @@
 &lt;span class="o"&gt;---&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;오늘은 여기까지&amp;hellip;&lt;/p&gt;</content><category term="Chat"></category><category term="markdown"></category><category term="comment"></category><category term="문법"></category></entry><entry><title>백업 완료</title><link href="https://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-04-03T00:57:00+09:00</published><updated>2015-04-03T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:/2015/04/03/백업-완료/</id><summary type="html">&lt;p class="first last"&gt;이제 다시 시작. Jekyll &amp;gt; Octopress &amp;gt; Pelican 정착기.&lt;/p&gt;
+&lt;p&gt;오늘은 여기까지&amp;hellip;&lt;/p&gt;</content><category term="Chat"></category><category term="markdown"></category><category term="comment"></category><category term="문법"></category></entry><entry><title>Cloud Native Computing Foundation</title><link href="https://ujuc.github.io/2015/07/22/cncf-org/" rel="alternate"></link><published>2015-07-22T22:36:00+09:00</published><updated>2015-07-22T22:36:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-07-22:/2015/07/22/cncf-org/</id><summary type="html">&lt;p class="first last"&gt;Google에서 Kubernetes v1.0을 발표하면서 Cloud Native Computing Foundation과 함께 진행한다고 했다. 깊은글 아니다 소개 글이다. 깊은 글을 10분만에 적을 수 있겠는가?&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;얼마 전 아시는 분께서 공유를 해주신 사이트...
+구글에서 &lt;a class="reference external" href="http://kubernetes.io/"&gt;Kubernetes&lt;/a&gt; v1.0을 공개하면서 &lt;a class="reference external" href="https://cncf.io/"&gt;Cloud Native Computing Foundation&lt;/a&gt; 와 함께 Container의 생태계를 만들어나갈 거라 전함. &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;여기의 목표(?) 미션은 현대 분산 시스템 환경에 특화된 새로운 컴퓨팅 패러다임을 생성하고 진행하는 데 있다고 한다. &lt;a class="footnote-reference" href="#footnote-2" id="footnote-reference-2"&gt;[2]&lt;/a&gt; (무의식적으로 번역하고 있었다.;;)&lt;/p&gt;
+&lt;p&gt;또 번역하다가 때리치웠...&lt;/p&gt;
+&lt;p&gt;이번껀 구글에서는 Container를 직접 구현하는 것보다는 그것은 _OpenContainers 로 넘기고 자기들은 오케스트레이션에 더 많은 작업을 하겠다는 의도가 보이는 건 나만의 느낌...&lt;/p&gt;
+&lt;p&gt;참가 업체들을 보면 항상 보던 업체들이 많이 보여서... 뭐 딱히 뭐라 말하기 뭐하다는...&lt;/p&gt;
+&lt;p&gt;잘 진행될까 고민되고, 언제쯤 저들이 사용한 것들에 대한 내용을 말해줄 것인지에 대한 내용을 확인 할 수 있을는지 두고두고 봐야 될 프로젝트가 늘었다.&lt;/p&gt;
+&lt;div class="section" id="section-1"&gt;
+&lt;h2&gt;관련 소식기사&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://techcrunch.com/2015/07/21/as-kubernetes-hits-1-0-google-donates-technology-to-newly-formed-cloud-native-computing-foundation-with-ibm-intel-twitter-and-others/?ncid=pushup"&gt;As Kubernetes Hits 1.0, Google Donates Technology To Newly Formed Cloud Native Computing Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.linuxfoundation.org/news-media/announcements/2015/07/new-cloud-native-computing-foundation-drive-alignment-among"&gt;New Cloud Native Computing Foundation to Drive Alignment Among Container Technologies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-1" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://googlecloudplatform.blogspot.kr/2015/07/Kubernetes-V1-Released.html"&gt;http://googlecloudplatform.blogspot.kr/2015/07/Kubernetes-V1-Released.html&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="footnote-2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#footnote-reference-2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://cncf.io/about/our-mission"&gt;https://cncf.io/about/our-mission&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</content><category term="Chat"></category><category term="google"></category><category term="kubernetes"></category><category term="cloud"></category><category term="container"></category></entry><entry><title>Rocket.Chat 번역기</title><link href="https://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/" rel="alternate"></link><published>2015-06-02T22:45:00+09:00</published><updated>2015-06-02T22:45:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-02:/2015/06/02/rocket.chat-번역기/</id><summary type="html">&lt;p class="first last"&gt;어제 짧아서 번역을 했는데...&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
+일링에 추가된 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat"&gt;Rocket.Chat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;심심해서 코드 보던 중 발견한 &lt;tt class="docutils literal"&gt;i18n&lt;/tt&gt;. 클클클 번역이나 해야지 짧을 꺼야... 그런 심보
+로 시작. 10분 만에 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 등록.&lt;/p&gt;
+&lt;p&gt;이유는 영어와 한국어의 어순이 반대다 보니... &lt;tt class="docutils literal"&gt;%s by %s&lt;/tt&gt; 의 경우, 한국어로 &lt;tt class="docutils literal"&gt;%s에서
+%s로&lt;/tt&gt; 로 번역이 되어야 되는데. 어떤 놈이 앞의 &lt;tt class="docutils literal"&gt;%s&lt;/tt&gt; 인지 한국어에서는 알 수 없는 문제
+가 발생. 그래서 짧은 영어로 적었더니. 친절하게 제목도 바꿔주고, 테스트할 수 있게
+PR해줄 수 있느냐기에 신속하게 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;PR&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;그렇게 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 는 해결되었고, 번역은 반영되었다.&lt;/p&gt;
+&lt;p&gt;소스 중에 번역 페이지가 있으면 항상 보지는 않았는데... 이번에는 우연히 번역
+을 보았고, PR을 뒤져보니 PR을 보내면 웬만해서는 받아주는 듯하여 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 부터 날리
+고 어떻게 할지 기다린 게 잘 된듯하다.
+뭐 이렇게 녹색 상자 한 칸 더 체우 는기지... ㅋㅋㅋㅋㅋ&lt;/p&gt;
+</content><category term="Chat"></category><category term="자랑질"></category><category term="chat"></category><category term="rocketchat"></category><category term="번역"></category><category term="javascript"></category><category term="meteo"></category></entry><entry><title>백업 완료</title><link href="https://ujuc.github.io/2015/04/03/%EB%B0%B1%EC%97%85-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-04-03T00:57:00+09:00</published><updated>2015-04-03T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-04-03:/2015/04/03/백업-완료/</id><summary type="html">&lt;p class="first last"&gt;이제 다시 시작. Jekyll &amp;gt; Octopress &amp;gt; Pelican 정착기.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;github에 블로그를 만든 이유는 한가지... 놀면서 개발에대한 이야기를 써보자 였다.
 그래서 첫 툴로 많이 사용하는 &lt;a class="reference external" href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; 을 이용해서 구축... 그러나 얼마 가지 못해
 Jekyll이 제대로 돌아가지 못하는 상황에... OTL&lt;/p&gt;
@@ -654,7 +695,143 @@ Sphinx로 문서를 컴파일 할꺼라는 소리가 있어서... 배워봐야�
 넣어놓는건지.;;;&lt;/p&gt;
 &lt;p&gt;그리고 첫번째때 주의해야할 것들도 있고, 그것때문에 한번 날렸다가 다시 만들었...&lt;/p&gt;
 &lt;p&gt;이제 산적해있는 것들이나 빨리 써야겠다.&lt;/p&gt;
-</content><category term="Chat"></category><category term="백업완료"></category></entry><entry><title>단장 완료</title><link href="https://ujuc.github.io/2015/01/31/%EB%8B%A8%EC%9E%A5-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-01-31T04:10:00+09:00</published><updated>2015-03-30T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-01-31:/2015/01/31/단장-완료/</id><summary type="html">&lt;p class="first last"&gt;jekyll 로 변경하면서 작성.&lt;/p&gt;
+</content><category term="Chat"></category><category term="백업완료"></category></entry><entry><title>OpenStack Commit</title><link href="https://ujuc.github.io/2015/02/13/openstack-commit/" rel="alternate"></link><published>2015-02-13T00:00:00+09:00</published><updated>2015-03-31T22:29:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-13:/2015/02/13/openstack-commit/</id><summary type="html">&lt;p class="first last"&gt;OpenStack 커밋에 대한 내용. 이번에 커멋히면서 정리한 글.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;기본적인 흐름은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer's Guide&lt;/a&gt; 를 보고서 따라하면 쉽게 작업을 할 수 있다.
+그런데.... 왜이리 어려운거지....&lt;/p&gt;
+&lt;p&gt;신경 써야될 곳은 파란색으로 되어있는 곳만 신경 쓰면되는 그런... 어렵지 않을
+것같아 시작...&lt;/p&gt;
+&lt;div class="section" id="section-1"&gt;
+&lt;h2&gt;준비 해야될 것&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://launchpad.net/+login"&gt;Launchpad&lt;/a&gt; 계정&lt;ul&gt;
+&lt;li&gt;버그리포팅을 위해서는 Launchpad 계정이 있어야한다.&lt;/li&gt;
+&lt;li&gt;그리고 왠만한 OpenID를 이걸로 다 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://review.openstack.org"&gt;OpenStack Review&lt;/a&gt; 가입&lt;ul&gt;
+&lt;li&gt;리뷰를 무조건 타야된다...&lt;/li&gt;
+&lt;li&gt;그러니 만들어야....&lt;/li&gt;
+&lt;li&gt;그리고 ssh key등록을 해두는게...&lt;/li&gt;
+&lt;li&gt;그리고 메일링은 꺼두는게... 너무 많이와...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="individual-contributor-license-agreement"&gt;
+&lt;h2&gt;Individual Contributor License Agreement 결재&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://review.openstack.org/#/settings/agreements"&gt;Individual Contributor License Agreement&lt;/a&gt; 간단하게 작성하고..&lt;/li&gt;
+&lt;li&gt;회사 대신 기여하거나 단체로 한다면 &lt;a class="reference external" href="https://secure.echosign.com/public/hostedForm?formid=56JUVGT95E78X5"&gt;Corporate Contributor License Agreement&lt;/a&gt;
+도 한장... 작성하고 보니 난 이걸 왜했지...&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="git-review"&gt;
+&lt;h2&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;git-review&lt;/span&gt;&lt;/tt&gt; 설치&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;맥은 그냥 &lt;tt class="docutils literal"&gt;brew&lt;/tt&gt; 로 통일시켜서 설치하는게 편한듯...&lt;/li&gt;
+&lt;li&gt;문서상으로는 &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; 로 설치하라고 했지만...&lt;/li&gt;
+&lt;li&gt;설치하고 제대로 됐는지 확인을 하기위해서는&lt;ul&gt;
+&lt;li&gt;하나를 클론하고&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;git review &lt;span class="pre"&gt;-s&lt;/span&gt;&lt;/tt&gt; 를 해서 &lt;tt class="docutils literal"&gt;review.openstack.org&lt;/tt&gt; 에 제대로 접속했는지를 체크를
+해준다.&lt;/li&gt;
+&lt;li&gt;이때 &lt;tt class="docutils literal"&gt;gitreview.username&lt;/tt&gt; 을 &lt;tt class="docutils literal"&gt;.gitconfig&lt;/tt&gt; 파일에 작성해두지 않았다면
+설정하라고 뜸.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="section-2"&gt;
+&lt;h2&gt;작업 플로워&lt;/h2&gt;
+&lt;div class="section" id="section-3"&gt;
+&lt;h3&gt;버그일 경우&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;우선 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bugs.launchpad.net/&amp;lt;projectname&amp;gt;&lt;/span&gt;&lt;/tt&gt; 으로 접속하여 버그 리포팅.&lt;ul&gt;
+&lt;li&gt;이때 4가지로 테스크가 나뉘는데,&lt;ol class="arabic"&gt;
+&lt;li&gt;새로운 버그 확인: &amp;quot;New&amp;quot;로 표기된 버그를 &amp;quot;Confirmed&amp;quot;로 변경 가능한 상태.
+거의 초기를 말한다고 보면됨.&lt;/li&gt;
+&lt;li&gt;버그 수정 : 버그를 할당하고, &amp;quot;In Progress&amp;quot;로 등록.&lt;/li&gt;
+&lt;li&gt;리뷰중 : &amp;quot;Incomplete&amp;quot;로 표기되고 리뷰가 진행되는 상태를 말함. 최대
+4주까지 걸린다고 함.&lt;/li&gt;
+&lt;li&gt;버그가 또다시 발견된 경우 : 그렇다고함... (뭐라말하기가... 그냥 나같은
+경우엔 리오픈으로 적고 프로세스 해버림...)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;커밋할때 버그 진행상태를 남겨둘 수 있음. 자세한건 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/GitCommitMessages#Including_external_references"&gt;Including external
+references&lt;/a&gt; 를 보면됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="section-4"&gt;
+&lt;h3&gt;청사진으로 새로운 기능을 붙일 경우&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;이건 그냥 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/Blueprints"&gt;Blueprints - wiki&lt;/a&gt; 를 보자.&lt;/li&gt;
+&lt;li&gt;관심 없고, 내가 딱히 추가할 내용도 별로 없어서... 우선은.. 빈칸...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="section-5"&gt;
+&lt;h3&gt;변경을 시작해볼까~~~&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;첫 클론을 떠온거라면 상관없지만... 뜬지 꽤됐으면 업스트림이랑 코드를 맞춰줘야
+된다.&lt;ul&gt;
+&lt;li&gt;안하면 일 두번하는 생긴다... OTL&lt;/li&gt;
+&lt;li&gt;내가 이글을 쓰고 있는 이유기도 하다...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt;update&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;master&lt;span class="w"&gt;
+&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;pull&lt;span class="w"&gt; &lt;/span&gt;--ff-only&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;master
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;그리고 브런치를 따는데, Blueprint는 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bp/&amp;lt;blueprint_name&amp;gt;&lt;/span&gt;&lt;/tt&gt;, Bug는
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;bug/&amp;lt;bug-number&amp;gt;&lt;/span&gt;&lt;/tt&gt; 로 따주면된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;-b&lt;span class="w"&gt; &lt;/span&gt;TOPIC-BRANCH
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="section-6"&gt;
+&lt;h3&gt;변경 사항 커밋&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;제목은 50자 이내로 작성하고, 한줄 띄우고 내용을 작성해줘야된다.&lt;/li&gt;
+&lt;li&gt;자세한 내용은 &lt;a class="reference external" href="https://wiki.openstack.org/wiki/GitCommitMessages"&gt;Git commit messages&lt;/a&gt; 참고.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code text literal-block"&gt;
+summary
+
+brrrrrrbrrrrrra
+
+&amp;lt;if blueprint&amp;gt;
+Implements: blueprint &amp;lt;blueprint_name&amp;gt;
+&amp;lt;if bug&amp;gt;
+Closes-Bug: #&amp;lt;bug_number&amp;gt;
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Change-id&lt;/span&gt;&lt;/tt&gt; 는 &lt;tt class="docutils literal"&gt;git review&lt;/tt&gt; 로 올린뒤에 알아서 붙여주는거라 따로 적을 필요는
+없다.&lt;/li&gt;
+&lt;li&gt;리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 &lt;tt class="docutils literal"&gt;git commit &lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt;
+오셤으로 해주면된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="section-7"&gt;
+&lt;h3&gt;리뷰 등록&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;git reivew&lt;/tt&gt; 로 하면 &lt;tt class="docutils literal"&gt;review.openstack.org&lt;/tt&gt; 에 올라가 있는 것을 확인할 수
+있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="section-8"&gt;
+&lt;h3&gt;변경사항이 있을때&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;커밋 메시지에 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Change-Id&lt;/span&gt;&lt;/tt&gt; 가없을때는 붙여넣기 해준 다음 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--amend&lt;/span&gt;&lt;/tt&gt; 로 커밋.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;나머지 자세한 것들은 &lt;a class="reference external" href="http://docs.openstack.org/infra/manual/developers.html"&gt;Developer's Guide&lt;/a&gt; 를 확인하도록하자. 이것도 뭐... 내가
+까먹으니까 작성한 것이기도하지만...&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Chat"></category><category term="openstack"></category><category term="commit"></category></entry><entry><title>단장 완료</title><link href="https://ujuc.github.io/2015/01/31/%EB%8B%A8%EC%9E%A5-%EC%99%84%EB%A3%8C/" rel="alternate"></link><published>2015-01-31T04:10:00+09:00</published><updated>2015-03-30T00:00:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-01-31:/2015/01/31/단장-완료/</id><summary type="html">&lt;p class="first last"&gt;jekyll 로 변경하면서 작성.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;간단하게 작업을 진행해서 뭐 넣은 것 없는 그런페이지가 만들어진듯...&lt;/p&gt;
 &lt;p&gt;여기다 아무리 무겁게 글을 써도 불러오는 속도가 빠르니 뭐 간다낳게 작성하기는
 좋을듯.&lt;/p&gt;
