@@ -11,6 +11,7 @@ dependencies = [
     "markdown>=3.6",
     "rich>=13.7.1",
     "cleo>=2.1.0",
+    "markdown-mermaidjs>=1.0.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.12"

@@ -109,6 +109,18 @@ wheels = [
 ]
 
 [[package]]
+name = "markdown-mermaidjs"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "markdown" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/91/a8/9208a85540f7ec7926bef03858851e4cf55cd867f00df35b879056312014/markdown_mermaidjs-1.0.0.tar.gz", hash = "sha256:0bb03881fc402dd3079cb36cd012d329530445bb1d404a363d0e2d0cd2d2da03", size = 84316 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/13/9b/7a4f8fafc0d19275c2d6b7f3d1b23c20a7f14e9ebecc86935776fd1b15ed/markdown_mermaidjs-1.0.0-py3-none-any.whl", hash = "sha256:8bfd594da8ba43707fc6f099111da3b218c8b5a12cec97d59cf490c8772c8a6a", size = 15693 },
+]
+
+[[package]]
 name = "markupsafe"
 version = "2.1.5"
 source = { registry = "https://pypi.org/simple" }
@@ -338,6 +350,7 @@ source = { editable = "." }
 dependencies = [
     { name = "cleo" },
     { name = "markdown" },
+    { name = "markdown-mermaidjs" },
     { name = "pelican" },
     { name = "pendulum" },
     { name = "rich" },
@@ -347,6 +360,7 @@ dependencies = [
 requires-dist = [
     { name = "cleo", specifier = ">=2.1.0" },
     { name = "markdown", specifier = ">=3.6" },
+    { name = "markdown-mermaidjs", specifier = ">=1.0.0" },
     { name = "pelican", specifier = ">=4.9.1" },
     { name = "pendulum", specifier = ">=3.0.0" },
     { name = "rich", specifier = ">=13.7.1" },

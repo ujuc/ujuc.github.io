@@ -82,6 +82,7 @@ MARKDOWN = {
         "markdown.extensions.smarty": {},
         "markdown.extensions.toc": {},
         "markdown.extensions.wikilinks": {},
+        "markdown_mermaidjs": {},
     },
     "output_format": "html5",
 }
