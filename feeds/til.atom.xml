@@ -4,25 +4,4 @@
 그래서 규식이형이 가능한지 찾다가 &lt;a href="https://stackoverflow.com/questions/42497352/css-with-regex-for-id"&gt;Css with regex for id&lt;/a&gt; 라는 글을 발견.&lt;/p&gt;
 &lt;p&gt;사용법은 간단하다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;id^=s&lt;/code&gt;를 하게되면 &lt;code&gt;id&lt;/code&gt;가 &lt;code&gt;s&lt;/code&gt;로 시작하는 것을. &lt;code&gt;id$=0&lt;/code&gt;을 하게되면 &lt;code&gt;id&lt;/code&gt;가 &lt;code&gt;0&lt;/code&gt;으로 끝나는 것을 찾아서 적용해준다.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;*&lt;/code&gt;도 사용가능 하다고&amp;hellip; &lt;a href="https://www.linkedin.com/pulse/empowering-your-css-identifiers-regex-patterns-sandeep-chandra-sekhar"&gt;Empowering your CSS Identifiers with RegEx patterns&lt;/a&gt;&lt;/p&gt;</content><category term="TIL"></category><category term="css"></category><category term="selector"></category><category term="regex"></category></entry><entry><title>Atom Git 커밋 메시지 Styleguides 속 Emoji</title><link href="https://ujuc.github.io/2018/12/16/atom_git_keo-mis_me-si-ji_styleguides_sog_emoji/" rel="alternate"></link><published>2018-12-16T00:31:14+09:00</published><updated>2018-12-16T00:31:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-12-16:/2018/12/16/atom_git_keo-mis_me-si-ji_styleguides_sog_emoji/</id><summary type="html">&lt;p&gt;블로그 글을 읽다가 커밋메시지에 이모지를 넣는 방법이 있다고 하여 정리해보았다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.weirdx.io/post/55244"&gt;블로그&lt;/a&gt; 에서 글을 읽다가 커밋 메시지에 Emoji를 사용했더니 구분이 되서 좋다고 하셔서 확인.&lt;br&gt;
-우선은 Atom에서 사용하는 것인데&amp;hellip; 여기다가 내가 필요한 내용들을 넣어서 사용하면 될것같아보인다.&lt;/p&gt;
-&lt;p&gt;역시 글보다는 그림인가?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;🎨 &lt;code&gt;:art:&lt;/code&gt; 코드 형식이나 구조를 개선할 때&lt;/li&gt;
-&lt;li&gt;🐎 &lt;code&gt;:racehorse:&lt;/code&gt; 성능을 향상할 때&lt;/li&gt;
-&lt;li&gt;🚱 &lt;code&gt;:non-potable_water:&lt;/code&gt; 메모리 누수를 막았을 때&lt;/li&gt;
-&lt;li&gt;📝 &lt;code&gt;:memo:&lt;/code&gt; 문서 작성했을 때&lt;/li&gt;
-&lt;li&gt;🐧 &lt;code&gt;:penguin:&lt;/code&gt; 리눅스에서 뭔가를 고쳤을 때&lt;/li&gt;
-&lt;li&gt;🍎 &lt;code&gt;:apple:&lt;/code&gt; macOS에서 뭔가를 고쳤을 때&lt;/li&gt;
-&lt;li&gt;🏁 &lt;code&gt;:checkered_flag:&lt;/code&gt; 윈도우즈에서 무언가를 고쳤을 때&lt;/li&gt;
-&lt;li&gt;🐛 &lt;code&gt;:bug:&lt;/code&gt; 버그를 고쳤을 때&lt;/li&gt;
-&lt;li&gt;🔥 &lt;code&gt;:fire:&lt;/code&gt; 코드 또는 파일을 삭제했을 때&lt;/li&gt;
-&lt;li&gt;💚 &lt;code&gt;:green_heart:&lt;/code&gt; CI 빌드를 고쳤을 때&lt;/li&gt;
-&lt;li&gt;✅ &lt;code&gt;:white_check_mark:&lt;/code&gt; 테스트를 추가했을 때&lt;/li&gt;
-&lt;li&gt;🔒 &lt;code&gt;:lock:&lt;/code&gt; 보안 사항을 수정했을 때&lt;/li&gt;
-&lt;li&gt;⬆️ &lt;code&gt;:arrow_up:&lt;/code&gt; 의존성에 대한 부분을 업그레이드했을 때&lt;/li&gt;
-&lt;li&gt;⬇️ &lt;code&gt;:arrow_down:&lt;/code&gt; 의존성에 대한 부분을 다운그레이드했을 때&lt;/li&gt;
-&lt;li&gt;👕 &lt;code&gt;:shirt:&lt;/code&gt; 린터 경고를 없앴을 때&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;원본 : &lt;a href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#git-commit-messages"&gt;Atom - Git Commit Message&lt;/a&gt;&lt;/p&gt;</content><category term="TIL"></category><category term="emoji"></category><category term="atom"></category><category term="git commit"></category><category term="git"></category><category term="styleguide"></category></entry></feed>
+&lt;p&gt;&lt;code&gt;*&lt;/code&gt;도 사용가능 하다고&amp;hellip; &lt;a href="https://www.linkedin.com/pulse/empowering-your-css-identifiers-regex-patterns-sandeep-chandra-sekhar"&gt;Empowering your CSS Identifiers with RegEx patterns&lt;/a&gt;&lt;/p&gt;</content><category term="TIL"></category><category term="css"></category><category term="selector"></category><category term="regex"></category></entry></feed>

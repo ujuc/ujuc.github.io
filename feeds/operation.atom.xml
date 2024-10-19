@@ -412,7 +412,19 @@
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;&amp;lt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;*default-volume&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;driver&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;default&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;volume-local&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="docker"></category><category term="compose"></category><category term="config file"></category></entry><entry><title>맥에서 gpg 키 서명 실패</title><link href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" rel="alternate"></link><published>2020-02-19T05:38:42+09:00</published><updated>2023-01-18T19:22:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-19:/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/</id><summary type="html">&lt;p&gt;commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;2023.01.18 설정값이 변경된 것들이 있어서 회사 컴퓨터를 새롭게 받아 설치한 기념으로 업데이트 한다. (Thanks to. &lt;a href="https://github.com/roeniss"&gt;@roeniss&lt;/a&gt;)&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="docker"></category><category term="compose"></category><category term="config file"></category></entry><entry><title>AWS RDS Proxy 간단하게 보기</title><link href="https://ujuc.github.io/2020/07/11/aws-rds-proxy-gan-dan-ha-ge-bo-gi/" rel="alternate"></link><published>2020-07-11T11:01:43+09:00</published><updated>2020-07-11T11:01:43+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-07-11:/2020/07/11/aws-rds-proxy-gan-dan-ha-ge-bo-gi/</id><summary type="html">&lt;p&gt;AWS RDS Proxy를 간략하게 정리해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 사용을 하자고 말이 나와서 진짜 간략하게 정리한걸 조금 정리하는 겸. 만들었는데 블로그도 쓸겸.&lt;/p&gt;
+&lt;h3 id="_1"&gt;설명서&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/AuroraUserGuide/rds-proxy.html"&gt;Aurora User Guide - RDS proxy&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="_2"&gt;간략 설명&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;대량의 컨넥션이 이뤄져서 컨넥션 풀 관리가 힘들다&amp;hellip;&lt;/li&gt;
+&lt;li&gt;우리는 DB를 엄청 크게 쓰고 있어요!&lt;/li&gt;
+&lt;li&gt;하는데만 쓰자&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="_3"&gt;조금 자세하게&lt;/h3&gt;
+&lt;p&gt;DB와 애플리케이션 사이에 존재하여 DB 컨넥션에 대한 처리를 해준다.&lt;/p&gt;
+&lt;p&gt;원래는 프로그램상에서 컨넥션 풀을 생성하여 풀 관리를 하면서 작업을 진행해야 하나. 몇몇 언어나 일반 사용자들이 컨넥션 풀에 대해서 인지를 못하고 제대로 사용하고 있지 못하다. 그것을 proxy에서 일정한 컨넥션 풀을 생성하고 연결을 할 수 있도록 도와 주게 된다.&lt;/p&gt;
+&lt;p&gt;IAM과 AWS Secrets Manager 를 이용하여 DB 연결하는 비밀번호를 암호화하여 작업할 수 있다.&lt;/p&gt;</content><category term="Operation"></category><category term="rds"></category><category term="aws"></category><category term="rds proxy"></category><category term="cloud"></category></entry><entry><title>맥에서 gpg 키 서명 실패</title><link href="https://ujuc.github.io/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/" rel="alternate"></link><published>2020-02-19T05:38:42+09:00</published><updated>2023-01-18T19:22:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-02-19:/2020/02/19/macos-e-seo-gpg-ki-seo-myeong-sil-pae/</id><summary type="html">&lt;p&gt;commit 할때마다 gpg키로 서명하게 해놨는데 안된다. 고치자!&lt;/p&gt;</summary><content type="html">&lt;p&gt;2023.01.18 설정값이 변경된 것들이 있어서 회사 컴퓨터를 새롭게 받아 설치한 기념으로 업데이트 한다. (Thanks to. &lt;a href="https://github.com/roeniss"&gt;@roeniss&lt;/a&gt;)&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;열심히 공부하고 커밋하려는 순간&amp;hellip;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;commit
@@ -448,35 +460,81 @@ Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 &lt;h4 id="2"&gt;2. 처음 입력할때&lt;/h4&gt;
 &lt;p&gt;gpg키를 맨처음 입력할때 잘보도록하자 거기에 비밀번호 저장할래가 있을꺼다. 그걸 해지한다.&lt;br&gt;
 그러면 매번 git commit할때마다 물을꺼다.&lt;br&gt;
-그러면 서명이 가능해지겠지&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="gpg"></category><category term="key"></category><category term="gnupg"></category><category term="pinentry"></category></entry><entry><title>pyenv 설치 스크립트 변경됨</title><link href="https://ujuc.github.io/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/" rel="alternate"></link><published>2019-11-29T15:44:29+09:00</published><updated>2019-11-29T15:44:29+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-11-29:/2019/11/29/pyenv_seor-ci_seu-keu-rib-teu_byeon-gyeong-doem/</id><summary type="html">&lt;p&gt;pyenv 설치 방법이 변경되어 간략하게 남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;dotrc를 작성할때 만들었던 스크립트에서는 다음의 URL로 Pyenv를 설치했다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;brew&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;pyenv
-
-$&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-L&lt;span class="w"&gt; &lt;/span&gt;https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;이번 수정하면서, 확인하니 이분들이 &lt;code&gt;pyenv.run&lt;/code&gt; 도메인을 구매하셨나보다. 스크립트가 변경되었다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;https://pyenv.run&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="python"></category><category term="pyenv"></category><category term="python version management"></category><category term="version management"></category></entry><entry><title>Docker container 사용자 설정</title><link href="https://ujuc.github.io/2019/05/25/docker_container_sa-yong-ja_seor-jeong/" rel="alternate"></link><published>2019-05-25T12:38:45+09:00</published><updated>2019-05-25T12:38:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-25:/2019/05/25/docker_container_sa-yong-ja_seor-jeong/</id><summary type="html">&lt;p&gt;Docker container를 사용할때 발생한 에러에 대해서 작성하였다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 개발한 소스들을 Docker 이미지를 만들어서 ubuntu 18.04에서 작업을 할 수 있도록 구성을 했다.&lt;/p&gt;
-&lt;p&gt;인프라 작업을 하고 있지만, OS나 인프라는 매번 내가 생각했던 대로 잘 안 해준다.&lt;/p&gt;
-&lt;p&gt;이번에도 에러가 났다&amp;hellip;&lt;/p&gt;
-&lt;h3 id="_1"&gt;문제&lt;/h3&gt;
-&lt;p&gt;실행중인 Docker container에 접속해서 그 폴더를 사용하는 스크립트를 만든 다음 실행하였더니 Docker container에서 mount 해서 사용하는 볼륨 권한 문제.&lt;/p&gt;
-&lt;p&gt;폴더에 접근할 방법이 없단다.&lt;/p&gt;
-&lt;p&gt;Docker container에서 사용하는 사용자는 root. 이 root는 패이크 루트라서 GID는 호스트의 root와 동일하지만, container에서만 root이지 실제로 호스트에서는 제대로 작동하지 않는다.&lt;/p&gt;
-&lt;p&gt;해당 내용을 다른 분들에게 물었더니 그 폴더 권한을 &lt;code&gt;0777&lt;/code&gt; 로 변경해서 작업을 하라고 해서 기각.&lt;/p&gt;
-&lt;p&gt;어떤 넘이 어떻게 들어올 줄 모르는데 모든 걸 열라니!!!&lt;/p&gt;
-&lt;h3 id="_2"&gt;해결&lt;/h3&gt;
-&lt;p&gt;그래서 딴짓을 했다.&lt;/p&gt;
-&lt;p&gt;우선 호스트에서 필요한 dir을 생성했다. → 그러면 해당 폴더의 &lt;code&gt;gid&lt;/code&gt;와 &lt;code&gt;uid&lt;/code&gt;는 호스트 사용자의 &lt;code&gt;uid/gid&lt;/code&gt;를 사용하게 된다.&lt;/p&gt;
-&lt;p&gt;그리고 Docker에게서 새로운 사용자를 만들고 그에게 호스트 사용자와 동일한 &lt;code&gt;gid/uid&lt;/code&gt; 를 가질 수 있도록 하였다.&lt;/p&gt;
-&lt;p&gt;이건 Ubuntu에 하나의 유저만 있는 상태에서 가능한 설정이다. 만약 호스트에서 여러 사용자를 만들어서 사용한다면, 이 설정은 힘들다. &lt;code&gt;gid/uid&lt;/code&gt;가 다를 수 있다. Container 에서의 사용자는 root이외에 &lt;code&gt;www-data&lt;/code&gt; 와 같은 시스템 User 등급만 있지 실제 User 등급은 없어서 &lt;code&gt;gid : 1000&lt;/code&gt;, &lt;code&gt;uid : 1000&lt;/code&gt;을 가져가게된다.&lt;/p&gt;
-&lt;p&gt;다른 사용자가 있다면&amp;hellip; 다른 작업을 하도록 하자.&lt;/p&gt;
-&lt;p&gt;뒤지다 뒤지다 발견한 하나의 글.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;a href="https://codeyarns.com/2017/07/21/how-to-set-user-of-docker-container/"&gt;How to set user of Docker container&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+그러면 서명이 가능해지겠지&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="gpg"></category><category term="key"></category><category term="gnupg"></category><category term="pinentry"></category></entry><entry><title>iTerm shortcut 설정</title><link href="https://ujuc.github.io/2019/12/25/iterm_shortcut_seor-jeong/" rel="alternate"></link><published>2019-12-25T13:06:25+09:00</published><updated>2020-01-10T07:38:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-12-25:/2019/12/25/iterm_shortcut_seor-jeong/</id><summary type="html">&lt;p&gt;iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 중간중간 건너 띄워서 가야할때, 사용하는 단축키를 정리한다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="0110"&gt;01/10 추가&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/channprj"&gt;@channprj&lt;/a&gt; 님께서 댓글로 Hex code로 하지 않아도 된다는 소식을 알려주셨다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;iTerm2 -&amp;gt; Preferences&lt;/li&gt;
+&lt;li&gt;Profile &amp;gt; Keys&lt;/li&gt;
+&lt;li&gt;Presets&amp;hellip; &amp;gt; Natual Text Editing&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2020-01-10_iterm2.png" width="30%"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;매번 찾았는데&amp;hellip; 이제는 기억을 못해서 써두려고 한다.&lt;/p&gt;
+&lt;p&gt;원래 글은 &lt;a href="https://stackoverflow.com/questions/6205157/iterm-2-how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line"&gt;(stackoverflow) iTerm 2: How to set keyboard shorcuts to jump to beginning/end of line?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;지금 글쓰는 오늘 날짜로 8년도 더된 글이다&lt;/p&gt;
+&lt;p&gt;이정도면 기본으로 넣어줄 만한데&amp;hellip; 암튼&amp;hellip;&lt;/p&gt;
+&lt;p&gt;개인적으로 설정해서 사용하는 답변은 &lt;a href="https://stackoverflow.com/questions/6205157/iterm-2-how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line/22312856#22312856"&gt;두번째&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;iTerm2 -&amp;gt; Preferences&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Key&amp;rdquo; 탭설정&lt;/li&gt;
+&lt;li&gt;다음 단축키들을 입력한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_1"&gt;왼쪽으로 워드 단위 이동&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;이 글의 문제점은 Docker다. 난 Docker-compose를 사용하고 있어서 다른 작업이 필요했다.&lt;/li&gt;
-&lt;li&gt;내 생각에는 이 옵션에 대한 Docker-compose 옵션이 있을 꺼라 생각하는데. 나중에 다른 작업할때 찾아봐야겠다.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Operation"></category><category term="docker"></category><category term="container"></category><category term="ubuntu"></category><category term="linux"></category></entry><entry><title>Docker Image 옮기기 (without DockerHub)</title><link href="https://ujuc.github.io/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/" rel="alternate"></link><published>2019-05-18T11:59:45+09:00</published><updated>2019-05-18T11:59:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-18:/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/</id><summary type="html">&lt;p&gt;반강제 폐쇄망에 이미지를 올리자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 AWS ECR을 사용하는건 제외. &lt;/p&gt;
+&lt;li&gt;키보드 입력: &lt;code&gt;option&lt;/code&gt; + &lt;code&gt;&amp;lt;-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Action : Send Hex Code&lt;/li&gt;
+&lt;li&gt;Code: &lt;code&gt;0x1b 0x62&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_2"&gt;오른쪽으로 워드 단위 이동&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;키보드 입력: &lt;code&gt;option&lt;/code&gt; + &lt;code&gt;-&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Action: Send Hex Code&lt;/li&gt;
+&lt;li&gt;Code: &lt;code&gt;0x1b 0x66&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;위의 두 설정을 하게되면 다음 작업을 꼭 해줘야 된다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;ldquo;Profiles&amp;rdquo; 열고&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Keys&amp;rdquo; 선택&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;option&lt;/code&gt; + &lt;code&gt;&amp;lt;-&lt;/code&gt;, &lt;code&gt;option&lt;/code&gt; + &lt;code&gt;-&amp;gt;&lt;/code&gt; 항목을 삭제한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_3"&gt;맨 첫번째로 이동&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;키보드 입력: &lt;code&gt;cmd&lt;/code&gt; + &lt;code&gt;&amp;lt;-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Action: Send Hex Code&lt;/li&gt;
+&lt;li&gt;Code: &lt;code&gt;0x01&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="_4"&gt;맨끝으로 이동&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;키보드 입력: &lt;code&gt;cmd&lt;/code&gt; + &lt;code&gt;-&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Action: Send Hex Code&lt;/li&gt;
+&lt;li&gt;Code: &lt;code&gt;0x05&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="iterm"></category><category term="shortcut"></category></entry><entry><title>Pelican 4.1.0 Release Note</title><link href="https://ujuc.github.io/2019/07/21/pelican_4.1.0_release_note/" rel="alternate"></link><published>2019-07-21T15:23:10+09:00</published><updated>2019-07-21T15:23:10+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-07-21:/2019/07/21/pelican_4.1.0_release_note/</id><summary type="html">&lt;p&gt;pelican 4.1.0 이 업글이 되었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 정리하다가 업그레이드가 된 걸 알았다.&lt;/p&gt;
+&lt;h3 id="410-2019-07-14"&gt;&lt;a href="https://docs.getpelican.com/en/stable/changelog.html#id1"&gt;4.1.0 - 2019-07-14&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;변경된 파일이 있으면 reload 가능 (Invoke 태스크를 통해 제공됨)&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican/blob/master/pelican/tools/templates/tasks.py.jinja2#L93"&gt;github - &lt;code&gt;task.py.jinja2&lt;/code&gt;&lt;/a&gt; 에서 확인하면 &lt;code&gt;livereload&lt;/code&gt; 패키지를 사용하여 새롭게 띄울 수 있도록 작업을 해뒀다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Poetry를 사용하여 패키지 관리&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pyproject.toml&lt;/code&gt; 를 이용하게 됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python -m pelican&lt;/code&gt; 형태로 호출 가능&lt;ul&gt;
+&lt;li&gt;env 환경에서 굳이&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;콘텐츠 상대 소스 경로 속성 추가&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;EXTRA_PATH_METADATA&lt;/code&gt; 디렉토리 허용&lt;/li&gt;
+&lt;li&gt;템플릿에서 사용 가능한 &lt;code&gt;all_articles&lt;/code&gt; 변수가 추가됨.&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/themes.html?highlight=all_articles#common-variables"&gt;Common variables&lt;/a&gt; 항목 확인 가능&lt;/li&gt;
+&lt;li&gt;최근 소식 전달을 위한 기능 용&amp;hellip;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;디버그 모드에서 출력 화면 향상&lt;/li&gt;
+&lt;li&gt;Atom 피드에서 비었거나 중복된 summary 항목 삭제&lt;/li&gt;
+&lt;li&gt;페이지네이션, pelican-import, pelican-quickstart, 피드 임포터 버그 수정&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="pelican"></category><category term="static blogging tools"></category><category term="python"></category></entry><entry><title>Docker Image 옮기기 (without DockerHub)</title><link href="https://ujuc.github.io/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/" rel="alternate"></link><published>2019-05-18T11:59:45+09:00</published><updated>2019-05-18T11:59:45+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-05-18:/2019/05/18/docker_image_orm-gi-gi_(without_dockerhub)/</id><summary type="html">&lt;p&gt;반강제 폐쇄망에 이미지를 올리자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 AWS ECR을 사용하는건 제외. &lt;/p&gt;
 &lt;p&gt;개발 과정에서 실제 OS에서 작동하는지 확인을 위한것이라 올리고 인증하고 귀찮다.&lt;/p&gt;
 &lt;p&gt;뭘로 검색했는지는 기억이 없지만 다음과 같은 글을 확인했고, 다음과 같은 명령을 사용하면 인터넷이나 Docker 레포없이 작업이 가능하다.&lt;/p&gt;
 &lt;ul&gt;
@@ -496,7 +554,24 @@ $&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-L&
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/commandline/save/"&gt;docker save&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/commandline/load/"&gt;docker load&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Operation"></category><category term="docker"></category><category term="docker image"></category></entry><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록 하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수 있다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="docker"></category><category term="docker image"></category></entry><entry><title>I hate input gpgkey in JetBrains IDEAs</title><link href="https://ujuc.github.io/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/" rel="alternate"></link><published>2018-11-27T01:31:32+09:00</published><updated>2018-11-27T01:31:32+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-27:/2018/11/27/i_hate_input_gpgkey_in_jetbrains_ideas/</id><summary type="html">&lt;p&gt;JetBrains IDEA를 주력하여 사용 중인데. GPG 키가 계속 침범을 하네? 그래서 문제를 찾았다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;이모든 원흉은 나의 과욕이었음을&amp;hellip;&lt;/p&gt;
+&lt;p&gt;모든 코딩을 JetBrains의 IDEA에서 한다. 아직 vim이 익숙하지 않아서 그렇기도 하고&amp;hellip;&lt;/p&gt;
+&lt;p&gt;언젠가 GPG키를 이용해서 git sign을 위해서 GPG suite를 설치해놨는데. 이넘이 문제일줄이야..&lt;/p&gt;
+&lt;h2 id="_1"&gt;증상&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;shift + cmd +r&lt;/code&gt; , &lt;code&gt;shift + cmd + f&lt;/code&gt; 키를 누르면 아래 모습처럼 GPG 키가&amp;hellip; 계속 복사가 된다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="shift_cmd_r" src="https://ujuc.github.io/img/2018-11-27_shift_cmd_r.png"&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt="shift_cmd_f" src="https://ujuc.github.io/img/2018-11-27_shift_cmd_f.png"&gt;&lt;/p&gt;
+&lt;h2 id="_2"&gt;해결&lt;/h2&gt;
+&lt;p&gt;간단하다. System Preferences 가서 키보드 단축키에서 GPG suite에 관련된 것들을 unchecked 한다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="system_preferences" src="https://ujuc.github.io/img/2018-11-27_system_preferences.png"&gt; &lt;/p&gt;</content><category term="Operation"></category><category term="jetbrains idea"></category><category term="gpg suite"></category><category term="key mapping"></category></entry><entry><title>MacOS Mojave에서 Google Drive Stream 오류</title><link href="https://ujuc.github.io/2018/11/17/macos_mojavee-seo_google_drive_stream_o-ryu/" rel="alternate"></link><published>2018-11-17T10:35:17+09:00</published><updated>2018-11-17T10:35:17+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-17:/2018/11/17/macos_mojavee-seo_google_drive_stream_o-ryu/</id><summary type="html">&lt;p&gt;Google Drive Stream이 실행은 커녕 죽어버린다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Google Drive Stream을 사용하고 있다. 그런데 Mojave로 OS를 업로드한 뒤부터는 실행이 안되고 어느 정도 작동하다가 죽어버리는 현상을 확인하였다.&lt;/p&gt;
+&lt;p&gt;사진도 못 옮기고 이것저것 텍스트들도 제대로 작업을 못하던 중에 혹시나 그냥 앱만 지우면 안 되는 건가라는 생각에서 매뉴얼을 찾아서 보고 작동이 되는 것을 확인하였다.&lt;/p&gt;
+&lt;p&gt;그냥 이렇게 하면 된다고 말 한마디면 되는 건데&amp;hellip; G Suite 쪽은 제대로 알려주는 것이 없으니&amp;hellip;&lt;/p&gt;
+&lt;p&gt;터미널이 편하다면 터미널로 아니라면 해당 위치에 있는 파일들을 삭제하면 된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf&lt;span class="w"&gt; &lt;/span&gt;/Applications/Google&lt;span class="se"&gt;\ &lt;/span&gt;Drive&lt;span class="se"&gt;\ &lt;/span&gt;File&lt;span class="se"&gt;\ &lt;/span&gt;Stream.app/
+$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf&lt;span class="w"&gt; &lt;/span&gt;~/Library/Application&lt;span class="w"&gt; &lt;/span&gt;Support/Google/DriveFS/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 내용처럼 작업하고 재시작하면 잘 실행된다.&lt;/p&gt;</content><category term="Operation"></category><category term="google drive stream"></category><category term="macos"></category><category term="mojave"></category></entry><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록 하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수 있다.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Priority (PR)&lt;br&gt;
 Task에 대한 스케쥴링 우선순위에 대한 값을 나타낸다. &lt;code&gt;rt&lt;/code&gt; 항목은 리얼타임 항목에 대한 내용을 나타냄&lt;/li&gt;
@@ -588,7 +663,23 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;PS. IO Priority를 변경하고 싶다면 &lt;code&gt;ionice&lt;/code&gt;를 확인하도록 하자. (&lt;a href="https://linux.die.net/man/1/ionice"&gt;manpage&lt;/a&gt;)&lt;/p&gt;</content><category term="Operation"></category><category term="linux"></category><category term="priority"></category><category term="scheduler"></category></entry><entry><title>man page Section</title><link href="https://ujuc.github.io/2018/03/10/man_page_section/" rel="alternate"></link><published>2018-03-10T14:42:46+09:00</published><updated>2018-03-10T14:42:46+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-10:/2018/03/10/man_page_section/</id><summary type="html">&lt;p&gt;&lt;code&gt;man&lt;/code&gt; 페이지를 보다보면 숫자가 적혀있다. 그거 간략하게 본다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;항상  &lt;code&gt;man&lt;/code&gt; 페이지를 끼고 보는데&amp;hellip; &lt;code&gt;ls(1)&lt;/code&gt; 이라 적혀있는 페이지를 볼 수 있다.&lt;br&gt;
+&lt;p&gt;PS. IO Priority를 변경하고 싶다면 &lt;code&gt;ionice&lt;/code&gt;를 확인하도록 하자. (&lt;a href="https://linux.die.net/man/1/ionice"&gt;manpage&lt;/a&gt;)&lt;/p&gt;</content><category term="Operation"></category><category term="linux"></category><category term="priority"></category><category term="scheduler"></category></entry><entry><title>Recoll - 리눅스에서 GUI로 문서 검색을 해보자</title><link href="https://ujuc.github.io/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/" rel="alternate"></link><published>2018-09-23T23:27:51+09:00</published><updated>2018-09-23T23:27:51+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-23:/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/</id><summary type="html">&lt;p&gt;페이스북에서 보았던 recoll이라는 프로그램에 대해서 정리만 해둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.facebook.com/groups/korelnxuser/permalink/1108262849348464/0"&gt;페이스북 우분투 유저 그룹에 올라온 글&lt;/a&gt;이 있었다.&lt;/p&gt;
+&lt;p&gt;이글은 나중에 혹시나 쓸까하여&amp;hellip; 리눅스를 메인을 사용할 일은 거의 없긴하다만&amp;hellip;&lt;/p&gt;
+&lt;p&gt;소개글은 다음과 같다. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.fossmint.com/recoll-file-text-search-tool-for-linux/"&gt;FOSS Mint - Recoll - A Full-Text GUI Search Tool for Linux System&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;여기서는 그냥 간단한 소개정도만 &amp;hellip;&lt;/p&gt;
+&lt;h2 id="_1"&gt;특징&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://xapian.org/"&gt;Xapian 서치 엔진&lt;/a&gt; 기반&lt;/li&gt;
+&lt;li&gt;텍스트 추출할 수 있는 플러그인 지원&lt;/li&gt;
+&lt;li&gt;왠만한 문서 포멧 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;더 눈에 띄는 것은 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Thunderbird에서 zip으로 압축되어있는 파일에 들어있는 문서 파일도 검색가능&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Recoll will index an MS-Word document stored as an attachment to an e-mail message inside a Thunderbird folder archived in a Zip file (and more&amp;hellip;). It will also help you search for it with a friendly and powerful interface, and let you open a copy of a PDF at the right page with two clicks. There is little that will remain hidden on your disk.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;지금은 맥을 쓰고 있어서 딱히&amp;hellip; 내부 검색이 필요한 것들은 전부 구글에&amp;hellip; 음 언제 한번써볼까?&lt;/p&gt;</content><category term="Operation"></category><category term="recoll"></category><category term="document"></category><category term="search"></category><category term="gui"></category></entry><entry><title>man page Section</title><link href="https://ujuc.github.io/2018/03/10/man_page_section/" rel="alternate"></link><published>2018-03-10T14:42:46+09:00</published><updated>2018-03-10T14:42:46+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-03-10:/2018/03/10/man_page_section/</id><summary type="html">&lt;p&gt;&lt;code&gt;man&lt;/code&gt; 페이지를 보다보면 숫자가 적혀있다. 그거 간략하게 본다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;항상  &lt;code&gt;man&lt;/code&gt; 페이지를 끼고 보는데&amp;hellip; &lt;code&gt;ls(1)&lt;/code&gt; 이라 적혀있는 페이지를 볼 수 있다.&lt;br&gt;
 해당 내용을 매번 찾다가&amp;hellip; 찾는것도 힘들고해서&amp;hellip;&lt;/p&gt;
 &lt;p&gt;찾다보니 해당 숫자는 section 숫자라고..&lt;br&gt;
 해당되는 내용들은.&lt;/p&gt;
@@ -1075,7 +1166,12 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;dpkg&lt;span class="w"&gt; &lt;/span&gt;
 &lt;p&gt;그리고 리붓해주면 손쉽게&amp;hellip; 설치가 가능하다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;참고: &lt;a href="http://packages.ubuntu.com/search?keywords=linux-firmware"&gt;Ubuntu package&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Operation"></category><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link href="https://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" rel="alternate"></link><published>2016-04-22T22:59:00+09:00</published><updated>2016-04-22T22:59:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-22:/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</id><summary type="html">&lt;p&gt;Qualcomm Atheros device driver on Lenovo Y700&lt;/p&gt;</summary><content type="html">&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가 발생했다.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="Operation"></category><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Select text of vim with set mouse=a enabled</title><link href="https://ujuc.github.io/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/" rel="alternate"></link><published>2016-05-02T23:27:00+09:00</published><updated>2016-05-02T23:27:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-05-02:/2016/05/02/select-text-of-vim-with-set-mouse=a-enabled/</id><summary type="html">&lt;p&gt;Vim사용에 있어서 마우스로 블록을 선택할 수 있도록 하였다. 그랬더니 다른 부분에서&lt;/p&gt;</summary><content type="html">&lt;p&gt;제대로된 선택을 할 수 없어 해당 내용을 찾아보았다.&lt;/p&gt;
+&lt;p&gt;조금 쉽게 사용하려고 vim에 &lt;code&gt;mouse=a&lt;/code&gt; 설정을 하였다. 그것이 원흉이 었지만. 결국 찾았다!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/questions/4608161/copy-text-out-of-vim-with-set-mouse-a-enabled"&gt;Copy text out of vim with set mouse=a enabled&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;리눅스에서는 &lt;code&gt;shift&lt;/code&gt;를 누르고 선택하는것이고, Mac에서는 &lt;code&gt;alt/option&lt;/code&gt;을 누르고 선택하면 된다.&lt;/p&gt;
+&lt;p&gt;설정하나때문에 많은 삽질을 하는 사람들에게 남겨둠..&lt;br&gt;
+그런데 설정은 tmux에서도 사용이가능하다.&lt;/p&gt;</content><category term="Operation"></category><category term="vim"></category><category term="mouse"></category><category term="copy"></category></entry><entry><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link href="https://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" rel="alternate"></link><published>2016-04-22T22:59:00+09:00</published><updated>2016-04-22T22:59:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-22:/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</id><summary type="html">&lt;p&gt;Qualcomm Atheros device driver on Lenovo Y700&lt;/p&gt;</summary><content type="html">&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가 발생했다.&lt;/p&gt;
 &lt;p&gt;Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널버전 4.4.2이상이어야 해당 드라이버가 돌아가는데&amp;hellip; Ubuntu 16.04버전이 4.4.0&amp;hellip; 그래서 백포트하고, 드라이버를 옮겨주는것으로 해결.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://ask.ubuntu.com/questions/708061/aualcomm-atheros-device-168c0042-rev-30-wi-fi-driver-installation"&gt;Qualcomm Atheros Device [168c:0042] (rev 30) Wi-Fi dirver installation&lt;/a&gt; 에서 말하는 작업을 설치해주면된다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;build-essential&lt;span class="w"&gt; &lt;/span&gt;linux-headers-&lt;span class="k"&gt;$(&lt;/span&gt;uname&lt;span class="w"&gt; &lt;/span&gt;-r&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;git
@@ -1094,91 +1190,7 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;cp&lt;span class="w"&gt; &lt;/span&gt;/l
 &lt;p&gt;그리고 하나더&amp;hellip;&lt;/p&gt;
 &lt;p&gt;이건 위에껄 하고 안되면 추가해주도록 하자.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;blacklist&lt;span class="w"&gt; &lt;/span&gt;ideapad_laptop&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;tee&lt;span class="w"&gt; &lt;/span&gt;/etc/modprobe.d/blacklist.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>Ubuntu-Debian 패키지 매니저 apt 사용해보기</title><link href="https://ujuc.github.io/2016/04/17/ubuntu-debian-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80-apt-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" rel="alternate"></link><published>2016-04-17T12:23:00+09:00</published><updated>2016-04-17T12:23:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-17:/2016/04/17/ubuntu-debian-패키지-매니저-apt-사용해보기/</id><summary type="html">&lt;p&gt;하위 명령어 &lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;apt-cache&lt;/code&gt;를 사용하지 않고 패키지 매너저 &lt;code&gt;apt&lt;/code&gt;를 사용하는 방법.&lt;/p&gt;</summary><content type="html">&lt;p&gt;기본적으로 &lt;code&gt;apt&lt;/code&gt; 패키지가 설치되어있었지만&amp;hellip; 사용하지 않았었다. 여기저기서 &lt;code&gt;apt-get&lt;/code&gt; 같은 명령어를 알려줬기에&amp;hellip; 그리고 얼마안되기도 했고, 그 간단한 사용법에 대해서 남겨두려고 한다.&lt;/p&gt;
-&lt;p&gt;참고는 &lt;a href="http://www.tecmint.com/apt-advanced-package-command-examples-in-ubuntu/"&gt;15 Examples of How to Use New Advanced Package Tool (APT) in Ubuntu/Debian&lt;/a&gt; 을 사용함. 기본적으로 되는 &lt;a href="http://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html"&gt;Ubuntu man&lt;/a&gt; 페이지는 끼고 살자&amp;hellip;&lt;/p&gt;
-&lt;h2 id="1"&gt;1. 패키지 설치&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;glances
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;항상 사용하던건 &lt;code&gt;apt-get&lt;/code&gt; 명령어로 설치를 하는거였는데 4글자 줄엇다!&lt;br&gt;
-&lt;code&gt;sudo aptitude install&lt;/code&gt; 로도 가능하다만&amp;hellip; 이렇게 하는 사람들 잘못봤다.&lt;/p&gt;
-&lt;h2 id="2"&gt;2. 패키지가 설치된 위치 확인&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;content&lt;span class="w"&gt; &lt;/span&gt;glances
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는 명령어는 &lt;code&gt;dpkg -L&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="3"&gt;3. 패키지 디펜던시 확인&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;depends&lt;span class="w"&gt; &lt;/span&gt;glances
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는 명령어가 &lt;code&gt;apt-get check&lt;/code&gt;, &lt;code&gt;dpkg -C&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="4"&gt;4. 패키지 찾기&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;search&lt;span class="w"&gt; &lt;/span&gt;openstack
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는 명령어는 &lt;code&gt;apt-cache search&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="5"&gt;5. 패키지 정보 확인&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;firefox
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는 명령어 &lt;code&gt;apt-cache show&lt;/code&gt;, &lt;code&gt;dpkg -p&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id="6"&gt;6. 깨진 디펜던시가 있는지 확인&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;check&lt;span class="w"&gt; &lt;/span&gt;firefox
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;이거와 대응되는게 있는지 잘모르겠다.&lt;/p&gt;
-&lt;h2 id="7"&gt;7. 제공된 패키지에서 빠진 패키지에 대한 목록 보여주기&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;recommends&lt;span class="w"&gt; &lt;/span&gt;apache2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="8"&gt;8. 패키지 버전 체크&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;version&lt;span class="w"&gt; &lt;/span&gt;firefox
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id="9"&gt;9. 시스템 패키지 업데이트&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는건 &lt;code&gt;apt-get update&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="10"&gt;10. 시스템 업그레이드&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;upgrade
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는건 &lt;code&gt;apt-get upgrade&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="11"&gt;11. 커널 버전까지 시스템 업그레이드&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;full-upgrade
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는건 &lt;code&gt;apt-get dist-upgrade&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="12"&gt;12. 사용하지 않는 페키지 삭제&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;autoremove
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는건 &lt;code&gt;apt-get autoremove&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="13"&gt;13. 다운로드된 페키지에서 오래된 저장소 삭제&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;autoclean
-sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는건 &lt;code&gt;apt-get clean&lt;/code&gt;, &lt;code&gt;apt-get autoclean&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="14"&gt;14. 패키지 구성파일까지 삭제&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;purge&lt;span class="w"&gt; &lt;/span&gt;glance
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는건 &lt;code&gt;apt-purge&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="15-deb-160502"&gt;15. deb 패키지 설치 (작동이 안된다&amp;hellip; -160502)&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;deb&lt;span class="w"&gt; &lt;/span&gt;atom-amd64.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;대응되는건 &lt;code&gt;dpkg&lt;/code&gt; 에서 찾으면될듯..&lt;/p&gt;
-&lt;h2 id="16"&gt;16. 사용법은&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;apt&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;help&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;apt&lt;/code&gt; 사용법을 찾아서 작업하면 될것으로 보여짐.&lt;/p&gt;
-&lt;h2 id="_1"&gt;맺음&lt;/h2&gt;
-&lt;p&gt;동일한 명령어가 여러가지 존재하고 사용하는 방법에 따라 달라지는 것으로 보여지는데&amp;hellip;&lt;br&gt;
-패키지 메니저가 &lt;code&gt;dpkg&lt;/code&gt;, &lt;code&gt;aptitude&lt;/code&gt;, &lt;code&gt;apt&lt;/code&gt;로 나눠져있으니 편한걸로.. 그리고 설치되어있는걸로 사용하면될 듯.&lt;/p&gt;</content><category term="Operation"></category><category term="ubuntu"></category><category term="debian"></category><category term="apt"></category><category term="system"></category></entry><entry><title>un~ 너는 뭐니?</title><link href="https://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/" rel="alternate"></link><published>2016-02-03T00:02:00+09:00</published><updated>2016-02-03T00:02:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-03:/2016/02/03/un-너는-뭐니/</id><summary type="html">&lt;p&gt;언제부터인가 &lt;code&gt;un~&lt;/code&gt;으로 끝나는 파일이 생성되기 시작했다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서 찾았다.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Operation"></category><category term="lenovo"></category><category term="ubuntu"></category><category term="qualcomm"></category><category term="driver"></category><category term="wireless"></category><category term="16.04"></category></entry><entry><title>un~ 너는 뭐니?</title><link href="https://ujuc.github.io/2016/02/03/un-%EB%84%88%EB%8A%94-%EB%AD%90%EB%8B%88/" rel="alternate"></link><published>2016-02-03T00:02:00+09:00</published><updated>2016-02-03T00:02:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-03:/2016/02/03/un-너는-뭐니/</id><summary type="html">&lt;p&gt;언제부터인가 &lt;code&gt;un~&lt;/code&gt;으로 끝나는 파일이 생성되기 시작했다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;모르겠다. 얼마 안됐다. 분명 이전에는 없었다. 그런데 언제부터인가. &lt;code&gt;.blabla.un~&lt;/code&gt;이라는 파일이 생성되기 시작했다. 그래서 찾았다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://vimhelp.appspot.com/vim_faq.txt.html#faq-7.2"&gt;Vimhelp - faq-7.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;수정하고 저장할때마다 &lt;code&gt;un~&lt;/code&gt; 접미사가 붙은 파일이 생간다는 이야기에 대한 내용이다. undo 기능을 사용하기위해서 vim에서 사용하는 파일이라고 한다. 그래서 열었더니 이상한 것들만 보여줬구나&amp;hellip;&lt;/p&gt;
 &lt;p&gt;끄는 방법은 &lt;code&gt;:set noundofile&lt;/code&gt;을 처주거나 vimrc 파일에 넣어두면된다. 그러면 관련 파일들이 생성되지 않는다. 기존에 있던것들은 지워야겠지만&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="vi"></category><category term="undo"></category><category term="vimrc"></category></entry><entry><title>unattended-upgrade 써보자</title><link href="https://ujuc.github.io/2016/01/29/unattended-upgrade-%EC%8D%A8%EB%B3%B4%EC%9E%90/" rel="alternate"></link><published>2016-01-29T22:35:00+09:00</published><updated>2016-01-29T22:35:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-29:/2016/01/29/unattended-upgrade-써보자/</id><summary type="html">&lt;p&gt;Ubuntu에서 보안 업데이트만 해보자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;AWS에서 서비스를 Ubuntu로 하고 있는데, 요즘 보안 이슈들이 계속 올라오고 있고,&lt;br&gt;
@@ -1211,87 +1223,7 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;c
 &lt;a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html"&gt;Amazon Relational Database Service - mysql_rds_skip_repl_error&lt;/a&gt;&lt;br&gt;
 부분. 그냥 접근해서 &lt;code&gt;CALL mysql.rds_skip_repl_error&lt;/code&gt; 입력하면 된단다.&lt;/p&gt;
 &lt;p&gt;그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.&lt;br&gt;
-mariadb를 사용하는게 정신 건강에 좋은&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="aws"></category><category term="rds"></category><category term="mysql"></category><category term="mariadb"></category><category term="replication"></category></entry><entry><title>Stderr check in zshell</title><link href="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" rel="alternate"></link><published>2016-01-27T00:57:00+09:00</published><updated>2016-01-27T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-27:/2016/01/27/stderr-check-in-zshell/</id><summary type="html">&lt;p&gt;zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고&lt;br&gt;
-싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서&lt;br&gt;
-쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가 출력된다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="stderr" src="https://ujuc.github.io/img/2016-01-26_shell_error.png"&gt;&lt;/p&gt;
-&lt;p&gt;은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로 늘어난다.&lt;/p&gt;
-&lt;p&gt;그래서 찾았다. 찾다보니 내가 무심코 사용했던 내용에대해 조금더 볼 기회가 생긴듯.&lt;/p&gt;
-&lt;p&gt;우선 Shell에서 기본 I/O 스트림을 통해서 나오는 값들에대해서 다음 숫자로 제어할&lt;br&gt;
-수 있다.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style="text-align: center;"&gt;Handle&lt;/th&gt;
-&lt;th style="text-align: center;"&gt;Name&lt;/th&gt;
-&lt;th style="text-align: center;"&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align: center;"&gt;0&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;stdin&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;Standard input&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align: center;"&gt;1&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;stdout&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;Standard output&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align: center;"&gt;2&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;stderr&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;Standard error&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;간단히 하자.&lt;br&gt;
-go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올 것이다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;go
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png"&gt;&lt;/p&gt;
-&lt;p&gt;요놈을 안나오게 해보자.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;go&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/dev/null
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png"&gt;&lt;/p&gt;
-&lt;p&gt;오~~~&lt;/p&gt;
-&lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;hellip; 이건 설치가 되어있으니&amp;hellip; 없는걸로&amp;hellip;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;rbenv
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png"&gt;&lt;/p&gt;
-&lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을 사용하면&amp;hellip;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;rbenv&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/dev/null
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png"&gt;&lt;/p&gt;
-&lt;p&gt;음&amp;hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸 막으라했더니&amp;hellip;&lt;/p&gt;
-&lt;p&gt;그럼 Python에서는 어디로 나올까?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;check_rbenv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;음?? 암것도 안나온다&amp;hellip;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;256&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;출력값이 256이라니&amp;hellip; 혹시나 해서 봤더니 8bit밀란다. 저걸 밀면 1이 떨어지는데&amp;hellip;&lt;br&gt;
-리눅스에서 반환값이 1이면 비정상 종료일때로 알고 있다. 고로니 저넘은 제대로&lt;br&gt;
-실행된 아이가 아니라는 말씀&amp;hellip;&lt;/p&gt;
-&lt;p&gt;그럼 &lt;code&gt;which&lt;/code&gt; 명령어를 사용하여 명령어를 실행하게 되면, 정상종료면 위치를&lt;br&gt;
-말해줄꺼고 비정상 종료면 stdout으로 없다는 메시지를 남기고 비정상 종료를&lt;br&gt;
-시킨다고 해석하면 될듯.&lt;/p&gt;
-&lt;p&gt;결국 내가 하고 싶은데로 안되는거네&amp;hellip; 이런!&lt;/p&gt;
-&lt;p&gt;다른 방법으로 찾아야지 뭐 별수 있나&amp;hellip; 그래도 이번에 건진건 저렇게 숫자를&lt;br&gt;
-사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;hellip; 그정도면 1시간동안&lt;br&gt;
-작업한 것에 대한 내용은 될듯.&lt;/p&gt;</content><category term="Operation"></category><category term="zsh"></category><category term="operation"></category></entry><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="https://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><published>2015-06-14T22:30:00+09:00</published><updated>2015-06-14T22:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:/2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p class="first last"&gt;숙제를 늦게하고 있는데 잘안되서 찾다보니...&lt;/p&gt;
+mariadb를 사용하는게 정신 건강에 좋은&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="aws"></category><category term="rds"></category><category term="mysql"></category><category term="mariadb"></category><category term="replication"></category></entry><entry><title>CentOS 7 에서 zabbix-server 에러</title><link href="https://ujuc.github.io/2015/06/14/centos-7-%EC%97%90%EC%84%9C-zabbix-server-%EC%97%90%EB%9F%AC/" rel="alternate"></link><published>2015-06-14T22:30:00+09:00</published><updated>2015-06-14T22:30:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-14:/2015/06/14/centos-7-에서-zabbix-server-에러/</id><summary type="html">&lt;p class="first last"&gt;숙제를 늦게하고 있는데 잘안되서 찾다보니...&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2주전에 받은 숙제인데, 회사일이 바빠서 못하고 있다가 조금 시간이 있어서 설정하고 있는데.&lt;/p&gt;
 &lt;p&gt;CentOS 7에다가 Zabbix를 올리고있다. VM에서 4시간동안 서비스가 제대로 안돌아서, 내 설정이 잘못되었나 하여, 설치하는 메뉴얼도 바꿔서 확인을 했는데도 안되길레 혹시나 로그에는 있나하여 들어갔더니 &lt;tt class="docutils literal"&gt;journal&lt;/tt&gt; 로 보여지는 것 말고도
 &lt;tt class="docutils literal"&gt;/var/log/zabbix&lt;/tt&gt; 가 보여서 확인했더니..&lt;/p&gt;
