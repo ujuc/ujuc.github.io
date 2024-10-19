@@ -1291,7 +1291,35 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;p&gt;결국 내가 하고 싶은데로 안되는거네&amp;hellip; 이런!&lt;/p&gt;
 &lt;p&gt;다른 방법으로 찾아야지 뭐 별수 있나&amp;hellip; 그래도 이번에 건진건 저렇게 숫자를&lt;br&gt;
 사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;hellip; 그정도면 1시간동안&lt;br&gt;
-작업한 것에 대한 내용은 될듯.&lt;/p&gt;</content><category term="Operation"></category><category term="zsh"></category><category term="operation"></category></entry><entry><title>[Monitoring] SkwiSSH 설치 및 구성</title><link href="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/" rel="alternate"></link><published>2014-02-28T21:46:00+09:00</published><updated>2016-03-03T22:08:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-02-28:/2014/02/28/skwissh-install-n-config/</id><summary type="html">&lt;p&gt;Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다.&lt;/p&gt;</summary><content type="html">&lt;h1 id="skwissh"&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;SkwiSSH&lt;/a&gt;&lt;/h1&gt;
+작업한 것에 대한 내용은 될듯.&lt;/p&gt;</content><category term="Operation"></category><category term="zsh"></category><category term="operation"></category></entry><entry><title>Uubntu에서 Nabi 툴바를 tray에 넣기</title><link href="https://ujuc.github.io/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/" rel="alternate"></link><published>2014-11-09T00:44:00+09:00</published><updated>2015-04-12T14:12:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-11-09:/2014/11/09/nabi-toolbar-in-tray-on-ubuntu/</id><summary type="html">&lt;p class="first last"&gt;Ubuntu에서 nabi를 입력기로 사용한다. 그런데 언제부터인가. tray로
+들어가지 않는 문제가 발생했다. 거의 업데이트가 안되고 있어서
+그런것같기도 하지만, 그것에 대한 내용이다.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;오랜만에 Ubuntu를 설치하고 &lt;tt class="docutils literal"&gt;ibus&lt;/tt&gt; 가 조금 불편할뻔하다가...
+쓰던거 쓰자해서 &lt;tt class="docutils literal"&gt;nabi&lt;/tt&gt; 를 설치했는데.. 이놈의 tray에 들어갈려고 하지 않는다.&lt;/p&gt;
+&lt;p&gt;그래서 조금 검색을 했더니...
+&lt;tt class="docutils literal"&gt;gsettings get com.canonical.Unity.Panel &lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 라는 걸로 추가를
+해줘야한다고 하는데... 이넘은 14.10에는 없다. 조금더 찾아보니, 13.04부터는 아예
+빠져있었다.&lt;/p&gt;
+&lt;p&gt;다시 검색어를 &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;systray-whitelist&lt;/span&gt;&lt;/tt&gt; 로 검색중 &lt;strong&gt;Web UPD8&lt;/strong&gt; 에 올라온 글을 확인.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.webupd8.org/2013/05/how-to-get-systray-whitelist-back-in.html"&gt;How to whitelist systray apps in ubuntu 14.04 or 14.10(W/unity)&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;나같은 경우에는  14.10을 설치했으니.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+sudo&lt;span class="w"&gt; &lt;/span&gt;apt-add-repository&lt;span class="w"&gt; &lt;/span&gt;ppa:guran/systray-utopic&lt;span class="w"&gt;
+&lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;update&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;upgrade
+&lt;/pre&gt;
+&lt;p&gt;그리고 &lt;tt class="docutils literal"&gt;Alt + F2&lt;/tt&gt; 를 눌러 &lt;tt class="docutils literal"&gt;unity&lt;/tt&gt; 를 찾아 클릭해주면 알아서 unity가 재시작되면서
+nabi가 트레이에 들어가게 된다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;덧. 아래에보면 관련 ppa를 삭제하는 방법이 나오는데 따로 패키지를 설치할
+필요없이 아래의 명령어로 삭제가 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code bash literal-block"&gt;
+sudo&lt;span class="w"&gt; &lt;/span&gt;apt-add-repository&lt;span class="w"&gt; &lt;/span&gt;-r&lt;span class="w"&gt; &lt;/span&gt;ppa:guran/systray-utopic&lt;span class="w"&gt;
+&lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;update&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;autoremove
+&lt;/pre&gt;
+</content><category term="Operation"></category><category term="linux"></category><category term="ubuntu"></category><category term="nabi"></category><category term="setting"></category></entry><entry><title>SkwiSSH 설치 및 구성</title><link href="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/" rel="alternate"></link><published>2014-02-28T21:46:00+09:00</published><updated>2016-03-03T22:08:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2014-02-28:/2014/02/28/skwissh-install-n-config/</id><summary type="html">&lt;p&gt;Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다.&lt;/p&gt;</summary><content type="html">&lt;h1 id="skwissh"&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;SkwiSSH&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여 구성해봤다.&lt;/p&gt;
 &lt;p&gt;코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 &lt;code&gt;setup.py&lt;/code&gt;를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가 발생한다.&lt;/p&gt;
 &lt;p&gt;그리고 외부 서버를 추가하기 위해서 &lt;code&gt;server_ip:22&lt;/code&gt;를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게 된다.&lt;/p&gt;
@@ -1368,13 +1396,11 @@ $&lt;span class="w"&gt; &lt;/span&gt;crontab&lt;span class="w"&gt; &lt;/span&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/rsaikali/django-skwissh"&gt;Github&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://rsaikali.github.io/django-skwissh/"&gt;Gitpage&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Operation"></category><category term="python"></category><category term="monitoring"></category><category term="ssh"></category><category term="django"></category></entry><entry><title>Screen 명령어를 통해서 Serial 통신</title><link href="https://ujuc.github.io/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/" rel="alternate"></link><published>2013-01-09T11:39:40+09:00</published><updated>2018-03-11T11:39:40+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-01-09:/2013/01/09/screen_myeong-ryeong-eo-reur_tong-hae-seo_serial_tong-sin/</id><summary type="html">&lt;p&gt;screen으로 serial 통신을 하는 프로그램으로 사용하자.&lt;/p&gt;</summary><content type="html">&lt;p&gt;발단은 Coolterm이라는 Serial 통신 프로그램에서 Vi의 값을 변경할 수 없는 상황이 발생하여…&lt;/p&gt;
-&lt;p&gt;여기 저기 찾다가. &lt;code&gt;Screen&lt;/code&gt;을 이용하여 Serial 통신을 할 수 있다는 포스팅을 찾아서 해보니.. 괜찮다.. 복잡하게 설정을 하지 않아도 되는 상황에서는 이것을 이용하는 편이 가장 편할 듯. &lt;code&gt;minicom&lt;/code&gt;도 필요없다.&lt;/p&gt;
-&lt;p&gt;명령어 사용법 : &lt;code&gt;screen ‘디바이스 위치’ ‘전송속도’&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# Mac
-screen /dev/tty.XXX 115200
-# Linux
-screen /dev/ttyXXX 115200
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;종료할때는 &lt;Crtl&gt;+&lt;A&gt; &amp;lt;Crtl+&amp;lt;&amp;gt;로 종료할 수 있다.&lt;/p&gt;</content><category term="Operation"></category><category term="screen"></category><category term="serial"></category></entry></feed>
+&lt;/ul&gt;</content><category term="Operation"></category><category term="python"></category><category term="monitoring"></category><category term="ssh"></category><category term="django"></category></entry><entry><title>KVM on ARM project</title><link href="https://ujuc.github.io/2013/10/14/kvm_on_arm_project/" rel="alternate"></link><published>2013-10-14T11:29:17+09:00</published><updated>2018-03-11T11:29:17+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2013-10-14:/2013/10/14/kvm_on_arm_project/</id><summary type="html">&lt;p&gt;ARM 칩에서 KVM을 사용하는 프로젝트가 있어서 정리한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://systems.cs.columbia.edu/projects/kvm-arm/"&gt;Project homepage&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ARM 프로세스에서 지원하는 Virtualization을 이용하여 KVM을 올리는 프로젝트 Cortex-15A에서 작업한 내용이 있음. ARM Core는 ARMv7.&lt;/p&gt;
+&lt;p&gt;Virtual Open Systems is an innovative, agile and dynamic start-up company operating in embedded Linux, Android, SMP Virtualization and Cloud Computing. 이란다.&lt;/p&gt;
+&lt;p&gt;얼마전에 ARMv8에서 KVM을 사용하는 방법도 추가해놨다. (4월에 추가되고 7월에 업데이트 됨.)&lt;/p&gt;
+&lt;p&gt;삼성 Exynos 5250를 사용하는 Arndale Board에서 KVM을 이용하여 올렸는데 보면 QEMU가 작동하는 것을 볼 수 있다. 그러나 확실히 속도는 빠르다. 몇배속으로 돌린것인지 아니면 내가 봐왔던 ARM이 느렸던건지..&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://youtu.be/yB8bdA2hjYg"&gt;Youtube 동영상&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;덧. 2013.01.11에 작성한 글을 옮기면서 변경사항들이 있어 추가함.&lt;/p&gt;</content><category term="Operation"></category><category term="arm"></category><category term="kvm"></category><category term="hypervisor"></category></entry></feed>
