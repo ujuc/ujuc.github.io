@@ -1,7 +1,7 @@
 Title: 특정 CSS selector를 잡기위해 정규식 사용하기
 Date: 2023-01-01 22:38:23
 Modified: 2023-01-01 22:38:23
-Category: TIL
+Category: Develop
 Tags: css, selector, regex
 Slug: 특정-css-selector를-잡기위해-정규식-사용하기
 Summary: Roam Research에서 tag에 특정 값을 넣는데 필요한 설정을 찾다가 발견한 css 규식이형 사용법

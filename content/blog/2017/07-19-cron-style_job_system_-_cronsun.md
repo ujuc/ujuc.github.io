@@ -1,6 +1,6 @@
 Title: Cron-Style Job System - cronsun
 Date: 2017-07-19 17:08:01
-Category: Software
+Category: Operation
 Tags: go, cron, job system
 Slug: cron-style_job_system_-_cronsun
 Summary: Go 메일링을 보다가 cron과 비슷한 서비스라 말하기에 확인.

@@ -1,7 +1,7 @@
 Title: docker-compose Extension fields 알아보기
 Date: 2021-07-15 15:53:42
 Modified: 2021-07-15 15:53:42
-Category: Operation
+Category: Develop
 Tags: docker, compose, config file
 Slug: docker-compose-extension-fields-알아보기
 Summary: docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자.

@@ -1,6 +1,6 @@
 Title: iTerm2(nightly) Shell Integration & Utilities
 Date: 2016-05-21 00:06
-Category: Software 
+Category: Operation 
 Tags: iTerm2, terminal, Mac OS X
 Slug: iterm2(nightly)-shell-integration-&-utilities
 Summary: 오랜만에 iTerm2 nightly 버전을 받았다. 새로운 기능을 보았다.! 남긴다.!
