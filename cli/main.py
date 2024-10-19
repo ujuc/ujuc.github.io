@@ -25,9 +25,9 @@ class PostCmd(Command):
         title = self.argument("title")
         today = pendulum.now()
 
-        slug = re.sub("[^\w\s가-힣]", "", title).lower().replace(" ", "-")
+        slug = re.sub(r"[^\w\s가-힣]", "", title, flags=re.UNICODE).lower().replace(" ", "-")
         date = f"{today.month}-{today.day}"
-        post_date = today.to_datetime_string()
+        post_date = today.format("YYYY-MM-DD HH:mm")
 
         file_name = f"{date}-{slug}.md"
 
