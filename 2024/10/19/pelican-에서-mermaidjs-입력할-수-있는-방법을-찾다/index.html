@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="ujuc">
+    
+    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
+    <meta property="og:type" content="website">
+    <meta property="inLanguage" content="ko-KR">
+
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
+
+    <meta name="keyward" content="mermaid.js,python-markdown,pelican">
+    <meta property="og:title" content="pelican 에서 mermaid.js 입력할 수 있는 방법을 찾다">
+    <meta name="twitter:title" content="pelican 에서 mermaid.js 입력할 수 있는 방법을 찾다">
+    <meta itemprop="name" content="pelican 에서 mermaid.js 입력할 수 있는 방법을 찾다">
+    <meta name="description" content="mermaid.js 로 작성된 그래프를 그리고 싶었는데, 방법을 찾다가 동작하는 내용을 확인하여 구성내용을 정리한다.">
+    <meta property="og:description" content="mermaid.js 로 작성된 그래프를 그리고 싶었는데, 방법을 찾다가 동작하는 내용을 확인하여 구성내용을 정리한다.">
+    <meta name="twitter:description" content="mermaid.js 로 작성된 그래프를 그리고 싶었는데, 방법을 찾다가 동작하는 내용을 확인하여 구성내용을 정리한다.">
+    <meta itemprop="description" content="mermaid.js 로 작성된 그래프를 그리고 싶었는데, 방법을 찾다가 동작하는 내용을 확인하여 구성내용을 정리한다.">
+    <meta property="og:url" content="https://ujuc.github.io/2024/10/19/pelican-에서-mermaidjs-입력할-수-있는-방법을-찾다/">
+    <meta property="article:published_time" content="2024-10-19T12:50:00+09:00">
+    <meta property="article:modified_time" content="2024-10-19T12:50:00+09:00">
+    <meta property="article:tag" content="mermaid.js">
+    <meta property="article:tag" content="python-markdown">
+    <meta property="article:tag" content="pelican">
+
+    <!-- Title -->
+    <title>
+      잘 밤에 쓸데없는 생각하기/pelican 에서 mermaid.js 입력할 수 있는 방법을 찾다
+    </title>
+
+<!-- Style sheet -->
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
+
+<!-- Feed -->
+<link href="https://ujuc.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 ATOM" />
+<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-X9EBSXCBTS');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1014314833699403",
+    enable_page_level_ads: true
+  });
+</script>
+  </head>
+
+  <body>
+    <header>
+      <!-- navi -->
+      <div class="container" style="margin-top: 10px;">
+<ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">
+        <em class="fa-solid fa-inbox"></em> Blog
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/archives.html">
+        <em class="fa-solid fa-archive"></em> Archive
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/tags.html">
+        <em class="fa-solid fa-tags"></em> Tags
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/categories.html">
+        <em class="fa-solid fa-folder-open"></em> Categories
+      </a>
+    </li>
+</ul>      </div>
+    </header>
+
+    <div id="site-article" class="container">
+<div class="container">
+  <div class="article">
+  <!-- Title -->
+    <div class="article-title">pelican 에서 mermaid.js 입력할 수 있는 방법을 찾다</div>
+
+  <!-- Meta -->
+    <div class="article-meta">
+      <em class="fa-regular fa-calendar-plus"></em>
+        24. 10. 19.
+ / <em class="fa-solid fa-arrows-rotate"></em> 24. 10. 19.       <em class="fa-solid fa-ellipsis-vertical"></em>
+      <em class="fa-solid fa-folder-open"></em>
+        <a href="https://ujuc.github.io/category/operation.html">Operation</a>
+      <em class="fa-solid fa-ellipsis-vertical"></em>
+      <em class="fa-solid fa-tags"></em>
+        <a href="https://ujuc.github.io/tag/mermaidjs.html" class="article_tag">mermaid.js</a>
+,         <a href="https://ujuc.github.io/tag/python-markdown.html" class="article_tag">python-markdown</a>
+,         <a href="https://ujuc.github.io/tag/pelican.html" class="article_tag">pelican</a>
+    </div>
+
+  <!--Article -->
+    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+    <div class="article-text"><p>GitHub: <a href="https://github.com/Lee-W/markdown-mermaidjs">Lee-W/markdown-mermaidjs</a></p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span>markdwon-mermaidjs
+</code></pre></div>
+
+<p><code>pelicanconf.py</code> 파일에 다음 내용을 추가해준다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">MARKDOWN</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;extension_configs&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="o">...</span>
+        <span class="s2">&quot;markdown_mermaidjs&quot;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">},</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>그러면 다음과 같이 표현을 보여줄 수 있다. 따로 테마 설정없이 추가해줄 수 있다.</p>
+<div class="mermaid">
+flowchart TD
+  node_1(["Node 1"])
+  node_2["Node 2"]
+
+  node_1 --> node_2  
+</div>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+</script></div>
+    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+
+  <!-- Buy me a coffee -->
+    <div class="text-center">
+<div>
+  <a href="https://www.buymeacoffee.com/8967ktT" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/default-black.png"
+       alt="Buy Me A Coffee"
+       style="width:15%">
+  </a>
+</div>    </div>
+
+  <!-- Comment -->
+<div id="giscus">
+<script src="https://giscus.app/client.js"
+  data-repo="ujuc/ujuc.github.io"
+  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
+  data-category="General"
+  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
+  data-mapping="title"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-theme="light"
+  crossorigin="anonymous"
+  async>
+</script>
+</div><div id="utterances">
+  <script src="https://utteranc.es/client.js"
+    repo="ujuc/ujuc.github.io"
+    issue-term="url"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+</div>    <div class="text-center">🎗</div>
+  </div>
+</div>
+    </div>
+
+    <!-- body foot -->
+    <div class="container">
+    </div>
+
+    <!-- Title -->
+    <div id="site-title" class="container">
+      <hr/>
+<div class="row">
+  <div class="container">
+  <div class="site-title">
+    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+  </div>
+  <div class="site-body">
+    Anythink, Everythink!
+  </div>
+  <div>
+    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+    <span id="social-linkin"><a href="https://kr.linkedin.com/in/sungjinkang"><em class="fa-brands fa-linkedin"></em></a></span>
+    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+  </div>
+  </div>
+</div>    </div>
+
+    <!-- Footer -->
+    <div id="site-footer" class="container">
+<div class="row text-right">
+  <div class="container" style="margin-bottom: 10px;">
+    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2024 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div>    </div>
+
+    <!-- Javascript -->
+<!--bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
+    </div>
+  </body>
+</html>

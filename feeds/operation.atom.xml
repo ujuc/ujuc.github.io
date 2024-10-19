@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2024-10-03T09:40:58+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>[GitHub Actions] 왜 컨테이너에 복사를 못하니?</title><link href="https://ujuc.github.io/2024/10/03/github-actions-%EC%99%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%EB%B3%B5%EC%82%AC%EB%A5%BC-%EB%AA%BB%ED%95%98%EB%8B%88/" rel="alternate"></link><published>2024-10-03T09:40:58+09:00</published><updated>2024-10-03T09:40:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-10-03:/2024/10/03/github-actions-왜-컨테이너에-복사를-못하니/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/docker/build-push-action"&gt;docker/build-push-action&lt;/a&gt;를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 CI/CD 환경으로 GitHub Actions를 이용하여 컨테이너 이미지를 만들도록 구현을 해뒀다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Operation</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/operation.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2024-10-19T12:50:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>pelican 에서 mermaid.js 입력할 수 있는 방법을 찾다</title><link href="https://ujuc.github.io/2024/10/19/pelican-%EC%97%90%EC%84%9C-mermaidjs-%EC%9E%85%EB%A0%A5%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%9D%84-%EC%B0%BE%EB%8B%A4/" rel="alternate"></link><published>2024-10-19T12:50:00+09:00</published><updated>2024-10-19T12:50:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-10-19:/2024/10/19/pelican-에서-mermaidjs-입력할-수-있는-방법을-찾다/</id><summary type="html">&lt;p&gt;mermaid.js 로 작성된 그래프를 그리고 싶었는데, 방법을 찾다가 동작하는 내용을 확인하여 구성내용을 정리한다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;GitHub: &lt;a href="https://github.com/Lee-W/markdown-mermaidjs"&gt;Lee-W/markdown-mermaidjs&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;markdwon-mermaidjs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;pelicanconf.py&lt;/code&gt; 파일에 다음 내용을 추가해준다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;MARKDOWN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;extension_configs&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;markdown_mermaidjs&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;그러면 다음과 같이 표현을 보여줄 수 있다. 따로 테마 설정없이 추가해줄 수 있다.&lt;/p&gt;
+&lt;div class="mermaid"&gt;
+flowchart TD
+  node_1(["Node 1"])
+  node_2["Node 2"]
+
+  node_1 --&gt; node_2  
+&lt;/div&gt;
+
+&lt;script type="module"&gt;
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+&lt;/script&gt;</content><category term="Operation"></category><category term="mermaid.js"></category><category term="python-markdown"></category><category term="pelican"></category></entry><entry><title>[GitHub Actions] 왜 컨테이너에 복사를 못하니?</title><link href="https://ujuc.github.io/2024/10/03/github-actions-%EC%99%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%EB%B3%B5%EC%82%AC%EB%A5%BC-%EB%AA%BB%ED%95%98%EB%8B%88/" rel="alternate"></link><published>2024-10-03T09:40:58+09:00</published><updated>2024-10-03T09:40:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-10-03:/2024/10/03/github-actions-왜-컨테이너에-복사를-못하니/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/docker/build-push-action"&gt;docker/build-push-action&lt;/a&gt;를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 CI/CD 환경으로 GitHub Actions를 이용하여 컨테이너 이미지를 만들도록 구현을 해뒀다.&lt;/p&gt;
 &lt;p&gt;컨테이너를 만들때 사용한 Action은 &lt;a href="https://github.com/actions/checkout/"&gt;docker/build-push-action&lt;/a&gt;. Docker 에서 &lt;code&gt;docker buildx build&lt;/code&gt;를 명령어를 한번 랩핑 해서 사용할 수 있도록 해놓은 Action 인데&amp;hellip;&lt;br&gt;
 이게 multi-stage 빌드로 이미지를 빌드하게되면 잘 가져오던 파일을 runner에서 직접 빌드하여 복사하려고 하면 안되는 문제점을 확인해서 왜 안되는지에 대해서 정리하려고 한다.&lt;/p&gt;
 &lt;p&gt;또 삽질하기 싫다.&lt;/p&gt;
