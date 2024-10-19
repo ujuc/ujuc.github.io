@@ -3,7 +3,7 @@ git-ftp로 ftp 클라이언트를!
 
 :date: 2015-03-04
 :modified: 2015-04-02 00:48
-:category: Software
+:category: Operation
 :tags: git, ftp, shell, cli, bash
 :slug: git-ftp
 :summary: ftp만 열려있고 ssh가 안되는 웹 호스팅에서 작업하는 개발자를 위해...

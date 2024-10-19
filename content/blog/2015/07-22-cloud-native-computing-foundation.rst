@@ -2,7 +2,7 @@ Cloud Native Computing Foundation
 #######################################
 
 :date: 2015-07-22 22:36
-:category: Foundation
+:category: Chat
 :tags: google, kubernetes, cloud, container, 
 :slug: cncf-org
 :summary: Google에서 Kubernetes v1.0을 발표하면서 Cloud Native Computing Foundation과 함께 진행한다고 했다. 깊은글 아니다 소개 글이다. 깊은 글을 10분만에 적을 수 있겠는가?

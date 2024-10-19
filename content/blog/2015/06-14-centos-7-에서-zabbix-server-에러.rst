@@ -2,7 +2,7 @@ CentOS 7 에서 zabbix-server 에러
 ############################################
 
 :date: 2015-06-14 22:30
-:category: Develop
+:category: Operation
 :tags: zabbix, centos
 :slug: centos-7-에서-zabbix-server-에러
 :summary: 숙제를 늦게하고 있는데 잘안되서 찾다보니...

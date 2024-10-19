@@ -3,7 +3,7 @@ xonsh?
 
 :date: 2015-03-16 23:50
 :modified: 2015-04-03 00:23
-:category: Software
+:category: Develop
 :tags: python, shell
 :slug: xonsh
 :summary: Python으로 만든 Shell... 

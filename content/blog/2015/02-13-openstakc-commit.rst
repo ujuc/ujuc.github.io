@@ -3,7 +3,7 @@ OpenStack Commit
 
 :date:      2015-02-13
 :modified:  2015-03-31 22:29
-:category:  Develop
+:category:  Chat
 :tags:      openstack, commit
 :slug:      openstack-commit
 :summary:   OpenStack 커밋에 대한 내용. 이번에 커멋히면서 정리한 글.

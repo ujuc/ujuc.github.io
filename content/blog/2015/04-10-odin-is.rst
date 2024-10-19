@@ -2,7 +2,7 @@ Odin is?
 ########
 
 :date: 2015-04-10 01:00
-:category: Cloud
+:category: Operation
 :tags: openstack, cloud, parallels
 :slug: odin-is
 :summary: Parallels에서 이번에 새롭게 런칭한 Cloud 서비스 Odin.

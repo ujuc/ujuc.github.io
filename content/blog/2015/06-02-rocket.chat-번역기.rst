@@ -2,7 +2,7 @@ Rocket.Chat 번역기
 ##############################
 
 :date: 2015-06-02 22:45
-:category: Develop
+:category: Chat
 :tags: 자랑질, chat, rocketchat, 번역, javascript, meteo
 :slug: rocket.chat-번역기
 :summary: 어제 짧아서 번역을 했는데...
