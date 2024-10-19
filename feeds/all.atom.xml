@@ -98,7 +98,15 @@ Datadog 서비스를 이용해서 모니터링을 운좋게 앞앞 회사에서 
 &lt;p&gt;방향을 지정하고 그에 맞는 환경을 조성하고, 내 뒤에오는 사람들에게 어떻게 전달할지 고민하면서 실천해 나가는게 필요해 보인다.&lt;/p&gt;
 &lt;h2 id="_6"&gt;잃은 것&lt;/h2&gt;
 &lt;p&gt;건강.&lt;br&gt;
-채력.&lt;/p&gt;</content><category term="Chat"></category><category term="회고"></category></entry><entry><title>[GitHub Actions] 왜 컨테이너에 복사를 못하니?</title><link href="https://ujuc.github.io/2024/10/03/github-actions-%EC%99%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%EB%B3%B5%EC%82%AC%EB%A5%BC-%EB%AA%BB%ED%95%98%EB%8B%88/" rel="alternate"></link><published>2024-10-03T09:40:58+09:00</published><updated>2024-10-03T09:40:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-10-03:/2024/10/03/github-actions-왜-컨테이너에-복사를-못하니/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/docker/build-push-action"&gt;docker/build-push-action&lt;/a&gt;를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 CI/CD 환경으로 GitHub Actions를 이용하여 컨테이너 이미지를 만들도록 구현을 해뒀다.&lt;/p&gt;
+채력.&lt;/p&gt;
+&lt;h2 id="_7"&gt;덧. 짧은 퇴사 회고 (페북 버전)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;나는 내 40대가 되었을땐 내 생각만 옳고 내 말만 옳은 사람이 안되기 위해 무엇을 해야할지 고민을 하게됨&lt;/li&gt;
+&lt;li&gt;나는 왜 밤낮없이 일에 집중을 했던가에 대해 생각하게됨.&lt;/li&gt;
+&lt;li&gt;잊으려고 생각하지 않으려고 몸을 갈아넣었던듯.&lt;/li&gt;
+&lt;li&gt;옵져빌리티를 하기위해 무엇을 쌓아가야할지에 대해 더 고민하게됨.&lt;/li&gt;
+&lt;li&gt;그져 에러 알림만 오면 되는 것인가?&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Chat"></category><category term="회고"></category></entry><entry><title>[GitHub Actions] 왜 컨테이너에 복사를 못하니?</title><link href="https://ujuc.github.io/2024/10/03/github-actions-%EC%99%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%EB%B3%B5%EC%82%AC%EB%A5%BC-%EB%AA%BB%ED%95%98%EB%8B%88/" rel="alternate"></link><published>2024-10-03T09:40:58+09:00</published><updated>2024-10-03T09:40:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-10-03:/2024/10/03/github-actions-왜-컨테이너에-복사를-못하니/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/docker/build-push-action"&gt;docker/build-push-action&lt;/a&gt;를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 CI/CD 환경으로 GitHub Actions를 이용하여 컨테이너 이미지를 만들도록 구현을 해뒀다.&lt;/p&gt;
 &lt;p&gt;컨테이너를 만들때 사용한 Action은 &lt;a href="https://github.com/actions/checkout/"&gt;docker/build-push-action&lt;/a&gt;. Docker 에서 &lt;code&gt;docker buildx build&lt;/code&gt;를 명령어를 한번 랩핑 해서 사용할 수 있도록 해놓은 Action 인데&amp;hellip;&lt;br&gt;
 이게 multi-stage 빌드로 이미지를 빌드하게되면 잘 가져오던 파일을 runner에서 직접 빌드하여 복사하려고 하면 안되는 문제점을 확인해서 왜 안되는지에 대해서 정리하려고 한다.&lt;/p&gt;
 &lt;p&gt;또 삽질하기 싫다.&lt;/p&gt;
