@@ -3,6 +3,12 @@ name: github pages
 on:
   push:
     branches: develop
+    paths-ignore:
+      - '.github/**'
+      - 'cli/**'
+
+concurrency:
+  group: ${{ github.workflow }}
 
 jobs:
   deploy:
