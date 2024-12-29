@@ -6,7 +6,7 @@ Tags: 회고, retrospective
 Slug: adieu-2023-bienvenue-2024
 Summary: 23년도 끝나가기에 대설특보가 내린날 작성.
 
-2022년 회고: [Adieu 2022, Bienvenue 2023](https://ujuc.github.io//2022/12/29/adieu-2022-bienvenue-2023)
+2022년 회고: [Adieu 2022, Bienvenue 2023](https://ujuc.github.io/2022/12/29/adieu-2022-bienvenue-2023)
 
 [TOC]
 
