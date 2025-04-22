@@ -1,7 +1,7 @@
 ## Blog 글 생성 
 
 ```shell script
-poetry run cli post <TITLE>
+uv run cli post <TITLE>
 ```
 
 ## Pelican 명령어
@@ -9,5 +9,5 @@ poetry run cli post <TITLE>
 ### blog preview
 
 ```shell script
-poetry run cli preview
+uv run cli preview
 ```

@@ -6,12 +6,12 @@ authors = [
     { name = "sungjin.kang", email = "ujuc@ujuc.me" }
 ]
 dependencies = [
-    "pendulum>=3.0.0",
-    "pelican>=4.9.1",
-    "markdown>=3.6",
-    "rich>=13.7.1",
+    "pendulum>=3.1.0",
+    "pelican>=4.11.0",
+    "markdown>=3.8",
+    "rich>=14.0.0",
     "cleo>=2.1.0",
-    "markdown-mermaidjs>=1.0.0",
+    "markdown-mermaidjs>=2.0.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.12"
