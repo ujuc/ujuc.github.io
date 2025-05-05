@@ -459,14 +459,14 @@ Datadog 서비스를 이용해서 모니터링을 운좋게 앞앞 회사에서 
 &lt;hr&gt;
 &lt;h1 id="_1"&gt;하려고 했던일&lt;/h1&gt;
 &lt;h2 id="_2"&gt;사진&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="2023년 1855장" src="https://ujuc.github.io/img/2023/12-30-photo-list.png" width="30%"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="2023년 1855장" src="https://ujuc.github.io/img/2023/12-30/photo-list.png" width="30%"&gt;&lt;/p&gt;
 &lt;p&gt;가방에 매번 카메라를 넣고 다니고, 나갈때 가방을 챙겨서 카메라로 찍고 댕겼으나, 그렇게 많은 사진을 찍지는 못했다.&lt;br&gt;
 뭐 셔터 누르는게 항상 쉽지 않으니까&amp;hellip;&lt;br&gt;
 폰에서는 먹는거 사진이 더 많은 상태.&lt;br&gt;
 이리저리 뭔가 끄집어 내서 보정하고 작업할 수 있는건 얼마 없어진듯.&lt;/p&gt;
 &lt;h2 id="10"&gt;책 10권 이상 읽기&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="2023년 25권-1" src="https://ujuc.github.io/img/2023/12-30-book-list-1.jpeg" width="30%"&gt;&lt;br&gt;
-&lt;img alt="2023년 25권-2" src="https://ujuc.github.io/img/2023/12-30-book-list-2.jpeg" width="30%"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="2023년 25권-1" src="https://ujuc.github.io/img/2023/12-30/book-list-1.jpeg" width="30%"&gt;&lt;br&gt;
+&lt;img alt="2023년 25권-2" src="https://ujuc.github.io/img/2023/12-30/book-list-2.jpeg" width="30%"&gt;&lt;/p&gt;
 &lt;p&gt;북적북적 기록 25권&amp;hellip;&lt;br&gt;
 높아져서 기본 캐릭터로는 안되서 하나 질렀다! 내년에도 높은걸 살 수 있길&amp;hellip;;&lt;/p&gt;
 &lt;p&gt;읽은 목록을 보니 너무 몰빵을 해놔서 내년에는 기술 책을 봐야겠다. 안되겠다.&lt;br&gt;
@@ -592,7 +592,7 @@ Datadog 서비스를 이용해서 모니터링을 운좋게 앞앞 회사에서 
 새로 갈아엎고 다시 만드는 중이다. 이제는 도구가 아니라 작성하는 방법을 바꿔야 할꺼같은데&amp;hellip; Outliner 형식을 버릴 수 없는 게 문제다. Obsidian을 쓸려고 하다가 덮은 것도 Outliner를 이용해서 순서 변경이나 정렬을 하는 것에 익숙해져서 인 듯.&lt;br&gt;
 그래서 다시 작성 중이고, 또 작성 중일 듯.&lt;/p&gt;
 &lt;h3 id="10"&gt;최소 10권 읽기&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2022/1229-book.jpeg" width="30%"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2022/12-29/book.jpeg" width="30%"&gt;&lt;/p&gt;
 &lt;p&gt;북적북적으로 기록한 건 6권.&lt;br&gt;
 더 읽었을 수도 있을 거 같은데 기록하지 않았기에 따로 명시하지 않는다. 읽고 남겨야 한다는 강박감이 있어서 그냥 읽고 아무것도 안 남기는 방향으로&amp;hellip;&lt;br&gt;
 읽다는 것에 대해서 더 잘해보자.&lt;/p&gt;
@@ -725,21 +725,17 @@ Datadog 서비스를 이용해서 모니터링을 운좋게 앞앞 회사에서 
 &lt;p&gt;이 세가지를 한번에 구성해두면, APM을 통해서 들어가거나 Trace를 통해서 서비스의 문제점을 찾을때 연관된 내용들을 손쉽게 찾을 수 있을 것이다.&lt;/p&gt;</content><category term="Operation"></category><category term="datadog"></category><category term="kubernetes"></category><category term="monitoring"></category></entry><entry><title>Roam Research - Tag CSS 지정</title><link href="https://ujuc.github.io/2022/02/17/roam-research--tag-css-%EC%A7%80%EC%A0%95/" rel="alternate"></link><published>2022-02-17T21:22:11+09:00</published><updated>2022-02-17T21:22:11+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2022-02-17:/2022/02/17/roam-research--tag-css-지정/</id><summary type="html">&lt;p&gt;Roam Research 에서 tag 지정할때 눈에 좀 띄게하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;그냥 본론으로 들어가자.&lt;br&gt;
 Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇게 간단해도 되나 싶은&amp;hellip;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;[[roam/css]]&lt;/code&gt; 페이지를 생성한다.&lt;ul&gt;
-&lt;li&gt;앞으로 모든 CSS 파일을 수정하는건 여기서 한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[[roam/css]]&lt;/code&gt; 페이지를 생성한다.&lt;br&gt;
+   - 앞으로 모든 CSS 파일을 수정하는건 여기서 한다.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/code block&lt;/code&gt;을 선택한다.&lt;/li&gt;
 &lt;li&gt;언어 선택을 &lt;code&gt;css&lt;/code&gt;로 변경해준다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[data-tag="{TAG_NAME}"]&lt;/code&gt; CSS를 먹일 태그를 지정해준다.&lt;ul&gt;
-&lt;li&gt;앞뒤로 뭔가를 붙일려면 &lt;code&gt;[data-tag={TAG_NAME}"]::before&lt;/code&gt;, &lt;code&gt;[data-tag="{TAG_NAME}"]::after&lt;/code&gt; 를 이용해서 앞뒤에 특정 내용을 붙일 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[data-tag="{TAG_NAME}"]&lt;/code&gt; CSS를 먹일 태그를 지정해준다.&lt;br&gt;
+   - 앞뒤로 뭔가를 붙일려면 &lt;code&gt;[data-tag={TAG_NAME}"]::before&lt;/code&gt;, &lt;code&gt;[data-tag="{TAG_NAME}"]::after&lt;/code&gt; 를 이용해서 앞뒤에 특정 내용을 붙일 수 있다.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="_1"&gt;예제&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="생각 tag 나가기" src="https://ujuc.github.io/img/2022-02-17-roam_tag.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="생각 tag 나가기" src="https://ujuc.github.io/img/2022/02-17/roam_tag.png"&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="nt"&gt;data-tag&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;생각&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mh"&gt;#1A87C0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mh"&gt;#1a87c0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;bold&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
@@ -981,7 +977,7 @@ Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇�
 &lt;p&gt;올해 블로그에 대한 결산은 안해도 될듯. 작년이랑 달라질게 없는 상황이라.&lt;br&gt;
 이전에 써둔 내 글을 다른 글들이 넘어가질 못한다.&lt;/p&gt;</content><category term="Chat"></category><category term="회고"></category><category term="retrospective"></category></entry><entry><title>Daily Retrospective</title><link href="https://ujuc.github.io/2020/07/18/daily-retrospective/" rel="alternate"></link><published>2020-07-18T09:01:52+09:00</published><updated>2020-07-18T09:01:52+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2020-07-18:/2020/07/18/daily-retrospective/</id><summary type="html">&lt;p&gt;6월부터 매일 회고를 쓰고 있다. (주말은 하고 싶을때만&amp;hellip;)&lt;/p&gt;</summary><content type="html">&lt;p&gt;이번년도 시작할때 메모 컨설팅을 받았으나, 코로나로 인해서 제대로 못하였고, 내가 아는 방향과 같이 나가는 것이 있어서 뭔가 행동 방식을 추가로 하게되는 좋은 계기를 만들었다.&lt;/p&gt;
 &lt;p&gt;그러다가 매일했던 일과 매일 보는 문서 내용을 기억하못하는 현상이 새롭게 나오지 않다보니 큰일이다 싶어서 노트 작성을 시작했다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Notion daily retrospective" src="https://ujuc.github.io/img/2020-07-18_daily-retrospective-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Notion daily retrospective" src="https://ujuc.github.io/img/2020/07-18/daily-retrospective-1.png"&gt;&lt;/p&gt;
 &lt;p&gt;그래도 꾸준히 적고 있으며, 주말은 내가 하고 싶을때만 만들고 회사 쉬는날은 쉬어버리는 !! 너프한 회고!&lt;/p&gt;
 &lt;p&gt;이제는 이 회고들을 정리하는 회고를 만들어야되는데&amp;hellip; 이거 언제하자&amp;hellip; 한번 시작해야 되는데&amp;hellip;&lt;br&gt;
 글 정리하는게 귀찮...... (자동으로 하고싶다&amp;hellip;)&lt;/p&gt;
@@ -1513,7 +1509,7 @@ git restore (-p|--patch) [&amp;lt;option&amp;gt;] [--source=&amp;lt;tree&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;하게되면 git commit 입력창이 VS code 창으로 뜬다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="git commit 창 vs code" src="https://ujuc.github.io/img/2020-06-11_git-commit-at-vs-code.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="git commit 창 vs code" src="https://ujuc.github.io/img/2020/06-11/git-commit-at-vs-code.png"&gt;&lt;/p&gt;
 &lt;p&gt;이제 Tower 구독 결제가 되어있는지 한번 확인하고 없에야지..&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;번외&lt;/strong&gt;&lt;/p&gt;
@@ -1734,12 +1730,12 @@ Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 &lt;h4 id="kube"&gt;Kube&lt;/h4&gt;
 &lt;p&gt;회사에서도 사용할 정도가 아니었고, 내가 사용하는 서비스들도 Kube를 사용할만큼&lt;br&gt;
 큰 시스템이 아니다. 그러다보니 관심에서 멀어졌다.&lt;/p&gt;
-&lt;p&gt;Kube를하면 MSA라고 하는 분들도 계시고, 인프라를 하려면 Kube를 모르면 &lt;br&gt;
+&lt;p&gt;Kube를하면 MSA라고 하는 분들도 계시고, 인프라를 하려면 Kube를 모르면&lt;br&gt;
 안된다고 다른 분들이 이야기 하시지만&amp;hellip;&lt;br&gt;
-아직 서비스들은 그것들을 다 수용할 정도는 안된다고 본다. &lt;br&gt;
+아직 서비스들은 그것들을 다 수용할 정도는 안된다고 본다.&lt;br&gt;
 그정도로 크게 하지 않으면 의미가 없다.&lt;/p&gt;
 &lt;h4 id="_3"&gt;인프라&lt;/h4&gt;
-&lt;p&gt;서버리스로 넘어가는 것이라 생각했지만 컨테이너까지&amp;hellip; &lt;br&gt;
+&lt;p&gt;서버리스로 넘어가는 것이라 생각했지만 컨테이너까지&amp;hellip;&lt;br&gt;
 이후 서버리스가 가능하게 코드를 짜지 않는이상 다시 하기가 쉽지 않다.&lt;br&gt;
 개발자가 그것을 할 줄 알고 필요하다고 느껴야 그에 맞는 코드를 구성해서 할껀데&amp;hellip;&lt;br&gt;
 아직 그정도는 아닌듯&amp;hellip;&lt;/p&gt;
@@ -1821,15 +1817,15 @@ Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 &lt;hr&gt;
 &lt;h2 id="_18"&gt;블로그&lt;/h2&gt;
 &lt;h3 id="2019"&gt;2019년 작성 리스트&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2019-12-28/blog_list.png" width="30%"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2019/12-28/blog_list.png" width="30%"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;블로그 글 12개 썼다!&lt;/li&gt;
 &lt;li&gt;아직 일자가 남아서 늘수 있다. 그래도 1개정도..?&lt;/li&gt;
 &lt;li&gt;이글까지하면 13개지만 빼자&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_19"&gt;정산&lt;/h3&gt;
-&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2019-12-28/blog_ga1.png" width="30%"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="2019 blog ga daily" src="https://ujuc.github.io/img/2019-12-28/blog_ga2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2019/12-28/blog_ga1.png" width="30%"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="2019 blog ga daily" src="https://ujuc.github.io/img/2019/12-28/blog_ga2.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;내가 답답해서 에드센스뺐다.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Chat"></category><category term="회고"></category><category term="retrospective"></category></entry><entry><title>iTerm shortcut 설정</title><link href="https://ujuc.github.io/2019/12/25/iterm_shortcut_seor-jeong/" rel="alternate"></link><published>2019-12-25T13:06:25+09:00</published><updated>2020-01-10T07:38:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-12-25:/2019/12/25/iterm_shortcut_seor-jeong/</id><summary type="html">&lt;p&gt;iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 중간중간 건너 띄워서 가야할때, 사용하는 단축키를 정리한다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="0110"&gt;01/10 추가&lt;/h2&gt;
@@ -1839,7 +1835,7 @@ Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 &lt;li&gt;Profile &amp;gt; Keys&lt;/li&gt;
 &lt;li&gt;Presets&amp;hellip; &amp;gt; Natual Text Editing&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2020-01-10_iterm2.png" width="30%"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://ujuc.github.io/img/2019/12-25/iterm2.png" width="30%"&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;매번 찾았는데&amp;hellip; 이제는 기억을 못해서 써두려고 한다.&lt;/p&gt;
 &lt;p&gt;원래 글은 &lt;a href="https://stackoverflow.com/questions/6205157/iterm-2-how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line"&gt;(stackoverflow) iTerm 2: How to set keyboard shorcuts to jump to beginning/end of line?&lt;/a&gt;&lt;/p&gt;
@@ -3154,7 +3150,7 @@ Options:
 &lt;li&gt;기록&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;기록을 그렇게 꼼꼼하게 하지 못하였다. 추가로 &lt;a href="https://www.notion.so/"&gt;Notion&lt;/a&gt;을 사용하면서 일정이나 내가 보는 것들을 꾸준히 써가고 있다. 온라인 메모와 같이 오프라인 메모도 같이 작성 중이다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="blog_list" src="https://ujuc.github.io/img/2018-12-28/blog_list.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="blog_list" src="https://ujuc.github.io/img/2018/12-28/blog_list.png"&gt;&lt;/p&gt;
 &lt;p&gt;블로그 글은 14개의 글 작성.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="2018"&gt;2018년 하였던 일&lt;/h2&gt;
@@ -3181,7 +3177,7 @@ Options:
 &lt;li&gt;번역&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;정작 OpenStack 번역은 얼마 못한 듯.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="zanata_activity" src="https://ujuc.github.io/img/2018-12-28/zanata_activity.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="zanata_activity" src="https://ujuc.github.io/img/2018/12-28/zanata_activity.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://translate.openstack.org/profile/view/ujuc?dswid=5951"&gt;Zanata:&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;다른 번역한 것들&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/iamkun/dayjs/pull/206"&gt;Add Korean locale by ujuc · Pull Request #206 · iamkun/dayjs&lt;/a&gt;&lt;/p&gt;
@@ -3229,8 +3225,8 @@ Options:
 &lt;p&gt;기록한 것들을 정리하고 사용할 수 있는 방안도 마련해야 될 듯. 그러나 쉽지 않다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="_2"&gt;블로그 정산&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="blog_ga_1" src="https://ujuc.github.io/img/2018-12-28/blog_ga_1.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="blog_ga_2" src="https://ujuc.github.io/img/2018-12-28/blog_ga_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="blog_ga_1" src="https://ujuc.github.io/img/2018/12-28/blog_ga_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="blog_ga_2" src="https://ujuc.github.io/img/2018/12-28/blog_ga_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;git-flow-github-flow-gitlab-flow 는&amp;hellip; 압도적이구만..;;;&lt;/p&gt;</content><category term="Chat"></category><category term="회고"></category><category term="retrospective"></category></entry><entry><title>Atom Git 커밋 메시지 Styleguides 속 Emoji</title><link href="https://ujuc.github.io/2018/12/16/atom_git_keo-mis_me-si-ji_styleguides_sog_emoji/" rel="alternate"></link><published>2018-12-16T00:31:14+09:00</published><updated>2018-12-16T00:31:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-12-16:/2018/12/16/atom_git_keo-mis_me-si-ji_styleguides_sog_emoji/</id><summary type="html">&lt;p&gt;블로그 글을 읽다가 커밋메시지에 이모지를 넣는 방법이 있다고 하여 정리해보았다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.weirdx.io/post/55244"&gt;블로그&lt;/a&gt; 에서 글을 읽다가 커밋 메시지에 Emoji를 사용했더니 구분이 되서 좋다고 하셔서 확인.&lt;br&gt;
 우선은 Atom에서 사용하는 것인데&amp;hellip; 여기다가 내가 필요한 내용들을 넣어서 사용하면 될것같아보인다.&lt;/p&gt;
 &lt;p&gt;역시 글보다는 그림인가?&lt;/p&gt;
@@ -3257,11 +3253,11 @@ Options:
 &lt;p&gt;언젠가 GPG키를 이용해서 git sign을 위해서 GPG suite를 설치해놨는데. 이넘이 문제일줄이야..&lt;/p&gt;
 &lt;h2 id="_1"&gt;증상&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;shift + cmd +r&lt;/code&gt; , &lt;code&gt;shift + cmd + f&lt;/code&gt; 키를 누르면 아래 모습처럼 GPG 키가&amp;hellip; 계속 복사가 된다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="shift_cmd_r" src="https://ujuc.github.io/img/2018-11-27_shift_cmd_r.png"&gt; &lt;/p&gt;
-&lt;p&gt;&lt;img alt="shift_cmd_f" src="https://ujuc.github.io/img/2018-11-27_shift_cmd_f.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="shift_cmd_r" src="https://ujuc.github.io/img/2018/11-27/shift_cmd_r.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="shift_cmd_f" src="https://ujuc.github.io/img/2018/11-27/shift_cmd_f.png"&gt;&lt;/p&gt;
 &lt;h2 id="_2"&gt;해결&lt;/h2&gt;
 &lt;p&gt;간단하다. System Preferences 가서 키보드 단축키에서 GPG suite에 관련된 것들을 unchecked 한다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="system_preferences" src="https://ujuc.github.io/img/2018-11-27_system_preferences.png"&gt; &lt;/p&gt;</content><category term="Operation"></category><category term="jetbrains idea"></category><category term="gpg suite"></category><category term="key mapping"></category></entry><entry><title>PSR-1: Basic Coding Standard</title><link href="https://ujuc.github.io/2018/11/17/psr-1:_basic_coding_standard/" rel="alternate"></link><published>2018-11-17T12:11:55+09:00</published><updated>2019-03-22T16:50:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-17:/2018/11/17/psr-1:_basic_coding_standard/</id><summary type="html">&lt;p&gt;PSR-1, 기본 코딩 표준 번역&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.php-fig.org/psr/psr-1/"&gt;PSR-1: Basic Coding Standard - PHP-FIG&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="system_preferences" src="https://ujuc.github.io/img/2018/11-27/system_preferences.png"&gt;&lt;/p&gt;</content><category term="Operation"></category><category term="jetbrains idea"></category><category term="gpg suite"></category><category term="key mapping"></category></entry><entry><title>PSR-1: Basic Coding Standard</title><link href="https://ujuc.github.io/2018/11/17/psr-1:_basic_coding_standard/" rel="alternate"></link><published>2018-11-17T12:11:55+09:00</published><updated>2019-03-22T16:50:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-11-17:/2018/11/17/psr-1:_basic_coding_standard/</id><summary type="html">&lt;p&gt;PSR-1, 기본 코딩 표준 번역&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.php-fig.org/psr/psr-1/"&gt;PSR-1: Basic Coding Standard - PHP-FIG&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;이 표준에 대한 섹션은 공유하는 PHP 코드 간의 높은 수준의 기술적인 상호 운용성을 보장하기 위해 표준 코딩 요소로 간주되어야 하는 것에 대해서 설명합니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3691,7 +3687,7 @@ Markdown = {version = &amp;quot;&amp;lt;3.0&amp;quot;}
 &lt;p&gt;여기서 나와 다른 점에 대해서 기록하고 넘어가기로 한다.&lt;/p&gt;
 &lt;p&gt;나는 global로 pylint를 설치하지 않았다. 귀찮기도하고 많은 버전을 섞어쓰는 환경이다보니&amp;hellip; &lt;code&gt;pipenv&lt;/code&gt; 를 사용하고 있는데 이것에 대한 내용은 없다. global 하게 패키지까는 것도 부담스럽고&amp;hellip;&lt;/p&gt;
 &lt;p&gt;다음 사진과 같이 나는 내용을 수정해서 사용한다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="My_settings" src="https://ujuc.github.io/img/2018-09-24_pycharm_export_tool_setting.png"&gt;&lt;/p&gt;</content><category term="Develop"></category><category term="pycharm"></category><category term="pylint"></category><category term="python"></category><category term="lint"></category></entry><entry><title>Recoll - 리눅스에서 GUI로 문서 검색을 해보자</title><link href="https://ujuc.github.io/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/" rel="alternate"></link><published>2018-09-23T23:27:51+09:00</published><updated>2018-09-23T23:27:51+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-23:/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/</id><summary type="html">&lt;p&gt;페이스북에서 보았던 recoll이라는 프로그램에 대해서 정리만 해둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.facebook.com/groups/korelnxuser/permalink/1108262849348464/0"&gt;페이스북 우분투 유저 그룹에 올라온 글&lt;/a&gt;이 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My_settings" src="https://ujuc.github.io/img/2018/09-24/pycharm_export_tool_setting.png"&gt;&lt;/p&gt;</content><category term="Develop"></category><category term="pycharm"></category><category term="pylint"></category><category term="python"></category><category term="lint"></category></entry><entry><title>Recoll - 리눅스에서 GUI로 문서 검색을 해보자</title><link href="https://ujuc.github.io/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/" rel="alternate"></link><published>2018-09-23T23:27:51+09:00</published><updated>2018-09-23T23:27:51+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-23:/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/</id><summary type="html">&lt;p&gt;페이스북에서 보았던 recoll이라는 프로그램에 대해서 정리만 해둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.facebook.com/groups/korelnxuser/permalink/1108262849348464/0"&gt;페이스북 우분투 유저 그룹에 올라온 글&lt;/a&gt;이 있었다.&lt;/p&gt;
 &lt;p&gt;이글은 나중에 혹시나 쓸까하여&amp;hellip; 리눅스를 메인을 사용할 일은 거의 없긴하다만&amp;hellip;&lt;/p&gt;
 &lt;p&gt;소개글은 다음과 같다. &lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.fossmint.com/recoll-file-text-search-tool-for-linux/"&gt;FOSS Mint - Recoll - A Full-Text GUI Search Tool for Linux System&lt;/a&gt;&lt;/p&gt;
@@ -5462,9 +5458,9 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;dpkg&lt;span class="w"&gt; &lt;/span&gt;
 &lt;p&gt;뭐 이정도까지&amp;hellip; 더해봤자&amp;hellip; 의미가 없다&amp;hellip;&lt;/p&gt;</content><category term="번역"></category><category term="openstack"></category><category term="documents"></category><category term="spec"></category><category term="architecture design guide"></category></entry><entry><title>iTerm2(nightly) Shell Integration &amp; Utilities</title><link href="https://ujuc.github.io/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/" rel="alternate"></link><published>2016-05-21T00:06:00+09:00</published><updated>2016-05-21T00:06:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-05-21:/2016/05/21/iterm2(nightly)-shell-integration-&amp;-utilities/</id><summary type="html">&lt;p&gt;오랜만에 iTerm2 nightly 버전을 받았다. 새로운 기능을 보았다.! 남긴다.!&lt;/p&gt;</summary><content type="html">&lt;p&gt;저번에 베타 버전을 설치했던 것으로 기억했던 iTerm2을 버리고 Stable 버전으로 넘어갔다가&amp;hellip;&lt;/p&gt;
 &lt;p&gt;아&amp;hellip; 이건 아니다 싶어서 다시 nightly 버전으로 점프하여 설치를 하였더니&amp;hellip;&lt;/p&gt;
 &lt;p&gt;뜨는 무언가.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="install shell integration" src="https://ujuc.github.io/img/2016-05-21_warning_shell_integration.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="install shell integration" src="https://ujuc.github.io/img/2016/05-21/warning_shell_integration.png"&gt;&lt;/p&gt;
 &lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고 설치&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016-05-21_installing_shell_integration.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016/05-21/installing_shell_integration.png"&gt;&lt;/p&gt;
 &lt;p&gt;음.! 뭔가 이상하다&amp;hellip;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;You&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;also&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;these&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="n"&gt;imgcat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
@@ -5476,12 +5472,12 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;dpkg&lt;span class="w"&gt; &lt;/span&gt;
 &lt;p&gt;????&lt;/p&gt;
 &lt;p&gt;그래서 실행해봤다.!&lt;/p&gt;
 &lt;h3 id="imgcat"&gt;imgcat&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="imgcat image!" src="https://ujuc.github.io/img/2016-05-21_imgcat_image.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="imgcat image!" src="https://ujuc.github.io/img/2016/05-21/imgcat_image.png"&gt;&lt;/p&gt;
 &lt;p&gt;용량이 크면 여는데 오래걸린다. Raw 파일은 정말 오래걸린다. tif 파일은 정말&amp;hellip; (70MB가 넘어가니 엄청 걸린다.)&lt;/p&gt;
 &lt;h3 id="it2dl"&gt;it2dl&lt;/h3&gt;
 &lt;p&gt;모르겠다 관심없다.&lt;/p&gt;
 &lt;h3 id="_1"&gt;설치를 못했다나.. 다시 해보고 싶다면&amp;hellip;&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="menu" src="https://ujuc.github.io/img/2016-05-21_menu.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="menu" src="https://ujuc.github.io/img/2016/05-21/menu.png"&gt;&lt;/p&gt;
 &lt;h3 id="_2"&gt;참고&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/gnachman/iterm2-website/blob/master/source/utilities.md"&gt;iterm2 - utilites&lt;/a&gt;&lt;/li&gt;
@@ -5499,7 +5495,7 @@ highlight ColorColumn ctermbg=17 guibg=navyblue
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;위와 같이 설정하면 아래와 같이 줄이 그어져있는 모습을 볼 수 있다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="vim_ex" src="https://ujuc.github.io/img/2016-04-26_vim.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="vim_ex" src="https://ujuc.github.io/img/2016/04-26/vim.png"&gt;&lt;/p&gt;
 &lt;p&gt;이건 덤&amp;hellip;&lt;/p&gt;
 &lt;p&gt;vim에서 사용하는 색이름과 설정값에 대해서 확인할 수 있다.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim"&gt;Xterm256 color names for console Vim&lt;/a&gt;&lt;/p&gt;</content><category term="Develop"></category><category term="vim"></category><category term="vimrc"></category><category term="colorcolumn"></category><category term="cc"></category></entry><entry><title>Install wireless Qualcomm Atheros device driver on Lenovo Y700</title><link href="https://ujuc.github.io/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/" rel="alternate"></link><published>2016-04-22T22:59:00+09:00</published><updated>2016-04-22T22:59:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-04-22:/2016/04/22/install-wireless-qualcomm-atheros-device-driver-on-lenovo-y700/</id><summary type="html">&lt;p&gt;Qualcomm Atheros device driver on Lenovo Y700&lt;/p&gt;</summary><content type="html">&lt;p&gt;새롭게 컴퓨터를 구입했다. Lenovo ideapad Y700. 문제는 다른 컴퓨터들은 다른 모듈이 연결되어있는데. 이 컴만 그런건지 아니면 일정 라인이상만 그런건지 모르겠으나, Qualcomm Atheros가 연결되어있어 커널에서 wifi를 잡지못하는 문제가 발생했다.&lt;/p&gt;
@@ -5871,12 +5867,12 @@ forge@v0.1.7:
 &lt;p&gt;먼가 번역을 하다보니 2주가 지났다&amp;hellip; 이런 내용들이 매주 업데이트가 되고있으니.. 언제 다 보나.ㅡ.ㅡ;; 따라가는 것도 힘들고. 몇몇 내용은 봐도 모르겠고.&lt;/p&gt;
 &lt;p&gt;그래도 봐야지 흐름이라도 알지&amp;hellip;&lt;/p&gt;</content><category term="Chat"></category><category term="openstack"></category><category term="mailling"></category><category term="digest"></category></entry><entry><title>Tig Manual</title><link href="https://ujuc.github.io/2016/02/10/tig-manual/" rel="alternate"></link><published>2016-02-10T02:08:00+09:00</published><updated>2019-03-23T16:50:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-02-10:/2016/02/10/tig-manual/</id><summary type="html">&lt;p&gt;Tig 메뉴얼 번역 축약본&lt;/p&gt;</summary><content type="html">&lt;p&gt;Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 GUI 프로그램 못지않은 사용성을 보여주고 있다. 단지&amp;hellip; 명령어가 많아질 뿐이다&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/jonas/tig"&gt;Tig Homepage&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tig snap" src="https://ujuc.github.io/img/2016-02-10_tig_snap.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tig snap" src="https://ujuc.github.io/img/2016/02-10/snap.png"&gt;&lt;/p&gt;
 &lt;p&gt;실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&amp;hellip; 그리고 한국어로 곧장 옮기니 이상한 부분이 있어&amp;hellip;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a href="http://jonas.nitro.dk/tig/manual.html"&gt;The Tig Manual&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;이 문서는 Tig에 대한 메뉴얼이며, Tig는 Git에 대한 ncurses 기반의 텍스트 모드 인터페이스로 작성되었습니다. Tig는 Git 저장소의 변화를 확인하고 추가적으로 다양한 Git 명령에 대한 출력 내용을 확인할 수 있는 pager로 사용할 수 있습니다. Pager로 사용할 경우, stdin에서 입력을 표시하고, 생상을 추가할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;저장소 확인용으로 사용할 경우, Tig는 기초적인 Git 명령을 사용하여 요약된 커밋 로그, 로그 메시지에서의 커밋 내용, diffstat, diff 와 같은 다양한 뷰를 이용하여 사용자에게 보여줍니다.&lt;/p&gt;
+&lt;p&gt;이 문서는 Tig 에 대한 메뉴얼이며, Tig 는 Git에 대한 ncurses 기반의 텍스트 모드 인터페이스로 작성되었습니다. Tig는 Git 저장소의 변화를 확인하고 추가적으로 다양한 Git 명령에 대한 출력 내용을 확인할 수 있는 pager로 사용할 수 있습니다. Pager로 사용할 경우, stdin에서 입력을 표시하고, 생상을 추가할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;저장소 확인용으로 사용할 경우, Tig 는 기초적인 Git 명령을 사용하여 요약된 커밋 로그, 로그 메시지에서의 커밋 내용, diffstat, diff 와 같은 다양한 뷰를 이용하여 사용자에게 보여줍니다.&lt;/p&gt;
 &lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#1-calling-conventions"&gt;1. Calling Conventions (호출 규칙)&lt;/a&gt;&lt;ul&gt;
@@ -5932,11 +5928,11 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git-show&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="git-show" src="https://ujuc.github.io/img/2016-02-10_tig_1-1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="git-show" src="https://ujuc.github.io/img/2016/02-10/1-1.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git-show | tig&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="git-show|tig" src="https://ujuc.github.io/img/2016-02-10_tig_1-2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="git-show|tig" src="https://ujuc.github.io/img/2016/02-10/1-2.png"&gt;&lt;/p&gt;
 &lt;h3 id="git-command-options-git"&gt;Git Command Options (Git 명령어 옵션)&lt;/h3&gt;
 &lt;p&gt;명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할 것입니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5960,7 +5956,7 @@ forge@v0.1.7:
 &lt;dt&gt;메인 뷰&lt;/dt&gt;
 &lt;dd&gt;기본 뷰이며, 리버전의 선택된 목록에서 각 커밋을 요약하여 보여줍니다. 요약한 내용에서는 author 날짜, author, 로그 메시지 첫 줄을 포함하고 있습니다. 추가적으로 태그와 같은 저장소 참조 표시도 같이 표시됩니다.&lt;/dd&gt;
 &lt;dt&gt;로그 뷰&lt;/dt&gt;
-&lt;dd&gt;전체 로그 메시지와 diffstat에대한 리버전 로그를 보여주는 다양한 뷰를 제공합니다.&lt;/dd&gt;
+&lt;dd&gt;전체 로그 메시지와 diffstat 에대한 리버전 로그를 보여주는 다양한 뷰를 제공합니다.&lt;/dd&gt;
 &lt;dt&gt;Diff 뷰&lt;/dt&gt;
 &lt;dd&gt;현재 작업 트리에 대한 diff, 즉, 마지막 커밋이후 변화분, 로그 메시지, diffstat, diff에 대한 커밋 diff 완료 내용을 나타냅니다.&lt;/dd&gt;
 &lt;dt&gt;트리 뷰&lt;/dt&gt;
@@ -5968,7 +5964,7 @@ forge@v0.1.7:
 &lt;dt&gt;Blob 뷰&lt;/dt&gt;
 &lt;dd&gt;파일 내용이나 파일 이름에 대한 관련 데이터의 &amp;ldquo;blob&amp;rdquo;을 보여줍니다.&lt;/dd&gt;
 &lt;dt&gt;Blame 뷰&lt;/dt&gt;
-&lt;dd&gt;파일 내용의 주석이나 커밋에 대한 blam을 보여줍니다.&lt;/dd&gt;
+&lt;dd&gt;파일 내용의 주석이나 커밋에 대한 blam 을 보여줍니다.&lt;/dd&gt;
 &lt;dt&gt;Refs 뷰&lt;/dt&gt;
 &lt;dd&gt;저장소에서 브런치, 리모트, 태그를 보여줍니다.&lt;/dd&gt;
 &lt;dt&gt;Status 뷰&lt;/dt&gt;
@@ -6063,37 +6059,35 @@ forge@v0.1.7:
 &lt;/table&gt;
 &lt;p&gt;사용자 정의 명령어 예제들:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;마지막 커밋에 대해 amend 적용:&lt;/p&gt;
+&lt;li&gt;마지막 커밋에 대해 amend 적용:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;+&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;--amend
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;크립 보드에서 커밋 ID 복사:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;크립 보드에서 커밋 ID 복사:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;9&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!@sh&lt;span class="w"&gt; &lt;/span&gt;-c&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;echo -n %(commit) | xclip -selection c&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;리뷰 즁 현재 커밋에서 사용된 노트 추가/수정:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;리뷰 즁 현재 커밋에서 사용된 노트 추가/수정:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;T&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;notes&lt;span class="w"&gt; &lt;/span&gt;edit&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;commit&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Git 대화형으로 파일 내용에 세밀한 staging 추가 입력:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git 대화형으로 파일 내용에 세밀한 staging 추가 입력:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;generic&lt;span class="w"&gt; &lt;/span&gt;I&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;file&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;선택된 브런치의 최상위에서 현재 브런치로 리배이스:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;선택된 브런치의 최상위에서 현재 브런치로 리배이스:&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nb"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;refs&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;%&lt;span class="o"&gt;(&lt;/span&gt;branch&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h3 id="title-windows"&gt;Title Windows (제목 윈도우)&lt;/h3&gt;
 &lt;p&gt;각 뷰는 뷰 이름에 대한 제목 윈도우를 가집니다. 가능하다면 현재 커밋 ID로도 나태낼 수 있으며, 뷰에서는 다음과 같이 위치됩니다:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;[&lt;/span&gt;main&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;c622eefaa485995320bc743431bae0d497b1d875&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;commit&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;61&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;%&lt;span class="o"&gt;)&lt;/span&gt;
@@ -6125,11 +6119,11 @@ forge@v0.1.7:
 &lt;p&gt;또는 여러분의 환경에서 영구적으로 변수를 설하여 사용할 수 있습니다.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;&lt;code&gt;TIG_LS_REMOTE&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;ls-remote&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;dd&gt;모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 &lt;code&gt;git-ls-remote(1)&lt;/code&gt; 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;ls-remote&lt;span class="w"&gt; &lt;/span&gt;.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;/dd&gt;
-&lt;/dl&gt;
 &lt;h3 id="diff-options-diff"&gt;Diff options (Diff 옵션)&lt;/h3&gt;
 &lt;p&gt;Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜와 같이 보길 원한다면:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;TIG_DIFF_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--relative-date&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tig
@@ -6142,55 +6136,55 @@ forge@v0.1.7:
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;m&lt;/code&gt; | 메인 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig main view" src="https://ujuc.github.io/img/2016-02-10_tig_2-1_main.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig main view" src="https://ujuc.github.io/img/2016/02-10/2-1_main.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;d&lt;/code&gt; | diff 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig diff view" src="https://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig diff view" src="https://ujuc.github.io/img/2016/02-10/2-2_diff.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;l&lt;/code&gt; | 로그 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig log view" src="https://ujuc.github.io/img/2016-02-10_tig_2-3_log.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig log view" src="https://ujuc.github.io/img/2016/02-10/2-3_log.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;p&lt;/code&gt; | pager 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig parger view" src="https://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig parger view" src="https://ujuc.github.io/img/2016/02-10/2-4_pager.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;t&lt;/code&gt; | 디렉토리 트리 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig tree view" src="https://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig tree view" src="https://ujuc.github.io/img/2016/02-10/2-5_tree.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;f&lt;/code&gt; | 파일 blob 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig file blob view" src="https://ujuc.github.io/img/2016-02-10_tig_2-6_file.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig file blob view" src="https://ujuc.github.io/img/2016/02-10/2-6_file.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;g&lt;/code&gt; | grep 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig grep view" src="https://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig grep view" src="https://ujuc.github.io/img/2016/02-10/2-7_grep.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;b&lt;/code&gt; | blame 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig blame view" src="https://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig blame view" src="https://ujuc.github.io/img/2016/02-10/2-8_blame.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;r&lt;/code&gt; | refs 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig refs view" src="https://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig refs view" src="https://ujuc.github.io/img/2016/02-10/2-9_refs.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;y&lt;/code&gt; | stash 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig stash view" src="https://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig stash view" src="https://ujuc.github.io/img/2016/02-10/2-10_stash.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;h&lt;/code&gt; | 도움말 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig help view" src="https://ujuc.github.io/img/2016-02-10_tig_2-11_help.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig help view" src="https://ujuc.github.io/img/2016/02-10/2-11_help.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;s&lt;/code&gt; | status 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig status view" src="https://ujuc.github.io/img/2016-02-10_tig_2-12_status.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig status view" src="https://ujuc.github.io/img/2016/02-10/2-12_status.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;c&lt;/code&gt; | stage 뷰로 전환&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="tig stage view" src="https://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="tig stage view" src="https://ujuc.github.io/img/2016/02-10/2-13_stage.png"&gt;&lt;/p&gt;
 &lt;h3 id="view-manipulation"&gt;View Manipulation (뷰 조작)&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -6560,7 +6554,7 @@ forge@v0.1.7:
 
 &lt;p&gt;원격 브런치에서 푸시된 내용들을 나열 합니다. 선택적으로 &lt;code&gt;HEAD&lt;/code&gt;는 생략될 수 있습니다.&lt;/p&gt;
 &lt;h3 id="limiting-by-reachability"&gt;Limiting by Reachability (도달 가능 제한)&lt;/h3&gt;
-&lt;p&gt;Git 인터프리트에서는 &amp;ldquo;tag-1.0&amp;hellip;tag-2.0&amp;rdquo;을 사용하는 경우, &amp;ldquo;&lt;code&gt;tag-1.0&lt;/code&gt;를 제외하고 &lt;code&gt;tag-2.0&lt;/code&gt;까지의 모든 커밋&amp;rdquo;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수 있습니다.&lt;/p&gt;
+&lt;p&gt;Git 인터프리트에서는 &lt;code&gt;tag-1.0...tag-2.0&lt;/code&gt;을 사용하는 경우, &amp;ldquo;&lt;code&gt;tag-1.0&lt;/code&gt;를 제외하고 &lt;code&gt;tag-2.0&lt;/code&gt;까지의 모든 커밋&amp;rdquo;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수 있습니다.&lt;/p&gt;
 &lt;p&gt;이 방법으로 다음 미리 커밋을 지정하려는 경우:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;tig&lt;span class="w"&gt; &lt;/span&gt;tag-2.0&lt;span class="w"&gt; &lt;/span&gt;^tag-1.0
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -6619,10 +6613,10 @@ forge@v0.1.7:
 &lt;a href="http://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/mysql_rds_skip_repl_error.html"&gt;Amazon Relational Database Service - mysql_rds_skip_repl_error&lt;/a&gt;&lt;br&gt;
 부분. 그냥 접근해서 &lt;code&gt;CALL mysql.rds_skip_repl_error&lt;/code&gt; 입력하면 된단다.&lt;/p&gt;
 &lt;p&gt;그런데 이건 mysql에서만 발생하는 오류인것같다. mariadb에서는 해당 오류가 없다.&lt;br&gt;
-mariadb를 사용하는게 정신 건강에 좋은&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="aws"></category><category term="rds"></category><category term="mysql"></category><category term="mariadb"></category><category term="replication"></category></entry><entry><title>Stderr check in zshell</title><link href="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" rel="alternate"></link><published>2016-01-27T00:57:00+09:00</published><updated>2016-01-27T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-27:/2016/01/27/stderr-check-in-zshell/</id><summary type="html">&lt;p&gt;zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고&lt;br&gt;
-싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서&lt;br&gt;
+mariadb를 사용하는게 정신 건강에 좋은&amp;hellip;&lt;/p&gt;</content><category term="Operation"></category><category term="aws"></category><category term="rds"></category><category term="mysql"></category><category term="mariadb"></category><category term="replication"></category></entry><entry><title>Stderr check in zshell</title><link href="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" rel="alternate"></link><published>2016-01-27T00:57:00+09:00</published><updated>2016-01-27T00:57:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-27:/2016/01/27/stderr-check-in-zshell/</id><summary type="html">&lt;p&gt;zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고&lt;/p&gt;</summary><content type="html">&lt;p&gt;싶었다.&lt;/p&gt;
+&lt;p&gt;Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서&lt;br&gt;
 쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가 출력된다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="stderr" src="https://ujuc.github.io/img/2016-01-26_shell_error.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="stderr" src="https://ujuc.github.io/img/2016/01-27/shell_error.png"&gt;&lt;/p&gt;
 &lt;p&gt;은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로 늘어난다.&lt;/p&gt;
 &lt;p&gt;그래서 찾았다. 찾다보니 내가 무심코 사용했던 내용에대해 조금더 볼 기회가 생긴듯.&lt;/p&gt;
 &lt;p&gt;우선 Shell에서 기본 I/O 스트림을 통해서 나오는 값들에대해서 다음 숫자로 제어할&lt;br&gt;
@@ -6658,28 +6652,29 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;go
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt="ex1_1" src="https://ujuc.github.io/img/2016-01-26_ex1_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ex1_1" src="https://ujuc.github.io/img/2016/01-27/ex1_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;요놈을 안나오게 해보자.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;go&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/dev/null
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt="ex1_2" src="https://ujuc.github.io/img/2016-01-26_ex1_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ex1_2" src="https://ujuc.github.io/img/2016/01-27/ex1_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;오~~~&lt;/p&gt;
 &lt;p&gt;stderr 값이 나오면 안나오게 할려고 보면&amp;hellip; 이건 설치가 되어있으니&amp;hellip; 없는걸로&amp;hellip;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;rbenv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt="ex2_1" src="https://ujuc.github.io/img/2016-01-26_ex2_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ex2_1" src="https://ujuc.github.io/img/2016/01-27/ex2_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;이걸 위와 같이 &lt;code&gt;1&lt;/code&gt; 을 사용하면&amp;hellip;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;rbenv&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;/dev/null
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt="ex2_2" src="https://ujuc.github.io/img/2016-01-26_ex2_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ex2_2" src="https://ujuc.github.io/img/2016/01-27/ex2_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;음&amp;hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. &lt;code&gt;1&lt;/code&gt;로 출력되는걸 막으라했더니&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그럼 Python에서는 어디로 나올까?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sub&lt;/span&gt;
-&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;check_rbenv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Popen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;which rbenv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;communicate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;In&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;check_rbenv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -6700,7 +6695,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;p&gt;다른 방법으로 찾아야지 뭐 별수 있나&amp;hellip; 그래도 이번에 건진건 저렇게 숫자를&lt;br&gt;
 사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&amp;hellip; 그정도면 1시간동안&lt;br&gt;
 작업한 것에 대한 내용은 될듯.&lt;/p&gt;</content><category term="Develop"></category><category term="zsh"></category><category term="operation"></category></entry><entry><title>`_vim_files: function definition files net found` on zsh</title><link href="https://ujuc.github.io/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/" rel="alternate"></link><published>2016-01-16T22:53:00+09:00</published><updated>2016-01-16T22:53:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-01-16:/2016/01/16/vim_files:-function-definition-files-net-found-on-zsh/</id><summary type="html">&lt;p&gt;zsh이 올라가고 난뒤에 vim도 같이 올라갔더니 에러를 뿝네&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;아&amp;hellip; 오랜만에 vim으로 작업을 하려고 탭을 두번 클릭했더니 아래와 같은 에러가 뜬다. 이넘을 어떻게 해야되지.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="error!" src="https://ujuc.github.io/img/2016-01-16_error.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="error!" src="https://ujuc.github.io/img/2016/01-16/error.png"&gt;&lt;/p&gt;
 &lt;h3 id="_1"&gt;원인&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;zcompdump&lt;/code&gt; 때문이라고 하고, 이건 매번 문제가 있나보다.ㅡ.ㅡ;;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/robbyrussell/oh-my-zsh/issues/518"&gt;github/robbyrusell/oh-my-zsh/issues/518&lt;/a&gt;&lt;/p&gt;

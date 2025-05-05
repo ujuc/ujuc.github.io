@@ -116,12 +116,12 @@ gtag('config', 'G-X9EBSXCBTS');
     <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
     <div class="article-text"><p>Git을 사용하기 위한 프로그램들이 많다. 그중에서도 번역하려고 하는 것은 Tig. 터미널 환경에 맞게 구성이되어 있으며, Git CLI와 같이 사용하면 왠만한 GUI 프로그램 못지않은 사용성을 보여주고 있다. 단지&hellip; 명령어가 많아질 뿐이다&hellip;</p>
 <p><a href="https://github.com/jonas/tig">Tig Homepage</a></p>
-<p><img alt="Tig snap" src="https://ujuc.github.io/img/2016-02-10_tig_snap.png"></p>
+<p><img alt="Tig snap" src="https://ujuc.github.io/img/2016/02-10/snap.png"></p>
 <p>실행시키면 위와 같은 모습을 보여주게된다. 간단한 설명은 여기까지하고 메뉴얼이나 보자. 다수의 의역이 포함되어있다. 안할려고 했으나 하루죙일 하다보니&hellip; 그리고 한국어로 곧장 옮기니 이상한 부분이 있어&hellip;</p>
 <hr>
 <p><a href="http://jonas.nitro.dk/tig/manual.html">The Tig Manual</a></p>
-<p>이 문서는 Tig에 대한 메뉴얼이며, Tig는 Git에 대한 ncurses 기반의 텍스트 모드 인터페이스로 작성되었습니다. Tig는 Git 저장소의 변화를 확인하고 추가적으로 다양한 Git 명령에 대한 출력 내용을 확인할 수 있는 pager로 사용할 수 있습니다. Pager로 사용할 경우, stdin에서 입력을 표시하고, 생상을 추가할 수 있습니다.</p>
-<p>저장소 확인용으로 사용할 경우, Tig는 기초적인 Git 명령을 사용하여 요약된 커밋 로그, 로그 메시지에서의 커밋 내용, diffstat, diff 와 같은 다양한 뷰를 이용하여 사용자에게 보여줍니다.</p>
+<p>이 문서는 Tig 에 대한 메뉴얼이며, Tig 는 Git에 대한 ncurses 기반의 텍스트 모드 인터페이스로 작성되었습니다. Tig는 Git 저장소의 변화를 확인하고 추가적으로 다양한 Git 명령에 대한 출력 내용을 확인할 수 있는 pager로 사용할 수 있습니다. Pager로 사용할 경우, stdin에서 입력을 표시하고, 생상을 추가할 수 있습니다.</p>
+<p>저장소 확인용으로 사용할 경우, Tig 는 기초적인 Git 명령을 사용하여 요약된 커밋 로그, 로그 메시지에서의 커밋 내용, diffstat, diff 와 같은 다양한 뷰를 이용하여 사용자에게 보여줍니다.</p>
 <div class="toc">
 <ul>
 <li><a href="#1-calling-conventions">1. Calling Conventions (호출 규칙)</a><ul>
@@ -177,11 +177,11 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><code>git-show</code></li>
 </ul>
-<p><img alt="git-show" src="https://ujuc.github.io/img/2016-02-10_tig_1-1.png"></p>
+<p><img alt="git-show" src="https://ujuc.github.io/img/2016/02-10/1-1.png"></p>
 <ul>
 <li><code>git-show | tig</code></li>
 </ul>
-<p><img alt="git-show|tig" src="https://ujuc.github.io/img/2016-02-10_tig_1-2.png"></p>
+<p><img alt="git-show|tig" src="https://ujuc.github.io/img/2016/02-10/1-2.png"></p>
 <h3 id="git-command-options-git">Git Command Options (Git 명령어 옵션)</h3>
 <p>명령 줄에서 모든 Git 명령어 옵션은 주어진 명령에 전달되고 셸에 모두 전달되기 전에 인용 셸을 통과할 것입니다.</p>
 <blockquote>
@@ -205,7 +205,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <dt>메인 뷰</dt>
 <dd>기본 뷰이며, 리버전의 선택된 목록에서 각 커밋을 요약하여 보여줍니다. 요약한 내용에서는 author 날짜, author, 로그 메시지 첫 줄을 포함하고 있습니다. 추가적으로 태그와 같은 저장소 참조 표시도 같이 표시됩니다.</dd>
 <dt>로그 뷰</dt>
-<dd>전체 로그 메시지와 diffstat에대한 리버전 로그를 보여주는 다양한 뷰를 제공합니다.</dd>
+<dd>전체 로그 메시지와 diffstat 에대한 리버전 로그를 보여주는 다양한 뷰를 제공합니다.</dd>
 <dt>Diff 뷰</dt>
 <dd>현재 작업 트리에 대한 diff, 즉, 마지막 커밋이후 변화분, 로그 메시지, diffstat, diff에 대한 커밋 diff 완료 내용을 나타냅니다.</dd>
 <dt>트리 뷰</dt>
@@ -213,7 +213,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <dt>Blob 뷰</dt>
 <dd>파일 내용이나 파일 이름에 대한 관련 데이터의 &ldquo;blob&rdquo;을 보여줍니다.</dd>
 <dt>Blame 뷰</dt>
-<dd>파일 내용의 주석이나 커밋에 대한 blam을 보여줍니다.</dd>
+<dd>파일 내용의 주석이나 커밋에 대한 blam 을 보여줍니다.</dd>
 <dt>Refs 뷰</dt>
 <dd>저장소에서 브런치, 리모트, 태그를 보여줍니다.</dd>
 <dt>Status 뷰</dt>
@@ -308,37 +308,35 @@ gtag('config', 'G-X9EBSXCBTS');
 </table>
 <p>사용자 정의 명령어 예제들:</p>
 <ul>
-<li>
-<p>마지막 커밋에 대해 amend 적용:</p>
+<li>마지막 커밋에 대해 amend 적용:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="nb">bind</span><span class="w"> </span>generic<span class="w"> </span>+<span class="w"> </span>!git<span class="w"> </span>commit<span class="w"> </span>--amend
 </code></pre></div>
 
-</li>
-<li>
-<p>크립 보드에서 커밋 ID 복사:</p>
+<ul>
+<li>크립 보드에서 커밋 ID 복사:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="nb">bind</span><span class="w"> </span>generic<span class="w"> </span><span class="m">9</span><span class="w"> </span>!@sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo -n %(commit) | xclip -selection c&quot;</span>
 </code></pre></div>
 
-</li>
-<li>
-<p>리뷰 즁 현재 커밋에서 사용된 노트 추가/수정:</p>
+<ul>
+<li>리뷰 즁 현재 커밋에서 사용된 노트 추가/수정:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="nb">bind</span><span class="w"> </span>generic<span class="w"> </span>T<span class="w"> </span>!git<span class="w"> </span>notes<span class="w"> </span>edit<span class="w"> </span>%<span class="o">(</span>commit<span class="o">)</span>
 </code></pre></div>
 
-</li>
-<li>
-<p>Git 대화형으로 파일 내용에 세밀한 staging 추가 입력:</p>
+<ul>
+<li>Git 대화형으로 파일 내용에 세밀한 staging 추가 입력:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="nb">bind</span><span class="w"> </span>generic<span class="w"> </span>I<span class="w"> </span>!git<span class="w"> </span>add<span class="w"> </span>-i<span class="w"> </span>%<span class="o">(</span>file<span class="o">)</span>
 </code></pre></div>
 
-</li>
-<li>
-<p>선택된 브런치의 최상위에서 현재 브런치로 리배이스:</p>
+<ul>
+<li>선택된 브런치의 최상위에서 현재 브런치로 리배이스:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="nb">bind</span><span class="w"> </span>refs<span class="w"> </span><span class="m">3</span><span class="w"> </span>!git<span class="w"> </span>rebase<span class="w"> </span>-i<span class="w"> </span>%<span class="o">(</span>branch<span class="o">)</span>
 </code></pre></div>
 
-</li>
-</ul>
 <h3 id="title-windows">Title Windows (제목 윈도우)</h3>
 <p>각 뷰는 뷰 이름에 대한 제목 윈도우를 가집니다. 가능하다면 현재 커밋 ID로도 나태낼 수 있으며, 뷰에서는 다음과 같이 위치됩니다:</p>
 <div class="highlight"><pre><span></span><code><span class="o">[</span>main<span class="o">]</span><span class="w"> </span>c622eefaa485995320bc743431bae0d497b1d875<span class="w"> </span>-<span class="w"> </span>commit<span class="w"> </span><span class="m">1</span><span class="w"> </span>of<span class="w"> </span><span class="m">61</span><span class="w"> </span><span class="o">(</span><span class="m">1</span>%<span class="o">)</span>
@@ -370,11 +368,11 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>또는 여러분의 환경에서 영구적으로 변수를 설하여 사용할 수 있습니다.</p>
 <dl>
 <dt><code>TIG_LS_REMOTE</code></dt>
-<dd>모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 <code>git-ls-remote(1)</code> 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:<div class="highlight"><pre><span></span><code>git<span class="w"> </span>ls-remote<span class="w"> </span>.
+<dd>모든 저장소에 대한 참조를 검색하는 명령을 설정합니다. 명령을 사용하게 되면 <code>git-ls-remote(1)</code> 과같은 포맷으로 데이터를 출력할 수 있습니다. 기본 값은 다음과 같습니다:</dd>
+</dl>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>ls-remote<span class="w"> </span>.
 </code></pre></div>
 
-</dd>
-</dl>
 <h3 id="diff-options-diff">Diff options (Diff 옵션)</h3>
 <p>Diff 뷰에 대해 diff를 어떻게 표시할 것인가에 대한 내용으로 수정이 가능합니다. 예를 들어 커멧과 author 날짜를 상대 날짜와 같이 보길 원한다면:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nv">TIG_DIFF_OPTS</span><span class="o">=</span><span class="s2">&quot;--relative-date&quot;</span><span class="w"> </span>tig
@@ -387,55 +385,55 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><code>m</code> | 메인 뷰로 전환</li>
 </ul>
-<p><img alt="tig main view" src="https://ujuc.github.io/img/2016-02-10_tig_2-1_main.png"></p>
+<p><img alt="tig main view" src="https://ujuc.github.io/img/2016/02-10/2-1_main.png"></p>
 <ul>
 <li><code>d</code> | diff 뷰로 전환</li>
 </ul>
-<p><img alt="tig diff view" src="https://ujuc.github.io/img/2016-02-10_tig_2-2_diff.png"></p>
+<p><img alt="tig diff view" src="https://ujuc.github.io/img/2016/02-10/2-2_diff.png"></p>
 <ul>
 <li><code>l</code> | 로그 뷰로 전환</li>
 </ul>
-<p><img alt="tig log view" src="https://ujuc.github.io/img/2016-02-10_tig_2-3_log.png"></p>
+<p><img alt="tig log view" src="https://ujuc.github.io/img/2016/02-10/2-3_log.png"></p>
 <ul>
 <li><code>p</code> | pager 뷰로 전환</li>
 </ul>
-<p><img alt="tig parger view" src="https://ujuc.github.io/img/2016-02-10_tig_2-4_pager.png"></p>
+<p><img alt="tig parger view" src="https://ujuc.github.io/img/2016/02-10/2-4_pager.png"></p>
 <ul>
 <li><code>t</code> | 디렉토리 트리 뷰로 전환</li>
 </ul>
-<p><img alt="tig tree view" src="https://ujuc.github.io/img/2016-02-10_tig_2-5_tree.png"></p>
+<p><img alt="tig tree view" src="https://ujuc.github.io/img/2016/02-10/2-5_tree.png"></p>
 <ul>
 <li><code>f</code> | 파일 blob 뷰로 전환</li>
 </ul>
-<p><img alt="tig file blob view" src="https://ujuc.github.io/img/2016-02-10_tig_2-6_file.png"></p>
+<p><img alt="tig file blob view" src="https://ujuc.github.io/img/2016/02-10/2-6_file.png"></p>
 <ul>
 <li><code>g</code> | grep 뷰로 전환</li>
 </ul>
-<p><img alt="tig grep view" src="https://ujuc.github.io/img/2016-02-10_tig_2-7_grep.png"></p>
+<p><img alt="tig grep view" src="https://ujuc.github.io/img/2016/02-10/2-7_grep.png"></p>
 <ul>
 <li><code>b</code> | blame 뷰로 전환</li>
 </ul>
-<p><img alt="tig blame view" src="https://ujuc.github.io/img/2016-02-10_tig_2-8_blame.png"></p>
+<p><img alt="tig blame view" src="https://ujuc.github.io/img/2016/02-10/2-8_blame.png"></p>
 <ul>
 <li><code>r</code> | refs 뷰로 전환</li>
 </ul>
-<p><img alt="tig refs view" src="https://ujuc.github.io/img/2016-02-10_tig_2-9_refs.png"></p>
+<p><img alt="tig refs view" src="https://ujuc.github.io/img/2016/02-10/2-9_refs.png"></p>
 <ul>
 <li><code>y</code> | stash 뷰로 전환</li>
 </ul>
-<p><img alt="tig stash view" src="https://ujuc.github.io/img/2016-02-10_tig_2-10_stash.png"></p>
+<p><img alt="tig stash view" src="https://ujuc.github.io/img/2016/02-10/2-10_stash.png"></p>
 <ul>
 <li><code>h</code> | 도움말 뷰로 전환</li>
 </ul>
-<p><img alt="tig help view" src="https://ujuc.github.io/img/2016-02-10_tig_2-11_help.png"></p>
+<p><img alt="tig help view" src="https://ujuc.github.io/img/2016/02-10/2-11_help.png"></p>
 <ul>
 <li><code>s</code> | status 뷰로 전환</li>
 </ul>
-<p><img alt="tig status view" src="https://ujuc.github.io/img/2016-02-10_tig_2-12_status.png"></p>
+<p><img alt="tig status view" src="https://ujuc.github.io/img/2016/02-10/2-12_status.png"></p>
 <ul>
 <li><code>c</code> | stage 뷰로 전환</li>
 </ul>
-<p><img alt="tig stage view" src="https://ujuc.github.io/img/2016-02-10_tig_2-13_stage.png"></p>
+<p><img alt="tig stage view" src="https://ujuc.github.io/img/2016/02-10/2-13_stage.png"></p>
 <h3 id="view-manipulation">View Manipulation (뷰 조작)</h3>
 <table>
 <thead>
@@ -805,7 +803,7 @@ gtag('config', 'G-X9EBSXCBTS');
 
 <p>원격 브런치에서 푸시된 내용들을 나열 합니다. 선택적으로 <code>HEAD</code>는 생략될 수 있습니다.</p>
 <h3 id="limiting-by-reachability">Limiting by Reachability (도달 가능 제한)</h3>
-<p>Git 인터프리트에서는 &ldquo;tag-1.0&hellip;tag-2.0&rdquo;을 사용하는 경우, &ldquo;<code>tag-1.0</code>를 제외하고 <code>tag-2.0</code>까지의 모든 커밋&rdquo;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수 있습니다.</p>
+<p>Git 인터프리트에서는 <code>tag-1.0...tag-2.0</code>을 사용하는 경우, &ldquo;<code>tag-1.0</code>를 제외하고 <code>tag-2.0</code>까지의 모든 커밋&rdquo;으로 지정할 수 없습니다. 도달 가능한 참조는 물음의 브런치의 원형 (또는 히스토리의 일부분)의 커밋 또는 테그된 리버전일 수 있습니다.</p>
 <p>이 방법으로 다음 미리 커밋을 지정하려는 경우:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>tig<span class="w"> </span>tag-2.0<span class="w"> </span>^tag-1.0
 </code></pre></div>
