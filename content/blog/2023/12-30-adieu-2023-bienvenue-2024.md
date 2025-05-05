@@ -16,7 +16,7 @@ Summary: 23년도 끝나가기에 대설특보가 내린날 작성.
 
 ## 사진
 
-![2023년 1855장]({static}/img/2023/12-30-photo-list.png){: width="30%" }
+![2023년 1855장]({static}/img/2023/12-30/photo-list.png){: width="30%" }
 
 가방에 매번 카메라를 넣고 다니고, 나갈때 가방을 챙겨서 카메라로 찍고 댕겼으나, 그렇게 많은 사진을 찍지는 못했다.
 뭐 셔터 누르는게 항상 쉽지 않으니까...
@@ -25,8 +25,8 @@ Summary: 23년도 끝나가기에 대설특보가 내린날 작성.
 
 ## 책 10권 이상 읽기
 
-![2023년 25권-1]({static}/img/2023/12-30-book-list-1.jpeg){: width="30%" }
-![2023년 25권-2]({static}/img/2023/12-30-book-list-2.jpeg){: width="30%" }
+![2023년 25권-1]({static}/img/2023/12-30/book-list-1.jpeg){: width="30%" }
+![2023년 25권-2]({static}/img/2023/12-30/book-list-2.jpeg){: width="30%" }
 
 북적북적 기록 25권...
 높아져서 기본 캐릭터로는 안되서 하나 질렀다! 내년에도 높은걸 살 수 있길...;
@@ -136,6 +136,5 @@ Summary: 23년도 끝나가기에 대설특보가 내린날 작성.
 내년에는 많아질련가 모르겠다.
 
 올해도 고생많았다.
-
 
 [^1]: Project, Area, Resource, Archive를 머릿말로 줄인것으로, 노트를 특정 목적에 맞곘금 구분하는 방법이다. [Forte labs - The PARA Method: The Simple System for Organizing Your Digital Life in Seconds](https://fortelabs.com/blog/para/)를 보면 간략적인 내용을 확인할 수 있다. 어디든 적용하기 편하다.

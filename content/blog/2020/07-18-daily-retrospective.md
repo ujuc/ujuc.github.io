@@ -10,7 +10,7 @@ Summary: 6월부터 매일 회고를 쓰고 있다. (주말은 하고 싶을때�
 
 그러다가 매일했던 일과 매일 보는 문서 내용을 기억하못하는 현상이 새롭게 나오지 않다보니 큰일이다 싶어서 노트 작성을 시작했다.
 
-![Notion daily retrospective]({static}/img/2020-07-18_daily-retrospective-1.png)
+![Notion daily retrospective]({static}/img/2020/07-18/daily-retrospective-1.png)
 
 그래도 꾸준히 적고 있으며, 주말은 내가 하고 싶을때만 만들고 회사 쉬는날은 쉬어버리는 !! 너프한 회고!
 

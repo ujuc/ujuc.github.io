@@ -14,7 +14,7 @@ Summary: iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 �
 2. Profile > Keys
 3. Presets... > Natual Text Editing
 
-<img src="{static}/img/2020-01-10_iterm2.png" width="30%">
+<img src="{static}/img/2019/12-25/iterm2.png" width="30%">
 
 ---
 
@@ -36,15 +36,15 @@ Summary: iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 �
 
 ## 왼쪽으로 워드 단위 이동
 
-* 키보드 입력: `option` + `<-`
-* Action : Send Hex Code
-* Code: `0x1b 0x62`
+- 키보드 입력: `option` + `<-`
+- Action : Send Hex Code
+- Code: `0x1b 0x62`
 
 ## 오른쪽으로 워드 단위 이동
 
-* 키보드 입력: `option` + `->`
-* Action: Send Hex Code
-* Code: `0x1b 0x66`
+- 키보드 입력: `option` + `->`
+- Action: Send Hex Code
+- Code: `0x1b 0x66`
 
 **위의 두 설정을 하게되면 다음 작업을 꼭 해줘야 된다.**
 
@@ -54,13 +54,12 @@ Summary: iTerm를 사용하다보면 커멘드라인 맨앞으로간다거나 �
 
 ## 맨 첫번째로 이동
 
-* 키보드 입력: `cmd` + `<-`
-* Action: Send Hex Code
-* Code: `0x01`
+- 키보드 입력: `cmd` + `<-`
+- Action: Send Hex Code
+- Code: `0x01`
 
 ## 맨끝으로 이동
 
-* 키보드 입력: `cmd` + `->`
-* Action: Send Hex Code
-* Code: `0x05`
-
+- 키보드 입력: `cmd` + `->`
+- Action: Send Hex Code
+- Code: `0x05`

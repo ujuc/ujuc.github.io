@@ -20,7 +20,7 @@ git config --global core.editor "code --wait"
 
 하게되면 git commit 입력창이 VS code 창으로 뜬다.
 
-![git commit 창 vs code]({static}/img/2020-06-11_git-commit-at-vs-code.png)
+![git commit 창 vs code]({static}/img/2020/06-11/git-commit-at-vs-code.png)
 
 이제 Tower 구독 결제가 되어있는지 한번 확인하고 없에야지..
 

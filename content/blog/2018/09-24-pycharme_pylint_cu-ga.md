@@ -1,6 +1,6 @@
 Title: Pycharm에 pylint 추가
 Date: 2018-09-24 00:49:24
-Category: Develop 
+Category: Develop
 Tags: pycharm, pylint, python, lint
 Slug: pycharme_pylint_cu-ga
 Summary: Pycharm 에 pylint를 외부 툴로 등록하는 방법
@@ -21,5 +21,4 @@ pylint만 있는건 아니지만, pep8이나 다른것들을 정리하려면... 
 
 다음 사진과 같이 나는 내용을 수정해서 사용한다.
 
-![My_settings]({static}/img/2018-09-24_pycharm_export_tool_setting.png)
-
+![My_settings]({static}/img/2018/09-24/pycharm_export_tool_setting.png)
