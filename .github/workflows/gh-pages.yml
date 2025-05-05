@@ -4,8 +4,8 @@ on:
   push:
     branches: develop
     paths-ignore:
-      - '.github/**'
-      - 'cli/**'
+      - ".github/**"
+      - "cli/**"
 
 concurrency:
   group: ${{ github.workflow }}
@@ -19,9 +19,11 @@ jobs:
         with:
           submodules: recursive
 
+      # https://github.com/astral-sh/setup-uv
       - name: Setup uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v6
         with:
+          active-environment: true
           enable-cache: true
           ignore-nothing-to-cache: true
 
