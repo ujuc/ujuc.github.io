@@ -42,7 +42,6 @@ MENU = (
 
 SOCIAL = (
     ("Github", "https://github.com/ujuc", "github"),
-    ("Linkin", "https://kr.linkedin.com/in/sungjinkang", "linkedin"),
     ("X", "https://x.com/ujuc", "x-twitter"),
 )
 
