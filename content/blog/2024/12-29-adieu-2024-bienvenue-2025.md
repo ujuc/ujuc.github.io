@@ -79,7 +79,7 @@ Rize 라는 앱을 이용해서 중간 쉬는 시간을 만들고 있었는데, 
 - GitHub Actions 를 ECS 에서 runner 구성해서 구동
 - ECS 로 서비스를 옮기기 위한 PoC 및 관련 기술 정리
 
-### 파마브로스 
+### 파마브로스
 
 - ECS 로 모든 서비스 인프라 이전 및 재정비
 - CI/CD 툴을 GitHub Actions 로 재정비
