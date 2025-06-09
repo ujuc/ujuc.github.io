@@ -84,6 +84,7 @@ MARKDOWN = {
         "markdown_mermaidjs": {},
     },
     "output_format": "html5",
+    "tab_length": 2,
 }
 
 # Plugins
