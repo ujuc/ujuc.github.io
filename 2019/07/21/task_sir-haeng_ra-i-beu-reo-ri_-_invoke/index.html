@@ -128,23 +128,19 @@ gtag('config', 'G-X9EBSXCBTS');
 <h2 id="what-is-invoke">What is Invoke?</h2>
 <p>Python (2.7, 3.4+) 태스크 실행 툴이자 라이브러리</p>
 <ul>
-<li><code>[tasks.py](http://tasks.py)</code> 파일에 태스크를 명시하여 진행<ul>
-<li>물론 <code>tasks/*.py</code> 형식으로 만들어서 정의할 수도 있다.</li>
-</ul>
-</li>
+<li><code>[tasks.py](http://tasks.py)</code> 파일에 태스크를 명시하여 진행<br>
+    - 물론 <code>tasks/*.py</code> 형식으로 만들어서 정의할 수도 있다.</li>
 <li>
 <p>GNU Make 처럼, 명령을 나열할 수 있다.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>invoke<span class="w"> </span>clean<span class="w"> </span>build
+<div class="highlight"><pre><span></span><code>    $ invoke clean build
 </code></pre></div>
 
 </li>
 <li>
 <p>REPL 쪽에서 사용이 가능하다.</p>
 </li>
-<li>Unix CLI 와 같이 flag-based style 명령어를 만들 수 있다.<ul>
-<li><code>--ab</code> , <code>-d</code> 이런거</li>
-</ul>
-</li>
+<li>Unix CLI 와 같이 flag-based style 명령어를 만들 수 있다.<br>
+    - <code>--ab</code> , <code>-d</code> 이런거</li>
 </ul>
 <h2 id="_1">사용?</h2>
 <ul>

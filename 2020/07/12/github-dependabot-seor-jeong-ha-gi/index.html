@@ -157,24 +157,22 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><strong>필수 항목!</strong></li>
 <li>패키지 메니저에 대한 내용을 정의 한다.</li>
-<li>사용 가능한 패키지 메니저<ul>
-<li><code>bundler</code></li>
-<li><code>cargo</code></li>
-<li><code>composer</code></li>
-<li><code>docker</code></li>
-<li><code>elm</code> (??)</li>
-<li><code>gitsubmodule</code></li>
-<li><code>github-actions</code></li>
-<li><code>gomode</code></li>
-<li><code>gradle</code></li>
-<li><code>maven</code></li>
-<li><code>mix</code> (??)</li>
-<li><code>npm</code></li>
-<li><code>unget</code></li>
-<li><code>pip</code></li>
-<li><code>terraform</code></li>
-</ul>
-</li>
+<li>사용 가능한 패키지 메니저<br>
+    - <code>bundler</code><br>
+    - <code>cargo</code><br>
+    - <code>composer</code><br>
+    - <code>docker</code><br>
+    - <code>elm</code> (??)<br>
+    - <code>gitsubmodule</code><br>
+    - <code>github-actions</code><br>
+    - <code>gomode</code><br>
+    - <code>gradle</code><br>
+    - <code>maven</code><br>
+    - <code>mix</code> (??)<br>
+    - <code>npm</code><br>
+    - <code>unget</code><br>
+    - <code>pip</code><br>
+    - <code>terraform</code></li>
 <li>ecosystem별로 하나의 리스트로 사용하여 작업한다.</li>
 </ul>
 <h3 id="drectory"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#directory"><code>drectory</code></a></h3>
@@ -188,27 +186,23 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><strong>필수 항목</strong></li>
 <li>얼마마다 확인할 것인지에 대해서 정의하는 위치.</li>
-<li>항목은 <code>daily</code>, <code>weekly</code>, <code>monthly</code>가 있다.<ul>
-<li><code>daily</code>는 월~금요일에만 실행한다. (주말은 왜 쉬는거지&hellip;?)</li>
-<li><code>weekly</code>는 기본은 월요일에만 실행한다. 밑에서 설명할 <code>day</code> 항목으로 변경 가능.</li>
-<li><code>monthly</code>는 매달 한번 1일에 실행한다.</li>
-</ul>
-</li>
+<li>항목은 <code>daily</code>, <code>weekly</code>, <code>monthly</code>가 있다.<br>
+    - <code>daily</code>는 월~금요일에만 실행한다. (주말은 왜 쉬는거지&hellip;?)<br>
+    - <code>weekly</code>는 기본은 월요일에만 실행한다. 밑에서 설명할 <code>day</code> 항목으로 변경 가능.<br>
+    - <code>monthly</code>는 매달 한번 1일에 실행한다.</li>
 </ul>
 <h4 id="day"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduleday"><code>day</code></a></h4>
 <ul>
 <li>주마다 업데이트할 스케출을 적어준다.</li>
 <li>기본값은 <code>monday 05:00 UTC</code> 이다.</li>
-<li>항목<ul>
-<li><code>monday</code></li>
-<li><code>tuesday</code></li>
-<li><code>wednesday</code></li>
-<li><code>thursday</code></li>
-<li><code>friday</code></li>
-<li><code>saturday</code></li>
-<li><code>sunday</code></li>
-</ul>
-</li>
+<li>항목<br>
+    - <code>monday</code><br>
+    - <code>tuesday</code><br>
+    - <code>wednesday</code><br>
+    - <code>thursday</code><br>
+    - <code>friday</code><br>
+    - <code>saturday</code><br>
+    - <code>sunday</code></li>
 </ul>
 <h4 id="timezone"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduletimezone"><code>timezone</code></a></h4>
 <ul>
@@ -219,11 +213,9 @@ gtag('config', 'G-X9EBSXCBTS');
 <h3 id="allow"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduleinterval"><code>allow</code></a></h3>
 <ul>
 <li>기본적으로 모든 의존성을 확안하여 PR을 넣게 되는데, 업데이트 하고 싶은 의존성만 허용할 수 있는 옵션이다.</li>
-<li>항목<ul>
-<li><code>dependency-name</code>: 명시한 이름을 가진 패키지만 업데이트 한다. <code>*</code>를 이용하여 여러개의 패키지를 지정할 수 있다. (정규식의 <code>*</code> 사용법과 동일)</li>
-<li><code>dependency-type</code>: 음.. 타입....음..</li>
-</ul>
-</li>
+<li>항목<br>
+    - <code>dependency-name</code>: 명시한 이름을 가진 패키지만 업데이트 한다. <code>*</code>를 이용하여 여러개의 패키지를 지정할 수 있다. (정규식의 <code>*</code> 사용법과 동일)<br>
+    - <code>dependency-type</code>: 음.. 타입....음..</li>
 </ul>
 <table>
 <thead>
@@ -269,29 +261,21 @@ gtag('config', 'G-X9EBSXCBTS');
 <h3 id="commit-message"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#commit-message"><code>commit-message</code></a></h3>
 <ul>
 <li>Github Dependabot이 커밋할때 어떤걸 붙일 건지에 대한 설정</li>
-<li>항목<ul>
-<li><code>prefix</code>: 앞에 붙일 단어</li>
-<li><code>prefix-development</code>: 개발 환경용 앞에 붙일 단어<ul>
-<li>지원하는데는 당연히 <code>bundler</code>, <code>composer</code>, <code>mix</code>, <code>maven</code>, <code>npm</code>, <code>pip</code></li>
-</ul>
-</li>
-<li><code>include: "scope"</code>: 업데이트된 의존성 목록을 점두사 뒤에 넣어준다.</li>
-</ul>
-</li>
+<li>항목<br>
+    - <code>prefix</code>: 앞에 붙일 단어<br>
+    - <code>prefix-development</code>: 개발 환경용 앞에 붙일 단어<br>
+        - 지원하는데는 당연히 <code>bundler</code>, <code>composer</code>, <code>mix</code>, <code>maven</code>, <code>npm</code>, <code>pip</code><br>
+    - <code>include: "scope"</code>: 업데이트된 의존성 목록을 점두사 뒤에 넣어준다.</li>
 <li><strong>NOTE</strong>: <code>target-branch</code>를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.</li>
 </ul>
 <h3 id="ignore"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#ignore"><code>ignore</code></a></h3>
 <ul>
-<li><code>@dependabot ignore</code>를 이용해서 <code>ignore</code> 된게 있는지 확인하라고 하는데&hellip;<ul>
-<li><code>@dependabot</code>은 어디서&hellip; 사용하나&hellip;?</li>
-</ul>
-</li>
+<li><code>@dependabot ignore</code>를 이용해서 <code>ignore</code> 된게 있는지 확인하라고 하는데&hellip;<br>
+    - <code>@dependabot</code>은 어디서&hellip; 사용하나&hellip;?</li>
 <li>암튼 뭔가를 하기 싫을때 하는거</li>
-<li>항목<ul>
-<li><code>dependency-name</code>: 의존성 패키지 이름</li>
-<li><code>versions</code>: 제외할 버전이나 버전 범위를 지정한다. 패키지 메니저마다 사용하는 패턴을 이용해서 작성하자.</li>
-</ul>
-</li>
+<li>항목<br>
+    - <code>dependency-name</code>: 의존성 패키지 이름<br>
+    - <code>versions</code>: 제외할 버전이나 버전 범위를 지정한다. 패키지 메니저마다 사용하는 패턴을 이용해서 작성하자.</li>
 <li><strong>NOTE</strong>: <code>target-branch</code>를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.</li>
 </ul>
 <h3 id="labels"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#labels"><code>labels</code></a></h3>
@@ -328,11 +312,9 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <h3 id="versioning-strategy"><a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#versioning-strategy"><code>versioning-strategy</code></a></h3>
 <ul>
-<li>Github Dependabot에서 의존성 업데이트를 진행하면서 명시하는 방법은 두가지 방법이 있다.<ul>
-<li>App: 요구 버전이 업데이트 (<code>npm</code>, <code>pip</code>, <code>composer</code>)</li>
-<li>Library: 버전 범위 업데이트 (<code>bundler</code>, <code>cargo</code>)</li>
-</ul>
-</li>
+<li>Github Dependabot에서 의존성 업데이트를 진행하면서 명시하는 방법은 두가지 방법이 있다.<br>
+    - App: 요구 버전이 업데이트 (<code>npm</code>, <code>pip</code>, <code>composer</code>)<br>
+    - Library: 버전 범위 업데이트 (<code>bundler</code>, <code>cargo</code>)</li>
 <li>이 사항을 변경하기 위해서 사용.</li>
 <li><strong>NOTE</strong>: <code>target-branch</code>를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.</li>
 <li>사용 가능한 업데이트 옵션</li>

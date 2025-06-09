@@ -126,29 +126,21 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <h2 id="_1">사용</h2>
 <ul>
-<li>2가지 방법이 존재<ul>
-<li>RPC의 <code>message</code> 클래스를 이용하는 방법.</li>
-<li>RPC를 통하지 않고 직접 작업하는 방법. </li>
-<li>사용은 RPC를 통하지 않는 방법이 간단하긴하다.</li>
-</ul>
-</li>
+<li>2가지 방법이 존재<br>
+    * RPC의 <code>message</code> 클래스를 이용하는 방법.<br>
+    * RPC를 통하지 않고 직접 작업하는 방법. <br>
+    * 사용은 RPC를 통하지 않는 방법이 간단하긴하다.</li>
 </ul>
 <h2 id="_2">예제</h2>
 <ol>
-<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-helloendpoints-python">appengine-endpoints-helloendpoints-python</a><ul>
-<li>RPC <code>message</code> 클래스를 이용하도록 되어있음.</li>
-<li>랩핑하는 것에 대한 내용이 포함.</li>
-</ul>
-</li>
-<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-angular-todos-python">appengine-endpoints-angular-todos-python</a><ul>
-<li>RPC <code>message</code> 클래스를 사용하지 않음.</li>
-<li>Angular.js를 이용하도록 예제가 되어있어서 확인해보면 될듯함.</li>
-</ul>
-</li>
-<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-tictactoe-python">appengine-endpoints-tictactoe-python</a><ul>
-<li>게임 예제로 보이나 아직 테스트해보지 않음.</li>
-</ul>
-</li>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-helloendpoints-python">appengine-endpoints-helloendpoints-python</a><br>
+    * RPC <code>message</code> 클래스를 이용하도록 되어있음.<br>
+    * 랩핑하는 것에 대한 내용이 포함.</li>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-angular-todos-python">appengine-endpoints-angular-todos-python</a><br>
+    * RPC <code>message</code> 클래스를 사용하지 않음.<br>
+    * Angular.js를 이용하도록 예제가 되어있어서 확인해보면 될듯함.</li>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-tictactoe-python">appengine-endpoints-tictactoe-python</a><br>
+    * 게임 예제로 보이나 아직 테스트해보지 않음.</li>
 </ol>
 <h2 id="_3">필요 패키지</h2>
 <ul>
@@ -162,39 +154,41 @@ gtag('config', 'G-X9EBSXCBTS');
 <li><code>/_ah/spi/.*</code> URL은 <code>app.yaml</code> 파일에 하나만 가능함.</li>
 <li>
 <p>여러 API를 사용하고 싶으면 <code>main.py</code> 에 일반 예제들처럼 API클래스를 생성하고 다음과 같이 설정해주면됨.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># app.yaml</span>
-<span class="o">-</span> <span class="n">url</span><span class="p">:</span> <span class="o">/</span><span class="n">_ah</span><span class="o">/</span><span class="n">spi</span><span class="o">/.*</span>
-  <span class="n">script</span><span class="p">:</span> <span class="n">main</span><span class="o">.</span><span class="n">application</span>
+<div class="highlight"><pre><span></span><code>    :::python
+    # app.yaml
+    <span class="k">-</span> url: /_ah/spi/.*
+      script: main.application
 
-<span class="c1"># main.py</span>
-<span class="n">application</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api_server</span><span class="p">([</span><span class="n">App1_api</span><span class="p">,</span> <span class="n">App2_api</span><span class="p">,</span> <span class="o">...</span><span class="p">])</span>
+    # main.py
+    application = endpoints.api_server([App1_api, App2_api, ...])
 </code></pre></div>
 
 </li>
 <li>
 <p>하나의 API에 여러 클래스를 두고 싶다면 아래의 방법으로 구성</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># API를 종류별로 나눔 </span>
-<span class="n">test_api_v1</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
-<span class="n">test1_api_v1</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test1&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="o">::</span><span class="err">:</span><span class="n">python</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">API를</span><span class="w"> </span><span class="n">종류별로</span><span class="w"> </span><span class="n">나눔</span><span class="w"> </span>
+<span class="w">    </span><span class="n">test_api_v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoints</span><span class="p">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">test1_api_v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoints</span><span class="p">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test1&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
 
-<span class="c1"># API를 처리할 Class구성</span>
-<span class="nd">@test_api_v1</span><span class="o">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Hello</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">Service</span><span class="p">):</span>
-    <span class="k">pass</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">API를</span><span class="w"> </span><span class="n">처리할</span><span class="w"> </span><span class="n">Class구성</span>
+<span class="w">    </span><span class="nv">@test_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="n">Hello</span><span class="p">(</span><span class="n">remote</span><span class="p">.</span><span class="n">Service</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">pass</span>
 
-<span class="nd">@test_api_v1</span><span class="o">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;bye&#39;</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Bye</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">Service</span><span class="p">):</span>
-    <span class="k">pass</span>
+<span class="w">    </span><span class="nv">@test_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;bye&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="n">Bye</span><span class="p">(</span><span class="n">remote</span><span class="p">.</span><span class="n">Service</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">pass</span>
 
-<span class="nd">@test1_api_v1</span><span class="o">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;todo&#39;</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Todo</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">Service</span><span class="p">):</span>
-    <span class="k">pass</span>
+<span class="w">    </span><span class="nv">@test1_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;todo&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="n">Todo</span><span class="p">(</span><span class="n">remote</span><span class="p">.</span><span class="n">Service</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">pass</span>
 
-<span class="nd">@test1_api_v1</span><span class="o">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;plan&#39;</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Plan</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">Service</span><span class="p">):</span>
-    <span class="k">pass</span>
+<span class="w">    </span><span class="nv">@test1_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;plan&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="k">Plan</span><span class="p">(</span><span class="n">remote</span><span class="p">.</span><span class="n">Service</span><span class="p">)</span><span class="err">:</span>
+<span class="w">        </span><span class="n">pass</span>
 
-<span class="n">application</span> <span class="o">=</span> <span class="n">endpoints</span><span class="o">.</span><span class="n">api_server</span><span class="p">([</span><span class="n">Hello</span><span class="p">,</span> <span class="n">Bye</span><span class="p">,</span> <span class="n">Todo</span><span class="p">,</span> <span class="n">Plan</span><span class="p">])</span>
+<span class="w">    </span><span class="n">application</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoints</span><span class="p">.</span><span class="n">api_server</span><span class="p">(</span><span class="o">[</span><span class="n">Hello, Bye, Todo, Plan</span><span class="o">]</span><span class="p">)</span>
 </code></pre></div>
 
 </li>
@@ -203,8 +197,9 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><code>project-id.appspot.com/_ah/api/explorer</code> 로 접근하여 확인.</li>
 <li>업로드되어 표시되는 시간이 오래걸리니(최소 5분은 걸리는듯.) 올라갔는지 확인을 하려면 Google Developers Console에서 로그로 확인하면된다.</li>
-<li>올라갔다면 아래와 같이 표시된다.<div class="highlight"><pre><span></span><code>https://1-dot-project-id.appspot.com/_ah/api/test@v1.0<span class="w"> </span>Saved
-https://1-dot-project-id.appspot.com/_ah/api/test1@v1.0<span class="w"> </span>Saved
+<li>올라갔다면 아래와 같이 표시된다.<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="o">::</span><span class="err">:</span><span class="n">shell</span>
+<span class="w">    </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="mi">1</span><span class="o">-</span><span class="n">dot</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">id</span><span class="p">.</span><span class="n">appspot</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">_ah</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">test</span><span class="nv">@v1</span><span class="mf">.0</span><span class="w"> </span><span class="n">Saved</span>
+<span class="w">    </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="mi">1</span><span class="o">-</span><span class="n">dot</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">id</span><span class="p">.</span><span class="n">appspot</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">_ah</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">test1</span><span class="nv">@v1</span><span class="mf">.0</span><span class="w"> </span><span class="n">Saved</span>
 </code></pre></div>
 
 </li>

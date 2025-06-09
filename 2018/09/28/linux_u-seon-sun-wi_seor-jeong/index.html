@@ -132,41 +132,33 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 <p>자세한 내용을 확인하려면 다음 URL에서 확인을 하도록하자.</p>
 <ul>
 <li>
-<p><a href="https://www.ibm.com/developerworks/linux/library/l-scheduler/">IBM - Inside the Linux scheduler</a></p>
-<ul>
-<li>리눅스 커널 2.6 버전이상에서 사용하는 스케쥴러에 대한 내용이 정리되어있다.</li>
-<li>여기서는 다음 그림을 참조하면된다.</li>
-</ul>
-<p><img alt="The Linux 2.6 scheduler runqueue structure
-" src="https://www.ibm.com/developerworks/linux/library/l-scheduler/figure1.gif"></p>
+<p><a href="https://www.ibm.com/developerworks/linux/library/l-scheduler/">IBM - Inside the Linux scheduler</a><br>
+    - 리눅스 커널 2.6 버전이상에서 사용하는 스케쥴러에 대한 내용이 정리되어있다.<br>
+    - 여기서는 다음 그림을 참조하면된다.</p>
+<div class="highlight"><pre><span></span><code>![The Linux 2.6 scheduler runqueue structure
+</code></pre></div>
+
+<p>](https://www.ibm.com/developerworks/linux/library/l-scheduler/figure1.gif)</p>
 </li>
 <li>
-<p><a href="https://www.suse.com/documentation/sles11/book_sle_tuning/data/cha_tuning_taskscheduler.html">SUSE - Tuning the Task Scheduler</a></p>
-<ul>
-<li>SUSE 11 버전에서 튜닝하는 것에 대한 내용 중 하나이다. 12 버전에 대한건 딴문서가 있으니 확인.</li>
-</ul>
+<p><a href="https://www.suse.com/documentation/sles11/book_sle_tuning/data/cha_tuning_taskscheduler.html">SUSE - Tuning the Task Scheduler</a><br>
+    - SUSE 11 버전에서 튜닝하는 것에 대한 내용 중 하나이다. 12 버전에 대한건 딴문서가 있으니 확인.</p>
 </li>
 </ul>
 <h2 id="_1">우선순위 설정</h2>
 <h3 id="daemon">Daemon 구성 파일에서 설정</h3>
 <ul>
 <li>
-<p><code>/etc/init.d</code> 에서 서비스 파일을 이용하여 <code>--nicelevel</code> 옵션 추가</p>
-<ul>
-<li><a href="https://unix.stackexchange.com/a/123926">Setting up init.d service daemon priority (with or without monit)</a></li>
-</ul>
+<p><code>/etc/init.d</code> 에서 서비스 파일을 이용하여 <code>--nicelevel</code> 옵션 추가<br>
+    - <a href="https://unix.stackexchange.com/a/123926">Setting up init.d service daemon priority (with or without monit)</a></p>
 </li>
 <li>
-<p><code>/etc/init.d</code> 에서 서비스 파일에 주석으로 <code># chkconfig:</code> 옵션 추가</p>
-<ul>
-<li><a href="https://serverfault.com/questions/754676/how-to-change-the-startup-order-of-linux-init-scripts-in-redhat-centos">how to change the startup order of linux init scripts in Redhat, Centos</a></li>
-</ul>
+<p><code>/etc/init.d</code> 에서 서비스 파일에 주석으로 <code># chkconfig:</code> 옵션 추가<br>
+    - <a href="https://serverfault.com/questions/754676/how-to-change-the-startup-order-of-linux-init-scripts-in-redhat-centos">how to change the startup order of linux init scripts in Redhat, Centos</a></p>
 </li>
 <li>
-<p>Systemd 에서 설정하는 방법</p>
-<ul>
-<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Scheduling">systemd.exec</a></li>
-</ul>
+<p>Systemd 에서 설정하는 방법<br>
+    - <a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Scheduling">systemd.exec</a></p>
 </li>
 </ul>
 <h3 id="limitsconf"><code>limits.conf</code> 파일에서 지정</h3>
@@ -183,29 +175,23 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 </ul>
 <h3 id="nice"><code>nice</code> 명령을 이용하여 동적으로 할당하는 방법</h3>
 <ul>
-<li>일반적인 사용법<ul>
-<li><code>nice -n {nice_value} {program_name}</code></li>
-<li><a href="https://askubuntu.com/questions/656771/process-niceness-vs-priority">Process &lsquo;niceness&rsquo; vs. &lsquo;priority&rsquo;</a></li>
-<li><a href="http://bencane.com/2013/09/09/setting-process-cpu-priority-with-nice-and-renice/">Setting process CPU priority with nice and renice | Benjamin Cane</a></li>
-<li><a href="https://unix.stackexchange.com/questions/72934/how-do-i-start-a-process-with-a-nice-value-of-20-and-not-give-it-root-privilege">How do I start a process with a nice value of -20 and not give it root privilege?</a></li>
-</ul>
-</li>
+<li>일반적인 사용법<br>
+    - <code>nice -n {nice_value} {program_name}</code><br>
+    - <a href="https://askubuntu.com/questions/656771/process-niceness-vs-priority">Process &lsquo;niceness&rsquo; vs. &lsquo;priority&rsquo;</a><br>
+    - <a href="http://bencane.com/2013/09/09/setting-process-cpu-priority-with-nice-and-renice/">Setting process CPU priority with nice and renice | Benjamin Cane</a><br>
+    - <a href="https://unix.stackexchange.com/questions/72934/how-do-i-start-a-process-with-a-nice-value-of-20-and-not-give-it-root-privilege">How do I start a process with a nice value of -20 and not give it root privilege?</a></li>
 </ul>
 <h3 id="daemon_1">특정 프로그램으로 Daemon을 이용하여 관리하는 방법</h3>
 <ul>
-<li><a href="http://and.sourceforge.net/">Auto nice daemon</a><ul>
-<li>업그레이드가 2005년 이후로 안되고 있다.</li>
-<li>그러니 사용하기 꺼림직&hellip;</li>
-<li>찾다가 나왔으니 뭐&hellip;</li>
-<li><a href="https://www.reddit.com/r/linuxquestions/comments/4ctr5c/is_the_autonice_daemon_and_safe_to_use/">Reddit 글</a> 에서는 사용하기가 불안하다는 내용도&hellip;</li>
-</ul>
-</li>
-<li><a href="https://github.com/Nefelim4ag/Ananicy">Ananicy</a><ul>
-<li>Another Auto nice daemon</li>
-<li>지금까지 개발중이다.</li>
-<li>Role 값을 JSON 형식으로 작업이 가능하다.</li>
-</ul>
-</li>
+<li><a href="http://and.sourceforge.net/">Auto nice daemon</a><br>
+    - 업그레이드가 2005년 이후로 안되고 있다.<br>
+    - 그러니 사용하기 꺼림직&hellip;<br>
+    - 찾다가 나왔으니 뭐&hellip;<br>
+    - <a href="https://www.reddit.com/r/linuxquestions/comments/4ctr5c/is_the_autonice_daemon_and_safe_to_use/">Reddit 글</a> 에서는 사용하기가 불안하다는 내용도&hellip;</li>
+<li><a href="https://github.com/Nefelim4ag/Ananicy">Ananicy</a><br>
+    - Another Auto nice daemon<br>
+    - 지금까지 개발중이다.<br>
+    - Role 값을 JSON 형식으로 작업이 가능하다.</li>
 </ul>
 <p>PS. IO Priority를 변경하고 싶다면 <code>ionice</code>를 확인하도록 하자. (<a href="https://linux.die.net/man/1/ionice">manpage</a>)</p></div>
     <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>

@@ -119,137 +119,138 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>
 <p><code>.(dot)</code>으로 표기하는 키 추가</p>
-<blockquote>
-<p>Add dotted keys.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Add dotted keys.
+</code></pre></div>
+
 </li>
 <li>
 <p>16진수, 8진수, 2진수로 표기하는 정수 포맷 추가</p>
-<blockquote>
-<p>Add hex, octal, and binary integer formats.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Add hex, octal, and binary integer formats.
+</code></pre></div>
+
 </li>
 <li>
 <p>특별한 float 값(inf, nan) 추가</p>
-<blockquote>
-<p>Add special float values (inf, nan)</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Add special float values (inf, nan)
+</code></pre></div>
+
 </li>
 <li>
 <p>Offset Date-Time에서 Datetime으로 이름 변경</p>
-<blockquote>
-<p>Rename Datetime to Offset Date-Time.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Rename Datetime to Offset Date-Time.
+</code></pre></div>
+
 </li>
 <li>
 <p>로컬 Date-Time 추가</p>
-<blockquote>
-<p>Add Local Date-Time.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Add Local Date-Time.
+</code></pre></div>
+
 </li>
 <li>
 <p>로컬 날짜 추가</p>
-<blockquote>
-<p>Add Local Date.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Add Local Date.
+</code></pre></div>
+
 </li>
 <li>
 <p>로컬 시간 추가</p>
-<blockquote>
-<p>Add Local Time.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Add Local Time.
+</code></pre></div>
+
 </li>
 <li>
 <p><a href="https://zetawiki.com/wiki/ABNF">ABNF</a> 스팩 추가</p>
-<blockquote>
-<p>Add ABNF specification.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Add ABNF specification.
+</code></pre></div>
+
 </li>
 <li>
 <p>(T 대신) 날짜와 시간을 Date-Time으로 구분할 수 있도록 허용</p>
-<blockquote>
-<p>Allow space (instead of T) to separate date and time in Date-Time.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Allow space (instead of T) to separate date and time in Date-Time.
+</code></pre></div>
+
 </li>
 <li>
 <p>여러 줄 기본 문자열에서 <code>\</code>와  <code>n</code> (newline) 사이의 우발적인 빈칸을 허용한다.</p>
-<blockquote>
-<p>(역주) <code>\ n</code> 형식으로 사용하는 것을 허용한다.</p>
-<p>Allow accidental whitespace between backslash and newline in the line<br>
-continuation operator in multi-line basic strings.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; (역주) `\ n` 형식으로 사용하는 것을 허용한다.
+
+&gt; Allow accidental whitespace between backslash and newline in the line
+continuation operator in multi-line basic strings.
+</code></pre></div>
+
 </li>
 <li>
 <p>표준 파일 확장자 <code>.toml</code> 로 지정</p>
-<blockquote>
-<p>Specify that the standard file extension is <code>.toml</code>.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Specify that the standard file extension is `.toml`.
+</code></pre></div>
+
 </li>
 <li>
 <p>MIME 형식은  <code>application/toml</code> 로 지정</p>
-<blockquote>
-<p>Specify that MIME type is <code>application/toml</code></p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">&gt;</span><span class="w"> </span><span class="nx">Specify</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">MIME</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">`</span><span class="nx">application</span><span class="o">/</span><span class="nx">toml</span><span class="err">`</span>
+</code></pre></div>
+
 </li>
 <li>
 <p><code>U+007F</code>  문자는 escape 문자로 특정합니다.</p>
-<blockquote>
-<p>Clarify that U+007F is an escape character.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Clarify that U+007F is an escape character.
+</code></pre></div>
+
 </li>
 <li>
 <p><code>keys</code> 는 문자열만 사용합니다.</p>
-<blockquote>
-<p>Clarify that keys are always strings.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Clarify that keys are always strings.
+</code></pre></div>
+
 </li>
 <li>
 <p>정적 배열에 추가할 경우, 테이블의 배열은 사용할 수 없다.</p>
-<blockquote>
-<p>Clarify that you cannot use array-of-table to append to a static array.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Clarify that you cannot use array-of-table to append to a static array.
+</code></pre></div>
+
 </li>
 <li>
 <p>TOML 파일이 유효한 UTF-8 문서여야 한다.</p>
-<blockquote>
-<p>Clarify that a TOML file must be a valid UTF-8 document.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Clarify that a TOML file must be a valid UTF-8 document.
+</code></pre></div>
+
 </li>
 <li>
 <p>유요한 배열 값을 명확히 한다.</p>
-<blockquote>
-<p>Clarify valid Array values.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Clarify valid Array values.
+</code></pre></div>
+
 </li>
 <li>
 <p>Literal 문자열이 테이블 키가 될 수 있다.</p>
-<blockquote>
-<p>Clarify that literal strings can be table keys.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Clarify that literal strings can be table keys.
+</code></pre></div>
+
 </li>
 <li>
 <p>Date-Time 과 Time 에서 최소 milllisecond 이상의 정밀도를 가질 수 있다.</p>
-<blockquote>
-<p>Clarify that at least millisecond precision expected for Date-Time and Time.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">Clarify</span><span class="w"> </span><span class="nv">that</span><span class="w"> </span><span class="nv">at</span><span class="w"> </span><span class="nv">least</span><span class="w"> </span><span class="nv">millisecond</span><span class="w"> </span><span class="nv">precision</span><span class="w"> </span><span class="nv">expected</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">Date</span><span class="o">-</span><span class="nv">Time</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">Time</span>.
+</code></pre></div>
+
 </li>
 <li>
 <p>여러줄 배열 타입에서 주석을 허용합니다.</p>
-<blockquote>
-<p>Clarify that comments are OK in multiline arrays.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Clarify that comments are OK in multiline arrays.
+</code></pre></div>
+
 </li>
 <li>
 <p><code>+0</code>, <code>-0</code>, <code>+0.0</code>, <code>-0.0</code> 값이 유효하며 명확히 정의한다.</p>
-<blockquote>
-<p>Clarify that +0, -0, +0.0, and -0.0 are valid and what they mean.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Clarify that +0, -0, +0.0, and -0.0 are valid and what they mean.
+</code></pre></div>
+
 </li>
 <li>
 <p>TOML 로고가 생겼다!!!</p>
-<blockquote>
-<p>TOML has a logo!</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; TOML has a logo!
+</code></pre></div>
+
 </li>
 </ul>
 <hr>

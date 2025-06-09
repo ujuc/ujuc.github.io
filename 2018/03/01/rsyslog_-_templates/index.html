@@ -129,15 +129,15 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>문서상으로는 7버전 이상에서 사용할 수 있는 포맷이다.</p>
 <p>아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.</p>
 <div class="highlight"><pre><span></span><code><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;FileFormat&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">&quot;list&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;timestamp&quot;</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="s2">&quot;rfc3339&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;hostname&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;syslogtag&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">spifno1stsp</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">droplastlf</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;timestamp&quot;</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="s2">&quot;rfc3339&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;hostname&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;syslogtag&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">spifno1stsp</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">droplastlf</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span>
+<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 
 <p>작성된 템플릿을 이용해서 분석해보자.</p>

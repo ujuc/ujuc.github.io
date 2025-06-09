@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2024-12-29T19:58:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Adieu 2024, Bienvenue 2025</title><link href="https://ujuc.github.io/2024/12/29/adieu-2024-bienvenue-2025/" rel="alternate"></link><published>2024-12-29T19:58:00+09:00</published><updated>2024-12-29T19:58:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-12-29:/2024/12/29/adieu-2024-bienvenue-2025/</id><summary type="html">&lt;p&gt;이제 2025년이구나&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2023년 회고: &lt;a href="https://ujuc.github.io/2023/12/30/adieu-2023-bienvenue-2024"&gt;Adieu 2023, Bienvenue 2024&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2025-06-09T21:55:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Claude MCP 설정</title><link href="https://ujuc.github.io/2025/06/09/claude-mcp-%EC%84%A4%EC%A0%95/" rel="alternate"></link><published>2025-06-09T21:55:00+09:00</published><updated>2025-06-09T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2025-06-09:/2025/06/09/claude-mcp-설정/</id><summary type="html">&lt;p&gt;Claude Desktop에서 MCP 설정 세번째라서 나중에 혹시나 계속 쓸가봐 남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;많이 쓸껀 아니고 gist를 이용해서 백업용으로 설정해두고 사용할 예정.&lt;/p&gt;
+&lt;p&gt;25.06.09&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/upstash/context7"&gt;Context7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/PhiloSolares/roam-mcp"&gt;RoamResearch&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;그냥 파이썬이라서 씀.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script src="https://gist.github.com/ujuc/e101d610ca482eca0a92f7d541cef1ad.js"&gt;&lt;/script&gt;</content><category term="Develop"></category><category term="Claude"></category><category term="Claude Code"></category><category term="MCP"></category></entry><entry><title>Adieu 2024, Bienvenue 2025</title><link href="https://ujuc.github.io/2024/12/29/adieu-2024-bienvenue-2025/" rel="alternate"></link><published>2024-12-29T19:58:00+09:00</published><updated>2024-12-29T19:58:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-12-29:/2024/12/29/adieu-2024-bienvenue-2025/</id><summary type="html">&lt;p&gt;이제 2025년이구나&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;2023년 회고: &lt;a href="https://ujuc.github.io/2023/12/30/adieu-2023-bienvenue-2024"&gt;Adieu 2023, Bienvenue 2024&lt;/a&gt;&lt;/p&gt;
 &lt;div class="toc"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#_1"&gt;하려고 했던일&lt;/a&gt;&lt;ul&gt;
@@ -194,10 +203,14 @@ Datadog 서비스를 이용해서 모니터링을 운좋게 앞앞 회사에서 
 &lt;h2 id="_7"&gt;덧. 짧은 퇴사 회고 (페북 버전)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;나는 내 40대가 되었을땐 내 생각만 옳고 내 말만 옳은 사람이 안되기 위해 무엇을 해야할지 고민을 하게됨&lt;/li&gt;
-&lt;li&gt;나는 왜 밤낮없이 일에 집중을 했던가에 대해 생각하게됨.&lt;/li&gt;
+&lt;li&gt;나는 왜 밤낮없이 일에 집중을 했던가에 대해 생각하게됨.&lt;ul&gt;
 &lt;li&gt;잊으려고 생각하지 않으려고 몸을 갈아넣었던듯.&lt;/li&gt;
-&lt;li&gt;옵져빌리티를 하기위해 무엇을 쌓아가야할지에 대해 더 고민하게됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;옵져빌리티를 하기위해 무엇을 쌓아가야할지에 대해 더 고민하게됨.&lt;ul&gt;
 &lt;li&gt;그져 에러 알림만 오면 되는 것인가?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Chat"></category><category term="회고"></category></entry><entry><title>[GitHub Actions] 왜 컨테이너에 복사를 못하니?</title><link href="https://ujuc.github.io/2024/10/03/github-actions-%EC%99%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%EC%97%90-%EB%B3%B5%EC%82%AC%EB%A5%BC-%EB%AA%BB%ED%95%98%EB%8B%88/" rel="alternate"></link><published>2024-10-03T09:40:58+09:00</published><updated>2024-10-03T09:40:58+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-10-03:/2024/10/03/github-actions-왜-컨테이너에-복사를-못하니/</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/docker/build-push-action"&gt;docker/build-push-action&lt;/a&gt;를 이용해서 컨테이너 이미지를 생성하도록 해놨는데. 왜 runner에서 생성한 파일을 가져오지 못하지?&lt;/p&gt;</summary><content type="html">&lt;p&gt;회사에서 CI/CD 환경으로 GitHub Actions를 이용하여 컨테이너 이미지를 만들도록 구현을 해뒀다.&lt;/p&gt;
 &lt;p&gt;컨테이너를 만들때 사용한 Action은 &lt;a href="https://github.com/actions/checkout/"&gt;docker/build-push-action&lt;/a&gt;. Docker 에서 &lt;code&gt;docker buildx build&lt;/code&gt;를 명령어를 한번 랩핑 해서 사용할 수 있도록 해놓은 Action 인데&amp;hellip;&lt;br&gt;
 이게 multi-stage 빌드로 이미지를 빌드하게되면 잘 가져오던 파일을 runner에서 직접 빌드하여 복사하려고 하면 안되는 문제점을 확인해서 왜 안되는지에 대해서 정리하려고 한다.&lt;/p&gt;
@@ -376,54 +389,44 @@ Datadog 서비스를 이용해서 모니터링을 운좋게 앞앞 회사에서 
 &lt;li&gt;&lt;strong&gt;[MUST]&lt;/strong&gt; 사용자만 읽기, 쓰기, 접근이 가능해야함 (Mode: &lt;code&gt;0700&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[MUST]&lt;/strong&gt; 로컬 파일 시스템에만 존재해야하며, 공유되는 곳에 있어서는 안됨.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[MUST]&lt;/strong&gt; 사용자 로그인시 생성되고, 로그아웃되면 제거됨.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[MAY]&lt;/strong&gt; 주기적으로 정리 대상이 될 수 있음.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[MAY]&lt;/strong&gt; 주기적으로 정리 대상이 될 수 있음.&lt;ul&gt;
 &lt;li&gt;파일을 삭제하지 않도록 하려면 6시간마다 access time timestamp를 수정하거나, 파일에 &lt;code&gt;sticky&lt;/code&gt; 비트를 설정해야함.&lt;/li&gt;
-&lt;li&gt;해당 변수가 설정되지 않은 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;해당 변수가 설정되지 않은 경우&lt;ul&gt;
 &lt;li&gt;애플리케이션에서 유사한 기능을 가진 대체 디렉토리로 대체하고 경고 메시지를 출력하게 해야함.&lt;/li&gt;
 &lt;li&gt;통신, 동기화 목적으로 사용해야하며, 런타임 메모리에 상주가 가능하나 반드시 디스크로 스왑 아웃하지 않으니 대용량 파일을 저장해서는 안됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Operation"></category><category term="xdg-utils"></category><category term="desktop"></category><category term="unix-like"></category><category term="os"></category></entry><entry><title>3색 볼펜 읽기 공부법</title><link href="https://ujuc.github.io/2024/01/07/3%EC%83%89-%EB%B3%BC%ED%8E%9C-%EC%9D%BD%EA%B8%B0-%EA%B3%B5%EB%B6%80%EB%B2%95/" rel="alternate"></link><published>2024-01-07T12:11:50+09:00</published><updated>2024-01-09T22:17:50+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2024-01-07:/2024/01/07/3색-볼펜-읽기-공부법/</id><summary type="html">&lt;p&gt;언제였는지 정확히 기억은 없지만, 읽었던 책에 대한 간략정리 그리고 변형.&lt;/p&gt;</summary><content type="html">&lt;p&gt;좀 오래전에 &lt;a href="https://product.kyobobook.co.kr/detail/S000000526689"&gt;3색볼펜 읽기 공부법&lt;/a&gt; 이라는 책을 찾아서 읽었다. 블로그였나, 다른 분의 페이스북 포스팅이었나에서 이런게 있다더라. 그리고 그것을 이용해서 구분지어 읽으면 조금은 쉽게 구성할 수 있다더라 라는 생각으로 읽었던 것으로 기억한다.&lt;/p&gt;
 &lt;p&gt;그리고 여러번 메모 앱을 옮기면서 남은 내용은 다음과 같다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;b style="color: green"&gt;초록색&lt;/b&gt;&lt;ul&gt;
-&lt;li&gt;주관적으로 중요한 곳&lt;/li&gt;
-&lt;li&gt;개인적으로 마음에 드는 부분&lt;/li&gt;
-&lt;li&gt;개인적으로 마음에 드는 문장이라든가 다시 읽어보고 싶은 부분에 밑줄&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;b style="color: blue"&gt;파란색&lt;/b&gt;&lt;ul&gt;
-&lt;li&gt;객관적으로 중요한 곳&lt;/li&gt;
-&lt;li&gt;어느정도 중요하다고 생각하는 부분&lt;/li&gt;
-&lt;li&gt;파란 줄을 읽으면 책의 핵심은 물론 줄거리까지 파악이 가능할 정도&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;b style="color: red"&gt;빨간색&lt;/b&gt;&lt;ul&gt;
-&lt;li&gt;객관적으로 &lt;strong&gt;가장&lt;/strong&gt; 중요한 곳&lt;/li&gt;
-&lt;li&gt;누가 보더라도 정말 중요하다고 생각할만한 부분&lt;/li&gt;
-&lt;li&gt;이것만 읽더라도 책의 핵심을 파악할 수 있을 정도로 중요한 부분&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;b style="color: green"&gt;초록색&lt;/b&gt;&lt;br&gt;
+    - 주관적으로 중요한 곳&lt;br&gt;
+    - 개인적으로 마음에 드는 부분&lt;br&gt;
+    - 개인적으로 마음에 드는 문장이라든가 다시 읽어보고 싶은 부분에 밑줄&lt;/li&gt;
+&lt;li&gt;&lt;b style="color: blue"&gt;파란색&lt;/b&gt;&lt;br&gt;
+    - 객관적으로 중요한 곳&lt;br&gt;
+    - 어느정도 중요하다고 생각하는 부분&lt;br&gt;
+    - 파란 줄을 읽으면 책의 핵심은 물론 줄거리까지 파악이 가능할 정도&lt;/li&gt;
+&lt;li&gt;&lt;b style="color: red"&gt;빨간색&lt;/b&gt;&lt;br&gt;
+    - 객관적으로 &lt;strong&gt;가장&lt;/strong&gt; 중요한 곳&lt;br&gt;
+    - 누가 보더라도 정말 중요하다고 생각할만한 부분&lt;br&gt;
+    - 이것만 읽더라도 책의 핵심을 파악할 수 있을 정도로 중요한 부분&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;그리고 나만의 변형.&lt;/p&gt;
 &lt;p&gt;주로 읽을때말고 쓸때 많이 하는 구성.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;검은색&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;사실, 그리고 일반적인 내용.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;b style="color: green"&gt;초록색&lt;/b&gt;&lt;ul&gt;
-&lt;li&gt;있으면 가벼운 나의 생각, 잡담.&lt;/li&gt;
-&lt;li&gt;4색짜리 볼펜 홀더가 없어서 잘 넣어두긴함.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;b style="color: blue"&gt;파란색&lt;/b&gt;&lt;ul&gt;
-&lt;li&gt;나의 생각&lt;/li&gt;
-&lt;li&gt;다른 사람들의 이야기, 다른 사람들의 생각.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;b style="color: red"&gt;빨간색&lt;/b&gt;&lt;ul&gt;
-&lt;li&gt;그래서 중요한건?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;검은색&lt;/strong&gt;&lt;br&gt;
+    - 사실, 그리고 일반적인 내용.&lt;/li&gt;
+&lt;li&gt;&lt;b style="color: green"&gt;초록색&lt;/b&gt;&lt;br&gt;
+    - 있으면 가벼운 나의 생각, 잡담.&lt;br&gt;
+    - 4색짜리 볼펜 홀더가 없어서 잘 넣어두긴함.&lt;/li&gt;
+&lt;li&gt;&lt;b style="color: blue"&gt;파란색&lt;/b&gt;&lt;br&gt;
+    - 나의 생각&lt;br&gt;
+    - 다른 사람들의 이야기, 다른 사람들의 생각.&lt;/li&gt;
+&lt;li&gt;&lt;b style="color: red"&gt;빨간색&lt;/b&gt;&lt;br&gt;
+    - 그래서 중요한건?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;정도로 나눠서 작성중. 그러다보니 빨간색은 정말 안쓰고, 검은색과 파란색(이나 blue black)은 기본 값, 초록이 있으면 더 세분화 하는 형식으로 메모중.&lt;/p&gt;
 &lt;p&gt;Obsidian에서 style을 지원하지 않다보니&amp;hellip; 고민이 되네. 뭐 이리저리 틀면 되긴함.&lt;/p&gt;</content><category term="Chat"></category><category term="3색 볼펜"></category><category term="공부법"></category><category term="책"></category></entry><entry><title>Adieu 2023, Bienvenue 2024</title><link href="https://ujuc.github.io/2023/12/30/adieu-2023-bienvenue-2024/" rel="alternate"></link><published>2023-12-30T13:16:13+09:00</published><updated>2023-12-30T13:16:13+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2023-12-30:/2023/12/30/adieu-2023-bienvenue-2024/</id><summary type="html">&lt;p&gt;23년도 끝나가기에 대설특보가 내린날 작성.&lt;/p&gt;</summary><content type="html">&lt;p&gt;2022년 회고: &lt;a href="https://ujuc.github.io/2022/12/29/adieu-2022-bienvenue-2023"&gt;Adieu 2022, Bienvenue 2023&lt;/a&gt;&lt;/p&gt;
@@ -725,12 +728,16 @@ Datadog 서비스를 이용해서 모니터링을 운좋게 앞앞 회사에서 
 &lt;p&gt;이 세가지를 한번에 구성해두면, APM을 통해서 들어가거나 Trace를 통해서 서비스의 문제점을 찾을때 연관된 내용들을 손쉽게 찾을 수 있을 것이다.&lt;/p&gt;</content><category term="Operation"></category><category term="datadog"></category><category term="kubernetes"></category><category term="monitoring"></category></entry><entry><title>Roam Research - Tag CSS 지정</title><link href="https://ujuc.github.io/2022/02/17/roam-research--tag-css-%EC%A7%80%EC%A0%95/" rel="alternate"></link><published>2022-02-17T21:22:11+09:00</published><updated>2022-02-17T21:22:11+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2022-02-17:/2022/02/17/roam-research--tag-css-지정/</id><summary type="html">&lt;p&gt;Roam Research 에서 tag 지정할때 눈에 좀 띄게하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;그냥 본론으로 들어가자.&lt;br&gt;
 Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇게 간단해도 되나 싶은&amp;hellip;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;[[roam/css]]&lt;/code&gt; 페이지를 생성한다.&lt;br&gt;
-   - 앞으로 모든 CSS 파일을 수정하는건 여기서 한다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[[roam/css]]&lt;/code&gt; 페이지를 생성한다.&lt;ul&gt;
+&lt;li&gt;앞으로 모든 CSS 파일을 수정하는건 여기서 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/code block&lt;/code&gt;을 선택한다.&lt;/li&gt;
 &lt;li&gt;언어 선택을 &lt;code&gt;css&lt;/code&gt;로 변경해준다.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[data-tag="{TAG_NAME}"]&lt;/code&gt; CSS를 먹일 태그를 지정해준다.&lt;br&gt;
-   - 앞뒤로 뭔가를 붙일려면 &lt;code&gt;[data-tag={TAG_NAME}"]::before&lt;/code&gt;, &lt;code&gt;[data-tag="{TAG_NAME}"]::after&lt;/code&gt; 를 이용해서 앞뒤에 특정 내용을 붙일 수 있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[data-tag="{TAG_NAME}"]&lt;/code&gt; CSS를 먹일 태그를 지정해준다.&lt;ul&gt;
+&lt;li&gt;앞뒤로 뭔가를 붙일려면 &lt;code&gt;[data-tag={TAG_NAME}"]::before&lt;/code&gt;, &lt;code&gt;[data-tag="{TAG_NAME}"]::after&lt;/code&gt; 를 이용해서 앞뒤에 특정 내용을 붙일 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id="_1"&gt;예제&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="생각 tag 나가기" src="https://ujuc.github.io/img/2022/02-17/roam_tag.png"&gt;&lt;/p&gt;
@@ -1035,24 +1042,22 @@ Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇�
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;필수 항목!&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;패키지 메니저에 대한 내용을 정의 한다.&lt;/li&gt;
-&lt;li&gt;사용 가능한 패키지 메니저&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;bundler&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cargo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;composer&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;docker&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;elm&lt;/code&gt; (??)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gitsubmodule&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;github-actions&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gomode&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gradle&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;maven&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mix&lt;/code&gt; (??)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;npm&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;unget&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;terraform&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;사용 가능한 패키지 메니저&lt;br&gt;
+    - &lt;code&gt;bundler&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;cargo&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;composer&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;docker&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;elm&lt;/code&gt; (??)&lt;br&gt;
+    - &lt;code&gt;gitsubmodule&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;github-actions&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;gomode&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;gradle&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;maven&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;mix&lt;/code&gt; (??)&lt;br&gt;
+    - &lt;code&gt;npm&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;unget&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;pip&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;terraform&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;ecosystem별로 하나의 리스트로 사용하여 작업한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="drectory"&gt;&lt;a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#directory"&gt;&lt;code&gt;drectory&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
@@ -1066,27 +1071,23 @@ Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇�
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;필수 항목&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;얼마마다 확인할 것인지에 대해서 정의하는 위치.&lt;/li&gt;
-&lt;li&gt;항목은 &lt;code&gt;daily&lt;/code&gt;, &lt;code&gt;weekly&lt;/code&gt;, &lt;code&gt;monthly&lt;/code&gt;가 있다.&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;daily&lt;/code&gt;는 월~금요일에만 실행한다. (주말은 왜 쉬는거지&amp;hellip;?)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;weekly&lt;/code&gt;는 기본은 월요일에만 실행한다. 밑에서 설명할 &lt;code&gt;day&lt;/code&gt; 항목으로 변경 가능.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;monthly&lt;/code&gt;는 매달 한번 1일에 실행한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;항목은 &lt;code&gt;daily&lt;/code&gt;, &lt;code&gt;weekly&lt;/code&gt;, &lt;code&gt;monthly&lt;/code&gt;가 있다.&lt;br&gt;
+    - &lt;code&gt;daily&lt;/code&gt;는 월~금요일에만 실행한다. (주말은 왜 쉬는거지&amp;hellip;?)&lt;br&gt;
+    - &lt;code&gt;weekly&lt;/code&gt;는 기본은 월요일에만 실행한다. 밑에서 설명할 &lt;code&gt;day&lt;/code&gt; 항목으로 변경 가능.&lt;br&gt;
+    - &lt;code&gt;monthly&lt;/code&gt;는 매달 한번 1일에 실행한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="day"&gt;&lt;a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduleday"&gt;&lt;code&gt;day&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;주마다 업데이트할 스케출을 적어준다.&lt;/li&gt;
 &lt;li&gt;기본값은 &lt;code&gt;monday 05:00 UTC&lt;/code&gt; 이다.&lt;/li&gt;
-&lt;li&gt;항목&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;monday&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tuesday&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;wednesday&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;thursday&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;friday&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;saturday&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sunday&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;항목&lt;br&gt;
+    - &lt;code&gt;monday&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;tuesday&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;wednesday&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;thursday&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;friday&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;saturday&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;sunday&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="timezone"&gt;&lt;a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduletimezone"&gt;&lt;code&gt;timezone&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -1097,11 +1098,9 @@ Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇�
 &lt;h3 id="allow"&gt;&lt;a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#scheduleinterval"&gt;&lt;code&gt;allow&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;기본적으로 모든 의존성을 확안하여 PR을 넣게 되는데, 업데이트 하고 싶은 의존성만 허용할 수 있는 옵션이다.&lt;/li&gt;
-&lt;li&gt;항목&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;dependency-name&lt;/code&gt;: 명시한 이름을 가진 패키지만 업데이트 한다. &lt;code&gt;*&lt;/code&gt;를 이용하여 여러개의 패키지를 지정할 수 있다. (정규식의 &lt;code&gt;*&lt;/code&gt; 사용법과 동일)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dependency-type&lt;/code&gt;: 음.. 타입....음..&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;항목&lt;br&gt;
+    - &lt;code&gt;dependency-name&lt;/code&gt;: 명시한 이름을 가진 패키지만 업데이트 한다. &lt;code&gt;*&lt;/code&gt;를 이용하여 여러개의 패키지를 지정할 수 있다. (정규식의 &lt;code&gt;*&lt;/code&gt; 사용법과 동일)&lt;br&gt;
+    - &lt;code&gt;dependency-type&lt;/code&gt;: 음.. 타입....음..&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1147,29 +1146,21 @@ Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇�
 &lt;h3 id="commit-message"&gt;&lt;a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#commit-message"&gt;&lt;code&gt;commit-message&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Github Dependabot이 커밋할때 어떤걸 붙일 건지에 대한 설정&lt;/li&gt;
-&lt;li&gt;항목&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;prefix&lt;/code&gt;: 앞에 붙일 단어&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;prefix-development&lt;/code&gt;: 개발 환경용 앞에 붙일 단어&lt;ul&gt;
-&lt;li&gt;지원하는데는 당연히 &lt;code&gt;bundler&lt;/code&gt;, &lt;code&gt;composer&lt;/code&gt;, &lt;code&gt;mix&lt;/code&gt;, &lt;code&gt;maven&lt;/code&gt;, &lt;code&gt;npm&lt;/code&gt;, &lt;code&gt;pip&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;include: "scope"&lt;/code&gt;: 업데이트된 의존성 목록을 점두사 뒤에 넣어준다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;항목&lt;br&gt;
+    - &lt;code&gt;prefix&lt;/code&gt;: 앞에 붙일 단어&lt;br&gt;
+    - &lt;code&gt;prefix-development&lt;/code&gt;: 개발 환경용 앞에 붙일 단어&lt;br&gt;
+        - 지원하는데는 당연히 &lt;code&gt;bundler&lt;/code&gt;, &lt;code&gt;composer&lt;/code&gt;, &lt;code&gt;mix&lt;/code&gt;, &lt;code&gt;maven&lt;/code&gt;, &lt;code&gt;npm&lt;/code&gt;, &lt;code&gt;pip&lt;/code&gt;&lt;br&gt;
+    - &lt;code&gt;include: "scope"&lt;/code&gt;: 업데이트된 의존성 목록을 점두사 뒤에 넣어준다.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;code&gt;target-branch&lt;/code&gt;를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="ignore"&gt;&lt;a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#ignore"&gt;&lt;code&gt;ignore&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;@dependabot ignore&lt;/code&gt;를 이용해서 &lt;code&gt;ignore&lt;/code&gt; 된게 있는지 확인하라고 하는데&amp;hellip;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;@dependabot&lt;/code&gt;은 어디서&amp;hellip; 사용하나&amp;hellip;?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@dependabot ignore&lt;/code&gt;를 이용해서 &lt;code&gt;ignore&lt;/code&gt; 된게 있는지 확인하라고 하는데&amp;hellip;&lt;br&gt;
+    - &lt;code&gt;@dependabot&lt;/code&gt;은 어디서&amp;hellip; 사용하나&amp;hellip;?&lt;/li&gt;
 &lt;li&gt;암튼 뭔가를 하기 싫을때 하는거&lt;/li&gt;
-&lt;li&gt;항목&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;dependency-name&lt;/code&gt;: 의존성 패키지 이름&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;versions&lt;/code&gt;: 제외할 버전이나 버전 범위를 지정한다. 패키지 메니저마다 사용하는 패턴을 이용해서 작성하자.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;항목&lt;br&gt;
+    - &lt;code&gt;dependency-name&lt;/code&gt;: 의존성 패키지 이름&lt;br&gt;
+    - &lt;code&gt;versions&lt;/code&gt;: 제외할 버전이나 버전 범위를 지정한다. 패키지 메니저마다 사용하는 패턴을 이용해서 작성하자.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;code&gt;target-branch&lt;/code&gt;를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="labels"&gt;&lt;a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#labels"&gt;&lt;code&gt;labels&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
@@ -1206,11 +1197,9 @@ Roam Research에서는 사용자 CSS를 지원한다. 참 간단하게. 이렇�
 &lt;/ul&gt;
 &lt;h3 id="versioning-strategy"&gt;&lt;a href="https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#versioning-strategy"&gt;&lt;code&gt;versioning-strategy&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Github Dependabot에서 의존성 업데이트를 진행하면서 명시하는 방법은 두가지 방법이 있다.&lt;ul&gt;
-&lt;li&gt;App: 요구 버전이 업데이트 (&lt;code&gt;npm&lt;/code&gt;, &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;composer&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Library: 버전 범위 업데이트 (&lt;code&gt;bundler&lt;/code&gt;, &lt;code&gt;cargo&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Github Dependabot에서 의존성 업데이트를 진행하면서 명시하는 방법은 두가지 방법이 있다.&lt;br&gt;
+    - App: 요구 버전이 업데이트 (&lt;code&gt;npm&lt;/code&gt;, &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;composer&lt;/code&gt;)&lt;br&gt;
+    - Library: 버전 범위 업데이트 (&lt;code&gt;bundler&lt;/code&gt;, &lt;code&gt;cargo&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;이 사항을 변경하기 위해서 사용.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;code&gt;target-branch&lt;/code&gt;를 사용해서 특정 브런치를 지정하지 않으면, 보안 업데이트 PR에도 영향을 끼칠 수 있음.&lt;/li&gt;
 &lt;li&gt;사용 가능한 업데이트 옵션&lt;/li&gt;
@@ -1819,8 +1808,10 @@ Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 &lt;h3 id="2019"&gt;2019년 작성 리스트&lt;/h3&gt;
 &lt;p&gt;&lt;img src="https://ujuc.github.io/img/2019/12-28/blog_list.png" width="30%"&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;블로그 글 12개 썼다!&lt;/li&gt;
+&lt;li&gt;블로그 글 12개 썼다!&lt;ul&gt;
 &lt;li&gt;아직 일자가 남아서 늘수 있다. 그래도 1개정도..?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;이글까지하면 13개지만 빼자&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_19"&gt;정산&lt;/h3&gt;
@@ -1893,137 +1884,138 @@ $&lt;span class="w"&gt; &lt;/span&gt;curl&lt;span class="w"&gt; &lt;/span&gt;-L&
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;.(dot)&lt;/code&gt;으로 표기하는 키 추가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Add dotted keys.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Add dotted keys.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;16진수, 8진수, 2진수로 표기하는 정수 포맷 추가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Add hex, octal, and binary integer formats.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Add hex, octal, and binary integer formats.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;특별한 float 값(inf, nan) 추가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Add special float values (inf, nan)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Add special float values (inf, nan)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Offset Date-Time에서 Datetime으로 이름 변경&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Rename Datetime to Offset Date-Time.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Rename Datetime to Offset Date-Time.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;로컬 Date-Time 추가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Add Local Date-Time.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Add Local Date-Time.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;로컬 날짜 추가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Add Local Date.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Add Local Date.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;로컬 시간 추가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Add Local Time.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Add Local Time.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://zetawiki.com/wiki/ABNF"&gt;ABNF&lt;/a&gt; 스팩 추가&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Add ABNF specification.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Add ABNF specification.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;(T 대신) 날짜와 시간을 Date-Time으로 구분할 수 있도록 허용&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Allow space (instead of T) to separate date and time in Date-Time.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Allow space (instead of T) to separate date and time in Date-Time.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;여러 줄 기본 문자열에서 &lt;code&gt;\&lt;/code&gt;와  &lt;code&gt;n&lt;/code&gt; (newline) 사이의 우발적인 빈칸을 허용한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;(역주) &lt;code&gt;\ n&lt;/code&gt; 형식으로 사용하는 것을 허용한다.&lt;/p&gt;
-&lt;p&gt;Allow accidental whitespace between backslash and newline in the line&lt;br&gt;
-continuation operator in multi-line basic strings.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; (역주) `\ n` 형식으로 사용하는 것을 허용한다.
+
+&amp;gt; Allow accidental whitespace between backslash and newline in the line
+continuation operator in multi-line basic strings.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;표준 파일 확장자 &lt;code&gt;.toml&lt;/code&gt; 로 지정&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Specify that the standard file extension is &lt;code&gt;.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Specify that the standard file extension is `.toml`.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;MIME 형식은  &lt;code&gt;application/toml&lt;/code&gt; 로 지정&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Specify that MIME type is &lt;code&gt;application/toml&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Specify&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;MIME&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="nx"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;toml&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;U+007F&lt;/code&gt;  문자는 escape 문자로 특정합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify that U+007F is an escape character.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Clarify that U+007F is an escape character.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;keys&lt;/code&gt; 는 문자열만 사용합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify that keys are always strings.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Clarify that keys are always strings.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;정적 배열에 추가할 경우, 테이블의 배열은 사용할 수 없다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify that you cannot use array-of-table to append to a static array.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Clarify that you cannot use array-of-table to append to a static array.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;TOML 파일이 유효한 UTF-8 문서여야 한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify that a TOML file must be a valid UTF-8 document.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Clarify that a TOML file must be a valid UTF-8 document.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;유요한 배열 값을 명확히 한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify valid Array values.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Clarify valid Array values.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Literal 문자열이 테이블 키가 될 수 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify that literal strings can be table keys.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Clarify that literal strings can be table keys.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Date-Time 과 Time 에서 최소 milllisecond 이상의 정밀도를 가질 수 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify that at least millisecond precision expected for Date-Time and Time.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;Clarify&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;at&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;least&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;millisecond&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;precision&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;expected&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;Time&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;Time&lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;여러줄 배열 타입에서 주석을 허용합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify that comments are OK in multiline arrays.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Clarify that comments are OK in multiline arrays.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;+0&lt;/code&gt;, &lt;code&gt;-0&lt;/code&gt;, &lt;code&gt;+0.0&lt;/code&gt;, &lt;code&gt;-0.0&lt;/code&gt; 값이 유효하며 명확히 정의한다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clarify that +0, -0, +0.0, and -0.0 are valid and what they mean.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Clarify that +0, -0, +0.0, and -0.0 are valid and what they mean.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;TOML 로고가 생겼다!!!&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;TOML has a logo!&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; TOML has a logo!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -2244,23 +2236,19 @@ vim에서 명령을 날린다.&lt;/p&gt;
 &lt;h2 id="what-is-invoke"&gt;What is Invoke?&lt;/h2&gt;
 &lt;p&gt;Python (2.7, 3.4+) 태스크 실행 툴이자 라이브러리&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;[tasks.py](http://tasks.py)&lt;/code&gt; 파일에 태스크를 명시하여 진행&lt;ul&gt;
-&lt;li&gt;물론 &lt;code&gt;tasks/*.py&lt;/code&gt; 형식으로 만들어서 정의할 수도 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[tasks.py](http://tasks.py)&lt;/code&gt; 파일에 태스크를 명시하여 진행&lt;br&gt;
+    - 물론 &lt;code&gt;tasks/*.py&lt;/code&gt; 형식으로 만들어서 정의할 수도 있다.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;GNU Make 처럼, 명령을 나열할 수 있다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;invoke&lt;span class="w"&gt; &lt;/span&gt;clean&lt;span class="w"&gt; &lt;/span&gt;build
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    $ invoke clean build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;REPL 쪽에서 사용이 가능하다.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;Unix CLI 와 같이 flag-based style 명령어를 만들 수 있다.&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--ab&lt;/code&gt; , &lt;code&gt;-d&lt;/code&gt; 이런거&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Unix CLI 와 같이 flag-based style 명령어를 만들 수 있다.&lt;br&gt;
+    - &lt;code&gt;--ab&lt;/code&gt; , &lt;code&gt;-d&lt;/code&gt; 이런거&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;사용?&lt;/h2&gt;
 &lt;ul&gt;
@@ -2342,25 +2330,17 @@ Options:
 &lt;p&gt;자세한건 &lt;a href="http://docs.pyinvoke.org/en/stable"&gt;Docs&lt;/a&gt; 에서 읽어가면서 확인&lt;/p&gt;</content><category term="Develop"></category><category term="invoke"></category><category term="devops"></category><category term="paramiko"></category><category term="command"></category><category term="cli"></category><category term="task"></category></entry><entry><title>Pelican 4.1.0 Release Note</title><link href="https://ujuc.github.io/2019/07/21/pelican_4.1.0_release_note/" rel="alternate"></link><published>2019-07-21T15:23:10+09:00</published><updated>2019-07-21T15:23:10+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-07-21:/2019/07/21/pelican_4.1.0_release_note/</id><summary type="html">&lt;p&gt;pelican 4.1.0 이 업글이 되었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 정리하다가 업그레이드가 된 걸 알았다.&lt;/p&gt;
 &lt;h3 id="410-2019-07-14"&gt;&lt;a href="https://docs.getpelican.com/en/stable/changelog.html#id1"&gt;4.1.0 - 2019-07-14&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;변경된 파일이 있으면 reload 가능 (Invoke 태스크를 통해 제공됨)&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican/blob/master/pelican/tools/templates/tasks.py.jinja2#L93"&gt;github - &lt;code&gt;task.py.jinja2&lt;/code&gt;&lt;/a&gt; 에서 확인하면 &lt;code&gt;livereload&lt;/code&gt; 패키지를 사용하여 새롭게 띄울 수 있도록 작업을 해뒀다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Poetry를 사용하여 패키지 관리&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pyproject.toml&lt;/code&gt; 를 이용하게 됨.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;python -m pelican&lt;/code&gt; 형태로 호출 가능&lt;ul&gt;
-&lt;li&gt;env 환경에서 굳이&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;변경된 파일이 있으면 reload 가능 (Invoke 태스크를 통해 제공됨)&lt;br&gt;
+    - &lt;a href="https://github.com/getpelican/pelican/blob/master/pelican/tools/templates/tasks.py.jinja2#L93"&gt;github - &lt;code&gt;task.py.jinja2&lt;/code&gt;&lt;/a&gt; 에서 확인하면 &lt;code&gt;livereload&lt;/code&gt; 패키지를 사용하여 새롭게 띄울 수 있도록 작업을 해뒀다.&lt;/li&gt;
+&lt;li&gt;Poetry를 사용하여 패키지 관리&lt;br&gt;
+    - &lt;code&gt;pyproject.toml&lt;/code&gt; 를 이용하게 됨.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python -m pelican&lt;/code&gt; 형태로 호출 가능&lt;br&gt;
+    - env 환경에서 굳이&amp;hellip;&lt;/li&gt;
 &lt;li&gt;콘텐츠 상대 소스 경로 속성 추가&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;EXTRA_PATH_METADATA&lt;/code&gt; 디렉토리 허용&lt;/li&gt;
-&lt;li&gt;템플릿에서 사용 가능한 &lt;code&gt;all_articles&lt;/code&gt; 변수가 추가됨.&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/themes.html?highlight=all_articles#common-variables"&gt;Common variables&lt;/a&gt; 항목 확인 가능&lt;/li&gt;
-&lt;li&gt;최근 소식 전달을 위한 기능 용&amp;hellip;?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;템플릿에서 사용 가능한 &lt;code&gt;all_articles&lt;/code&gt; 변수가 추가됨.&lt;br&gt;
+    - &lt;a href="https://docs.getpelican.com/en/stable/themes.html?highlight=all_articles#common-variables"&gt;Common variables&lt;/a&gt; 항목 확인 가능&lt;br&gt;
+    - 최근 소식 전달을 위한 기능 용&amp;hellip;?&lt;/li&gt;
 &lt;li&gt;디버그 모드에서 출력 화면 향상&lt;/li&gt;
 &lt;li&gt;Atom 피드에서 비었거나 중복된 summary 항목 삭제&lt;/li&gt;
 &lt;li&gt;페이지네이션, pelican-import, pelican-quickstart, 피드 임포터 버그 수정&lt;/li&gt;
@@ -2438,63 +2418,63 @@ Options:
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 코드는 PSR &amp;ldquo;코딩 스타일 가이드&amp;rdquo; [PSR-1]에 따릅니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Code MUST follow a “coding style guide” PSR [&lt;a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md"&gt;PSR-1&lt;/a&gt;].&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Code MUST follow a “coding style guide” PSR [[PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)].
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 코드는 인던트를 스페이스 4를 사용합니다. 탭을 사용하지 않습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Code MUST use 4 spaces for indenting, not tabs.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;Code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;spaces&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;indenting&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;tabs&lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST NOT] 줄 길이에 대한 엄격한 제한이 있어서는 안 됩니다; [MUST] 가벼운 제한은 반드시 120자여야 합니다; [SHOULD] 라인의 길이는 80자 이하여야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There MUST NOT be a hard limit on line length; the soft limit MUST be 120 characters; lines SHOULD be 80 characters or less.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; There MUST NOT be a hard limit on line length; the soft limit MUST be 120 characters; lines SHOULD be 80 characters or less.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] &lt;code&gt;namespace&lt;/code&gt; 선언 다음에는 빈 줄이 하나 있어야 합니다; [MUST] &lt;code&gt;use&lt;/code&gt; 선언한 블록 다음에는 빈 줄이 하나 있어야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There MUST be one blank line after the &lt;code&gt;namespace&lt;/code&gt; declaration, and there MUST be one blank line after the block of &lt;code&gt;use&lt;/code&gt; declarations.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;There&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;one&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;blank&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;after&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`namespace`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declaration&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;there&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;one&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;blank&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;after&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;block&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`use`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declarations&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 클래스 여는 중괄호는 반드시 다음 줄로 가야 합니다; [MUST] 닫는 중괄호는 본문 뒤에 오는 다음 줄로 가야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Opening braces for classes MUST go on the next line, and closing braces MUST go on the next line after the body.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Opening&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;braces&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;next&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;closing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;braces&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;next&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;after&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 메서드를 여는 중괄호는 반드시 다음 줄로 가야 합니다; [MUST] 닫는 중괄호는 반드시 본문 맨 끝에서 다음 줄로 가야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Opening braces for methods MUST go on the next line, and closing braces MUST go on the next line after the body.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Opening&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;braces&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;methods&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;next&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;closing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;braces&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;next&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;after&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 가시성 (Visibility)는 모든 속성과 메서드에서 반드시 선언되어야 합니다; [MUST] &lt;code&gt;abstract&lt;/code&gt; 와 &lt;code&gt;final&lt;/code&gt; 은 가시성 이전에 반드시 선언되어야 합니다; [MUST] &lt;code&gt;static&lt;/code&gt; 은 반드시 가시성 뒤에 선언되어야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Visibility MUST be declared on all properties and methods; &lt;code&gt;abstract&lt;/code&gt; and &lt;code&gt;final&lt;/code&gt; MUST be declared before the visibility; &lt;code&gt;static&lt;/code&gt; MUST be declared after the visibility.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Visibility&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declared&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;properties&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;methods&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`abstract`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`final`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declared&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;before&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;visibility&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`static`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declared&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;after&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;visibility&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 제어 구조 키워드 뒤에는 반드시 공백을 가져야 합니다; [MUST NOT] 메서드와 펑션 사용할 때는 공백을 추가해서는 안됩니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Control structure keywords MUST have one space after them; method and function calls MUST NOT.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Control structure keywords MUST have one space after them; method and function calls MUST NOT.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 제어 구조에서 여는 중괄호는 반드시 같은 줄에 있어야 합니다. [MUST] 닫는 괄호는 반드시 본문 뒤의 다음 줄로 가야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Opening braces for control structures MUST go on the same line, and closing braces MUST go on the next line after the body.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Opening&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;braces&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;control&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;structures&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;same&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;closing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;braces&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;next&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;after&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST NOT] 제어 구조에서 여는 괄호 뒤에는 공백이 없어야 합니다. [MUST NOT] 제어 구조에서 닫는 괄호 전에는 공백이 없어야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Opening parentheses for control structures MUST NOT have a space after them, and closing parentheses for control structures MUST NOT have a space before.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;Opening&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;parentheses&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;control&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;structures&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;NOT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;space&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;after&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;them&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;closing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;parentheses&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;control&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;structures&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;NOT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;space&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;before&lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="11"&gt;1.1 예제&lt;/h2&gt;
@@ -2513,11 +2493,11 @@ Options:
 &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;sampleMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
             &lt;span class="nx"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;elseif&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;elseif&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
             &lt;span class="nv"&gt;$foo&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$arg1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
             &lt;span class="nx"&gt;BazClass&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$arg2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$arg3&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
@@ -2826,39 +2806,39 @@ Options:
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 제어문 키워드 다음에 스페이스가 하나 있어야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There MUST be one space after the control structure keyword&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; There MUST be one space after the control structure keyword
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST NOT] 여는 괄호 뒤에 스페이스가 있어서는 안 됩니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There MUST NOT be a space after the opening parenthesis&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; There MUST NOT be a space after the opening parenthesis
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST NOT] 닫는 괄호 앞에 스페이스가 있어서는 안 됩니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There MUST NOT be a space before the closing parenthesis&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; There MUST NOT be a space before the closing parenthesis
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 닫는 괄호와 여는 중괄호 사이에 스페이스가 하나 있어야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;There MUST be one space between the closing parenthesis and the opening brace&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; There MUST be one space between the closing parenthesis and the opening brace
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 제어문 내부는 반드시 한번 들여 쓰기 해야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The structure body MUST be indented once&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; The structure body MUST be indented once
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 닫는 중괄호는 제어문이 끝나는 다음 줄에 있어야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The closing brace MUST be on the next line after the body&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;The&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;closing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;brace&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;next&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;after&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;body&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;[MUST] 제어문 본체는 중괄호로 묶어야 합니다. 중괄호를 이용하여 제어문이 어떻게 보여줄지를 표준화하고, 개행이 되었을 때, 오류가 발생할 가능성을 줄여 줍니다.&lt;/p&gt;
@@ -3081,45 +3061,45 @@ Options:
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;전역 변수, 전역 상수 선언&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Declaration of global variables and global constants&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Declaration&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;global&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;global&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;constants&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;함수 선언&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Declaration of functions&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Declaration of functions
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;연산자와 할당자&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Operators and assignment&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Operators&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;assignment&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;라인간 정렬&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Inter-line alignment&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Inter-line alignment
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;주석과 문서 블록&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Comments and documentation blocks&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Comments and documentation blocks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;클래스 이름 접두사와 접미사&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Class name prefixes and suffixes&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Class name prefixes and suffixes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;모범 사례&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Best practices&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;gt; Best practices
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;[MAY] 향후 권장 사항은 스타일이나 연습해야 될 많은 요소들을 다루기 위해 이 가이드를 수정하고 확장할 수 있습니다.&lt;/p&gt;
@@ -3271,45 +3251,45 @@ Options:
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 파일은 &lt;code&gt;&amp;lt;?php&lt;/code&gt; 와 &lt;code&gt;&amp;lt;?=&lt;/code&gt; 태그만 사용해야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Files MUST use only &lt;code&gt;&amp;lt;?php&lt;/code&gt; and &lt;code&gt;&amp;lt;?=&lt;/code&gt; tags.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Files&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;only&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;&lt;span class="sb"&gt;` and `&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;?=&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt; &lt;span class="nx"&gt;tags&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 파일은 PHP 코드에 BOM 없이 UTF-8만 사용해야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Files MUST use only UTF-8 without BOM for PHP code.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;Files&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;only&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;UTF&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;without&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;BOM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;PHP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;code&lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[SHOULD] 파일에는 심벌 (classes, functions, constants, 등)을 선언&lt;em&gt;하거나&lt;/em&gt; 사이드 이펙트 (예, 출력 생성, .ini 설정 변경, 등)을 발생시키는 작업 중 하나만 하여야 합니다. [SHOULD NOT] 둘이 같이 선언되면 안됩니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Files SHOULD &lt;em&gt;either&lt;/em&gt; declare symbols (classes, functions, constants, etc.) &lt;em&gt;or&lt;/em&gt; cause side-effects (e.g. generate output, change .ini settings, etc.) but SHOULD NOT do both.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Files&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SHOULD&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;either&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declare&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;functions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;constants&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="ow"&gt;or&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cause&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;side&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;effects&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;generate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;change&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ini&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;but&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SHOULD&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;NOT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;both&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] Namespaces와 classes는 반드시 &amp;ldquo;autoloading&amp;rdquo; 해야 합니다. PSR: [&lt;a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md"&gt;~~PSR-0~~&lt;/a&gt;, &lt;a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md"&gt;PSR-4&lt;/a&gt;]&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Namespaces and classes MUST follow an “autoloading” PSR: [&lt;a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md"&gt;PSR-0&lt;/a&gt;, &lt;a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md"&gt;PSR-4&lt;/a&gt;].&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Namespaces&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;follow&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;“&lt;/span&gt;&lt;span class="n"&gt;autoloading&lt;/span&gt;&lt;span class="err"&gt;”&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PSR&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;PSR&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;standards&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blob&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;master&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;accepted&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;PSR&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;PSR&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;php&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;standards&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blob&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;master&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;accepted&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;PSR&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;autoloader&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 클레스 이름은 반드시 &lt;code&gt;StudlyCaps&lt;/code&gt; 로 선언되어야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Class names MUST be declared in &lt;code&gt;StudlyCaps&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;names&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declared&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`StudlyCaps`&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 클래스 상수는 모두 대문자로 밑줄 구분 기호로 선언해야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Class constants MUST be declared in all upper case with underscore separators.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;constants&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declared&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;upper&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;underscore&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;separators&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;[MUST] 메소드 이름은 &lt;code&gt;camelCase&lt;/code&gt; 로 선언되어야 합니다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Method names MUST be declared in &lt;code&gt;camelCase&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Method&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;names&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;MUST&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;declared&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`camelCase`&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="2"&gt;2. 파일&lt;/h2&gt;
@@ -3453,8 +3433,8 @@ Options:
 &lt;p&gt;사진도 못 옮기고 이것저것 텍스트들도 제대로 작업을 못하던 중에 혹시나 그냥 앱만 지우면 안 되는 건가라는 생각에서 매뉴얼을 찾아서 보고 작동이 되는 것을 확인하였다.&lt;/p&gt;
 &lt;p&gt;그냥 이렇게 하면 된다고 말 한마디면 되는 건데&amp;hellip; G Suite 쪽은 제대로 알려주는 것이 없으니&amp;hellip;&lt;/p&gt;
 &lt;p&gt;터미널이 편하다면 터미널로 아니라면 해당 위치에 있는 파일들을 삭제하면 된다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf&lt;span class="w"&gt; &lt;/span&gt;/Applications/Google&lt;span class="se"&gt;\ &lt;/span&gt;Drive&lt;span class="se"&gt;\ &lt;/span&gt;File&lt;span class="se"&gt;\ &lt;/span&gt;Stream.app/
-$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf&lt;span class="w"&gt; &lt;/span&gt;~/Library/Application&lt;span class="w"&gt; &lt;/span&gt;Support/Google/DriveFS/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  $ sudo rm -rf /Applications/Google\ Drive\ File\ Stream.app/
+  $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;위의 내용처럼 작업하고 재시작하면 잘 실행된다.&lt;/p&gt;</content><category term="Operation"></category><category term="google drive stream"></category><category term="macos"></category><category term="mojave"></category></entry><entry><title>맥에서 GPG키를 이용하여 Commit 해보기</title><link href="https://ujuc.github.io/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/" rel="alternate"></link><published>2018-10-26T23:24:58+09:00</published><updated>2022-05-01T22:44:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-10-26:/2018/10/26/maeg-e-seo_gpgki-reur_i-yong-ha-yeo_commit_hae-bo-gi/</id><summary type="html">&lt;p&gt;GPG 키를 이용해서 내 커밋이 정말 내가 올린 것이라 말하고 싶었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://keybase.io/"&gt;keybase.io&lt;/a&gt; 계정이 있다는 가정하에서 하니, 가입을 하자.&lt;/p&gt;
@@ -3592,41 +3572,33 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;p&gt;자세한 내용을 확인하려면 다음 URL에서 확인을 하도록하자.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.ibm.com/developerworks/linux/library/l-scheduler/"&gt;IBM - Inside the Linux scheduler&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;리눅스 커널 2.6 버전이상에서 사용하는 스케쥴러에 대한 내용이 정리되어있다.&lt;/li&gt;
-&lt;li&gt;여기서는 다음 그림을 참조하면된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="The Linux 2.6 scheduler runqueue structure
-" src="https://www.ibm.com/developerworks/linux/library/l-scheduler/figure1.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.ibm.com/developerworks/linux/library/l-scheduler/"&gt;IBM - Inside the Linux scheduler&lt;/a&gt;&lt;br&gt;
+    - 리눅스 커널 2.6 버전이상에서 사용하는 스케쥴러에 대한 내용이 정리되어있다.&lt;br&gt;
+    - 여기서는 다음 그림을 참조하면된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;![The Linux 2.6 scheduler runqueue structure
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;](https://www.ibm.com/developerworks/linux/library/l-scheduler/figure1.gif)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.suse.com/documentation/sles11/book_sle_tuning/data/cha_tuning_taskscheduler.html"&gt;SUSE - Tuning the Task Scheduler&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SUSE 11 버전에서 튜닝하는 것에 대한 내용 중 하나이다. 12 버전에 대한건 딴문서가 있으니 확인.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://www.suse.com/documentation/sles11/book_sle_tuning/data/cha_tuning_taskscheduler.html"&gt;SUSE - Tuning the Task Scheduler&lt;/a&gt;&lt;br&gt;
+    - SUSE 11 버전에서 튜닝하는 것에 대한 내용 중 하나이다. 12 버전에 대한건 딴문서가 있으니 확인.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;우선순위 설정&lt;/h2&gt;
 &lt;h3 id="daemon"&gt;Daemon 구성 파일에서 설정&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일을 이용하여 &lt;code&gt;--nicelevel&lt;/code&gt; 옵션 추가&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://unix.stackexchange.com/a/123926"&gt;Setting up init.d service daemon priority (with or without monit)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일을 이용하여 &lt;code&gt;--nicelevel&lt;/code&gt; 옵션 추가&lt;br&gt;
+    - &lt;a href="https://unix.stackexchange.com/a/123926"&gt;Setting up init.d service daemon priority (with or without monit)&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일에 주석으로 &lt;code&gt;# chkconfig:&lt;/code&gt; 옵션 추가&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://serverfault.com/questions/754676/how-to-change-the-startup-order-of-linux-init-scripts-in-redhat-centos"&gt;how to change the startup order of linux init scripts in Redhat, Centos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일에 주석으로 &lt;code&gt;# chkconfig:&lt;/code&gt; 옵션 추가&lt;br&gt;
+    - &lt;a href="https://serverfault.com/questions/754676/how-to-change-the-startup-order-of-linux-init-scripts-in-redhat-centos"&gt;how to change the startup order of linux init scripts in Redhat, Centos&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Systemd 에서 설정하는 방법&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Scheduling"&gt;systemd.exec&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Systemd 에서 설정하는 방법&lt;br&gt;
+    - &lt;a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Scheduling"&gt;systemd.exec&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="limitsconf"&gt;&lt;code&gt;limits.conf&lt;/code&gt; 파일에서 지정&lt;/h3&gt;
@@ -3643,29 +3615,23 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;/ul&gt;
 &lt;h3 id="nice"&gt;&lt;code&gt;nice&lt;/code&gt; 명령을 이용하여 동적으로 할당하는 방법&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;일반적인 사용법&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;nice -n {nice_value} {program_name}&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://askubuntu.com/questions/656771/process-niceness-vs-priority"&gt;Process &amp;lsquo;niceness&amp;rsquo; vs. &amp;lsquo;priority&amp;rsquo;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://bencane.com/2013/09/09/setting-process-cpu-priority-with-nice-and-renice/"&gt;Setting process CPU priority with nice and renice | Benjamin Cane&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://unix.stackexchange.com/questions/72934/how-do-i-start-a-process-with-a-nice-value-of-20-and-not-give-it-root-privilege"&gt;How do I start a process with a nice value of -20 and not give it root privilege?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;일반적인 사용법&lt;br&gt;
+    - &lt;code&gt;nice -n {nice_value} {program_name}&lt;/code&gt;&lt;br&gt;
+    - &lt;a href="https://askubuntu.com/questions/656771/process-niceness-vs-priority"&gt;Process &amp;lsquo;niceness&amp;rsquo; vs. &amp;lsquo;priority&amp;rsquo;&lt;/a&gt;&lt;br&gt;
+    - &lt;a href="http://bencane.com/2013/09/09/setting-process-cpu-priority-with-nice-and-renice/"&gt;Setting process CPU priority with nice and renice | Benjamin Cane&lt;/a&gt;&lt;br&gt;
+    - &lt;a href="https://unix.stackexchange.com/questions/72934/how-do-i-start-a-process-with-a-nice-value-of-20-and-not-give-it-root-privilege"&gt;How do I start a process with a nice value of -20 and not give it root privilege?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="daemon_1"&gt;특정 프로그램으로 Daemon을 이용하여 관리하는 방법&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://and.sourceforge.net/"&gt;Auto nice daemon&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;업그레이드가 2005년 이후로 안되고 있다.&lt;/li&gt;
-&lt;li&gt;그러니 사용하기 꺼림직&amp;hellip;&lt;/li&gt;
-&lt;li&gt;찾다가 나왔으니 뭐&amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.reddit.com/r/linuxquestions/comments/4ctr5c/is_the_autonice_daemon_and_safe_to_use/"&gt;Reddit 글&lt;/a&gt; 에서는 사용하기가 불안하다는 내용도&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/Nefelim4ag/Ananicy"&gt;Ananicy&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;Another Auto nice daemon&lt;/li&gt;
-&lt;li&gt;지금까지 개발중이다.&lt;/li&gt;
-&lt;li&gt;Role 값을 JSON 형식으로 작업이 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://and.sourceforge.net/"&gt;Auto nice daemon&lt;/a&gt;&lt;br&gt;
+    - 업그레이드가 2005년 이후로 안되고 있다.&lt;br&gt;
+    - 그러니 사용하기 꺼림직&amp;hellip;&lt;br&gt;
+    - 찾다가 나왔으니 뭐&amp;hellip;&lt;br&gt;
+    - &lt;a href="https://www.reddit.com/r/linuxquestions/comments/4ctr5c/is_the_autonice_daemon_and_safe_to_use/"&gt;Reddit 글&lt;/a&gt; 에서는 사용하기가 불안하다는 내용도&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Nefelim4ag/Ananicy"&gt;Ananicy&lt;/a&gt;&lt;br&gt;
+    - Another Auto nice daemon&lt;br&gt;
+    - 지금까지 개발중이다.&lt;br&gt;
+    - Role 값을 JSON 형식으로 작업이 가능하다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;PS. IO Priority를 변경하고 싶다면 &lt;code&gt;ionice&lt;/code&gt;를 확인하도록 하자. (&lt;a href="https://linux.die.net/man/1/ionice"&gt;manpage&lt;/a&gt;)&lt;/p&gt;</content><category term="Operation"></category><category term="linux"></category><category term="priority"></category><category term="scheduler"></category></entry><entry><title>Pelican에서 Markdown 문서 Attribute 에러</title><link href="https://ujuc.github.io/2018/09/24/pelicane-seo_markdown_mun-seo_attribute_e-reo/" rel="alternate"></link><published>2018-09-24T22:45:00+09:00</published><updated>2018-09-28T18:58:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-24:/2018/09/24/pelicane-seo_markdown_mun-seo_attribute_e-reo/</id><summary type="html">&lt;p&gt;Pelican을 새로 설치하였더니 markdown 문서들이 전부 컴파일이 안된다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그를 python 3.7로 업그레이드로 진행하고 나서 다음과 같은 에러가 발생한다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/content&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/output&lt;span class="w"&gt; &lt;/span&gt;-s&lt;span class="w"&gt; &lt;/span&gt;/Users/ujuc/repos/ujuc.github.io/pelicanconf.py&lt;span class="w"&gt; &lt;/span&gt;
@@ -4145,13 +4111,13 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt; 에서 사용하는 &lt;code&gt;.env&lt;/code&gt;를 내가 원하는 위치에 옮겨보자.&lt;/p&gt;
 &lt;h3 id="workon_home"&gt;&lt;code&gt;WORKON_HOME&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;저 깊이 들어가는 &lt;code&gt;.env&lt;/code&gt; 폴더를 내가 원하는 위치로 옮겨준다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=~/.&lt;/span&gt;&lt;span class="n"&gt;venvs&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=~/.&lt;/span&gt;&lt;span class="n"&gt;venvs&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id="pipenv_venv_in_project"&gt;&lt;code&gt;PIPENV_VENV_IN_PROJECT&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;프로젝트를 진행하고있는 곳에 &lt;code&gt;.env&lt;/code&gt; 파일을 만들어준다.&lt;br&gt;
 이럴때는 &lt;code&gt;.gitignore&lt;/code&gt;에서 &lt;code&gt;.env/&lt;/code&gt; 파일을 예외로 해주어야된다. 해주는게 좋을꺼다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PIPENV_VENV_IN_PROJECT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;true&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PIPENV_VENV_IN_PROJECT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;true&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id="_1"&gt;참고&lt;/h4&gt;
@@ -4190,15 +4156,15 @@ indices: &amp;quot;|uY||nX&amp;quot;
 &lt;p&gt;문서상으로는 7버전 이상에서 사용할 수 있는 포맷이다.&lt;/p&gt;
 &lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;FileFormat&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syslogtag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;spifno1stsp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;droplastlf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syslogtag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;spifno1stsp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;droplastlf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;작성된 템플릿을 이용해서 분석해보자.&lt;/p&gt;
@@ -4375,9 +4341,9 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;renderer&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;networkd&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ethernets&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;enp3s0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="n"&gt;addresses&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;ethernets&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;enp3s0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="n"&gt;addresses&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;                &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10.10&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;10.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;
 &lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="n"&gt;dhcp4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -4455,11 +4421,9 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;ul&gt;
 &lt;li&gt;가장 중요하다.&lt;/li&gt;
 &lt;li&gt;이 작업을 하지 않으면, OS 부팅할때 에러가 뜬다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.&lt;/li&gt;
-&lt;li&gt;이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt;&lt;br&gt;
+    - 하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.&lt;br&gt;
+    - 이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="cloudbase-init"&gt;CloudBase init 설치&lt;/h2&gt;
 &lt;ul&gt;
@@ -4473,15 +4437,11 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;/ul&gt;
 &lt;h2 id="glance-imange"&gt;Glance에 Imange 업로드&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Hoizon&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt; : &lt;code&gt;/var/tmp&lt;/code&gt; 에다가 올린다. 그러니 &lt;code&gt;/var&lt;/code&gt; 폴더에 용량이 있는지 확인하고 올리도록.&lt;/li&gt;
-&lt;li&gt;편하게 올리자.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;CLI&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--disk-format&lt;/code&gt;은 기본값이 &lt;code&gt;raw&lt;/code&gt;이다. 그렇기에 &lt;code&gt;qcow2&lt;/code&gt;로 변경해주고 올려야된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Hoizon&lt;br&gt;
+    - &lt;strong&gt;주의&lt;/strong&gt; : &lt;code&gt;/var/tmp&lt;/code&gt; 에다가 올린다. 그러니 &lt;code&gt;/var&lt;/code&gt; 폴더에 용량이 있는지 확인하고 올리도록.&lt;br&gt;
+    - 편하게 올리자.&lt;/li&gt;
+&lt;li&gt;CLI&lt;br&gt;
+    - &lt;code&gt;--disk-format&lt;/code&gt;은 기본값이 &lt;code&gt;raw&lt;/code&gt;이다. 그렇기에 &lt;code&gt;qcow2&lt;/code&gt;로 변경해주고 올려야된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;openstack&lt;span class="w"&gt; &lt;/span&gt;image&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;--disk-format&lt;span class="w"&gt; &lt;/span&gt;qcow2&lt;span class="w"&gt; &lt;/span&gt;--file&lt;span class="w"&gt; &lt;/span&gt;windows.qcow2&lt;span class="w"&gt; &lt;/span&gt;windows
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -4557,10 +4517,14 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;h2 id="_1"&gt;기능&lt;/h2&gt;
 &lt;p&gt;가장 중요하다. 기능!&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&amp;ldquo;Crontab&amp;rdquo; 을 YAML로 작성이 가능하다.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Crontab&amp;rdquo; 을 YAML로 작성이 가능하다.&lt;ul&gt;
 &lt;li&gt;솔직히 YAML이 편한지는 모르겠다.&lt;/li&gt;
-&lt;li&gt;cron job이 실패에 대한 부분을 제어할 수 있게 되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;cron job이 실패에 대한 부분을 제어할 수 있게 되어있다.&lt;ul&gt;
 &lt;li&gt;실패시 해당 값을 재시도 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;유연하게 구성 가능&lt;/li&gt;
 &lt;li&gt;Docker, Kubernetes, 12 factor environments에 맞게 디자인이 되었다며&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
@@ -4671,7 +4635,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 
 &lt;h3 id="failure"&gt;failure 제어&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;실패 조건&lt;/li&gt;
+&lt;li&gt;실패 조건&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;producesStdout&lt;/code&gt;&lt;ul&gt;
 &lt;li&gt;default: &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;stdout 출력이 있을 경우&lt;/li&gt;
@@ -4685,6 +4649,8 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;li&gt;&lt;code&gt;nonzeroReturn&lt;/code&gt;&lt;ul&gt;
 &lt;li&gt;default: &lt;code&gt;true&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;반환값이 0이 아닌경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4784,8 +4750,10 @@ sh&lt;span class="w"&gt; &lt;/span&gt;build.sh
 &lt;h2 id="_3"&gt;실행&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;MongoDB, etcd3 설치&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;conf&lt;/code&gt; 폴더에 있는 config 수정&lt;br&gt;
-  * 샘플은 &lt;code&gt;conf/files&lt;/code&gt; 에 항목별로 존재한다. 확인이 필요.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;conf&lt;/code&gt; 폴더에 있는 config 수정&lt;ul&gt;
+&lt;li&gt;샘플은 &lt;code&gt;conf/files&lt;/code&gt; 에 항목별로 존재한다. 확인이 필요.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Node 실행: &lt;code&gt;./cronnode -conf conf/base.json&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;웹서버 실행: &lt;code&gt;./cronweb -conf conf/base.json&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;접속은 &lt;code&gt;http://127.0.0.1:7079/ui/&lt;/code&gt;&lt;/li&gt;
@@ -4899,35 +4867,35 @@ sudo update-alternatives --set vi /usr/bin/vim
 &lt;p&gt;Mac OS에서는 brew를 사용해서 설치하면된다. 설치할때 옵션을 붙여주면 되는데 그 옵션은 다음에서 처럼 확인이 가능하다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;brew options vim
 --with-client-server
-    Enable client/server mode
+  Enable client/server mode
 --with-custom-perl
-    Build with a custom Perl instead of the Homebrew version.
+  Build with a custom Perl instead of the Homebrew version.
 --with-custom-python
-    Build with a custom Python 2 instead of the Homebrew version.
+  Build with a custom Python 2 instead of the Homebrew version.
 --with-custom-ruby
-    Build with a custom Ruby instead of the Homebrew version.
+  Build with a custom Ruby instead of the Homebrew version.
 --with-lua
-    Build vim with lua support
+  Build vim with lua support
 --with-luajit
-    Build with luajit support
+  Build with luajit support
 --with-mzscheme
-    Build vim with mzscheme support
+  Build vim with mzscheme support
 --with-override-system-vi
-    Override system vi
+  Override system vi
 --with-python3
-    Build vim with python3 instead of python[2] support
+  Build vim with python3 instead of python[2] support
 --with-tcl
-    Build vim with tcl support
+  Build vim with tcl support
 --without-nls
-    Build vim without National Language Support (translated messages, keymaps)
+  Build vim without National Language Support (translated messages, keymaps)
 --without-perl
-    Build vim without perl support
+  Build vim without perl support
 --without-python
-    Build vim without python support
+  Build vim without python support
 --without-ruby
-    Build vim without ruby support
+  Build vim without ruby support
 --HEAD
-    Install HEAD version
+  Install HEAD version
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이후 설치할때 필요한 옵션에 대해서 추가해주면된다.&lt;/p&gt;
@@ -5095,19 +5063,19 @@ fi
 &lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;attributes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Rails is Omakase&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Rails is Omakase&amp;quot;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;relationships&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;author&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;links&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;self&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/articles/1/relationships/author&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;related&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/articles/1/author&amp;quot;&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;people&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;9&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;author&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;links&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;self&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/articles/1/relationships/author&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;related&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/articles/1/author&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;people&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;9&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;// ...&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// ...&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="번역"></category><category term="json"></category><category term="api"></category><category term="specification"></category><category term="json api"></category><category term="스펙 문서"></category><category term="transelate"></category></entry><entry><title>JSON API Specification v1.0 (3) - Document Structure (2)</title><link href="https://ujuc.github.io/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/" rel="alternate"></link><published>2016-08-06T14:40:00+09:00</published><updated>2019-03-23T16:50:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-08-06:/2016/08/06/json_api_specification_v1.0_(3)_-_document_structure_(2)/</id><summary type="html">&lt;p&gt;문서 구조에서 Top level에 대한 내용을 정리한다.&lt;/p&gt;</summary><content type="html">&lt;h2 id="51-top-level"&gt;5.1. 최상위 (Top Level)&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;JSON 오브젝트는 데이터를 포함한 JSON API 요청과 응답에 대한 근본(root) 입니다. &amp;lt;&lt;strong&gt;MUST&lt;/strong&gt;&amp;gt; 이 오브젝트를 문서의 “최상위”라 정의합니다.&lt;/p&gt;
@@ -5186,14 +5154,14 @@ fi
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;attributes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="c1"&gt;// ... this article&amp;#39;s attributes&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;relationships&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="c1"&gt;// ... this article&amp;#39;s relationships&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;attributes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;// ... this article&amp;#39;s attributes&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;relationships&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;// ... this article&amp;#39;s relationships&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -5204,8 +5172,8 @@ fi
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;data&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;
 &lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -5462,11 +5430,12 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;dpkg&lt;span class="w"&gt; &lt;/span&gt;
 &lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고 설치&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016/05-21/installing_shell_integration.png"&gt;&lt;/p&gt;
 &lt;p&gt;음.! 뭔가 이상하다&amp;hellip;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;You&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;also&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;these&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;span class="n"&gt;imgcat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Displays&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;inline&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;it2dl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;specified&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;saving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;folder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;:::&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;You&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;also&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;these&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;imgcat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Displays&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;inline&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;it2dl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;specified&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;saving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;folder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;????&lt;/p&gt;
@@ -5490,8 +5459,9 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;dpkg&lt;span class="w"&gt; &lt;/span&gt;
 그러다보니 가끔 길이를 확인해서 커밋을 해야되는 경우가 발생하는데&amp;hellip;&lt;/p&gt;
 &lt;p&gt;그나마 기본적으로 설정해놓은 80줄은 쉽게 찾으나&amp;hellip; 커밋 제목인 50자, 커밋 메시지&lt;br&gt;
 제한인 72자를 확인하는게 쉽지가 않아서 줄을 그어놓고 사용하기위해 설정을 한다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;set cc=51,73,81,121
-highlight ColorColumn ctermbg=17 guibg=navyblue
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  :::
+  set cc=51,73,81,121
+  highlight ColorColumn ctermbg=17 guibg=navyblue
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;위와 같이 설정하면 아래와 같이 줄이 그어져있는 모습을 볼 수 있다.&lt;/p&gt;
@@ -5661,14 +5631,14 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;c
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pysftp&lt;/span&gt;
 
 &lt;span class="n"&gt;cinfo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;host&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;hostname&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ujuc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-         &lt;span class="s1"&gt;&amp;#39;private_key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/path/to/keyfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;port&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2222&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+     &lt;span class="s1"&gt;&amp;#39;private_key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/path/to/keyfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;port&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2222&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;pysftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Connection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;cinfo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mybackupfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myoriginfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mybackupfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;put&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;myoriginfile&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;static&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;here&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;there&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;static&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;here&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;sftp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;there&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;이정도 주석 달다가 지웠다. 그것이 없어도 sftp를 사용하고 있다면 간단히 상요할 정도로 sftp 명령어에서 사용하는 내용들을 추가해놓았다.&lt;/p&gt;
@@ -5688,52 +5658,53 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;c
 &lt;p&gt;설치는 알아서&amp;hellip;&lt;/p&gt;
 &lt;h3 id="_2"&gt;예제&lt;/h3&gt;
 &lt;p&gt;Readme에 있는 예제를 가져왔다. 만들어보는 것보다 낫다 판단해서. 아직 &lt;code&gt;git-subtree&lt;/code&gt;를 모르겠는데 뭐&amp;hellip;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# Chekout github.com/brettlangdon/forge@v0.1.6 를 가져온다.&lt;/span&gt;
-$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;vendor&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;forge&lt;span class="w"&gt; &lt;/span&gt;https://github.com/brettlangdon/forge&lt;span class="w"&gt; &lt;/span&gt;v0.1.6
-+&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;subtree&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;--prefix&lt;span class="w"&gt; &lt;/span&gt;vendor/github.com/brettlangdon/forge&lt;span class="w"&gt; &lt;/span&gt;--message&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Add &amp;quot;forge&amp;quot; from &amp;quot;https://github.com/brettlangdon/   forge@v0.1.6&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;shell&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Chekout&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="nv"&gt;@v0&lt;/span&gt;&lt;span class="mf"&gt;.1.6&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;를&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;가져온다&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;add&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;v0&lt;/span&gt;&lt;span class="mf"&gt;.1.6&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;subtree&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;add&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="k"&gt;prefix&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Add &amp;quot;forge&amp;quot; from &amp;quot;https://github.com/brettlangdon/ forge@v0.1.6&amp;quot;&lt;/span&gt;
 
-&lt;span class="s1"&gt;git-vendor-name: forge&lt;/span&gt;
-&lt;span class="s1"&gt;git-vendor-dir: vendor/github.com/brettlangdon/forge&lt;/span&gt;
-&lt;span class="s1"&gt;git-vendor-repository: https://github.com/brettlangdon/forge&lt;/span&gt;
-&lt;span class="s1"&gt;git-vendor-ref: v0.1.6&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;https://github.com/brettlangdon/forge&lt;span class="w"&gt; &lt;/span&gt;v0.1.6&lt;span class="w"&gt; &lt;/span&gt;--squash
-git&lt;span class="w"&gt; &lt;/span&gt;fetch&lt;span class="w"&gt; &lt;/span&gt;https://github.com/brettlangdon/forge&lt;span class="w"&gt; &lt;/span&gt;v0.1.6
-warning:&lt;span class="w"&gt; &lt;/span&gt;no&lt;span class="w"&gt; &lt;/span&gt;common&lt;span class="w"&gt; &lt;/span&gt;commits
-remote:&lt;span class="w"&gt; &lt;/span&gt;Counting&lt;span class="w"&gt; &lt;/span&gt;objects:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;405&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;done&lt;/span&gt;.
-remote:&lt;span class="w"&gt; &lt;/span&gt;Total&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;405&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;delta&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;reused&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;delta&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;pack-reused&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;404&lt;/span&gt;
-Receiving&lt;span class="w"&gt; &lt;/span&gt;objects:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;%&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;405&lt;/span&gt;/405&lt;span class="o"&gt;)&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;68&lt;/span&gt;.31&lt;span class="w"&gt; &lt;/span&gt;KiB&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;bytes/s,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;done&lt;/span&gt;.
-Resolving&lt;span class="w"&gt; &lt;/span&gt;deltas:&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;%&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;227&lt;/span&gt;/227&lt;span class="o"&gt;)&lt;/span&gt;,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;done&lt;/span&gt;.
-From&lt;span class="w"&gt; &lt;/span&gt;https://github.com/brettlangdon/forge
-&lt;span class="w"&gt; &lt;/span&gt;*&lt;span class="w"&gt; &lt;/span&gt;tag&lt;span class="w"&gt;               &lt;/span&gt;v0.1.6&lt;span class="w"&gt;     &lt;/span&gt;-&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;FETCH_HEAD
-Added&lt;span class="w"&gt; &lt;/span&gt;dir&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;vendor/github.com/brettlangdon/forge&amp;#39;&lt;/span&gt;
+&lt;span class="s1"&gt;  git-vendor-name: forge&lt;/span&gt;
+&lt;span class="s1"&gt;  git-vendor-dir: vendor/github.com/brettlangdon/forge&lt;/span&gt;
+&lt;span class="s1"&gt;  git-vendor-repository: https://github.com/brettlangdon/forge&lt;/span&gt;
+&lt;span class="s1"&gt;  git-vendor-ref: v0.1.6&lt;/span&gt;
+&lt;span class="s1"&gt;  &amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;v0&lt;/span&gt;&lt;span class="mf"&gt;.1.6&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;squash&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;fetch&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;v0&lt;/span&gt;&lt;span class="mf"&gt;.1.6&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nl"&gt;warning&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;no&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;common&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;commits&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nl"&gt;remote&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Counting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;objects&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;405&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nl"&gt;remote&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Total&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;405&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;delta&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reused&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;delta&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;reused&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;404&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Receiving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;objects&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;405&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;405&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;68.31&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;KiB&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bytes&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Resolving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;deltas&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;227&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;227&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;From&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="n"&gt;v0&lt;/span&gt;&lt;span class="mf"&gt;.1.6&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;FETCH_HEAD&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Added&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;vendor/github.com/brettlangdon/forge&amp;#39;&lt;/span&gt;
 
-$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# 목록으로보면..&lt;/span&gt;
-$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;vendor&lt;span class="w"&gt; &lt;/span&gt;list
-forge@v0.1.6:
-&lt;span class="w"&gt;    &lt;/span&gt;name:&lt;span class="w"&gt;   &lt;/span&gt;forge
-&lt;span class="w"&gt;    &lt;/span&gt;dir:&lt;span class="w"&gt;    &lt;/span&gt;vendor/github.com/brettlangdon/forge
-&lt;span class="w"&gt;    &lt;/span&gt;repo:&lt;span class="w"&gt;   &lt;/span&gt;https://github.com/brettlangdon/forge
-&lt;span class="w"&gt;    &lt;/span&gt;ref:&lt;span class="w"&gt;    &lt;/span&gt;v0.1.6
-&lt;span class="w"&gt;    &lt;/span&gt;commit:&lt;span class="w"&gt; &lt;/span&gt;3335840c5f0ad9e821006588f1b16a3385d9c318
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;목록으로보면&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="nv"&gt;@v0&lt;/span&gt;&lt;span class="mf"&gt;.1.6&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nl"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nl"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nl"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;ref&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;v0&lt;/span&gt;&lt;span class="mf"&gt;.1.6&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;commit&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3335840&lt;/span&gt;&lt;span class="n"&gt;c5f0ad9e821006588f1b16a3385d9c318&lt;/span&gt;
 
-$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# 업데이트를 하면&lt;/span&gt;
-$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;vendor&lt;span class="w"&gt; &lt;/span&gt;update&lt;span class="w"&gt; &lt;/span&gt;forge&lt;span class="w"&gt; &lt;/span&gt;v0.1.7
-From&lt;span class="w"&gt; &lt;/span&gt;https://github.com/brettlangdon/forge
-&lt;span class="w"&gt;    &lt;/span&gt;*&lt;span class="w"&gt; &lt;/span&gt;tag&lt;span class="w"&gt;               &lt;/span&gt;v0.1.7&lt;span class="w"&gt;     &lt;/span&gt;-&amp;gt;&lt;span class="w"&gt; &lt;/span&gt;FETCH_HEAD
-Merge&lt;span class="w"&gt; &lt;/span&gt;made&lt;span class="w"&gt; &lt;/span&gt;by&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;recursive&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;strategy.
-&lt;span class="w"&gt; &lt;/span&gt;vendor/github.com/brettlangdon/forge/forge_test.go&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;++
-&lt;span class="w"&gt; &lt;/span&gt;vendor/github.com/brettlangdon/forge/scanner.go&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;++++
-&lt;span class="w"&gt; &lt;/span&gt;vendor/github.com/brettlangdon/forge/test.cfg&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;files&lt;span class="w"&gt; &lt;/span&gt;changed,&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;insertions&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;업데이트를&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;하면&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;update&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;v0&lt;/span&gt;&lt;span class="mf"&gt;.1.7&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;From&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="w"&gt;               &lt;/span&gt;&lt;span class="n"&gt;v0&lt;/span&gt;&lt;span class="mf"&gt;.1.7&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;FETCH_HEAD&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;Merge&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;made&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;by&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;recursive&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;strategy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge_test&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;scanner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;++++&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
+&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;changed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;insertions&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# 확인하면..&lt;/span&gt;
-$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;vendor&lt;span class="w"&gt; &lt;/span&gt;list
-forge@v0.1.7:
-&lt;span class="w"&gt;    &lt;/span&gt;name:&lt;span class="w"&gt;   &lt;/span&gt;forge
-&lt;span class="w"&gt;    &lt;/span&gt;dir:&lt;span class="w"&gt;    &lt;/span&gt;vendor/github.com/brettlangdon/forge
-&lt;span class="w"&gt;    &lt;/span&gt;repo:&lt;span class="w"&gt;   &lt;/span&gt;https://github.com/brettlangdon/forge
-&lt;span class="w"&gt;    &lt;/span&gt;ref:&lt;span class="w"&gt;    &lt;/span&gt;v0.1.7
-&lt;span class="w"&gt;    &lt;/span&gt;commit:&lt;span class="w"&gt; &lt;/span&gt;071c5f108e0af39bf67a87fc766ea9bfb72b9ee7
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;확인하면&lt;/span&gt;&lt;span class="p"&gt;..&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;&lt;span class="nv"&gt;@v0&lt;/span&gt;&lt;span class="mf"&gt;.1.7&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nl"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nl"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;vendor&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nl"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="nl"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;brettlangdon&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;forge&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;ref&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;v0&lt;/span&gt;&lt;span class="mf"&gt;.1.7&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="k"&gt;commit&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;071&lt;/span&gt;&lt;span class="n"&gt;c5f108e0af39bf67a87fc766ea9bfb72b9ee7&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id="_3"&gt;관련 페이지&lt;/h2&gt;
@@ -5759,76 +5730,102 @@ forge@v0.1.7:
 &lt;/ul&gt;
 &lt;h2 id="api-guidelines"&gt;API Guidelines&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;더이상 서버 쪽의 traceback을 리턴하지 않습니다&lt;a href="https://review.openstack.org/#/c/183599"&gt;^6&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;더이상 서버 쪽의 traceback을 리턴하지 않습니다&lt;a href="https://review.openstack.org/#/c/183599"&gt;^6&lt;/a&gt;.&lt;ul&gt;
 &lt;li&gt;더 이상 서버쪽으로 tracebacks/stacktraces에 대한 반환값을 사용자에게 반환하지 않도록 안내 추가.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="service-type-vs-project-name-for-use-in-headers"&gt;Service Type vs. Project Name For Use In Headers&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Header를 서비스 타입으로 할지, 프로젝트 이름으로 할지에 대한 논의가 있었습니다.&lt;/li&gt;
+&lt;li&gt;Header를 서비스 타입으로 할지, 프로젝트 이름으로 할지에 대한 논의가 있었습니다.&lt;ul&gt;
 &lt;li&gt;API 마이크로버전에 대한 버전 추가에 대한 가이드라인 추가&lt;a href="https://review.openstack.org/#/c/243429"&gt;^7&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;실험 단계의 API에 대한 가이드라인 추가&lt;a href="https://review.openstack.org/#/c/273158"&gt;^8&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;API 마이크로버전에 대한 클라이언트 상호작용 가이드라인 추가&lt;a href="https://review.openstack.org/#/c/243414"&gt;^9&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;텀에 대한 각 프로젝트의 일반 이름 추가&lt;a href="https://review.openstack.org/#/c/243414"&gt;^10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;API 사용자에게 더 좋게 제공할 수 있으며, &lt;a href="https://www.openstack.org/community/members/profile/1346"&gt;Dean Troyer&lt;/a&gt;에 의하면 API 워킹 그룹과 같이 올바른 방향으로 갈 수 있도록 선택해야합니다.&lt;/li&gt;
 &lt;li&gt;엔트포인트와 API 서비스에 대한 기본 식별자(identifier)로서 서비스 타입은 잘 확립되어있고, 서비스 카탈로그가 제대로 작동하는 방법입니다. 서비스 타입에 따라 이동하는 방법이 있어야합니다.&lt;/li&gt;
-&lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/085145.html"&gt;service type vs. project name for use in headers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/085145.html"&gt;service type vs. project name for use in headers&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;역: 뭔가 짧게 줄인게 더 이해가 안되네&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="openstack-ansible-without-containers"&gt;OpenStack Ansible Without Containers&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Gyorgy가 새로운 OpenStack installer로 GPLv3 라이센스로 Ansible을 사용해서 발표했으며 여기에는 컨테이너는 빠져있다.&lt;/li&gt;
+&lt;li&gt;Gyorgy가 새로운 OpenStack installer로 GPLv3 라이센스로 Ansible을 사용해서 발표했으며 여기에는 컨테이너는 빠져있다.&lt;ul&gt;
 &lt;li&gt;이미 OpenStack에는 Ansible 프로젝트와 &lt;a href="https://wiki.openstack.org/wiki/Kolla"&gt;Kolla&lt;/a&gt; 가 있는데 왜 새로운 installer를 만들었을까?:&lt;ul&gt;
 &lt;li&gt;컨테이너에 불필요한 복잡성 추가.&lt;/li&gt;
-&lt;li&gt;패키지: pip 패키지와 배포판 패키지를 섞어 사용하고 있지 않음. 배포판 패키지는 init 스크립트, 적당한 시스템 사용자, 업그레이드 가능한 것들&amp;hellip;이 포함되어있는 것을 말함.&lt;/li&gt;
+&lt;li&gt;패키지: pip 패키지와 배포판 패키지를 섞어 사용하고 있지 않음. 배포판 패키지는 init 스크립트, 적당한 시스템 사용자, 업그레이드 가능한 것들&amp;hellip;이 포함되어있는 것을 말함.&lt;ul&gt;
 &lt;li&gt;Kevin Carter의 답장에서는 이 내용은 OpenStack Ansible 프로젝트에 포함되어있는 내용이라고 발혔다고&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;컨테이너를 사용하지 않고 동시에 모든 서비스를 업그레이드를 한뒤 하나의 컨트롤러를 업데이트 하는건 까다롭고 깨질수도 있습니다. 롤백도 쉽구요.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;컨테이너를 사용하지 않고 동시에 모든 서비스를 업그레이드를 한뒤 하나의 컨트롤러를 업데이트 하는건 까다롭고 깨질수도 있습니다. 롤백도 쉽구요.&lt;ul&gt;
 &lt;li&gt;역: 제대로 번역을 못하겠어서 원본을 같이 첨부&lt;/li&gt;
 &lt;li&gt;원: Without containers, upgrading a single controller can be tricky and disruptive since you have to upgrade every service at the same time. Rollbacks are also easier.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;OpenStack Ansible 프로젝트에서 오늘(?) &lt;code&gt;is_metal=true&lt;/code&gt; 값을 이용해서 컨테이너 없이 배포가 가능합니다.&lt;/li&gt;
 &lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084963.html"&gt;OpensTack installer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="release-countdown-for-week-r-8-feb-8-12"&gt;Release Countdown for Week R-8, Feb 8-12&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;집중:&lt;/li&gt;
+&lt;li&gt;집중:&lt;ul&gt;
 &lt;li&gt;2주정도 전에 이번 사이클에서 non-client 라이브러리에 대한 릴리즈 완료&lt;/li&gt;
 &lt;li&gt;3주정도 전에 클라이언트 라이브러리 릴리즈 완료&lt;/li&gt;
 &lt;li&gt;프로젝트들은 모든 라이브러리 기능 작업 마무리에 집중.&lt;/li&gt;
-&lt;li&gt;릴리즈 작업:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;릴리즈 작업:&lt;ul&gt;
 &lt;li&gt;릴리즈팀에서 업격하게 3주에서 M3전에 라이버리를 릴리즈 프리징을 할 것입니다.&lt;/li&gt;
-&lt;li&gt;주요 일정:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;주요 일정:&lt;ul&gt;
 &lt;li&gt;Non-client 라이브러리 릴리즈 완료: 2월 24일&lt;/li&gt;
 &lt;li&gt;클라이언트 라이브러리 릴리즈 완료: 3월 2일&lt;/li&gt;
 &lt;li&gt;Mitaka 3: 2월 29일 - 3월 4일 ( 기능 프리징과 소프트 문자 프리징 포함해서)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085705.html"&gt;Release countdown for week R-8, Feb 8-12&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="no-open-core-in-2016"&gt;&amp;ldquo;No Open Core&amp;rdquo; in 2016&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;OpenStack은 이름을 가지기 전, &amp;ldquo;four opens&amp;rdquo;라는 신념은 우리가 커뮤니티를 운영하는 방법을 정의하는데 만들어졌습니다.&lt;/li&gt;
 &lt;li&gt;OpenStack이 시작하였던 2010년, 우리는 제품 코어를 오픈소스화하는 방법으로 불편한 커뮤니티 에디션과 &amp;ldquo;엔터프라이즈 버전&amp;rdquo;으로 내놓는 다른 오픈소스 클라우드 플랫폼(Eucalyptus)과는 달랐습니다.&lt;/li&gt;
-&lt;li&gt;오늘날 우리는 &amp;ldquo;엔터프라이즈 에디션&amp;rdquo;을 할 수 없는 비영리 독립 재단입니다.&lt;/li&gt;
+&lt;li&gt;오늘날 우리는 &amp;ldquo;엔터프라이즈 에디션&amp;rdquo;을 할 수 없는 비영리 독립 재단입니다.&lt;ul&gt;
 &lt;li&gt;현재 화원사들은 아파치 라이센스인 업스트림 프로젝트 위에 &amp;ldquo;기업 제품&amp;rdquo;을 만들 수 있습니다. 일부는 고유 구성요소에서 기능들을 보여줘야되는 드라이버로 되어있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;그럼 2016년 &amp;ldquo;not do open core&amp;rdquo;는 뭔가요? 어떤것은 가능하고 어떤것은 안되는 것인가요?&lt;/li&gt;
-&lt;li&gt;Thierry Carrez는 OpenStack 공식 프로젝트들이 새롭게 변화하는 시간으로 받아 들일 것이라 믿습니다.&lt;/li&gt;
+&lt;li&gt;Thierry Carrez는 OpenStack 공식 프로젝트들이 새롭게 변화하는 시간으로 받아 들일 것이라 믿습니다.&lt;ul&gt;
 &lt;li&gt;그것은 제품에 대한 모든 기능들을 오픈 소스로 구현해야합니다.&lt;/li&gt;
 &lt;li&gt;여러분이 모든 프로젝트를 사용하는 상용 기업의 독점 소프트웨어가 필요하다면, OpenStack 공식 프로젝트로 허용되지 않을 것입니다.&lt;ul&gt;
 &lt;li&gt;하지만 이 프로젝트는 비공식 프로젝트로는 허용되며, 여전히 OpenStack 인프라에서 호스팅이 가능합니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Doug Hellmann은 공식 OpenStack 프로젝트로 적용되는 &lt;a href="https://review.openstack.org/#/c/273756/"&gt;Poppy&lt;/a&gt;를 제출 하였습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Doug Hellmann은 공식 OpenStack 프로젝트로 적용되는 &lt;a href="https://review.openstack.org/#/c/273756/"&gt;Poppy&lt;/a&gt;를 제출 하였습니다.&lt;ul&gt;
 &lt;li&gt;컨텐트 제공 네트워크의 렙퍼인데, 오픈소스 솔루션이 없었스니다.&lt;/li&gt;
 &lt;li&gt;공식 프로젝트가 될 수 있을까? 그럼 이게 오픈 코어인가?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085855.html"&gt;&amp;ldquo;No Open Core&amp;rdquo; in 2016&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="the-trouble-with-names"&gt;The Trouble with Names&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;A few issues have crept up recently with the service catalog, API headers, API end points, and even similarly named resources in different resources (e.g. backup), that are all circling around a key problem. Distributed teams and naming collision.&lt;/li&gt;
 &lt;li&gt;각 프로젝트는 OpenStack 네임스페이스에 git 저장소에의해 보장되는 고유 이름이 있습니다.&lt;/li&gt;
-&lt;li&gt;Nova/Compute 와 같은 일반적인 이름을 가진 프로젝트 이름을 대체하려는 움직임이 있습니다:&lt;/li&gt;
+&lt;li&gt;Nova/Compute 와 같은 일반적인 이름을 가진 프로젝트 이름을 대체하려는 움직임이 있습니다:&lt;ul&gt;
 &lt;li&gt;Service catalog&lt;/li&gt;
 &lt;li&gt;API headrs&lt;/li&gt;
-&lt;li&gt;우리가 가질 수 있는 선택사항들:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;우리가 가질 수 있는 선택사항들:&lt;ul&gt;
 &lt;li&gt;코드 이름을 사용하는 것: nova, glance, swift 과 같은.&lt;ul&gt;
 &lt;li&gt;장점:  충돌 문제는 해결&lt;/li&gt;
 &lt;li&gt;프로젝트에서 알고 있는 비밀 디코더 링이 필요합니다.&lt;/li&gt;
@@ -5839,26 +5836,34 @@ forge@v0.1.7:
 &lt;li&gt;단점: 다른 논쟁점이 있을 수도&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;커뮤니티의 사람들은 공통 이름을 가지고서 저장소를 만들기를 바라고 있다. 어쩌면 가버넌트 &lt;a href="https://git.openstack.org/cgit/openstack/governance/tree/reference/projects.yaml"&gt;projects.yaml&lt;/a&gt;에 있지 않을까?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;커뮤니티의 사람들은 공통 이름을 가지고서 저장소를 만들기를 바라고 있다. 어쩌면 가버넌트 &lt;a href="https://git.openstack.org/cgit/openstack/governance/tree/reference/projects.yaml"&gt;projects.yaml&lt;/a&gt;에 있지 않을까?&lt;ul&gt;
 &lt;li&gt;이 목록은 기술 커밋들이 공식 프로젝트들에서 사용되는 것들만 포함하고 있습니다. 따라서 프로젝트에서만 공통 이름을 예약할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;OpenStack 클라이언트들은 이미 프로젝트에서 공통 이름으로 인코드했습니다.&lt;/li&gt;
 &lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-February/085748.html"&gt;the trouble with names&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="annuncing-ekko-scalable-block-based-backup-for-openstack"&gt;Annuncing Ekko - Scalable Block-Based Backup for OpenStack&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ekko의 목적은 Nova 인스턴스의 증분 블록 레벨 백업과 복원을 제공합니다.&lt;/li&gt;
-&lt;li&gt;중복되는 목표가 있습니다:&lt;/li&gt;
+&lt;li&gt;중복되는 목표가 있습니다:&lt;ul&gt;
 &lt;li&gt;증분 백업에 의존하지 않는 Cinder 볼륨&lt;/li&gt;
 &lt;li&gt;Nova 인스턴스&lt;ul&gt;
 &lt;li&gt;OpenStack Freezer 에서는 노바 스냅샷 기능을 사용합니다.&lt;/li&gt;
 &lt;li&gt;Ekko는 Nova 인스턴스의 실시간 증분 블록 레벨 백업을 활용하는 것.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Jay Pipes는 REST API 엔드포인트가 중복되는지 확인하기위한 것과 두개의 프로젝트(Freezer와 Ekko)에 대해서 논의를 시작함. 거의 동일한 백업을 수행하기위해 두개의 API를 가지는 것은 좋지 않다고&amp;hellip;&lt;/li&gt;
 &lt;li&gt;Ekko 젝작자는 다른 백업 프로젝트와 동일한 API를 호출할 경우에도 &amp;ldquo;실제 구현체와 최종 결과물은 완전히다르다&amp;rdquo;고 밝혔다.&lt;/li&gt;
-&lt;li&gt;Jay는 다음 엔트포인트가 존재하는 지금을 이해할 수 없다고:&lt;/li&gt;
+&lt;li&gt;Jay는 다음 엔트포인트가 존재하는 지금을 이해할 수 없다고:&lt;ul&gt;
 &lt;li&gt;Freezer &lt;code&gt;/backups&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Cinder &lt;code&gt;/{tenant_id}/backups&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;이 엔드포인트로 나쁜 사용자 경험을 만들어 혼란을 마들고 있다고&amp;hellip;&lt;/li&gt;
 &lt;li&gt;현재 거버넌스 모델에서는 프로젝트간 경쟁을 하길 바라지 않습니다. 두 프로젝트는 API 엔트포인트가 겹치는 경우, 논의를 하여 협력하는 방법으로 나가야한다.&lt;/li&gt;
 &lt;li&gt;메일 쓰레드: &lt;a href="http://lists.openstack.org/pipermail/openstack-dev/2016-January/084739.html"&gt;Announcing Ekko &amp;ndash; Scalable block-based backup for OpenStack&lt;/a&gt;&lt;/li&gt;
@@ -6593,12 +6598,14 @@ forge@v0.1.7:
 &lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html"&gt;Ubuntu manpage - unattended-upgrade&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_1"&gt;사용법&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;unattended-upgrade
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  :::shell
+  $ sudo unattended-upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도 있다.&lt;/p&gt;
 &lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를 하면된다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;unattended-upgrade&lt;span class="w"&gt; &lt;/span&gt;--dry-run
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  :::shell
+  $ sudo unattended-upgrade --dry-run
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;왠만해서는 &lt;code&gt;--dry-run&lt;/code&gt; 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는 않지&amp;hellip;&lt;/p&gt;
@@ -6787,8 +6794,10 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 만약 &lt;code&gt;release&lt;/code&gt; 브랜치가 존재한다면, &lt;code&gt;release&lt;/code&gt; 브랜치에 &lt;code&gt;hotfix&lt;/code&gt; 브랜치를 머지하여 릴리즈 될 때 반영이 될 수 있도록 한다.&lt;/p&gt;
 &lt;h2 id="_2"&gt;장점&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;alias script가 존재한다.&lt;/li&gt;
+&lt;li&gt;alias script가 존재한다.&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/petervanderdoes/gitflow-avh"&gt;gitflow-avh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;웬만한 에디터와 IDE에는 플러그인으로 존재한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_3"&gt;단점&lt;/h2&gt;
@@ -6815,8 +6824,10 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;/div&gt;
 &lt;h2 id="_5"&gt;특징&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;release&lt;/code&gt; 브랜치가 명확하지 않은 시스템에서 사용에 맞게 되어있다.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;release&lt;/code&gt; 브랜치가 명확하지 않은 시스템에서 사용에 맞게 되어있다.&lt;ul&gt;
 &lt;li&gt;여기에는 GitHub의 서비스 특성상. 릴리즈라는 개념이 없는 서비스를 진행하고 있어서 그런 것으로 보이며, 웹 서비스들이 릴리즈라는 개념이 없이지고 있으니 사용하기 편할 것으로 보인다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;hotfix&lt;/code&gt;와 가장 작은 기능을 구분하지 않는다. 어차피 둘 다 개발자가 수정해야 되는 일중에 하나이다. 단지 우선순위가 어디가 높냐라는 단계이다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_6"&gt;그럼 어떻게 사용할 것인가?&lt;/h2&gt;
@@ -6836,8 +6847,10 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;p&gt;&lt;strong&gt;GitHub Flow&lt;/strong&gt;의 핵심인듯한 &lt;code&gt;master&lt;/code&gt;로 머지가 일어나면 &lt;code&gt;hubot&lt;/code&gt;을 이용하여 자동으로 배포가 되도록 설정해놓는다.&lt;/p&gt;
 &lt;h2 id="_7"&gt;장점&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;브랜치 전략이 단순하다.&lt;/li&gt;
+&lt;li&gt;브랜치 전략이 단순하다.&lt;ul&gt;
 &lt;li&gt;처음 git을 접하는 사람에게 정말 좋은 시스템이 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Github 사이트에서 제공하는 기능을 모두 사용하여 작업을 진행한다.&lt;/li&gt;
 &lt;li&gt;코드 리뷰를 자연스럽게 사용할 수 있다.&lt;/li&gt;
 &lt;li&gt;CI가 필수적이며, 배포는 자동으로 진행할 수 있다.&lt;/li&gt;
@@ -6845,8 +6858,10 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 &lt;/ul&gt;
 &lt;h2 id="_8"&gt;단점&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;CI와 배포 자동화가 되어있지 않은 시스템에서는 사람이 관련된 업무를 진행한다.&lt;/li&gt;
+&lt;li&gt;CI와 배포 자동화가 되어있지 않은 시스템에서는 사람이 관련된 업무를 진행한다.&lt;ul&gt;
 &lt;li&gt;많은 것들이 올라오기 시작하면&amp;hellip; 그때부터는 헬이&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;너무 간단하니&amp;hellip; 이거 단점이 있나 싶다&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_9"&gt;참고&lt;/h2&gt;
@@ -7253,18 +7268,4 @@ $ sudo systemctl start zabbix-server
 &lt;/pre&gt;
 &lt;p&gt;작동되는 것을 확인할 수 있다.&lt;/p&gt;
 &lt;p&gt;이 글은 &lt;strong&gt;CentOS 7.1.1503&lt;/strong&gt; 버전, &lt;strong&gt;Zabbix 2.4.5&lt;/strong&gt; 버전에서 확인되었고 테스트되었다. 이후 버전에서는 관련 버그가 잡히길.&lt;/p&gt;
-</content><category term="Operation"></category><category term="zabbix"></category><category term="centos"></category></entry><entry><title>Rocket.Chat 번역기</title><link href="https://ujuc.github.io/2015/06/02/rocket.chat-%EB%B2%88%EC%97%AD%EA%B8%B0/" rel="alternate"></link><published>2015-06-02T22:45:00+09:00</published><updated>2015-06-02T22:45:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-06-02:/2015/06/02/rocket.chat-번역기/</id><summary type="html">&lt;p class="first last"&gt;어제 짧아서 번역을 했는데...&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;어제 //build/ Seoul 행사를 끝내고, 곧장 내려와 메일을 읽던 중, Github 데일리 메
-일링에 추가된 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat"&gt;Rocket.Chat&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;심심해서 코드 보던 중 발견한 &lt;tt class="docutils literal"&gt;i18n&lt;/tt&gt;. 클클클 번역이나 해야지 짧을 꺼야... 그런 심보
-로 시작. 10분 만에 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 등록.&lt;/p&gt;
-&lt;p&gt;이유는 영어와 한국어의 어순이 반대다 보니... &lt;tt class="docutils literal"&gt;%s by %s&lt;/tt&gt; 의 경우, 한국어로 &lt;tt class="docutils literal"&gt;%s에서
-%s로&lt;/tt&gt; 로 번역이 되어야 되는데. 어떤 놈이 앞의 &lt;tt class="docutils literal"&gt;%s&lt;/tt&gt; 인지 한국어에서는 알 수 없는 문제
-가 발생. 그래서 짧은 영어로 적었더니. 친절하게 제목도 바꿔주고, 테스트할 수 있게
-PR해줄 수 있느냐기에 신속하게 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;PR&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;그렇게 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 는 해결되었고, 번역은 반영되었다.&lt;/p&gt;
-&lt;p&gt;소스 중에 번역 페이지가 있으면 항상 보지는 않았는데... 이번에는 우연히 번역
-을 보았고, PR을 뒤져보니 PR을 보내면 웬만해서는 받아주는 듯하여 &lt;a class="reference external" href="https://github.com/RocketChat/Rocket.Chat/issues/89"&gt;issue&lt;/a&gt; 부터 날리
-고 어떻게 할지 기다린 게 잘 된듯하다.
-뭐 이렇게 녹색 상자 한 칸 더 체우 는기지... ㅋㅋㅋㅋㅋ&lt;/p&gt;
-</content><category term="Chat"></category><category term="자랑질"></category><category term="chat"></category><category term="rocketchat"></category><category term="번역"></category><category term="javascript"></category><category term="meteo"></category></entry></feed>
+</content><category term="Operation"></category><category term="zabbix"></category><category term="centos"></category></entry></feed>

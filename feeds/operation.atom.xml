@@ -203,11 +203,15 @@ flowchart TD
 &lt;li&gt;&lt;strong&gt;[MUST]&lt;/strong&gt; 사용자만 읽기, 쓰기, 접근이 가능해야함 (Mode: &lt;code&gt;0700&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[MUST]&lt;/strong&gt; 로컬 파일 시스템에만 존재해야하며, 공유되는 곳에 있어서는 안됨.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;[MUST]&lt;/strong&gt; 사용자 로그인시 생성되고, 로그아웃되면 제거됨.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;[MAY]&lt;/strong&gt; 주기적으로 정리 대상이 될 수 있음.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[MAY]&lt;/strong&gt; 주기적으로 정리 대상이 될 수 있음.&lt;ul&gt;
 &lt;li&gt;파일을 삭제하지 않도록 하려면 6시간마다 access time timestamp를 수정하거나, 파일에 &lt;code&gt;sticky&lt;/code&gt; 비트를 설정해야함.&lt;/li&gt;
-&lt;li&gt;해당 변수가 설정되지 않은 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;해당 변수가 설정되지 않은 경우&lt;ul&gt;
 &lt;li&gt;애플리케이션에서 유사한 기능을 가진 대체 디렉토리로 대체하고 경고 메시지를 출력하게 해야함.&lt;/li&gt;
 &lt;li&gt;통신, 동기화 목적으로 사용해야하며, 런타임 메모리에 상주가 가능하나 반드시 디스크로 스왑 아웃하지 않으니 대용량 파일을 저장해서는 안됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Operation"></category><category term="xdg-utils"></category><category term="desktop"></category><category term="unix-like"></category><category term="os"></category></entry><entry><title>k8s에서 command와 args의 차이점</title><link href="https://ujuc.github.io/2023/05/09/k8s%EC%97%90%EC%84%9C-command%EC%99%80-args%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/" rel="alternate"></link><published>2023-05-09T22:03:30+09:00</published><updated>2023-05-09T22:03:30+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2023-05-09:/2023/05/09/k8s에서-command와-args의-차이점/</id><summary type="html">&lt;p&gt;k8s에서 command랑 args 가 뭐가 다른지 정리한다. Docker에도 비슷한게 있다네&amp;hellip;?&lt;/p&gt;</summary><content type="html">&lt;p&gt;어플리케이션에 데이터를 주입하는 내용중 하나인 &lt;a href="https://kubernetes.io/ko/docs/tasks/inject-data-application/define-command-argument-container/"&gt;컨테이너에 command 와 args 정의하기&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;다른건 아니었다.&lt;/p&gt;
 &lt;p&gt;Dockerfile에서 다음과 같은 설정이 되어있었다.&lt;/p&gt;
@@ -442,25 +446,17 @@ Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 &lt;/ul&gt;</content><category term="Operation"></category><category term="iterm"></category><category term="shortcut"></category></entry><entry><title>Pelican 4.1.0 Release Note</title><link href="https://ujuc.github.io/2019/07/21/pelican_4.1.0_release_note/" rel="alternate"></link><published>2019-07-21T15:23:10+09:00</published><updated>2019-07-21T15:23:10+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2019-07-21:/2019/07/21/pelican_4.1.0_release_note/</id><summary type="html">&lt;p&gt;pelican 4.1.0 이 업글이 되었다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;블로그 정리하다가 업그레이드가 된 걸 알았다.&lt;/p&gt;
 &lt;h3 id="410-2019-07-14"&gt;&lt;a href="https://docs.getpelican.com/en/stable/changelog.html#id1"&gt;4.1.0 - 2019-07-14&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;변경된 파일이 있으면 reload 가능 (Invoke 태스크를 통해 제공됨)&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican/blob/master/pelican/tools/templates/tasks.py.jinja2#L93"&gt;github - &lt;code&gt;task.py.jinja2&lt;/code&gt;&lt;/a&gt; 에서 확인하면 &lt;code&gt;livereload&lt;/code&gt; 패키지를 사용하여 새롭게 띄울 수 있도록 작업을 해뒀다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Poetry를 사용하여 패키지 관리&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pyproject.toml&lt;/code&gt; 를 이용하게 됨.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;python -m pelican&lt;/code&gt; 형태로 호출 가능&lt;ul&gt;
-&lt;li&gt;env 환경에서 굳이&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;변경된 파일이 있으면 reload 가능 (Invoke 태스크를 통해 제공됨)&lt;br&gt;
+    - &lt;a href="https://github.com/getpelican/pelican/blob/master/pelican/tools/templates/tasks.py.jinja2#L93"&gt;github - &lt;code&gt;task.py.jinja2&lt;/code&gt;&lt;/a&gt; 에서 확인하면 &lt;code&gt;livereload&lt;/code&gt; 패키지를 사용하여 새롭게 띄울 수 있도록 작업을 해뒀다.&lt;/li&gt;
+&lt;li&gt;Poetry를 사용하여 패키지 관리&lt;br&gt;
+    - &lt;code&gt;pyproject.toml&lt;/code&gt; 를 이용하게 됨.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python -m pelican&lt;/code&gt; 형태로 호출 가능&lt;br&gt;
+    - env 환경에서 굳이&amp;hellip;&lt;/li&gt;
 &lt;li&gt;콘텐츠 상대 소스 경로 속성 추가&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;EXTRA_PATH_METADATA&lt;/code&gt; 디렉토리 허용&lt;/li&gt;
-&lt;li&gt;템플릿에서 사용 가능한 &lt;code&gt;all_articles&lt;/code&gt; 변수가 추가됨.&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/themes.html?highlight=all_articles#common-variables"&gt;Common variables&lt;/a&gt; 항목 확인 가능&lt;/li&gt;
-&lt;li&gt;최근 소식 전달을 위한 기능 용&amp;hellip;?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;템플릿에서 사용 가능한 &lt;code&gt;all_articles&lt;/code&gt; 변수가 추가됨.&lt;br&gt;
+    - &lt;a href="https://docs.getpelican.com/en/stable/themes.html?highlight=all_articles#common-variables"&gt;Common variables&lt;/a&gt; 항목 확인 가능&lt;br&gt;
+    - 최근 소식 전달을 위한 기능 용&amp;hellip;?&lt;/li&gt;
 &lt;li&gt;디버그 모드에서 출력 화면 향상&lt;/li&gt;
 &lt;li&gt;Atom 피드에서 비었거나 중복된 summary 항목 삭제&lt;/li&gt;
 &lt;li&gt;페이지네이션, pelican-import, pelican-quickstart, 피드 임포터 버그 수정&lt;/li&gt;
@@ -497,8 +493,8 @@ Hash:&lt;span class="w"&gt; &lt;/span&gt;SHA256
 &lt;p&gt;사진도 못 옮기고 이것저것 텍스트들도 제대로 작업을 못하던 중에 혹시나 그냥 앱만 지우면 안 되는 건가라는 생각에서 매뉴얼을 찾아서 보고 작동이 되는 것을 확인하였다.&lt;/p&gt;
 &lt;p&gt;그냥 이렇게 하면 된다고 말 한마디면 되는 건데&amp;hellip; G Suite 쪽은 제대로 알려주는 것이 없으니&amp;hellip;&lt;/p&gt;
 &lt;p&gt;터미널이 편하다면 터미널로 아니라면 해당 위치에 있는 파일들을 삭제하면 된다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf&lt;span class="w"&gt; &lt;/span&gt;/Applications/Google&lt;span class="se"&gt;\ &lt;/span&gt;Drive&lt;span class="se"&gt;\ &lt;/span&gt;File&lt;span class="se"&gt;\ &lt;/span&gt;Stream.app/
-$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-rf&lt;span class="w"&gt; &lt;/span&gt;~/Library/Application&lt;span class="w"&gt; &lt;/span&gt;Support/Google/DriveFS/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  $ sudo rm -rf /Applications/Google\ Drive\ File\ Stream.app/
+  $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;위의 내용처럼 작업하고 재시작하면 잘 실행된다.&lt;/p&gt;</content><category term="Operation"></category><category term="google drive stream"></category><category term="macos"></category><category term="mojave"></category></entry><entry><title>Linux 우선순위 설정</title><link href="https://ujuc.github.io/2018/09/28/linux_u-seon-sun-wi_seor-jeong/" rel="alternate"></link><published>2018-09-28T18:47:14+09:00</published><updated>2018-09-28T18:47:14+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-28:/2018/09/28/linux_u-seon-sun-wi_seor-jeong/</id><summary type="html">&lt;p&gt;Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록 하자&amp;hellip;&lt;/p&gt;</summary><content type="html">&lt;p&gt;리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수 있다.&lt;/p&gt;
@@ -518,41 +514,33 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;p&gt;자세한 내용을 확인하려면 다음 URL에서 확인을 하도록하자.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.ibm.com/developerworks/linux/library/l-scheduler/"&gt;IBM - Inside the Linux scheduler&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;리눅스 커널 2.6 버전이상에서 사용하는 스케쥴러에 대한 내용이 정리되어있다.&lt;/li&gt;
-&lt;li&gt;여기서는 다음 그림을 참조하면된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="The Linux 2.6 scheduler runqueue structure
-" src="https://www.ibm.com/developerworks/linux/library/l-scheduler/figure1.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.ibm.com/developerworks/linux/library/l-scheduler/"&gt;IBM - Inside the Linux scheduler&lt;/a&gt;&lt;br&gt;
+    - 리눅스 커널 2.6 버전이상에서 사용하는 스케쥴러에 대한 내용이 정리되어있다.&lt;br&gt;
+    - 여기서는 다음 그림을 참조하면된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;![The Linux 2.6 scheduler runqueue structure
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;](https://www.ibm.com/developerworks/linux/library/l-scheduler/figure1.gif)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.suse.com/documentation/sles11/book_sle_tuning/data/cha_tuning_taskscheduler.html"&gt;SUSE - Tuning the Task Scheduler&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SUSE 11 버전에서 튜닝하는 것에 대한 내용 중 하나이다. 12 버전에 대한건 딴문서가 있으니 확인.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://www.suse.com/documentation/sles11/book_sle_tuning/data/cha_tuning_taskscheduler.html"&gt;SUSE - Tuning the Task Scheduler&lt;/a&gt;&lt;br&gt;
+    - SUSE 11 버전에서 튜닝하는 것에 대한 내용 중 하나이다. 12 버전에 대한건 딴문서가 있으니 확인.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="_1"&gt;우선순위 설정&lt;/h2&gt;
 &lt;h3 id="daemon"&gt;Daemon 구성 파일에서 설정&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일을 이용하여 &lt;code&gt;--nicelevel&lt;/code&gt; 옵션 추가&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://unix.stackexchange.com/a/123926"&gt;Setting up init.d service daemon priority (with or without monit)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일을 이용하여 &lt;code&gt;--nicelevel&lt;/code&gt; 옵션 추가&lt;br&gt;
+    - &lt;a href="https://unix.stackexchange.com/a/123926"&gt;Setting up init.d service daemon priority (with or without monit)&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일에 주석으로 &lt;code&gt;# chkconfig:&lt;/code&gt; 옵션 추가&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://serverfault.com/questions/754676/how-to-change-the-startup-order-of-linux-init-scripts-in-redhat-centos"&gt;how to change the startup order of linux init scripts in Redhat, Centos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;/etc/init.d&lt;/code&gt; 에서 서비스 파일에 주석으로 &lt;code&gt;# chkconfig:&lt;/code&gt; 옵션 추가&lt;br&gt;
+    - &lt;a href="https://serverfault.com/questions/754676/how-to-change-the-startup-order-of-linux-init-scripts-in-redhat-centos"&gt;how to change the startup order of linux init scripts in Redhat, Centos&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Systemd 에서 설정하는 방법&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Scheduling"&gt;systemd.exec&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Systemd 에서 설정하는 방법&lt;br&gt;
+    - &lt;a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Scheduling"&gt;systemd.exec&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="limitsconf"&gt;&lt;code&gt;limits.conf&lt;/code&gt; 파일에서 지정&lt;/h3&gt;
@@ -569,29 +557,23 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;/ul&gt;
 &lt;h3 id="nice"&gt;&lt;code&gt;nice&lt;/code&gt; 명령을 이용하여 동적으로 할당하는 방법&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;일반적인 사용법&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;nice -n {nice_value} {program_name}&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://askubuntu.com/questions/656771/process-niceness-vs-priority"&gt;Process &amp;lsquo;niceness&amp;rsquo; vs. &amp;lsquo;priority&amp;rsquo;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://bencane.com/2013/09/09/setting-process-cpu-priority-with-nice-and-renice/"&gt;Setting process CPU priority with nice and renice | Benjamin Cane&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://unix.stackexchange.com/questions/72934/how-do-i-start-a-process-with-a-nice-value-of-20-and-not-give-it-root-privilege"&gt;How do I start a process with a nice value of -20 and not give it root privilege?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;일반적인 사용법&lt;br&gt;
+    - &lt;code&gt;nice -n {nice_value} {program_name}&lt;/code&gt;&lt;br&gt;
+    - &lt;a href="https://askubuntu.com/questions/656771/process-niceness-vs-priority"&gt;Process &amp;lsquo;niceness&amp;rsquo; vs. &amp;lsquo;priority&amp;rsquo;&lt;/a&gt;&lt;br&gt;
+    - &lt;a href="http://bencane.com/2013/09/09/setting-process-cpu-priority-with-nice-and-renice/"&gt;Setting process CPU priority with nice and renice | Benjamin Cane&lt;/a&gt;&lt;br&gt;
+    - &lt;a href="https://unix.stackexchange.com/questions/72934/how-do-i-start-a-process-with-a-nice-value-of-20-and-not-give-it-root-privilege"&gt;How do I start a process with a nice value of -20 and not give it root privilege?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="daemon_1"&gt;특정 프로그램으로 Daemon을 이용하여 관리하는 방법&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://and.sourceforge.net/"&gt;Auto nice daemon&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;업그레이드가 2005년 이후로 안되고 있다.&lt;/li&gt;
-&lt;li&gt;그러니 사용하기 꺼림직&amp;hellip;&lt;/li&gt;
-&lt;li&gt;찾다가 나왔으니 뭐&amp;hellip;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.reddit.com/r/linuxquestions/comments/4ctr5c/is_the_autonice_daemon_and_safe_to_use/"&gt;Reddit 글&lt;/a&gt; 에서는 사용하기가 불안하다는 내용도&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/Nefelim4ag/Ananicy"&gt;Ananicy&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;Another Auto nice daemon&lt;/li&gt;
-&lt;li&gt;지금까지 개발중이다.&lt;/li&gt;
-&lt;li&gt;Role 값을 JSON 형식으로 작업이 가능하다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://and.sourceforge.net/"&gt;Auto nice daemon&lt;/a&gt;&lt;br&gt;
+    - 업그레이드가 2005년 이후로 안되고 있다.&lt;br&gt;
+    - 그러니 사용하기 꺼림직&amp;hellip;&lt;br&gt;
+    - 찾다가 나왔으니 뭐&amp;hellip;&lt;br&gt;
+    - &lt;a href="https://www.reddit.com/r/linuxquestions/comments/4ctr5c/is_the_autonice_daemon_and_safe_to_use/"&gt;Reddit 글&lt;/a&gt; 에서는 사용하기가 불안하다는 내용도&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Nefelim4ag/Ananicy"&gt;Ananicy&lt;/a&gt;&lt;br&gt;
+    - Another Auto nice daemon&lt;br&gt;
+    - 지금까지 개발중이다.&lt;br&gt;
+    - Role 값을 JSON 형식으로 작업이 가능하다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;PS. IO Priority를 변경하고 싶다면 &lt;code&gt;ionice&lt;/code&gt;를 확인하도록 하자. (&lt;a href="https://linux.die.net/man/1/ionice"&gt;manpage&lt;/a&gt;)&lt;/p&gt;</content><category term="Operation"></category><category term="linux"></category><category term="priority"></category><category term="scheduler"></category></entry><entry><title>Recoll - 리눅스에서 GUI로 문서 검색을 해보자</title><link href="https://ujuc.github.io/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/" rel="alternate"></link><published>2018-09-23T23:27:51+09:00</published><updated>2018-09-23T23:27:51+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2018-09-23:/2018/09/23/recoll_-_ri-nug-seu-e-seo_guiro_mun-seo_geom-saeg-eur_hae-bo-ja/</id><summary type="html">&lt;p&gt;페이스북에서 보았던 recoll이라는 프로그램에 대해서 정리만 해둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://www.facebook.com/groups/korelnxuser/permalink/1108262849348464/0"&gt;페이스북 우분투 유저 그룹에 올라온 글&lt;/a&gt;이 있었다.&lt;/p&gt;
 &lt;p&gt;이글은 나중에 혹시나 쓸까하여&amp;hellip; 리눅스를 메인을 사용할 일은 거의 없긴하다만&amp;hellip;&lt;/p&gt;
@@ -644,15 +626,15 @@ Task에 대한 nice 값을 나타낸다. 사용자 레벨에서 수정이 가능
 &lt;p&gt;문서상으로는 7버전 이상에서 사용할 수 있는 포맷이다.&lt;/p&gt;
 &lt;p&gt;아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;template&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;FileFormat&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syslogtag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;spifno1stsp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;droplastlf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;timestamp&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dateFormat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rfc3339&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;hostname&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;syslogtag&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;spifno1stsp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;property&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;msg&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;droplastlf&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;on&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;constant&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;작성된 템플릿을 이용해서 분석해보자.&lt;/p&gt;
@@ -829,9 +811,9 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;network&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;renderer&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;networkd&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ethernets&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;enp3s0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="n"&gt;addresses&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;ethernets&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;enp3s0&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="n"&gt;addresses&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
 &lt;span class="w"&gt;                &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;10.10&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;10.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;
 &lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="n"&gt;dhcp4&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -873,11 +855,9 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;ul&gt;
 &lt;li&gt;가장 중요하다.&lt;/li&gt;
 &lt;li&gt;이 작업을 하지 않으면, OS 부팅할때 에러가 뜬다.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.&lt;/li&gt;
-&lt;li&gt;이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt;&lt;br&gt;
+    - 하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.&lt;br&gt;
+    - 이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="cloudbase-init"&gt;CloudBase init 설치&lt;/h2&gt;
 &lt;ul&gt;
@@ -891,15 +871,11 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;/ul&gt;
 &lt;h2 id="glance-imange"&gt;Glance에 Imange 업로드&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Hoizon&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;주의&lt;/strong&gt; : &lt;code&gt;/var/tmp&lt;/code&gt; 에다가 올린다. 그러니 &lt;code&gt;/var&lt;/code&gt; 폴더에 용량이 있는지 확인하고 올리도록.&lt;/li&gt;
-&lt;li&gt;편하게 올리자.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;CLI&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--disk-format&lt;/code&gt;은 기본값이 &lt;code&gt;raw&lt;/code&gt;이다. 그렇기에 &lt;code&gt;qcow2&lt;/code&gt;로 변경해주고 올려야된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Hoizon&lt;br&gt;
+    - &lt;strong&gt;주의&lt;/strong&gt; : &lt;code&gt;/var/tmp&lt;/code&gt; 에다가 올린다. 그러니 &lt;code&gt;/var&lt;/code&gt; 폴더에 용량이 있는지 확인하고 올리도록.&lt;br&gt;
+    - 편하게 올리자.&lt;/li&gt;
+&lt;li&gt;CLI&lt;br&gt;
+    - &lt;code&gt;--disk-format&lt;/code&gt;은 기본값이 &lt;code&gt;raw&lt;/code&gt;이다. 그렇기에 &lt;code&gt;qcow2&lt;/code&gt;로 변경해주고 올려야된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;openstack&lt;span class="w"&gt; &lt;/span&gt;image&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;--disk-format&lt;span class="w"&gt; &lt;/span&gt;qcow2&lt;span class="w"&gt; &lt;/span&gt;--file&lt;span class="w"&gt; &lt;/span&gt;windows.qcow2&lt;span class="w"&gt; &lt;/span&gt;windows
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -917,10 +893,14 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;h2 id="_1"&gt;기능&lt;/h2&gt;
 &lt;p&gt;가장 중요하다. 기능!&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&amp;ldquo;Crontab&amp;rdquo; 을 YAML로 작성이 가능하다.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Crontab&amp;rdquo; 을 YAML로 작성이 가능하다.&lt;ul&gt;
 &lt;li&gt;솔직히 YAML이 편한지는 모르겠다.&lt;/li&gt;
-&lt;li&gt;cron job이 실패에 대한 부분을 제어할 수 있게 되어있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;cron job이 실패에 대한 부분을 제어할 수 있게 되어있다.&lt;ul&gt;
 &lt;li&gt;실패시 해당 값을 재시도 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;유연하게 구성 가능&lt;/li&gt;
 &lt;li&gt;Docker, Kubernetes, 12 factor environments에 맞게 디자인이 되었다며&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1031,7 +1011,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 
 &lt;h3 id="failure"&gt;failure 제어&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;실패 조건&lt;/li&gt;
+&lt;li&gt;실패 조건&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;producesStdout&lt;/code&gt;&lt;ul&gt;
 &lt;li&gt;default: &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;stdout 출력이 있을 경우&lt;/li&gt;
@@ -1045,6 +1025,8 @@ $&lt;span class="w"&gt; &lt;/span&gt;ip&lt;span class="w"&gt; &lt;/span&gt;link&
 &lt;li&gt;&lt;code&gt;nonzeroReturn&lt;/code&gt;&lt;ul&gt;
 &lt;li&gt;default: &lt;code&gt;true&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;반환값이 0이 아닌경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1121,8 +1103,10 @@ sh&lt;span class="w"&gt; &lt;/span&gt;build.sh
 &lt;h2 id="_3"&gt;실행&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;MongoDB, etcd3 설치&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;conf&lt;/code&gt; 폴더에 있는 config 수정&lt;br&gt;
-  * 샘플은 &lt;code&gt;conf/files&lt;/code&gt; 에 항목별로 존재한다. 확인이 필요.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;conf&lt;/code&gt; 폴더에 있는 config 수정&lt;ul&gt;
+&lt;li&gt;샘플은 &lt;code&gt;conf/files&lt;/code&gt; 에 항목별로 존재한다. 확인이 필요.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Node 실행: &lt;code&gt;./cronnode -conf conf/base.json&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;웹서버 실행: &lt;code&gt;./cronweb -conf conf/base.json&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;접속은 &lt;code&gt;http://127.0.0.1:7079/ui/&lt;/code&gt;&lt;/li&gt;
@@ -1146,11 +1130,12 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;dpkg&lt;span class="w"&gt; &lt;/span&gt;
 &lt;p&gt;무심코 누른 &lt;code&gt;Install Shell Integration &amp;amp; Utilities&lt;/code&gt;. 그리고 설치&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="installing shell integration" src="https://ujuc.github.io/img/2016/05-21/installing_shell_integration.png"&gt;&lt;/p&gt;
 &lt;p&gt;음.! 뭔가 이상하다&amp;hellip;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;You&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;also&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;these&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-&lt;span class="n"&gt;imgcat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Displays&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;inline&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;it2dl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
-&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;specified&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;saving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;folder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;:::&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;You&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;will&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;also&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;these&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;imgcat&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Displays&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;inline&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;it2dl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;specified&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;saving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;folder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;????&lt;/p&gt;
@@ -1202,12 +1187,14 @@ sudo&lt;span class="w"&gt; &lt;/span&gt;cp&lt;span class="w"&gt; &lt;/span&gt;/l
 &lt;li&gt;&lt;a href="http://manpages.ubuntu.com/manpages/lucid/man8/unattended-upgrade.8.html"&gt;Ubuntu manpage - unattended-upgrade&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="_1"&gt;사용법&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;unattended-upgrade
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  :::shell
+  $ sudo unattended-upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;하게되면 알아서 보안 패치를 업그레이드하고 관련된 내용들을 &lt;code&gt;/var/log/unattended-upgrades.log&lt;/code&gt;에서 확인할 수 있다. 관련해서 추가적으로 만들어지는 내용들도 있고, 특정된 내용들을 구성할 수도 있다.&lt;/p&gt;
 &lt;p&gt;만약 설치를 하지 않고, 어떠한 보안업데트가 되는지를 확인하고 싶다면, 아래와 같은 명령어를 사용하여 업그레이드를 하면된다.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$&lt;span class="w"&gt; &lt;/span&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;unattended-upgrade&lt;span class="w"&gt; &lt;/span&gt;--dry-run
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;  :::shell
+  $ sudo unattended-upgrade --dry-run
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;왠만해서는 &lt;code&gt;--dry-run&lt;/code&gt; 옵션을 이용하여, 업그레이드를 할 수 있도록 확인해주면 되는데, 쉽지는 않지&amp;hellip;&lt;/p&gt;
@@ -1400,8 +1387,8 @@ $&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;s
 $&lt;span class="w"&gt; &lt;/span&gt;vi&lt;span class="w"&gt; &lt;/span&gt;mysql/settings.py
 
 &lt;span class="nv"&gt;INSTALL_APPS&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;kronos&amp;#39;&lt;/span&gt;,
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh&amp;#39;&lt;/span&gt;,
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;kronos&amp;#39;&lt;/span&gt;,
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skwissh&amp;#39;&lt;/span&gt;,
 &lt;span class="o"&gt;)&lt;/span&gt;
 
 $&lt;span class="w"&gt; &lt;/span&gt;vi&lt;span class="w"&gt; &lt;/span&gt;mysite/urls.py

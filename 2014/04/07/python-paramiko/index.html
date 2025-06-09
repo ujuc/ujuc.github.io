@@ -135,8 +135,10 @@ gtag('config', 'G-X9EBSXCBTS');
 
 <h3 id="2-host-keys">2. Host Keys</h3>
 <ul>
-<li>첫 접근시 받아오는 Host Keys가 있다. 이것을 받아서 저장하던 날려먹던 상관은 하지 않지만 있어야지 접근이 가능하다.</li>
+<li>첫 접근시 받아오는 Host Keys가 있다. 이것을 받아서 저장하던 날려먹던 상관은 하지 않지만 있어야지 접근이 가능하다.<ul>
 <li>처음 <code>ssh</code>로 접근시 무의식적으로 <code>yes</code>를 누르는 그것!!</li>
+</ul>
+</li>
 <li>그러다보니 여기서도 그것에 관련된 내용을 사용할 수 있다. </li>
 <li><code>set_missing_host_key_policy(policy)</code>를 이용하여 host keys를 받아 저장할 것인지 아닌지를 판단하게 되는데. 기본값은 <code>RejectPolicy</code>로 되어있으며, <code>yes</code>를 받아와야한다면 <code>AutoAddPolicy</code>를 사용하도록 한다.</li>
 </ul>
@@ -170,10 +172,10 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="n">data</span> <span class="o">=</span> <span class="n">stdout</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </code></pre></div>
 
-<ul>
-<li>위와 같이하여 작성을 하도록 한다.</li>
-<li>그리고 <code>write</code>다음에는 <code>flush</code>를 꼭 해줘야 작동을 하니 그점은 주의하도록 한다. 관련 내용은 <a href="http://docs.paramiko.org/en/latest/api/file.html#paramiko.file.BufferedFile.write">여기</a>에 있다</li>
-</ul>
+<div class="highlight"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n">위와</span><span class="w"> </span><span class="n">같이하여</span><span class="w"> </span><span class="n">작성을</span><span class="w"> </span><span class="n">하도록</span><span class="w"> </span><span class="n">한다</span><span class="p">.</span>
+<span class="o">-</span><span class="w"> </span><span class="n">그리고</span><span class="w"> </span><span class="n n-Quoted">`write`</span><span class="n">다음에는</span><span class="w"> </span><span class="n n-Quoted">`flush`</span><span class="n">를</span><span class="w"> </span><span class="n">꼭</span><span class="w"> </span><span class="n">해줘야</span><span class="w"> </span><span class="n">작동을</span><span class="w"> </span><span class="n">하니</span><span class="w"> </span><span class="n">그점은</span><span class="w"> </span><span class="n">주의하도록</span><span class="w"> </span><span class="n">한다</span><span class="p">.</span><span class="w"> </span><span class="n">관련</span><span class="w"> </span><span class="n">내용은</span><span class="w"> </span><span class="err">[</span><span class="n">여기</span><span class="err">][</span><span class="mi">3</span><span class="err">]</span><span class="n">에</span><span class="w"> </span><span class="n">있다</span>
+</code></pre></div>
+
 <h3 id="4">4. 연결 끊기</h3>
 <ul>
 <li>작업이 끝났으면 연결을 끊어야된다.</li>

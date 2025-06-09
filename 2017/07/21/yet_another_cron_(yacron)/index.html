@@ -127,10 +127,14 @@ gtag('config', 'G-X9EBSXCBTS');
 <h2 id="_1">기능</h2>
 <p>가장 중요하다. 기능!</p>
 <ul>
-<li>&ldquo;Crontab&rdquo; 을 YAML로 작성이 가능하다.</li>
+<li>&ldquo;Crontab&rdquo; 을 YAML로 작성이 가능하다.<ul>
 <li>솔직히 YAML이 편한지는 모르겠다.</li>
-<li>cron job이 실패에 대한 부분을 제어할 수 있게 되어있다.</li>
+</ul>
+</li>
+<li>cron job이 실패에 대한 부분을 제어할 수 있게 되어있다.<ul>
 <li>실패시 해당 값을 재시도 할 수 있다.</li>
+</ul>
+</li>
 <li>유연하게 구성 가능</li>
 <li>Docker, Kubernetes, 12 factor environments에 맞게 디자인이 되었다며&hellip;</li>
 </ul>
@@ -241,7 +245,7 @@ gtag('config', 'G-X9EBSXCBTS');
 
 <h3 id="failure">failure 제어</h3>
 <ul>
-<li>실패 조건</li>
+<li>실패 조건<ul>
 <li><code>producesStdout</code><ul>
 <li>default: <code>false</code></li>
 <li>stdout 출력이 있을 경우</li>
@@ -255,6 +259,8 @@ gtag('config', 'G-X9EBSXCBTS');
 <li><code>nonzeroReturn</code><ul>
 <li>default: <code>true</code></li>
 <li>반환값이 0이 아닌경우</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

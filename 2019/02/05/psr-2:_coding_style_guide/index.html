@@ -140,63 +140,63 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>
 <p>[MUST] 코드는 PSR &ldquo;코딩 스타일 가이드&rdquo; [PSR-1]에 따릅니다.</p>
-<blockquote>
-<p>Code MUST follow a “coding style guide” PSR [<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md">PSR-1</a>].</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Code MUST follow a “coding style guide” PSR [[PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)].
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 코드는 인던트를 스페이스 4를 사용합니다. 탭을 사용하지 않습니다.</p>
-<blockquote>
-<p>Code MUST use 4 spaces for indenting, not tabs.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">Code</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">use</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="nv">spaces</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">indenting</span>,<span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">tabs</span>.
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST NOT] 줄 길이에 대한 엄격한 제한이 있어서는 안 됩니다; [MUST] 가벼운 제한은 반드시 120자여야 합니다; [SHOULD] 라인의 길이는 80자 이하여야 합니다.</p>
-<blockquote>
-<p>There MUST NOT be a hard limit on line length; the soft limit MUST be 120 characters; lines SHOULD be 80 characters or less.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; There MUST NOT be a hard limit on line length; the soft limit MUST be 120 characters; lines SHOULD be 80 characters or less.
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] <code>namespace</code> 선언 다음에는 빈 줄이 하나 있어야 합니다; [MUST] <code>use</code> 선언한 블록 다음에는 빈 줄이 하나 있어야 합니다.</p>
-<blockquote>
-<p>There MUST be one blank line after the <code>namespace</code> declaration, and there MUST be one blank line after the block of <code>use</code> declarations.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">There</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="k">one</span><span class="w"> </span><span class="n">blank</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the </span><span class="n n-Quoted">`namespace`</span><span class="w"> </span><span class="n">declaration</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="k">one</span><span class="w"> </span><span class="n">blank</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">block</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n n-Quoted">`use`</span><span class="w"> </span><span class="n">declarations</span><span class="p">.</span>
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 클래스 여는 중괄호는 반드시 다음 줄로 가야 합니다; [MUST] 닫는 중괄호는 본문 뒤에 오는 다음 줄로 가야 합니다.</p>
-<blockquote>
-<p>Opening braces for classes MUST go on the next line, and closing braces MUST go on the next line after the body.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">body</span><span class="p">.</span>
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 메서드를 여는 중괄호는 반드시 다음 줄로 가야 합니다; [MUST] 닫는 중괄호는 반드시 본문 맨 끝에서 다음 줄로 가야 합니다.</p>
-<blockquote>
-<p>Opening braces for methods MUST go on the next line, and closing braces MUST go on the next line after the body.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">methods</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">body</span><span class="p">.</span>
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 가시성 (Visibility)는 모든 속성과 메서드에서 반드시 선언되어야 합니다; [MUST] <code>abstract</code> 와 <code>final</code> 은 가시성 이전에 반드시 선언되어야 합니다; [MUST] <code>static</code> 은 반드시 가시성 뒤에 선언되어야 합니다.</p>
-<blockquote>
-<p>Visibility MUST be declared on all properties and methods; <code>abstract</code> and <code>final</code> MUST be declared before the visibility; <code>static</code> MUST be declared after the visibility.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Visibility</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">declared</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">methods</span><span class="p">;</span><span class="w"> </span><span class="n n-Quoted">`abstract`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`final`</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">declared</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">visibility</span><span class="p">;</span><span class="w"> </span><span class="n n-Quoted">`static`</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">declared</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">visibility</span><span class="p">.</span>
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 제어 구조 키워드 뒤에는 반드시 공백을 가져야 합니다; [MUST NOT] 메서드와 펑션 사용할 때는 공백을 추가해서는 안됩니다.</p>
-<blockquote>
-<p>Control structure keywords MUST have one space after them; method and function calls MUST NOT.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Control structure keywords MUST have one space after them; method and function calls MUST NOT.
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 제어 구조에서 여는 중괄호는 반드시 같은 줄에 있어야 합니다. [MUST] 닫는 괄호는 반드시 본문 뒤의 다음 줄로 가야 합니다.</p>
-<blockquote>
-<p>Opening braces for control structures MUST go on the same line, and closing braces MUST go on the next line after the body.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="n">structures</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">body</span><span class="p">.</span>
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST NOT] 제어 구조에서 여는 괄호 뒤에는 공백이 없어야 합니다. [MUST NOT] 제어 구조에서 닫는 괄호 전에는 공백이 없어야 합니다.</p>
-<blockquote>
-<p>Opening parentheses for control structures MUST NOT have a space after them, and closing parentheses for control structures MUST NOT have a space before.</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">Opening</span><span class="w"> </span><span class="nv">parentheses</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">control</span><span class="w"> </span><span class="nv">structures</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">space</span><span class="w"> </span><span class="nv">after</span><span class="w"> </span><span class="nv">them</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">closing</span><span class="w"> </span><span class="nv">parentheses</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">control</span><span class="w"> </span><span class="nv">structures</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">space</span><span class="w"> </span><span class="nv">before</span>.
+</code></pre></div>
+
 </li>
 </ul>
 <h2 id="11">1.1 예제</h2>
@@ -215,11 +215,11 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="p">{</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">sampleMethod</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span> <span class="nv">$b</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">===</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">===</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">bar</span><span class="p">();</span>
-        <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">&gt;</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">&gt;</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
             <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
             <span class="nx">BazClass</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -528,39 +528,39 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>
 <p>[MUST] 제어문 키워드 다음에 스페이스가 하나 있어야 합니다.</p>
-<blockquote>
-<p>There MUST be one space after the control structure keyword</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; There MUST be one space after the control structure keyword
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST NOT] 여는 괄호 뒤에 스페이스가 있어서는 안 됩니다.</p>
-<blockquote>
-<p>There MUST NOT be a space after the opening parenthesis</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; There MUST NOT be a space after the opening parenthesis
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST NOT] 닫는 괄호 앞에 스페이스가 있어서는 안 됩니다.</p>
-<blockquote>
-<p>There MUST NOT be a space before the closing parenthesis</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; There MUST NOT be a space before the closing parenthesis
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 닫는 괄호와 여는 중괄호 사이에 스페이스가 하나 있어야 합니다.</p>
-<blockquote>
-<p>There MUST be one space between the closing parenthesis and the opening brace</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; There MUST be one space between the closing parenthesis and the opening brace
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 제어문 내부는 반드시 한번 들여 쓰기 해야 합니다.</p>
-<blockquote>
-<p>The structure body MUST be indented once</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; The structure body MUST be indented once
+</code></pre></div>
+
 </li>
 <li>
 <p>[MUST] 닫는 중괄호는 제어문이 끝나는 다음 줄에 있어야 합니다.</p>
-<blockquote>
-<p>The closing brace MUST be on the next line after the body</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">closing</span><span class="w"> </span><span class="nv">brace</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="nv">after</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">body</span>
+</code></pre></div>
+
 </li>
 </ul>
 <p>[MUST] 제어문 본체는 중괄호로 묶어야 합니다. 중괄호를 이용하여 제어문이 어떻게 보여줄지를 표준화하고, 개행이 되었을 때, 오류가 발생할 가능성을 줄여 줍니다.</p>
@@ -783,45 +783,45 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>
 <p>전역 변수, 전역 상수 선언</p>
-<blockquote>
-<p>Declaration of global variables and global constants</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Declaration</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">global</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">global</span><span class="w"> </span><span class="n">constants</span>
+</code></pre></div>
+
 </li>
 <li>
 <p>함수 선언</p>
-<blockquote>
-<p>Declaration of functions</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Declaration of functions
+</code></pre></div>
+
 </li>
 <li>
 <p>연산자와 할당자</p>
-<blockquote>
-<p>Operators and assignment</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Operators</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">assignment</span>
+</code></pre></div>
+
 </li>
 <li>
 <p>라인간 정렬</p>
-<blockquote>
-<p>Inter-line alignment</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Inter-line alignment
+</code></pre></div>
+
 </li>
 <li>
 <p>주석과 문서 블록</p>
-<blockquote>
-<p>Comments and documentation blocks</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Comments and documentation blocks
+</code></pre></div>
+
 </li>
 <li>
 <p>클래스 이름 접두사와 접미사</p>
-<blockquote>
-<p>Class name prefixes and suffixes</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Class name prefixes and suffixes
+</code></pre></div>
+
 </li>
 <li>
 <p>모범 사례</p>
-<blockquote>
-<p>Best practices</p>
-</blockquote>
+<div class="highlight"><pre><span></span><code>&gt; Best practices
+</code></pre></div>
+
 </li>
 </ul>
 <p>[MAY] 향후 권장 사항은 스타일이나 연습해야 될 많은 요소들을 다루기 위해 이 가이드를 수정하고 확장할 수 있습니다.</p>

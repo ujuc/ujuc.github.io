@@ -136,11 +136,9 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>가장 중요하다.</li>
 <li>이 작업을 하지 않으면, OS 부팅할때 에러가 뜬다.</li>
-<li><strong>주의</strong><ul>
-<li>하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.</li>
-<li>이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.</li>
-</ul>
-</li>
+<li><strong>주의</strong><br>
+    - 하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.<br>
+    - 이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.</li>
 </ul>
 <h2 id="cloudbase-init">CloudBase init 설치</h2>
 <ul>
@@ -154,15 +152,11 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <h2 id="glance-imange">Glance에 Imange 업로드</h2>
 <ul>
-<li>Hoizon<ul>
-<li><strong>주의</strong> : <code>/var/tmp</code> 에다가 올린다. 그러니 <code>/var</code> 폴더에 용량이 있는지 확인하고 올리도록.</li>
-<li>편하게 올리자.</li>
-</ul>
-</li>
-<li>CLI<ul>
-<li><code>--disk-format</code>은 기본값이 <code>raw</code>이다. 그렇기에 <code>qcow2</code>로 변경해주고 올려야된다.</li>
-</ul>
-</li>
+<li>Hoizon<br>
+    - <strong>주의</strong> : <code>/var/tmp</code> 에다가 올린다. 그러니 <code>/var</code> 폴더에 용량이 있는지 확인하고 올리도록.<br>
+    - 편하게 올리자.</li>
+<li>CLI<br>
+    - <code>--disk-format</code>은 기본값이 <code>raw</code>이다. 그렇기에 <code>qcow2</code>로 변경해주고 올려야된다.</li>
 </ul>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>openstack<span class="w"> </span>image<span class="w"> </span>create<span class="w"> </span>--disk-format<span class="w"> </span>qcow2<span class="w"> </span>--file<span class="w"> </span>windows.qcow2<span class="w"> </span>windows
 </code></pre></div>
