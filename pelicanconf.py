@@ -33,6 +33,14 @@ ARTICLE_PATHS = ["blog"]
 ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}/"
 ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
 
+PAGE_PATHS = ["pages"]
+PAGE_URL = "{slug}/"
+PAGE_SAVE_AS = "{slug}/index.html"
+
+# Pages template
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives', 'pages']
+PAGES_SAVE_AS = 'pages.html'
+
 MENU = (
     ("Blog", "/", "inbox"),
     ("Archive", "/archives.html", "archive"),
@@ -49,7 +57,7 @@ LINKS = ()
 
 DEFAULT_PAGINATION = 5
 STATIC_PATHS = ["img", "misc"]
-DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
