@@ -3,6 +3,11 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with
 code in this repository.
 
+## Language
+
+**IMPORTANT: Always respond in Korean (한국어) when working with this codebase,
+as this is a Korean personal blog.**
+
 ## Project Overview
 
 This is a Korean personal blog powered by Pelican (static site generator) with a
