@@ -30,6 +30,14 @@ supports both Markdown and reStructuredText content.
 - `uv sync` - Install dependencies from uv.lock
 - `uv add <package>` - Add new dependency
 
+### Git Submodules
+
+- `git submodule update --init --recursive` - Initialize and update all submodules
+- `git submodule update --remote` - Update submodules to latest remote version
+- `git submodule foreach git pull origin main` - Pull latest changes for all submodules
+
+**Note**: The `clean` theme is managed as a Git submodule from a separate repository (`git@github.com:ujuc/clean.git`). When cloning this repository, make sure to initialize submodules to get the theme files.
+
 ## Architecture
 
 ### Content Structure
