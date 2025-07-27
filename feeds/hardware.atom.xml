@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Hardware</title><link href="https://ujuc.github.io/" rel="alternate"></link><link href="https://ujuc.github.io/feeds/hardware.atom.xml" rel="self"></link><id>https://ujuc.github.io/</id><updated>2016-06-22T00:12:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Edison - Bluetooth 설정</title><link href="https://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/" rel="alternate"></link><published>2016-06-22T00:12:00+09:00</published><updated>2016-06-22T00:12:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-06-22:/2016/06/22/edison_-_bluetooth_seor-jeong/</id><summary type="html">&lt;p&gt;오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;오래된 글이다 잠시 IoT로 하면서 기본적으로 설정하면서 나왔던 것. 정리한 내용이다.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Hardware</title><link href="https://ujuc.github.io/" rel="alternate"/><link href="https://ujuc.github.io/feeds/hardware.atom.xml" rel="self"/><id>https://ujuc.github.io/</id><updated>2016-06-22T00:12:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Edison - Bluetooth 설정</title><link href="https://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/" rel="alternate"/><published>2016-06-22T00:12:00+09:00</published><updated>2016-06-22T00:12:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2016-06-22:/2016/06/22/edison_-_bluetooth_seor-jeong/</id><summary type="html">&lt;p&gt;오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;오래된 글이다 잠시 IoT로 하면서 기본적으로 설정하면서 나왔던 것. 정리한 내용이다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id="bluetooth"&gt;Bluetooth 설정&lt;/h1&gt;
 &lt;ul&gt;
@@ -61,7 +61,7 @@
 &lt;li&gt;&lt;a href="https://github.com/karulis/pybluez"&gt;pybluez&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/intel-iot-devkit/edison-guides/wiki"&gt;edison-guies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://software.intel.com/en-us/articles/connecting-to-intel-edison-from-android-with-bluetooth-le-ble"&gt;Connecting to Intel Edison from Android with Bluetooth LE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Hardware"></category><category term="edison"></category><category term="bluetooth"></category><category term="iot"></category></entry><entry><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link href="https://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/" rel="alternate"></link><published>2015-03-16T23:56:00+09:00</published><updated>2015-04-02T23:05:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:/2015/03/16/ti-lowpwoer-soc-release/</id><summary type="html">&lt;p class="first last"&gt;뉴스가 나왔다. 베터리가 필요없는 SOC가 나왔다고, 믿지는 않았다. 그래서
+&lt;/ul&gt;</content><category term="Hardware"/><category term="edison"/><category term="bluetooth"/><category term="iot"/></entry><entry><title>TI에서 베터리를 가장 적게 먹는 칩 출시</title><link href="https://ujuc.github.io/2015/03/16/ti-lowpwoer-soc-release/" rel="alternate"/><published>2015-03-16T23:56:00+09:00</published><updated>2015-04-02T23:05:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-03-16:/2015/03/16/ti-lowpwoer-soc-release/</id><summary type="html">&lt;p class="first last"&gt;뉴스가 나왔다. 베터리가 필요없는 SOC가 나왔다고, 믿지는 않았다. 그래서
 찾아봤다. 역시나... 그져 대기시에만 오랫동안 지낼수 있도록 가장 적은
 전력을 사용할뿐...&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://www.kidd.co.kr/news/178946"&gt;산업일보&lt;/a&gt; 에 &amp;quot;TI, 베터리 없는 IoT 커넥티비티 구현&amp;quot; 이라는 뉴스가 올라왔다.
@@ -92,7 +92,7 @@ sub-1GHz, &lt;a class="reference external" href="https://docs.zigbee.org/zigbee-
 &lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc1310"&gt;CC1310&lt;/a&gt; : Sub-1GHz&lt;/li&gt;
 &lt;li&gt;&lt;a class="reference external" href="http://www.ti.com/product/cc2620"&gt;CC2620&lt;/a&gt; : ZigBee RF4CE&lt;/li&gt;
 &lt;/ul&gt;
-</content><category term="Hardware"></category><category term="ti"></category><category term="chip"></category><category term="iot"></category><category term="m3"></category><category term="arm"></category><category term="ble"></category><category term="low energy"></category></entry><entry><title>RAM 리뷰에서 본 버전별 특성</title><link href="https://ujuc.github.io/2015/02/09/RAM-reive/" rel="alternate"></link><published>2015-02-09T00:00:00+09:00</published><updated>2015-03-31T21:47:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-09:/2015/02/09/RAM-reive/</id><summary type="html">&lt;p class="first last"&gt;RAM 사양에 대한 내용들로 그냥 기억용임.&lt;/p&gt;
+</content><category term="Hardware"/><category term="ti"/><category term="chip"/><category term="iot"/><category term="m3"/><category term="arm"/><category term="ble"/><category term="low energy"/></entry><entry><title>RAM 리뷰에서 본 버전별 특성</title><link href="https://ujuc.github.io/2015/02/09/RAM-reive/" rel="alternate"/><published>2015-02-09T00:00:00+09:00</published><updated>2015-03-31T21:47:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2015-02-09:/2015/02/09/RAM-reive/</id><summary type="html">&lt;p class="first last"&gt;RAM 사양에 대한 내용들로 그냥 기억용임.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;RSS에서 &lt;a class="reference external" href="http://www.anandtech.com/show/8959/ddr4-haswell-e-scaling-review-2133-to-3200-with-gskill-corsair-adata-and-crucial"&gt;DDR4 Haswell-E Scaling Review&lt;/a&gt;: 2133 to 3200 with G.Skill, Gorsair,
 ADATA and Crucial 에서 글이올라왔길레 봤는데...&lt;/p&gt;
 &lt;p&gt;어떤분께서 그렇게 말씀하시던 RAM이 버전업되면서 달라지 내용과 다른 점이 보여서
@@ -195,4 +195,4 @@ ADATA and Crucial 에서 글이올라왔길레 봤는데...&lt;/p&gt;
 보여주는 것도...&lt;/p&gt;
 &lt;p&gt;자세한건 기사내용을 보는 것이 더 좋은듯.&lt;/p&gt;
 &lt;/div&gt;
-</content><category term="Hardware"></category><category term="ram"></category><category term="hw"></category><category term="하드웨어"></category></entry></feed>
+</content><category term="Hardware"/><category term="ram"/><category term="hw"/><category term="하드웨어"/></entry></feed>
