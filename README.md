@@ -1,13 +1,23 @@
-## Blog 글 생성 
+# ujuc.github.io
 
-```shell script
-uv run cli post <TITLE>
+- 기술 블로그
+
+## 환경 설정
+
+```bash
+git submodule update --init --recursive
 ```
 
 ## Pelican 명령어
 
-### blog preview
+### 글 생성
 
-```shell script
+```bash
+uv run cli post <TITLE>
+```
+
+### preview
+
+```bash
 uv run cli preview
 ```
