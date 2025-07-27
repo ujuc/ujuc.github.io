@@ -23,7 +23,6 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v6
         with:
-          active-environment: true
           enable-cache: true
           ignore-nothing-to-cache: true
 
