@@ -6,6 +6,7 @@
 
 ```bash
 git submodule update --init --recursive
+pre-commit install
 ```
 
 ## Pelican 명령어

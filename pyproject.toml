@@ -2,17 +2,26 @@
 name = "ujuc.github.io"
 version = "2.0.0"
 description = "blog"
-authors = [{ name = "sungjin.kang", email = "ujuc@ujuc.me" }]
-dependencies = [
-    "pendulum>=3.1.0",
-    "pelican>=4.11.0",
-    "markdown>=3.8",
-    "rich>=14.0.0",
-    "cleo>=2.1.0",
-    "markdown-mermaidjs>=2.0.0",
-]
 readme = "README.md"
 requires-python = ">= 3.13"
+authors = [{ name = "sungjin.kang", email = "ujuc@ujuc.me" }]
+dependencies = [
+  "cleo>=2.1.0",
+  "markdown-mermaidjs>=2.0.0",
+  "markdown>=3.8",
+  "pelican>=4.11.0",
+  "pendulum>=3.1.0",
+  "pre-commit>=4.2.0",
+  "rich>=14.0.0",
+]
+
+[project.scripts]
+cli = "cli.main:run"
+
+[dependency-groups]
+dev = [
+  "pre-commit>=4.2.0",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -27,6 +36,3 @@ packages = ["cli"]
 [tool.rye]
 managed = true
 dev-dependencies = []
-
-[project.scripts]
-cli = "cli.main:run"
