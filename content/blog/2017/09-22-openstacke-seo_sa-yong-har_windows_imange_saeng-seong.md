@@ -56,4 +56,3 @@ $ openstack image create --disk-format qcow2 --file windows.qcow2 windows
 * http://gotocloud.co.kr/?p=1575
 * http://heavenkong.blogspot.kr/2014/04/create-windows7-virtual-machine-image.html
 * https://fedoraproject.org/wiki/Windows_Virtio_Drivers
-

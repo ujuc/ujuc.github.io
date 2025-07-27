@@ -50,4 +50,3 @@ Summary: 파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구�
 * 여기에 키값으로 되어있는 것들이 메소드 명과 1:1 매칭된다.
 
 다른 것도 많으니 [문서](http://distro.readthedocs.io/en/latest/) 확인하자.
-

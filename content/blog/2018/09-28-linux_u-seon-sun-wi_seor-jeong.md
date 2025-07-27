@@ -3,7 +3,7 @@ Date: 2018-09-28 18:47:14
 Category: Operation
 Tags: linux, priority, scheduler
 Slug: linux_u-seon-sun-wi_seor-jeong
-Summary: Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록 하자... 
+Summary: Linux에서 프로세스 우선순위를 정하는 방법에 대해서 알아보도록 하자...
 
 리눅스에서는 두가지 숫자를 이용하여 task(process)에 대한 우선순위를 정할 수 있다.
 

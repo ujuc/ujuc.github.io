@@ -58,4 +58,3 @@ sub-1GHz, `ZigBee RF4CE™`_, 최대 5Mbps 고유모드로 지원한다고 한�
 .. _CC2650: http://www.ti.com/product/cc2650
 .. _CC1310: http://www.ti.com/product/cc1310
 .. _CC2620: http://www.ti.com/product/cc2620
-

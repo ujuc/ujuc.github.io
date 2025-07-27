@@ -1,7 +1,7 @@
 Title: Ubuntu-Debian 패키지 매니저 apt 사용해보기
 Date: 2016-04-17 12:23
 Category: Develop
-Tags: ubuntu, debian, apt, system, 
+Tags: ubuntu, debian, apt, system,
 Slug: ubuntu-debian-패키지-매니저-apt-사용해보기
 Summary: 하위 명령어 `apt-get`, `apt-cache`를 사용하지 않고 패키지 매너저 `apt`를 사용하는 방법.
 

@@ -9,7 +9,7 @@ Summary: 페이스북에서 보았던 recoll이라는 프로그램에 대해서 
 
 이글은 나중에 혹시나 쓸까하여... 리눅스를 메인을 사용할 일은 거의 없긴하다만...
 
-소개글은 다음과 같다. 
+소개글은 다음과 같다.
 
 [FOSS Mint - Recoll - A Full-Text GUI Search Tool for Linux System](https://www.fossmint.com/recoll-file-text-search-tool-for-linux/)
 
@@ -21,7 +21,7 @@ Summary: 페이스북에서 보았던 recoll이라는 프로그램에 대해서 
 * 텍스트 추출할 수 있는 플러그인 지원
 * 왠만한 문서 포멧 지원
 
-더 눈에 띄는 것은 
+더 눈에 띄는 것은
 
 > Thunderbird에서 zip으로 압축되어있는 파일에 들어있는 문서 파일도 검색가능...
 

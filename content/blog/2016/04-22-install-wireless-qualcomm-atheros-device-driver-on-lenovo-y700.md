@@ -30,4 +30,3 @@ Ubuntu 16.04를 사용했음에도 불구하고 잡히지 않았던건, 커널�
 
 	:::shell
 	echo blacklist ideapad_laptop | sudo tee /etc/modprobe.d/blacklist.conf
-

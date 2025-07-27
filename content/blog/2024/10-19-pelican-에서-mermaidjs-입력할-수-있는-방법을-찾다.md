@@ -31,6 +31,6 @@ MARKDOWN = {
 flowchart TD
   node_1(["Node 1"])
   node_2["Node 2"]
-  
-  node_1 --> node_2  
+
+  node_1 --> node_2
 ```

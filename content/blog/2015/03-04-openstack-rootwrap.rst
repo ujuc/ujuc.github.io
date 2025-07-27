@@ -50,7 +50,7 @@ Suduers 설정
     nova ALL = (root) NOPASSWD: /usr/bin/nova-rootwrap /etc/nova/rootwrap.conf *
 
 
-필터 위치 설정 
+필터 위치 설정
 ```````````````
 
 ``rootwrap`` 으로 ``Nova-provided`` 필터 파일을 로드하고, ``rootwrap.d`` 로 확장
@@ -62,7 +62,7 @@ Suduers 설정
     filters_path=/etc/nova/rootwrap.d,/usr/share/nova/rootwrap
 
 
-필터 정의  
+필터 정의
 ``````````
 
 각 노드마다 설치를... 해줘야된다고.
@@ -80,7 +80,7 @@ root로 동작시킬 것이 있을 경우.
 * 관련 필터 내용은 ``/etc/nova/rootwrap.d/foobar.filters`` 에 추가해둘 것.
 
 
-프로젝트 개발자용 
+프로젝트 개발자용
 ~~~~~~~~~~~~~~~~~~
 
 새로운 ``run-as-root`` 명령을 추가
@@ -89,7 +89,7 @@ root로 동작시킬 것이 있을 경우.
 * ``nova.utils.execute(run_as_root=True)`` 를 사용할 것.
 * Nova 코드에서 ``/etc/nova/rootwrap.d/{filter_name}.ilters`` 파일에 관련된 내용을
   추가해줄 것.
-  
+
   - 예로 Compute 노드에서 작동하는 소스라면
     ``/etc/nova/rootwrap.d/compute.filters`` 에다가 추가하도록.
 

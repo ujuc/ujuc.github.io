@@ -36,7 +36,7 @@ Summary: NDB 문서를 번역해놓은 것.
 | `GenericProperty` | 기본 값.<br>[Expando][expando]클래스에서 주로 사용되지만, 명시적으로 사용하기도함.<br>어떤 형식으로도 가능. (`int`, `long`, `float`, `bool`, `str`, `unicode`, `datetime`, `Key`, `BlobKey`, `GeoPt`, `User`, `None`) |
 | `ComputeProperty` | 사용자가 정의한 함수에서 계산 값들을 처리하여 저장.<br>자세한 내용은 [Computed Properties][computeproperty] |
 
-* `compressed` 옵션: `True`로 설정시, gzip으로 압축하여 디스크에 저장함. 이때 CPU 인/디코딩하는데 IO를 사용을 함. 
+* `compressed` 옵션: `True`로 설정시, gzip으로 압축하여 디스크에 저장함. 이때 CPU 인/디코딩하는데 IO를 사용을 함.
 
 ## Property Options
 

@@ -8,7 +8,7 @@ import sys
 
 
 sys.path.append(os.curdir)
-from pelicanconf import *
+from pelicanconf import *  # noqa: F403, F401
 
 
 SITEURL = "https://ujuc.github.io"

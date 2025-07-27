@@ -5,7 +5,7 @@ Tags: docker, docker image
 Slug: docker_image_orm-gi-gi_(without_dockerhub)
 Summary: 반강제 폐쇄망에 이미지를 올리자.
 
-외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 AWS ECR을 사용하는건 제외. 
+외부로 나가서는 안되는 Docker 이미지를 만들게 되었다. 그러다보니 Docker Hub를 사용하거나 AWS ECR을 사용하는건 제외.
 
 개발 과정에서 실제 OS에서 작동하는지 확인을 위한것이라 올리고 인증하고 귀찮다.
 

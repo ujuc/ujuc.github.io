@@ -63,4 +63,3 @@ Summary: datetime 패키지중 하나인 Pendulum이 업그래이드 했다. 그
 ### Deprecated
 * `with_date()`, `with_time()`은 더이상 사용되지 않고, `on()`, `at()` 으로 사용.
 * `create_from_date()`, `create_from_time()`은 더이상 사용되지 않고, `create()`으로 사용.
-

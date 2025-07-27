@@ -10,7 +10,7 @@ Summary: Git flow, GitHub flow, GitLab flow 에대해서 좀 알아보자. 머�
 <i class="fa-solid fa-triangle-exclamation"></i> 문서가 업데이트 된지 오래되었습니다. 정리가 필요합니다. 그리고 하나더 여기서 이야기하는 것은 방법론입니다.
 </div>
 
-회사에서  `git`을 가지고서 버전 관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금 더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다. 
+회사에서  `git`을 가지고서 버전 관리를 본격적으로 하면서, 너무 많은 부분에서 문제가 발생을 하는 것을 보고 이걸 어떤 방식으로 사용하면 조금 더 꼬이는 것을 방지할 수 있을까라는 생각을 하고 있다.
 물론 새로운 프로젝트를 진행하면서 어떤 방법으로 진행하는 것이 맞는 것인지도 필요하기도 했고, 그러다가 [이상한 모임 Slack](http://koalabot-weirdmeetup.herokuapp.com/slack)에서 관련 이야기가 나오면서 커밋을 하기 위한 방법론 중 하나인 `git-flow`의 종류가 3가지나 된다는 것을 보고 이놈들의 다른 점이 무엇인지 어떤 방법에서 편한 것인지에 대한 내용을 확인하고 싶어 졌다.
 
 <div class="border-top border-bottom border-secondary-subtle" markdown="1">
@@ -25,7 +25,7 @@ Summary: Git flow, GitHub flow, GitLab flow 에대해서 좀 알아보자. 머�
 
 Vincent Driessen은 관련하여 스크립트로 명령을 구성해놨으며, 그냥 설치를 하여 CLI에서 명령으로 작업을 하여도 되고, GUI 툴들에서 기본 내장 git-flow 명령이나 플러그인을 설치하여 작업을 진행할 수 있도록 보편화되어있는 브런칭 모델이다.
 
-<div class="row justify-content-center" markdown="1"> 
+<div class="row justify-content-center" markdown="1">
   <div class="col-6 col-sm-9" markdown="1">
 ![Git Flow model]({static}/img/2015/12-16/git-model@2x.png)
   </div>
@@ -56,7 +56,7 @@ Vincent Driessen은 관련하여 스크립트로 명령을 구성해놨으며, �
 
 새로운 Production 릴리즈를 위한 브랜치이다.
 지금까지 한 기능을 묶어 `develop` 브랜치에서 `release` 브랜치를 따내고, `develop` 브랜치에서는 다음번 릴리즈에서 사용할 기능을 추가한다.
-`release` 브랜치에서는 버그 픽스에 대한 부분만 커밋하고, **릴리즈가 준비되었다고 생각하면** `master`로 머지를 진행한다. (이때도 `--no-ff` 옵션을 이용하여 머지하였음을 남긴다.) 
+`release` 브랜치에서는 버그 픽스에 대한 부분만 커밋하고, **릴리즈가 준비되었다고 생각하면** `master`로 머지를 진행한다. (이때도 `--no-ff` 옵션을 이용하여 머지하였음을 남긴다.)
 `master`로 머지 후 `tag` 명령을 이용하여 릴리즈 버전에 대해 명시를 하고, `-s` 나 `-u <key>` 옵션을 이용하여 머지한 사람의 정보를 남겨두도록 한다. 그런 뒤 `develop` 브랜치로 머지하여, `release` 브랜치에서 수정된 내용이 `develop` 브랜치에 반영한다.
 
 ### Hotfix 브랜치
@@ -93,7 +93,7 @@ Scott chacon은 [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html
 
 흐름이 단순한 만큼 룰도 단순하다. `master` 브랜치에 대한 `role`만 정확하다면 나머지 브랜치들에는 관여를 하지 않는다. 그리고 `pull request` 기능을 사용하도록 권장을 한다.
 
-<div class="row justify-content-center" markdown="1"> 
+<div class="row justify-content-center" markdown="1">
   <div class="col-6 col-sm-9" markdown="1">
 ![GitHub Flow Model]({static}/img/2015/12-16/20151104223339.png)
   </div>
@@ -122,7 +122,7 @@ Scott chacon은 [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html
 
 **4. 피드백이나 도움이 필요할 때, 그리고 머징 준비가 완료되었을 때는 `pull request`를 생성한다.**
 
-`pull request` 는 코드 리뷰를 도와주는 시스템이다. 
+`pull request` 는 코드 리뷰를 도와주는 시스템이다.
 그렇기에 이것을 이용하여 자신의 코드를 공유하고, 리뷰를 받을 수 있도록 한다. 물론 머지가 준비 완료되어 `master` 브랜치로 반영을 요구하여도 된다.
 
 **5. 기능에 대한 리뷰와 사인이 끝난 후 `master`로 머지한다.**
@@ -204,7 +204,7 @@ Issue 트러커와 연결하여 사용하는 것을 말한다. 긴~~ 시간 동�
 
 # 끝
 
-하... 길었다. 모든 자료는 공식적으로 첫 번째로 작성된 포스트의 내용을 가져와 작성하였다. 그쪽의 내용이 가장 먼저 말한 사람의 생각이 들어가 있다고 생각했기 때문이다. 
+하... 길었다. 모든 자료는 공식적으로 첫 번째로 작성된 포스트의 내용을 가져와 작성하였다. 그쪽의 내용이 가장 먼저 말한 사람의 생각이 들어가 있다고 생각했기 때문이다.
 그리고 찾으면서 발견한 글들의 경우, 참고 사이트로 작성을 해놨으니 그것을 확인하면 될듯.
 
 Git flow가 편한줄 알았더니... GitHub나 GitLab을 사용하고 있다면, 굳이 Git flow가 아니더라도 괜찮겠다는 생각이 드는데 딱히 OpenSource를 하는 그룹에서도 Git flow를 사용하기보다는 자신의 코드가 들어가 있는 플랫폼을 가지고서 작업을 하는 경우가 많아서... 뭐. 업스트림에 작업을 할 수 있는 사람이 한정되어있으니까...

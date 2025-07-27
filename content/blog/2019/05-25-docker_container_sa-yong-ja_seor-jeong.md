@@ -41,4 +41,3 @@ Docker container에서 사용하는 사용자는 root. 이 root는 패이크 루
 
 - 이 글의 문제점은 Docker다. 난 Docker-compose를 사용하고 있어서 다른 작업이 필요했다.
 - 내 생각에는 이 옵션에 대한 Docker-compose 옵션이 있을 꺼라 생각하는데. 나중에 다른 작업할때 찾아봐야겠다.
-

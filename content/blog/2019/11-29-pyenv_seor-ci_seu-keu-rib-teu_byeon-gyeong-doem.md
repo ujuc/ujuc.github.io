@@ -18,4 +18,3 @@ $ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installe
 ```shell
 $ curl https://pyenv.run | bash
 ```
-

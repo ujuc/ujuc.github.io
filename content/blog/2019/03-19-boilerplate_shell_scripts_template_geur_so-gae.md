@@ -23,4 +23,3 @@ Summary: 간단한 shell 스크립트를 template으로 만들어둔 것이 있�
 4. Comment and document the code
 
 동일한 사람이 작성한 [Bash Shell Scripting Utilities](https://natelandau.com/bash-scripting-utilities/) 도 좋다.
-

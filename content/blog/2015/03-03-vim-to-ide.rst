@@ -11,7 +11,7 @@ vim을 IDE처럼 만드는 법을 알아보자.
 메일로 Github에서 흥하는 레포들을 소개해주는 서비스가 존재한다. 거기서 오랜만에
 vim에 관련된 내용이 올라왔다.
 
-`jez/vim-as-an-ide`_ 
+`jez/vim-as-an-ide`_
 
 .. _jez/vim-as-an-ide: https://github.com/jez/vim-as-an-ide
 

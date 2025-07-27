@@ -2,14 +2,14 @@ Title: Pelican에서 Markdown 문서 Attribute 에러
 Date: 2018-09-24 22:45:00
 Modified: 2018-09-28 18:58:00
 Category: Develop
-Tags: pelican, markdown, 
+Tags: pelican, markdown,
 Slug: pelicane-seo_markdown_mun-seo_attribute_e-reo
 Summary: Pelican을 새로 설치하였더니 markdown 문서들이 전부 컴파일이 안된다.
 
 블로그를 python 3.7로 업그레이드로 진행하고 나서 다음과 같은 에러가 발생한다.
 
 ```bash
-pelican /Users/ujuc/repos/ujuc.github.io/content -o /Users/ujuc/repos/ujuc.github.io/output -s /Users/ujuc/repos/ujuc.github.io/pelicanconf.py 
+pelican /Users/ujuc/repos/ujuc.github.io/content -o /Users/ujuc/repos/ujuc.github.io/output -s /Users/ujuc/repos/ujuc.github.io/pelicanconf.py
 ERROR: Could not process blog/2017-10-22-pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi.md
   | AttributeError: 'Registry' object has no attribute 'keys'
 ERROR: Could not process blog/2014-02-23-pylint.md

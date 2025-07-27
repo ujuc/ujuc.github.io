@@ -41,7 +41,7 @@ COPY ./node_modules ./node_modules
 # 결과
 
 ```
-ERROR: failed to calculate checksum 
+ERROR: failed to calculate checksum
   of ref e029::mclu: "/node_modules": not found
 ```
 
@@ -55,8 +55,8 @@ ERROR: failed to calculate checksum
 
 ```
 ## Run actions/checkout@v4
-Temporarily overriding 
-  HOME='/home/runner/work/_temp/4d270f53-51a0-434e-aa52-9f4e95bf278a' 
+Temporarily overriding
+  HOME='/home/runner/work/_temp/4d270f53-51a0-434e-aa52-9f4e95bf278a'
   before making global git config changes
 ```
 
@@ -64,15 +64,15 @@ Temporarily overriding
 
 ```
 ## Run docker/build-push-action@v6
-/usr/bin/docker buildx build 
-    --cache-from type=gha --cache-to type=gha,mode=max 
-    --iidfile /home/runner/work/_temp/docker-actions-toolkit-cB7XtZ/build-iidfile-2d520664a2.txt 
-    --platform linux/amd64 
-    --attest type=provenance,mode=min,inline-only=true,builder-id= 
-    --secret id=GIT_AUTH_TOKEN,src=/home/runner/work/_temp/docker-actions-toolkit-cB7XtZ/tmp-1978-917X1YS1aV1W 
-    --tag bd6e 
-    --metadata-file /home/runner/work/_temp/docker-actions-toolkit-cB7XtZ/build-metadata-74e703f218.json 
-    --push 
+/usr/bin/docker buildx build
+    --cache-from type=gha --cache-to type=gha,mode=max
+    --iidfile /home/runner/work/_temp/docker-actions-toolkit-cB7XtZ/build-iidfile-2d520664a2.txt
+    --platform linux/amd64
+    --attest type=provenance,mode=min,inline-only=true,builder-id=
+    --secret id=GIT_AUTH_TOKEN,src=/home/runner/work/_temp/docker-actions-toolkit-cB7XtZ/tmp-1978-917X1YS1aV1W
+    --tag bd6e
+    --metadata-file /home/runner/work/_temp/docker-actions-toolkit-cB7XtZ/build-metadata-74e703f218.json
+    --push
 ```
 
 *싸늘하다.* 왜 두개의 work 폴더가 다르지...?

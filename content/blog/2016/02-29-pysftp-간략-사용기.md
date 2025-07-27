@@ -1,7 +1,7 @@
 Title: pysftp 간략 사용기
 Date: 2016-02-29 21:55
 Category: Develop
-Tags: python, sftp, lib, 
+Tags: python, sftp, lib,
 Slug: pysftp-간략-사용기
 Summary: pysftp를 사용하여 파일을 가져오는 것에 대해 이야기한다.
 
@@ -35,4 +35,3 @@ Summary: pysftp를 사용하여 파일을 가져오는 것에 대해 이야기�
 이정도 주석 달다가 지웠다. 그것이 없어도 sftp를 사용하고 있다면 간단히 상요할 정도로 sftp 명령어에서 사용하는 내용들을 추가해놓았다.
 
 아직 pypi 측으로 버전업된 것이 반영되지 않아 새버전을 사용하고 싶으면 레포로 가서 작업을 진행하는 것을 추천한다.
-

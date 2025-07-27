@@ -30,4 +30,3 @@ Golang을 이용해서 웹을 간단히 띄우고, ``proc`` 를 이용해서 내
 수 있다. 물론 간단한 웹으로도 가능하다.
 
 .. _nicolargo/glances: https://github.com/nicolargo/glances
-

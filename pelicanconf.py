@@ -38,8 +38,8 @@ PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 
 # Pages template
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives', 'pages']
-PAGES_SAVE_AS = 'pages.html'
+DIRECT_TEMPLATES = ["index", "tags", "categories", "archives", "pages"]
+PAGES_SAVE_AS = "pages.html"
 
 MENU = (
     ("Blog", "/", "inbox"),
@@ -80,9 +80,7 @@ MARKDOWN = {
         "markdown.extensions.md_in_html": {},
         "markdown.extensions.tables": {},
         "markdown.extensions.admonition": {},
-        "markdown.extensions.codehilite": {
-            "css_class": "highlight"
-        },
+        "markdown.extensions.codehilite": {"css_class": "highlight"},
         "markdown.extensions.meta": {},
         "markdown.extensions.nl2br": {},
         "markdown.extensions.sane_lists": {},

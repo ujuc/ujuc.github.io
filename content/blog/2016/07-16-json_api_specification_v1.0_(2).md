@@ -47,4 +47,3 @@ JSON API를 사용하는 서버와 클르이언트에서 처리를 해야되는 
 > Note: 컨텐츠 처리 요구사항은 향후 버전에서 확장된 처리 방법과 버전 관리를 위한 미디어 타입 매개 변수를 사용할 수 있도록 존재합니다.
 
 > Note: The content negotiation requirements exist to allow future versions of this specification to use media type parameters for extension negotiation and versioning.
-

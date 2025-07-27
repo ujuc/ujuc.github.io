@@ -72,5 +72,5 @@ git-ftp로 ftp 클라이언트를!
 
 * 윈도우와 OS X에서는 테스트를 많이 안했으니 관련된 버그가 있으면 말해 줄 것.
 * 배포 도구로 만들어지지 않아서... 커밋이나 체크 아웃 같은건 알아서... 조심히...
-  
+
 .. [1] https://github.com/git-ftp/git-ftp/blob/develop/README.md#about

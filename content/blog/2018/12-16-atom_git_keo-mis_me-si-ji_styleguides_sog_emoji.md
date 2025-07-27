@@ -29,4 +29,3 @@ Summary: 블로그 글을 읽다가 커밋메시지에 이모지를 넣는 방�
 ---
 
 원본 : [Atom - Git Commit Message](https://github.com/atom/atom/blob/master/CONTRIBUTING.md#git-commit-messages)
-

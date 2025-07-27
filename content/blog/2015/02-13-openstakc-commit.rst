@@ -124,17 +124,17 @@ Individual Contributor License Agreement 결재
 변경 사항 커밋
 ~~~~~~~~~~~~~~
 
-* 제목은 50자 이내로 작성하고, 한줄 띄우고 내용을 작성해줘야된다. 
+* 제목은 50자 이내로 작성하고, 한줄 띄우고 내용을 작성해줘야된다.
 * 자세한 내용은 `Git commit messages`_ 참고.
-  
+
 .. _Git commit messages: https://wiki.openstack.org/wiki/GitCommitMessages
 
 .. code:: text
-   
+
    summary
 
    brrrrrrbrrrrrra
-   
+
    <if blueprint>
    Implements: blueprint <blueprint_name>
    <if bug>
@@ -145,14 +145,14 @@ Individual Contributor License Agreement 결재
 * 리뷰에 반려가되어서 다시 커밋을 해야되는 경우에는 ``git commit --amend``
   오셤으로 해주면된다.
 
-리뷰 등록 
+리뷰 등록
 ~~~~~~~~~
 
 * ``git reivew`` 로 하면 ``review.openstack.org`` 에 올라가 있는 것을 확인할 수
   있다.
 
 
-변경사항이 있을때 
+변경사항이 있을때
 ~~~~~~~~~~~~~~~~~
 
 * 커밋 메시지에 ``Change-Id`` 가없을때는 붙여넣기 해준 다음 ``--amend`` 로 커밋.

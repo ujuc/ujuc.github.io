@@ -43,4 +43,3 @@ JSON API는 데이터를 변경하여 JSON API 미디어 타입 (application/vnd
 # 3. 규칙 (Conventions)
 
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119) ([RFC 2119 한국어 번역](http://techhtml.github.io/rfc/RFC2119.html)).
-

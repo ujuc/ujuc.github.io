@@ -53,7 +53,7 @@ Summary: PSR-1, 기본 코딩 표준 번역
 ### 2.1. PHP 태그
 
 [MUST] PHP 코드는 긴 태그인 `<?php ?>` 또는 짧은 에코 태그 `<?= ?>` 를 사용해야 합니다. 다른 태그 변형을 사용해서는 안됩니다.
-    
+
 > PHP code MUST use the long `<?php ?>` tags or the short-echo `<?= ?>` tags; it MUST NOT use the other tag variations.
 
 ### 2.2 문자 인코딩
@@ -106,14 +106,14 @@ function foo()
 <?php
 // declaration
 function foo()
-{ 
+{
     // function body
 }
 
 // conditional declaration is *not* a side effect
 if (! function_exists('bar')) {
     function bar()
-    { 
+    {
         // function body
     }
 }

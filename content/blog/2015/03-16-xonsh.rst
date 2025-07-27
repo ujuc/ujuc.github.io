@@ -6,7 +6,7 @@ xonsh?
 :category: Develop
 :tags: python, shell
 :slug: xonsh
-:summary: Python으로 만든 Shell... 
+:summary: Python으로 만든 Shell...
 
 
 xonsh_

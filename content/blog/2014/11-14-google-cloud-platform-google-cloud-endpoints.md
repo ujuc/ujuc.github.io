@@ -13,7 +13,7 @@ Summary: Google Cloud Endpoints 간략하게 확인하기.
 
 * 2가지 방법이 존재
     * RPC의 `message` 클래스를 이용하는 방법.
-    * RPC를 통하지 않고 직접 작업하는 방법. 
+    * RPC를 통하지 않고 직접 작업하는 방법.
     * 사용은 RPC를 통하지 않는 방법이 간단하긴하다.
 
 ## 예제
@@ -50,19 +50,19 @@ Summary: Google Cloud Endpoints 간략하게 확인하기.
 * 하나의 API에 여러 클래스를 두고 싶다면 아래의 방법으로 구성
 
         :::python
-        # API를 종류별로 나눔 
+        # API를 종류별로 나눔
         test_api_v1 = endpoints.api(name='test', version='v1.0')
         test1_api_v1 = endpoints.api(name='test1', version='v1.0')
-      
+
         # API를 처리할 Class구성
         @test_api_v1.api_class(resource_name='hello')
         class Hello(remote.Service):
             pass
-  
+
         @test_api_v1.api_class(resource_name='bye')
         class Bye(remote.Service):
             pass
-  
+
         @test1_api_v1.api_class(resource_name='todo')
         class Todo(remote.Service):
             pass

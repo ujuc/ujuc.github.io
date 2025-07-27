@@ -17,4 +17,3 @@ Google Drive Stream을 사용하고 있다. 그런데 Mojave로 OS를 업로드�
     $ sudo rm -rf ~/Library/Application Support/Google/DriveFS/
 
 위의 내용처럼 작업하고 재시작하면 잘 실행된다.
-

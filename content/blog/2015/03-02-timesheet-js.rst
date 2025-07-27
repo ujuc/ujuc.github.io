@@ -8,7 +8,7 @@ timesheet.js??
 :slug: timesheet-js
 :summary: timesheet.js라는 연대표를 그려주는 JS 라이브러리
 
-놀다 보니 이것저것 보는 것들도 많다. 그런것들이라도 간단히 적어둬야지... 
+놀다 보니 이것저것 보는 것들도 많다. 그런것들이라도 간단히 적어둬야지...
 
 노트에다가 작성을 해놓고 넣어두는 것도 한 방법이지만, 봤을때 좋은거라 생각한다면
 그것으로 작업이 가능하지 않을까 하여...
@@ -36,7 +36,7 @@ HTML 태그를 쓸수 없다는게 rst의 단점...
 ------
 
 * 소스파일로 되어있는기.. haml_ 로 되어있고, sass_ 는 첨가.
-  
+
   - sass는 CSS를 더 변수, 함수, 확장 / 상속 등의 기능을 추가해서 쉽게 만들고,
     쉽게 유지보수 할 수 있도록 되어있다고 한다. 여러 종류가 있다고... [1]_
   - haml은 HTML abstraction markup language라고 하는걸 줄였다고, 작성을 해놨네.
@@ -47,5 +47,5 @@ HTML 태그를 쓸수 없다는게 rst의 단점...
   없어져가는건 안좋은 점 중 하나다.
 
 .. _haml: http://haml.info/
-.. _sass: http://sass-lang.com/                   
+.. _sass: http://sass-lang.com/
 .. [1] http://windtale.net/blog/why-i-choose-sass/

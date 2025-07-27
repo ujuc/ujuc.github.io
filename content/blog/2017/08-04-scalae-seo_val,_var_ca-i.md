@@ -16,7 +16,7 @@ class Point(var x: Int, var y: Int) {
         y = y + dy
     }
 
-    override def toString: String = 
+    override def toString: String =
         s"($x, $y)"
 }
 
@@ -69,4 +69,4 @@ scala> aVariable = 5
 aVariable: Int = 5
 ```
 
-개인적으로는 [두번째 답](https://stackoverflow.com/a/33066906/978762)이 마음에 든다. 
+개인적으로는 [두번째 답](https://stackoverflow.com/a/33066906/978762)이 마음에 든다.

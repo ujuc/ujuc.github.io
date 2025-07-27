@@ -30,7 +30,7 @@ ssh.connect('127.0.0.1', username='ujuc', password='lol')
 
 * 첫 접근시 받아오는 Host Keys가 있다. 이것을 받아서 저장하던 날려먹던 상관은 하지 않지만 있어야지 접근이 가능하다.
   - 처음 `ssh`로 접근시 무의식적으로 `yes`를 누르는 그것!!
-* 그러다보니 여기서도 그것에 관련된 내용을 사용할 수 있다. 
+* 그러다보니 여기서도 그것에 관련된 내용을 사용할 수 있다.
 * `set_missing_host_key_policy(policy)`를 이용하여 host keys를 받아 저장할 것인지 아닌지를 판단하게 되는데. 기본값은 `RejectPolicy`로 되어있으며, `yes`를 받아와야한다면 `AutoAddPolicy`를 사용하도록 한다.
 
 ```python
@@ -90,5 +90,3 @@ data = stdout.read()
 [4]:http://docs.paramiko.org/en/latest/index.html
 [5]:http://jessenoller.com/blog/2009/02/05/ssh-programming-with-paramiko-completely-different
 [6]:http://segfault.in/2010/03/paramiko-ssh-and-sftp-with-python/
-
-

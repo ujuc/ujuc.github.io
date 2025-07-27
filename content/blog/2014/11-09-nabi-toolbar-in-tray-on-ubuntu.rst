@@ -43,4 +43,3 @@ nabi가 트레이에 들어가게 된다.
 
     sudo apt-add-repository -r ppa:guran/systray-utopic
     sudo apt-get update; sudo apt-get autoremove
-

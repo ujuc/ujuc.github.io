@@ -117,12 +117,12 @@ File created -> /Users/ujuc/repos/ujuc.github.io/content/blog/2019-08-14-po-seu-
 $ cat content/blog/2019-08-14-po-seu-teu_te-seu-teu.md
 Title: 포스트 테스트
 Date: 2019-08-14 23:49:02
-Category: 
-Tags: 
+Category:
+Tags:
 Slug: po-seu-teu_te-seu-teu
 Summary:
 
-```    
+```
 
 여기까지 [code commit](https://github.com/ujuc/ujuc.github.io/commit/8e4fa75978c249192c203658dace4949a7956936).
 
