@@ -815,14 +815,14 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="c1"&gt;// declaration&lt;/span&gt;
 &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt; 
+&lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="c1"&gt;// function body&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
 &lt;span class="c1"&gt;// conditional declaration is *not* a side effect&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="nb"&gt;function_exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt; 
+    &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// function body&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -2722,7 +2722,7 @@ Any modes not specified or shapes not available use the normal mouse pointer. - 
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;compressed&lt;/code&gt; 옵션: &lt;code&gt;True&lt;/code&gt;로 설정시, gzip으로 압축하여 디스크에 저장함. 이때 CPU 인/디코딩하는데 IO를 사용을 함. &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;compressed&lt;/code&gt; 옵션: &lt;code&gt;True&lt;/code&gt;로 설정시, gzip으로 압축하여 디스크에 저장함. 이때 CPU 인/디코딩하는데 IO를 사용을 함.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="property-options"&gt;Property Options&lt;/h2&gt;
 &lt;table&gt;
