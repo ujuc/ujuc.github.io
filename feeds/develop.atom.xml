@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Develop</title><link href="https://ujuc.github.io/" rel="alternate"/><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"/><id>https://ujuc.github.io/</id><updated>2025-06-09T21:55:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Claude MCP 설정</title><link href="https://ujuc.github.io/2025/06/09/claude-mcp-%EC%84%A4%EC%A0%95/" rel="alternate"/><published>2025-06-09T21:55:00+09:00</published><updated>2025-06-09T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2025-06-09:/2025/06/09/claude-mcp-설정/</id><summary type="html">&lt;p&gt;Claude Desktop에서 MCP 설정 세번째라서 나중에 혹시나 계속 쓸가봐 남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;많이 쓸껀 아니고 gist를 이용해서 백업용으로 설정해두고 사용할 예정.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>잘 밤에 쓸데없는 생각하기 - Develop</title><link href="https://ujuc.github.io/" rel="alternate"/><link href="https://ujuc.github.io/feeds/develop.atom.xml" rel="self"/><id>https://ujuc.github.io/</id><updated>2025-07-28T08:49:00+09:00</updated><subtitle>Anythink, Everythink!</subtitle><entry><title>Python pre-commit 설정하기</title><link href="https://ujuc.github.io/2025/07/28/python-precommit-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" rel="alternate"/><published>2025-07-28T08:49:00+09:00</published><updated>2025-07-28T08:49:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2025-07-28:/2025/07/28/python-precommit-설정하기/</id><summary type="html">&lt;p&gt;블로그를 만들고 처음으로 git hook을 설정해다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;다른 파이썬 프로젝트를 보다가 &lt;a href="https://github.com/charliermarsh/ruff-pre-commit"&gt;ruff-pre-commit&lt;/a&gt;이 설정되었는 것을 확인해서 적용해보기로 하고, 블로그에 작업을 시작.&lt;/p&gt;
+&lt;h1 id="pre-commit"&gt;pre-commit&lt;/h1&gt;
+&lt;p&gt;파이썬 라이브러리인 &lt;a href="https://pre-commit.com/"&gt;pre-commit&lt;/a&gt;. ~~12년된 프로젝트인데 왜 설정안했나? 나야?~~&lt;/p&gt;
+&lt;p&gt;나는 uv를 사용하니까 다음으로 설치.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;uv&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;--dev&lt;span class="w"&gt; &lt;/span&gt;pre-commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;dev&lt;/code&gt; 그룹으로 넣은건 커밋할때 빼고는 동작하지 않아도 되는걸 굳이 캐싱까지하는 CI에 넣어야하나 싶어서 이기도함.&lt;br&gt;
+그냥 글만 쓰게 되는 환경을 구성하게되면, 수정을 해보는걸로&amp;hellip;&lt;/p&gt;
+&lt;h1 id="_1"&gt;설정&lt;/h1&gt;
+&lt;p&gt;pre-commit에서 사용하는 설정은 &lt;code&gt;.pre-commit-config.yaml&lt;/code&gt; 파일에 나열 해주면된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;repos&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;https://github.com/astral-sh/ruff-pre-commit&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;rev&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;v0.12.5&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;hooks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;ruff-check&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;args&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="nv"&gt;--fix&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;ruff-format&lt;/span&gt;
+
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;repo&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;https://github.com/pre-commit/pre-commit-hooks&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;rev&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;v5.0.0&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;hooks&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;check-merge-conflict&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;check-toml&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;check-yaml&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;detect-private-key&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;end-of-file-fixer&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;mixed-line-ending&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;pretty-format-json&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;args&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="nv"&gt;--autofix&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;trailing-whitespace&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="pre-commit-configyaml"&gt;pre-commit-config.yaml 파일 구조&lt;/h2&gt;
+&lt;p&gt;내용을 다적을려고 했는데, 어떤 방법으로 보여주는게 좋을지 생각나지 않아 URL로 대체한다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://pre-commit.com/#adding-pre-commit-plugins-to-your-project"&gt;여길 참고하자!&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="pre-commit-plugins"&gt;pre-commit plugins&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/pre-commit/pre-commit-hooks"&gt;pre-commit-hooks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/charliermarsh/ruff-pre-commit"&gt;ruff-pre-commit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="pre-commit-cli"&gt;pre-commit cli&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 설정 내역 반영&lt;/span&gt;
+pre-commit&lt;span class="w"&gt; &lt;/span&gt;install
+
+&lt;span class="c1"&gt;# 제거!&lt;/span&gt;
+pre-commit&lt;span class="w"&gt; &lt;/span&gt;uninstall
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id="_2"&gt;끝&lt;/h1&gt;
+&lt;p&gt;뭔가 더 적을까했으나, 뭔가 더 적을 만한게&amp;hellip; 없다.&lt;br&gt;
+한번만 설정해두면, 왠만해서는 변경할 일이 없으니, 한번 잘 작성해두고 두고두고 버전업만 하면서 사용하도록하자.&lt;br&gt;
+그리고 &lt;code&gt;pre-commit&lt;/code&gt;과 비슷한 동작을 하는 것들이 언어별로 있으니 Python이 아닌 다른 언어를 사용한다면, 언어에 맞는 것을 사용하기 바란다. 레포에 두가지이상 언어가 섞이면 어지럽다.&lt;/p&gt;</content><category term="Develop"/><category term="Python"/><category term="Git"/><category term="pre-commit"/><category term="Git hooks"/></entry><entry><title>Claude MCP 설정</title><link href="https://ujuc.github.io/2025/06/09/claude-mcp-%EC%84%A4%EC%A0%95/" rel="alternate"/><published>2025-06-09T21:55:00+09:00</published><updated>2025-06-09T21:55:00+09:00</updated><author><name>ujuc</name></author><id>tag:ujuc.github.io,2025-06-09:/2025/06/09/claude-mcp-설정/</id><summary type="html">&lt;p&gt;Claude Desktop에서 MCP 설정 세번째라서 나중에 혹시나 계속 쓸가봐 남겨둔다.&lt;/p&gt;</summary><content type="html">&lt;p&gt;많이 쓸껀 아니고 gist를 이용해서 백업용으로 설정해두고 사용할 예정.&lt;/p&gt;
 &lt;p&gt;25.06.09&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/upstash/context7"&gt;Context7&lt;/a&gt;&lt;/li&gt;
