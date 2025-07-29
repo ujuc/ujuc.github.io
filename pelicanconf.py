@@ -34,8 +34,8 @@ ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}/"
 ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
 
 PAGE_PATHS = ["pages"]
-PAGE_URL = "{slug}/"
-PAGE_SAVE_AS = "{slug}/index.html"
+PAGE_URL = "{category}/{slug}/"
+PAGE_SAVE_AS = "{category}/{slug}/index.html"
 
 # Pages template
 DIRECT_TEMPLATES = ["index", "tags", "categories", "archives", "pages"]
@@ -47,6 +47,8 @@ MENU = (
     ("Tags", "/tags.html", "tags"),
     ("Categories", "/categories.html", "folder-open"),
 )
+
+PAGE_MENU = (("Pages", "/pages.html", "newspaper"),)
 
 SOCIAL = (
     ("Github", "https://github.com/ujuc", "github"),
