@@ -4,21 +4,25 @@
 
 ## 환경 설정
 
-```bash
+```sh
 git submodule update --init --recursive
 pre-commit install
+
+# submodule branch 설정
+cd clean
+git checkout master
 ```
 
 ## Pelican 명령어
 
 ### 글 생성
 
-```bash
+```sh
 uv run cli post <TITLE>
 ```
 
 ### preview
 
-```bash
+```sh
 uv run cli preview
 ```
