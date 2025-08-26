@@ -30,7 +30,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 ARTICLE_PATHS = ["blog"]
-ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}/"
+ARTICLE_URL = "{date:%Y}/{date:%m}/{date:%d}/{slug}"
 ARTICLE_SAVE_AS = "{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html"
 
 PAGE_PATHS = ["pages"]
