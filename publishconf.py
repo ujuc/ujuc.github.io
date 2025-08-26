@@ -14,10 +14,11 @@ from pelicanconf import *  # noqa: F403, F401
 SITEURL = "https://ujuc.github.io"
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = "feeds/all.atom.xml"
-CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
+FEED_MAX_ITEMS = 10
 FEED_ALL_RSS = "feeds/rss.xml"
-CATEGORY_FEED_RSS = "feeds/{slug}.rss.xml"
+
+RSS_FEED_SUMMARY_ONLY = True
+FEED_APPEND_REF = True
 
 DELETE_OUTPUT_DIRECTORY = True
 
