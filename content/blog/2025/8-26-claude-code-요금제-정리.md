@@ -1,6 +1,6 @@
 Title: Claude Code 요금제 정리
 Date: 2025-08-26 19:26
-Modified: 2025-08-26 19:26
+Modified: 2025-09-01 15:19
 Category: Chat
 Tags: claude, 요금제
 Slug: claude-code-요금제-정리
@@ -22,6 +22,10 @@ Summary: Team 과 Enterprise Plan에 Claude Code 을 사용할 수 있는 새로
 | Max 20x    | $200/월              | Sonnet 4<br>Opus 4.1              | Claude: 약 800 메시지<br>Claude Code: 약 200-800 프롬프트     | **주간 한도**<br>- Sonnet: 240-480 시간<br>- Opus: 24-40 시간<br>**오토 모델 스위칭**: _50% 도달시_ |
 | Team       | $150/월/Premium seat | Sonnet 4<br>Opus 4.1              | Claude: 약 225 메시지<br>Claude Code: Claude 사용 한도에 포함 | **주간 한도**<br>- Sonnet: 50-95 시간<br>- Opus: 3-7 시간                                           |
 | Enterprise | 후불제               | Sonnet 4<br>Opus 4.1              | 어드민이 설정한 한도 만큼<br>(시간 제한 없음)                 | 토큰 요금으로 청구                                                                                  |
+
+#### 수정 내용
+
+- 25/09/01 - 오토 모델 스위칭 기능이 동작하는 모델에 대한 내용을 추가함.
 
 ---
 
@@ -64,6 +68,7 @@ Summary: Team 과 Enterprise Plan에 Claude Code 을 사용할 수 있는 새로
   - API로 변경해서 사용하면 된다.
 - 오토 모델 스위칭
   - 쾌적한 환경을 유지하고 실수로 사용량 제한에 너무 빨리 도달하는 것을 방지하기 위해 Max Plan 사용자가 특정 사용량 임계값에 도달하면 클로드 코드가 자동으로 Opus -> Sonnet으로 전환한다.
+  - 해당 기능은 `Default` 모델 선택시 자동으로 반영되어 동작하게된다. 명시적으로 모델 지정시에는 동작하지 않는다.
 
 ### 5x Pro
 
