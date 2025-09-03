@@ -1,55 +1,48 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="php,psr,prs-2,transelate">
-    <meta property="og:title" content="PSR-2: Coding Style Guide">
-    <meta name="twitter:title" content="PSR-2: Coding Style Guide">
-    <meta itemprop="name" content="PSR-2: Coding Style Guide">
-    <meta name="description" content="PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다.">
-    <meta property="og:description" content="PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다.">
-    <meta name="twitter:description" content="PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다.">
-    <meta itemprop="description" content="PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다.">
-    <meta property="og:url" content="https://ujuc.github.io/2019/02/05/psr-2:_coding_style_guide/">
-    <meta property="article:published_time" content="2019-02-05T02:02:45+09:00">
-    <meta property="article:modified_time" content="2019-03-23T16:45:00+09:00">
-    <meta property="article:tag" content="php">
-    <meta property="article:tag" content="psr">
-    <meta property="article:tag" content="prs-2">
-    <meta property="article:tag" content="transelate">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="php,psr,prs-2,transelate" name="keyward"/>
+<meta content="PSR-2: Coding Style Guide" property="og:title"/>
+<meta content="PSR-2: Coding Style Guide" name="twitter:title"/>
+<meta content="PSR-2: Coding Style Guide" itemprop="name"/>
+<meta content="PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다." name="description"/>
+<meta content="PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다." property="og:description"/>
+<meta content="PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다." name="twitter:description"/>
+<meta content="PSR-2, 코딩 스타일 가이드. PSR-1 내용에서 확장하여 정리하고 있다." itemprop="description"/>
+<meta content="https://ujuc.github.io/2019/02/05/psr-2:_coding_style_guide/" property="og:url"/>
+<meta content="2019-02-05T02:02:45+09:00" property="article:published_time"/>
+<meta content="2019-03-23T16:45:00+09:00" property="article:modified_time"/>
+<meta content="php" property="article:tag"/>
+<meta content="psr" property="article:tag"/>
+<meta content="prs-2" property="article:tag"/>
+<meta content="transelate" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/PSR-2: Coding Style Guide
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -57,74 +50,66 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2019/02/05/psr-2:_coding_style_guide/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2019", "item": "https://ujuc.github.io/2019"}, {"@type": "ListItem", "position": 3, "name": "02", "item": "https://ujuc.github.io/2019/02"}, {"@type": "ListItem", "position": 4, "name": "05", "item": "https://ujuc.github.io/2019/02/05"}, {"@type": "ListItem", "position": 5, "name": "Psr 2:_coding_style_guide", "item": "https://ujuc.github.io/2019/02/05/psr-2:_coding_style_guide"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2019/02/05/psr-2:_coding_style_guide/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "PSR-2: Coding Style Guide", "about": "번역", "datePublished": "2019-02-05 02:02"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">PSR-2: Coding Style Guide</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">PSR-2: Coding Style Guide</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         19. 02. 05.
  / <em class="fa-solid fa-arrows-rotate"></em> 19. 03. 23.       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/beonyeog.html">번역</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/php.html" class="article_tag">php</a>
-,         <a href="https://ujuc.github.io/tag/psr.html" class="article_tag">psr</a>
-,         <a href="https://ujuc.github.io/tag/prs-2.html" class="article_tag">prs-2</a>
-,         <a href="https://ujuc.github.io/tag/transelate.html" class="article_tag">transelate</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p><a href="https://www.php-fig.org/psr/psr-2/">PSR-2: Coding Style Guide - PHP-FIG</a></p>
-<hr>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/beonyeog.html">번역</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/php.html">php</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/psr.html">psr</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/prs-2.html">prs-2</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/transelate.html">transelate</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p><a href="https://www.php-fig.org/psr/psr-2/">PSR-2: Coding Style Guide - PHP-FIG</a></p>
+<hr/>
 <p>이 가이드는 기본 코딩 표준인 PSR-1을 확장하여 설명합니다.</p>
 <blockquote>
 <p>This guide extends and expands on <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md">PSR-1</a>, the basic coding standard.</p>
@@ -137,71 +122,61 @@ gtag('config', 'G-X9EBSXCBTS');
 <blockquote>
 <p>The style rules herein are derived from commonalities among the various member projects. When various authors collaborate across multiple projects, it helps to have one set of guidelines to be used among all those projects. Thus, the benefit of this guide is not in the rules themselves, but in the sharing of those rules.</p>
 </blockquote>
-<p>이 문서에서 사용하는 키워드 &ldquo;MUST&rdquo;, &ldquo;MUST NOT&rdquo;, &ldquo;REQUIRED&rdquo;, &ldquo;SHALL&rdquo;, &ldquo;SHALL NOT&rdquo;, &ldquo;SHOULD&rdquo;, &ldquo;SHOULD NOT&rdquo;, &ldquo;RECOMMENDED&rdquo;, &ldquo;MAY&rdquo;, &ldquo;OPTIONAL&rdquo;은 <a href="https://techhtml.github.io/rfc/RFC2119.html">RFC 2119</a>에서 설명하는 대로 해석한다.</p>
+<p>이 문서에서 사용하는 키워드 “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, “OPTIONAL”은 <a href="https://techhtml.github.io/rfc/RFC2119.html">RFC 2119</a>에서 설명하는 대로 해석한다.</p>
 <blockquote>
 <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”,“SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
 </blockquote>
 <h1 id="1">1. 개요</h1>
 <ul>
 <li>
-<p>[MUST] 코드는 PSR &ldquo;코딩 스타일 가이드&rdquo; [PSR-1]에 따릅니다.</p>
+<p>[MUST] 코드는 PSR “코딩 스타일 가이드” [PSR-1]에 따릅니다.</p>
 <div class="highlight"><pre><span></span><code>&gt; Code MUST follow a “coding style guide” PSR [[PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)].
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 코드는 인던트를 스페이스 4를 사용합니다. 탭을 사용하지 않습니다.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">Code</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">use</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="nv">spaces</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">indenting</span>,<span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">tabs</span>.
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST NOT] 줄 길이에 대한 엄격한 제한이 있어서는 안 됩니다; [MUST] 가벼운 제한은 반드시 120자여야 합니다; [SHOULD] 라인의 길이는 80자 이하여야 합니다.</p>
 <div class="highlight"><pre><span></span><code>&gt; There MUST NOT be a hard limit on line length; the soft limit MUST be 120 characters; lines SHOULD be 80 characters or less.
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] <code>namespace</code> 선언 다음에는 빈 줄이 하나 있어야 합니다; [MUST] <code>use</code> 선언한 블록 다음에는 빈 줄이 하나 있어야 합니다.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">There</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="k">one</span><span class="w"> </span><span class="n">blank</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the </span><span class="n n-Quoted">`namespace`</span><span class="w"> </span><span class="n">declaration</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="k">one</span><span class="w"> </span><span class="n">blank</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">block</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n n-Quoted">`use`</span><span class="w"> </span><span class="n">declarations</span><span class="p">.</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 클래스 여는 중괄호는 반드시 다음 줄로 가야 합니다; [MUST] 닫는 중괄호는 본문 뒤에 오는 다음 줄로 가야 합니다.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">body</span><span class="p">.</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 메서드를 여는 중괄호는 반드시 다음 줄로 가야 합니다; [MUST] 닫는 중괄호는 반드시 본문 맨 끝에서 다음 줄로 가야 합니다.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">methods</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">body</span><span class="p">.</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 가시성 (Visibility)는 모든 속성과 메서드에서 반드시 선언되어야 합니다; [MUST] <code>abstract</code> 와 <code>final</code> 은 가시성 이전에 반드시 선언되어야 합니다; [MUST] <code>static</code> 은 반드시 가시성 뒤에 선언되어야 합니다.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Visibility</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">declared</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">methods</span><span class="p">;</span><span class="w"> </span><span class="n n-Quoted">`abstract`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`final`</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">declared</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">visibility</span><span class="p">;</span><span class="w"> </span><span class="n n-Quoted">`static`</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">declared</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">visibility</span><span class="p">.</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 제어 구조 키워드 뒤에는 반드시 공백을 가져야 합니다; [MUST NOT] 메서드와 펑션 사용할 때는 공백을 추가해서는 안됩니다.</p>
 <div class="highlight"><pre><span></span><code>&gt; Control structure keywords MUST have one space after them; method and function calls MUST NOT.
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 제어 구조에서 여는 중괄호는 반드시 같은 줄에 있어야 합니다. [MUST] 닫는 괄호는 반드시 본문 뒤의 다음 줄로 가야 합니다.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Opening</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="n">structures</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="n">braces</span><span class="w"> </span><span class="n">MUST</span><span class="w"> </span><span class="k">go</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">body</span><span class="p">.</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST NOT] 제어 구조에서 여는 괄호 뒤에는 공백이 없어야 합니다. [MUST NOT] 제어 구조에서 닫는 괄호 전에는 공백이 없어야 합니다.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">Opening</span><span class="w"> </span><span class="nv">parentheses</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">control</span><span class="w"> </span><span class="nv">structures</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">space</span><span class="w"> </span><span class="nv">after</span><span class="w"> </span><span class="nv">them</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">closing</span><span class="w"> </span><span class="nv">parentheses</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">control</span><span class="w"> </span><span class="nv">structures</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">space</span><span class="w"> </span><span class="nv">before</span>.
 </code></pre></div>
-
 </li>
 </ul>
 <h2 id="11">1.1 예제</h2>
@@ -235,7 +210,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h1 id="2">2. 일반적인 것들</h1>
 <h2 id="21">2.1. 기본 코딩 표준</h2>
 <p>[MUST] 코드는 반드시 <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md">PSR-1</a>에 표기된 모든 규칙을 따라야 합니다.</p>
@@ -328,9 +302,8 @@ gtag('config', 'G-X9EBSXCBTS');
 
 <span class="c1">// ... additinal PHP code ...</span>
 </code></pre></div>
-
 <h1 id="4">4. 클래스, 속성, 메서드</h1>
-<p>&ldquo;class&rdquo;라는 용어는 모든 클래스, 인터페이스, 특성을 나타냅니다.</p>
+<p>“class”라는 용어는 모든 클래스, 인터페이스, 특성을 나타냅니다.</p>
 <blockquote>
 <p>The term “class” refers to all classes, interfaces, and traits.</p>
 </blockquote>
@@ -355,7 +328,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// constants, properties, methods</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>[MAY] <code>implements</code> 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한 번만 들여 써질 수 있습니다. [MUST] 그렇게 표현할 때, 목록의 첫 번째 항목은 다음 줄에 있어야 하며, [MUST] 한 줄에 하나의 인터페이스만 있어야 합니다.</p>
 <blockquote>
 <p>Lists of <code>implements</code> MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one interface per line.</p>
@@ -372,7 +344,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// constants, properties, methods</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="42">4.2. 속성</h2>
 <p>[MUST] 모든 속성에서 가시성을 반드시 선언해야 합니다.</p>
 <blockquote>
@@ -402,7 +373,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="k">public</span> <span class="nv">$foo</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="43">4.3. 메서드</h2>
 <p>[MUST] 모든 메서드는 가시성을 선언해야 합니다.</p>
 <blockquote>
@@ -431,7 +401,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="44">4.4. 메서드 인수</h2>
 <p>인수 목록에서는 [MUST NOT] 쉼표 앞에 공백이 있으면 됩니다. [MUST]  쉼표 뒤에 공백을 두어야 합니다.</p>
 <blockquote>
@@ -452,7 +421,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>[MAY] 인수 목록은 여러 줄에 걸쳐 나눌 수 있으며, 각 줄은 한 번만 들여 쓰기 할 수 있습니다. [MUST] 여러 줄로 나눠 표기할 때는 첫 번째 항목은 다음 줄에 있어야 합니다. [MUST] 한 줄에 하나의 인수만 있어야 합니다.</p>
 <blockquote>
 <p>Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.</p>
@@ -475,7 +443,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="45-abstract-final-static">4.5. abstract, final, static</h2>
 <p>[MUST] <code>abstract</code> 와 <code>final</code> 선언은 가시성 선언 앞에 와야 합니다.</p>
 <blockquote>
@@ -500,7 +467,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="46">4.6. 메서드와 펑션 사용</h2>
 <p>[MUST NOT] 메서드나 함수 호출을 할 경우, 메서드 상에 공백이 없어야 합니다. 또는 [MUST NOT] 함수 이름과 여는 괄호 뒤에는 공백이 있어서는 안 됩니다. 그리고 [MUST NOT] 닫는 괄호 앞에는 공백이 없어야 합니다. [MUST NOT] 인수 목록에는 쉼표 앞에 공백이 있어서 안되며, [MUST] 쉼표 뒤에 공백이 와야 합니다.</p>
 <blockquote>
@@ -511,8 +477,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg1</span><span class="p">);</span>
 <span class="nx">Foo</span><span class="o">::</span><span class="na">bar</span><span class="p">(</span><span class="nv">$arg2</span><span class="p">,</span> <span class="nv">$arg3</span><span class="p">);</span>
 </code></pre></div>
-
-<p>[MAY] 인수 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한번 들여 쓰일 수 있습니다. [MUST] 이렇게 할<br>
+<p>[MAY] 인수 목록은 여러 줄에 걸쳐 나눠질 수 있으며, 각 줄은 한번 들여 쓰일 수 있습니다. [MUST] 이렇게 할<br/>
  때 목록의 첫 번째 항목은 다음 줄에 있어야 합니다. [MUST] 한 줄에 하나의 인수만 있어야 합니다.</p>
 <blockquote>
 <p>Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.</p>
@@ -524,7 +489,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="nv">$muchLongerArgument</span>
 <span class="p">);</span>
 </code></pre></div>
-
 <h1 id="5">5. 제어문</h1>
 <p>제어문에 대한 일반적인 스타일 규칙은 다음과 같습니다:</p>
 <blockquote>
@@ -535,37 +499,31 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>[MUST] 제어문 키워드 다음에 스페이스가 하나 있어야 합니다.</p>
 <div class="highlight"><pre><span></span><code>&gt; There MUST be one space after the control structure keyword
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST NOT] 여는 괄호 뒤에 스페이스가 있어서는 안 됩니다.</p>
 <div class="highlight"><pre><span></span><code>&gt; There MUST NOT be a space after the opening parenthesis
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST NOT] 닫는 괄호 앞에 스페이스가 있어서는 안 됩니다.</p>
 <div class="highlight"><pre><span></span><code>&gt; There MUST NOT be a space before the closing parenthesis
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 닫는 괄호와 여는 중괄호 사이에 스페이스가 하나 있어야 합니다.</p>
 <div class="highlight"><pre><span></span><code>&gt; There MUST be one space between the closing parenthesis and the opening brace
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 제어문 내부는 반드시 한번 들여 쓰기 해야 합니다.</p>
 <div class="highlight"><pre><span></span><code>&gt; The structure body MUST be indented once
 </code></pre></div>
-
 </li>
 <li>
 <p>[MUST] 닫는 중괄호는 제어문이 끝나는 다음 줄에 있어야 합니다.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">closing</span><span class="w"> </span><span class="nv">brace</span><span class="w"> </span><span class="nv">MUST</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="nv">after</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">body</span>
 </code></pre></div>
-
 </li>
 </ul>
 <p>[MUST] 제어문 본체는 중괄호로 묶어야 합니다. 중괄호를 이용하여 제어문이 어떻게 보여줄지를 표준화하고, 개행이 되었을 때, 오류가 발생할 가능성을 줄여 줍니다.</p>
@@ -586,7 +544,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// else body;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>[SHOULD] <code>else if</code> 대신 <code>elseif</code> 키워드를 사용하여 모든 제어 키워드가 단일 단어처럼 보이도록 해야 합니다.</p>
 <blockquote>
 <p>The keyword <code>elseif</code> SHOULD be used instead of <code>else if</code> so that all control keywords look like single words.</p>
@@ -599,22 +556,21 @@ gtag('config', 'G-X9EBSXCBTS');
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
 <span class="k">switch</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-        <span class="k">echo</span> <span class="s1">&#39;First case, with a break&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">'First case, with a break'</span><span class="p">;</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-        <span class="k">echo</span> <span class="s1">&#39;Second case, which falls through&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">'Second case, which falls through'</span><span class="p">;</span>
         <span class="c1">// no break</span>
     <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
     <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
     <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
-        <span class="k">echo</span> <span class="s1">&#39;Third case, return instead of break&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">'Third case, return instead of break'</span><span class="p">;</span>
         <span class="k">return</span><span class="p">;</span>
     <span class="k">default</span><span class="o">:</span>
-        <span class="k">echo</span> <span class="s1">&#39;Default case&#39;</span><span class="p">;</span>
+        <span class="k">echo</span> <span class="s1">'Default case'</span><span class="p">;</span>
         <span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="53-while-do-while"><strong>5.3. while, do while</strong></h2>
 <p><code>while</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
@@ -625,7 +581,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// structure body</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>마찬가지로 <code>do while</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
 <p>Similarly, a <code>do while</code> statement looks like the following. Note the placement of parentheses, spaces, and braces.</p>
@@ -635,7 +590,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// structure body;</span>
 <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nv">$expr</span><span class="p">);</span>
 </code></pre></div>
-
 <h2 id="54-for"><strong>5.4. for</strong></h2>
 <p><code>for</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
@@ -646,7 +600,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// for body</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="55-foreach"><strong>5.5. foreach</strong></h2>
 <p><code>foreach</code> 문은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
@@ -657,7 +610,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// foreach body</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="56-try-catch"><strong>5.6. try, catch</strong></h2>
 <p><code>try catch</code> 블록은 다음과 같습니다. 괄호, 공백, 중괄호의 위치를 유의해서 보시길 바랍니다.</p>
 <blockquote>
@@ -672,7 +624,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// catch body</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h1 id="6-closures">6. Closures</h1>
 <p>[MUST] 클로저는 <code>function</code> 키워드 뒤에 공백과 <code>use</code> 키워드 앞뒤 공백으로 선언해야 합니다.</p>
 <blockquote>
@@ -707,7 +658,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// body</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <p>[MAY] 인수 목록과 변수 목록은 여러 행에 걸쳐 나눠질 수 있습니다. (각 행은 한번 들여 쓰기가 들어가야 합니다.) 그렇게 할때, [MUST] 목록의 첫 번째 항목은 다음 줄에 있어야 하며, [MUST] 한 줄에 하나의 인수나 변수만 있어야 합니다.</p>
 <blockquote>
 <p>Argument lists and variable lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument or variable per line.</p>
@@ -765,7 +715,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="c1">// body</span>
 <span class="p">};</span>
 </code></pre></div>
-
 <p>형식 지정 규칙은 함수 또는 메서드 호출에서 클로저가 직접 인수로 사용될 때에도 적용됩니다.</p>
 <blockquote>
 <p>Note that the formatting rules also apply when the closure is used directly in a function or method call as an argument.</p>
@@ -779,7 +728,6 @@ gtag('config', 'G-X9EBSXCBTS');
     <span class="nv">$arg3</span>
 <span class="p">);</span>
 </code></pre></div>
-
 <h1 id="7-conclusion">7. Conclusion</h1>
 <p>이 가이드에서 의도적으로 생략한 스타일과 연습해야 될 많은 요소들이 있습니다. 다음 내용들이 포함되지만 이 내용에 국한되지 않습니다:</p>
 <blockquote>
@@ -790,111 +738,84 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>전역 변수, 전역 상수 선언</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Declaration</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">global</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">global</span><span class="w"> </span><span class="n">constants</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>함수 선언</p>
 <div class="highlight"><pre><span></span><code>&gt; Declaration of functions
 </code></pre></div>
-
 </li>
 <li>
 <p>연산자와 할당자</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Operators</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">assignment</span>
 </code></pre></div>
-
 </li>
 <li>
 <p>라인간 정렬</p>
 <div class="highlight"><pre><span></span><code>&gt; Inter-line alignment
 </code></pre></div>
-
 </li>
 <li>
 <p>주석과 문서 블록</p>
 <div class="highlight"><pre><span></span><code>&gt; Comments and documentation blocks
 </code></pre></div>
-
 </li>
 <li>
 <p>클래스 이름 접두사와 접미사</p>
 <div class="highlight"><pre><span></span><code>&gt; Class name prefixes and suffixes
 </code></pre></div>
-
 </li>
 <li>
 <p>모범 사례</p>
 <div class="highlight"><pre><span></span><code>&gt; Best practices
 </code></pre></div>
-
 </li>
 </ul>
 <p>[MAY] 향후 권장 사항은 스타일이나 연습해야 될 많은 요소들을 다루기 위해 이 가이드를 수정하고 확장할 수 있습니다.</p>
 <blockquote>
 <p>Future recommendations MAY revise and extend this guide to address those or other elements of style and practice.</p>
 </blockquote></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </hr></div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

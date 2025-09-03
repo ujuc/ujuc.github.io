@@ -1,54 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="minikube,kube,docker">
-    <meta property="og:title" content="minikube로 docker를 대신해볼까?">
-    <meta name="twitter:title" content="minikube로 docker를 대신해볼까?">
-    <meta itemprop="name" content="minikube로 docker를 대신해볼까?">
-    <meta name="description" content="minikube로 docker에서 벗어날까한다.">
-    <meta property="og:description" content="minikube로 docker에서 벗어날까한다.">
-    <meta name="twitter:description" content="minikube로 docker에서 벗어날까한다.">
-    <meta itemprop="description" content="minikube로 docker에서 벗어날까한다.">
-    <meta property="og:url" content="https://ujuc.github.io/2021/10/10/minikube로-docker를-대신해볼까/">
-    <meta property="article:published_time" content="2021-10-10T09:50:45+09:00">
-    <meta property="article:modified_time" content="2021-10-10T09:50:45+09:00">
-    <meta property="article:tag" content="minikube">
-    <meta property="article:tag" content="kube">
-    <meta property="article:tag" content="docker">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="minikube,kube,docker" name="keyward"/>
+<meta content="minikube로 docker를 대신해볼까?" property="og:title"/>
+<meta content="minikube로 docker를 대신해볼까?" name="twitter:title"/>
+<meta content="minikube로 docker를 대신해볼까?" itemprop="name"/>
+<meta content="minikube로 docker에서 벗어날까한다." name="description"/>
+<meta content="minikube로 docker에서 벗어날까한다." property="og:description"/>
+<meta content="minikube로 docker에서 벗어날까한다." name="twitter:description"/>
+<meta content="minikube로 docker에서 벗어날까한다." itemprop="description"/>
+<meta content="https://ujuc.github.io/2021/10/10/minikube로-docker를-대신해볼까/" property="og:url"/>
+<meta content="2021-10-10T09:50:45+09:00" property="article:published_time"/>
+<meta content="2021-10-10T09:50:45+09:00" property="article:modified_time"/>
+<meta content="minikube" property="article:tag"/>
+<meta content="kube" property="article:tag"/>
+<meta content="docker" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/minikube로 docker를 대신해볼까?
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -56,141 +49,113 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2021/10/10/minikube로-docker를-대신해볼까/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2021", "item": "https://ujuc.github.io/2021"}, {"@type": "ListItem", "position": 3, "name": "10", "item": "https://ujuc.github.io/2021/10"}, {"@type": "ListItem", "position": 4, "name": "10", "item": "https://ujuc.github.io/2021/10/10"}, {"@type": "ListItem", "position": 5, "name": "Minikube로 docker를 대신해볼까", "item": "https://ujuc.github.io/2021/10/10/minikube로-docker를-대신해볼까"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2021/10/10/minikube로-docker를-대신해볼까/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "minikube로 docker를 대신해볼까?", "about": "Operation", "datePublished": "2021-10-10 09:50"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">minikube로 docker를 대신해볼까?</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">minikube로 docker를 대신해볼까?</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         21. 10. 10.
  / <em class="fa-solid fa-arrows-rotate"></em> 21. 10. 10.       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/minikube.html" class="article_tag">minikube</a>
-,         <a href="https://ujuc.github.io/tag/kube.html" class="article_tag">kube</a>
-,         <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>전에 docker가 유료화로 바뀐다고 한뒤 뭔가 docker 대신으로 할 것을 찾는게 유행인듯.</p>
-<p>이것저것 해보다가 minikube로 작업하는게 좋다는 소릴 들었고 세팅을 하긴했는데&hellip; <code>docker-compose</code> 항목을 어떻게 바꾸지 하다가 검색에 들어갔다.</p>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/operation.html">Operation</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/minikube.html">minikube</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/kube.html">kube</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/docker.html">docker</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p>전에 docker가 유료화로 바뀐다고 한뒤 뭔가 docker 대신으로 할 것을 찾는게 유행인듯.</p>
+<p>이것저것 해보다가 minikube로 작업하는게 좋다는 소릴 들었고 세팅을 하긴했는데… <code>docker-compose</code> 항목을 어떻게 바꾸지 하다가 검색에 들어갔다.</p>
 <p><a href="https://novemberde.github.io/post/2021/09/02/podman-minikube/">minikube로 docker와 docker-compose를 대체하기</a></p>
-<p>역시 누군가 먼저 해주셨고. 그걸보고 있는데&hellip;</p>
-<p>생각보다 <code>minikube</code>는 말그대로 <code>docker-desktop</code>이고 <code>kubectl</code>을 이용해서 작업을 해야하는구나&hellip; 명령어를 찾아서 작업할 수 있게 구성을 하고 손에 익혀나가면 좋을듯.</p>
-<p>그런데 이미지 빌드는 어떻게 하는걸까?? <code>docker-compose</code> 처럼 만들면 이미지가 추가되려나&hellip;<br>
-테스트로 진행한 airflow에 있는 <code>docker-compose</code>는 복잡해서 못하는듯.<br>
+<p>역시 누군가 먼저 해주셨고. 그걸보고 있는데…</p>
+<p>생각보다 <code>minikube</code>는 말그대로 <code>docker-desktop</code>이고 <code>kubectl</code>을 이용해서 작업을 해야하는구나… 명령어를 찾아서 작업할 수 있게 구성을 하고 손에 익혀나가면 좋을듯.</p>
+<p>그런데 이미지 빌드는 어떻게 하는걸까?? <code>docker-compose</code> 처럼 만들면 이미지가 추가되려나…<br/>
+테스트로 진행한 airflow에 있는 <code>docker-compose</code>는 복잡해서 못하는듯.<br/>
 사람이 생성을 해줘야 하는 부분이라 <code>kompose</code> 패키지를 좀더 보고 한번 정리를 해야할꺼같다.</p></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

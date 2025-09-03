@@ -1,55 +1,48 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="network,config,networkd,netplan,ubuntu">
-    <meta property="og:title" content="Ubuntu 17.10에서부터 기본으로 사용되는 Netplan">
-    <meta name="twitter:title" content="Ubuntu 17.10에서부터 기본으로 사용되는 Netplan">
-    <meta itemprop="name" content="Ubuntu 17.10에서부터 기본으로 사용되는 Netplan">
-    <meta name="description" content="Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?">
-    <meta property="og:description" content="Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?">
-    <meta name="twitter:description" content="Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?">
-    <meta itemprop="description" content="Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?">
-    <meta property="og:url" content="https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/">
-    <meta property="article:published_time" content="2017-11-18T00:54:20+09:00">
-    <meta property="article:tag" content="network">
-    <meta property="article:tag" content="config">
-    <meta property="article:tag" content="networkd">
-    <meta property="article:tag" content="netplan">
-    <meta property="article:tag" content="ubuntu">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="network,config,networkd,netplan,ubuntu" name="keyward"/>
+<meta content="Ubuntu 17.10에서부터 기본으로 사용되는 Netplan" property="og:title"/>
+<meta content="Ubuntu 17.10에서부터 기본으로 사용되는 Netplan" name="twitter:title"/>
+<meta content="Ubuntu 17.10에서부터 기본으로 사용되는 Netplan" itemprop="name"/>
+<meta content="Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?" name="description"/>
+<meta content="Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?" property="og:description"/>
+<meta content="Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?" name="twitter:description"/>
+<meta content="Ubuntu 17.10 부터 ifupdown 패키지가 사용되지 않는다는 소식. Only Ubuntu. 그래서 Netplan은 뭘까?" itemprop="description"/>
+<meta content="https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/" property="og:url"/>
+<meta content="2017-11-18T00:54:20+09:00" property="article:published_time"/>
+<meta content="network" property="article:tag"/>
+<meta content="config" property="article:tag"/>
+<meta content="networkd" property="article:tag"/>
+<meta content="netplan" property="article:tag"/>
+<meta content="ubuntu" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/Ubuntu 17.10에서부터 기본으로 사용되는 Netplan
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -57,74 +50,66 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2017", "item": "https://ujuc.github.io/2017"}, {"@type": "ListItem", "position": 3, "name": "11", "item": "https://ujuc.github.io/2017/11"}, {"@type": "ListItem", "position": 4, "name": "18", "item": "https://ujuc.github.io/2017/11/18"}, {"@type": "ListItem", "position": 5, "name": "Ubuntu_17.10e seo bu teo_gibon eu ro_sa yong doe neun_netplan", "item": "https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2017/11/18/ubuntu_17.10e-seo-bu-teo_gibon-eu-ro_sa-yong-doe-neun_netplan/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "Ubuntu 17.10에서부터 기본으로 사용되는 Netplan", "about": "Operation", "datePublished": "2017-11-18 00:54"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">Ubuntu 17.10에서부터 기본으로 사용되는 Netplan</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">Ubuntu 17.10에서부터 기본으로 사용되는 Netplan</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         17. 11. 18.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/network.html" class="article_tag">network</a>
-,         <a href="https://ujuc.github.io/tag/config.html" class="article_tag">config</a>
-,         <a href="https://ujuc.github.io/tag/networkd.html" class="article_tag">networkd</a>
-,         <a href="https://ujuc.github.io/tag/netplan.html" class="article_tag">netplan</a>
-,         <a href="https://ujuc.github.io/tag/ubuntu.html" class="article_tag">ubuntu</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>처음에는 리눅스에서 IP를 Static하게 구성하기위해 <a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819">검색한 페이지</a>에서 독특한 문법을 확인했다.</p>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/operation.html">Operation</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/network.html">network</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/config.html">config</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/networkd.html">networkd</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/netplan.html">netplan</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/ubuntu.html">ubuntu</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p>처음에는 리눅스에서 IP를 Static하게 구성하기위해 <a href="https://askubuntu.com/questions/967695/ubuntu-17-10-will-not-accept-static-ip/967819#967819">검색한 페이지</a>에서 독특한 문법을 확인했다.</p>
 <p>문의 내용은 17.10에서는 <code>/etc/network/interfaces</code>에 작성해둔 설정이 안먹힌다는 것이었다. 그러면서 답변으로 달린것이 <a href="https://askubuntu.com/a/967819/126675">요내용</a>이다.</p>
 <p><code>ifupdown</code> 패키지를 더이상 사용하지 않고, Ubuntu 17.10 Server에서 부터는 <code>netplan</code>이라는 것을 사용하여 <code>systemd-networkd</code>를 제어한다고 명시하고 있다.</p>
 <p>사용법이 묘하다. 혹시나해서 <a href="https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes">Ubuntu 17.10 release note</a>를 보러갔지. 그랬더니 <strong>Update Packages</strong>에 당당히 Linux kernel 다음에 한 꼭지로 있다. 내용은 다음 과 같다.</p>
@@ -134,10 +119,10 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>The <code>networkctl</code> command is also available for users to see a summary of the network devices. <code>networkctl</code> status will display the current global state of IP addresses on the system; and <code>networkctl status $device</code> can display the details specific to a network device.</p>
 <p>For more information about netplan, please refer to the manual page using the <code>man 5 netplan</code> command.</p>
 </blockquote>
-<p>그리고 찾다보니 이건 Ubuntu에서만 사용하는 프로젝트로 보이는데&hellip; 다른 배포판에서는 사용될 확률이 높지는 않으니&hellip; 이것참&hellip;</p>
+<p>그리고 찾다보니 이건 Ubuntu에서만 사용하는 프로젝트로 보이는데… 다른 배포판에서는 사용될 확률이 높지는 않으니… 이것참…</p>
 <p>아래 내용은 정리해둔거고, 나중에 man 페이지나 정리해서 올려둬야겠다.</p>
 <h2 id="netplan">Netplan</h2>
-<p><img alt="Design overview" src="https://wiki.ubuntu.com/Netplan/Design?action=AttachFile&amp;do=get&amp;target=design_overview.png"></p>
+<p><img alt="Design overview" src="https://wiki.ubuntu.com/Netplan/Design?action=AttachFile&amp;do=get&amp;target=design_overview.png"/></p>
 <h3 id="netplan_1">Netplan 소개</h3>
 <ul>
 <li>YAML 구성 파일을 사용하여 네트워크 구성을 한다.</li>
@@ -162,7 +147,6 @@ gtag('config', 'G-X9EBSXCBTS');
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$dev</span><span class="w"> </span>up
 $<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$dev</span><span class="w"> </span>down
 </code></pre></div>
-
 <ul>
 <li>고정 아이피 설정 <em>/etc/netplan/a.yaml</em></li>
 </ul>
@@ -175,7 +159,6 @@ $<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><
 <span class="w">                </span><span class="o">-</span><span class="w"> </span><span class="mf">10.10</span><span class="o">.</span><span class="mf">10.2</span><span class="o">/</span><span class="mi">24</span>
 <span class="w">            </span><span class="n">dhcp4</span><span class="o">:</span><span class="w"> </span><span class="n">no</span>
 </code></pre></div>
-
 <h3 id="netplan_2">Netplan을 사용하고 싶지 않을 경우</h3>
 <p>Ubuntu 서버 설치 이미지로 부팅시 grub (<code>e</code> 버튼을 클릭해서 수정하거나, F6을 눌러 bootspash로 들어가서)에서 preseeding 설정으로 <code>netcfg/do_not_use_netplan=true</code> 명령을 추가해줍니다.</p>
 <h2 id="_3">참고 페이지</h2>
@@ -195,68 +178,48 @@ $<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><
 </li>
 <li><a href="https://insights.ubuntu.com/2017/07/10/netplan-by-default-in-17-10/">Netplan by default in 17.10</a></li>
 </ul></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

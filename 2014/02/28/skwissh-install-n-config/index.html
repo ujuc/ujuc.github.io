@@ -1,55 +1,48 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="python,monitoring,ssh,django">
-    <meta property="og:title" content="SkwiSSH 설치 및 구성">
-    <meta name="twitter:title" content="SkwiSSH 설치 및 구성">
-    <meta itemprop="name" content="SkwiSSH 설치 및 구성">
-    <meta name="description" content="Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다.">
-    <meta property="og:description" content="Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다.">
-    <meta name="twitter:description" content="Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다.">
-    <meta itemprop="description" content="Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다.">
-    <meta property="og:url" content="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/">
-    <meta property="article:published_time" content="2014-02-28T21:46:00+09:00">
-    <meta property="article:modified_time" content="2016-03-03T22:08:00+09:00">
-    <meta property="article:tag" content="python">
-    <meta property="article:tag" content="monitoring">
-    <meta property="article:tag" content="ssh">
-    <meta property="article:tag" content="django">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="python,monitoring,ssh,django" name="keyward"/>
+<meta content="SkwiSSH 설치 및 구성" property="og:title"/>
+<meta content="SkwiSSH 설치 및 구성" name="twitter:title"/>
+<meta content="SkwiSSH 설치 및 구성" itemprop="name"/>
+<meta content="Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다." name="description"/>
+<meta content="Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다." property="og:description"/>
+<meta content="Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다." name="twitter:description"/>
+<meta content="Django App으로 ssh를 이용하여 서버 모니터링이 가능하다. 개발이 멈춘지 너무 오래됐다." itemprop="description"/>
+<meta content="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/" property="og:url"/>
+<meta content="2014-02-28T21:46:00+09:00" property="article:published_time"/>
+<meta content="2016-03-03T22:08:00+09:00" property="article:modified_time"/>
+<meta content="python" property="article:tag"/>
+<meta content="monitoring" property="article:tag"/>
+<meta content="ssh" property="article:tag"/>
+<meta content="django" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/SkwiSSH 설치 및 구성
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -57,73 +50,65 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2014/02/28/skwissh-install-n-config/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2014", "item": "https://ujuc.github.io/2014"}, {"@type": "ListItem", "position": 3, "name": "02", "item": "https://ujuc.github.io/2014/02"}, {"@type": "ListItem", "position": 4, "name": "28", "item": "https://ujuc.github.io/2014/02/28"}, {"@type": "ListItem", "position": 5, "name": "Skwissh install n config", "item": "https://ujuc.github.io/2014/02/28/skwissh-install-n-config"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2014/02/28/skwissh-install-n-config/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "SkwiSSH 설치 및 구성", "about": "Operation", "datePublished": "2014-02-28 21:46"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">SkwiSSH 설치 및 구성</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">SkwiSSH 설치 및 구성</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         14. 02. 28.
  / <em class="fa-solid fa-arrows-rotate"></em> 16. 03. 03.       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
-,         <a href="https://ujuc.github.io/tag/monitoring.html" class="article_tag">monitoring</a>
-,         <a href="https://ujuc.github.io/tag/ssh.html" class="article_tag">ssh</a>
-,         <a href="https://ujuc.github.io/tag/django.html" class="article_tag">django</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><h1 id="skwissh"><a href="https://github.com/rsaikali/django-skwissh">SkwiSSH</a></h1>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/operation.html">Operation</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/python.html">python</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/monitoring.html">monitoring</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/ssh.html">ssh</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/django.html">django</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><h1 id="skwissh"><a href="https://github.com/rsaikali/django-skwissh">SkwiSSH</a></h1>
 <p>오늘 Facebook에 공유가된 Monitoring Tool. Django에서 App으로 돌릴 수 있고, 참 깔ㄹ끔하기에 회사에서 서버 볼 때 사용할까하여 구성해봤다.</p>
 <p>코드로는 Django v1.5와  v1.5.1을 지원한다고 작성해놨는데 <code>setup.py</code>를 사용하여 구성하게 되면 Django v1.6을 설치하라며 에러문구가 발생한다.</p>
 <p>그리고 외부 서버를 추가하기 위해서 <code>server_ip:22</code>를 입력해줘야지 외부 서버에 ssh로 접근하여 값들을 읽어오게 된다.</p>
@@ -146,41 +131,36 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python-pip
 </code></pre></div>
-
 <h3 id="_2">패키지 설치</h3>
 <h4 id="django">Django 설치</h4>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>pip<span class="w"> </span>isntall<span class="w"> </span>Django
 </code></pre></div>
-
 <h4 id="django-skwissh">Django-skwissh 설치</h4>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>buid-essential<span class="w"> </span>python-dev
 $<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/rsaikali/django-skwissh.git
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>django-skwissh
 $<span class="w"> </span>sudo<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
 </code></pre></div>
-
 <h3 id="django_1">Django 설정</h3>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>django-admin.py<span class="w"> </span>startproject<span class="w"> </span>mysite
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>mysite
 $<span class="w"> </span>vi<span class="w"> </span>mysql/settings.py
 
 <span class="nv">INSTALL_APPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>
-<span class="w">  </span><span class="s1">&#39;kronos&#39;</span>,
-<span class="w">  </span><span class="s1">&#39;skwissh&#39;</span>,
+<span class="w">  </span><span class="s1">'kronos'</span>,
+<span class="w">  </span><span class="s1">'skwissh'</span>,
 <span class="o">)</span>
 
 $<span class="w"> </span>vi<span class="w"> </span>mysite/urls.py
 
 <span class="c1"># Skwissh</span>
-url<span class="o">(</span><span class="s1">&#39;skwissh&#39;</span>,<span class="w"> </span>include<span class="o">(</span><span class="s1">&#39;skwissh.urls&#39;</span><span class="o">))</span>,
+url<span class="o">(</span><span class="s1">'skwissh'</span>,<span class="w"> </span>include<span class="o">(</span><span class="s1">'skwissh.urls'</span><span class="o">))</span>,
 </code></pre></div>
-
 <ul>
 <li>데이터 베이스 설정</li>
 </ul>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>manage.p<span class="w"> </span>syncdb
 </code></pre></div>
-
 <ul>
 <li>Skwissh 테스트 설치</li>
 <li>이작업을 하면 crontab에 테스크가 등록된다.</li>
@@ -189,80 +169,58 @@ url<span class="o">(</span><span class="s1">&#39;skwissh&#39;</span>,<span class
 <span class="c1"># crontab에 등록되었는지 확인</span>
 $<span class="w"> </span>crontab<span class="w"> </span>-l
 </code></pre></div>
-
 <ul>
 <li>Django 서버 작동</li>
 </ul>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>python<span class="w"> </span>mange.py<span class="w"> </span>runserver<span class="w"> </span><span class="m">0</span>.0.0.0:8000
 </code></pre></div>
-
 <h2 id="_3">참고 페이지</h2>
 <ul>
 <li><a href="https://github.com/rsaikali/django-skwissh">Github</a></li>
 <li><a href="http://rsaikali.github.io/django-skwissh/">Gitpage</a></li>
 </ul></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

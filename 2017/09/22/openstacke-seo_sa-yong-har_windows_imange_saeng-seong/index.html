@@ -1,54 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="openstack,nova,image,windows">
-    <meta property="og:title" content="OpenStack에서 사용할 Windows imange 생성">
-    <meta name="twitter:title" content="OpenStack에서 사용할 Windows imange 생성">
-    <meta itemprop="name" content="OpenStack에서 사용할 Windows imange 생성">
-    <meta name="description" content="OpenStack에서 사용할 Windows 이미지를 생성해보자.">
-    <meta property="og:description" content="OpenStack에서 사용할 Windows 이미지를 생성해보자.">
-    <meta name="twitter:description" content="OpenStack에서 사용할 Windows 이미지를 생성해보자.">
-    <meta itemprop="description" content="OpenStack에서 사용할 Windows 이미지를 생성해보자.">
-    <meta property="og:url" content="https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/">
-    <meta property="article:published_time" content="2017-09-22T17:18:08+09:00">
-    <meta property="article:tag" content="openstack">
-    <meta property="article:tag" content="nova">
-    <meta property="article:tag" content="image">
-    <meta property="article:tag" content="windows">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="openstack,nova,image,windows" name="keyward"/>
+<meta content="OpenStack에서 사용할 Windows imange 생성" property="og:title"/>
+<meta content="OpenStack에서 사용할 Windows imange 생성" name="twitter:title"/>
+<meta content="OpenStack에서 사용할 Windows imange 생성" itemprop="name"/>
+<meta content="OpenStack에서 사용할 Windows 이미지를 생성해보자." name="description"/>
+<meta content="OpenStack에서 사용할 Windows 이미지를 생성해보자." property="og:description"/>
+<meta content="OpenStack에서 사용할 Windows 이미지를 생성해보자." name="twitter:description"/>
+<meta content="OpenStack에서 사용할 Windows 이미지를 생성해보자." itemprop="description"/>
+<meta content="https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/" property="og:url"/>
+<meta content="2017-09-22T17:18:08+09:00" property="article:published_time"/>
+<meta content="openstack" property="article:tag"/>
+<meta content="nova" property="article:tag"/>
+<meta content="image" property="article:tag"/>
+<meta content="windows" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/OpenStack에서 사용할 Windows imange 생성
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -56,73 +49,65 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2017", "item": "https://ujuc.github.io/2017"}, {"@type": "ListItem", "position": 3, "name": "09", "item": "https://ujuc.github.io/2017/09"}, {"@type": "ListItem", "position": 4, "name": "22", "item": "https://ujuc.github.io/2017/09/22"}, {"@type": "ListItem", "position": 5, "name": "Openstacke seo_sa yong har_windows_imange_saeng seong", "item": "https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2017/09/22/openstacke-seo_sa-yong-har_windows_imange_saeng-seong/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "OpenStack에서 사용할 Windows imange 생성", "about": "Operation", "datePublished": "2017-09-22 17:18"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">OpenStack에서 사용할 Windows imange 생성</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">OpenStack에서 사용할 Windows imange 생성</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         17. 09. 22.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
-,         <a href="https://ujuc.github.io/tag/nova.html" class="article_tag">nova</a>
-,         <a href="https://ujuc.github.io/tag/image.html" class="article_tag">image</a>
-,         <a href="https://ujuc.github.io/tag/windows.html" class="article_tag">windows</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><h2 id="_1">기본 준비사항</h2>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/operation.html">Operation</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/openstack.html">openstack</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/nova.html">nova</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/image.html">image</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/windows.html">windows</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><h2 id="_1">기본 준비사항</h2>
 <ul>
 <li>Ubuntu 16.04</li>
 <li><a href="https://fedoraproject.org/wiki/Windows_Virtio_Drivers">VirtIO driver</a></li>
@@ -132,7 +117,6 @@ gtag('config', 'G-X9EBSXCBTS');
 <h2 id="virt-manager">virt-manager 설치</h2>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>kvm<span class="w"> </span>virt-manager
 </code></pre></div>
-
 <ul>
 <li>virt-manager 설치 후에 VM을 생성한다.</li>
 <li>이미지는 <code>qcow2</code>로 만들어야된다.</li>
@@ -141,8 +125,8 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li>가장 중요하다.</li>
 <li>이 작업을 하지 않으면, OS 부팅할때 에러가 뜬다.</li>
-<li><strong>주의</strong><br>
-    - 하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.<br>
+<li><strong>주의</strong><br/>
+    - 하드로 사용할 이미지를 VirtIO로 설정해두면 설치는 모르겠는데 부팅이 되지 않는다.<br/>
     - 이것만큼은 바꾸지말고, 스토리지를 하나 더 만들어서 붙이면서 VirtIO로 설정해주고 드라이버를 설치해주도록 한다.</li>
 </ul>
 <h2 id="cloudbase-init">CloudBase init 설치</h2>
@@ -157,83 +141,62 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <h2 id="glance-imange">Glance에 Imange 업로드</h2>
 <ul>
-<li>Hoizon<br>
-    - <strong>주의</strong> : <code>/var/tmp</code> 에다가 올린다. 그러니 <code>/var</code> 폴더에 용량이 있는지 확인하고 올리도록.<br>
+<li>Hoizon<br/>
+    - <strong>주의</strong> : <code>/var/tmp</code> 에다가 올린다. 그러니 <code>/var</code> 폴더에 용량이 있는지 확인하고 올리도록.<br/>
     - 편하게 올리자.</li>
-<li>CLI<br>
+<li>CLI<br/>
     - <code>--disk-format</code>은 기본값이 <code>raw</code>이다. 그렇기에 <code>qcow2</code>로 변경해주고 올려야된다.</li>
 </ul>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>openstack<span class="w"> </span>image<span class="w"> </span>create<span class="w"> </span>--disk-format<span class="w"> </span>qcow2<span class="w"> </span>--file<span class="w"> </span>windows.qcow2<span class="w"> </span>windows
 </code></pre></div>
-
 <h2 id="_3">참고</h2>
 <ul>
 <li>http://gotocloud.co.kr/?p=1575</li>
 <li>http://heavenkong.blogspot.kr/2014/04/create-windows7-virtual-machine-image.html</li>
 <li>https://fedoraproject.org/wiki/Windows_Virtio_Drivers</li>
 </ul></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

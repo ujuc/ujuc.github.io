@@ -1,52 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="zsh,operation">
-    <meta property="og:title" content="Stderr check in zshell">
-    <meta name="twitter:title" content="Stderr check in zshell">
-    <meta itemprop="name" content="Stderr check in zshell">
-    <meta name="description" content="zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고">
-    <meta property="og:description" content="zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고">
-    <meta name="twitter:description" content="zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고">
-    <meta itemprop="description" content="zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고">
-    <meta property="og:url" content="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/">
-    <meta property="article:published_time" content="2016-01-27T00:57:00+09:00">
-    <meta property="article:tag" content="zsh">
-    <meta property="article:tag" content="operation">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="zsh,operation" name="keyward"/>
+<meta content="Stderr check in zshell" property="og:title"/>
+<meta content="Stderr check in zshell" name="twitter:title"/>
+<meta content="Stderr check in zshell" itemprop="name"/>
+<meta content="zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고" name="description"/>
+<meta content="zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고" property="og:description"/>
+<meta content="zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고" name="twitter:description"/>
+<meta content="zsh 가상환경 설정한대서 계속 걸쩍지근하게 나오는 에러 문구를 없애고" itemprop="description"/>
+<meta content="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" property="og:url"/>
+<meta content="2016-01-27T00:57:00+09:00" property="article:published_time"/>
+<meta content="zsh" property="article:tag"/>
+<meta content="operation" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/Stderr check in zshell
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -54,77 +47,69 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2016", "item": "https://ujuc.github.io/2016"}, {"@type": "ListItem", "position": 3, "name": "01", "item": "https://ujuc.github.io/2016/01"}, {"@type": "ListItem", "position": 4, "name": "27", "item": "https://ujuc.github.io/2016/01/27"}, {"@type": "ListItem", "position": 5, "name": "Stderr check in zshell", "item": "https://ujuc.github.io/2016/01/27/stderr-check-in-zshell"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2016/01/27/stderr-check-in-zshell/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "Stderr check in zshell", "about": "Develop", "datePublished": "2016-01-27 00:57"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">Stderr check in zshell</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">Stderr check in zshell</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         16. 01. 27.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/zsh.html" class="article_tag">zsh</a>
-,         <a href="https://ujuc.github.io/tag/operation.html" class="article_tag">operation</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>싶었다.</p>
-<p>Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서<br>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/develop.html">Develop</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/zsh.html">zsh</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/operation.html">operation</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p>싶었다.</p>
+<p>Shell로 zsh를 사용중이다. 얼마전부터 개발 환경 설정을 해놓고 이곳저곳에서<br/>
 쓰다보니 해당 개발 환경이 꾸며져있지 않으면, 없다고 해당 문구가 출력된다.</p>
-<p><img alt="stderr" src="https://ujuc.github.io/img/2016/01-27/shell_error.png"></p>
+<p><img alt="stderr" src="https://ujuc.github.io/img/2016/01-27/shell_error.png"/></p>
 <p>은근히 신경쓰인다. 만약 두개를 설정해놨는데 둘다 없다면 줄이 두 줄로 늘어난다.</p>
 <p>그래서 찾았다. 찾다보니 내가 무심코 사용했던 내용에대해 조금더 볼 기회가 생긴듯.</p>
-<p>우선 Shell에서 기본 I/O 스트림을 통해서 나오는 값들에대해서 다음 숫자로 제어할<br>
+<p>우선 Shell에서 기본 I/O 스트림을 통해서 나오는 값들에대해서 다음 숫자로 제어할<br/>
 수 있다.</p>
 <table>
 <thead>
@@ -152,116 +137,90 @@ gtag('config', 'G-X9EBSXCBTS');
 </tr>
 </tbody>
 </table>
-<p>간단히 하자.<br>
+<p>간단히 하자.<br/>
 go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout으로 설치된 경로가 나올 것이다.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>go
 </code></pre></div>
-
-<p><img alt="ex1_1" src="https://ujuc.github.io/img/2016/01-27/ex1_1.png"></p>
+<p><img alt="ex1_1" src="https://ujuc.github.io/img/2016/01-27/ex1_1.png"/></p>
 <p>요놈을 안나오게 해보자.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>go<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
-
-<p><img alt="ex1_2" src="https://ujuc.github.io/img/2016/01-27/ex1_2.png"></p>
+<p><img alt="ex1_2" src="https://ujuc.github.io/img/2016/01-27/ex1_2.png"/></p>
 <p>오~~~</p>
-<p>stderr 값이 나오면 안나오게 할려고 보면&hellip; 이건 설치가 되어있으니&hellip; 없는걸로&hellip;</p>
+<p>stderr 값이 나오면 안나오게 할려고 보면… 이건 설치가 되어있으니… 없는걸로…</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>rbenv
 </code></pre></div>
-
-<p><img alt="ex2_1" src="https://ujuc.github.io/img/2016/01-27/ex2_1.png"></p>
-<p>이걸 위와 같이 <code>1</code> 을 사용하면&hellip;</p>
+<p><img alt="ex2_1" src="https://ujuc.github.io/img/2016/01-27/ex2_1.png"/></p>
+<p>이걸 위와 같이 <code>1</code> 을 사용하면…</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>which<span class="w"> </span>rbenv<span class="w"> </span><span class="m">1</span>&gt;<span class="w"> </span>/dev/null
 </code></pre></div>
-
-<p><img alt="ex2_2" src="https://ujuc.github.io/img/2016/01-27/ex2_2.png"></p>
-<p>음&hellip; 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. <code>1</code>로 출력되는걸 막으라했더니&hellip;</p>
+<p><img alt="ex2_2" src="https://ujuc.github.io/img/2016/01-27/ex2_2.png"/></p>
+<p>음… 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. <code>1</code>로 출력되는걸 막으라했더니…</p>
 <p>그럼 Python에서는 어디로 나올까?</p>
 <div class="highlight"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="k">as</span> <span class="nn">sub</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">check_rbenv</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>
-    <span class="s1">&#39;which rbenv&#39;</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span>
+    <span class="s1">'which rbenv'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
 <span class="n">In</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">check_rbenv</span><span class="p">)</span>
-<span class="n">Out</span><span class="p">:</span> <span class="p">(</span><span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">:</span> <span class="p">(</span><span class="sa">b</span><span class="s1">''</span><span class="p">,</span> <span class="sa">b</span><span class="s1">''</span><span class="p">)</span>
 </code></pre></div>
-
-<p>음?? 암것도 안나온다&hellip;</p>
+<p>음?? 암것도 안나온다…</p>
 <div class="highlight"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
-<span class="n">In</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;which rbenv&#39;</span><span class="p">)</span>
+<span class="n">In</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">'which rbenv'</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span> <span class="mi">256</span>
 </code></pre></div>
-
-<p>출력값이 256이라니&hellip; 혹시나 해서 봤더니 8bit밀란다. 저걸 밀면 1이 떨어지는데&hellip;<br>
-리눅스에서 반환값이 1이면 비정상 종료일때로 알고 있다. 고로니 저넘은 제대로<br>
-실행된 아이가 아니라는 말씀&hellip;</p>
-<p>그럼 <code>which</code> 명령어를 사용하여 명령어를 실행하게 되면, 정상종료면 위치를<br>
-말해줄꺼고 비정상 종료면 stdout으로 없다는 메시지를 남기고 비정상 종료를<br>
+<p>출력값이 256이라니… 혹시나 해서 봤더니 8bit밀란다. 저걸 밀면 1이 떨어지는데…<br/>
+리눅스에서 반환값이 1이면 비정상 종료일때로 알고 있다. 고로니 저넘은 제대로<br/>
+실행된 아이가 아니라는 말씀…</p>
+<p>그럼 <code>which</code> 명령어를 사용하여 명령어를 실행하게 되면, 정상종료면 위치를<br/>
+말해줄꺼고 비정상 종료면 stdout으로 없다는 메시지를 남기고 비정상 종료를<br/>
 시킨다고 해석하면 될듯.</p>
-<p>결국 내가 하고 싶은데로 안되는거네&hellip; 이런!</p>
-<p>다른 방법으로 찾아야지 뭐 별수 있나&hellip; 그래도 이번에 건진건 저렇게 숫자를<br>
-사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거&hellip; 그정도면 1시간동안<br>
+<p>결국 내가 하고 싶은데로 안되는거네… 이런!</p>
+<p>다른 방법으로 찾아야지 뭐 별수 있나… 그래도 이번에 건진건 저렇게 숫자를<br/>
+사용해서 내가 원하는 값들만 넣을 수 있는 방법을 찾았다는거… 그정도면 1시간동안<br/>
 작업한 것에 대한 내용은 될듯.</p></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

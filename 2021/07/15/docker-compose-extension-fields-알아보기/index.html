@@ -1,54 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="docker,compose,config file">
-    <meta property="og:title" content="docker-compose Extension fields 알아보기">
-    <meta name="twitter:title" content="docker-compose Extension fields 알아보기">
-    <meta itemprop="name" content="docker-compose Extension fields 알아보기">
-    <meta name="description" content="docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자.">
-    <meta property="og:description" content="docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자.">
-    <meta name="twitter:description" content="docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자.">
-    <meta itemprop="description" content="docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자.">
-    <meta property="og:url" content="https://ujuc.github.io/2021/07/15/docker-compose-extension-fields-알아보기/">
-    <meta property="article:published_time" content="2021-07-15T15:53:42+09:00">
-    <meta property="article:modified_time" content="2021-07-15T15:53:42+09:00">
-    <meta property="article:tag" content="docker">
-    <meta property="article:tag" content="compose">
-    <meta property="article:tag" content="config file">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="docker,compose,config file" name="keyward"/>
+<meta content="docker-compose Extension fields 알아보기" property="og:title"/>
+<meta content="docker-compose Extension fields 알아보기" name="twitter:title"/>
+<meta content="docker-compose Extension fields 알아보기" itemprop="name"/>
+<meta content="docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자." name="description"/>
+<meta content="docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자." property="og:description"/>
+<meta content="docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자." name="twitter:description"/>
+<meta content="docker-compose 파일에서 새로운 문구를 발견했다. 정리나 하자." itemprop="description"/>
+<meta content="https://ujuc.github.io/2021/07/15/docker-compose-extension-fields-알아보기/" property="og:url"/>
+<meta content="2021-07-15T15:53:42+09:00" property="article:published_time"/>
+<meta content="2021-07-15T15:53:42+09:00" property="article:modified_time"/>
+<meta content="docker" property="article:tag"/>
+<meta content="compose" property="article:tag"/>
+<meta content="config file" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/docker-compose Extension fields 알아보기
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -56,74 +49,66 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2021/07/15/docker-compose-extension-fields-알아보기/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2021", "item": "https://ujuc.github.io/2021"}, {"@type": "ListItem", "position": 3, "name": "07", "item": "https://ujuc.github.io/2021/07"}, {"@type": "ListItem", "position": 4, "name": "15", "item": "https://ujuc.github.io/2021/07/15"}, {"@type": "ListItem", "position": 5, "name": "Docker compose extension fields 알아보기", "item": "https://ujuc.github.io/2021/07/15/docker-compose-extension-fields-알아보기"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2021/07/15/docker-compose-extension-fields-알아보기/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "docker-compose Extension fields 알아보기", "about": "Develop", "datePublished": "2021-07-15 15:53"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">docker-compose Extension fields 알아보기</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">docker-compose Extension fields 알아보기</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         21. 07. 15.
  / <em class="fa-solid fa-arrows-rotate"></em> 21. 07. 15.       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/docker.html" class="article_tag">docker</a>
-,         <a href="https://ujuc.github.io/tag/compose.html" class="article_tag">compose</a>
-,         <a href="https://ujuc.github.io/tag/config-file.html" class="article_tag">config file</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>Airflow를 볼까해서 docker-compose 파일을 받아서 봤는데&hellip; 뭔가 새로운 문구가 발견되었다.<br>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/develop.html">Develop</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/docker.html">docker</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/compose.html">compose</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/config-file.html">config file</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p>Airflow를 볼까해서 docker-compose 파일을 받아서 봤는데… 뭔가 새로운 문구가 발견되었다.<br/>
 다음과같은 부분임.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">'3'</span>
 <span class="nt">x-airflow-common</span><span class="p">:</span>
 <span class="w">  </span><span class="nl">&amp;airflow-common</span>
 <span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${AIRFLOW_IMAGE_NAME:-apache/airflow:2.1.2}</span>
@@ -133,16 +118,16 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="w">    </span><span class="nt">AIRFLOW__CORE__SQL_ALCHEMY_CONN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgresql+psycopg2://airflow:airflow@postgres/airflow</span>
 <span class="w">    </span><span class="nt">AIRFLOW__CELERY__RESULT_BACKEND</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db+postgresql://airflow:airflow@postgres/airflow</span>
 <span class="w">    </span><span class="nt">AIRFLOW__CELERY__BROKER_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis://:@redis:6379/0</span>
-<span class="w">    </span><span class="nt">AIRFLOW__CORE__FERNET_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
-<span class="w">    </span><span class="nt">AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
-<span class="w">    </span><span class="nt">AIRFLOW__CORE__LOAD_EXAMPLES</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
-<span class="w">    </span><span class="nt">AIRFLOW__API__AUTH_BACKEND</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;airflow.api.auth.backend.basic_auth&#39;</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CORE__FERNET_KEY</span><span class="p">:</span><span class="w"> </span><span class="s">''</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION</span><span class="p">:</span><span class="w"> </span><span class="s">'true'</span>
+<span class="w">    </span><span class="nt">AIRFLOW__CORE__LOAD_EXAMPLES</span><span class="p">:</span><span class="w"> </span><span class="s">'true'</span>
+<span class="w">    </span><span class="nt">AIRFLOW__API__AUTH_BACKEND</span><span class="p">:</span><span class="w"> </span><span class="s">'airflow.api.auth.backend.basic_auth'</span>
 <span class="w">    </span><span class="nt">_PIP_ADDITIONAL_REQUIREMENTS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_PIP_ADDITIONAL_REQUIREMENTS:-}</span>
 <span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./dags:/opt/airflow/dags</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./logs:/opt/airflow/logs</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./plugins:/opt/airflow/plugins</span>
-<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}&quot;</span>
+<span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="s">"${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"</span>
 <span class="w">  </span><span class="nt">depends_on</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">redis</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
@@ -156,19 +141,18 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*airflow-common-env</span>
-<span class="w">      </span><span class="nt">_AIRFLOW_DB_UPGRADE</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
-<span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_CREATE</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+<span class="w">      </span><span class="nt">_AIRFLOW_DB_UPGRADE</span><span class="p">:</span><span class="w"> </span><span class="s">'true'</span>
+<span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_CREATE</span><span class="p">:</span><span class="w"> </span><span class="s">'true'</span>
 <span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_AIRFLOW_WWW_USER_USERNAME:-airflow}</span>
 <span class="w">      </span><span class="nt">_AIRFLOW_WWW_USER_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${_AIRFLOW_WWW_USER_PASSWORD:-airflow}</span>
 
 <span class="nn">...</span>
 </code></pre></div>
-
-<p>보면 알겠지만 분명 version 3버전인데 <code>&amp;</code>, <code>*</code> 를 이용해서 이미지와 환경설정 구문을 반복해서 사용할 수 있도록 구성해놓은 것으로 판단되고 있다.<br>
-그래서 문서를 찾다보니 맨밑에&hellip; <code>Extension fields</code> 라고 되어있는 부분이 존재한다. 문서를 끝까지 안봐서 몰랐던듯.</p>
+<p>보면 알겠지만 분명 version 3버전인데 <code>&amp;</code>, <code>*</code> 를 이용해서 이미지와 환경설정 구문을 반복해서 사용할 수 있도록 구성해놓은 것으로 판단되고 있다.<br/>
+그래서 문서를 찾다보니 맨밑에… <code>Extension fields</code> 라고 되어있는 부분이 존재한다. 문서를 끝까지 안봐서 몰랐던듯.</p>
 <p>뭔가 써봤으면 알것는데. 이번기회에 정리하고 사용해봐야할듯. 메뉴얼 문서 번역이 될듯함.</p>
-<p>추가로 YAML 스팩을 봐야할듯. YAML 스팩에 있는 내용을 그대로 사용할 수 있다고 해놓은걸보니&hellip; YAML에 대한 내용을 제대로 안다면 쉽게 구성할 수 있을 것으로 보여진다.</p>
-<hr>
+<p>추가로 YAML 스팩을 봐야할듯. YAML 스팩에 있는 내용을 그대로 사용할 수 있다고 해놓은걸보니… YAML에 대한 내용을 제대로 안다면 쉽게 구성할 수 있을 것으로 보여진다.</p>
+<hr/>
 <h2 id="extension-fields">Extension fields</h2>
 <ul>
 <li><a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#extension-fields">공식 문서</a></li>
@@ -181,12 +165,12 @@ gtag('config', 'G-X9EBSXCBTS');
 <p>Note: 포멧 버전 3.7과 2.4에서는 <code>service</code>, <code>volume</code>, <code>network</code>, <code>config</code>, <code>secret</code> 정의시 사용이 가능합니다.</p>
 </blockquote>
 <p>다음과 같이 YAML anchor 기능을 통해서 리소스 정의에 삽입이 가능합니다.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"3.9"</span>
 <span class="nt">x-logging</span><span class="p">:</span>
 <span class="w">  </span><span class="nl">&amp;default-logging</span>
 <span class="w">  </span><span class="nt">options</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;12m&#39;</span>
-<span class="w">    </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;5&#39;</span>
+<span class="w">    </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s">'12m'</span>
+<span class="w">    </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s">'5'</span>
 <span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json-file</span>
 
 <span class="nt">services</span><span class="p">:</span>
@@ -197,9 +181,8 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:latest</span>
 <span class="w">    </span><span class="nt">logging</span><span class="p">:</span><span class="w"> </span><span class="nv">*default-logging</span>
 </code></pre></div>
-
 <p>YAML 머지 형식을 이용하여 원하는 값을 추가할 수 있습니다.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"3.9"</span>
 <span class="nt">x-volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="nl">&amp;default-volume</span>
 <span class="w">  </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foobar-storage</span>
@@ -207,7 +190,7 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">web</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp/web:latest</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;vol1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;vol2&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;vol3&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"vol1"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"vol2"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"vol3"</span><span class="p p-Indicator">]</span>
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">vol1</span><span class="p">:</span><span class="w"> </span><span class="nv">*default-volume</span>
 <span class="w">  </span><span class="nt">vol2</span><span class="p">:</span>
@@ -218,68 +201,48 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume-local</span>
 </code></pre></div></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </hr></div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

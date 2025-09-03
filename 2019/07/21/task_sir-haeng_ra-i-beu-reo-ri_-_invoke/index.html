@@ -1,56 +1,49 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="invoke,devops,paramiko,command,cli,task">
-    <meta property="og:title" content="Task 실행 라이브러리 - Invoke">
-    <meta name="twitter:title" content="Task 실행 라이브러리 - Invoke">
-    <meta itemprop="name" content="Task 실행 라이브러리 - Invoke">
-    <meta name="description" content="Task 실행 라이브러리인 Invoke를 확인한다.">
-    <meta property="og:description" content="Task 실행 라이브러리인 Invoke를 확인한다.">
-    <meta name="twitter:description" content="Task 실행 라이브러리인 Invoke를 확인한다.">
-    <meta itemprop="description" content="Task 실행 라이브러리인 Invoke를 확인한다.">
-    <meta property="og:url" content="https://ujuc.github.io/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/">
-    <meta property="article:published_time" content="2019-07-21T16:20:49+09:00">
-    <meta property="article:tag" content="invoke">
-    <meta property="article:tag" content="devops">
-    <meta property="article:tag" content="paramiko">
-    <meta property="article:tag" content="command">
-    <meta property="article:tag" content="cli">
-    <meta property="article:tag" content="task">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="invoke,devops,paramiko,command,cli,task" name="keyward"/>
+<meta content="Task 실행 라이브러리 - Invoke" property="og:title"/>
+<meta content="Task 실행 라이브러리 - Invoke" name="twitter:title"/>
+<meta content="Task 실행 라이브러리 - Invoke" itemprop="name"/>
+<meta content="Task 실행 라이브러리인 Invoke를 확인한다." name="description"/>
+<meta content="Task 실행 라이브러리인 Invoke를 확인한다." property="og:description"/>
+<meta content="Task 실행 라이브러리인 Invoke를 확인한다." name="twitter:description"/>
+<meta content="Task 실행 라이브러리인 Invoke를 확인한다." itemprop="description"/>
+<meta content="https://ujuc.github.io/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/" property="og:url"/>
+<meta content="2019-07-21T16:20:49+09:00" property="article:published_time"/>
+<meta content="invoke" property="article:tag"/>
+<meta content="devops" property="article:tag"/>
+<meta content="paramiko" property="article:tag"/>
+<meta content="command" property="article:tag"/>
+<meta content="cli" property="article:tag"/>
+<meta content="task" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/Task 실행 라이브러리 - Invoke
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -58,93 +51,84 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2019", "item": "https://ujuc.github.io/2019"}, {"@type": "ListItem", "position": 3, "name": "07", "item": "https://ujuc.github.io/2019/07"}, {"@type": "ListItem", "position": 4, "name": "21", "item": "https://ujuc.github.io/2019/07/21"}, {"@type": "ListItem", "position": 5, "name": "Task_sir haeng_ra i beu reo ri_ _invoke", "item": "https://ujuc.github.io/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2019/07/21/task_sir-haeng_ra-i-beu-reo-ri_-_invoke/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "Task 실행 라이브러리 - Invoke", "about": "Develop", "datePublished": "2019-07-21 16:20"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">Task 실행 라이브러리 - Invoke</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">Task 실행 라이브러리 - Invoke</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         19. 07. 21.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/invoke.html" class="article_tag">invoke</a>
-,         <a href="https://ujuc.github.io/tag/devops.html" class="article_tag">devops</a>
-,         <a href="https://ujuc.github.io/tag/paramiko.html" class="article_tag">paramiko</a>
-,         <a href="https://ujuc.github.io/tag/command.html" class="article_tag">command</a>
-,         <a href="https://ujuc.github.io/tag/cli.html" class="article_tag">cli</a>
-,         <a href="https://ujuc.github.io/tag/task.html" class="article_tag">task</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>Pelican 에서 Makefile를 이용해서 빌드하고 있었는데.<br>
-4.0.0 버전으로 올라오면서 <code>Invoke</code> 라이브러리를 사용하게 되었음을 확인.<br>
-그러니 사용해봐야징&hellip;</p>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/develop.html">Develop</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/invoke.html">invoke</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/devops.html">devops</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/paramiko.html">paramiko</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/command.html">command</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/cli.html">cli</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/task.html">task</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p>Pelican 에서 Makefile를 이용해서 빌드하고 있었는데.<br/>
+4.0.0 버전으로 올라오면서 <code>Invoke</code> 라이브러리를 사용하게 되었음을 확인.<br/>
+그러니 사용해봐야징…</p>
 <p><a href="https://www.pyinvoke.org/">Home</a></p>
 <h2 id="what-is-invoke">What is Invoke?</h2>
 <p>Python (2.7, 3.4+) 태스크 실행 툴이자 라이브러리</p>
 <ul>
-<li><code>[tasks.py](http://tasks.py)</code> 파일에 태스크를 명시하여 진행<br>
+<li><code>[tasks.py](http://tasks.py)</code> 파일에 태스크를 명시하여 진행<br/>
     - 물론 <code>tasks/*.py</code> 형식으로 만들어서 정의할 수도 있다.</li>
 <li>
 <p>GNU Make 처럼, 명령을 나열할 수 있다.</p>
 <div class="highlight"><pre><span></span><code>    $ invoke clean build
 </code></pre></div>
-
 </li>
 <li>
 <p>REPL 쪽에서 사용이 가능하다.</p>
 </li>
-<li>Unix CLI 와 같이 flag-based style 명령어를 만들 수 있다.<br>
+<li>Unix CLI 와 같이 flag-based style 명령어를 만들 수 있다.<br/>
     - <code>--ab</code> , <code>-d</code> 이런거</li>
 </ul>
 <h2 id="_1">사용?</h2>
@@ -156,36 +140,36 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
 <span class="n">BASE_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
-<span class="n">OUTPUT_PATH</span> <span class="o">=</span> <span class="n">BASE_PATH</span> <span class="o">/</span> <span class="s2">&quot;output&quot;</span>
-<span class="n">CONF_FILE</span> <span class="o">=</span> <span class="n">BASE_PATH</span> <span class="o">/</span> <span class="s2">&quot;pelicanconf.py&quot;</span>
-<span class="n">PUBLISH_CONF_FILE</span> <span class="o">=</span> <span class="n">BASE_PATH</span> <span class="o">/</span> <span class="s2">&quot;publishconf.py&quot;</span>
+<span class="n">OUTPUT_PATH</span> <span class="o">=</span> <span class="n">BASE_PATH</span> <span class="o">/</span> <span class="s2">"output"</span>
+<span class="n">CONF_FILE</span> <span class="o">=</span> <span class="n">BASE_PATH</span> <span class="o">/</span> <span class="s2">"pelicanconf.py"</span>
+<span class="n">PUBLISH_CONF_FILE</span> <span class="o">=</span> <span class="n">BASE_PATH</span> <span class="o">/</span> <span class="s2">"publishconf.py"</span>
 
 
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Start preview web page server&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{</span><span class="n">CONF_FILE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -l&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Start preview web page server"""</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pelican -s </span><span class="si">{</span><span class="n">CONF_FILE</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pelican -l"</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Clean up this dir&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rm -rf </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/__pycache__ </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/cache&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Clean up this dir"""</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"rm -rf </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/__pycache__ </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/cache"</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">(</span><span class="n">post</span><span class="o">=</span><span class="p">[</span><span class="n">clean</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">pub</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Publish to github main page&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pelican -s </span><span class="si">{</span><span class="n">PUBLISH_CONF_FILE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ghp-import -m &#39;Generate Pelican site&#39; -b master </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;git push origin master&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Publish to github main page"""</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pelican -s </span><span class="si">{</span><span class="n">PUBLISH_CONF_FILE</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ghp-import -m 'Generate Pelican site' -b master </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"git push origin master"</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">fix</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Execute black&quot;&quot;&quot;</span>
-    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;black -l 80 .&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">"""Execute black"""</span>
+    <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"black -l 80 ."</span><span class="p">)</span>
 
 
 <span class="n">ns</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">()</span>
@@ -194,7 +178,6 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="n">ns</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">pub</span><span class="p">)</span>
 <span class="n">ns</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">fix</span><span class="p">)</span>
 </code></pre></div>
-
 <h3 id="_2">실행</h3>
 <ul>
 <li>목록은 이렇게</li>
@@ -208,7 +191,6 @@ Available<span class="w"> </span>tasks:
 <span class="w">  </span>preview<span class="w">   </span>Start<span class="w"> </span>preview<span class="w"> </span>web<span class="w"> </span>page<span class="w"> </span>server
 <span class="w">  </span>pub<span class="w">       </span>Publish<span class="w"> </span>to<span class="w"> </span>github<span class="w"> </span>main<span class="w"> </span>page
 </code></pre></div>
-
 <ul>
 <li>help는 이렇게</li>
 </ul>
@@ -222,71 +204,50 @@ Docstring:
 Options:
 <span class="w">  </span>none
 </code></pre></div>
-
-<hr>
+<hr/>
 <p>자세한건 <a href="http://docs.pyinvoke.org/en/stable">Docs</a> 에서 읽어가면서 확인</p></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </hr></div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

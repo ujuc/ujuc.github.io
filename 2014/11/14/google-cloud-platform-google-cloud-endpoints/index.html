@@ -1,56 +1,49 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="google,cloud,gcp,google cloud platform,google cloud endpoint">
-    <meta property="og:title" content="[Google Cloud Platfrom] Google Cloud Endpoints">
-    <meta name="twitter:title" content="[Google Cloud Platfrom] Google Cloud Endpoints">
-    <meta itemprop="name" content="[Google Cloud Platfrom] Google Cloud Endpoints">
-    <meta name="description" content="Google Cloud Endpoints 간략하게 확인하기.">
-    <meta property="og:description" content="Google Cloud Endpoints 간략하게 확인하기.">
-    <meta name="twitter:description" content="Google Cloud Endpoints 간략하게 확인하기.">
-    <meta itemprop="description" content="Google Cloud Endpoints 간략하게 확인하기.">
-    <meta property="og:url" content="https://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/">
-    <meta property="article:published_time" content="2014-11-14T15:05:00+09:00">
-    <meta property="article:modified_time" content="2016-03-01T00:38:00+09:00">
-    <meta property="article:tag" content="google">
-    <meta property="article:tag" content="cloud">
-    <meta property="article:tag" content="gcp">
-    <meta property="article:tag" content="google cloud platform">
-    <meta property="article:tag" content="google cloud endpoint">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="google,cloud,gcp,google cloud platform,google cloud endpoint" name="keyward"/>
+<meta content="[Google Cloud Platfrom] Google Cloud Endpoints" property="og:title"/>
+<meta content="[Google Cloud Platfrom] Google Cloud Endpoints" name="twitter:title"/>
+<meta content="[Google Cloud Platfrom] Google Cloud Endpoints" itemprop="name"/>
+<meta content="Google Cloud Endpoints 간략하게 확인하기." name="description"/>
+<meta content="Google Cloud Endpoints 간략하게 확인하기." property="og:description"/>
+<meta content="Google Cloud Endpoints 간략하게 확인하기." name="twitter:description"/>
+<meta content="Google Cloud Endpoints 간략하게 확인하기." itemprop="description"/>
+<meta content="https://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/" property="og:url"/>
+<meta content="2014-11-14T15:05:00+09:00" property="article:published_time"/>
+<meta content="2016-03-01T00:38:00+09:00" property="article:modified_time"/>
+<meta content="google" property="article:tag"/>
+<meta content="cloud" property="article:tag"/>
+<meta content="gcp" property="article:tag"/>
+<meta content="google cloud platform" property="article:tag"/>
+<meta content="google cloud endpoint" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/[Google Cloud Platfrom] Google Cloud Endpoints
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -58,93 +51,85 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2014", "item": "https://ujuc.github.io/2014"}, {"@type": "ListItem", "position": 3, "name": "11", "item": "https://ujuc.github.io/2014/11"}, {"@type": "ListItem", "position": 4, "name": "14", "item": "https://ujuc.github.io/2014/11/14"}, {"@type": "ListItem", "position": 5, "name": "Google cloud platform google cloud endpoints", "item": "https://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2014/11/14/google-cloud-platform-google-cloud-endpoints/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "[Google Cloud Platfrom] Google Cloud Endpoints", "about": "Develop", "datePublished": "2014-11-14 15:05"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">[Google Cloud Platfrom] Google Cloud Endpoints</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">[Google Cloud Platfrom] Google Cloud Endpoints</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         14. 11. 14.
  / <em class="fa-solid fa-arrows-rotate"></em> 16. 03. 01.       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/google.html" class="article_tag">google</a>
-,         <a href="https://ujuc.github.io/tag/cloud.html" class="article_tag">cloud</a>
-,         <a href="https://ujuc.github.io/tag/gcp.html" class="article_tag">gcp</a>
-,         <a href="https://ujuc.github.io/tag/google-cloud-platform.html" class="article_tag">google cloud platform</a>
-,         <a href="https://ujuc.github.io/tag/google-cloud-endpoint.html" class="article_tag">google cloud endpoint</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><ul>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/develop.html">Develop</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/google.html">google</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/cloud.html">cloud</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/gcp.html">gcp</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/google-cloud-platform.html">google cloud platform</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/google-cloud-endpoint.html">google cloud endpoint</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><ul>
 <li>App의 API를 구성하기 쉽도록 제공하는 서비스</li>
 <li>Remote Procedure Call(RPC)를 이용하여 작업을 진행할 수 있도록 구성.</li>
 </ul>
 <h2 id="_1">사용</h2>
 <ul>
-<li>2가지 방법이 존재<br>
-    * RPC의 <code>message</code> 클래스를 이용하는 방법.<br>
-    * RPC를 통하지 않고 직접 작업하는 방법.<br>
+<li>2가지 방법이 존재<br/>
+    * RPC의 <code>message</code> 클래스를 이용하는 방법.<br/>
+    * RPC를 통하지 않고 직접 작업하는 방법.<br/>
     * 사용은 RPC를 통하지 않는 방법이 간단하긴하다.</li>
 </ul>
 <h2 id="_2">예제</h2>
 <ol>
-<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-helloendpoints-python">appengine-endpoints-helloendpoints-python</a><br>
-    * RPC <code>message</code> 클래스를 이용하도록 되어있음.<br>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-helloendpoints-python">appengine-endpoints-helloendpoints-python</a><br/>
+    * RPC <code>message</code> 클래스를 이용하도록 되어있음.<br/>
     * 랩핑하는 것에 대한 내용이 포함.</li>
-<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-angular-todos-python">appengine-endpoints-angular-todos-python</a><br>
-    * RPC <code>message</code> 클래스를 사용하지 않음.<br>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-angular-todos-python">appengine-endpoints-angular-todos-python</a><br/>
+    * RPC <code>message</code> 클래스를 사용하지 않음.<br/>
     * Angular.js를 이용하도록 예제가 되어있어서 확인해보면 될듯함.</li>
-<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-tictactoe-python">appengine-endpoints-tictactoe-python</a><br>
+<li><a href="https://github.com/GoogleCloudPlatform/appengine-endpoints-tictactoe-python">appengine-endpoints-tictactoe-python</a><br/>
     * 게임 예제로 보이나 아직 테스트해보지 않음.</li>
 </ol>
 <h2 id="_3">필요 패키지</h2>
@@ -167,35 +152,33 @@ gtag('config', 'G-X9EBSXCBTS');
     # main.py
     application = endpoints.api_server([App1_api, App2_api, ...])
 </code></pre></div>
-
 </li>
 <li>
 <p>하나의 API에 여러 클래스를 두고 싶다면 아래의 방법으로 구성</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="o">::</span><span class="err">:</span><span class="n">python</span>
 <span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">API를</span><span class="w"> </span><span class="n">종류별로</span><span class="w"> </span><span class="n">나눔</span>
-<span class="w">    </span><span class="n">test_api_v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoints</span><span class="p">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="n">test1_api_v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoints</span><span class="p">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test1&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;v1.0&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">test_api_v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoints</span><span class="p">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'test'</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s1">'v1.0'</span><span class="p">)</span>
+<span class="w">    </span><span class="n">test1_api_v1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoints</span><span class="p">.</span><span class="n">api</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'test1'</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="o">=</span><span class="s1">'v1.0'</span><span class="p">)</span>
 
 <span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">API를</span><span class="w"> </span><span class="n">처리할</span><span class="w"> </span><span class="n">Class구성</span>
-<span class="w">    </span><span class="nv">@test_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">@test_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">'hello'</span><span class="p">)</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="n">Hello</span><span class="p">(</span><span class="n">remote</span><span class="p">.</span><span class="n">Service</span><span class="p">)</span><span class="err">:</span>
 <span class="w">        </span><span class="n">pass</span>
 
-<span class="w">    </span><span class="nv">@test_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;bye&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">@test_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">'bye'</span><span class="p">)</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="n">Bye</span><span class="p">(</span><span class="n">remote</span><span class="p">.</span><span class="n">Service</span><span class="p">)</span><span class="err">:</span>
 <span class="w">        </span><span class="n">pass</span>
 
-<span class="w">    </span><span class="nv">@test1_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;todo&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">@test1_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">'todo'</span><span class="p">)</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="n">Todo</span><span class="p">(</span><span class="n">remote</span><span class="p">.</span><span class="n">Service</span><span class="p">)</span><span class="err">:</span>
 <span class="w">        </span><span class="n">pass</span>
 
-<span class="w">    </span><span class="nv">@test1_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">&#39;plan&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">@test1_api_v1</span><span class="p">.</span><span class="n">api_class</span><span class="p">(</span><span class="n">resource_name</span><span class="o">=</span><span class="s1">'plan'</span><span class="p">)</span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="k">Plan</span><span class="p">(</span><span class="n">remote</span><span class="p">.</span><span class="n">Service</span><span class="p">)</span><span class="err">:</span>
 <span class="w">        </span><span class="n">pass</span>
 
 <span class="w">    </span><span class="n">application</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">endpoints</span><span class="p">.</span><span class="n">api_server</span><span class="p">(</span><span class="o">[</span><span class="n">Hello, Bye, Todo, Plan</span><span class="o">]</span><span class="p">)</span>
 </code></pre></div>
-
 </li>
 </ul>
 <h2 id="api_1">API 등록확인</h2>
@@ -206,79 +189,58 @@ gtag('config', 'G-X9EBSXCBTS');
 <span class="w">    </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="mi">1</span><span class="o">-</span><span class="n">dot</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">id</span><span class="p">.</span><span class="n">appspot</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">_ah</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">test</span><span class="nv">@v1</span><span class="mf">.0</span><span class="w"> </span><span class="n">Saved</span>
 <span class="w">    </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="mi">1</span><span class="o">-</span><span class="n">dot</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">id</span><span class="p">.</span><span class="n">appspot</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">_ah</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">test1</span><span class="nv">@v1</span><span class="mf">.0</span><span class="w"> </span><span class="n">Saved</span>
 </code></pre></div>
-
 </li>
 </ul>
 <div class="footnote">
-<hr>
+<hr/>
 <ol>
 <li id="fn:1">
-<p>http://endpoints-proto-datastore.appspot.com/&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>http://endpoints-proto-datastore.appspot.com/ <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </hr></div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

@@ -1,54 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="openstack,documents,spec,architecture design guide">
-    <meta property="og:title" content="Spec Architecture Design Guide Restructure">
-    <meta name="twitter:title" content="Spec Architecture Design Guide Restructure">
-    <meta itemprop="name" content="Spec Architecture Design Guide Restructure">
-    <meta name="description" content="이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다.">
-    <meta property="og:description" content="이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다.">
-    <meta name="twitter:description" content="이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다.">
-    <meta itemprop="description" content="이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다.">
-    <meta property="og:url" content="https://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure (번역)/">
-    <meta property="article:published_time" content="2016-05-29T13:43:00+09:00">
-    <meta property="article:tag" content="openstack">
-    <meta property="article:tag" content="documents">
-    <meta property="article:tag" content="spec">
-    <meta property="article:tag" content="architecture design guide">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="openstack,documents,spec,architecture design guide" name="keyward"/>
+<meta content="Spec Architecture Design Guide Restructure" property="og:title"/>
+<meta content="Spec Architecture Design Guide Restructure" name="twitter:title"/>
+<meta content="Spec Architecture Design Guide Restructure" itemprop="name"/>
+<meta content="이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다." name="description"/>
+<meta content="이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다." property="og:description"/>
+<meta content="이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다." name="twitter:description"/>
+<meta content="이번 스펙문서로 Architecture Design Guide를 새롭게 구축하는 것에 대해서 올라왔다." itemprop="description"/>
+<meta content="https://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure (번역)/" property="og:url"/>
+<meta content="2016-05-29T13:43:00+09:00" property="article:published_time"/>
+<meta content="openstack" property="article:tag"/>
+<meta content="documents" property="article:tag"/>
+<meta content="spec" property="article:tag"/>
+<meta content="architecture design guide" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/Spec Architecture Design Guide Restructure
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -56,75 +49,67 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure (번역)/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2016", "item": "https://ujuc.github.io/2016"}, {"@type": "ListItem", "position": 3, "name": "05", "item": "https://ujuc.github.io/2016/05"}, {"@type": "ListItem", "position": 4, "name": "29", "item": "https://ujuc.github.io/2016/05/29"}, {"@type": "ListItem", "position": 5, "name": "Spec architecture design guide restructure (번역)", "item": "https://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure (번역)"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2016/05/29/spec-architecture-design-guide-restructure (번역)/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "Spec Architecture Design Guide Restructure", "about": "번역", "datePublished": "2016-05-29 13:43"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">Spec Architecture Design Guide Restructure</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">Spec Architecture Design Guide Restructure</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         16. 05. 29.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/beonyeog.html">번역</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/openstack.html" class="article_tag">openstack</a>
-,         <a href="https://ujuc.github.io/tag/documents.html" class="article_tag">documents</a>
-,         <a href="https://ujuc.github.io/tag/spec.html" class="article_tag">spec</a>
-,         <a href="https://ujuc.github.io/tag/architecture-design-guide.html" class="article_tag">architecture design guide</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p><a href="http://docs.openstack.org/arch-design/">Architecture Design Guide</a>가 새롭게 작성이되려나보다. 그것에 대한 스펙문서 번역이다.</p>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/beonyeog.html">번역</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/openstack.html">openstack</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/documents.html">documents</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/spec.html">spec</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/architecture-design-guide.html">architecture design guide</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p><a href="http://docs.openstack.org/arch-design/">Architecture Design Guide</a>가 새롭게 작성이되려나보다. 그것에 대한 스펙문서 번역이다.</p>
 <p>원문: <a href="http://specs.openstack.org/openstack/docs-specs/specs/newton/arch-guide-restructure.html">Architecture Design Guide Restructure</a></p>
-<hr>
+<hr/>
 <h2 id="_1">문제점 설명</h2>
 <p>지금의 Architecture Design Giude는 주로 사용 사례를 중심으로 구성되어 있습니다. 그러나 OpenStack 클라우드를 설계함에 있어 여러 사용 사례에서 기능들이 조합되어 사용되는 경우가 있습니다.</p>
 <p>사용자가 모든 요구 사항을 고려할 수 있는 OpenStack 클라우드 아키텍처를 결정하는 것을 돕기위한 정보로 재구성하는 것이 필요합니다. 개발중이거나 단계적으로 반영을 하거나, 실제 서비스하고 있는 환경에서 OpenStack을 설계할때 필요한 정보를 추가해야합니다. 이번 제안은 클라우드에대한 아키텍처 컨셉과 다양한 OpenStack 프로젝트 추상화에 대한 더 상세한 구조를 개발하는 것입니다. 이것을 통해서 쉽게 가이드를 유지하고 업데이트 할 수 있습니다.</p>
@@ -194,70 +179,50 @@ gtag('config', 'G-X9EBSXCBTS');
 </ol>
 </li>
 </ol>
-<hr>
-<p>뭐 이정도까지&hellip; 더해봤자&hellip; 의미가 없다&hellip;</p></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<hr/>
+<p>뭐 이정도까지… 더해봤자… 의미가 없다…</p></div>
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </hr></div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

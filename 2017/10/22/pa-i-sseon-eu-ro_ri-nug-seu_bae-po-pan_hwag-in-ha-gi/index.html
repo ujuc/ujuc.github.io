@@ -1,54 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="python,linux,distribution,lib">
-    <meta property="og:title" content="파이썬으로 리눅스 배포판 확인하기">
-    <meta name="twitter:title" content="파이썬으로 리눅스 배포판 확인하기">
-    <meta itemprop="name" content="파이썬으로 리눅스 배포판 확인하기">
-    <meta name="description" content="파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가 발생했다!">
-    <meta property="og:description" content="파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가 발생했다!">
-    <meta name="twitter:description" content="파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가 발생했다!">
-    <meta itemprop="description" content="파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가 발생했다!">
-    <meta property="og:url" content="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/">
-    <meta property="article:published_time" content="2017-10-22T18:21:49+09:00">
-    <meta property="article:tag" content="python">
-    <meta property="article:tag" content="linux">
-    <meta property="article:tag" content="distribution">
-    <meta property="article:tag" content="lib">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="python,linux,distribution,lib" name="keyward"/>
+<meta content="파이썬으로 리눅스 배포판 확인하기" property="og:title"/>
+<meta content="파이썬으로 리눅스 배포판 확인하기" name="twitter:title"/>
+<meta content="파이썬으로 리눅스 배포판 확인하기" itemprop="name"/>
+<meta content="파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가 발생했다!" name="description"/>
+<meta content="파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가 발생했다!" property="og:description"/>
+<meta content="파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가 발생했다!" name="twitter:description"/>
+<meta content="파이썬으로 cmd 툴을 만들다보니 리눅스 배포판을 구분해야되는 경우가 발생했다!" itemprop="description"/>
+<meta content="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" property="og:url"/>
+<meta content="2017-10-22T18:21:49+09:00" property="article:published_time"/>
+<meta content="python" property="article:tag"/>
+<meta content="linux" property="article:tag"/>
+<meta content="distribution" property="article:tag"/>
+<meta content="lib" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/파이썬으로 리눅스 배포판 확인하기
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -56,87 +49,79 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2017", "item": "https://ujuc.github.io/2017"}, {"@type": "ListItem", "position": 3, "name": "10", "item": "https://ujuc.github.io/2017/10"}, {"@type": "ListItem", "position": 4, "name": "22", "item": "https://ujuc.github.io/2017/10/22"}, {"@type": "ListItem", "position": 5, "name": "Pa i sseon eu ro_ri nug seu_bae po pan_hwag in ha gi", "item": "https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2017/10/22/pa-i-sseon-eu-ro_ri-nug-seu_bae-po-pan_hwag-in-ha-gi/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "파이썬으로 리눅스 배포판 확인하기", "about": "Develop", "datePublished": "2017-10-22 18:21"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">파이썬으로 리눅스 배포판 확인하기</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">파이썬으로 리눅스 배포판 확인하기</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         17. 10. 22.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
-,         <a href="https://ujuc.github.io/tag/linux.html" class="article_tag">linux</a>
-,         <a href="https://ujuc.github.io/tag/distribution.html" class="article_tag">distribution</a>
-,         <a href="https://ujuc.github.io/tag/lib.html" class="article_tag">lib</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>요즘 코딩을 안하니&hellip; 머리가 멍해져가는지라.<br>
-컴퓨터를 밀고 나면 새롭게 설정하기위해서 만들어뒀던 셸  스크립트를 파이썬 cmd 라이버리를 가지고 변경하는중. (이건 따로 작성하자. 새로운 기능을 많이써서&hellip;)</p>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/develop.html">Develop</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/python.html">python</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/linux.html">linux</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/distribution.html">distribution</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/lib.html">lib</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p>요즘 코딩을 안하니… 머리가 멍해져가는지라.<br/>
+컴퓨터를 밀고 나면 새롭게 설정하기위해서 만들어뒀던 셸  스크립트를 파이썬 cmd 라이버리를 가지고 변경하는중. (이건 따로 작성하자. 새로운 기능을 많이써서…)</p>
 <p>리눅스 배포판 별로 설치하는 프로그램 명령어가 다르니 배포판을 구분하여 명령어를 다르게 적용할수 있도록 구현이 필요했다.</p>
-<p>찾다보니 <a href="https://docs.python.org/3/library/platform.html"><code>platform</code></a> 라이브러리가 내부에 존재하고 해당 라이브러리에서 Unix 환경에서 사용이 가능한 <code>dist</code>, <code>linux_distribution</code> 메소드가 존재를 한다. 그런데 이거 3.5때 방출에 대한 논의 (<a href="https://bugs.python.org/issue1322">issue 1322</a>)가 되었고, 3.7에서 삭제되는 걸로 끝&hellip;</p>
-<p>이런. 난 매번 버전 업데이트되면 최신으로 맞출껀데&hellip;</p>
+<p>찾다보니 <a href="https://docs.python.org/3/library/platform.html"><code>platform</code></a> 라이브러리가 내부에 존재하고 해당 라이브러리에서 Unix 환경에서 사용이 가능한 <code>dist</code>, <code>linux_distribution</code> 메소드가 존재를 한다. 그런데 이거 3.5때 방출에 대한 논의 (<a href="https://bugs.python.org/issue1322">issue 1322</a>)가 되었고, 3.7에서 삭제되는 걸로 끝…</p>
+<p>이런. 난 매번 버전 업데이트되면 최신으로 맞출껀데…</p>
 <p>댓글을 읽다보니 해당 기능을 따로 빼내어 다른 서비스로 만들어둔 용자가 있었다. 이름은 <a href="https://pypi.python.org/pypi/distro"><code>distro</code></a>.</p>
 <p>그런데 이건 Unix 환경에서만 작동이된다. 맥에서는 패키지는 깔리지만 사용할 수 없다.</p>
-<p>원리는 간단하다. <code>/etc/*-release</code> 파일에 작성되어있는 내용을 가져와 표시해주는 것으로 보인다. 뭐 Todo로 <code>lsb_release</code> 파일을 만들 수 있는게 있어보이지만&hellip; 언제될지는 모르겠고.</p>
+<p>원리는 간단하다. <code>/etc/*-release</code> 파일에 작성되어있는 내용을 가져와 표시해주는 것으로 보인다. 뭐 Todo로 <code>lsb_release</code> 파일을 만들 수 있는게 있어보이지만… 언제될지는 모르겠고.</p>
 <h2 id="_1">사용법</h2>
 <h3 id="linux_distributionfull_distribution_nametrue"><code>linux_distribution(full_distribution_name=True)</code></h3>
 <ul>
 <li>Output : <code>(id_name, version, codename)</code></li>
 <li><code>platform.linux_distribution()</code> 와 동일하다.</li>
 </ul>
-<h3 id><code>id()</code></h3>
+<h3 id=""><code>id()</code></h3>
 <ul>
 <li>리눅스 배포판 id를 반환한다.</li>
 </ul>
@@ -159,68 +144,48 @@ gtag('config', 'G-X9EBSXCBTS');
 <li>여기에 키값으로 되어있는 것들이 메소드 명과 1:1 매칭된다.</li>
 </ul>
 <p>다른 것도 많으니 <a href="http://distro.readthedocs.io/en/latest/">문서</a> 확인하자.</p></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

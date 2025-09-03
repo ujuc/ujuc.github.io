@@ -1,54 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="pip,pipenv,env,python">
-    <meta property="og:title" content="Custom Virtual Environment Location on piping">
-    <meta name="twitter:title" content="Custom Virtual Environment Location on piping">
-    <meta itemprop="name" content="Custom Virtual Environment Location on piping">
-    <meta name="description" content="pipevn 를 사용하는데… env 가 안보인다. 보이는 곳으로 옮기자!">
-    <meta property="og:description" content="pipevn 를 사용하는데… env 가 안보인다. 보이는 곳으로 옮기자!">
-    <meta name="twitter:description" content="pipevn 를 사용하는데… env 가 안보인다. 보이는 곳으로 옮기자!">
-    <meta itemprop="description" content="pipevn 를 사용하는데… env 가 안보인다. 보이는 곳으로 옮기자!">
-    <meta property="og:url" content="https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/">
-    <meta property="article:published_time" content="2018-04-21T13:01:22+09:00">
-    <meta property="article:tag" content="pip">
-    <meta property="article:tag" content="pipenv">
-    <meta property="article:tag" content="env">
-    <meta property="article:tag" content="python">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="pip,pipenv,env,python" name="keyward"/>
+<meta content="Custom Virtual Environment Location on piping" property="og:title"/>
+<meta content="Custom Virtual Environment Location on piping" name="twitter:title"/>
+<meta content="Custom Virtual Environment Location on piping" itemprop="name"/>
+<meta content="pipevn 를 사용하는데… env 가 안보인다. 보이는 곳으로 옮기자!" name="description"/>
+<meta content="pipevn 를 사용하는데… env 가 안보인다. 보이는 곳으로 옮기자!" property="og:description"/>
+<meta content="pipevn 를 사용하는데… env 가 안보인다. 보이는 곳으로 옮기자!" name="twitter:description"/>
+<meta content="pipevn 를 사용하는데… env 가 안보인다. 보이는 곳으로 옮기자!" itemprop="description"/>
+<meta content="https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/" property="og:url"/>
+<meta content="2018-04-21T13:01:22+09:00" property="article:published_time"/>
+<meta content="pip" property="article:tag"/>
+<meta content="pipenv" property="article:tag"/>
+<meta content="env" property="article:tag"/>
+<meta content="python" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/Custom Virtual Environment Location on piping
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -56,152 +49,122 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2018", "item": "https://ujuc.github.io/2018"}, {"@type": "ListItem", "position": 3, "name": "04", "item": "https://ujuc.github.io/2018/04"}, {"@type": "ListItem", "position": 4, "name": "21", "item": "https://ujuc.github.io/2018/04/21"}, {"@type": "ListItem", "position": 5, "name": "Custom_virtual_environment_location_on_piping", "item": "https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2018/04/21/custom_virtual_environment_location_on_piping/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "Custom Virtual Environment Location on piping", "about": "Develop", "datePublished": "2018-04-21 13:01"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">Custom Virtual Environment Location on piping</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">Custom Virtual Environment Location on piping</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         18. 04. 21.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/pip.html" class="article_tag">pip</a>
-,         <a href="https://ujuc.github.io/tag/pipenv.html" class="article_tag">pipenv</a>
-,         <a href="https://ujuc.github.io/tag/env.html" class="article_tag">env</a>
-,         <a href="https://ujuc.github.io/tag/python.html" class="article_tag">python</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p><code>pipenv</code>를 사용하면 <code>.env</code> 파일까지 생성해주고 그것을 사용할 수 있도록 해준다.<br>
-그런데&hellip; 이거 참&hellip; 저 깊숙한곳에 만들어주니&hellip; Pycharm 에서 <code>env</code>를 쓰려고 찾기시작하니 귀찮다. 그리고 그냥 지워버리면 그 밑에있는건&hellip;</p>
-<p>물론 확인할 수 있는 방법이 없는건아니다. <code>pipenv shell</code>로 하면 <code>.env</code> 파일이 존재하는 곳을 찾아서 실행시켜주기도 하는데&hellip;<br>
-내마음에 안드니&hellip;</p>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/develop.html">Develop</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/pip.html">pip</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/pipenv.html">pipenv</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/env.html">env</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/python.html">python</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p><code>pipenv</code>를 사용하면 <code>.env</code> 파일까지 생성해주고 그것을 사용할 수 있도록 해준다.<br/>
+그런데… 이거 참… 저 깊숙한곳에 만들어주니… Pycharm 에서 <code>env</code>를 쓰려고 찾기시작하니 귀찮다. 그리고 그냥 지워버리면 그 밑에있는건…</p>
+<p>물론 확인할 수 있는 방법이 없는건아니다. <code>pipenv shell</code>로 하면 <code>.env</code> 파일이 존재하는 곳을 찾아서 실행시켜주기도 하는데…<br/>
+내마음에 안드니…</p>
 <p><code>pipenv</code> 에서 사용하는 <code>.env</code>를 내가 원하는 위치에 옮겨보자.</p>
 <h3 id="workon_home"><code>WORKON_HOME</code></h3>
 <p>저 깊이 들어가는 <code>.env</code> 폴더를 내가 원하는 위치로 옮겨준다.</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">export</span><span class="w"> </span><span class="n">WORKON_HOME</span><span class="o">=~/.</span><span class="n">venvs</span>
 </code></pre></div>
-
 <h3 id="pipenv_venv_in_project"><code>PIPENV_VENV_IN_PROJECT</code></h3>
-<p>프로젝트를 진행하고있는 곳에 <code>.env</code> 파일을 만들어준다.<br>
+<p>프로젝트를 진행하고있는 곳에 <code>.env</code> 파일을 만들어준다.<br/>
 이럴때는 <code>.gitignore</code>에서 <code>.env/</code> 파일을 예외로 해주어야된다. 해주는게 좋을꺼다.</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">export</span><span class="w"> </span><span class="n">PIPENV_VENV_IN_PROJECT</span><span class="o">=</span><span class="bp">true</span>
 </code></pre></div>
-
 <h4 id="_1">참고</h4>
 <p><a href="https://docs.pipenv.org/advanced/#custom-virtual-environment-location">pipenv - Custom Virtual Environment Location</a></p></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

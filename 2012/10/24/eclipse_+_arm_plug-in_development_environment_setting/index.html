@@ -1,57 +1,50 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="avr,eclipse,development environment,environment,arch linux,개발 환경">
-    <meta property="og:title" content="Eclipse + AVR Plug-in Development Environment Setting">
-    <meta name="twitter:title" content="Eclipse + AVR Plug-in Development Environment Setting">
-    <meta itemprop="name" content="Eclipse + AVR Plug-in Development Environment Setting">
-    <meta name="description" content="Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기.">
-    <meta property="og:description" content="Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기.">
-    <meta name="twitter:description" content="Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기.">
-    <meta itemprop="description" content="Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기.">
-    <meta property="og:url" content="https://ujuc.github.io/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting/">
-    <meta property="article:published_time" content="2012-10-24T11:34:15+09:00">
-    <meta property="article:modified_time" content="2018-03-11T11:34:00+09:00">
-    <meta property="article:tag" content="avr">
-    <meta property="article:tag" content="eclipse">
-    <meta property="article:tag" content="development environment">
-    <meta property="article:tag" content="environment">
-    <meta property="article:tag" content="arch linux">
-    <meta property="article:tag" content="개발 환경">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="avr,eclipse,development environment,environment,arch linux,개발 환경" name="keyward"/>
+<meta content="Eclipse + AVR Plug-in Development Environment Setting" property="og:title"/>
+<meta content="Eclipse + AVR Plug-in Development Environment Setting" name="twitter:title"/>
+<meta content="Eclipse + AVR Plug-in Development Environment Setting" itemprop="name"/>
+<meta content="Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기." name="description"/>
+<meta content="Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기." property="og:description"/>
+<meta content="Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기." name="twitter:description"/>
+<meta content="Eclipse를 이용해서 AVR 코딩할 수 있는 환경 만들기." itemprop="description"/>
+<meta content="https://ujuc.github.io/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting/" property="og:url"/>
+<meta content="2012-10-24T11:34:15+09:00" property="article:published_time"/>
+<meta content="2018-03-11T11:34:00+09:00" property="article:modified_time"/>
+<meta content="avr" property="article:tag"/>
+<meta content="eclipse" property="article:tag"/>
+<meta content="development environment" property="article:tag"/>
+<meta content="environment" property="article:tag"/>
+<meta content="arch linux" property="article:tag"/>
+<meta content="개발 환경" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/Eclipse + AVR Plug-in Development Environment Setting
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -59,153 +52,123 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2012", "item": "https://ujuc.github.io/2012"}, {"@type": "ListItem", "position": 3, "name": "10", "item": "https://ujuc.github.io/2012/10"}, {"@type": "ListItem", "position": 4, "name": "24", "item": "https://ujuc.github.io/2012/10/24"}, {"@type": "ListItem", "position": 5, "name": "Eclipse_+_arm_plug in_development_environment_setting", "item": "https://ujuc.github.io/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2012/10/24/eclipse_+_arm_plug-in_development_environment_setting/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "Eclipse + AVR Plug-in Development Environment Setting", "about": "Develop", "datePublished": "2012-10-24 11:34"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">Eclipse + AVR Plug-in Development Environment Setting</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">Eclipse + AVR Plug-in Development Environment Setting</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         12. 10. 24.
  / <em class="fa-solid fa-arrows-rotate"></em> 18. 03. 11.       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/develop.html">Develop</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/avr.html" class="article_tag">avr</a>
-,         <a href="https://ujuc.github.io/tag/eclipse.html" class="article_tag">eclipse</a>
-,         <a href="https://ujuc.github.io/tag/development-environment.html" class="article_tag">development environment</a>
-,         <a href="https://ujuc.github.io/tag/environment.html" class="article_tag">environment</a>
-,         <a href="https://ujuc.github.io/tag/arch-linux.html" class="article_tag">arch linux</a>
-,         <a href="https://ujuc.github.io/tag/gaebal-hwangyeong.html" class="article_tag">개발 환경</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>Eclipse로 AVR 프로그램을 코딩할 수 있다는 소리를 듣고서 곧장 검색을 해서 필요한 것들을 깔았었다.<br>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/develop.html">Develop</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/avr.html">avr</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/eclipse.html">eclipse</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/development-environment.html">development environment</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/environment.html">environment</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/arch-linux.html">arch linux</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/gaebal-hwangyeong.html">개발 환경</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p>Eclipse로 AVR 프로그램을 코딩할 수 있다는 소리를 듣고서 곧장 검색을 해서 필요한 것들을 깔았었다.<br/>
 그런데 뭔가 프로젝트에 x표가 나타나서 신경쓰이게 하던것을 한 블로그에서 찾았다!!!!</p>
 <p>그래서 이렇게 남긴다. 까먹을까봐서..</p>
 <p><a href="http://avr-eclipse.sourceforge.net/wiki/index.php/The_AVR_Eclipse_Plugin">공식 홈페이지</a></p>
 <p>리눅스에서는 기본적으로 컴파일러는 gcc를 이용해서 작동을 시키게 된다.</p>
 <div class="highlight"><pre><span></span><code>yaourt -S gcc-avr avr-libc avrdude binutils-avr
 </code></pre></div>
-
 <p>을 설치해줬다. Arch Linux에서는 이렇게 해주고 더 필요한 패키지들이 있으면,</p>
 <div class="highlight"><pre><span></span><code>yaourt -Ss avr
 </code></pre></div>
-
 <p>로 해줘 찾을 수 있다.</p>
-<p>Eclipse를 설치 해주는데 이때 Eclipse는 C/C++용으로 설치해준다.<br>
+<p>Eclipse를 설치 해주는데 이때 Eclipse는 C/C++용으로 설치해준다.<br/>
 그리고서 프로젝트 만드는 것은</p>
 <p><a href="http://hoyoung2.blogspot.com/2010/07/avr-developement-environment-setting.html">Don’t panic! WinAVR + Eclipse + AVR Plug-in Developement Environment Setting</a></p>
 <p>에서 확인하면 끝…</p></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

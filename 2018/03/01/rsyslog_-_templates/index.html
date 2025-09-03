@@ -1,55 +1,48 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="syslog,rsyslog,log,system,linux">
-    <meta property="og:title" content="RSYSLOG - Templates">
-    <meta name="twitter:title" content="RSYSLOG - Templates">
-    <meta itemprop="name" content="RSYSLOG - Templates">
-    <meta name="description" content="Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다.">
-    <meta property="og:description" content="Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다.">
-    <meta name="twitter:description" content="Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다.">
-    <meta itemprop="description" content="Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다.">
-    <meta property="og:url" content="https://ujuc.github.io/2018/03/01/rsyslog_-_templates/">
-    <meta property="article:published_time" content="2018-03-01T18:45:41+09:00">
-    <meta property="article:tag" content="syslog">
-    <meta property="article:tag" content="rsyslog">
-    <meta property="article:tag" content="log">
-    <meta property="article:tag" content="system">
-    <meta property="article:tag" content="linux">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="syslog,rsyslog,log,system,linux" name="keyward"/>
+<meta content="RSYSLOG - Templates" property="og:title"/>
+<meta content="RSYSLOG - Templates" name="twitter:title"/>
+<meta content="RSYSLOG - Templates" itemprop="name"/>
+<meta content="Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다." name="description"/>
+<meta content="Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다." property="og:description"/>
+<meta content="Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다." name="twitter:description"/>
+<meta content="Rsyslog 에서 사용되는 template 에 관련된 내용을 정리합시다." itemprop="description"/>
+<meta content="https://ujuc.github.io/2018/03/01/rsyslog_-_templates/" property="og:url"/>
+<meta content="2018-03-01T18:45:41+09:00" property="article:published_time"/>
+<meta content="syslog" property="article:tag"/>
+<meta content="rsyslog" property="article:tag"/>
+<meta content="log" property="article:tag"/>
+<meta content="system" property="article:tag"/>
+<meta content="linux" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/RSYSLOG - Templates
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -57,74 +50,66 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2018/03/01/rsyslog_-_templates/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2018", "item": "https://ujuc.github.io/2018"}, {"@type": "ListItem", "position": 3, "name": "03", "item": "https://ujuc.github.io/2018/03"}, {"@type": "ListItem", "position": 4, "name": "01", "item": "https://ujuc.github.io/2018/03/01"}, {"@type": "ListItem", "position": 5, "name": "Rsyslog_ _templates", "item": "https://ujuc.github.io/2018/03/01/rsyslog_-_templates"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2018/03/01/rsyslog_-_templates/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "RSYSLOG - Templates", "about": "Operation", "datePublished": "2018-03-01 18:45"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">RSYSLOG - Templates</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">RSYSLOG - Templates</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         18. 03. 01.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/operation.html">Operation</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/syslog.html" class="article_tag">syslog</a>
-,         <a href="https://ujuc.github.io/tag/rsyslog.html" class="article_tag">rsyslog</a>
-,         <a href="https://ujuc.github.io/tag/log.html" class="article_tag">log</a>
-,         <a href="https://ujuc.github.io/tag/system.html" class="article_tag">system</a>
-,         <a href="https://ujuc.github.io/tag/linux.html" class="article_tag">linux</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p><code>/var/log/syslog</code>로 모여드는 서비스들의 로그를 다른 곳으로 옮기고, 해당 내용을 확인하기 위해 파싱을 할 수 있도록 변경하는 작업이 필요했다.<br>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/operation.html">Operation</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/syslog.html">syslog</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/rsyslog.html">rsyslog</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/log.html">log</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/system.html">system</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/linux.html">linux</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p><code>/var/log/syslog</code>로 모여드는 서비스들의 로그를 다른 곳으로 옮기고, 해당 내용을 확인하기 위해 파싱을 할 수 있도록 변경하는 작업이 필요했다.<br/>
 그래서 내가 필요한 로그를 syslog에서 때어낸후 다른 파일로 옮기는 작업을 성공. 하지만 그 이상의 작업을 하기위해서는 rsyslog에서 template을 작성하여야 내가 필요한 메시지만 작성할 수 있는 것을 확인하였기에 해당 부분을 찾아 변경하였다.</p>
 <p>그러면서 참고하려고 했던 문서들이 전부 영문이라. 한국어로 내가 정리해두고 나중에 또 찾아봐야겠다는 생각에서 글을 작성한다.</p>
 <h2 id="template">Template</h2>
@@ -133,18 +118,17 @@ gtag('config', 'G-X9EBSXCBTS');
 <h3 id="template-statement"><code>template()</code> statement</h3>
 <p>문서상으로는 7버전 이상에서 사용할 수 있는 포맷이다.</p>
 <p>아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.</p>
-<div class="highlight"><pre><span></span><code><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;FileFormat&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">&quot;list&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;timestamp&quot;</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="s2">&quot;rfc3339&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;hostname&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;syslogtag&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">spifno1stsp</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span>
-<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;msg&quot;</span><span class="w"> </span><span class="n">droplastlf</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="w"> </span><span class="p">)</span>
-<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">template</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"FileFormat"</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">"list"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"timestamp"</span><span class="w"> </span><span class="n">dateFormat</span><span class="o">=</span><span class="s2">"rfc3339"</span><span class="p">)</span>
+<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"hostname"</span><span class="p">)</span>
+<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">" "</span><span class="p">)</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"syslogtag"</span><span class="p">)</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"msg"</span><span class="w"> </span><span class="n">spifno1stsp</span><span class="o">=</span><span class="s2">"on"</span><span class="w"> </span><span class="p">)</span>
+<span class="w">  </span><span class="n">property</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"msg"</span><span class="w"> </span><span class="n">droplastlf</span><span class="o">=</span><span class="s2">"on"</span><span class="w"> </span><span class="p">)</span>
+<span class="w">  </span><span class="n">constant</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
-
 <p>작성된 템플릿을 이용해서 분석해보자.</p>
 <ul>
 <li><code>template(parameters) { list-descriptions }</code><ul>
@@ -188,9 +172,8 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nx">set</span><span class="w"> </span><span class="err">$</span><span class="p">!</span><span class="nx">usr</span><span class="p">!</span><span class="nx">tpl2</span><span class="p">!</span><span class="nx">msg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">$</span><span class="nx">msg</span><span class="p">;</span>
 <span class="nx">set</span><span class="w"> </span><span class="err">$</span><span class="p">!</span><span class="nx">usr</span><span class="p">!</span><span class="nx">tpl2</span><span class="p">!</span><span class="nx">dataflow</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">field</span><span class="p">(</span><span class="err">$</span><span class="nx">msg</span><span class="p">,</span><span class="w"> </span><span class="mi">58</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<span class="nx">template</span><span class="p">(</span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;tpl2&quot;</span><span class="w"> </span><span class="k">type</span><span class="p">=</span><span class="s">&quot;subtree&quot;</span><span class="w"> </span><span class="nx">subtree</span><span class="p">=</span><span class="s">&quot;$!usr!tpl2&quot;</span><span class="p">)</span>
+<span class="nx">template</span><span class="p">(</span><span class="nx">name</span><span class="p">=</span><span class="s">"tpl2"</span><span class="w"> </span><span class="k">type</span><span class="p">=</span><span class="s">"subtree"</span><span class="w"> </span><span class="nx">subtree</span><span class="p">=</span><span class="s">"$!usr!tpl2"</span><span class="p">)</span>
 </code></pre></div>
-
 <ul>
 <li><a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#string"><code>string</code></a><ul>
 <li>Lagacy format 형식으로 쭉 적는거다.</li>
@@ -198,53 +181,49 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nx">template</span><span class="p">(</span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;tpl3&quot;</span><span class="w"> </span><span class="k">type</span><span class="p">=</span><span class="s">&quot;string&quot;</span>
-<span class="w">         </span><span class="kt">string</span><span class="p">=</span><span class="s">&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">template</span><span class="p">(</span><span class="nx">name</span><span class="p">=</span><span class="s">"tpl3"</span><span class="w"> </span><span class="k">type</span><span class="p">=</span><span class="s">"string"</span>
+<span class="w">         </span><span class="kt">string</span><span class="p">=</span><span class="s">"%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n"</span>
 <span class="w">        </span><span class="p">)</span>
 </code></pre></div>
-
 <ul>
 <li><a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#plugin"><code>plugin</code></a><ul>
-<li>플러그인을 만들때 사용한다고 하는데&hellip; 쓸일이 있을까??</li>
+<li>플러그인을 만들때 사용한다고 하는데… 쓸일이 있을까??</li>
 </ul>
 </li>
 </ul>
 <h4 id="option"><a href="http://www.rsyslog.com/doc/v8-stable/configuration/templates.html#options"><code>option</code></a></h4>
 <p>예제로 이해하자. 필요하면 링크를 타고 보고.</p>
-<div class="highlight"><pre><span></span><code><span class="nx">template</span><span class="p">(</span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;outfmt&quot;</span><span class="w"> </span><span class="k">type</span><span class="p">=</span><span class="s">&quot;list&quot;</span><span class="w"> </span><span class="nx">option</span><span class="p">.</span><span class="nx">jsonf</span><span class="p">=</span><span class="s">&quot;on&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">&quot;@timestamp&quot;</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;timereported&quot;</span><span class="w"> </span><span class="nx">dateFormat</span><span class="p">=</span><span class="s">&quot;rfc3339&quot;</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">&quot;jsonf&quot;</span><span class="p">)</span>
-<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">&quot;host&quot;</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;hostname&quot;</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">&quot;jsonf&quot;</span><span class="p">)</span>
-<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">&quot;severity&quot;</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;syslogseverity-text&quot;</span><span class="w"> </span><span class="nx">caseConversion</span><span class="p">=</span><span class="s">&quot;upper&quot;</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">&quot;jsonf&quot;</span><span class="p">)</span>
-<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">&quot;facility&quot;</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;syslogfacility-text&quot;</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">&quot;jsonf&quot;</span><span class="p">)</span>
-<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">&quot;syslog-tag&quot;</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;syslogtag&quot;</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">&quot;jsonf&quot;</span><span class="p">)</span>
-<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">&quot;source&quot;</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;app-name&quot;</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">&quot;jsonf&quot;</span><span class="p">)</span>
-<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">&quot;message&quot;</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">&quot;msg&quot;</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">&quot;jsonf&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nx">template</span><span class="p">(</span><span class="nx">name</span><span class="p">=</span><span class="s">"outfmt"</span><span class="w"> </span><span class="k">type</span><span class="p">=</span><span class="s">"list"</span><span class="w"> </span><span class="nx">option</span><span class="p">.</span><span class="nx">jsonf</span><span class="p">=</span><span class="s">"on"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">"@timestamp"</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">"timereported"</span><span class="w"> </span><span class="nx">dateFormat</span><span class="p">=</span><span class="s">"rfc3339"</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">"jsonf"</span><span class="p">)</span>
+<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">"host"</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">"hostname"</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">"jsonf"</span><span class="p">)</span>
+<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">"severity"</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">"syslogseverity-text"</span><span class="w"> </span><span class="nx">caseConversion</span><span class="p">=</span><span class="s">"upper"</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">"jsonf"</span><span class="p">)</span>
+<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">"facility"</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">"syslogfacility-text"</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">"jsonf"</span><span class="p">)</span>
+<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">"syslog-tag"</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">"syslogtag"</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">"jsonf"</span><span class="p">)</span>
+<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">"source"</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">"app-name"</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">"jsonf"</span><span class="p">)</span>
+<span class="w">         </span><span class="nx">property</span><span class="p">(</span><span class="nx">outname</span><span class="p">=</span><span class="s">"message"</span><span class="w"> </span><span class="nx">name</span><span class="p">=</span><span class="s">"msg"</span><span class="w"> </span><span class="nx">format</span><span class="p">=</span><span class="s">"jsonf"</span><span class="p">)</span>
 
 <span class="w"> </span><span class="p">}</span>
 </code></pre></div>
-
 <p>이렇게 작성하면,</p>
 <div class="highlight"><pre><span></span><code><span class="err">{</span>
-<span class="w">  </span><span class="ss">&quot;@timestamp&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;2018-03-01T01:00:00+00:00&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="ss">&quot;host&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;172.20.245.8&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="ss">&quot;severity&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;DEBUG&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="ss">&quot;facility&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;local4&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="ss">&quot;syslog-tag&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;tag&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="ss">&quot;source&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;tag&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="ss">&quot;message&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot; msgnum:00000000:&quot;</span>
+<span class="w">  </span><span class="ss">"@timestamp"</span><span class="err">:</span><span class="w"> </span><span class="ss">"2018-03-01T01:00:00+00:00"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">"host"</span><span class="err">:</span><span class="w"> </span><span class="ss">"172.20.245.8"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">"severity"</span><span class="err">:</span><span class="w"> </span><span class="ss">"DEBUG"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">"facility"</span><span class="err">:</span><span class="w"> </span><span class="ss">"local4"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">"syslog-tag"</span><span class="err">:</span><span class="w"> </span><span class="ss">"tag"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">"source"</span><span class="err">:</span><span class="w"> </span><span class="ss">"tag"</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">"message"</span><span class="err">:</span><span class="w"> </span><span class="ss">" msgnum:00000000:"</span>
 <span class="err">}</span>
 </code></pre></div>
-
 <h3 id="legacy-format">Legacy Format</h3>
 <p>6 이전 버전에서 사용하던 포멧이다. rsyslog template으로 해서 검색을 하면 가장 많이 나오는 포멧. 공식 문서에서는 사용하지 않을 것을 권고하고있다.</p>
 <p>아래의 예제는 파일에 로그를 작성하는 기본 템플릿이다.</p>
-<div class="highlight"><pre><span></span><code>$<span class="nv">template</span><span class="w"> </span><span class="nv">FileFormat</span>,<span class="s2">&quot;%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n&quot;</span>
+<div class="highlight"><pre><span></span><code>$<span class="nv">template</span><span class="w"> </span><span class="nv">FileFormat</span>,<span class="s2">"%TIMESTAMP:::date-rfc3339% %HOSTNAME% %syslogtag%%msg:::sp-if-no-1st-sp%%msg:::drop-last-lf%\n"</span>
 </code></pre></div>
-
 <p>작성 요령은 <code>$template</code> 변수, <code>template 이름</code>, <code>"%PROPERTY_NAME[:FROM_CHAR:TO_CHAR:OPTION]%"</code>. 필요한 내용들을 작성하면된다.</p>
 <ul>
 <li><code>Property</code> 내용은 <a href="http://www.rsyslog.com/doc/v8-stable/configuration/properties.html">도큐먼트</a>에 작성되어있다.</li>
-<li><code>FROM_CHAR</code>, <code>TO_CHAR</code> 부분은 어디서 어디까지&hellip; <code>%msg:1:2%</code>라고 작성했다면 메시지에서 첫번째 문자에서 두번째 문자까지 보여달라고 하는것. <code>FROM_CHAR</code> 을 작성하고 맨끝열까지 하고 싶다면, <code>TO_CHAR</code>에다가 숫자가 아닌 <code>$</code>를 입력하면 문자열의 맨마지막까지 보여주게 된다.<ul>
+<li><code>FROM_CHAR</code>, <code>TO_CHAR</code> 부분은 어디서 어디까지… <code>%msg:1:2%</code>라고 작성했다면 메시지에서 첫번째 문자에서 두번째 문자까지 보여달라고 하는것. <code>FROM_CHAR</code> 을 작성하고 맨끝열까지 하고 싶다면, <code>TO_CHAR</code>에다가 숫자가 아닌 <code>$</code>를 입력하면 문자열의 맨마지막까지 보여주게 된다.<ul>
 <li><code>FROM_CHAR</code> 부분에 <code>F</code> 입력<ul>
 <li><code>%msg:F:2%</code> 라고 입력하면 <code>test\tchar</code>라면 <code>[test, char]</code>로 분리하고 <code>char</code>만 보여주게된다.</li>
 <li><code>F,ASCII_CODE</code>로 입력하면, 해당 문자로 나누게 된다.</li>
@@ -252,7 +231,7 @@ gtag('config', 'G-X9EBSXCBTS');
 </li>
 <li><code>FROM_CHAR</code> 부분에 <code>R</code> 입력<ul>
 <li>정규식을 사용한다는 것.</li>
-<li>해당 내용은 man 페이지를&hellip;</li>
+<li>해당 내용은 man 페이지를…</li>
 </ul>
 </li>
 </ul>
@@ -261,82 +240,61 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <h3 id="_1">동적 파일 이름 생성</h3>
 <p>두가지 방식이 있다만, 첫번째 방식으로 작성해서 템플릿 구성을 맞추는게 좋을것으로 보인다.</p>
-<div class="highlight"><pre><span></span><code><span class="n">template</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;DynFile&quot;</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="n">string</span><span class="o">=</span><span class="s2">&quot;/var/log/system-%HOSTNAME%.log&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">template</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"DynFile"</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s2">"string"</span><span class="w"> </span><span class="n">string</span><span class="o">=</span><span class="s2">"/var/log/system-%HOSTNAME%.log"</span><span class="p">)</span>
 
-<span class="o">$</span><span class="n">template</span><span class="w"> </span><span class="n">DynFile</span><span class="p">,</span><span class="s2">&quot;/var/log/system-%HOSTNAME%.log&quot;</span>
+<span class="o">$</span><span class="n">template</span><span class="w"> </span><span class="n">DynFile</span><span class="p">,</span><span class="s2">"/var/log/system-%HOSTNAME%.log"</span>
 </code></pre></div>
-
 <h2 id="_2">결.</h2>
-<p>Rsyslog는 지금 리눅스에서 기본적으로 사용되는 System logging 프로그램이다. 그렇기에 사용하기가 쉽고 쉽게 다가갈 수 있다.<br>
-이런 것으로 우선 1차 정리하고 더 설정할 수 없는 것들은 프로그램에서 정리를 하거나 다른 프로그램을 사용하거나 해도 될듯. 무작정 패키지를 추가할 수 없는 시스템에서는 어쩔 수 없는 선택이긴하다만&hellip;</p>
-<p>삽질한 내용을 작성해 두려고 한건데&hellip; 글쓰는데 더 삽질을&hellip; ㅡ.ㅡa</p>
-<p>다음번엔 원격 서버로 로컬 서버 로그를 넘기는 방법에 대해서 정리를 해볼까&hellip; 이 내용은 많던데&hellip;</p>
+<p>Rsyslog는 지금 리눅스에서 기본적으로 사용되는 System logging 프로그램이다. 그렇기에 사용하기가 쉽고 쉽게 다가갈 수 있다.<br/>
+이런 것으로 우선 1차 정리하고 더 설정할 수 없는 것들은 프로그램에서 정리를 하거나 다른 프로그램을 사용하거나 해도 될듯. 무작정 패키지를 추가할 수 없는 시스템에서는 어쩔 수 없는 선택이긴하다만…</p>
+<p>삽질한 내용을 작성해 두려고 한건데… 글쓰는데 더 삽질을… ㅡ.ㅡa</p>
+<p>다음번엔 원격 서버로 로컬 서버 로그를 넘기는 방법에 대해서 정리를 해볼까… 이 내용은 많던데…</p>
 <h2 id="_3">참고 페이지</h2>
 <ul>
 <li><a href="http://www.rsyslog.com/doc">rsyslog doc homepage</a></li>
 </ul></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>

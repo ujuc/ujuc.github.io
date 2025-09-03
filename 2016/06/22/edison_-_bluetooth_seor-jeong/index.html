@@ -1,53 +1,46 @@
 <!DOCTYPE html>
+
 <html lang="ko">
-
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="ujuc">
-
-    <meta property="og:site_name" content="잘 밤에 쓸데없는 생각하기">
-    <meta property="og:type" content="website">
-    <meta property="inLanguage" content="ko-KR">
-
-    <!-- Twitter Card data-->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="잘 밤에 쓸데없는 생각하기">
-
-    <meta name="keyward" content="edison,bluetooth,iot">
-    <meta property="og:title" content="Edison - Bluetooth 설정">
-    <meta name="twitter:title" content="Edison - Bluetooth 설정">
-    <meta itemprop="name" content="Edison - Bluetooth 설정">
-    <meta name="description" content="오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다.">
-    <meta property="og:description" content="오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다.">
-    <meta name="twitter:description" content="오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다.">
-    <meta itemprop="description" content="오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다.">
-    <meta property="og:url" content="https://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/">
-    <meta property="article:published_time" content="2016-06-22T00:12:00+09:00">
-    <meta property="article:tag" content="edison">
-    <meta property="article:tag" content="bluetooth">
-    <meta property="article:tag" content="iot">
-
-    <!-- Title -->
-    <title>
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="edison,bluetooth,iot" name="keyward"/>
+<meta content="Edison - Bluetooth 설정" property="og:title"/>
+<meta content="Edison - Bluetooth 설정" name="twitter:title"/>
+<meta content="Edison - Bluetooth 설정" itemprop="name"/>
+<meta content="오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다." name="description"/>
+<meta content="오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다." property="og:description"/>
+<meta content="오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다." name="twitter:description"/>
+<meta content="오래된 글이다 그냥 내놓는다. IBM에서 나왔던 Edison 에서 bluetooth 설정에 관련된 내용이다." itemprop="description"/>
+<meta content="https://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/" property="og:url"/>
+<meta content="2016-06-22T00:12:00+09:00" property="article:published_time"/>
+<meta content="edison" property="article:tag"/>
+<meta content="bluetooth" property="article:tag"/>
+<meta content="iot" property="article:tag"/>
+<!-- Title -->
+<title>
       잘 밤에 쓸데없는 생각하기/Edison - Bluetooth 설정
     </title>
-
 <!-- Style sheet -->
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/44208652df.js" crossorigin="anonymous"></script>
-
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
 <!-- Style -->
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://ujuc.github.io/theme/css/pygments.css">
-
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
 <!-- Feed -->
-<link href="https://ujuc.github.io/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" />
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -55,73 +48,65 @@ gtag('js', new Date());
 
 gtag('config', 'G-X9EBSXCBTS');
 </script>
-<script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"
-    crossorigin="anonymous"
-></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- navi -->
-      <div class="container" style="margin-top: 10px;">
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2016", "item": "https://ujuc.github.io/2016"}, {"@type": "ListItem", "position": 3, "name": "06", "item": "https://ujuc.github.io/2016/06"}, {"@type": "ListItem", "position": 4, "name": "22", "item": "https://ujuc.github.io/2016/06/22"}, {"@type": "ListItem", "position": 5, "name": "Edison_ _bluetooth_seor jeong", "item": "https://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2016/06/22/edison_-_bluetooth_seor-jeong/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "Edison - Bluetooth 설정", "about": "Hardware", "datePublished": "2016-06-22 00:12"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
 <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">
-        <em class="fa-solid fa-inbox"></em> Blog
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/archives.html">
-        <em class="fa-solid fa-archive"></em> Archive
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tags.html">
-        <em class="fa-solid fa-tags"></em> Tags
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
       </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/categories.html">
-        <em class="fa-solid fa-folder-open"></em> Categories
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
       </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/pages.html">
-        <em class="fa-solid fa-newspaper"></em> Pages
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages.html">
+<em class="fa-solid fa-newspaper"></em> Pages
       </a>
-    </li>
-</ul>      </div>
-    </header>
-
-    <div id="site-article" class="container">
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
 <div class="container">
-  <div class="article">
-  <!-- Title -->
-    <div class="article-title">Edison - Bluetooth 설정</div>
-
-  <!-- Meta -->
-    <div class="article-meta">
-      <em class="fa-regular fa-calendar-plus"></em>
+<div class="article">
+<!-- Title -->
+<div class="article-title">Edison - Bluetooth 설정</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
         16. 06. 22.
       <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-folder-open"></em>
-        <a href="https://ujuc.github.io/category/hardware.html">Hardware</a>
-      <em class="fa-solid fa-ellipsis-vertical"></em>
-      <em class="fa-solid fa-tags"></em>
-        <a href="https://ujuc.github.io/tag/edison.html" class="article_tag">edison</a>
-,         <a href="https://ujuc.github.io/tag/bluetooth.html" class="article_tag">bluetooth</a>
-,         <a href="https://ujuc.github.io/tag/iot.html" class="article_tag">iot</a>
-    </div>
-
-  <!--Article -->
-    <div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
-    <div class="article-text"><p>오래된 글이다 잠시 IoT로 하면서 기본적으로 설정하면서 나왔던 것. 정리한 내용이다.</p>
-<hr>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/hardware.html">Hardware</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/edison.html">edison</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/bluetooth.html">bluetooth</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/iot.html">iot</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><p>오래된 글이다 잠시 IoT로 하면서 기본적으로 설정하면서 나왔던 것. 정리한 내용이다.</p>
+<hr/>
 <h1 id="bluetooth">Bluetooth 설정</h1>
 <ul>
 <li>Edison 에서는 Bluetooth 제어 모듈로 BlueZ를 사용하고 있다.</li>
@@ -138,14 +123,12 @@ gtag('config', 'G-X9EBSXCBTS');
 # systemctl start bluetooth
 # systemctl status bluetooth
 </code></pre></div>
-
 <ul>
 <li>블루투스를 사용할 수 있도록 모듈을 활성화시켜준다.</li>
 </ul>
 <div class="highlight"><pre><span></span><code># rfkill list
 # rfkill unblock bluetooth
 </code></pre></div>
-
 <h2 id="_2">어플리케이션 사용</h2>
 <h3 id="bluetoothctl"><code>bluetoothctl</code></h3>
 <ul>
@@ -169,11 +152,11 @@ gtag('config', 'G-X9EBSXCBTS');
 </ul>
 <h3 id="pybluez"><code>pybluez</code></h3>
 <ul>
-<li>BlueZ의 Python 라이브러리인데&hellip;</li>
-<li>사람들은 <code>hcitool</code>을 더 많이 쓰는 것으로&hellip;</li>
+<li>BlueZ의 Python 라이브러리인데…</li>
+<li>사람들은 <code>hcitool</code>을 더 많이 쓰는 것으로…</li>
 <li>C맵핑을 해놔서 왠만한 작업들은 가능한 것으로 보이나 문서가 빈약하여 사용하기 쉽지 않다.</li>
 <li>뭔가 추가를 하려면 코드를 봐야된다.</li>
-<li>그래서 잘안쓰나&hellip;</li>
+<li>그래서 잘안쓰나…</li>
 </ul>
 <h2 id="_3">참고자료</h2>
 <ul>
@@ -183,68 +166,48 @@ gtag('config', 'G-X9EBSXCBTS');
 <li><a href="https://github.com/intel-iot-devkit/edison-guides/wiki">edison-guies</a></li>
 <li><a href="https://software.intel.com/en-us/articles/connecting-to-intel-edison-from-android-with-bluetooth-le-ble">Connecting to Intel Edison from Android with Bluetooth LE</a></li>
 </ul></div>
-    <div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
-
-  <!-- Comment -->
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
 <div id="giscus">
-<script src="https://giscus.app/client.js"
-  data-repo="ujuc/ujuc.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ=="
-  data-category="General"
-  data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy"
-  data-mapping="title"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-theme="light"
-  crossorigin="anonymous"
-  async>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
 </script>
 </div><div id="utterances">
-  <script src="https://utteranc.es/client.js"
-    repo="ujuc/ujuc.github.io"
-    issue-term="url"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</div>    <div class="text-center">🎗</div>
-  </div>
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
 </div>
-    </div>
-
-    <!-- body foot -->
-    <div class="container">
-    </div>
-
-    <!-- Title -->
-    <div id="site-title" class="container">
-      <hr/>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr>
 <div class="row">
-  <div class="container">
-  <div class="site-title">
-    <a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
-  </div>
-  <div class="site-body">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
     Anythink, Everythink!
   </div>
-  <div>
-    <span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
-    <span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
-  </div>
-  </div>
-</div>    </div>
-
-    <!-- Footer -->
-    <div id="site-footer" class="container">
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </hr></div>
+<!-- Footer -->
+<div class="container" id="site-footer">
 <div class="row text-right">
-  <div class="container" style="margin-bottom: 10px;">
-    <em class="fa-regular fa-closed-captioning"></em> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
   </div>
-</div>    </div>
-
-    <!-- Javascript -->
+</div> </div>
+<!-- Javascript -->
 <!--bootstrap-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>    <div id="js" class="contents">
-    </div>
-  </body>
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
 </html>
