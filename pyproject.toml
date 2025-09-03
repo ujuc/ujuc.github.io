@@ -9,6 +9,7 @@ dependencies = [
   "cleo>=2.1.0",
   "markdown-mermaidjs>=2.0.0",
   "markdown>=3.8",
+  "pelican-seo>=1.4.0",
   "pelican>=4.11.0",
   "pendulum>=3.1.0",
   "rich>=14.0.0",
