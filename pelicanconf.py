@@ -48,7 +48,14 @@ MENU = (
     ("Categories", "/categories.html", "folder-open"),
 )
 
-PAGE_MENU = (("Pages", "/pages.html", "newspaper"),)
+PAGE_MENU = (
+    # ("Pages", "/pages.html", "newspaper"),
+    (
+        "Wiki",
+        "https://app.tana.inc/shared/ujucs-wiki/X2JxS1NYYlhla1JkL2FLOFBZdmQtZVRMVQ==",
+        "pen-to-square",
+    ),
+)
 
 SOCIAL = (
     ("Github", "https://github.com/ujuc", "github"),
