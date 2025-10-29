@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<!-- Meta -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="ujuc" name="author"/>
+<meta content="잘 밤에 쓸데없는 생각하기" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="ko-KR" property="inLanguage"/>
+<!-- Twitter Card data-->
+<meta content="summary" name="twitter:card"/>
+<meta content="잘 밤에 쓸데없는 생각하기" name="twitter:site"/>
+<meta content="deploy,aws" name="keyward"/>
+<meta content="배포, 나는 어떻게 구성했나" property="og:title"/>
+<meta content="배포, 나는 어떻게 구성했나" name="twitter:title"/>
+<meta content="배포, 나는 어떻게 구성했나" itemprop="name"/>
+<meta content="내가 지금까지 사용했고, 구성해보았던 배포 방식에 대해서 정리한다. 그리고 배치는 “어떤 환경에 어떤 방법으로 서비스를 배치할 것인가?”에 대해서 생각해야 한다." name="description"/>
+<meta content="내가 지금까지 사용했고, 구성해보았던 배포 방식에 대해서 정리한다. 그리고 배치는 “어떤 환경에 어떤 방법으로 서비스를 배치할 것인가?”에 대해서 생각해야 한다." property="og:description"/>
+<meta content="내가 지금까지 사용했고, 구성해보았던 배포 방식에 대해서 정리한다. 그리고 배치는 “어떤 환경에 어떤 방법으로 서비스를 배치할 것인가?”에 대해서 생각해야 한다." name="twitter:description"/>
+<meta content="내가 지금까지 사용했고, 구성해보았던 배포 방식에 대해서 정리한다. 그리고 배치는 “어떤 환경에 어떤 방법으로 서비스를 배치할 것인가?”에 대해서 생각해야 한다." itemprop="description"/>
+<meta content="https://ujuc.github.io/2025/10/29/배포-나는-어떻게-구성했나/" property="og:url"/>
+<meta content="2025-10-29T18:41:00+09:00" property="article:published_time"/>
+<meta content="2025-10-29T18:41:00+09:00" property="article:modified_time"/>
+<meta content="deploy" property="article:tag"/>
+<meta content="aws" property="article:tag"/>
+<!-- Title -->
+<title>
+      잘 밤에 쓸데없는 생각하기/배포, 나는 어떻게 구성했나
+    </title>
+<!-- Style sheet -->
+<!-- Latest compiled and minified CSS -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/44208652df.js"></script>
+<!-- Style -->
+<link href="https://ujuc.github.io/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://ujuc.github.io/theme/css/pygments.css" rel="stylesheet" type="text/css"/>
+<!-- Feed -->
+<link href="https://ujuc.github.io/feeds/rss.xml" rel="alternate" title="잘 밤에 쓸데없는 생각하기 RSS" type="application/rss+xml">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-X9EBSXCBTS"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-X9EBSXCBTS');
+</script>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014314833699403"></script>
+</link><link href="https://ujuc.github.io/2025/10/29/배포-나는-어떻게-구성했나/" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "잘 밤에 쓸데없는 생각하기", "item": "https://ujuc.github.io"}, {"@type": "ListItem", "position": 2, "name": "2025", "item": "https://ujuc.github.io/2025"}, {"@type": "ListItem", "position": 3, "name": "10", "item": "https://ujuc.github.io/2025/10"}, {"@type": "ListItem", "position": 4, "name": "29", "item": "https://ujuc.github.io/2025/10/29"}, {"@type": "ListItem", "position": 5, "name": "배포 나는 어떻게 구성했나", "item": "https://ujuc.github.io/2025/10/29/배포-나는-어떻게-구성했나"}, {"@type": "ListItem", "position": 6, "name": "Index", "item": "https://ujuc.github.io/2025/10/29/배포-나는-어떻게-구성했나/index.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "ujuc"}, "publisher": {"@type": "Organization", "name": "잘 밤에 쓸데없는 생각하기"}, "headline": "배포, 나는 어떻게 구성했나", "about": "Operation", "datePublished": "2025-10-29 18:41"}</script></head>
+<body>
+<header>
+<!-- navi -->
+<div class="container" style="margin-top: 10px;">
+<ul class="nav">
+<li class="nav-item">
+<a class="nav-link" href="/">
+<em class="fa-solid fa-inbox"></em> Blog
+      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/archives.html">
+<em class="fa-solid fa-archive"></em> Archive
+      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/tags.html">
+<em class="fa-solid fa-tags"></em> Tags
+      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/categories.html">
+<em class="fa-solid fa-folder-open"></em> Categories
+      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link disabled"><em class="fa-solid fa-ellipsis-v"></em></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://app.tana.inc/shared/ujucs-wiki/X2JxS1NYYlhla1JkL2FLOFBZdmQtZVRMVQ==">
+<em class="fa-solid fa-pen-to-square"></em> Wiki
+      </a>
+</li>
+</ul> </div>
+</header>
+<div class="container" id="site-article">
+<div class="container">
+<div class="article">
+<!-- Title -->
+<div class="article-title">배포, 나는 어떻게 구성했나</div>
+<!-- Meta -->
+<div class="article-meta">
+<em class="fa-regular fa-calendar-plus"></em>
+        25. 10. 29.
+ / <em class="fa-solid fa-arrows-rotate"></em> 25. 10. 29.       <em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-folder-open"></em>
+<a href="https://ujuc.github.io/category/operation.html">Operation</a>
+<em class="fa-solid fa-ellipsis-vertical"></em>
+<em class="fa-solid fa-tags"></em>
+<a class="article_tag" href="https://ujuc.github.io/tag/deploy.html">deploy</a>
+,         <a class="article_tag" href="https://ujuc.github.io/tag/aws.html">aws</a>
+</div>
+<!--Article -->
+<div class="text-center"><em class="fa-solid fa-poo-storm"></em></div>
+<div class="article-text"><h1 id="_1">들어가기</h1>
+<p>최근 배포, 배치 환경을 구성하는데 어떤 방법을 이용해서 배포를 할 것이고, 어떤 서비스를 사용할 것인지에 대해서 고민을 하는 모습을 보았다.<br/>
+처음 해보는 것이니, 어떤 기술이 있어야 하고, 어떤 것들을 주의해야 하고 하는 것을 알 수 있으려나?</p>
+<p>나는 익숙해진 흐름으로 배포, 배치하려면 이런 이런 솔루션이나 특정 값들을 확인해서 배포하도록 설정을 하고 있기에 정리해 놓고 다른 더 좋은 방법은 없는지 확인하려고 한다.</p>
+<h1 id="_2">직접 배포와 배치</h1>
+<h2 id="a">A 서비스 배포</h2>
+<ul>
+<li>언어: Ruby</li>
+<li>프레임워크: Ruby on Rails</li>
+<li>배포/배치 도구: <a href="https://github.com/capistrano/capistrano">Capistrano</a></li>
+<li>배포 환경: KT Cloud 인스턴스, AWS EC2</li>
+</ul>
+<p>Capistrano를 사용해서 원격 서버에 SSH로 연결하여, 수정된 파일을 직접 배포하고, 배치하는 구성을 작업함.</p>
+<h2 id="b">B 서비스 배포 (!!부정확함!!)</h2>
+<ul>
+<li>언어: Python</li>
+<li>프레임워크: Tornado</li>
+<li>배포/배치 도구: Git / AWS ASG</li>
+<li>배포 환경: AWS EC2</li>
+</ul>
+<p>ASG를 이용해서 EC2를 배포할 수 있도록 구성하고, EC2가 실행될 때마다 Init 항목에서 코드를 받아오도록 했었다.<br/>
+그런데 기억이 여기까지라 맞는지 모르겠다.</p>
+<h1 id="_3">컨테이너를 이용한 배포와 배치</h1>
+<p>컨테이너 이미지를 만들어 배포하고, 컨테이너 이미지를 컨테이너 오케스트레이션 환경에 배치한다.</p>
+<h2 id="c">C 서비스 배포</h2>
+<ul>
+<li>배포/배치 도구: AWS CodeBuild, GitHub Actions / AWS CodeDeploy</li>
+<li>배포 환경: AWS EC2</li>
+</ul>
+<p>배포와 배치 순서는 다음과 같다.</p>
+<ol>
+<li>개발 repo에서 컨테이너 이미지를 빌드한다. (이미지 태그는 <code>latest</code>)</li>
+<li>AWS ECR로 생성한 이미지를 업로드한다.</li>
+<li>업로드한 이미지를 기반으로 AWS CodeDeploy를 이용하여 AppSpec 문서에 작성된 행위를 진행한다.</li>
+<li>CodeDeploy에 설정된 ASG를 기반으로 Blue/Green 배포를 진행하여 새로운 컨테이너로 배포를 진행한다.</li>
+</ol>
+<p>위 작업을 위해서 최소한으로 구성해야 하는 리소스는 다음과 같다.</p>
+<ul>
+<li>EC2 AMI : Docker 데몬이 설치되어 있어야 한다.</li>
+<li>ASG, LT: 첫 배포에 사용될 ASG를 생성하여 AWS CodeDeploy에 등록을 해주어야 하기에 필요하다.</li>
+<li>AppSpec에서 실행할 스크립트: 스크립트는 docker compose 파일을 생성 혹은 다른 저장소에서 가져와 실행할 수 있도록 구성한다.</li>
+<li>GitHub 과 AWS 간 OIDC 설정과 Assume Role 생성: 서비스 간 권한을 제공하기 위해서 필요하다.</li>
+</ul>
+<h2 id="d">D 서비스 배포</h2>
+<ul>
+<li>배포/배치 도구: GitHub Actions / AWS CloudFormation</li>
+<li>배포 환경: AWS ECS Fargate</li>
+</ul>
+<p>배포와 배치의 순서는 다음과 같다.</p>
+<ol>
+<li>개발 repo에서 GitHub Actions를 이용하여 이미지를 빌드한다. (이미지 태그는 <code>버전</code>)</li>
+<li>AWS ECR로 생성한 이미지를 업로드한다.</li>
+<li>업로드한 이미지를 기반으로 AWS ECS Fargate를 배포할 수 있도록 하는 GitHub Actions workflow를 실행한다.</li>
+<li>AWS CDK로 만들어 놓은 코드를 이용하여 AWS CloudFormation에 있는 값을 업데이트하여 배치가 진행된다.</li>
+</ol>
+<p>위 작업을 위해서 최소한으로 구성해야 하는 리소스는 다음과 같다.</p>
+<ul>
+<li>AWS ECS Cluster, Service, Task definition: AWS ECS를 사용할 수 있는 환경을 먼저 만들어 두는 것이 좋다. 나는 AWS CDK를 이용하여 구성했다.</li>
+<li>GitHub 과 AWS 간 OIDC 설정과 배치를 위한 Assume Role 생성: 서비스 간 권한을 제공하기 위해서 필요하다.</li>
+</ul>
+<h2 id="e">E 서비스 배포</h2>
+<ul>
+<li>배포/배치 도구: GitHub Actions / ArgoCD</li>
+<li>배포 환경: AWS EKS</li>
+</ul>
+<p>배포와 배치의 순서는 다음과 같다.</p>
+<ol>
+<li>개발 repo에서 GitHub Actions를 이용하여 이미지를 빌드한다. (이미지 태그는 <code>버전</code>)</li>
+<li>AWS ECR로 생성한 이미지를 업로드한다.</li>
+<li>ArgoCD 와 연결된 repo에서 서비스 yaml 파일을 업데이트하고 머지한다.</li>
+<li>ArgoCD가 트리거를 기반으로 배치를 시작한다.</li>
+</ol>
+<p>위 작업을 위해서 최소한으로 구성해야 하는 리소스는 다음과 같다.</p>
+<ul>
+<li>AWS EKS: 서비스를 실행하고 접근할 수 있는 AWS 리소스를 생성한다. Terraform을 이용하였었다.</li>
+<li>GitHub 과 AWS 간 OIDC 설정과 ArgoCD에서 사용할 Role 생성: OIDC는 필요하지만, role은 정확하지 않다. 공부해야 한다.</li>
+<li>ArgoCD: 운영하는 클러스터가 아닌 개발 보조를 위한 EKS 클러스터를 따로 구성하여 올려야 한다.</li>
+</ul>
+<h1 id="_4">마치며</h1>
+<p>내가 보았고, 구성했던 것들을 한번 정리하였는데. 지금은 “D 서비스 배포” 방식을 사용하고 주로 구성하고 있다.<br/>
+더 많은 배포 방식이 있을 것이고, 요구 사항에 따라 달라지는 부분이 발생할 수 있다. 그럴 땐, 제공되는 서비스가 있다면 사용하고, 없다면 만들면서 맞춰가는 방법 말고는 없긴 하다.</p>
+<p>AWS EKS 배포 구성은 개발, 운영, 보조 클러스터를 만들어서 구분 짓고 배포할 수 있도록 작업을 해야 하는 것은 아직 익숙하지도 않고, 많이 해보지 않았기에 명시만 해두었다.<br/>
+나보다 더 잘하시는 분들이 많은 글을 쓰셨을 것으로 알고 있으니, 관련해서 검색을 해보시는 것이 좋을 듯하다.</p>
+<p>구분을 위해서 (영어도 다르다) 배포와 배치를 나눠 놨으나, 개발자에게는 하나의 동작으로 인식되도록 해주면 가장 좋다고 생각한다.</p>
+<p>사용가능한 솔루션은 유명한 것을 고르고 더 필요하다면 만들어서 공유 부탁드린다. :+1:</p></div>
+<div class="text-center"><em class="fa-regular fa-hand-spock"></em></div>
+<!-- Comment -->
+<div id="giscus">
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDM5MjEy" data-emit-metadata="0" data-mapping="title" data-reactions-enabled="1" data-repo="ujuc/ujuc.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzA2MTA2NQ==" data-theme="light" src="https://giscus.app/client.js">
+</script>
+</div><div id="utterances">
+<script async="" crossorigin="anonymous" issue-term="url" repo="ujuc/ujuc.github.io" src="https://utteranc.es/client.js" theme="github-light">
+</script>
+</div> <div class="text-center">🎗</div>
+</div>
+</div>
+</div>
+<!-- body foot -->
+<div class="container">
+</div>
+<!-- Title -->
+<div class="container" id="site-title">
+<hr/>
+<div class="row">
+<div class="container">
+<div class="site-title">
+<a href="https://ujuc.github.io">잘 밤에 쓸데없는 생각하기</a>
+</div>
+<div class="site-body">
+    Anythink, Everythink!
+  </div>
+<div>
+<span id="social-github"><a href="https://github.com/ujuc"><em class="fa-brands fa-github"></em></a></span>
+<span id="social-x"><a href="https://x.com/ujuc"><em class="fa-brands fa-x-twitter"></em></a></span>
+</div>
+</div>
+</div> </div>
+<!-- Footer -->
+<div class="container" id="site-footer">
+<div class="row text-right">
+<div class="container" style="margin-bottom: 10px;">
+<em class="fa-regular fa-closed-captioning"></em> <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">BY-SA</a> 2012-2025 ujuc. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>.
+  </div>
+</div> </div>
+<!-- Javascript -->
+<!--bootstrap-->
+<script crossorigin="anonymous" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> <div class="contents" id="js">
+</div>
+</body>
+</html>
