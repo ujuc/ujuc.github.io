@@ -51,8 +51,8 @@ MENU = (
 PAGE_MENU = (
     # ("Pages", "/pages.html", "newspaper"),
     (
-        "Wiki",
-        "https://app.tana.inc/shared/ujucs-wiki/X2JxS1NYYlhla1JkL2FLOFBZdmQtZVRMVQ==",
+        "TIL",
+        "https://github.com/ujuc/til",
         "pen-to-square",
     ),
 )
