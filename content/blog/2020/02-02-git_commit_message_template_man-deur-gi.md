@@ -31,6 +31,39 @@ git config --global commit.template ~/.gitmessage
 
 `~/.gitmessage` 작성을 하자.
 
+#### version 26-02-18
+
+```
+# <type>: <subject>
+##### Subject 50 characters ################# -> |
+
+
+# Body Message
+######## Body 72 characters ####################################### -> |
+
+
+# Issue Tracker Number or URL
+
+
+# --- COMMIT END ---
+#
+# [작성 원칙]  why > what > how | 의도·맥락·협업 중심
+#
+# [형식]
+#   <type>: <한국어 동사형으로 끝내다>  ← 50자 이내, 마침표 없음
+#   빈 줄
+#   본문: why/what 중심, 72자 이내, "-" 목록 가능
+#   빈 줄
+#   이슈 번호 또는 URL
+#
+# [타입]
+#   feat · fix · refactor · style · docs · test · chore
+#
+# [예시]  docs: README.md 파일을 수정하다
+```
+
+#### version 19-02-02
+
 ```
 # <type>: <subject>
 ##### Subject 50 characters ################# -> |
