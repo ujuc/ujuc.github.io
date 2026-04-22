@@ -157,7 +157,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 <p><img alt="ex2_2" src="https://ujuc.github.io/img/2016/01-27/ex2_2.png"/></p>
 <p>음… 출력되는 문구가 stderr로 나오는 건줄 알았는데 아닌갑다. <code>1</code>로 출력되는걸 막으라했더니…</p>
 <p>그럼 Python에서는 어디로 나올까?</p>
-<div class="highlight"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">subprocess</span> <span class="k">as</span> <span class="nn">sub</span>
+<div class="highlight"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sub</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">check_rbenv</span> <span class="o">=</span> <span class="n">sub</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>
     <span class="s1">'which rbenv'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">sub</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
@@ -165,7 +165,7 @@ go가 설치되어 있는지 확인을 한다. 제대로 설치됐다면 stdout�
 <span class="n">Out</span><span class="p">:</span> <span class="p">(</span><span class="sa">b</span><span class="s1">''</span><span class="p">,</span> <span class="sa">b</span><span class="s1">''</span><span class="p">)</span>
 </code></pre></div>
 <p>음?? 암것도 안나온다…</p>
-<div class="highlight"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><code><span class="n">In</span><span class="p">:</span> <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="n">In</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">'which rbenv'</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">:</span> <span class="mi">256</span>
 </code></pre></div>

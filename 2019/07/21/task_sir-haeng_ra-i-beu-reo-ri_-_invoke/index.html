@@ -135,9 +135,9 @@ gtag('config', 'G-X9EBSXCBTS');
 <ul>
 <li><code>tasks.py</code> - <a href="https://github.com/ujuc/ujuc.github.io/blob/develop/tasks.py">ujuc.github.io - tasks.py</a></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">invoke</span> <span class="kn">import</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">task</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">invoke</span><span class="w"> </span><span class="kn">import</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">task</span>
 
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
 <span class="n">BASE_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
 <span class="n">OUTPUT_PATH</span> <span class="o">=</span> <span class="n">BASE_PATH</span> <span class="o">/</span> <span class="s2">"output"</span>
@@ -146,20 +146,20 @@ gtag('config', 'G-X9EBSXCBTS');
 
 
 <span class="nd">@task</span><span class="p">()</span>
-<span class="k">def</span> <span class="nf">preview</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">preview</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Start preview web page server"""</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pelican -s </span><span class="si">{</span><span class="n">CONF_FILE</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pelican -l"</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">()</span>
-<span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">clean</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Clean up this dir"""</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"rm -rf </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/__pycache__ </span><span class="si">{</span><span class="n">BASE_PATH</span><span class="si">}</span><span class="s2">/cache"</span><span class="p">)</span>
 
 
 <span class="nd">@task</span><span class="p">(</span><span class="n">post</span><span class="o">=</span><span class="p">[</span><span class="n">clean</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">pub</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pub</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Publish to github main page"""</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"pelican -s </span><span class="si">{</span><span class="n">PUBLISH_CONF_FILE</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ghp-import -m 'Generate Pelican site' -b master </span><span class="si">{</span><span class="n">OUTPUT_PATH</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -167,7 +167,7 @@ gtag('config', 'G-X9EBSXCBTS');
 
 
 <span class="nd">@task</span><span class="p">()</span>
-<span class="k">def</span> <span class="nf">fix</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fix</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Execute black"""</span>
     <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"black -l 80 ."</span><span class="p">)</span>
 
