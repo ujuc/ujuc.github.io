@@ -1,29 +1,31 @@
 import re
-
+import shutil
+import subprocess
+import sys
+from importlib.metadata import version
 from pathlib import Path
-from subprocess import run as sub_run
+from typing import ClassVar
 
 import pendulum
-
 from cleo.application import Application
 from cleo.commands.command import Command
 from cleo.helpers import argument
+from cleo.io.inputs.argument import Argument
 
 BASE_PATH = Path.cwd()
 CONTENT_PATH = BASE_PATH / "content"
 OUTPUT_PATH = BASE_PATH / "output"
-CONF_FILE = BASE_PATH / "pelicanconf.py"
 PUBLISH_CONF_FILE = BASE_PATH / "publishconf.py"
 
 
 class PostCmd(Command):
     name = "post"
     description = "Make post template"
-    arguments = [argument("title", "Post title")]
+    arguments: ClassVar[list[Argument]] = [argument("title", "Post title")]
 
     def handle(self) -> int:
         title = self.argument("title")
-        today = pendulum.now()
+        today = pendulum.now("Asia/Seoul")
 
         slug = (
             re.sub(r"[^\w\s가-힣]", "", title, flags=re.UNICODE)
@@ -46,15 +48,14 @@ class PostCmd(Command):
         )
 
         blog_path = CONTENT_PATH / "blog" / f"{today.year}"
-        if not blog_path.is_dir():
-            blog_path.mkdir(parents=True)
+        blog_path.mkdir(parents=True, exist_ok=True)
 
         post_path = blog_path / file_name
 
-        with post_path.open("w") as post_file:
+        with post_path.open("x", encoding="utf-8") as post_file:
             post_file.write(article)
 
-        self.line(f"Post crate -> {post_path}")
+        self.line(f"Post created -> {post_path}")
 
         return 0
 
@@ -64,8 +65,9 @@ class PreviewCmd(Command):
     description = "Start preview page server"
 
     def handle(self) -> int:
-        return sub_run(
-            "pelican --autoreload --listen", shell=True, check=True
+        return subprocess.run(
+            [sys.executable, "-m", "pelican", "--autoreload", "--listen"],
+            check=True,
         ).returncode
 
 
@@ -74,11 +76,11 @@ class CleanCmd(Command):
     description = "Clean up cache dir"
 
     def handle(self) -> int:
-        return sub_run(
-            f"rm -rf {OUTPUT_PATH} {BASE_PATH}/__pycache__ {BASE_PATH}/cache",
-            shell=True,
-            check=True,
-        ).returncode
+        for path in (OUTPUT_PATH, BASE_PATH / "__pycache__", BASE_PATH / "cache"):
+            if path.exists():
+                shutil.rmtree(path)
+
+        return 0
 
 
 class BuildCmd(Command):
@@ -90,17 +92,18 @@ class BuildCmd(Command):
     description = "Build Blog Post"
 
     def handle(self) -> int:
-        return sub_run(
-            f"pelican -s {PUBLISH_CONF_FILE}", shell=True, check=True
+        return subprocess.run(
+            [sys.executable, "-m", "pelican", "-s", PUBLISH_CONF_FILE],
+            check=True,
         ).returncode
 
 
-def run():
-    app = Application("cli", "2.0")
+def run() -> int:
+    app = Application("cli", version("ujuc.github.io"))
 
     app.add(PostCmd())
     app.add(PreviewCmd())
     app.add(CleanCmd())
     app.add(BuildCmd())
 
-    app.run()
+    return app.run()
