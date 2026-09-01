@@ -1,6 +1,4 @@
-#!/usr/bin/env python
 from pendulum import today
-
 
 AUTHOR = "ujuc"
 SITENAME = "잘 밤에 쓸데없는 생각하기"
@@ -69,7 +67,7 @@ STATIC_PATHS = ["img", "misc"]
 DISPLAY_PAGES_ON_MENU = True
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS: bool = True
 THEME = "clean/"
 
 AUTHORS = {}
@@ -81,13 +79,6 @@ PYGMENTS_RST_OPTIONS = {"linenos": "table"}
 MARKDOWN = {
     "extension_configs": {
         "markdown.extensions.extra": {},
-        "markdown.extensions.abbr": {},
-        "markdown.extensions.attr_list": {},
-        "markdown.extensions.def_list": {},
-        "markdown.extensions.fenced_code": {},
-        "markdown.extensions.footnotes": {},
-        "markdown.extensions.md_in_html": {},
-        "markdown.extensions.tables": {},
         "markdown.extensions.admonition": {},
         "markdown.extensions.codehilite": {"css_class": "highlight"},
         "markdown.extensions.meta": {},
