@@ -6,7 +6,7 @@ Tags: 회고, retrospective
 Slug: adieu-2024-bienvenue-2025
 Summary: 이제 2025년이구나...
 
-2023년 회고: [Adieu 2023, Bienvenue 2024]({static}/2023/12/30/adieu-2023-bienvenue-2024)
+2023년 회고: [Adieu 2023, Bienvenue 2024]({filename}/blog/2023/12-30-adieu-2023-bienvenue-2024.md)
 
 [TOC]
 
@@ -56,7 +56,7 @@ Rize 라는 앱을 이용해서 중간 쉬는 시간을 만들고 있었는데, 
 
 ## 이직
 
-컬리에서 2년 9개월을 다녔고, 3년에 3개원이 남은 시점에 나왔다. 관련 내용은 [퇴사 회고]({static}/2024/10/19/퇴사-회고) 를 보면 된다.
+컬리에서 2년 9개월을 다녔고, 3년에 3개원이 남은 시점에 나왔다. 관련 내용은 [퇴사 회고]({filename}/blog/2024/10-19-퇴사-회고.md) 를 보면 된다.
 
 ## 하루하루 작성하다
 
