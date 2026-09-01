@@ -12,7 +12,6 @@ dependencies = [
   "pelican-seo>=1.4.0",
   "pelican>=4.11.0",
   "pendulum>=3.1.0",
-  "rich>=14.0.0",
 ]
 
 [project.scripts]
@@ -21,7 +20,7 @@ cli = "cli.main:run"
 [dependency-groups]
 dev = [
   "pre-commit>=4.2.0",
-  "ruff>=0.12.5",
+  "ruff>=0.16.5",
   "ty>=0.0.1a16",
 ]
 
@@ -34,7 +33,3 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["cli"]
-
-[tool.rye]
-managed = true
-dev-dependencies = []
